@@ -1,0 +1,116 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Building blocks | Kinstrife </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Building blocks | Kinstrife ">
+    <meta name="generator" content="docfx 2.52.0.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet"> 
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="../toc.html">
+    
+    
+    
+  </head>  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        <div class="article row grid">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h2 id="building-blocks">Building blocks</h2>
+
+<h3 id="game-modes">Game Modes</h3>
+<p>The game is a state machine, consisting of a defined set of modes as states, as well as transitions between them. This is implemented in the application flow package. Modes are per se abstract entities: They are essentially collections of Modules and their behavior is defined by the modules they contain.</p>
+<h3 id="modules">Modules</h3>
+<p>Modules are stand-alone parts of the game. They should work by themselves, i. e. they should not require other modules to be present in a Unity project in order to run (except for the game master.)</p>
+<p>NOTE: It is important not to circumvent this concept by creating ‘linking packages’ that closely couple modules to each other. Packages may be included in multiple Modules, but a shared package dependency should ideally not lead to tight coupling between these modules. Each module should instead contain separate instances of whatever exists in those packages. The core functionality of a module should be contained in one or more packages that are only used by that respective module. While these will likely link various packages, it should not lead to tight coupling between them, which would make them unusable for other packages!</p>
+<p>Modules need to reside in a single scene. When the game transitions to another mode, scenes of needed but not yet loaded modules will be loaded and vice versa.
+Modules will need to communicate with each other at times. However, they should also not require each other to be in the same project or, in fact, exist. This is achieved through messaging.</p>
+<p>TODO: Initialization</p>
+<h3 id="locations">Locations</h3>
+<p>TODO</p>
+<h2 id="application-flow">Application flow</h2>
+<p>TODO flow
+TODO loading</p>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://kinstrife.visualstudio.com/Core/_git/Core?path=Packages/ApplicationFlow/index.md&amp;version=GBmaster&amp;line=1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>
