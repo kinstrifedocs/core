@@ -1,0 +1,124 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Kinstrife Database Basics </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Kinstrife Database Basics ">
+    <meta name="generator" content="docfx 2.52.0.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="">
+    <meta property="docfx:tocrel" content="">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        <div class="article row grid">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="kinstrife-database-basics">Kinstrife Database Basics</h1>
+
+<h2 id="when-to-use-it">When to use it</h2>
+<p>Static data
+Read-only
+Multiple instances of an ‘archetype’
+Be creative! Many things can become more flexible when based on database entries</p>
+<h2 id="how-to-use-it">How to use it</h2>
+<h3 id="access-entries">Access entries</h3>
+<p>Get the DatabaseAccessor and use its methods TryGetEntry and/or TryGetEntriesOfType</p>
+<h3 id="create-and-edit-entries">Create and edit entries</h3>
+<ol>
+<li>Open the database editor window (located at the top bar via Kinstrife -&gt; Database) and navigate to your new type via the type picker at the top left.</li>
+<li>The menu on the left will now show all instances of that type it can find on the left. You can either select one and edit its values, or create a new one (which is the bottom most option.)</li>
+<li>Clicking the 'Add New' option will create a new preview instance which you can modify. But you will see a warning that it is not yet created - to do so, enter a path at the bottom of the window. The path must be in a Resources/Database/ folder. You can enter either a name for a directory, or a file name (which will need to end with '.asset'). Once you've done so, a Create button will appear, which creates an instance at the path upon clicking. If it doesn't, make sure to check the console for errors. Hint: you can copy a path by selecting a folder in the project view and hitting ctrl+alt+c.</li>
+<li>Once you created the type, it will show up in the project view in the path you specified and will also be modifiable via the database editor.</li>
+</ol>
+<h3 id="create-database-entry-types">Create database entry types</h3>
+<p>Create an new database type script via &quot;Create/Kinstrife/Script Templates/Database Type&quot;. In this script, you must make sure that the data is immutable during runtime (but still editable in the editor.) A good way to do this is to create private backing fields decorated with the [SerializeField] attribute and allow public access via a get-only property.
+Because this is a lot of boilerplate writing, this package contains three visual studio code snippets, PropertyWithBackingField and PropertyListWithBackingField. <a href="https://docs.microsoft.com/en-us/visualstudio/ide/walkthrough-creating-a-code-snippet?view=vs-2019" title="Visual Studio snippet documentation">Read the section ‘Add a code snippet to visual studio’ on how to install snippets if you don’t know yet.</a> To use them, type src or srf, respectively, and hit tab twice. You can then edit the type and name of the field &amp; property.</p>
+<p>Remember to update the database creation menu in your newly created script file!</p>
+<h3 id="what-it-is">What it is</h3>
+<p>The database is essentially a giant Dictionary&lt;GUID, ScriptableObject&gt;. The DatabaseAccessor allows convenient retrieval of elements by GUID and type. The DatabaseLocator locates potential folders that should get injected to the database (right now everything in Resources/Database) by the DatabaseInjector.</p>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://kinstrife.visualstudio.com/_git/Core?path=Packages/Database/readme.md&amp;version=GBmaster&amp;line=1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

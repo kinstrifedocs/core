@@ -1,0 +1,124 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Particle VFX </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Particle VFX ">
+    <meta name="generator" content="docfx 2.52.0.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="">
+    <meta property="docfx:tocrel" content="">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        <div class="article row grid">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="particle-vfx">Particle VFX</h1>
+
+<p>VFX system unifying the old CPU based Shuriken particles system with the new GPU-based VFX-graph approach, providing an implementation-agnostic scripting interface. Also includes particle pooling and other useful stuff.</p>
+<h1 id="authoring">Authoring</h1>
+<p>Authoring is based on scriptable objects, allowing for a modular library of effects with a range of settings.</p>
+<h2 id="vfx">VFX</h2>
+<p>This part refers to particle effects, based on the Shuriken particle system and the new VFX graph.</p>
+<h4 id="vfx-asset">VFX asset</h4>
+<p>Create a VFX asset via the context menu by right-clicking in the project tab, then Create-&gt;Kinstrife-&gt;VFX-&gt;VFX asset.</p>
+<p>VFX assets unify the old CPU-based Shuriken particle system prefabs and new GPU-based VFX-graph assets. This allows using both approaches without the hassle of dealing with two VFX systems.</p>
+<p>Note that you should prefer the VFX graph approach, unless you need to use the collision system for particles.</p>
+<h4 id="dynamic-decal-asset">Dynamic Decal asset</h4>
+<p>Intended for decals which will be placed dynamically. For decals which are part of props it is recommended that you place them as GameObjects with a DecalProjector components or as mesh decals with a mesh decal material.</p>
+<p>(TODO: anything else noteworthy?)</p>
+<h1 id="how-to-use-the-api">How to use the API</h1>
+<p>The API is contained in the <code>Kinstrife.Vfx</code> namespace. To access it, get the application's <a href="Scripts/VfxSystem.cs"><code>VfxSystem</code></a>/<a href="Scripts/DynamicDecalSystem.cs"><code>DynamicDecalSystem</code></a> instance - most likely via dependency injection, however, both can also be obtained via the ECS world because both are <code>ComponentSystem</code>s. In these classes, you will find four methods to play <a href="Scripts/VfxAsset.cs"><code>VfxAsset</code></a>s, respectively <a href="Scripts/VfxAsset.cs"><code>DynamicDecalAsset</code></a>s (so you need a reference to one of those as well):</p>
+<ul>
+<li><code>PlayOneshot</code>: Play the effect once in a 'fire and forget' way (decals fade out after a while)</li>
+<li><code>PlayOneshotAttached</code>: Same as above, except the effect follows the specified transform, as if it were parented</li>
+<li><code>PlayWithId</code>: Play the effect with an ID; this allows you to later on adjust parameters and to stop the effect. If an effect is already playing with a certain ID it will be replaced.</li>
+<li><code>PlayWithIdAttached</code>: Same as above, except the effect follows the specified transform</li>
+</ul>
+<p>In order to update the position and/or orientation of an already placed effect, use the methods <code>UpdatePosition</code>, <code>UpdateOrientation</code> or <code>UpdatePositionOrientation</code>. Effects with an ID can be stopped with the <code>StopWithId</code> method. To check whether (a specific or any) effect is playing with a certain ID, use the <code>IsPlayingWithId</code> method.</p>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://kinstrife.visualstudio.com/_git/Core?path=Packages/ParticleVfx/readme.md&amp;version=GBmaster&amp;line=1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

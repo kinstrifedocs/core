@@ -1,0 +1,262 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Git Dependency Resolver For Unity </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Git Dependency Resolver For Unity ">
+    <meta name="generator" content="docfx 2.52.0.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="">
+    <meta property="docfx:tocrel" content="">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        <div class="article row grid">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="git-dependency-resolver-for-unity">Git Dependency Resolver For Unity</h1>
+
+<p>This plugin resolves git url dependencies in the package for Unity Package Manager.<br>
+You can use a git url as a package dependency!</p>
+<p><img src="https://user-images.githubusercontent.com/12690315/57779067-636a7e00-7760-11e9-8f4a-06bbaee402e8.png" alt="logo"></p>
+<p><a href="https://github.com/mob-sakai/GitDependencyResolverForUnity/releases"><img src="https://img.shields.io/github/release/mob-sakai/GitDependencyResolverForUnity.svg?label=latest%20version" alt=""></a>
+<a href="https://github.com/mob-sakai/GitDependencyResolverForUnity/releases"><img src="https://img.shields.io/github/release-date/mob-sakai/GitDependencyResolverForUnity.svg" alt=""></a>
+<img src="https://img.shields.io/badge/unity-2018%20or%20later-green.svg" alt="">
+<a href="https://github.com/mob-sakai/GitDependencyResolverForUnity/blob/upm/LICENSE.txt"><img src="https://img.shields.io/github/license/mob-sakai/GitDependencyResolverForUnity.svg" alt=""></a>
+<a href="http://makeapullrequest.com"><img src="https://img.shields.io/badge/PRs-welcome-orange.svg" alt="PRs Welcome"></a>
+<a href="https://twitter.com/intent/follow?screen_name=mob_sakai"><img src="https://img.shields.io/twitter/follow/mob_sakai.svg?label=Follow&amp;style=social" alt=""></a></p>
+<p>&lt;&lt; <a href="#Description">Description</a> | <a href="#install">Install</a> | <a href="#usage">Usage</a> | <a href="#demo">Demo</a> | <a href="#development-note">Development Note</a> &gt;&gt;</p>
+<h3 id="whats-new-see-changelog-">What's new? <a href="https://github.com/mob-sakai/GitDependencyResolverForUnity/blob/upm/CHANGELOG.md">See changelog <img src="https://img.shields.io/github/release-date/mob-sakai/GitDependencyResolverForUnity.svg?label=last%20updated" alt=""></a></h3>
+<h3 id="do-you-want-to-receive-notifications-for-new-releases-watch-this-repo-">Do you want to receive notifications for new releases? <a href="https://github.com/mob-sakai/GitDependencyResolverForUnity/subscription">Watch this repo <img src="https://img.shields.io/github/watchers/mob-sakai/GitDependencyResolverForUnity.svg?style=social&amp;label=Watch" alt=""></a></h3>
+<h3 id="support-me-on-patreon-become_a_patron">Support me on Patreon! <a href="https://www.patreon.com/join/2343451?"><img src="https://user-images.githubusercontent.com/12690315/50731629-3b18b480-11ad-11e9-8fad-4b13f27969c1.png" alt="become_a_patron"></a></h3>
+<p><br><br><br><br></p>
+<h2 id="description">Description</h2>
+<p>In Unity 2018.3, the Unity Package Manager (UPM) supported Git. :)<br>
+<a href="https://forum.unity.com/threads/git-support-on-package-manager.573673/">https://forum.unity.com/threads/git-support-on-package-manager.573673/</a></p>
+<p>This update allows us to quickly install packages on code hosting services such as GitHub.</p>
+<p>However, UPM does not support git urls as dependencies in the package. :(</p>
+<pre><code>[ package-a/package.json ]
+{
+  &quot;name&quot;: &quot;com.coffee.package-a&quot;,
+  &quot;version&quot;: &quot;0.1.0&quot;,
+  &quot;dependencies&quot;: {
+    &quot;com.coffee.core-a&quot; : &quot;https://github.com/mob-sakai/GitPackageTest#core-a-0.1.0&quot;
+  }
+}
+</code></pre>
+<p><img src="https://user-images.githubusercontent.com/12690315/57829436-e84daa00-77e9-11e9-84af-f5e46b1f0f02.png" alt="console"></p>
+<br>
+This plugin resolves git url dependencies in the package for Unity Package Manager.
+<p>You can use a git url as a package dependency!</p>
+<h4 id="features">Features</h4>
+<ul>
+<li>Easy to use: just install</li>
+<li>Resolve git url dependencies in packages</li>
+<li>Uninstall unused packages that is installed by this plugin</li>
+<li>Support GitHub, Bitbucket, GitLab, etc.</li>
+<li>Support private repository</li>
+<li>Support Unity 2019.1+</li>
+<li>Support .Net 3.5 &amp; 4.x</li>
+<li>Update package with a specific tag/branch</li>
+<li>Deterministic package installation</li>
+<li>Refer to no files from the Library folder</li>
+</ul>
+<h4 id="notes">Notes</h4>
+<p>From: <a href="https://forum.unity.com/threads/git-support-on-package-manager.573673/page-3#post-4552084">https://forum.unity.com/threads/git-support-on-package-manager.573673/page-3#post-4552084</a></p>
+<blockquote>
+<p>There is no conflict detection and/or resolution algorithm.
+The lastest package found with the same name is used.
+This is not how the package manager resolve dependency (See <a href="https://docs.unity3d.com/Manual/upm-conflicts-auto.html">https://docs.unity3d.com/Manual/upm-conflicts-auto.html</a>).</p>
+</blockquote>
+<p>In Unity's algorithm, package conflicts are resolved by &quot;dependency-level from root&quot;.<br>
+The all packages resolved by this plugin are &quot;dependency-level=1&quot;.<br>
+Therefore, in some cases, the package of the intended version may not be installed.</p>
+<p>For example, in the case of a project with a dependency graph like this:</p>
+<pre><code>project (root)
+ ├ package A: 1.0.0 
+ │  └ package X: 2.0.0
+ └ package B: 1.0.0
+    └ package C: 2.0.0
+       └ package X: 2.0.1
+</code></pre>
+<p><strong>This plugin's algorithm</strong></p>
+<p>Install -&gt; A: 1.0.0, B: 1.0.0, C: 2.0.0, X: 2.0.1</p>
+<p><strong>Unity's algorithm</strong>
+Install -&gt; A: 1.0.0, B: 1.0.0, C: 2.0.0, X: <strong>2.0.0</strong></p>
+<p><br><br><br><br></p>
+<h2 id="install">Install</h2>
+<p>Find <code>Packages/manifest.json</code> in your project and edit it to look like this:</p>
+<pre><code class="lang-js">{
+  &quot;dependencies&quot;: {
+    &quot;com.coffee.git-dependency-resolver&quot;: &quot;https://github.com/mob-sakai/GitDependencyResolverForUnity.git#1.1.2&quot;,
+    ...
+  }
+}
+</code></pre>
+<p>To update the package, change <code>#{version}</code> to the target version.<br>
+Or, use <a href="https://github.com/mob-sakai/UpmGitExtension.git">UpmGitExtension</a> to install or update the package.</p>
+<h5 id="requirement">Requirement</h5>
+<ul>
+<li>Unity 2018.3 or later</li>
+</ul>
+<p><br><br><br><br></p>
+<h2 id="usage">Usage</h2>
+<ul>
+<li>If dependencies are not resolved successfully, try the following:
+<ul>
+<li>Reopen the project.</li>
+<li>Delete <code>Library</code> directory in the project.<br>
+<img src="https://user-images.githubusercontent.com/12690315/57830868-690ea500-77ee-11e9-9e47-4a9794d77da8.png" alt="library"></li>
+</ul>
+</li>
+<li>When <code>Unity Package Manager Error</code> window is opens, click <code>Continue</code>.<br>
+<img src="https://user-images.githubusercontent.com/12690315/57823865-08726e80-77d4-11e9-8203-46bf22d504d9.png" alt="window"></li>
+<li>Use <a href="https://semver.org/">SemVer</a> as a tag or branch name.<br>
+eg. <code>1.0.0</code>, <code>0.5.0-preview10</code>, <code>0.1.0-alpha+daily5</code></li>
+</ul>
+<p><br><br><br><br></p>
+<h2 id="demo">Demo</h2>
+<p><a href="https://github.com/mob-sakai/UnityGitDependencyTest">https://github.com/mob-sakai/UnityGitDependencyTest</a></p>
+<p><br><br><br><br></p>
+<h2 id="development-note">Development Note</h2>
+<h4 id="develop-a-package-for-upm">Develop a package for UPM</h4>
+<p>The branching strategy when I develop a package for UPM is as follows.</p>
+<table>
+<thead>
+<tr>
+<th>Branch</th>
+<th>Description</th>
+<th>'Assets' directory</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>develop</td>
+<td>Development, Testing</td>
+<td>Included</td>
+</tr>
+<tr>
+<td>upm(default)</td>
+<td>Subtree to publish for UPM</td>
+<td>Excluded</td>
+</tr>
+<tr>
+<td>{tags}</td>
+<td>Tags to install using UPM</td>
+<td>Excluded</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Steps to release a package:</strong></p>
+<ol>
+<li>Develop your package project on <code>develop</code> branch and update version in <code>package.json</code>.</li>
+<li>Split subtree into <code>ump</code> branch.<br>
+<code>git subtree split --prefix=Assets/YOUR/PACKAGE/DIRECTRY --branch upm</code></li>
+<li>Tag on <code>ump</code> branch as new version.</li>
+<li>That's all. :)</li>
+</ol>
+<p>For details, see <a href="https://www.patreon.com/posts/25070968">https://www.patreon.com/posts/25070968</a>.</p>
+<p><br><br><br><br></p>
+<h2 id="license">License</h2>
+<ul>
+<li>MIT</li>
+<li><a href="https://gist.github.com/darktable/1411710">MiniJson</a> by Calvin Rien</li>
+<li><a href="https://github.com/maxhauser/semver">SemVer</a> by Max Hauser</li>
+</ul>
+<h2 id="author">Author</h2>
+<p><a href="https://github.com/mob-sakai">mob-sakai</a>
+<a href="https://twitter.com/intent/follow?screen_name=mob_sakai"><img src="https://img.shields.io/twitter/follow/mob_sakai.svg?label=Follow&amp;style=social" alt=""></a><br>
+<a href="https://www.patreon.com/join/2343451?"><img src="https://user-images.githubusercontent.com/12690315/50731615-ce9db580-11ac-11e9-964f-e0423533dc69.png" alt="become_a_patron"></a></p>
+<h2 id="see-also">See Also</h2>
+<ul>
+<li>GitHub page : <a href="https://github.com/mob-sakai/GitDependencyResolverForUnity">https://github.com/mob-sakai/GitDependencyResolverForUnity</a></li>
+<li>Releases : <a href="https://github.com/mob-sakai/GitDependencyResolverForUnity/releases">https://github.com/mob-sakai/GitDependencyResolverForUnity/releases</a></li>
+<li>Issue tracker : <a href="https://github.com/mob-sakai/GitDependencyResolverForUnity/issues">https://github.com/mob-sakai/GitDependencyResolverForUnity/issues</a></li>
+<li>Current project : <a href="https://github.com/mob-sakai/GitDependencyResolverForUnity/projects/1">https://github.com/mob-sakai/GitDependencyResolverForUnity/projects/1</a></li>
+<li>Change log : <a href="https://github.com/mob-sakai/GitDependencyResolverForUnity/blob/upm/CHANGELOG.md">https://github.com/mob-sakai/GitDependencyResolverForUnity/blob/upm/CHANGELOG.md</a></li>
+</ul>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://kinstrife.visualstudio.com/_git/Core?path=Packages/PackageResolver/README.md&amp;version=GBmaster&amp;line=1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

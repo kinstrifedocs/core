@@ -1,0 +1,127 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Kinstrife Config </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Kinstrife Config ">
+    <meta name="generator" content="docfx 2.52.0.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="">
+    <meta property="docfx:tocrel" content="">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        <div class="article row grid">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="kinstrife-config">Kinstrife Config</h1>
+
+<p>Config data is (kind of) static data. But unlike database entries, config data has a 'singleton' characteristic to it: It wouldn't make sense to have multiple (contradictory) versions of this data around.</p>
+<h2 id="when-to-use-it">When to use it</h2>
+<p>If your data is...</p>
+<ul>
+<li>Singleton-like</li>
+<li>Global data</li>
+<li>Read-only (-ish, hot swapping is possible)</li>
+</ul>
+<p>... it's a good fit for the config system. Be creative! Many things can become more flexible/moddable when based on config data.</p>
+<h2 id="how-to-create-config-data">How to create config data</h2>
+<ol>
+<li>Make sure that the package/module you're working on has the Config Package (from the Core repository) as a dependency.</li>
+<li>Inherit from the abstract <a href="Scripts/ConfigData.cs"><code>ConfigData</code></a> class; implement the <code>Moddable</code> bool property and the <code>OnValidate()</code> method. Usually, calling <code>ValidateSingleton(Type type)</code> (impleneted in <code>ConfigData</code>) with the type you just created is enough.</li>
+<li>Create an instance of that class in a <em>Resources/Config</em> folder.</li>
+<li>You're done! Make sure to only have one ScriptableObject instance per ConfigData type though.</li>
+</ol>
+<h2 id="how-to-access-config-data">How to access config data</h2>
+<ol>
+<li>Add the <a href="ConfigRegistry.prefab">ConfigRegistry prefab</a> to a relevant context, usually the global context</li>
+<li>The ConfigRegistry now loads any ConfigData instances located in a <em>Resources/Config</em> folder of the project.</li>
+<li>As a consumer class, simply add the config data type as a dependency in the Inject method and inject via the DI system</li>
+</ol>
+<h2 id="behaviour-in-builds">Behaviour in builds</h2>
+<p>In builds, the config package will serialize configs to JSON and store them as files in a <em>Config</em> subfolder of the streaming assets folder. This allows players to modify these values and see changes even in builds. Changing these files while running is possible, the package checks regularly (once a second) whether any of these files have been modified.</p>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://kinstrife.visualstudio.com/_git/Core?path=Packages/Core/readme.md&amp;version=GBmaster&amp;line=1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

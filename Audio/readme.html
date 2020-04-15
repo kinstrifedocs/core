@@ -1,0 +1,134 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Kinstrife Audio System </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Kinstrife Audio System ">
+    <meta name="generator" content="docfx 2.52.0.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="">
+    <meta property="docfx:tocrel" content="">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        <div class="article row grid">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="kinstrife-audio-system">Kinstrife Audio System</h1>
+
+<p>This audio system was created due to a lack of lightweight, yet flexible and powerful audio systems on the asset store. Before trying to use the API, make sure that the audio system is being [installed in your scene.](&quot;Audio Installer.asset&quot;)</p>
+<h2 id="authoring">Authoring</h2>
+<p>Authoring is based on scriptable objects, allowing for a modular library of sounds and categories.</p>
+<h4 id="sound">Sound</h4>
+<p>Create a sound via the context menu (right-click in project tab), then Kinstrife-&gt;Audio-&gt;Sound.</p>
+<p>Sounds define individual sounds on a 'logical' level. This can be anything from a 'metal hits wood' to a UI button press sound. Each sound has one or more <em>variations</em>, which are, well, variations of a sound, including custom pitch and volume ranges. Also make sure to adjust the <em>settings</em> of each sound accordingly (UI sounds probably should not be spatialized, for example.)</p>
+<h4 id="soundcategory">SoundCategory</h4>
+<p>Create a sound category via the context menu (right-click in project tab), then Kinstrife-&gt;Audio-&gt;Sound Category.</p>
+<p>Sound categories hold information that is common to a number of sounds, e. g. which audio mixer to use or which priority the sounds have and whether they should bypass scene audio effects (for example collision sounds and UI sounds could be two categories).</p>
+<h2 id="api">API</h2>
+<p>The API is contained in the <code>Kinstrife.Audio</code> namespace. To access it, get the application's <a href="Scripts/Runtime/SoundSystem.cs"><code>SoundSystem</code></a> instance - most likely via dependency injection. In this class, you will find four methods to play <a href="Scripts/Data/Sound.cs"><code>Sound</code></a>s (so you need a reference to one of those as well):</p>
+<ul>
+<li><code>PlayOneshot</code>: Play the sound once in a 'fire and forget' way</li>
+<li><code>PlayOneshotAttached</code>: Same as above, except the sound follows the specified transform</li>
+<li><code>PlayWithId</code>: Play the sound with an ID; this allows you to later on adjust the pitch and volume of the sound as well as pause and stop the sound. If a sound is already playing with a certain ID and another sound plays, the conflict is resolved by priority.</li>
+<li><code>PlayWithIdAttached</code>: Same as above, except the sound follows the specified transform</li>
+</ul>
+<p>In order to update the volume or pitch of an already playing identifiable sound, call the methods <code>UpdateVolume</code> and <code>UpdatePitch</code>. Sounds with an ID can be stopped with the <code>StopSound</code> method. To check whether a specific sound is playing with a certain ID, use the <code>IsPlayingWithId</code> method.</p>
+<h1 id="internal-implementation">Internal Implementation</h1>
+<p>This is not relevant if you only plan to use this package. This is mostly meant for the sake of posteriority, for when changes will need to be made to the system.</p>
+<h3 id="sound--soundcategory">Sound &amp; SoundCategory</h3>
+<p>These are meant as data holding/authoring objects, referenced in config and database data. Sounds contain multiple <code>SoundVariation</code> instances; both can generate a <code>PlayableClip</code> which can be used to pass to a <code>SoundPlayer</code> to play.
+The sound class contains a small in-editor audio system to test/audition sounds and their variations, including random as well as min/max pitch and volume.</p>
+<h3 id="soundsettings">SoundSettings</h3>
+<p>Sound settings contain spatial and configuration data, based on the available settings of the audio source. Settings are split up between sound categories and individual sounds, with a combined SoundSetting struct to combine both data 'halves' again. This combined struct can be applied to AudioSource instances.</p>
+<h3 id="soundinstance">SoundInstance</h3>
+<p><a href="Scripts/Runtime/SoundInstance.cs"><code>SoundInstance</code></a>s are, well, just that, and also audio source instances. They create dummy game objects with audio sources (which are hidden in the hierarchy and don't get saved), which will reside in the scene specified in the <code>SoundSystem</code>. They hide away the interaction with the engine's audio API from the rest of the package.</p>
+<h3 id="soundsystem">SoundSystem</h3>
+<p><a href="Scripts/Runtime/SoundSystem.cs"><code>SoundSystem</code></a> is the access point for the public API. It is (1) a wrapper around the internal <code>SoundPlayer</code>, (2) handles pooling of SoundPlayers and (3) manages their IDs. To this end, it contains a pool class for SoundPlayers and a dictionary of ID/SoundPlayer key-value-pairs.
+GameObjects are used as IDs because this allows for a sort of 'fire and forget' approach to looped sounds, similar to an audio source would work if it was attached to that game object. Additionally, GameObjects already exist (sorta) as a unique identifier for objects in a scene - might as well reuse that instead of generating and handing out new unique IDs (which would be the alternative).
+TODO for the future: Expand with localization in mind (probably by reducing Sound to an ISound interface, allowing for a new LocalizedSound type to also provide a PlayableClip)</p>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://kinstrife.visualstudio.com/_git/Core?path=Packages/Audio/readme.md&amp;version=GBmaster&amp;line=1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>
