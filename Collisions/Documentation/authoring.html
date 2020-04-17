@@ -5,9 +5,9 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Audio authoring tips &amp; guidelines | Kinstrife </title>
+    <title> | Kinstrife </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Audio authoring tips &amp; guidelines | Kinstrife ">
+    <meta name="title" content=" | Kinstrife ">
     <meta name="generator" content="docfx 2.52.0.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
@@ -16,7 +16,7 @@
     <link rel="stylesheet" href="../../styles/main.css">
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet"> 
     <meta property="docfx:navrel" content="../../toc.html">
-    <meta property="docfx:tocrel" content="../../articles/packages/toc.html">
+    <meta property="docfx:tocrel" content="../toc.html">
     
     
     
@@ -67,30 +67,27 @@
         <div class="article row grid-right">
           <div class="col-md-10">
             <article class="content wrap" id="_content" data-uid="">
-<h1 id="audio-authoring-tips--guidelines">Audio authoring tips &amp; guidelines</h1>
 
+<h4 id="authoring-tips--guidelines">Authoring tips &amp; guidelines</h4>
 <p>It usually makes sense to check and set all values in a material. If a material should not play (for example) sliding VFX, it is also possible to simply leave a field empty and no effect will be played.</p>
 <p>TODO: Some examples for ranges of common collision velocities</p>
-<h2 id="sounds">Sounds</h2>
-<p>Pitch for collision sounds is adjusted based on mass. You can specify the min and max mass for modulation in the material in <em>kilograms</em>. A min value of 0.1 means objects with a mass of 0.1 kg will have the highest pitch for that sound. Objects smaller than that will have the same pitch. It works the same for large objects/the maximum mass, except inverted.
-Also note that the curve for pitch modulation is quadratic, which means that the lerping of the pitch is more fine-grained on the lower end of the scale, i. e. for smaller/lighter objects.
+<p><strong>Sounds:</strong>
+Pitch for collision sounds is adjusted based on object size. The relevant size is not the <em>volume</em> of the object, but rather the largest area of the largest side of the object's bounding box. You can specify the min and max area for modulation in the material in <em>square decimeters</em>. A value of 1 means objects with a bounding box size of 0.1m by 0.1m by &lt;0.1m will have the highest pitch for that sound. Objects smaller than that will have the lowest pitch. It works the same for large objects, an area of 400 sq decimeters corresponds to an object that has a bounding box side that is 2 by 2 meters.
+Also note that the curve for pitch modulation is quadratic, which means that the lerping of the pitch is more fine-grained on the lower end of the scale, i. e. for smaller objects.
 For impact sounds, only the part of the velocity that is orthogonal to the surface is considered. Similarly, sliding sounds only respect tangential velocity.</p>
-<h2 id="vfx">VFX</h2>
-<p>VFX objects are placed with the following orientation:</p>
-<ul>
-<li><em>Z axis</em>: Along surface normal</li>
-<li><em>Y axis</em>: Along other partner's forward axis for impacts; along velocity for sliding effects (both projected to be orthogonal to surface normal)</li>
-<li><em>X axis</em>: Cross product of Y and Z axis</li>
-</ul>
-<p>This means that for sliding VFX, a negative Y velocity results in particles that are 'trailing behind' if simulated in local space. However, simulation in global space is likely preferable for most situations.</p>
-<h2 id="decals">Decals</h2>
+<p><strong>VFX:</strong></p>
+<p>VFX objects are placed with the following orientation:
+Z axis: Along surface normal
+Y axis: Along other partner's forward axis for impacts; along velocity for sliding effects (both projected to be orthogonal to surface normal)
+X axis: Cross product of Y and Z axis</p>
+<p>This means that for sliding VFX, a negative velocity along Y will mean that particles will be 'trailing behind' if simulated in local space.</p>
+<p>However, simulation in global space is preferable for most situations.</p>
+<p><strong>Decals:</strong></p>
 <p>Modulation of decal size and opacity is based on impact velocity and is optional.</p>
-<p>Decal objects are placed with the following orientation:</p>
-<ul>
-<li><em>Z axis</em>: Along <em>negative</em> surface normal</li>
-<li><em>Y axis</em>: Along other partner's forward axis</li>
-<li><em>X axis</em>: Cross product of Y and Z axis</li>
-</ul>
+<p>Decal objects are placed with the following orientation:
+Z axis: Along <em>negative</em> surface normal
+Y axis: Along other partner's forward axis
+X axis: Cross product of Y and Z axis</p>
 <p>This means that e. g. footprint textures should have the heel at the bottom of the texture and toes at the top.</p>
 </article>
           </div>
@@ -100,7 +97,7 @@ For impact sounds, only the part of the velocity that is orthogonal to the surfa
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://kinstrife.visualstudio.com/_git/Core?path=Packages/Collisions/Documentation/authoring.md&amp;version=GBmaster&amp;line=1" class="contribution-link">Improve this Doc</a>
+                    <a href="https://kinstrife.visualstudio.com/Core/_git/Core?path=Packages/Collisions/Documentation/authoring.md&amp;version=GBmaster&amp;line=1" class="contribution-link">Improve this Doc</a>
                   </li>
                 </ul>
               </div>
