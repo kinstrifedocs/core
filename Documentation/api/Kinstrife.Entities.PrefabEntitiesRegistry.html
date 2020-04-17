@@ -5,10 +5,10 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Class TryStartActionSystem
+    <title>Class PrefabEntitiesRegistry
    | Kinstrife </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Class TryStartActionSystem
+    <meta name="title" content="Class PrefabEntitiesRegistry
    | Kinstrife ">
     <meta name="generator" content="docfx 2.52.0.0">
     
@@ -68,34 +68,38 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="Kinstrife.Action.TryStartActionSystem">
+            <article class="content wrap" id="_content" data-uid="Kinstrife.Entities.PrefabEntitiesRegistry">
   
   
-  <h1 id="Kinstrife_Action_TryStartActionSystem" data-uid="Kinstrife.Action.TryStartActionSystem" class="text-break">Class TryStartActionSystem
+  <h1 id="Kinstrife_Entities_PrefabEntitiesRegistry" data-uid="Kinstrife.Entities.PrefabEntitiesRegistry" class="text-break">Class PrefabEntitiesRegistry
   </h1>
   <div class="markdown level0 summary"></div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><span class="xref">TryStartActionSystem</span></div>
+    <div class="level1"><span class="xref">PrefabEntitiesRegistry</span></div>
   </div>
-  <h6><strong>Namespace</strong>: <a class="xref" href="Kinstrife.Action.html">Kinstrife.Action</a></h6>
+  <div classs="implements">
+    <h5>Implements</h5>
+    <div><span class="xref">IConvertGameObjectToEntity</span></div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Kinstrife.Entities.html">Kinstrife.Entities</a></h6>
   <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
-  <h5 id="Kinstrife_Action_TryStartActionSystem_syntax">Syntax</h5>
+  <h5 id="Kinstrife_Entities_PrefabEntitiesRegistry_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class TryStartActionSystem : JobComponentSystemBase</code></pre>
+    <pre><code class="lang-csharp hljs">public class PrefabEntitiesRegistry : MonoBehaviour, IConvertGameObjectToEntity</code></pre>
   </div>
   <h3 id="fields">Fields
   </h3>
   
   
-  <h4 id="Kinstrife_Action_TryStartActionSystem_RandomInput" data-uid="Kinstrife.Action.TryStartActionSystem.RandomInput">RandomInput</h4>
+  <h4 id="Kinstrife_Entities_PrefabEntitiesRegistry_EntityManager" data-uid="Kinstrife.Entities.PrefabEntitiesRegistry.EntityManager">EntityManager</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static bool RandomInput</code></pre>
+    <pre><code class="lang-csharp hljs">public static EntityManager EntityManager</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -107,7 +111,79 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="xref">EntityManager</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="Kinstrife_Entities_PrefabEntitiesRegistry_GameObjectConversionSystem" data-uid="Kinstrife.Entities.PrefabEntitiesRegistry.GameObjectConversionSystem">GameObjectConversionSystem</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static GameObjectConversionSystem GameObjectConversionSystem</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">GameObjectConversionSystem</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="Kinstrife_Entities_PrefabEntitiesRegistry_PrefabEntitiesDictionary" data-uid="Kinstrife.Entities.PrefabEntitiesRegistry.PrefabEntitiesDictionary">PrefabEntitiesDictionary</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Dictionary&lt;object, Entity&gt; PrefabEntitiesDictionary</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.Dictionary</span>&lt;<span class="xref">System.Object</span>, <span class="xref">Entity</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="Kinstrife_Entities_PrefabEntitiesRegistry_PrefabGameObjects" data-uid="Kinstrife.Entities.PrefabEntitiesRegistry.PrefabGameObjects">PrefabGameObjects</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public List&lt;GameObject&gt; PrefabGameObjects</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.List</span>&lt;<span class="xref">GameObject</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -116,54 +192,13 @@
   </h3>
   
   
-  <a id="Kinstrife_Action_TryStartActionSystem_Count_" data-uid="Kinstrife.Action.TryStartActionSystem.Count*"></a>
-  <h4 id="Kinstrife_Action_TryStartActionSystem_Count__1" data-uid="Kinstrife.Action.TryStartActionSystem.Count``1">Count&lt;T&gt;()</h4>
+  <a id="Kinstrife_Entities_PrefabEntitiesRegistry_Convert_" data-uid="Kinstrife.Entities.PrefabEntitiesRegistry.Convert*"></a>
+  <h4 id="Kinstrife_Entities_PrefabEntitiesRegistry_Convert_Entity_EntityManager_GameObjectConversionSystem_" data-uid="Kinstrife.Entities.PrefabEntitiesRegistry.Convert(Entity,EntityManager,GameObjectConversionSystem)">Convert(Entity, EntityManager, GameObjectConversionSystem)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public int Count&lt;T&gt;()
-    where T : struct, IComponentData</code></pre>
-  </div>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Int32</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="typeParameters">Type Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="parametername">T</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="Kinstrife_Action_TryStartActionSystem_FindActionEntity_" data-uid="Kinstrife.Action.TryStartActionSystem.FindActionEntity*"></a>
-  <h4 id="Kinstrife_Action_TryStartActionSystem_FindActionEntity_Entity_System_Int32_" data-uid="Kinstrife.Action.TryStartActionSystem.FindActionEntity(Entity,System.Int32)">FindActionEntity(Entity, Int32)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Entity FindActionEntity(Entity e, int actionID)</code></pre>
+    <pre><code class="lang-csharp hljs">public void Convert(Entity entity, EntityManager dstManager, GameObjectConversionSystem conversionSystem)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -177,50 +212,30 @@
     <tbody>
       <tr>
         <td><span class="xref">Entity</span></td>
-        <td><span class="parametername">e</span></td>
+        <td><span class="parametername">entity</span></td>
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">System.Int32</span></td>
-        <td><span class="parametername">actionID</span></td>
+        <td><span class="xref">EntityManager</span></td>
+        <td><span class="parametername">dstManager</span></td>
         <td></td>
       </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
       <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">Entity</span></td>
+        <td><span class="xref">GameObjectConversionSystem</span></td>
+        <td><span class="parametername">conversionSystem</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   
   
-  <a id="Kinstrife_Action_TryStartActionSystem_OnCreate_" data-uid="Kinstrife.Action.TryStartActionSystem.OnCreate*"></a>
-  <h4 id="Kinstrife_Action_TryStartActionSystem_OnCreate" data-uid="Kinstrife.Action.TryStartActionSystem.OnCreate">OnCreate()</h4>
+  <a id="Kinstrife_Entities_PrefabEntitiesRegistry_ConvertPrefabToEntity_" data-uid="Kinstrife.Entities.PrefabEntitiesRegistry.ConvertPrefabToEntity*"></a>
+  <h4 id="Kinstrife_Entities_PrefabEntitiesRegistry_ConvertPrefabToEntity_GameObject_System_Object_EntityManager_GameObjectConversionSystem_BlobAssetStore_" data-uid="Kinstrife.Entities.PrefabEntitiesRegistry.ConvertPrefabToEntity(GameObject,System.Object,EntityManager,GameObjectConversionSystem,BlobAssetStore)">ConvertPrefabToEntity(GameObject, Object, EntityManager, GameObjectConversionSystem, BlobAssetStore)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected override void OnCreate()</code></pre>
-  </div>
-  
-  
-  <a id="Kinstrife_Action_TryStartActionSystem_OnUpdate_" data-uid="Kinstrife.Action.TryStartActionSystem.OnUpdate*"></a>
-  <h4 id="Kinstrife_Action_TryStartActionSystem_OnUpdate_JobHandle_" data-uid="Kinstrife.Action.TryStartActionSystem.OnUpdate(JobHandle)">OnUpdate(JobHandle)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected override JobHandle OnUpdate(JobHandle inputDeps)</code></pre>
+    <pre><code class="lang-csharp hljs">public static Entity ConvertPrefabToEntity(GameObject prefabGameObject, object key, EntityManager dstManager, GameObjectConversionSystem conversionSystem, BlobAssetStore blobAssetStore = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -233,8 +248,28 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">JobHandle</span></td>
-        <td><span class="parametername">inputDeps</span></td>
+        <td><span class="xref">GameObject</span></td>
+        <td><span class="parametername">prefabGameObject</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Object</span></td>
+        <td><span class="parametername">key</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">EntityManager</span></td>
+        <td><span class="parametername">dstManager</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">GameObjectConversionSystem</span></td>
+        <td><span class="parametername">conversionSystem</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">BlobAssetStore</span></td>
+        <td><span class="parametername">blobAssetStore</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -249,20 +284,20 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">JobHandle</span></td>
+        <td><span class="xref">Entity</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   
   
-  <a id="Kinstrife_Action_TryStartActionSystem_Spawn_" data-uid="Kinstrife.Action.TryStartActionSystem.Spawn*"></a>
-  <h4 id="Kinstrife_Action_TryStartActionSystem_Spawn_System_Int32_Entity_" data-uid="Kinstrife.Action.TryStartActionSystem.Spawn(System.Int32,Entity)">Spawn(Int32, Entity)</h4>
+  <a id="Kinstrife_Entities_PrefabEntitiesRegistry_GetOrInstantiateEntity_" data-uid="Kinstrife.Entities.PrefabEntitiesRegistry.GetOrInstantiateEntity*"></a>
+  <h4 id="Kinstrife_Entities_PrefabEntitiesRegistry_GetOrInstantiateEntity_System_Object_GameObject_" data-uid="Kinstrife.Entities.PrefabEntitiesRegistry.GetOrInstantiateEntity(System.Object,GameObject)">GetOrInstantiateEntity(Object, GameObject)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void Spawn(int count, Entity prefabEntity)</code></pre>
+    <pre><code class="lang-csharp hljs">public static Entity GetOrInstantiateEntity(object key, GameObject value)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -275,26 +310,41 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Int32</span></td>
-        <td><span class="parametername">count</span></td>
+        <td><span class="xref">System.Object</span></td>
+        <td><span class="parametername">key</span></td>
         <td></td>
       </tr>
       <tr>
+        <td><span class="xref">GameObject</span></td>
+        <td><span class="parametername">value</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
         <td><span class="xref">Entity</span></td>
-        <td><span class="parametername">prefabEntity</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   
   
-  <a id="Kinstrife_Action_TryStartActionSystem_TryStart_" data-uid="Kinstrife.Action.TryStartActionSystem.TryStart*"></a>
-  <h4 id="Kinstrife_Action_TryStartActionSystem_TryStart_Entity_System_Int32_" data-uid="Kinstrife.Action.TryStartActionSystem.TryStart(Entity,System.Int32)">TryStart(Entity, Int32)</h4>
+  <a id="Kinstrife_Entities_PrefabEntitiesRegistry_GetPrefabEntity_" data-uid="Kinstrife.Entities.PrefabEntitiesRegistry.GetPrefabEntity*"></a>
+  <h4 id="Kinstrife_Entities_PrefabEntitiesRegistry_GetPrefabEntity_System_Object_" data-uid="Kinstrife.Entities.PrefabEntitiesRegistry.GetPrefabEntity(System.Object)">GetPrefabEntity(Object)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void TryStart(Entity owner, int actionID)</code></pre>
+    <pre><code class="lang-csharp hljs">public static Entity GetPrefabEntity(object prefabKey)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -307,26 +357,36 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Entity</span></td>
-        <td><span class="parametername">owner</span></td>
+        <td><span class="xref">System.Object</span></td>
+        <td><span class="parametername">prefabKey</span></td>
         <td></td>
       </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
       <tr>
-        <td><span class="xref">System.Int32</span></td>
-        <td><span class="parametername">actionID</span></td>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Entity</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   
   
-  <a id="Kinstrife_Action_TryStartActionSystem_TryStop_" data-uid="Kinstrife.Action.TryStartActionSystem.TryStop*"></a>
-  <h4 id="Kinstrife_Action_TryStartActionSystem_TryStop_Entity_System_Int32_" data-uid="Kinstrife.Action.TryStartActionSystem.TryStop(Entity,System.Int32)">TryStop(Entity, Int32)</h4>
+  <a id="Kinstrife_Entities_PrefabEntitiesRegistry_Instantiate_" data-uid="Kinstrife.Entities.PrefabEntitiesRegistry.Instantiate*"></a>
+  <h4 id="Kinstrife_Entities_PrefabEntitiesRegistry_Instantiate_System_Object_" data-uid="Kinstrife.Entities.PrefabEntitiesRegistry.Instantiate(System.Object)">Instantiate(Object)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void TryStop(Entity owner, int actionID)</code></pre>
+    <pre><code class="lang-csharp hljs">public static Entity Instantiate(object prefabKey)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -339,81 +399,31 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Entity</span></td>
-        <td><span class="parametername">owner</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><span class="xref">System.Int32</span></td>
-        <td><span class="parametername">actionID</span></td>
+        <td><span class="xref">System.Object</span></td>
+        <td><span class="parametername">prefabKey</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
-  
-  
-  <a id="Kinstrife_Action_TryStartActionSystem_TryToggle_" data-uid="Kinstrife.Action.TryStartActionSystem.TryToggle*"></a>
-  <h4 id="Kinstrife_Action_TryStartActionSystem_TryToggle_Entity_System_Int32_" data-uid="Kinstrife.Action.TryStartActionSystem.TryToggle(Entity,System.Int32)">TryToggle(Entity, Int32)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void TryToggle(Entity owner, int actionID)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
+  <h5 class="returns">Returns</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
       <tr>
         <th>Type</th>
-        <th>Name</th>
         <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><span class="xref">Entity</span></td>
-        <td><span class="parametername">owner</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><span class="xref">System.Int32</span></td>
-        <td><span class="parametername">actionID</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
-  
-  
-  <a id="Kinstrife_Action_TryStartActionSystem_TryToggleSignal_" data-uid="Kinstrife.Action.TryStartActionSystem.TryToggleSignal*"></a>
-  <h4 id="Kinstrife_Action_TryStartActionSystem_TryToggleSignal_Entity_System_Int32_" data-uid="Kinstrife.Action.TryStartActionSystem.TryToggleSignal(Entity,System.Int32)">TryToggleSignal(Entity, Int32)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void TryToggleSignal(Entity owner, int signalID)</code></pre>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <span class="xref">IConvertGameObjectToEntity</span>
   </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">Entity</span></td>
-        <td><span class="parametername">owner</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><span class="xref">System.Int32</span></td>
-        <td><span class="parametername">signalID</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
 </article>
           </div>
           

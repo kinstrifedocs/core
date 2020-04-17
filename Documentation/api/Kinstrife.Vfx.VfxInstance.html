@@ -5,10 +5,10 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Struct Flammable
+    <title>Class VfxInstance
    | Kinstrife </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Struct Flammable
+    <meta name="title" content="Class VfxInstance
    | Kinstrife ">
     <meta name="generator" content="docfx 2.52.0.0">
     
@@ -68,27 +68,29 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="Kinstrife.Action.Demo.Flammable">
+            <article class="content wrap" id="_content" data-uid="Kinstrife.Vfx.VfxInstance">
   
   
-  <h1 id="Kinstrife_Action_Demo_Flammable" data-uid="Kinstrife.Action.Demo.Flammable" class="text-break">Struct Flammable
+  <h1 id="Kinstrife_Vfx_VfxInstance" data-uid="Kinstrife.Vfx.VfxInstance" class="text-break">Class VfxInstance
   </h1>
   <div class="markdown level0 summary"></div>
   <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">VfxInstance</span></div>
+  </div>
   <div classs="implements">
     <h5>Implements</h5>
-    <div><span class="xref">IComponentData</span></div>
+    <div><span class="xref">System.IDisposable</span></div>
   </div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
     <div>
-      <span class="xref">System.ValueType.Equals(System.Object)</span>
+      <span class="xref">System.Object.ToString()</span>
     </div>
     <div>
-      <span class="xref">System.ValueType.GetHashCode()</span>
-    </div>
-    <div>
-      <span class="xref">System.ValueType.ToString()</span>
+      <span class="xref">System.Object.Equals(System.Object)</span>
     </div>
     <div>
       <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
@@ -97,25 +99,31 @@
       <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
     </div>
     <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
       <span class="xref">System.Object.GetType()</span>
     </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
   </div>
-  <h6><strong>Namespace</strong>: <a class="xref" href="Kinstrife.Action.Demo.html">Kinstrife.Action.Demo</a></h6>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Kinstrife.Vfx.html">Kinstrife.Vfx</a></h6>
   <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
-  <h5 id="Kinstrife_Action_Demo_Flammable_syntax">Syntax</h5>
+  <h5 id="Kinstrife_Vfx_VfxInstance_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public struct Flammable : IComponentData</code></pre>
+    <pre><code class="lang-csharp hljs">public abstract class VfxInstance : IVfxInstance, IDisposable</code></pre>
   </div>
   <h3 id="fields">Fields
   </h3>
   
   
-  <h4 id="Kinstrife_Action_Demo_Flammable_ActionID" data-uid="Kinstrife.Action.Demo.Flammable.ActionID">ActionID</h4>
+  <h4 id="Kinstrife_Vfx_VfxInstance_offsetPosition" data-uid="Kinstrife.Vfx.VfxInstance.offsetPosition">offsetPosition</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public int ActionID</code></pre>
+    <pre><code class="lang-csharp hljs">protected Vector3 offsetPosition</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -127,19 +135,19 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Int32</span></td>
+        <td><span class="xref">Vector3</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   
   
-  <h4 id="Kinstrife_Action_Demo_Flammable_Exposure" data-uid="Kinstrife.Action.Demo.Flammable.Exposure">Exposure</h4>
+  <h4 id="Kinstrife_Vfx_VfxInstance_offsetRotation" data-uid="Kinstrife.Vfx.VfxInstance.offsetRotation">offsetRotation</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public float Exposure</code></pre>
+    <pre><code class="lang-csharp hljs">protected Quaternion offsetRotation</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -151,19 +159,19 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Single</span></td>
+        <td><span class="xref">Quaternion</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   
   
-  <h4 id="Kinstrife_Action_Demo_Flammable_MinDistanceSq" data-uid="Kinstrife.Action.Demo.Flammable.MinDistanceSq">MinDistanceSq</h4>
+  <h4 id="Kinstrife_Vfx_VfxInstance_transformToFollow" data-uid="Kinstrife.Vfx.VfxInstance.transformToFollow">transformToFollow</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public float MinDistanceSq</code></pre>
+    <pre><code class="lang-csharp hljs">protected Transform transformToFollow</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -175,22 +183,24 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Single</span></td>
+        <td><span class="xref">Transform</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
+  <h3 id="properties">Properties
+  </h3>
   
   
-  <h4 id="Kinstrife_Action_Demo_Flammable_MinDistanceToCenterSq" data-uid="Kinstrife.Action.Demo.Flammable.MinDistanceToCenterSq">MinDistanceToCenterSq</h4>
-  <div class="markdown level1 summary"><p>Minimum distance to center of a fire. Will be used to see if a new fire VFX instance should be created</p>
-</div>
+  <a id="Kinstrife_Vfx_VfxInstance_CurrentEffect_" data-uid="Kinstrife.Vfx.VfxInstance.CurrentEffect*"></a>
+  <h4 id="Kinstrife_Vfx_VfxInstance_CurrentEffect" data-uid="Kinstrife.Vfx.VfxInstance.CurrentEffect">CurrentEffect</h4>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public float MinDistanceToCenterSq</code></pre>
+    <pre><code class="lang-csharp hljs">public VfxAsset CurrentEffect { get; protected set; }</code></pre>
   </div>
-  <h5 class="fieldValue">Field Value</h5>
+  <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
       <tr>
@@ -200,21 +210,47 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Single</span></td>
+        <td><a class="xref" href="Kinstrife.Vfx.VfxAsset.html">VfxAsset</a></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   
   
-  <h4 id="Kinstrife_Action_Demo_Flammable_OnFire" data-uid="Kinstrife.Action.Demo.Flammable.OnFire">OnFire</h4>
+  <a id="Kinstrife_Vfx_VfxInstance_GameObject_" data-uid="Kinstrife.Vfx.VfxInstance.GameObject*"></a>
+  <h4 id="Kinstrife_Vfx_VfxInstance_GameObject" data-uid="Kinstrife.Vfx.VfxInstance.GameObject">GameObject</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public bool OnFire</code></pre>
+    <pre><code class="lang-csharp hljs">public GameObject GameObject { get; protected set; }</code></pre>
   </div>
-  <h5 class="fieldValue">Field Value</h5>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">GameObject</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Kinstrife_Vfx_VfxInstance_InUse_" data-uid="Kinstrife.Vfx.VfxInstance.InUse*"></a>
+  <h4 id="Kinstrife_Vfx_VfxInstance_InUse" data-uid="Kinstrife.Vfx.VfxInstance.InUse">InUse</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected bool InUse { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
       <tr>
@@ -231,14 +267,15 @@
   </table>
   
   
-  <h4 id="Kinstrife_Action_Demo_Flammable_PrimaryFireEntity" data-uid="Kinstrife.Action.Demo.Flammable.PrimaryFireEntity">PrimaryFireEntity</h4>
+  <a id="Kinstrife_Vfx_VfxInstance_IsAttached_" data-uid="Kinstrife.Vfx.VfxInstance.IsAttached*"></a>
+  <h4 id="Kinstrife_Vfx_VfxInstance_IsAttached" data-uid="Kinstrife.Vfx.VfxInstance.IsAttached">IsAttached</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Entity PrimaryFireEntity</code></pre>
+    <pre><code class="lang-csharp hljs">protected bool IsAttached { get; set; }</code></pre>
   </div>
-  <h5 class="fieldValue">Field Value</h5>
+  <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
       <tr>
@@ -248,21 +285,22 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Entity</span></td>
+        <td><span class="xref">System.Boolean</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   
   
-  <h4 id="Kinstrife_Action_Demo_Flammable_SignalID" data-uid="Kinstrife.Action.Demo.Flammable.SignalID">SignalID</h4>
+  <a id="Kinstrife_Vfx_VfxInstance_Transform_" data-uid="Kinstrife.Vfx.VfxInstance.Transform*"></a>
+  <h4 id="Kinstrife_Vfx_VfxInstance_Transform" data-uid="Kinstrife.Vfx.VfxInstance.Transform">Transform</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public int SignalID</code></pre>
+    <pre><code class="lang-csharp hljs">public Transform Transform { get; protected set; }</code></pre>
   </div>
-  <h5 class="fieldValue">Field Value</h5>
+  <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
       <tr>
@@ -272,38 +310,112 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Int32</span></td>
+        <td><span class="xref">Transform</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  
+  
+  <a id="Kinstrife_Vfx_VfxInstance_Dispose_" data-uid="Kinstrife.Vfx.VfxInstance.Dispose*"></a>
+  <h4 id="Kinstrife_Vfx_VfxInstance_Dispose" data-uid="Kinstrife.Vfx.VfxInstance.Dispose">Dispose()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Dispose()</code></pre>
+  </div>
+  
+  
+  <a id="Kinstrife_Vfx_VfxInstance_OverrideOrientation_" data-uid="Kinstrife.Vfx.VfxInstance.OverrideOrientation*"></a>
+  <h4 id="Kinstrife_Vfx_VfxInstance_OverrideOrientation_Quaternion_" data-uid="Kinstrife.Vfx.VfxInstance.OverrideOrientation(Quaternion)">OverrideOrientation(Quaternion)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void OverrideOrientation(Quaternion orientation)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Quaternion</span></td>
+        <td><span class="parametername">orientation</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   
   
-  <h4 id="Kinstrife_Action_Demo_Flammable_TimeInContact" data-uid="Kinstrife.Action.Demo.Flammable.TimeInContact">TimeInContact</h4>
+  <a id="Kinstrife_Vfx_VfxInstance_OverridePosition_" data-uid="Kinstrife.Vfx.VfxInstance.OverridePosition*"></a>
+  <h4 id="Kinstrife_Vfx_VfxInstance_OverridePosition_Vector3_" data-uid="Kinstrife.Vfx.VfxInstance.OverridePosition(Vector3)">OverridePosition(Vector3)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public float TimeInContact</code></pre>
+    <pre><code class="lang-csharp hljs">public void OverridePosition(Vector3 position)</code></pre>
   </div>
-  <h5 class="fieldValue">Field Value</h5>
+  <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
       <tr>
         <th>Type</th>
+        <th>Name</th>
         <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Single</span></td>
+        <td><span class="xref">Vector3</span></td>
+        <td><span class="parametername">position</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Kinstrife_Vfx_VfxInstance_OverridePositionOrientation_" data-uid="Kinstrife.Vfx.VfxInstance.OverridePositionOrientation*"></a>
+  <h4 id="Kinstrife_Vfx_VfxInstance_OverridePositionOrientation_Vector3_Quaternion_" data-uid="Kinstrife.Vfx.VfxInstance.OverridePositionOrientation(Vector3,Quaternion)">OverridePositionOrientation(Vector3, Quaternion)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void OverridePositionOrientation(Vector3 position, Quaternion orientation)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Vector3</span></td>
+        <td><span class="parametername">position</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">Quaternion</span></td>
+        <td><span class="parametername">orientation</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <h3 id="implements">Implements</h3>
   <div>
-      <span class="xref">IComponentData</span>
+      <span class="xref">System.IDisposable</span>
   </div>
 </article>
           </div>
