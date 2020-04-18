@@ -16,7 +16,7 @@
     <link rel="stylesheet" href="../styles/main.css">
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet"> 
     <meta property="docfx:navrel" content="../toc.html">
-    <meta property="docfx:tocrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="../articles/packages/toc.html">
     
     
     
@@ -57,7 +57,14 @@
         </div>
       </header>
       <div role="main" class="container body-content hide-when-search">
-        <div class="article row grid">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
           <div class="col-md-10">
             <article class="content wrap" id="_content" data-uid="">
 <h1 id="kinstrife-config">Kinstrife Config</h1>
@@ -84,8 +91,10 @@ It wouldn't make sense for multiple (contradictory) versions of this data to exi
 <li>If there is no instance/data set yet, you will see a warning in the main window on the right - enter a path at the bottom of the window. The path must be in a Resources/Config/ folder. You can enter either a name for a directory, or a file-name (which will need to end with '.asset'). Once you've done so, a Create button will appear, which creates an instance at the path upon clicking. If it doesn't, make sure to check the console for errors.</li>
 <li>You can now modify your config data anytime through that window.</li>
 </ol>
-<p>[!TIP]
-&lt;You can copy a path by selecting a folder in the project view and hitting ctrl+alt+c.&gt;</p>
+<div class="TIP">
+<h5>Tip</h5>
+<p>You can copy a path by selecting a folder in the project view and hitting ctrl+alt+c.</p>
+</div>
 <h2 id="how-to-access-config-data-in-code">How to access config data in code</h2>
 <ol>
 <li>Add the <a href="ConfigRegistry.prefab">ConfigRegistry prefab</a> to a relevant context, usually the global context</li>

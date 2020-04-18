@@ -7,5 +7,4 @@ This is an example for an additional information file, in addition to the main p
 (`index.md`).
 
 
-
-![](xzibit.jpg | width=300)
+![](xzibit.jpg)
