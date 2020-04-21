@@ -73,8 +73,7 @@
   
   <h1 id="Kinstrife_Collisions_Damage_CuttingCalculation" data-uid="Kinstrife.Collisions.Damage.CuttingCalculation" class="text-break">Class CuttingCalculation
   </h1>
-  <div class="markdown level0 summary"><p>TODO: Avoid calculating stuff in milimeters, stick to meters!</p>
-</div>
+  <div class="markdown level0 summary"></div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
@@ -190,7 +189,7 @@ E.g. for a value of 0.5, materials with a hardness of 3.0 can cut materials with
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static bool CanInitializePiercing(ref CuttingInput input, float resistingArea = 1F, float minHardnessDifference = 0.5F)</code></pre>
+    <pre><code class="lang-csharp hljs">public static bool CanInitializePiercing(ref CuttingInput input, float resistingArea, float minHardnessDifference)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -246,7 +245,7 @@ E.g. for a value of 0.5, materials with a hardness of 3.0 can cut materials with
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static CuttingDamage CuttingDamage(ref CuttingInput input, float slicePushFactor, float resistingDepth = 0.5F, float pushSharpnessFactor = 0.6F)</code></pre>
+    <pre><code class="lang-csharp hljs">public static CuttingDamage CuttingDamage(ref CuttingInput input, float slicePushFactor, float resistingDepth, float pushSharpnessFactor)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -414,7 +413,7 @@ E.g. for a value of 0.5, materials with a hardness of 3.0 can cut materials with
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static CuttingDamage PiercingDamage(ref CuttingInput input, float piercerLength, float resistingDepth = 0.5F)</code></pre>
+    <pre><code class="lang-csharp hljs">public static CuttingDamage PiercingDamage(ref CuttingInput input, float piercerLength, float resistingDepth)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">

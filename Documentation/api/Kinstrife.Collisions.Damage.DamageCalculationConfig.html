@@ -5,10 +5,10 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Class ConfigData
+    <title>Class DamageCalculationConfig
    | Kinstrife </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Class ConfigData
+    <meta name="title" content="Class DamageCalculationConfig
    | Kinstrife ">
     <meta name="generator" content="docfx 2.52.0.0">
     
@@ -68,38 +68,93 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="Kinstrife.Core.Config.ConfigData">
+            <article class="content wrap" id="_content" data-uid="Kinstrife.Collisions.Damage.DamageCalculationConfig">
   
   
-  <h1 id="Kinstrife_Core_Config_ConfigData" data-uid="Kinstrife.Core.Config.ConfigData" class="text-break">Class ConfigData
+  <h1 id="Kinstrife_Collisions_Damage_DamageCalculationConfig" data-uid="Kinstrife.Collisions.Damage.DamageCalculationConfig" class="text-break">Class DamageCalculationConfig
   </h1>
   <div class="markdown level0 summary"></div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><span class="xref">ConfigData</span></div>
-      <div class="level2"><a class="xref" href="Kinstrife.Collisions.Damage.DamageCalculationConfig.html">DamageCalculationConfig</a></div>
-      <div class="level2"><a class="xref" href="Kinstrife.Core.Config.DebugConfig.html">DebugConfig</a></div>
-      <div class="level2"><a class="xref" href="Kinstrife.Core.Config.EntitySelectionConfig.html">EntitySelectionConfig</a></div>
+    <div class="level1"><a class="xref" href="Kinstrife.Core.Config.ConfigData.html">ConfigData</a></div>
+    <div class="level2"><span class="xref">DamageCalculationConfig</span></div>
   </div>
-  <h6><strong>Namespace</strong>: <a class="xref" href="Kinstrife.Core.Config.html">Kinstrife.Core.Config</a></h6>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="Kinstrife.Core.Config.ConfigData.html#Kinstrife_Core_Config_ConfigData_ValidateSingleton_System_Type_">ConfigData.ValidateSingleton(Type)</a>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Kinstrife.Collisions.Damage.html">Kinstrife.Collisions.Damage</a></h6>
   <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
-  <h5 id="Kinstrife_Core_Config_ConfigData_syntax">Syntax</h5>
+  <h5 id="Kinstrife_Collisions_Damage_DamageCalculationConfig_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public abstract class ConfigData : ScriptableObject</code></pre>
+    <pre><code class="lang-csharp hljs">[ConfigMenu(&quot;Collision/Damage Calculation&quot;)]
+public class DamageCalculationConfig : ConfigData</code></pre>
   </div>
   <h3 id="properties">Properties
   </h3>
   
   
-  <a id="Kinstrife_Core_Config_ConfigData_Moddable_" data-uid="Kinstrife.Core.Config.ConfigData.Moddable*"></a>
-  <h4 id="Kinstrife_Core_Config_ConfigData_Moddable" data-uid="Kinstrife.Core.Config.ConfigData.Moddable">Moddable</h4>
+  <a id="Kinstrife_Collisions_Damage_DamageCalculationConfig_Cutting_" data-uid="Kinstrife.Collisions.Damage.DamageCalculationConfig.Cutting*"></a>
+  <h4 id="Kinstrife_Collisions_Damage_DamageCalculationConfig_Cutting" data-uid="Kinstrife.Collisions.Damage.DamageCalculationConfig.Cutting">Cutting</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected abstract bool Moddable { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public DamageCalculationConfig.CuttingConfig Cutting { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Kinstrife.Collisions.Damage.DamageCalculationConfig.CuttingConfig.html">DamageCalculationConfig.CuttingConfig</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Kinstrife_Collisions_Damage_DamageCalculationConfig_Fracturing_" data-uid="Kinstrife.Collisions.Damage.DamageCalculationConfig.Fracturing*"></a>
+  <h4 id="Kinstrife_Collisions_Damage_DamageCalculationConfig_Fracturing" data-uid="Kinstrife.Collisions.Damage.DamageCalculationConfig.Fracturing">Fracturing</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public DamageCalculationConfig.FractureConfig Fracturing { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Kinstrife.Collisions.Damage.DamageCalculationConfig.FractureConfig.html">DamageCalculationConfig.FractureConfig</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Kinstrife_Collisions_Damage_DamageCalculationConfig_Moddable_" data-uid="Kinstrife.Collisions.Damage.DamageCalculationConfig.Moddable*"></a>
+  <h4 id="Kinstrife_Collisions_Damage_DamageCalculationConfig_Moddable" data-uid="Kinstrife.Collisions.Damage.DamageCalculationConfig.Moddable">Moddable</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override bool Moddable { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -116,60 +171,34 @@
       </tr>
     </tbody>
   </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Kinstrife.Core.Config.ConfigData.html#Kinstrife_Core_Config_ConfigData_Moddable">ConfigData.Moddable</a></div>
   <h3 id="methods">Methods
   </h3>
   
   
-  <a id="Kinstrife_Core_Config_ConfigData_Initialize_" data-uid="Kinstrife.Core.Config.ConfigData.Initialize*"></a>
-  <h4 id="Kinstrife_Core_Config_ConfigData_Initialize" data-uid="Kinstrife.Core.Config.ConfigData.Initialize">Initialize()</h4>
-  <div class="markdown level1 summary"><p>This method is called when config data is initially loaded at runtime.</p>
-</div>
+  <a id="Kinstrife_Collisions_Damage_DamageCalculationConfig_Initialize_" data-uid="Kinstrife.Collisions.Damage.DamageCalculationConfig.Initialize*"></a>
+  <h4 id="Kinstrife_Collisions_Damage_DamageCalculationConfig_Initialize" data-uid="Kinstrife.Collisions.Damage.DamageCalculationConfig.Initialize">Initialize()</h4>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected abstract void Initialize()</code></pre>
+    <pre><code class="lang-csharp hljs">protected override void Initialize()</code></pre>
   </div>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Kinstrife.Core.Config.ConfigData.html#Kinstrife_Core_Config_ConfigData_Initialize">ConfigData.Initialize()</a></div>
   
   
-  <a id="Kinstrife_Core_Config_ConfigData_OnValidate_" data-uid="Kinstrife.Core.Config.ConfigData.OnValidate*"></a>
-  <h4 id="Kinstrife_Core_Config_ConfigData_OnValidate" data-uid="Kinstrife.Core.Config.ConfigData.OnValidate">OnValidate()</h4>
-  <div class="markdown level1 summary"><p>Method to e.g. validate data integrity of missing values. Log errors or warning if issues are detected.
-This is usually implemented by simply calling <a class="xref" href="Kinstrife.Core.Config.ConfigData.html#Kinstrife_Core_Config_ConfigData_ValidateSingleton_System_Type_">ValidateSingleton(Type)</a> with the calling class type as the parameter.</p>
-</div>
+  <a id="Kinstrife_Collisions_Damage_DamageCalculationConfig_OnValidate_" data-uid="Kinstrife.Collisions.Damage.DamageCalculationConfig.OnValidate*"></a>
+  <h4 id="Kinstrife_Collisions_Damage_DamageCalculationConfig_OnValidate" data-uid="Kinstrife.Collisions.Damage.DamageCalculationConfig.OnValidate">OnValidate()</h4>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected abstract void OnValidate()</code></pre>
+    <pre><code class="lang-csharp hljs">protected override void OnValidate()</code></pre>
   </div>
-  
-  
-  <a id="Kinstrife_Core_Config_ConfigData_ValidateSingleton_" data-uid="Kinstrife.Core.Config.ConfigData.ValidateSingleton*"></a>
-  <h4 id="Kinstrife_Core_Config_ConfigData_ValidateSingleton_System_Type_" data-uid="Kinstrife.Core.Config.ConfigData.ValidateSingleton(System.Type)">ValidateSingleton(Type)</h4>
-  <div class="markdown level1 summary"><p>Logs errors when there is not exactly one instance of the given parameter <code data-dev-comment-type="paramref" class="paramref">type</code> in a 'Resources/Config/' directory.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected void ValidateSingleton(Type type)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Type</span></td>
-        <td><span class="parametername">type</span></td>
-        <td><p>The type to validate as a singleton. Must inherit from ConfigData.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Kinstrife.Core.Config.ConfigData.html#Kinstrife_Core_Config_ConfigData_OnValidate">ConfigData.OnValidate()</a></div>
 </article>
           </div>
           

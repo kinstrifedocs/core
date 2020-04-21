@@ -168,7 +168,7 @@
     <tbody>
       <tr>
         <td><span class="xref">System.Single</span></td>
-        <td><p>Kinetic energy lost in J</p>
+        <td><p>Kinetic energy lost (in J)</p>
 </td>
       </tr>
     </tbody>
@@ -288,7 +288,9 @@
   
   <a id="Kinstrife_Collisions_Damage_ImpactCalculations_EstimateContactTime_" data-uid="Kinstrife.Collisions.Damage.ImpactCalculations.EstimateContactTime*"></a>
   <h4 id="Kinstrife_Collisions_Damage_ImpactCalculations_EstimateContactTime" data-uid="Kinstrife.Collisions.Damage.ImpactCalculations.EstimateContactTime">EstimateContactTime()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Estimates contact time of impact, which is necessary for calculating impact force (from impact momentum changes.)
+TODO: Implement algorithm. Just using a constant for now. Perhaps by faking at least some correlation with young's modulus?</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -313,7 +315,9 @@
   
   <a id="Kinstrife_Collisions_Damage_ImpactCalculations_EstimatePeakForce_" data-uid="Kinstrife.Collisions.Damage.ImpactCalculations.EstimatePeakForce*"></a>
   <h4 id="Kinstrife_Collisions_Damage_ImpactCalculations_EstimatePeakForce_System_Single_System_Single_" data-uid="Kinstrife.Collisions.Damage.ImpactCalculations.EstimatePeakForce(System.Single,System.Single)">EstimatePeakForce(Single, Single)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Estimate peak force, based on momentum change/impulse and contact time, assuming a triangular force profile over time.
+TODO: Implement better algorithm/approximation</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -360,7 +364,8 @@
   
   <a id="Kinstrife_Collisions_Damage_ImpactCalculations_GetThicknessAlongDirection_" data-uid="Kinstrife.Collisions.Damage.ImpactCalculations.GetThicknessAlongDirection*"></a>
   <h4 id="Kinstrife_Collisions_Damage_ImpactCalculations_GetThicknessAlongDirection_Kinstrife_Collisions_CollisionParticipant_Vector3_Vector3_" data-uid="Kinstrife.Collisions.Damage.ImpactCalculations.GetThicknessAlongDirection(Kinstrife.Collisions.CollisionParticipant,Vector3,Vector3)">GetThicknessAlongDirection(CollisionParticipant, Vector3, Vector3)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Checks thickness of an object along a specified direction, based on the object's collider. Currently does not support hollow objects.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -412,7 +417,8 @@
   
   <a id="Kinstrife_Collisions_Damage_ImpactCalculations_ToImpact_" data-uid="Kinstrife.Collisions.Damage.ImpactCalculations.ToImpact*"></a>
   <h4 id="Kinstrife_Collisions_Damage_ImpactCalculations_ToImpact_Kinstrife_Collisions_ContactPair_System_Boolean_" data-uid="Kinstrife.Collisions.Damage.ImpactCalculations.ToImpact(Kinstrife.Collisions.ContactPair,System.Boolean)">ToImpact(ContactPair, Boolean)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Generate (dynamic) <a class="xref" href="Kinstrife.Collisions.Damage.Impact.html">Impact</a> information from (kinematic) <code data-dev-comment-type="paramref" class="paramref">contact</code> data.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
