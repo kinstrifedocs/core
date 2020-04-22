@@ -1,0 +1,4919 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Struct CommandBuilder
+   | Kinstrife </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Struct CommandBuilder
+   | Kinstrife ">
+    <meta name="generator" content="docfx 2.52.0.0">
+    
+    <link rel="shortcut icon" href="../../favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet"> 
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../index.html">
+                <img id="logo" class="svg" src="../../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Drawing.CommandBuilder">
+  
+  
+  <h1 id="Drawing_CommandBuilder" data-uid="Drawing.CommandBuilder" class="text-break">Struct CommandBuilder
+  </h1>
+  <div class="markdown level0 summary"><p>Builder for drawing commands.
+You can use this to queue many drawing commands. The commands will be queued for rendering when you call the Dipose method.
+It is recommended that you use the <a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/using-statement">using statement</a> which automatically calls the Dispose method.</p>
+<pre><code>// Create a new CommandBuilder
+using (var draw = DrawingManager.GetBuilder()) {
+    // Use the exact same API as the global Draw class
+    draw.WireBox(Vector3.zero, Vector3.one);
+}</code></pre>
+<p>Warning: You must call either Dipose or DiscardAndDispose when you are done with this object to avoid memory leaks.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div classs="implements">
+    <h5>Implements</h5>
+    <div><span class="xref">System.IDisposable</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.ValueType.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.ValueType.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.ValueType.ToString()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Drawing.html">Drawing</a></h6>
+  <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
+  <h5 id="Drawing_CommandBuilder_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public struct CommandBuilder : IDisposable</code></pre>
+  </div>
+  <h3 id="methods">Methods
+  </h3>
+  
+  
+  <a id="Drawing_CommandBuilder_Arrow_" data-uid="Drawing.CommandBuilder.Arrow*"></a>
+  <h4 id="Drawing_CommandBuilder_Arrow_float3_float3_" data-uid="Drawing.CommandBuilder.Arrow(float3,float3)">Arrow(float3, float3)</h4>
+  <div class="markdown level1 summary"><p>Draws an arrow between two points.</p>
+<p>The size of the head defaults to 20% of the length of the arrow.</p>
+<p>[Open online documentation to see images]</p>
+<p>See: <a class="xref" href="Drawing.CommandBuilder.html#Drawing_CommandBuilder_ArrowheadArc_float3_float3_System_Single_System_Single_">ArrowheadArc(float3, float3, Single, Single)</a>
+See: <a class="xref" href="Drawing.CommandBuilder.html#Drawing_CommandBuilder_Arrow_float3_float3_float3_System_Single_">Arrow(float3, float3, float3, Single)</a>
+See: <a class="xref" href="Drawing.CommandBuilder.html#Drawing_CommandBuilder_ArrowRelativeSizeHead_float3_float3_float3_System_Single_">ArrowRelativeSizeHead(float3, float3, float3, Single)</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Arrow(float3 from, float3 to)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">float3</span></td>
+        <td><span class="parametername">from</span></td>
+        <td><p>Base of the arrow.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">float3</span></td>
+        <td><span class="parametername">to</span></td>
+        <td><p>Head of the arrow.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Drawing_CommandBuilder_Arrow_" data-uid="Drawing.CommandBuilder.Arrow*"></a>
+  <h4 id="Drawing_CommandBuilder_Arrow_float3_float3_Color_" data-uid="Drawing.CommandBuilder.Arrow(float3,float3,Color)">Arrow(float3, float3, Color)</h4>
+  <div class="markdown level1 summary"><p>\copydoc Arrow(float3,float3)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Arrow(float3 from, float3 to, Color color)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">float3</span></td>
+        <td><span class="parametername">from</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">float3</span></td>
+        <td><span class="parametername">to</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">Color</span></td>
+        <td><span class="parametername">color</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Drawing_CommandBuilder_Arrow_" data-uid="Drawing.CommandBuilder.Arrow*"></a>
+  <h4 id="Drawing_CommandBuilder_Arrow_float3_float3_float3_System_Single_" data-uid="Drawing.CommandBuilder.Arrow(float3,float3,float3,System.Single)">Arrow(float3, float3, float3, Single)</h4>
+  <div class="markdown level1 summary"><p>Draws an arrow between two points.</p>
+<p>[Open online documentation to see images]</p>
+<p>See: <a class="xref" href="Drawing.CommandBuilder.html#Drawing_CommandBuilder_ArrowRelativeSizeHead_float3_float3_float3_System_Single_">ArrowRelativeSizeHead(float3, float3, float3, Single)</a>
+See: <a class="xref" href="Drawing.CommandBuilder.html#Drawing_CommandBuilder_ArrowheadArc_float3_float3_System_Single_System_Single_">ArrowheadArc(float3, float3, Single, Single)</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Arrow(float3 from, float3 to, float3 up, float headSize)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">float3</span></td>
+        <td><span class="parametername">from</span></td>
+        <td><p>Base of the arrow.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">float3</span></td>
+        <td><span class="parametername">to</span></td>
+        <td><p>Head of the arrow.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">float3</span></td>
+        <td><span class="parametername">up</span></td>
+        <td><p>Up direction of the world, the arrowhead plane will be as perpendicular as possible to this direction. Defaults to Vector3.up.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><span class="parametername">headSize</span></td>
+        <td><p>The size of the arrowhead in world units.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Drawing_CommandBuilder_Arrow_" data-uid="Drawing.CommandBuilder.Arrow*"></a>
+  <h4 id="Drawing_CommandBuilder_Arrow_float3_float3_float3_System_Single_Color_" data-uid="Drawing.CommandBuilder.Arrow(float3,float3,float3,System.Single,Color)">Arrow(float3, float3, float3, Single, Color)</h4>
+  <div class="markdown level1 summary"><p>\copydoc Arrow(float3,float3,float3,float)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Arrow(float3 from, float3 to, float3 up, float headSize, Color color)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">float3</span></td>
+        <td><span class="parametername">from</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">float3</span></td>
+        <td><span class="parametername">to</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">float3</span></td>
+        <td><span class="parametername">up</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><span class="parametername">headSize</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">Color</span></td>
+        <td><span class="parametername">color</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Drawing_CommandBuilder_Arrowhead_" data-uid="Drawing.CommandBuilder.Arrowhead*"></a>
+  <h4 id="Drawing_CommandBuilder_Arrowhead_float3_float3_float3_System_Single_" data-uid="Drawing.CommandBuilder.Arrowhead(float3,float3,float3,System.Single)">Arrowhead(float3, float3, float3, Single)</h4>
+  <div class="markdown level1 summary"><p>Draws an arrowhead at a point.</p>
+<pre><code>Draw.WireTriangle(Vector3.zero, Quaternion.identity, 0.5f, color);</code></pre>
+<p>[Open online documentation to see images]</p>
+<p>See: <a class="xref" href="Drawing.CommandBuilder.html#Drawing_CommandBuilder_Arrow_float3_float3_">Arrow(float3, float3)</a>
+See: <a class="xref" href="Drawing.CommandBuilder.html#Drawing_CommandBuilder_ArrowRelativeSizeHead_float3_float3_float3_System_Single_">ArrowRelativeSizeHead(float3, float3, float3, Single)</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Arrowhead(float3 center, float3 direction, float3 up, float radius)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">float3</span></td>
+        <td><span class="parametername">center</span></td>
+        <td><p>Center of the arrowhead.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">float3</span></td>
+        <td><span class="parametername">direction</span></td>
+        <td><p>Direction the arrow is pointing.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">float3</span></td>
+        <td><span class="parametername">up</span></td>
+        <td><p>Up direction of the world, the arrowhead plane will be as perpendicular as possible to this direction. Defaults to Vector3.up.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><span class="parametername">radius</span></td>
+        <td><p>Distance from the center to each corner of the arrowhead.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Drawing_CommandBuilder_Arrowhead_" data-uid="Drawing.CommandBuilder.Arrowhead*"></a>
+  <h4 id="Drawing_CommandBuilder_Arrowhead_float3_float3_float3_System_Single_Color_" data-uid="Drawing.CommandBuilder.Arrowhead(float3,float3,float3,System.Single,Color)">Arrowhead(float3, float3, float3, Single, Color)</h4>
+  <div class="markdown level1 summary"><p>\copydoc Arrowhead(float3,float3,float3,float)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Arrowhead(float3 center, float3 direction, float3 up, float radius, Color color)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">float3</span></td>
+        <td><span class="parametername">center</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">float3</span></td>
+        <td><span class="parametername">direction</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">float3</span></td>
+        <td><span class="parametername">up</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><span class="parametername">radius</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">Color</span></td>
+        <td><span class="parametername">color</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Drawing_CommandBuilder_Arrowhead_" data-uid="Drawing.CommandBuilder.Arrowhead*"></a>
+  <h4 id="Drawing_CommandBuilder_Arrowhead_float3_float3_System_Single_" data-uid="Drawing.CommandBuilder.Arrowhead(float3,float3,System.Single)">Arrowhead(float3, float3, Single)</h4>
+  <div class="markdown level1 summary"><p>Draws an arrowhead at a point.</p>
+<pre><code>Draw.WireTriangle(Vector3.zero, Quaternion.identity, 0.5f, color);</code></pre>
+<p>[Open online documentation to see images]</p>
+<p>See: <a class="xref" href="Drawing.CommandBuilder.html#Drawing_CommandBuilder_Arrow_float3_float3_">Arrow(float3, float3)</a>
+See: <a class="xref" href="Drawing.CommandBuilder.html#Drawing_CommandBuilder_ArrowRelativeSizeHead_float3_float3_float3_System_Single_">ArrowRelativeSizeHead(float3, float3, float3, Single)</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Arrowhead(float3 center, float3 direction, float radius)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">float3</span></td>
+        <td><span class="parametername">center</span></td>
+        <td><p>Center of the arrowhead.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">float3</span></td>
+        <td><span class="parametername">direction</span></td>
+        <td><p>Direction the arrow is pointing.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><span class="parametername">radius</span></td>
+        <td><p>Distance from the center to each corner of the arrowhead.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Drawing_CommandBuilder_Arrowhead_" data-uid="Drawing.CommandBuilder.Arrowhead*"></a>
+  <h4 id="Drawing_CommandBuilder_Arrowhead_float3_float3_System_Single_Color_" data-uid="Drawing.CommandBuilder.Arrowhead(float3,float3,System.Single,Color)">Arrowhead(float3, float3, Single, Color)</h4>
+  <div class="markdown level1 summary"><p>\copydoc Arrowhead(float3,float3,float)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Arrowhead(float3 center, float3 direction, float radius, Color color)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">float3</span></td>
+        <td><span class="parametername">center</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">float3</span></td>
+        <td><span class="parametername">direction</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><span class="parametername">radius</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">Color</span></td>
+        <td><span class="parametername">color</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Drawing_CommandBuilder_ArrowheadArc_" data-uid="Drawing.CommandBuilder.ArrowheadArc*"></a>
+  <h4 id="Drawing_CommandBuilder_ArrowheadArc_float3_float3_System_Single_Color_" data-uid="Drawing.CommandBuilder.ArrowheadArc(float3,float3,System.Single,Color)">ArrowheadArc(float3, float3, Single, Color)</h4>
+  <div class="markdown level1 summary"><p>\copydoc ArrowheadArc(float3,float3,float,float)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void ArrowheadArc(float3 origin, float3 direction, float offset, Color color)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">float3</span></td>
+        <td><span class="parametername">origin</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">float3</span></td>
+        <td><span class="parametername">direction</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><span class="parametername">offset</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">Color</span></td>
+        <td><span class="parametername">color</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Drawing_CommandBuilder_ArrowheadArc_" data-uid="Drawing.CommandBuilder.ArrowheadArc*"></a>
+  <h4 id="Drawing_CommandBuilder_ArrowheadArc_float3_float3_System_Single_System_Single_" data-uid="Drawing.CommandBuilder.ArrowheadArc(float3,float3,System.Single,System.Single)">ArrowheadArc(float3, float3, Single, Single)</h4>
+  <div class="markdown level1 summary"><p>Draws an arrowhead centered around a circle.</p>
+<p>This can be used to for example show the direction a character is moving in.</p>
+<p>[Open online documentation to see images]</p>
+<p>Note: In the image above the arrowhead is the only part that is drawn by this method. The cylinder is only included for context.</p>
+<p>See: <a class="xref" href="Drawing.CommandBuilder.html#Drawing_CommandBuilder_Arrow_float3_float3_">Arrow(float3, float3)</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void ArrowheadArc(float3 origin, float3 direction, float offset, float width = 60F)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">float3</span></td>
+        <td><span class="parametername">origin</span></td>
+        <td><p>Point around which the arc is centered</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">float3</span></td>
+        <td><span class="parametername">direction</span></td>
+        <td><p>Direction the arrow is pointing</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><span class="parametername">offset</span></td>
+        <td><p>Distance from origin that the arrow starts.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><span class="parametername">width</span></td>
+        <td><p>Width of the arrowhead in degrees (defaults to 60). Should be between 0 and 90.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Drawing_CommandBuilder_ArrowheadArc_" data-uid="Drawing.CommandBuilder.ArrowheadArc*"></a>
+  <h4 id="Drawing_CommandBuilder_ArrowheadArc_float3_float3_System_Single_System_Single_Color_" data-uid="Drawing.CommandBuilder.ArrowheadArc(float3,float3,System.Single,System.Single,Color)">ArrowheadArc(float3, float3, Single, Single, Color)</h4>
+  <div class="markdown level1 summary"><p>\copydoc ArrowheadArc(float3,float3,float,float)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void ArrowheadArc(float3 origin, float3 direction, float offset, float width, Color color)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">float3</span></td>
+        <td><span class="parametername">origin</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">float3</span></td>
+        <td><span class="parametername">direction</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><span class="parametername">offset</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><span class="parametername">width</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">Color</span></td>
+        <td><span class="parametername">color</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Drawing_CommandBuilder_ArrowRelativeSizeHead_" data-uid="Drawing.CommandBuilder.ArrowRelativeSizeHead*"></a>
+  <h4 id="Drawing_CommandBuilder_ArrowRelativeSizeHead_float3_float3_float3_System_Single_" data-uid="Drawing.CommandBuilder.ArrowRelativeSizeHead(float3,float3,float3,System.Single)">ArrowRelativeSizeHead(float3, float3, float3, Single)</h4>
+  <div class="markdown level1 summary"><p>Draws an arrow between two points with a head that varies with the length of the arrow.</p>
+<p>[Open online documentation to see images]</p>
+<p>See: <a class="xref" href="Drawing.CommandBuilder.html#Drawing_CommandBuilder_ArrowheadArc_float3_float3_System_Single_System_Single_">ArrowheadArc(float3, float3, Single, Single)</a>
+See: <a class="xref" href="Drawing.CommandBuilder.html#Drawing_CommandBuilder_Arrow_float3_float3_">Arrow(float3, float3)</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void ArrowRelativeSizeHead(float3 from, float3 to, float3 up, float headFraction)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">float3</span></td>
+        <td><span class="parametername">from</span></td>
+        <td><p>Base of the arrow.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">float3</span></td>
+        <td><span class="parametername">to</span></td>
+        <td><p>Head of the arrow.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">float3</span></td>
+        <td><span class="parametername">up</span></td>
+        <td><p>Up direction of the world, the arrowhead plane will be as perpendicular as possible to this direction. Defaults to Vector3.up.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><span class="parametername">headFraction</span></td>
+        <td><p>The length of the arrowhead is the distance between from and to multiplied by this fraction. Should be between 0 and 1.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Drawing_CommandBuilder_ArrowRelativeSizeHead_" data-uid="Drawing.CommandBuilder.ArrowRelativeSizeHead*"></a>
+  <h4 id="Drawing_CommandBuilder_ArrowRelativeSizeHead_float3_float3_float3_System_Single_Color_" data-uid="Drawing.CommandBuilder.ArrowRelativeSizeHead(float3,float3,float3,System.Single,Color)">ArrowRelativeSizeHead(float3, float3, float3, Single, Color)</h4>
+  <div class="markdown level1 summary"><p>\copydoc ArrowRelativeSizeHead(float3,float3,float3,float)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void ArrowRelativeSizeHead(float3 from, float3 to, float3 up, float headFraction, Color color)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">float3</span></td>
+        <td><span class="parametername">from</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">float3</span></td>
+        <td><span class="parametername">to</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">float3</span></td>
+        <td><span class="parametername">up</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><span class="parametername">headFraction</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">Color</span></td>
+        <td><span class="parametername">color</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Drawing_CommandBuilder_Bezier_" data-uid="Drawing.CommandBuilder.Bezier*"></a>
+  <h4 id="Drawing_CommandBuilder_Bezier_float3_float3_float3_float3_" data-uid="Drawing.CommandBuilder.Bezier(float3,float3,float3,float3)">Bezier(float3, float3, float3, float3)</h4>
+  <div class="markdown level1 summary"><p>Draws a cubic bezier curve.</p>
+<p>[Open online documentation to see images]</p>
+<p>[Open online documentation to see images]</p>
+<p>TODO: Currently uses a fixed resolution of 20 segments. Resolution should depend on the distance to the camera.</p>
+<p>See: <a href="https://en.wikipedia.org/wiki/Bezier_curve">https://en.wikipedia.org/wiki/Bezier_curve</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Bezier(float3 p0, float3 p1, float3 p2, float3 p3)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">float3</span></td>
+        <td><span class="parametername">p0</span></td>
+        <td><p>Start point</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">float3</span></td>
+        <td><span class="parametername">p1</span></td>
+        <td><p>First control point</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">float3</span></td>
+        <td><span class="parametername">p2</span></td>
+        <td><p>Second control point</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">float3</span></td>
+        <td><span class="parametername">p3</span></td>
+        <td><p>End point</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Drawing_CommandBuilder_Bezier_" data-uid="Drawing.CommandBuilder.Bezier*"></a>
+  <h4 id="Drawing_CommandBuilder_Bezier_float3_float3_float3_float3_Color_" data-uid="Drawing.CommandBuilder.Bezier(float3,float3,float3,float3,Color)">Bezier(float3, float3, float3, float3, Color)</h4>
+  <div class="markdown level1 summary"><p>\copydoc Bezier(float3,float3,float3,float3)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Bezier(float3 p0, float3 p1, float3 p2, float3 p3, Color color)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">float3</span></td>
+        <td><span class="parametername">p0</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">float3</span></td>
+        <td><span class="parametername">p1</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">float3</span></td>
+        <td><span class="parametername">p2</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">float3</span></td>
+        <td><span class="parametername">p3</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">Color</span></td>
+        <td><span class="parametername">color</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Drawing_CommandBuilder_CatmullRom_" data-uid="Drawing.CommandBuilder.CatmullRom*"></a>
+  <h4 id="Drawing_CommandBuilder_CatmullRom_float3_float3_float3_float3_" data-uid="Drawing.CommandBuilder.CatmullRom(float3,float3,float3,float3)">CatmullRom(float3, float3, float3, float3)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void CatmullRom(float3 p0, float3 p1, float3 p2, float3 p3)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">float3</span></td>
+        <td><span class="parametername">p0</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">float3</span></td>
+        <td><span class="parametername">p1</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">float3</span></td>
+        <td><span class="parametername">p2</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">float3</span></td>
+        <td><span class="parametername">p3</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Drawing_CommandBuilder_CatmullRom_" data-uid="Drawing.CommandBuilder.CatmullRom*"></a>
+  <h4 id="Drawing_CommandBuilder_CatmullRom_float3_float3_float3_float3_Color_" data-uid="Drawing.CommandBuilder.CatmullRom(float3,float3,float3,float3,Color)">CatmullRom(float3, float3, float3, float3, Color)</h4>
+  <div class="markdown level1 summary"><p>\copydoc CatmullRom(float3,float3,float3,float3)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void CatmullRom(float3 p0, float3 p1, float3 p2, float3 p3, Color color)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">float3</span></td>
+        <td><span class="parametername">p0</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">float3</span></td>
+        <td><span class="parametername">p1</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">float3</span></td>
+        <td><span class="parametername">p2</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">float3</span></td>
+        <td><span class="parametername">p3</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">Color</span></td>
+        <td><span class="parametername">color</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Drawing_CommandBuilder_CatmullRom_" data-uid="Drawing.CommandBuilder.CatmullRom*"></a>
+  <h4 id="Drawing_CommandBuilder_CatmullRom_System_Collections_Generic_List_Vector3__" data-uid="Drawing.CommandBuilder.CatmullRom(System.Collections.Generic.List{Vector3})">CatmullRom(List&lt;Vector3&gt;)</h4>
+  <div class="markdown level1 summary"><p>Draws a smooth curve through a list of points.</p>
+<p>A catmull-rom spline is equivalent to a bezier curve with control points determined by an algorithm.
+In fact, this package displays catmull-rom splines by first converting them to bezier curves.</p>
+<p>[Open online documentation to see images]</p>
+<p>See: <a href="https://en.wikipedia.org/wiki/Centripetal_Catmull%E2%80%93Rom_spline">https://en.wikipedia.org/wiki/Centripetal_Catmull%E2%80%93Rom_spline</a>
+See: <a class="xref" href="Drawing.CommandBuilder.html#Drawing_CommandBuilder_CatmullRom_float3_float3_float3_float3_">CatmullRom(float3, float3, float3, float3)</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void CatmullRom(List&lt;Vector3&gt; points)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.List</span>&lt;<span class="xref">Vector3</span>&gt;</td>
+        <td><span class="parametername">points</span></td>
+        <td><p>The curve will smoothly pass through each point in the list in order.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Drawing_CommandBuilder_CatmullRom_" data-uid="Drawing.CommandBuilder.CatmullRom*"></a>
+  <h4 id="Drawing_CommandBuilder_CatmullRom_System_Collections_Generic_List_Vector3__Color_" data-uid="Drawing.CommandBuilder.CatmullRom(System.Collections.Generic.List{Vector3},Color)">CatmullRom(List&lt;Vector3&gt;, Color)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void CatmullRom(List&lt;Vector3&gt; points, Color color)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.List</span>&lt;<span class="xref">Vector3</span>&gt;</td>
+        <td><span class="parametername">points</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">Color</span></td>
+        <td><span class="parametername">color</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Drawing_CommandBuilder_Circle_" data-uid="Drawing.CommandBuilder.Circle*"></a>
+  <h4 id="Drawing_CommandBuilder_Circle_float3_float3_System_Single_" data-uid="Drawing.CommandBuilder.Circle(float3,float3,System.Single)">Circle(float3, float3, Single)</h4>
+  <div class="markdown level1 summary"><p>Draws a circle.</p>
+<p>[Open online documentation to see images]</p>
+<p>Note: This overload does not allow you to draw an arc. For that purpose use <a class="xref" href="Drawing.CommandBuilder.html#Drawing_CommandBuilder_CircleXY_float3_System_Single_System_Single_System_Single_">CircleXY(float3, Single, Single, Single)</a> or <a class="xref" href="Drawing.CommandBuilder.html#Drawing_CommandBuilder_CircleXZ_float3_System_Single_System_Single_System_Single_">CircleXZ(float3, Single, Single, Single)</a> instead.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Circle(float3 center, float3 normal, float radius)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">float3</span></td>
+        <td><span class="parametername">center</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">float3</span></td>
+        <td><span class="parametername">normal</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><span class="parametername">radius</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Drawing_CommandBuilder_Circle_" data-uid="Drawing.CommandBuilder.Circle*"></a>
+  <h4 id="Drawing_CommandBuilder_Circle_float3_float3_System_Single_Color_" data-uid="Drawing.CommandBuilder.Circle(float3,float3,System.Single,Color)">Circle(float3, float3, Single, Color)</h4>
+  <div class="markdown level1 summary"><p>\copydoc Circle(float3,float3,float)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Circle(float3 center, float3 normal, float radius, Color color)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">float3</span></td>
+        <td><span class="parametername">center</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">float3</span></td>
+        <td><span class="parametername">normal</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><span class="parametername">radius</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">Color</span></td>
+        <td><span class="parametername">color</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Drawing_CommandBuilder_CircleXY_" data-uid="Drawing.CommandBuilder.CircleXY*"></a>
+  <h4 id="Drawing_CommandBuilder_CircleXY_float3_System_Single_Color_" data-uid="Drawing.CommandBuilder.CircleXY(float3,System.Single,Color)">CircleXY(float3, Single, Color)</h4>
+  <div class="markdown level1 summary"><p>\copydoc CircleXY(float3,float,float,float)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void CircleXY(float3 center, float radius, Color color)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">float3</span></td>
+        <td><span class="parametername">center</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><span class="parametername">radius</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">Color</span></td>
+        <td><span class="parametername">color</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Drawing_CommandBuilder_CircleXY_" data-uid="Drawing.CommandBuilder.CircleXY*"></a>
+  <h4 id="Drawing_CommandBuilder_CircleXY_float3_System_Single_System_Single_System_Single_" data-uid="Drawing.CommandBuilder.CircleXY(float3,System.Single,System.Single,System.Single)">CircleXY(float3, Single, Single, Single)</h4>
+  <div class="markdown level1 summary"><p>Draws a circle in the XY plane.</p>
+<p>You can draw an arc by supplying the startAngle and endAngle parameters.</p>
+<p>[Open online documentation to see images]</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void CircleXY(float3 center, float radius, float startAngle = 0F, float endAngle = default(float))</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">float3</span></td>
+        <td><span class="parametername">center</span></td>
+        <td><p>Center of the circle or arc.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><span class="parametername">radius</span></td>
+        <td><p>Radius of the circle or arc.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><span class="parametername">startAngle</span></td>
+        <td><p>Starting angle in radians. 0 corrsponds to the positive X axis.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><span class="parametername">endAngle</span></td>
+        <td><p>End angle in radians.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Drawing_CommandBuilder_CircleXY_" data-uid="Drawing.CommandBuilder.CircleXY*"></a>
+  <h4 id="Drawing_CommandBuilder_CircleXY_float3_System_Single_System_Single_System_Single_Color_" data-uid="Drawing.CommandBuilder.CircleXY(float3,System.Single,System.Single,System.Single,Color)">CircleXY(float3, Single, Single, Single, Color)</h4>
+  <div class="markdown level1 summary"><p>\copydoc CircleXY(float3,float,float,float)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void CircleXY(float3 center, float radius, float startAngle, float endAngle, Color color)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">float3</span></td>
+        <td><span class="parametername">center</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><span class="parametername">radius</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><span class="parametername">startAngle</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><span class="parametername">endAngle</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">Color</span></td>
+        <td><span class="parametername">color</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Drawing_CommandBuilder_CircleXZ_" data-uid="Drawing.CommandBuilder.CircleXZ*"></a>
+  <h4 id="Drawing_CommandBuilder_CircleXZ_float3_System_Single_Color_" data-uid="Drawing.CommandBuilder.CircleXZ(float3,System.Single,Color)">CircleXZ(float3, Single, Color)</h4>
+  <div class="markdown level1 summary"><p>\copydoc CircleXZ(float3,float,float,float)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void CircleXZ(float3 center, float radius, Color color)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">float3</span></td>
+        <td><span class="parametername">center</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><span class="parametername">radius</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">Color</span></td>
+        <td><span class="parametername">color</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Drawing_CommandBuilder_CircleXZ_" data-uid="Drawing.CommandBuilder.CircleXZ*"></a>
+  <h4 id="Drawing_CommandBuilder_CircleXZ_float3_System_Single_System_Single_System_Single_" data-uid="Drawing.CommandBuilder.CircleXZ(float3,System.Single,System.Single,System.Single)">CircleXZ(float3, Single, Single, Single)</h4>
+  <div class="markdown level1 summary"><p>Draws a circle in the XZ plane.</p>
+<p>You can draw an arc by supplying the startAngle and endAngle parameters.</p>
+<p>[Open online documentation to see images]</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void CircleXZ(float3 center, float radius, float startAngle = 0F, float endAngle = default(float))</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">float3</span></td>
+        <td><span class="parametername">center</span></td>
+        <td><p>Center of the circle or arc.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><span class="parametername">radius</span></td>
+        <td><p>Radius of the circle or arc.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><span class="parametername">startAngle</span></td>
+        <td><p>Starting angle in radians. 0 corrsponds to the positive X axis.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><span class="parametername">endAngle</span></td>
+        <td><p>End angle in radians.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Drawing_CommandBuilder_CircleXZ_" data-uid="Drawing.CommandBuilder.CircleXZ*"></a>
+  <h4 id="Drawing_CommandBuilder_CircleXZ_float3_System_Single_System_Single_System_Single_Color_" data-uid="Drawing.CommandBuilder.CircleXZ(float3,System.Single,System.Single,System.Single,Color)">CircleXZ(float3, Single, Single, Single, Color)</h4>
+  <div class="markdown level1 summary"><p>\copydoc CircleXZ(float3,float,float,float)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void CircleXZ(float3 center, float radius, float startAngle, float endAngle, Color color)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">float3</span></td>
+        <td><span class="parametername">center</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><span class="parametername">radius</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><span class="parametername">startAngle</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><span class="parametername">endAngle</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">Color</span></td>
+        <td><span class="parametername">color</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Drawing_CommandBuilder_Cross_" data-uid="Drawing.CommandBuilder.Cross*"></a>
+  <h4 id="Drawing_CommandBuilder_Cross_float3_Color_" data-uid="Drawing.CommandBuilder.Cross(float3,Color)">Cross(float3, Color)</h4>
+  <div class="markdown level1 summary"><p>\copydoc Cross(float3,float)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Cross(float3 position, Color color)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">float3</span></td>
+        <td><span class="parametername">position</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">Color</span></td>
+        <td><span class="parametername">color</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Drawing_CommandBuilder_Cross_" data-uid="Drawing.CommandBuilder.Cross*"></a>
+  <h4 id="Drawing_CommandBuilder_Cross_float3_System_Single_" data-uid="Drawing.CommandBuilder.Cross(float3,System.Single)">Cross(float3, Single)</h4>
+  <div class="markdown level1 summary"><p>Draws a cross.</p>
+<p>[Open online documentation to see images]</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Cross(float3 position, float size = 1F)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">float3</span></td>
+        <td><span class="parametername">position</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><span class="parametername">size</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Drawing_CommandBuilder_Cross_" data-uid="Drawing.CommandBuilder.Cross*"></a>
+  <h4 id="Drawing_CommandBuilder_Cross_float3_System_Single_Color_" data-uid="Drawing.CommandBuilder.Cross(float3,System.Single,Color)">Cross(float3, Single, Color)</h4>
+  <div class="markdown level1 summary"><p>\copydoc Cross(float3,float)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Cross(float3 position, float size, Color color)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">float3</span></td>
+        <td><span class="parametername">position</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><span class="parametername">size</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">Color</span></td>
+        <td><span class="parametername">color</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Drawing_CommandBuilder_CrossXY_" data-uid="Drawing.CommandBuilder.CrossXY*"></a>
+  <h4 id="Drawing_CommandBuilder_CrossXY_float3_Color_" data-uid="Drawing.CommandBuilder.CrossXY(float3,Color)">CrossXY(float3, Color)</h4>
+  <div class="markdown level1 summary"><p>\copydoc CrossXY(float3,float)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void CrossXY(float3 position, Color color)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">float3</span></td>
+        <td><span class="parametername">position</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">Color</span></td>
+        <td><span class="parametername">color</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Drawing_CommandBuilder_CrossXY_" data-uid="Drawing.CommandBuilder.CrossXY*"></a>
+  <h4 id="Drawing_CommandBuilder_CrossXY_float3_System_Single_" data-uid="Drawing.CommandBuilder.CrossXY(float3,System.Single)">CrossXY(float3, Single)</h4>
+  <div class="markdown level1 summary"><p>Draws a cross in the XY plane.</p>
+<p>[Open online documentation to see images]</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void CrossXY(float3 position, float size = 1F)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">float3</span></td>
+        <td><span class="parametername">position</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><span class="parametername">size</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Drawing_CommandBuilder_CrossXY_" data-uid="Drawing.CommandBuilder.CrossXY*"></a>
+  <h4 id="Drawing_CommandBuilder_CrossXY_float3_System_Single_Color_" data-uid="Drawing.CommandBuilder.CrossXY(float3,System.Single,Color)">CrossXY(float3, Single, Color)</h4>
+  <div class="markdown level1 summary"><p>\copydoc CrossXY(float3,float)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void CrossXY(float3 position, float size, Color color)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">float3</span></td>
+        <td><span class="parametername">position</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><span class="parametername">size</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">Color</span></td>
+        <td><span class="parametername">color</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Drawing_CommandBuilder_CrossXZ_" data-uid="Drawing.CommandBuilder.CrossXZ*"></a>
+  <h4 id="Drawing_CommandBuilder_CrossXZ_float3_Color_" data-uid="Drawing.CommandBuilder.CrossXZ(float3,Color)">CrossXZ(float3, Color)</h4>
+  <div class="markdown level1 summary"><p>\copydoc CrossXZ(float3,float)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void CrossXZ(float3 position, Color color)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">float3</span></td>
+        <td><span class="parametername">position</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">Color</span></td>
+        <td><span class="parametername">color</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Drawing_CommandBuilder_CrossXZ_" data-uid="Drawing.CommandBuilder.CrossXZ*"></a>
+  <h4 id="Drawing_CommandBuilder_CrossXZ_float3_System_Single_" data-uid="Drawing.CommandBuilder.CrossXZ(float3,System.Single)">CrossXZ(float3, Single)</h4>
+  <div class="markdown level1 summary"><p>Draws a cross in the XZ plane.</p>
+<p>[Open online documentation to see images]</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void CrossXZ(float3 position, float size = 1F)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">float3</span></td>
+        <td><span class="parametername">position</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><span class="parametername">size</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Drawing_CommandBuilder_CrossXZ_" data-uid="Drawing.CommandBuilder.CrossXZ*"></a>
+  <h4 id="Drawing_CommandBuilder_CrossXZ_float3_System_Single_Color_" data-uid="Drawing.CommandBuilder.CrossXZ(float3,System.Single,Color)">CrossXZ(float3, Single, Color)</h4>
+  <div class="markdown level1 summary"><p>\copydoc CrossXZ(float3,float)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void CrossXZ(float3 position, float size, Color color)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">float3</span></td>
+        <td><span class="parametername">position</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><span class="parametername">size</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">Color</span></td>
+        <td><span class="parametername">color</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Drawing_CommandBuilder_DiscardAndDispose_" data-uid="Drawing.CommandBuilder.DiscardAndDispose*"></a>
+  <h4 id="Drawing_CommandBuilder_DiscardAndDispose" data-uid="Drawing.CommandBuilder.DiscardAndDispose">DiscardAndDispose()</h4>
+  <div class="markdown level1 summary"><p>Discards the contents of this command builder without rendering anything.
+If you are not going to draw anything (i.e. you do not call the <a class="xref" href="Drawing.CommandBuilder.html#Drawing_CommandBuilder_Dispose">Dispose()</a> method) then you must call this method to avoid
+memory leaks.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void DiscardAndDispose()</code></pre>
+  </div>
+  
+  
+  <a id="Drawing_CommandBuilder_Dispose_" data-uid="Drawing.CommandBuilder.Dispose*"></a>
+  <h4 id="Drawing_CommandBuilder_Dispose" data-uid="Drawing.CommandBuilder.Dispose">Dispose()</h4>
+  <div class="markdown level1 summary"><p>Submits this command builder for rendering</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Dispose()</code></pre>
+  </div>
+  
+  
+  <a id="Drawing_CommandBuilder_EvaluateCubicBezier_" data-uid="Drawing.CommandBuilder.EvaluateCubicBezier*"></a>
+  <h4 id="Drawing_CommandBuilder_EvaluateCubicBezier_float3_float3_float3_float3_System_Single_" data-uid="Drawing.CommandBuilder.EvaluateCubicBezier(float3,float3,float3,float3,System.Single)">EvaluateCubicBezier(float3, float3, float3, float3, Single)</h4>
+  <div class="markdown level1 summary"><p>Returns a point on a cubic bezier curve. t is clamped between 0 and 1</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static float3 EvaluateCubicBezier(float3 p0, float3 p1, float3 p2, float3 p3, float t)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">float3</span></td>
+        <td><span class="parametername">p0</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">float3</span></td>
+        <td><span class="parametername">p1</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">float3</span></td>
+        <td><span class="parametername">p2</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">float3</span></td>
+        <td><span class="parametername">p3</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><span class="parametername">t</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">float3</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Drawing_CommandBuilder_InLocalSpace_" data-uid="Drawing.CommandBuilder.InLocalSpace*"></a>
+  <h4 id="Drawing_CommandBuilder_InLocalSpace_Transform_" data-uid="Drawing.CommandBuilder.InLocalSpace(Transform)">InLocalSpace(Transform)</h4>
+  <div class="markdown level1 summary"><p>Scope to draw multiple things relative to a transform object.
+All coordinates for items drawn inside the scope will be multiplied by the transform's localToWorldMatrix.</p>
+<pre><code>void Update () {
+    using (Draw.InLocalSpace(transform)) {
+        // Draw a box at (0,0,0) relative to the current object
+        // This means it will show up at the object&apos;s position
+        // The box is also rotated and scaled with the transform
+        Draw.WireBox(Vector3.zero, Vector3.one);
+    }
+}</code></pre>
+<p>[Open online documentation to see videos]</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public CommandBuilder.ScopeMatrix InLocalSpace(Transform transform)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Transform</span></td>
+        <td><span class="parametername">transform</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Drawing.CommandBuilder.ScopeMatrix.html">CommandBuilder.ScopeMatrix</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Drawing_CommandBuilder_InScreenSpace_" data-uid="Drawing.CommandBuilder.InScreenSpace*"></a>
+  <h4 id="Drawing_CommandBuilder_InScreenSpace_Camera_" data-uid="Drawing.CommandBuilder.InScreenSpace(Camera)">InScreenSpace(Camera)</h4>
+  <div class="markdown level1 summary"><p>Scope to draw multiple things in screen space of a camera.
+If you draw 2D coordinates (i.e. (x,y,0)) they will be projected onto a plane (2*near clip plane of the camera) world units in front of the camera.</p>
+<p>The lower left corner of the camera is (0,0,0) and the upper right is (camera.pixelWidth, camera.pixelHeight, 0)</p>
+<p>See: <a class="xref" href="Drawing.CommandBuilder.html#Drawing_CommandBuilder_InLocalSpace_Transform_">InLocalSpace(Transform)</a>
+See: <a class="xref" href="Drawing.CommandBuilder.html#Drawing_CommandBuilder_WithMatrix_Matrix4x4_">WithMatrix(Matrix4x4)</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public CommandBuilder.ScopeMatrix InScreenSpace(Camera camera)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Camera</span></td>
+        <td><span class="parametername">camera</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Drawing.CommandBuilder.ScopeMatrix.html">CommandBuilder.ScopeMatrix</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Drawing_CommandBuilder_Label2D_" data-uid="Drawing.CommandBuilder.Label2D*"></a>
+  <h4 id="Drawing_CommandBuilder_Label2D_float3_System_String_Color_" data-uid="Drawing.CommandBuilder.Label2D(float3,System.String,Color)">Label2D(float3, String, Color)</h4>
+  <div class="markdown level1 summary"><p>\copydoc Label2D(float3,string,float)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Label2D(float3 position, string text, Color color)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">float3</span></td>
+        <td><span class="parametername">position</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">text</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">Color</span></td>
+        <td><span class="parametername">color</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Drawing_CommandBuilder_Label2D_" data-uid="Drawing.CommandBuilder.Label2D*"></a>
+  <h4 id="Drawing_CommandBuilder_Label2D_float3_System_String_System_Single_" data-uid="Drawing.CommandBuilder.Label2D(float3,System.String,System.Single)">Label2D(float3, String, Single)</h4>
+  <div class="markdown level1 summary"><p>Draws a label in 3D space aligned with the camera.</p>
+<p>The default alignment is <a class="xref" href="Drawing.LabelAlignment.html#Drawing_LabelAlignment_MiddleLeft">MiddleLeft</a>.</p>
+<pre><code>Draw.Label2D(Vector3.zero, &quot;Label&quot;, 48, LabelAlignment.Center, color);</code></pre>
+<p>[Open online documentation to see images]</p>
+<p>See: Label2D(float3,string,float,LabelAlignment)</p>
+<p>Note: Only ASCII is supported since the built-in font texture only includes ASCII. Other characters will be rendered as question marks (?).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Label2D(float3 position, string text, float sizeInPixels = 14F)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">float3</span></td>
+        <td><span class="parametername">position</span></td>
+        <td><p>Position in 3D space.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">text</span></td>
+        <td><p>Text to display.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><span class="parametername">sizeInPixels</span></td>
+        <td><p>Size of the text in screen pixels. For large sizes an SDF (signed distance field) font is used and for small sizes a normal font texture is used.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Drawing_CommandBuilder_Label2D_" data-uid="Drawing.CommandBuilder.Label2D*"></a>
+  <h4 id="Drawing_CommandBuilder_Label2D_float3_System_String_System_Single_Color_" data-uid="Drawing.CommandBuilder.Label2D(float3,System.String,System.Single,Color)">Label2D(float3, String, Single, Color)</h4>
+  <div class="markdown level1 summary"><p>\copydoc Label2D(float3,string,float)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Label2D(float3 position, string text, float sizeInPixels, Color color)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">float3</span></td>
+        <td><span class="parametername">position</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">text</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><span class="parametername">sizeInPixels</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">Color</span></td>
+        <td><span class="parametername">color</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Drawing_CommandBuilder_Label2D_" data-uid="Drawing.CommandBuilder.Label2D*"></a>
+  <h4 id="Drawing_CommandBuilder_Label2D_float3_System_String_System_Single_Drawing_LabelAlignment_" data-uid="Drawing.CommandBuilder.Label2D(float3,System.String,System.Single,Drawing.LabelAlignment)">Label2D(float3, String, Single, LabelAlignment)</h4>
+  <div class="markdown level1 summary"><p>Draws a label in 3D space aligned with the camera.</p>
+<pre><code>Draw.Label2D(Vector3.zero, &quot;Label&quot;, 48, LabelAlignment.Center, color);</code></pre>
+<p>[Open online documentation to see images]</p>
+<p>See: Label2D(float3,string,float)</p>
+<p>Note: Only ASCII is supported since the built-in font texture only includes ASCII. Other characters will be rendered as question marks (?).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Label2D(float3 position, string text, float sizeInPixels, LabelAlignment alignment)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">float3</span></td>
+        <td><span class="parametername">position</span></td>
+        <td><p>Position in 3D space.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">text</span></td>
+        <td><p>Text to display.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><span class="parametername">sizeInPixels</span></td>
+        <td><p>Size of the text in screen pixels. For large sizes an SDF (signed distance field) font is used and for small sizes a normal font texture is used.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Drawing.LabelAlignment.html">LabelAlignment</a></td>
+        <td><span class="parametername">alignment</span></td>
+        <td><p>How to align the text relative to the given position.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Drawing_CommandBuilder_Label2D_" data-uid="Drawing.CommandBuilder.Label2D*"></a>
+  <h4 id="Drawing_CommandBuilder_Label2D_float3_System_String_System_Single_Drawing_LabelAlignment_Color_" data-uid="Drawing.CommandBuilder.Label2D(float3,System.String,System.Single,Drawing.LabelAlignment,Color)">Label2D(float3, String, Single, LabelAlignment, Color)</h4>
+  <div class="markdown level1 summary"><p>\copydoc Label2D(float3,string,float,LabelAlignment)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Label2D(float3 position, string text, float sizeInPixels, LabelAlignment alignment, Color color)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">float3</span></td>
+        <td><span class="parametername">position</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">text</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><span class="parametername">sizeInPixels</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Drawing.LabelAlignment.html">LabelAlignment</a></td>
+        <td><span class="parametername">alignment</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">Color</span></td>
+        <td><span class="parametername">color</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Drawing_CommandBuilder_Line_" data-uid="Drawing.CommandBuilder.Line*"></a>
+  <h4 id="Drawing_CommandBuilder_Line_float3_float3_" data-uid="Drawing.CommandBuilder.Line(float3,float3)">Line(float3, float3)</h4>
+  <div class="markdown level1 summary"><p>Draws a line between two points.</p>
+<p>[Open online documentation to see images]</p>
+<pre><code>void Update () {
+    Draw.Line(Vector3.zero, Vector3.up);
+}</code></pre>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Line(float3 a, float3 b)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">float3</span></td>
+        <td><span class="parametername">a</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">float3</span></td>
+        <td><span class="parametername">b</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Drawing_CommandBuilder_Line_" data-uid="Drawing.CommandBuilder.Line*"></a>
+  <h4 id="Drawing_CommandBuilder_Line_float3_float3_Color_" data-uid="Drawing.CommandBuilder.Line(float3,float3,Color)">Line(float3, float3, Color)</h4>
+  <div class="markdown level1 summary"><p>\copydoc Line(float3,float3)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Line(float3 a, float3 b, Color color)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">float3</span></td>
+        <td><span class="parametername">a</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">float3</span></td>
+        <td><span class="parametername">b</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">Color</span></td>
+        <td><span class="parametername">color</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Drawing_CommandBuilder_Line_" data-uid="Drawing.CommandBuilder.Line*"></a>
+  <h4 id="Drawing_CommandBuilder_Line_Vector3_Vector3_" data-uid="Drawing.CommandBuilder.Line(Vector3,Vector3)">Line(Vector3, Vector3)</h4>
+  <div class="markdown level1 summary"><p>Draws a line between two points.</p>
+<p>[Open online documentation to see images]</p>
+<pre><code>void Update () {
+    Draw.Line(Vector3.zero, Vector3.up);
+}</code></pre>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Line(Vector3 a, Vector3 b)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Vector3</span></td>
+        <td><span class="parametername">a</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">Vector3</span></td>
+        <td><span class="parametername">b</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Drawing_CommandBuilder_Line_" data-uid="Drawing.CommandBuilder.Line*"></a>
+  <h4 id="Drawing_CommandBuilder_Line_Vector3_Vector3_Color_" data-uid="Drawing.CommandBuilder.Line(Vector3,Vector3,Color)">Line(Vector3, Vector3, Color)</h4>
+  <div class="markdown level1 summary"><p>Draws a line between two points.</p>
+<p>[Open online documentation to see images]</p>
+<pre><code>void Update () {
+    Draw.Line(Vector3.zero, Vector3.up);
+}</code></pre>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Line(Vector3 a, Vector3 b, Color color)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Vector3</span></td>
+        <td><span class="parametername">a</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">Vector3</span></td>
+        <td><span class="parametername">b</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">Color</span></td>
+        <td><span class="parametername">color</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Drawing_CommandBuilder_Polyline_" data-uid="Drawing.CommandBuilder.Polyline*"></a>
+  <h4 id="Drawing_CommandBuilder_Polyline_float3___Color_" data-uid="Drawing.CommandBuilder.Polyline(float3[],Color)">Polyline(float3[], Color)</h4>
+  <div class="markdown level1 summary"><p>\copydoc Polyline(float3[],bool)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Polyline(float3[] points, Color color)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">float3</span>[]</td>
+        <td><span class="parametername">points</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">Color</span></td>
+        <td><span class="parametername">color</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Drawing_CommandBuilder_Polyline_" data-uid="Drawing.CommandBuilder.Polyline*"></a>
+  <h4 id="Drawing_CommandBuilder_Polyline_float3___System_Boolean_" data-uid="Drawing.CommandBuilder.Polyline(float3[],System.Boolean)">Polyline(float3[], Boolean)</h4>
+  <div class="markdown level1 summary"><p>Draws lines through a sequence of points.</p>
+<p>[Open online documentation to see images]</p>
+<pre><code>// Draw a square
+Draw.Polyline(new [] { new Vector3(0, 0, 0), new Vector3(1, 0, 0), new Vector3(1, 1, 0), new Vector3(0, 1, 0) }, true);</code></pre>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Polyline(float3[] points, bool cycle = false)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">float3</span>[]</td>
+        <td><span class="parametername">points</span></td>
+        <td><p>Sequence of points to draw lines through</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">cycle</span></td>
+        <td><p>If true a line will be drawn from the last point in the sequence back to the first point.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Drawing_CommandBuilder_Polyline_" data-uid="Drawing.CommandBuilder.Polyline*"></a>
+  <h4 id="Drawing_CommandBuilder_Polyline_float3___System_Boolean_Color_" data-uid="Drawing.CommandBuilder.Polyline(float3[],System.Boolean,Color)">Polyline(float3[], Boolean, Color)</h4>
+  <div class="markdown level1 summary"><p>\copydoc Polyline(float3[],bool)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Polyline(float3[] points, bool cycle, Color color)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">float3</span>[]</td>
+        <td><span class="parametername">points</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">cycle</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">Color</span></td>
+        <td><span class="parametername">color</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Drawing_CommandBuilder_Polyline_" data-uid="Drawing.CommandBuilder.Polyline*"></a>
+  <h4 id="Drawing_CommandBuilder_Polyline_NativeArray_float3__Color_" data-uid="Drawing.CommandBuilder.Polyline(NativeArray{float3},Color)">Polyline(NativeArray&lt;float3&gt;, Color)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Polyline(NativeArray&lt;float3&gt; points, Color color)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">NativeArray</span>&lt;<span class="xref">float3</span>&gt;</td>
+        <td><span class="parametername">points</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">Color</span></td>
+        <td><span class="parametername">color</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Drawing_CommandBuilder_Polyline_" data-uid="Drawing.CommandBuilder.Polyline*"></a>
+  <h4 id="Drawing_CommandBuilder_Polyline_NativeArray_float3__System_Boolean_" data-uid="Drawing.CommandBuilder.Polyline(NativeArray{float3},System.Boolean)">Polyline(NativeArray&lt;float3&gt;, Boolean)</h4>
+  <div class="markdown level1 summary"><p>Draws lines through a sequence of points.</p>
+<p>[Open online documentation to see images]</p>
+<pre><code>// Draw a square
+Draw.Polyline(new [] { new Vector3(0, 0, 0), new Vector3(1, 0, 0), new Vector3(1, 1, 0), new Vector3(0, 1, 0) }, true);</code></pre>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Polyline(NativeArray&lt;float3&gt; points, bool cycle = false)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">NativeArray</span>&lt;<span class="xref">float3</span>&gt;</td>
+        <td><span class="parametername">points</span></td>
+        <td><p>Sequence of points to draw lines through</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">cycle</span></td>
+        <td><p>If true a line will be drawn from the last point in the sequence back to the first point.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Drawing_CommandBuilder_Polyline_" data-uid="Drawing.CommandBuilder.Polyline*"></a>
+  <h4 id="Drawing_CommandBuilder_Polyline_NativeArray_float3__System_Boolean_Color_" data-uid="Drawing.CommandBuilder.Polyline(NativeArray{float3},System.Boolean,Color)">Polyline(NativeArray&lt;float3&gt;, Boolean, Color)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Polyline(NativeArray&lt;float3&gt; points, bool cycle, Color color)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">NativeArray</span>&lt;<span class="xref">float3</span>&gt;</td>
+        <td><span class="parametername">points</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">cycle</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">Color</span></td>
+        <td><span class="parametername">color</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Drawing_CommandBuilder_Polyline_" data-uid="Drawing.CommandBuilder.Polyline*"></a>
+  <h4 id="Drawing_CommandBuilder_Polyline_System_Collections_Generic_List_Vector3__Color_" data-uid="Drawing.CommandBuilder.Polyline(System.Collections.Generic.List{Vector3},Color)">Polyline(List&lt;Vector3&gt;, Color)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Polyline(List&lt;Vector3&gt; points, Color color)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.List</span>&lt;<span class="xref">Vector3</span>&gt;</td>
+        <td><span class="parametername">points</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">Color</span></td>
+        <td><span class="parametername">color</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Drawing_CommandBuilder_Polyline_" data-uid="Drawing.CommandBuilder.Polyline*"></a>
+  <h4 id="Drawing_CommandBuilder_Polyline_System_Collections_Generic_List_Vector3__System_Boolean_" data-uid="Drawing.CommandBuilder.Polyline(System.Collections.Generic.List{Vector3},System.Boolean)">Polyline(List&lt;Vector3&gt;, Boolean)</h4>
+  <div class="markdown level1 summary"><p>Draws lines through a sequence of points.</p>
+<p>[Open online documentation to see images]</p>
+<pre><code>// Draw a square
+Draw.Polyline(new [] { new Vector3(0, 0, 0), new Vector3(1, 0, 0), new Vector3(1, 1, 0), new Vector3(0, 1, 0) }, true);</code></pre>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Polyline(List&lt;Vector3&gt; points, bool cycle = false)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.List</span>&lt;<span class="xref">Vector3</span>&gt;</td>
+        <td><span class="parametername">points</span></td>
+        <td><p>Seq u ence of points to draw lines through</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">cycle</span></td>
+        <td><p>If true a line will be drawn from the last point in the sequence back to the first point.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Drawing_CommandBuilder_Polyline_" data-uid="Drawing.CommandBuilder.Polyline*"></a>
+  <h4 id="Drawing_CommandBuilder_Polyline_System_Collections_Generic_List_Vector3__System_Boolean_Color_" data-uid="Drawing.CommandBuilder.Polyline(System.Collections.Generic.List{Vector3},System.Boolean,Color)">Polyline(List&lt;Vector3&gt;, Boolean, Color)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Polyline(List&lt;Vector3&gt; points, bool cycle, Color color)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.List</span>&lt;<span class="xref">Vector3</span>&gt;</td>
+        <td><span class="parametername">points</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">cycle</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">Color</span></td>
+        <td><span class="parametername">color</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Drawing_CommandBuilder_Polyline_" data-uid="Drawing.CommandBuilder.Polyline*"></a>
+  <h4 id="Drawing_CommandBuilder_Polyline_Vector3___Color_" data-uid="Drawing.CommandBuilder.Polyline(Vector3[],Color)">Polyline(Vector3[], Color)</h4>
+  <div class="markdown level1 summary"><p>\copydoc Polyline(Vector3[],bool)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Polyline(Vector3[] points, Color color)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Vector3</span>[]</td>
+        <td><span class="parametername">points</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">Color</span></td>
+        <td><span class="parametername">color</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Drawing_CommandBuilder_Polyline_" data-uid="Drawing.CommandBuilder.Polyline*"></a>
+  <h4 id="Drawing_CommandBuilder_Polyline_Vector3___System_Boolean_" data-uid="Drawing.CommandBuilder.Polyline(Vector3[],System.Boolean)">Polyline(Vector3[], Boolean)</h4>
+  <div class="markdown level1 summary"><p>Draws lines through a sequence of points.</p>
+<p>[Open online documentation to see images]</p>
+<pre><code>// Draw a square
+Draw.Polyline(new [] { new Vector3(0, 0, 0), new Vector3(1, 0, 0), new Vector3(1, 1, 0), new Vector3(0, 1, 0) }, true);</code></pre>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Polyline(Vector3[] points, bool cycle = false)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Vector3</span>[]</td>
+        <td><span class="parametername">points</span></td>
+        <td><p>Sequence of points to draw lines through</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">cycle</span></td>
+        <td><p>If true a line will be drawn from the last point in the sequence back to the first point.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Drawing_CommandBuilder_Polyline_" data-uid="Drawing.CommandBuilder.Polyline*"></a>
+  <h4 id="Drawing_CommandBuilder_Polyline_Vector3___System_Boolean_Color_" data-uid="Drawing.CommandBuilder.Polyline(Vector3[],System.Boolean,Color)">Polyline(Vector3[], Boolean, Color)</h4>
+  <div class="markdown level1 summary"><p>\copydoc Polyline(Vector3[],bool)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Polyline(Vector3[] points, bool cycle, Color color)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Vector3</span>[]</td>
+        <td><span class="parametername">points</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">cycle</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">Color</span></td>
+        <td><span class="parametername">color</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Drawing_CommandBuilder_PopColor_" data-uid="Drawing.CommandBuilder.PopColor*"></a>
+  <h4 id="Drawing_CommandBuilder_PopColor" data-uid="Drawing.CommandBuilder.PopColor">PopColor()</h4>
+  <div class="markdown level1 summary"><p>Pops a color from the stack</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void PopColor()</code></pre>
+  </div>
+  
+  
+  <a id="Drawing_CommandBuilder_PopMatrix_" data-uid="Drawing.CommandBuilder.PopMatrix*"></a>
+  <h4 id="Drawing_CommandBuilder_PopMatrix" data-uid="Drawing.CommandBuilder.PopMatrix">PopMatrix()</h4>
+  <div class="markdown level1 summary"><p>Pops a matrix from the stack</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void PopMatrix()</code></pre>
+  </div>
+  
+  
+  <a id="Drawing_CommandBuilder_PopPersist_" data-uid="Drawing.CommandBuilder.PopPersist*"></a>
+  <h4 id="Drawing_CommandBuilder_PopPersist" data-uid="Drawing.CommandBuilder.PopPersist">PopPersist()</h4>
+  <div class="markdown level1 summary"><p>Pops a persist scope from the stack</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void PopPersist()</code></pre>
+  </div>
+  
+  
+  <a id="Drawing_CommandBuilder_Preallocate_" data-uid="Drawing.CommandBuilder.Preallocate*"></a>
+  <h4 id="Drawing_CommandBuilder_Preallocate_System_Int32_" data-uid="Drawing.CommandBuilder.Preallocate(System.Int32)">Preallocate(Int32)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Preallocate(int size)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">size</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Drawing_CommandBuilder_PushColor_" data-uid="Drawing.CommandBuilder.PushColor*"></a>
+  <h4 id="Drawing_CommandBuilder_PushColor_Color_" data-uid="Drawing.CommandBuilder.PushColor(Color)">PushColor(Color)</h4>
+  <div class="markdown level1 summary"><p>Draws everything until the next PopColor with the given color.
+Any command that is passed an explicit color parameter will override this color.
+If another color scope is nested inside this one then that scope will override this color.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void PushColor(Color color)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Color</span></td>
+        <td><span class="parametername">color</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Drawing_CommandBuilder_PushMatrix_" data-uid="Drawing.CommandBuilder.PushMatrix*"></a>
+  <h4 id="Drawing_CommandBuilder_PushMatrix_Matrix4x4_" data-uid="Drawing.CommandBuilder.PushMatrix(Matrix4x4)">PushMatrix(Matrix4x4)</h4>
+  <div class="markdown level1 summary"><p>Multiply all coordinates until the next PopMatrix with the given matrix.
+This differs from <a class="xref" href="Drawing.CommandBuilder.html#Drawing_CommandBuilder_PushSetMatrix_Matrix4x4_">PushSetMatrix(Matrix4x4)</a> in that this stacks with all previously pushed matrices while <a class="xref" href="Drawing.CommandBuilder.html#Drawing_CommandBuilder_PushSetMatrix_Matrix4x4_">PushSetMatrix(Matrix4x4)</a> does not.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void PushMatrix(Matrix4x4 matrix)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Matrix4x4</span></td>
+        <td><span class="parametername">matrix</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Drawing_CommandBuilder_PushPersist_" data-uid="Drawing.CommandBuilder.PushPersist*"></a>
+  <h4 id="Drawing_CommandBuilder_PushPersist_System_Single_" data-uid="Drawing.CommandBuilder.PushPersist(System.Single)">PushPersist(Single)</h4>
+  <div class="markdown level1 summary"><p>Draws everything until the next PopPersist for a number of seconds.
+Warning: This is not recommended inside a DrawGizmos callback since DrawGizmos is called every frame anyway.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void PushPersist(float duration)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><span class="parametername">duration</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Drawing_CommandBuilder_PushSetMatrix_" data-uid="Drawing.CommandBuilder.PushSetMatrix*"></a>
+  <h4 id="Drawing_CommandBuilder_PushSetMatrix_Matrix4x4_" data-uid="Drawing.CommandBuilder.PushSetMatrix(Matrix4x4)">PushSetMatrix(Matrix4x4)</h4>
+  <div class="markdown level1 summary"><p>Multiply all coordinates until the next PopMatrix with the given matrix.
+This differs from <a class="xref" href="Drawing.CommandBuilder.html#Drawing_CommandBuilder_PushMatrix_Matrix4x4_">PushMatrix(Matrix4x4)</a> in that this sets the current matrix directly while <a class="xref" href="Drawing.CommandBuilder.html#Drawing_CommandBuilder_PushMatrix_Matrix4x4_">PushMatrix(Matrix4x4)</a> stacks with all previously pushed matrices.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void PushSetMatrix(Matrix4x4 matrix)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Matrix4x4</span></td>
+        <td><span class="parametername">matrix</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Drawing_CommandBuilder_Ray_" data-uid="Drawing.CommandBuilder.Ray*"></a>
+  <h4 id="Drawing_CommandBuilder_Ray_float3_float3_" data-uid="Drawing.CommandBuilder.Ray(float3,float3)">Ray(float3, float3)</h4>
+  <div class="markdown level1 summary"><p>Draws a ray starting at a point and going in the given direction.
+The ray will end at origin + direction.</p>
+<p>[Open online documentation to see images]</p>
+<pre><code>Draw.Ray(Vector3.zero, Vector3.up);</code></pre>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Ray(float3 origin, float3 direction)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">float3</span></td>
+        <td><span class="parametername">origin</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">float3</span></td>
+        <td><span class="parametername">direction</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Drawing_CommandBuilder_Ray_" data-uid="Drawing.CommandBuilder.Ray*"></a>
+  <h4 id="Drawing_CommandBuilder_Ray_float3_float3_Color_" data-uid="Drawing.CommandBuilder.Ray(float3,float3,Color)">Ray(float3, float3, Color)</h4>
+  <div class="markdown level1 summary"><p>\copydoc Ray(float3,float3)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Ray(float3 origin, float3 direction, Color color)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">float3</span></td>
+        <td><span class="parametername">origin</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">float3</span></td>
+        <td><span class="parametername">direction</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">Color</span></td>
+        <td><span class="parametername">color</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Drawing_CommandBuilder_Ray_" data-uid="Drawing.CommandBuilder.Ray*"></a>
+  <h4 id="Drawing_CommandBuilder_Ray_Ray_System_Single_" data-uid="Drawing.CommandBuilder.Ray(Ray,System.Single)">Ray(Ray, Single)</h4>
+  <div class="markdown level1 summary"><p>Draws a ray with a given length.</p>
+<p>[Open online documentation to see images]</p>
+<pre><code>Draw.Ray(Camera.main.ScreenPointToRay(Vector3.zero), 10);</code></pre>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Ray(Ray ray, float length)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Ray</span></td>
+        <td><span class="parametername">ray</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><span class="parametername">length</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Drawing_CommandBuilder_Ray_" data-uid="Drawing.CommandBuilder.Ray*"></a>
+  <h4 id="Drawing_CommandBuilder_Ray_Ray_System_Single_Color_" data-uid="Drawing.CommandBuilder.Ray(Ray,System.Single,Color)">Ray(Ray, Single, Color)</h4>
+  <div class="markdown level1 summary"><p>\copydoc Ray(Ray,float)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Ray(Ray ray, float length, Color color)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Ray</span></td>
+        <td><span class="parametername">ray</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><span class="parametername">length</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">Color</span></td>
+        <td><span class="parametername">color</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Drawing_CommandBuilder_SolidBox_" data-uid="Drawing.CommandBuilder.SolidBox*"></a>
+  <h4 id="Drawing_CommandBuilder_SolidBox_Bounds_" data-uid="Drawing.CommandBuilder.SolidBox(Bounds)">SolidBox(Bounds)</h4>
+  <div class="markdown level1 summary"><p>Draws a solid box.</p>
+<p>[Open online documentation to see images]</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SolidBox(Bounds bounds)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Bounds</span></td>
+        <td><span class="parametername">bounds</span></td>
+        <td><p>Bounding box of the box</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Drawing_CommandBuilder_SolidBox_" data-uid="Drawing.CommandBuilder.SolidBox*"></a>
+  <h4 id="Drawing_CommandBuilder_SolidBox_Bounds_Color_" data-uid="Drawing.CommandBuilder.SolidBox(Bounds,Color)">SolidBox(Bounds, Color)</h4>
+  <div class="markdown level1 summary"><p>\copydoc SolidBox(Bounds)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SolidBox(Bounds bounds, Color color)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Bounds</span></td>
+        <td><span class="parametername">bounds</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">Color</span></td>
+        <td><span class="parametername">color</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Drawing_CommandBuilder_SolidBox_" data-uid="Drawing.CommandBuilder.SolidBox*"></a>
+  <h4 id="Drawing_CommandBuilder_SolidBox_float3_float3_" data-uid="Drawing.CommandBuilder.SolidBox(float3,float3)">SolidBox(float3, float3)</h4>
+  <div class="markdown level1 summary"><p>Draws a solid box.</p>
+<p>[Open online documentation to see images]</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SolidBox(float3 center, float3 size)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">float3</span></td>
+        <td><span class="parametername">center</span></td>
+        <td><p>Center of the box</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">float3</span></td>
+        <td><span class="parametername">size</span></td>
+        <td><p>Width of the box along all dimensions</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Drawing_CommandBuilder_SolidBox_" data-uid="Drawing.CommandBuilder.SolidBox*"></a>
+  <h4 id="Drawing_CommandBuilder_SolidBox_float3_float3_Color_" data-uid="Drawing.CommandBuilder.SolidBox(float3,float3,Color)">SolidBox(float3, float3, Color)</h4>
+  <div class="markdown level1 summary"><p>\copydoc SolidBox(float3,float3)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SolidBox(float3 center, float3 size, Color color)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">float3</span></td>
+        <td><span class="parametername">center</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">float3</span></td>
+        <td><span class="parametername">size</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">Color</span></td>
+        <td><span class="parametername">color</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Drawing_CommandBuilder_SolidBox_" data-uid="Drawing.CommandBuilder.SolidBox*"></a>
+  <h4 id="Drawing_CommandBuilder_SolidBox_float3_Quaternion_float3_" data-uid="Drawing.CommandBuilder.SolidBox(float3,Quaternion,float3)">SolidBox(float3, Quaternion, float3)</h4>
+  <div class="markdown level1 summary"><p>Draws a solid box.</p>
+<p>[Open online documentation to see images]</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SolidBox(float3 center, Quaternion rotation, float3 size)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">float3</span></td>
+        <td><span class="parametername">center</span></td>
+        <td><p>Center of the box</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">Quaternion</span></td>
+        <td><span class="parametername">rotation</span></td>
+        <td><p>Rotation of the box</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">float3</span></td>
+        <td><span class="parametername">size</span></td>
+        <td><p>Width of the box along all dimensions</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Drawing_CommandBuilder_SolidBox_" data-uid="Drawing.CommandBuilder.SolidBox*"></a>
+  <h4 id="Drawing_CommandBuilder_SolidBox_float3_Quaternion_float3_Color_" data-uid="Drawing.CommandBuilder.SolidBox(float3,Quaternion,float3,Color)">SolidBox(float3, Quaternion, float3, Color)</h4>
+  <div class="markdown level1 summary"><p>\copydoc SolidBox(float3,Quaternion,float3)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SolidBox(float3 center, Quaternion rotation, float3 size, Color color)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">float3</span></td>
+        <td><span class="parametername">center</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">Quaternion</span></td>
+        <td><span class="parametername">rotation</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">float3</span></td>
+        <td><span class="parametername">size</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">Color</span></td>
+        <td><span class="parametername">color</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Drawing_CommandBuilder_SolidMesh_" data-uid="Drawing.CommandBuilder.SolidMesh*"></a>
+  <h4 id="Drawing_CommandBuilder_SolidMesh_System_Collections_Generic_List_Vector3__System_Collections_Generic_List_System_Int32__System_Collections_Generic_List_Color__" data-uid="Drawing.CommandBuilder.SolidMesh(System.Collections.Generic.List{Vector3},System.Collections.Generic.List{System.Int32},System.Collections.Generic.List{Color})">SolidMesh(List&lt;Vector3&gt;, List&lt;Int32&gt;, List&lt;Color&gt;)</h4>
+  <div class="markdown level1 summary"><p>Draws a solid mesh with the given vertices.</p>
+<p>Note: This method is not thread safe and must not be used from the Unity Job System.
+TODO: Are matrices handled?</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SolidMesh(List&lt;Vector3&gt; vertices, List&lt;int&gt; triangles, List&lt;Color&gt; colors)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.List</span>&lt;<span class="xref">Vector3</span>&gt;</td>
+        <td><span class="parametername">vertices</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.List</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td><span class="parametername">triangles</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.List</span>&lt;<span class="xref">Color</span>&gt;</td>
+        <td><span class="parametername">colors</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Drawing_CommandBuilder_SolidMesh_" data-uid="Drawing.CommandBuilder.SolidMesh*"></a>
+  <h4 id="Drawing_CommandBuilder_SolidMesh_Vector3___System_Int32___Color___System_Int32_System_Int32_" data-uid="Drawing.CommandBuilder.SolidMesh(Vector3[],System.Int32[],Color[],System.Int32,System.Int32)">SolidMesh(Vector3[], Int32[], Color[], Int32, Int32)</h4>
+  <div class="markdown level1 summary"><p>Draws a solid mesh with the given vertices.</p>
+<p>Note: This method is not thread safe and must not be used from the Unity Job System.
+TODO: Are matrices handled?</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SolidMesh(Vector3[] vertices, int[] triangles, Color[] colors, int vertexCount, int indexCount)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Vector3</span>[]</td>
+        <td><span class="parametername">vertices</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span>[]</td>
+        <td><span class="parametername">triangles</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">Color</span>[]</td>
+        <td><span class="parametername">colors</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">vertexCount</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">indexCount</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Drawing_CommandBuilder_WireBox_" data-uid="Drawing.CommandBuilder.WireBox*"></a>
+  <h4 id="Drawing_CommandBuilder_WireBox_Bounds_" data-uid="Drawing.CommandBuilder.WireBox(Bounds)">WireBox(Bounds)</h4>
+  <div class="markdown level1 summary"><p>Draws the outline of a box.</p>
+<p>[Open online documentation to see images]</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void WireBox(Bounds bounds)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Bounds</span></td>
+        <td><span class="parametername">bounds</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Drawing_CommandBuilder_WireBox_" data-uid="Drawing.CommandBuilder.WireBox*"></a>
+  <h4 id="Drawing_CommandBuilder_WireBox_Bounds_Color_" data-uid="Drawing.CommandBuilder.WireBox(Bounds,Color)">WireBox(Bounds, Color)</h4>
+  <div class="markdown level1 summary"><p>\copydoc WireBox(Bounds)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void WireBox(Bounds bounds, Color color)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Bounds</span></td>
+        <td><span class="parametername">bounds</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">Color</span></td>
+        <td><span class="parametername">color</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Drawing_CommandBuilder_WireBox_" data-uid="Drawing.CommandBuilder.WireBox*"></a>
+  <h4 id="Drawing_CommandBuilder_WireBox_float3_float3_" data-uid="Drawing.CommandBuilder.WireBox(float3,float3)">WireBox(float3, float3)</h4>
+  <div class="markdown level1 summary"><p>Draws the outline of an axis aligned box.</p>
+<p>[Open online documentation to see images]</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void WireBox(float3 center, float3 size)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">float3</span></td>
+        <td><span class="parametername">center</span></td>
+        <td><p>Center of the box</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">float3</span></td>
+        <td><span class="parametername">size</span></td>
+        <td><p>Width of the box along all dimensions</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Drawing_CommandBuilder_WireBox_" data-uid="Drawing.CommandBuilder.WireBox*"></a>
+  <h4 id="Drawing_CommandBuilder_WireBox_float3_float3_Color_" data-uid="Drawing.CommandBuilder.WireBox(float3,float3,Color)">WireBox(float3, float3, Color)</h4>
+  <div class="markdown level1 summary"><p>\copydoc WireBox(float3,float3)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void WireBox(float3 center, float3 size, Color color)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">float3</span></td>
+        <td><span class="parametername">center</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">float3</span></td>
+        <td><span class="parametername">size</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">Color</span></td>
+        <td><span class="parametername">color</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Drawing_CommandBuilder_WireBox_" data-uid="Drawing.CommandBuilder.WireBox*"></a>
+  <h4 id="Drawing_CommandBuilder_WireBox_float3_Quaternion_float3_" data-uid="Drawing.CommandBuilder.WireBox(float3,Quaternion,float3)">WireBox(float3, Quaternion, float3)</h4>
+  <div class="markdown level1 summary"><p>Draws the outline of a box.</p>
+<p>[Open online documentation to see images]</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void WireBox(float3 center, Quaternion rotation, float3 size)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">float3</span></td>
+        <td><span class="parametername">center</span></td>
+        <td><p>Center of the box</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">Quaternion</span></td>
+        <td><span class="parametername">rotation</span></td>
+        <td><p>Rotation of the box</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">float3</span></td>
+        <td><span class="parametername">size</span></td>
+        <td><p>Width of the box along all dimensions</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Drawing_CommandBuilder_WireBox_" data-uid="Drawing.CommandBuilder.WireBox*"></a>
+  <h4 id="Drawing_CommandBuilder_WireBox_float3_Quaternion_float3_Color_" data-uid="Drawing.CommandBuilder.WireBox(float3,Quaternion,float3,Color)">WireBox(float3, Quaternion, float3, Color)</h4>
+  <div class="markdown level1 summary"><p>\copydoc WireBox(float3,Quaternion,float3)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void WireBox(float3 center, Quaternion rotation, float3 size, Color color)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">float3</span></td>
+        <td><span class="parametername">center</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">Quaternion</span></td>
+        <td><span class="parametername">rotation</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">float3</span></td>
+        <td><span class="parametername">size</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">Color</span></td>
+        <td><span class="parametername">color</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Drawing_CommandBuilder_WireCapsule_" data-uid="Drawing.CommandBuilder.WireCapsule*"></a>
+  <h4 id="Drawing_CommandBuilder_WireCapsule_float3_float3_System_Single_" data-uid="Drawing.CommandBuilder.WireCapsule(float3,float3,System.Single)">WireCapsule(float3, float3, Single)</h4>
+  <div class="markdown level1 summary"><p>Draws a capsule.
+The capsule's lower circle will be centered at the bottom parameter and similarly for the upper circle.</p>
+<pre><code>// Draw a tilted capsule between the points (0,0,0) and (1,1,1) with a radius of 0.5
+Draw.WireCapsule(Vector3.zero, Vector3.one, 0.5f, Color.black);</code></pre>
+<p>[Open online documentation to see images]</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void WireCapsule(float3 bottom, float3 top, float radius)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">float3</span></td>
+        <td><span class="parametername">bottom</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">float3</span></td>
+        <td><span class="parametername">top</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><span class="parametername">radius</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Drawing_CommandBuilder_WireCapsule_" data-uid="Drawing.CommandBuilder.WireCapsule*"></a>
+  <h4 id="Drawing_CommandBuilder_WireCapsule_float3_float3_System_Single_Color_" data-uid="Drawing.CommandBuilder.WireCapsule(float3,float3,System.Single,Color)">WireCapsule(float3, float3, Single, Color)</h4>
+  <div class="markdown level1 summary"><p>\copydoc WireCapsule(float3,float3,float)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void WireCapsule(float3 bottom, float3 top, float radius, Color color)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">float3</span></td>
+        <td><span class="parametername">bottom</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">float3</span></td>
+        <td><span class="parametername">top</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><span class="parametername">radius</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">Color</span></td>
+        <td><span class="parametername">color</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Drawing_CommandBuilder_WireCapsule_" data-uid="Drawing.CommandBuilder.WireCapsule*"></a>
+  <h4 id="Drawing_CommandBuilder_WireCapsule_float3_float3_System_Single_System_Single_" data-uid="Drawing.CommandBuilder.WireCapsule(float3,float3,System.Single,System.Single)">WireCapsule(float3, float3, Single, Single)</h4>
+  <div class="markdown level1 summary"><p>Draws a capsule.</p>
+<pre><code>// Draw a tilted capsule between the points (0,0,0) and (1,1,1) with a radius of 0.5
+Draw.WireCapsule(Vector3.zero, Vector3.one, 0.5f, Color.black);</code></pre>
+<p>[Open online documentation to see images]</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void WireCapsule(float3 position, float3 up, float height, float radius)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">float3</span></td>
+        <td><span class="parametername">position</span></td>
+        <td><p>Lowest point of the capsule.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">float3</span></td>
+        <td><span class="parametername">up</span></td>
+        <td><p>Up direction of the capsule.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><span class="parametername">height</span></td>
+        <td><p>Distance between the lowest and highest points of the capsule. The height will be clamped to be at least 2*radius.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><span class="parametername">radius</span></td>
+        <td><p>The radius of the capsule.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Drawing_CommandBuilder_WireCapsule_" data-uid="Drawing.CommandBuilder.WireCapsule*"></a>
+  <h4 id="Drawing_CommandBuilder_WireCapsule_float3_float3_System_Single_System_Single_Color_" data-uid="Drawing.CommandBuilder.WireCapsule(float3,float3,System.Single,System.Single,Color)">WireCapsule(float3, float3, Single, Single, Color)</h4>
+  <div class="markdown level1 summary"><p>\copydoc WireCapsule(float3,float3,float,float)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void WireCapsule(float3 position, float3 up, float height, float radius, Color color)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">float3</span></td>
+        <td><span class="parametername">position</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">float3</span></td>
+        <td><span class="parametername">up</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><span class="parametername">height</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><span class="parametername">radius</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">Color</span></td>
+        <td><span class="parametername">color</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Drawing_CommandBuilder_WireCylinder_" data-uid="Drawing.CommandBuilder.WireCylinder*"></a>
+  <h4 id="Drawing_CommandBuilder_WireCylinder_float3_float3_System_Single_" data-uid="Drawing.CommandBuilder.WireCylinder(float3,float3,System.Single)">WireCylinder(float3, float3, Single)</h4>
+  <div class="markdown level1 summary"><p>Draws a cylinder.
+The cylinder's bottom circle will be centered at the bottom parameter and similarly for the top circle.</p>
+<pre><code>// Draw a tilted cylinder between the points (0,0,0) and (1,1,1) with a radius of 0.5
+Draw.WireCylinder(Vector3.zero, Vector3.one, 0.5f, Color.black);</code></pre>
+<p>[Open online documentation to see images]</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void WireCylinder(float3 bottom, float3 top, float radius)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">float3</span></td>
+        <td><span class="parametername">bottom</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">float3</span></td>
+        <td><span class="parametername">top</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><span class="parametername">radius</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Drawing_CommandBuilder_WireCylinder_" data-uid="Drawing.CommandBuilder.WireCylinder*"></a>
+  <h4 id="Drawing_CommandBuilder_WireCylinder_float3_float3_System_Single_Color_" data-uid="Drawing.CommandBuilder.WireCylinder(float3,float3,System.Single,Color)">WireCylinder(float3, float3, Single, Color)</h4>
+  <div class="markdown level1 summary"><p>\copydoc WireCylinder(float3,float3,float)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void WireCylinder(float3 bottom, float3 top, float radius, Color color)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">float3</span></td>
+        <td><span class="parametername">bottom</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">float3</span></td>
+        <td><span class="parametername">top</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><span class="parametername">radius</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">Color</span></td>
+        <td><span class="parametername">color</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Drawing_CommandBuilder_WireCylinder_" data-uid="Drawing.CommandBuilder.WireCylinder*"></a>
+  <h4 id="Drawing_CommandBuilder_WireCylinder_float3_float3_System_Single_System_Single_" data-uid="Drawing.CommandBuilder.WireCylinder(float3,float3,System.Single,System.Single)">WireCylinder(float3, float3, Single, Single)</h4>
+  <div class="markdown level1 summary"><p>Draws a cylinder.
+The cylinder's bottom circle will be centered at the position parameter.
+The cylinder's orientation will be determined by the up and height parameters.</p>
+<pre><code>// Draw a two meter tall cylinder at the world origin with a radius of 0.5
+Draw.WireCylinder(Vector3.zero, Vector3.up, 2, 0.5f, Color.black);</code></pre>
+<p>[Open online documentation to see images]</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void WireCylinder(float3 position, float3 up, float height, float radius)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">float3</span></td>
+        <td><span class="parametername">position</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">float3</span></td>
+        <td><span class="parametername">up</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><span class="parametername">height</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><span class="parametername">radius</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Drawing_CommandBuilder_WireCylinder_" data-uid="Drawing.CommandBuilder.WireCylinder*"></a>
+  <h4 id="Drawing_CommandBuilder_WireCylinder_float3_float3_System_Single_System_Single_Color_" data-uid="Drawing.CommandBuilder.WireCylinder(float3,float3,System.Single,System.Single,Color)">WireCylinder(float3, float3, Single, Single, Color)</h4>
+  <div class="markdown level1 summary"><p>\copydoc WireCylinder(float3,float3,float,float)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void WireCylinder(float3 position, float3 up, float height, float radius, Color color)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">float3</span></td>
+        <td><span class="parametername">position</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">float3</span></td>
+        <td><span class="parametername">up</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><span class="parametername">height</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><span class="parametername">radius</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">Color</span></td>
+        <td><span class="parametername">color</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Drawing_CommandBuilder_WireGrid_" data-uid="Drawing.CommandBuilder.WireGrid*"></a>
+  <h4 id="Drawing_CommandBuilder_WireGrid_float3_Quaternion_int2_float2_" data-uid="Drawing.CommandBuilder.WireGrid(float3,Quaternion,int2,float2)">WireGrid(float3, Quaternion, int2, float2)</h4>
+  <div class="markdown level1 summary"><p>Draws a grid of lines.</p>
+<pre><code>Draw.WireGrid(Vector3.zero, Quaternion.identity, new int2(3, 3), new float2(1, 1), color);</code></pre>
+<p>[Open online documentation to see images]</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void WireGrid(float3 center, Quaternion rotation, int2 cells, float2 totalSize)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">float3</span></td>
+        <td><span class="parametername">center</span></td>
+        <td><p>Center of the grid</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">Quaternion</span></td>
+        <td><span class="parametername">rotation</span></td>
+        <td><p>Rotation of the grid. The grid will be aligned to the X and Z axes of the rotation.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">int2</span></td>
+        <td><span class="parametername">cells</span></td>
+        <td><p>Number of cells of the grid. Should be greater than 0.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">float2</span></td>
+        <td><span class="parametername">totalSize</span></td>
+        <td><p>Total size of the grid along the X and Z axes.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Drawing_CommandBuilder_WireGrid_" data-uid="Drawing.CommandBuilder.WireGrid*"></a>
+  <h4 id="Drawing_CommandBuilder_WireGrid_float3_Quaternion_int2_float2_Color_" data-uid="Drawing.CommandBuilder.WireGrid(float3,Quaternion,int2,float2,Color)">WireGrid(float3, Quaternion, int2, float2, Color)</h4>
+  <div class="markdown level1 summary"><p>\copydoc WireGrid(float3,Quaternion,int2,float2)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void WireGrid(float3 center, Quaternion rotation, int2 cells, float2 totalSize, Color color)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">float3</span></td>
+        <td><span class="parametername">center</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">Quaternion</span></td>
+        <td><span class="parametername">rotation</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">int2</span></td>
+        <td><span class="parametername">cells</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">float2</span></td>
+        <td><span class="parametername">totalSize</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">Color</span></td>
+        <td><span class="parametername">color</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Drawing_CommandBuilder_WireHexagon_" data-uid="Drawing.CommandBuilder.WireHexagon*"></a>
+  <h4 id="Drawing_CommandBuilder_WireHexagon_float3_Quaternion_System_Single_" data-uid="Drawing.CommandBuilder.WireHexagon(float3,Quaternion,System.Single)">WireHexagon(float3, Quaternion, Single)</h4>
+  <div class="markdown level1 summary"><p>Draws a hexagon outline.</p>
+<pre><code>Draw.WireHexagon(Vector3.zero, Quaternion.identity, 0.5f, color);</code></pre>
+<p>[Open online documentation to see images]</p>
+<p>Note: This is a convenience wrapper for <a class="xref" href="Drawing.CommandBuilder.html#Drawing_CommandBuilder_WirePolygon_float3_System_Int32_Quaternion_System_Single_">WirePolygon(float3, Int32, Quaternion, Single)</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void WireHexagon(float3 center, Quaternion rotation, float radius)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">float3</span></td>
+        <td><span class="parametername">center</span></td>
+        <td><p>Center of the polygon.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">Quaternion</span></td>
+        <td><span class="parametername">rotation</span></td>
+        <td><p>Rotation of the polygon. The first vertex will be radius units in front of center as seen from the rotation's point of view.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><span class="parametername">radius</span></td>
+        <td><p>Distance from the center to each vertex.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Drawing_CommandBuilder_WireHexagon_" data-uid="Drawing.CommandBuilder.WireHexagon*"></a>
+  <h4 id="Drawing_CommandBuilder_WireHexagon_float3_Quaternion_System_Single_Color_" data-uid="Drawing.CommandBuilder.WireHexagon(float3,Quaternion,System.Single,Color)">WireHexagon(float3, Quaternion, Single, Color)</h4>
+  <div class="markdown level1 summary"><p>\copydoc WireHexagon(float3,Quaternion,float)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void WireHexagon(float3 center, Quaternion rotation, float radius, Color color)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">float3</span></td>
+        <td><span class="parametername">center</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">Quaternion</span></td>
+        <td><span class="parametername">rotation</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><span class="parametername">radius</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">Color</span></td>
+        <td><span class="parametername">color</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Drawing_CommandBuilder_WirePentagon_" data-uid="Drawing.CommandBuilder.WirePentagon*"></a>
+  <h4 id="Drawing_CommandBuilder_WirePentagon_float3_Quaternion_System_Single_" data-uid="Drawing.CommandBuilder.WirePentagon(float3,Quaternion,System.Single)">WirePentagon(float3, Quaternion, Single)</h4>
+  <div class="markdown level1 summary"><p>Draws a pentagon outline.</p>
+<pre><code>Draw.WirePentagon(Vector3.zero, Quaternion.identity, 0.5f, color);</code></pre>
+<p>[Open online documentation to see images]</p>
+<p>Note: This is a convenience wrapper for <a class="xref" href="Drawing.CommandBuilder.html#Drawing_CommandBuilder_WirePolygon_float3_System_Int32_Quaternion_System_Single_">WirePolygon(float3, Int32, Quaternion, Single)</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void WirePentagon(float3 center, Quaternion rotation, float radius)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">float3</span></td>
+        <td><span class="parametername">center</span></td>
+        <td><p>Center of the polygon.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">Quaternion</span></td>
+        <td><span class="parametername">rotation</span></td>
+        <td><p>Rotation of the polygon. The first vertex will be radius units in front of center as seen from the rotation's point of view.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><span class="parametername">radius</span></td>
+        <td><p>Distance from the center to each vertex.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Drawing_CommandBuilder_WirePentagon_" data-uid="Drawing.CommandBuilder.WirePentagon*"></a>
+  <h4 id="Drawing_CommandBuilder_WirePentagon_float3_Quaternion_System_Single_Color_" data-uid="Drawing.CommandBuilder.WirePentagon(float3,Quaternion,System.Single,Color)">WirePentagon(float3, Quaternion, Single, Color)</h4>
+  <div class="markdown level1 summary"><p>\copydoc WirePentagon(float3,Quaternion,float)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void WirePentagon(float3 center, Quaternion rotation, float radius, Color color)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">float3</span></td>
+        <td><span class="parametername">center</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">Quaternion</span></td>
+        <td><span class="parametername">rotation</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><span class="parametername">radius</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">Color</span></td>
+        <td><span class="parametername">color</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Drawing_CommandBuilder_WirePolygon_" data-uid="Drawing.CommandBuilder.WirePolygon*"></a>
+  <h4 id="Drawing_CommandBuilder_WirePolygon_float3_System_Int32_Quaternion_System_Single_" data-uid="Drawing.CommandBuilder.WirePolygon(float3,System.Int32,Quaternion,System.Single)">WirePolygon(float3, Int32, Quaternion, Single)</h4>
+  <div class="markdown level1 summary"><p>Draws a regular polygon outline.</p>
+<pre><code>Draw.WirePolygon(new Vector3(-0.5f, 0, +0.5f), 3, Quaternion.identity, 0.4f, color);
+Draw.WirePolygon(new Vector3(+0.5f, 0, +0.5f), 4, Quaternion.identity, 0.4f, color);
+Draw.WirePolygon(new Vector3(-0.5f, 0, -0.5f), 5, Quaternion.identity, 0.4f, color);
+Draw.WirePolygon(new Vector3(+0.5f, 0, -0.5f), 6, Quaternion.identity, 0.4f, color);</code></pre>
+<p>[Open online documentation to see images]</p>
+<p>See: <a class="xref" href="Drawing.CommandBuilder.html#Drawing_CommandBuilder_WireTriangle_float3_float3_float3_">WireTriangle(float3, float3, float3)</a>
+See: <a class="xref" href="Drawing.CommandBuilder.html#Drawing_CommandBuilder_WirePentagon_float3_Quaternion_System_Single_">WirePentagon(float3, Quaternion, Single)</a>
+See: <a class="xref" href="Drawing.CommandBuilder.html#Drawing_CommandBuilder_WireHexagon_float3_Quaternion_System_Single_">WireHexagon(float3, Quaternion, Single)</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void WirePolygon(float3 center, int vertices, Quaternion rotation, float radius)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">float3</span></td>
+        <td><span class="parametername">center</span></td>
+        <td><p>Center of the polygon.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">vertices</span></td>
+        <td><p>Number of corners (and sides) of the polygon.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">Quaternion</span></td>
+        <td><span class="parametername">rotation</span></td>
+        <td><p>Rotation of the polygon. The first vertex will be radius units in front of center as seen from the rotation's point of view.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><span class="parametername">radius</span></td>
+        <td><p>Distance from the center to each vertex.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Drawing_CommandBuilder_WirePolygon_" data-uid="Drawing.CommandBuilder.WirePolygon*"></a>
+  <h4 id="Drawing_CommandBuilder_WirePolygon_float3_System_Int32_Quaternion_System_Single_Color_" data-uid="Drawing.CommandBuilder.WirePolygon(float3,System.Int32,Quaternion,System.Single,Color)">WirePolygon(float3, Int32, Quaternion, Single, Color)</h4>
+  <div class="markdown level1 summary"><p>\copydoc WirePolygon(float3,int,Quaternion,float)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void WirePolygon(float3 center, int vertices, Quaternion rotation, float radius, Color color)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">float3</span></td>
+        <td><span class="parametername">center</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">vertices</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">Quaternion</span></td>
+        <td><span class="parametername">rotation</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><span class="parametername">radius</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">Color</span></td>
+        <td><span class="parametername">color</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Drawing_CommandBuilder_WireRectangle_" data-uid="Drawing.CommandBuilder.WireRectangle*"></a>
+  <h4 id="Drawing_CommandBuilder_WireRectangle_float3_Quaternion_float3_" data-uid="Drawing.CommandBuilder.WireRectangle(float3,Quaternion,float3)">WireRectangle(float3, Quaternion, float3)</h4>
+  <div class="markdown level1 summary"><p>Draws a rectangle outline.
+The rectangle will be oriented along the rotation's X and Z axes.</p>
+<pre><code>Draw.WireRectangle(new Vector3(0f, 0, 0), Quaternion.identity, new Vector3(1, 1, 1), Color.black);</code></pre>
+<p>[Open online documentation to see images]</p>
+<p>See: <a class="xref" href="Drawing.CommandBuilder.html#Drawing_CommandBuilder_WirePolygon_float3_System_Int32_Quaternion_System_Single_">WirePolygon(float3, Int32, Quaternion, Single)</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void WireRectangle(float3 center, Quaternion rotation, float3 size)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">float3</span></td>
+        <td><span class="parametername">center</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">Quaternion</span></td>
+        <td><span class="parametername">rotation</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">float3</span></td>
+        <td><span class="parametername">size</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Drawing_CommandBuilder_WireRectangle_" data-uid="Drawing.CommandBuilder.WireRectangle*"></a>
+  <h4 id="Drawing_CommandBuilder_WireRectangle_float3_Quaternion_float3_Color_" data-uid="Drawing.CommandBuilder.WireRectangle(float3,Quaternion,float3,Color)">WireRectangle(float3, Quaternion, float3, Color)</h4>
+  <div class="markdown level1 summary"><p>\copydoc WireRectangle(float3,Quaternion,float3)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void WireRectangle(float3 center, Quaternion rotation, float3 size, Color color)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">float3</span></td>
+        <td><span class="parametername">center</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">Quaternion</span></td>
+        <td><span class="parametername">rotation</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">float3</span></td>
+        <td><span class="parametername">size</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">Color</span></td>
+        <td><span class="parametername">color</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Drawing_CommandBuilder_WireRectangle_" data-uid="Drawing.CommandBuilder.WireRectangle*"></a>
+  <h4 id="Drawing_CommandBuilder_WireRectangle_Rect_" data-uid="Drawing.CommandBuilder.WireRectangle(Rect)">WireRectangle(Rect)</h4>
+  <div class="markdown level1 summary"><p>Draws a rectangle outline.
+The rectangle corners are assumed to be in XY space.
+This is particularly useful when combined with <a class="xref" href="Drawing.CommandBuilder.html#Drawing_CommandBuilder_InScreenSpace_Camera_">InScreenSpace(Camera)</a>.</p>
+<pre><code>using (Draw.InScreenSpace(Camera.main)) {
+    Draw.WireRectangle(new Rect(10, 10, 100, 100), Color.black);
+}</code></pre>
+<p>[Open online documentation to see images]</p>
+<p>See: <a class="xref" href="Drawing.CommandBuilder.html#Drawing_CommandBuilder_WireRectangleXZ_float3_float3_">WireRectangleXZ(float3, float3)</a>
+See: <a class="xref" href="Drawing.CommandBuilder.html#Drawing_CommandBuilder_WirePolygon_float3_System_Int32_Quaternion_System_Single_">WirePolygon(float3, Int32, Quaternion, Single)</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void WireRectangle(Rect rect)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Rect</span></td>
+        <td><span class="parametername">rect</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Drawing_CommandBuilder_WireRectangle_" data-uid="Drawing.CommandBuilder.WireRectangle*"></a>
+  <h4 id="Drawing_CommandBuilder_WireRectangle_Rect_Color_" data-uid="Drawing.CommandBuilder.WireRectangle(Rect,Color)">WireRectangle(Rect, Color)</h4>
+  <div class="markdown level1 summary"><p>\copydoc WireRectangle(Rect)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void WireRectangle(Rect rect, Color color)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Rect</span></td>
+        <td><span class="parametername">rect</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">Color</span></td>
+        <td><span class="parametername">color</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Drawing_CommandBuilder_WireRectangleXZ_" data-uid="Drawing.CommandBuilder.WireRectangleXZ*"></a>
+  <h4 id="Drawing_CommandBuilder_WireRectangleXZ_float3_float3_" data-uid="Drawing.CommandBuilder.WireRectangleXZ(float3,float3)">WireRectangleXZ(float3, float3)</h4>
+  <div class="markdown level1 summary"><p>Draws a rectangle outline.
+The rectangle will be aligned to the X and Z axes.</p>
+<pre><code>Draw.WireRectangleXZ(new Vector3(0f, 0, 0), new Vector3(1, 1, 1), Color.black);</code></pre>
+<p>[Open online documentation to see images]</p>
+<p>See: <a class="xref" href="Drawing.CommandBuilder.html#Drawing_CommandBuilder_WirePolygon_float3_System_Int32_Quaternion_System_Single_">WirePolygon(float3, Int32, Quaternion, Single)</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void WireRectangleXZ(float3 center, float3 size)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">float3</span></td>
+        <td><span class="parametername">center</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">float3</span></td>
+        <td><span class="parametername">size</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Drawing_CommandBuilder_WireRectangleXZ_" data-uid="Drawing.CommandBuilder.WireRectangleXZ*"></a>
+  <h4 id="Drawing_CommandBuilder_WireRectangleXZ_float3_float3_Color_" data-uid="Drawing.CommandBuilder.WireRectangleXZ(float3,float3,Color)">WireRectangleXZ(float3, float3, Color)</h4>
+  <div class="markdown level1 summary"><p>\copydoc WireRectangleXZ(float3,float3)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void WireRectangleXZ(float3 center, float3 size, Color color)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">float3</span></td>
+        <td><span class="parametername">center</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">float3</span></td>
+        <td><span class="parametername">size</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">Color</span></td>
+        <td><span class="parametername">color</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Drawing_CommandBuilder_WireSphere_" data-uid="Drawing.CommandBuilder.WireSphere*"></a>
+  <h4 id="Drawing_CommandBuilder_WireSphere_float3_System_Single_" data-uid="Drawing.CommandBuilder.WireSphere(float3,System.Single)">WireSphere(float3, Single)</h4>
+  <div class="markdown level1 summary"><p>Draws a wire sphere.</p>
+<p>[Open online documentation to see images]</p>
+<pre><code>// Draw a wire sphere at the origin with a radius of 0.5
+Draw.WireSphere(Vector3.zero, 0.5f, Color.black);</code></pre>
+<p>See: <a class="xref" href="Drawing.CommandBuilder.html#Drawing_CommandBuilder_Circle_float3_float3_System_Single_">Circle(float3, float3, Single)</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void WireSphere(float3 position, float radius)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">float3</span></td>
+        <td><span class="parametername">position</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><span class="parametername">radius</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Drawing_CommandBuilder_WireSphere_" data-uid="Drawing.CommandBuilder.WireSphere*"></a>
+  <h4 id="Drawing_CommandBuilder_WireSphere_float3_System_Single_Color_" data-uid="Drawing.CommandBuilder.WireSphere(float3,System.Single,Color)">WireSphere(float3, Single, Color)</h4>
+  <div class="markdown level1 summary"><p>\copydoc WireSphere(float3,float)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void WireSphere(float3 position, float radius, Color color)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">float3</span></td>
+        <td><span class="parametername">position</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><span class="parametername">radius</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">Color</span></td>
+        <td><span class="parametername">color</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Drawing_CommandBuilder_WireTriangle_" data-uid="Drawing.CommandBuilder.WireTriangle*"></a>
+  <h4 id="Drawing_CommandBuilder_WireTriangle_float3_float3_float3_" data-uid="Drawing.CommandBuilder.WireTriangle(float3,float3,float3)">WireTriangle(float3, float3, float3)</h4>
+  <div class="markdown level1 summary"><p>Draws a triangle outline.</p>
+<pre><code>Draw.WireTriangle(new Vector3(-0.5f, 0, 0), new Vector3(0, 1, 0), new Vector3(0.5f, 0, 0), Color.black);</code></pre>
+<p>[Open online documentation to see images]</p>
+<p>See: <a class="xref" href="Drawing.CommandBuilder.html#Drawing_CommandBuilder_WireTriangle_float3_Quaternion_System_Single_">WireTriangle(float3, Quaternion, Single)</a>
+See: <a class="xref" href="Drawing.CommandBuilder.html#Drawing_CommandBuilder_WirePolygon_float3_System_Int32_Quaternion_System_Single_">WirePolygon(float3, Int32, Quaternion, Single)</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void WireTriangle(float3 a, float3 b, float3 c)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">float3</span></td>
+        <td><span class="parametername">a</span></td>
+        <td><p>First corner of the triangle</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">float3</span></td>
+        <td><span class="parametername">b</span></td>
+        <td><p>Second corner of the triangle</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">float3</span></td>
+        <td><span class="parametername">c</span></td>
+        <td><p>Third corner of the triangle</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Drawing_CommandBuilder_WireTriangle_" data-uid="Drawing.CommandBuilder.WireTriangle*"></a>
+  <h4 id="Drawing_CommandBuilder_WireTriangle_float3_float3_float3_Color_" data-uid="Drawing.CommandBuilder.WireTriangle(float3,float3,float3,Color)">WireTriangle(float3, float3, float3, Color)</h4>
+  <div class="markdown level1 summary"><p>\copydoc WireTriangle(float3,float3,float3)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void WireTriangle(float3 a, float3 b, float3 c, Color color)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">float3</span></td>
+        <td><span class="parametername">a</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">float3</span></td>
+        <td><span class="parametername">b</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">float3</span></td>
+        <td><span class="parametername">c</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">Color</span></td>
+        <td><span class="parametername">color</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Drawing_CommandBuilder_WireTriangle_" data-uid="Drawing.CommandBuilder.WireTriangle*"></a>
+  <h4 id="Drawing_CommandBuilder_WireTriangle_float3_Quaternion_System_Single_" data-uid="Drawing.CommandBuilder.WireTriangle(float3,Quaternion,System.Single)">WireTriangle(float3, Quaternion, Single)</h4>
+  <div class="markdown level1 summary"><p>Draws a triangle outline.</p>
+<pre><code>Draw.WireTriangle(Vector3.zero, Quaternion.identity, 0.5f, color);</code></pre>
+<p>[Open online documentation to see images]</p>
+<p>Note: This is a convenience wrapper for <a class="xref" href="Drawing.CommandBuilder.html#Drawing_CommandBuilder_WirePolygon_float3_System_Int32_Quaternion_System_Single_">WirePolygon(float3, Int32, Quaternion, Single)</a></p>
+<p>See: <a class="xref" href="Drawing.CommandBuilder.html#Drawing_CommandBuilder_WireTriangle_float3_float3_float3_">WireTriangle(float3, float3, float3)</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void WireTriangle(float3 center, Quaternion rotation, float radius)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">float3</span></td>
+        <td><span class="parametername">center</span></td>
+        <td><p>Center of the triangle.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">Quaternion</span></td>
+        <td><span class="parametername">rotation</span></td>
+        <td><p>Rotation of the triangle. The first vertex will be radius units in front of center as seen from the rotation's point of view.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><span class="parametername">radius</span></td>
+        <td><p>Distance from the center to each vertex.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Drawing_CommandBuilder_WireTriangle_" data-uid="Drawing.CommandBuilder.WireTriangle*"></a>
+  <h4 id="Drawing_CommandBuilder_WireTriangle_float3_Quaternion_System_Single_Color_" data-uid="Drawing.CommandBuilder.WireTriangle(float3,Quaternion,System.Single,Color)">WireTriangle(float3, Quaternion, Single, Color)</h4>
+  <div class="markdown level1 summary"><p>\copydoc WireTriangle(float3,Quaternion,float)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void WireTriangle(float3 center, Quaternion rotation, float radius, Color color)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">float3</span></td>
+        <td><span class="parametername">center</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">Quaternion</span></td>
+        <td><span class="parametername">rotation</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><span class="parametername">radius</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">Color</span></td>
+        <td><span class="parametername">color</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Drawing_CommandBuilder_WithColor_" data-uid="Drawing.CommandBuilder.WithColor*"></a>
+  <h4 id="Drawing_CommandBuilder_WithColor_Color_" data-uid="Drawing.CommandBuilder.WithColor(Color)">WithColor(Color)</h4>
+  <div class="markdown level1 summary"><p>Scope to draw multiple things with the same color.</p>
+<pre><code>void Update () {
+    using (Draw.WithColor(Color.red)) {
+        Draw.Line(new Vector3(0, 0, 0), new Vector3(1, 1, 1));
+        Draw.Line(new Vector3(0, 0, 0), new Vector3(0, 1, 2));
+    }
+}</code></pre>
+<p>Any command that is passed an explicit color parameter will override this color.
+If another color scope is nested inside this one then that scope will override this color.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public CommandBuilder.ScopeColor WithColor(Color color)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Color</span></td>
+        <td><span class="parametername">color</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Drawing.CommandBuilder.ScopeColor.html">CommandBuilder.ScopeColor</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Drawing_CommandBuilder_WithDuration_" data-uid="Drawing.CommandBuilder.WithDuration*"></a>
+  <h4 id="Drawing_CommandBuilder_WithDuration_System_Single_" data-uid="Drawing.CommandBuilder.WithDuration(System.Single)">WithDuration(Single)</h4>
+  <div class="markdown level1 summary"><p>Scope to draw multiple things for a longer period of time.</p>
+<p>Normally drawn items will only be rendered for a single frame.
+Using a persist scope you can make the items be drawn for any amount of time.</p>
+<pre><code>void Update () {
+    using (Draw.WithDuration(1.0f)) {
+        var offset = Time.time;
+        Draw.Line(new Vector3(offset, 0, 0), new Vector3(offset, 0, 1));
+    }
+}</code></pre>
+<p>Warning: This is not recommended inside a DrawGizmos callback since DrawGizmos is called every frame anyway.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public CommandBuilder.ScopePersist WithDuration(float duration)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><span class="parametername">duration</span></td>
+        <td><p>How long the drawn items should persist in seconds.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Drawing.CommandBuilder.ScopePersist.html">CommandBuilder.ScopePersist</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Drawing_CommandBuilder_WithMatrix_" data-uid="Drawing.CommandBuilder.WithMatrix*"></a>
+  <h4 id="Drawing_CommandBuilder_WithMatrix_Matrix4x4_" data-uid="Drawing.CommandBuilder.WithMatrix(Matrix4x4)">WithMatrix(Matrix4x4)</h4>
+  <div class="markdown level1 summary"><p>Scope to draw multiple things with an implicit matrix transformation.
+All coordinates for items drawn inside the scope will be multiplied by the matrix.
+If WithMatrix scopes are nested then coordinates are multiplied by all nested matrices in order.</p>
+<pre><code>using (Draw.InLocalSpace(transform)) {
+    // Draw a box at (0,0,0) relative to the current object
+    // This means it will show up at the object&apos;s position
+    Draw.WireBox(Vector3.zero, Vector3.one);
+}
+
+// Equivalent code using the lower level WithMatrix scope
+using (Draw.WithMatrix(transform.localToWorldMatrix)) {
+    Draw.WireBox(Vector3.zero, Vector3.one);
+}</code></pre>
+<p>See: <a class="xref" href="Drawing.CommandBuilder.html#Drawing_CommandBuilder_InLocalSpace_Transform_">InLocalSpace(Transform)</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public CommandBuilder.ScopeMatrix WithMatrix(Matrix4x4 matrix)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Matrix4x4</span></td>
+        <td><span class="parametername">matrix</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Drawing.CommandBuilder.ScopeMatrix.html">CommandBuilder.ScopeMatrix</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <span class="xref">System.IDisposable</span>
+  </div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+  </body>
+</html>
