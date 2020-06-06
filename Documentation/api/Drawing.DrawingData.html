@@ -584,13 +584,13 @@ If false, it will only be rendered in the editor when gizmos are enabled.</p>
   
   
   <a id="Drawing_DrawingData_Render_" data-uid="Drawing.DrawingData.Render*"></a>
-  <h4 id="Drawing_DrawingData_Render_Camera_System_Boolean_CommandBuffer_" data-uid="Drawing.DrawingData.Render(Camera,System.Boolean,CommandBuffer)">Render(Camera, Boolean, CommandBuffer)</h4>
-  <div class="markdown level1 summary"><p>Call after all <a class="xref" href="Drawing.DrawingData.html#Drawing_DrawingData_Draw_Drawing_DrawingData_Hasher_">Draw(DrawingData.Hasher)</a> commands for the frame have been done to draw everything</p>
+  <h4 id="Drawing_DrawingData_Render_Camera_System_Boolean_CommandBuffer_System_Boolean_" data-uid="Drawing.DrawingData.Render(Camera,System.Boolean,CommandBuffer,System.Boolean)">Render(Camera, Boolean, CommandBuffer, Boolean)</h4>
+  <div class="markdown level1 summary"><p>Call after all <a class="xref" href="Drawing.DrawingData.html#Drawing_DrawingData_Draw_Drawing_DrawingData_Hasher_">Draw(DrawingData.Hasher)</a> commands for the frame have been done to draw everything.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void Render(Camera cam, bool allowGizmos, CommandBuffer commandBuffer)</code></pre>
+    <pre><code class="lang-csharp hljs">public void Render(Camera cam, bool allowGizmos, CommandBuffer commandBuffer, bool allowCameraDefault)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -616,6 +616,12 @@ If false, it will only be rendered in the editor when gizmos are enabled.</p>
         <td><span class="xref">CommandBuffer</span></td>
         <td><span class="parametername">commandBuffer</span></td>
         <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">allowCameraDefault</span></td>
+        <td><p>Indicates if built-in command builders and custom ones without a custom CommandBuilder.cameraTargets should render to this camera.</p>
+</td>
       </tr>
     </tbody>
   </table>

@@ -81,7 +81,7 @@ using (var draw = DrawingManager.GetBuilder()) {
     // Use the exact same API as the global Draw class
     draw.WireBox(Vector3.zero, Vector3.one);
 }</code></pre>
-<p>Warning: You must call either Dipose or DiscardAndDispose when you are done with this object to avoid memory leaks.</p>
+<p>Warning: You must call either <see cref="!:Dipose"></see> or <a class="xref" href="Drawing.CommandBuilder.html#Drawing_CommandBuilder_DiscardAndDispose">DiscardAndDispose()</a> when you are done with this object to avoid memory leaks.</p>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div classs="implements">
@@ -115,6 +115,45 @@ using (var draw = DrawingManager.GetBuilder()) {
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public struct CommandBuilder : IDisposable</code></pre>
   </div>
+  <h3 id="properties">Properties
+  </h3>
+  
+  
+  <a id="Drawing_CommandBuilder_cameraTargets_" data-uid="Drawing.CommandBuilder.cameraTargets*"></a>
+  <h4 id="Drawing_CommandBuilder_cameraTargets" data-uid="Drawing.CommandBuilder.cameraTargets">cameraTargets</h4>
+  <div class="markdown level1 summary"><p>Can be set to render specifically to these cameras.
+If you set this property to an array of cameras then this command builder will only be rendered
+to the specified cameras. Setting this property bypasses <a class="xref" href="Drawing.DrawingManager.html#Drawing_DrawingManager_allowRenderToRenderTextures">allowRenderToRenderTextures</a>.
+The camera will be rendered to even if it renders to a render texture.</p>
+<p>A null value indicates that all valid cameras should be rendered to. This is the default value.</p>
+<pre><code>var draw = DrawingManager.GetBuilder(true);
+
+draw.cameraTargets = new Camera[] { myCamera };
+// This sphere will only be rendered to myCamera
+draw.WireSphere(Vector3.zero, 0.5f, Color.black);
+draw.Dispose();</code></pre>
+<p>See: advanced (view in online documentation for working links)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Camera[] cameraTargets { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Camera</span>[]</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   <h3 id="methods">Methods
   </h3>
   
@@ -191,7 +230,8 @@ See: <a class="xref" href="Drawing.CommandBuilder.html#Drawing_CommandBuilder_Ar
       <tr>
         <td><span class="xref">Color</span></td>
         <td><span class="parametername">color</span></td>
-        <td></td>
+        <td><p>Color of the object</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -289,7 +329,8 @@ See: <a class="xref" href="Drawing.CommandBuilder.html#Drawing_CommandBuilder_Ar
       <tr>
         <td><span class="xref">Color</span></td>
         <td><span class="parametername">color</span></td>
-        <td></td>
+        <td><p>Color of the object</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -388,7 +429,8 @@ See: <a class="xref" href="Drawing.CommandBuilder.html#Drawing_CommandBuilder_Ar
       <tr>
         <td><span class="xref">Color</span></td>
         <td><span class="parametername">color</span></td>
-        <td></td>
+        <td><p>Color of the object</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -476,7 +518,8 @@ See: <a class="xref" href="Drawing.CommandBuilder.html#Drawing_CommandBuilder_Ar
       <tr>
         <td><span class="xref">Color</span></td>
         <td><span class="parametername">color</span></td>
-        <td></td>
+        <td><p>Color of the object</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -519,7 +562,8 @@ See: <a class="xref" href="Drawing.CommandBuilder.html#Drawing_CommandBuilder_Ar
       <tr>
         <td><span class="xref">Color</span></td>
         <td><span class="parametername">color</span></td>
-        <td></td>
+        <td><p>Color of the object</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -618,7 +662,8 @@ See: <a class="xref" href="Drawing.CommandBuilder.html#Drawing_CommandBuilder_Ar
       <tr>
         <td><span class="xref">Color</span></td>
         <td><span class="parametername">color</span></td>
-        <td></td>
+        <td><p>Color of the object</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -716,7 +761,8 @@ See: <a class="xref" href="Drawing.CommandBuilder.html#Drawing_CommandBuilder_Ar
       <tr>
         <td><span class="xref">Color</span></td>
         <td><span class="parametername">color</span></td>
-        <td></td>
+        <td><p>Color of the object</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -815,7 +861,8 @@ See: <a class="xref" href="Drawing.CommandBuilder.html#Drawing_CommandBuilder_Ar
       <tr>
         <td><span class="xref">Color</span></td>
         <td><span class="parametername">color</span></td>
-        <td></td>
+        <td><p>Color of the object</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -905,7 +952,8 @@ See: <a class="xref" href="Drawing.CommandBuilder.html#Drawing_CommandBuilder_Ar
       <tr>
         <td><span class="xref">Color</span></td>
         <td><span class="parametername">color</span></td>
-        <td></td>
+        <td><p>Color of the object</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -1092,7 +1140,8 @@ See: <a class="xref" href="Drawing.CommandBuilder.html#Drawing_CommandBuilder_Ca
       <tr>
         <td><span class="xref">Color</span></td>
         <td><span class="parametername">color</span></td>
-        <td></td>
+        <td><p>Color of the object</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -1189,7 +1238,8 @@ See: <a class="xref" href="Drawing.CommandBuilder.html#Drawing_CommandBuilder_Ca
       <tr>
         <td><span class="xref">Color</span></td>
         <td><span class="parametername">color</span></td>
-        <td></td>
+        <td><p>Color of the object</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -1227,7 +1277,8 @@ See: <a class="xref" href="Drawing.CommandBuilder.html#Drawing_CommandBuilder_Ca
       <tr>
         <td><span class="xref">Color</span></td>
         <td><span class="parametername">color</span></td>
-        <td></td>
+        <td><p>Color of the object</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -1324,7 +1375,8 @@ See: <a class="xref" href="Drawing.CommandBuilder.html#Drawing_CommandBuilder_Ca
       <tr>
         <td><span class="xref">Color</span></td>
         <td><span class="parametername">color</span></td>
-        <td></td>
+        <td><p>Color of the object</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -1864,7 +1916,8 @@ See: <a class="xref" href="Drawing.CommandBuilder.html#Drawing_CommandBuilder_Wi
       <tr>
         <td><span class="xref">Color</span></td>
         <td><span class="parametername">color</span></td>
-        <td></td>
+        <td><p>Color of the object</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -1953,7 +2006,8 @@ See: <a class="xref" href="Drawing.CommandBuilder.html#Drawing_CommandBuilder_Wi
       <tr>
         <td><span class="xref">Color</span></td>
         <td><span class="parametername">color</span></td>
-        <td></td>
+        <td><p>Color of the object</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -2052,7 +2106,8 @@ See: <a class="xref" href="Drawing.CommandBuilder.html#Drawing_CommandBuilder_Wi
       <tr>
         <td><span class="xref">Color</span></td>
         <td><span class="parametername">color</span></td>
-        <td></td>
+        <td><p>Color of the object</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -2239,7 +2294,8 @@ See: <a class="xref" href="Drawing.CommandBuilder.html#Drawing_CommandBuilder_Wi
       <tr>
         <td><span class="xref">Color</span></td>
         <td><span class="parametername">color</span></td>
-        <td></td>
+        <td><p>Color of the object</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -2315,7 +2371,8 @@ Draw.Polyline(new [] { new Vector3(0, 0, 0), new Vector3(1, 0, 0), new Vector3(1
       <tr>
         <td><span class="xref">Color</span></td>
         <td><span class="parametername">color</span></td>
-        <td></td>
+        <td><p>Color of the object</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -2562,7 +2619,8 @@ Draw.Polyline(new [] { new Vector3(0, 0, 0), new Vector3(1, 0, 0), new Vector3(1
       <tr>
         <td><span class="xref">Color</span></td>
         <td><span class="parametername">color</span></td>
-        <td></td>
+        <td><p>Color of the object</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -2638,7 +2696,8 @@ Draw.Polyline(new [] { new Vector3(0, 0, 0), new Vector3(1, 0, 0), new Vector3(1
       <tr>
         <td><span class="xref">Color</span></td>
         <td><span class="parametername">color</span></td>
-        <td></td>
+        <td><p>Color of the object</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -3025,7 +3084,8 @@ The ray will end at origin + direction.</p>
       <tr>
         <td><span class="xref">Color</span></td>
         <td><span class="parametername">color</span></td>
-        <td></td>
+        <td><p>Color of the object</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -3099,7 +3159,8 @@ The ray will end at origin + direction.</p>
       <tr>
         <td><span class="xref">Color</span></td>
         <td><span class="parametername">color</span></td>
-        <td></td>
+        <td><p>Color of the object</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -3179,6 +3240,67 @@ The ray will end at origin + direction.</p>
       <tr>
         <td><span class="xref">float3</span></td>
         <td><span class="parametername">size</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">Color</span></td>
+        <td><span class="parametername">color</span></td>
+        <td><p>Color of the object</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Drawing_CommandBuilder_SolidMesh_" data-uid="Drawing.CommandBuilder.SolidMesh*"></a>
+  <h4 id="Drawing_CommandBuilder_SolidMesh_Mesh_" data-uid="Drawing.CommandBuilder.SolidMesh(Mesh)">SolidMesh(Mesh)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SolidMesh(Mesh mesh)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Mesh</span></td>
+        <td><span class="parametername">mesh</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Drawing_CommandBuilder_SolidMesh_" data-uid="Drawing.CommandBuilder.SolidMesh*"></a>
+  <h4 id="Drawing_CommandBuilder_SolidMesh_Mesh_Color_" data-uid="Drawing.CommandBuilder.SolidMesh(Mesh,Color)">SolidMesh(Mesh, Color)</h4>
+  <div class="markdown level1 summary"><p>\copydoc SolidMesh(Mesh)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SolidMesh(Mesh mesh, Color color)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Mesh</span></td>
+        <td><span class="parametername">mesh</span></td>
         <td></td>
       </tr>
       <tr>
@@ -3410,7 +3532,8 @@ TODO: Are matrices handled?</p>
       <tr>
         <td><span class="xref">Color</span></td>
         <td><span class="parametername">color</span></td>
-        <td></td>
+        <td><p>Color of the object</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -3495,7 +3618,8 @@ TODO: Are matrices handled?</p>
       <tr>
         <td><span class="xref">Color</span></td>
         <td><span class="parametername">color</span></td>
-        <td></td>
+        <td><p>Color of the object</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -3678,7 +3802,8 @@ Draw.WireCapsule(Vector3.zero, Vector3.one, 0.5f, Color.black);</code></pre>
       <tr>
         <td><span class="xref">Color</span></td>
         <td><span class="parametername">color</span></td>
-        <td></td>
+        <td><p>Color of the object</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -3956,7 +4081,8 @@ Draw.WireCylinder(Vector3.zero, Vector3.up, 2, 0.5f, Color.black);</code></pre>
       <tr>
         <td><span class="xref">Color</span></td>
         <td><span class="parametername">color</span></td>
-        <td></td>
+        <td><p>Color of the object</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -4038,6 +4164,67 @@ Draw.WireCylinder(Vector3.zero, Vector3.up, 2, 0.5f, Color.black);</code></pre>
       <tr>
         <td><span class="xref">System.Single</span></td>
         <td><span class="parametername">radius</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">Color</span></td>
+        <td><span class="parametername">color</span></td>
+        <td><p>Color of the object</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Drawing_CommandBuilder_WireMesh_" data-uid="Drawing.CommandBuilder.WireMesh*"></a>
+  <h4 id="Drawing_CommandBuilder_WireMesh_Mesh_" data-uid="Drawing.CommandBuilder.WireMesh(Mesh)">WireMesh(Mesh)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void WireMesh(Mesh mesh)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Mesh</span></td>
+        <td><span class="parametername">mesh</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Drawing_CommandBuilder_WireMesh_" data-uid="Drawing.CommandBuilder.WireMesh*"></a>
+  <h4 id="Drawing_CommandBuilder_WireMesh_Mesh_Color_" data-uid="Drawing.CommandBuilder.WireMesh(Mesh,Color)">WireMesh(Mesh, Color)</h4>
+  <div class="markdown level1 summary"><p>\copydoc WireMesh(Mesh)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void WireMesh(Mesh mesh, Color color)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Mesh</span></td>
+        <td><span class="parametername">mesh</span></td>
         <td></td>
       </tr>
       <tr>
@@ -4130,7 +4317,8 @@ Draw.WireCylinder(Vector3.zero, Vector3.up, 2, 0.5f, Color.black);</code></pre>
       <tr>
         <td><span class="xref">Color</span></td>
         <td><span class="parametername">color</span></td>
-        <td></td>
+        <td><p>Color of the object</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -4233,7 +4421,8 @@ See: <a class="xref" href="Drawing.CommandBuilder.html#Drawing_CommandBuilder_Wi
       <tr>
         <td><span class="xref">Color</span></td>
         <td><span class="parametername">color</span></td>
-        <td></td>
+        <td><p>Color of the object</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -4625,7 +4814,8 @@ See: <a class="xref" href="Drawing.CommandBuilder.html#Drawing_CommandBuilder_Wi
       <tr>
         <td><span class="xref">Color</span></td>
         <td><span class="parametername">color</span></td>
-        <td></td>
+        <td><p>Color of the object</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -4713,7 +4903,8 @@ See: <a class="xref" href="Drawing.CommandBuilder.html#Drawing_CommandBuilder_Wi
       <tr>
         <td><span class="xref">Color</span></td>
         <td><span class="parametername">color</span></td>
-        <td></td>
+        <td><p>Color of the object</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -4781,7 +4972,8 @@ Using a persist scope you can make the items be drawn for any amount of time.</p
         Draw.Line(new Vector3(offset, 0, 0), new Vector3(offset, 0, 1));
     }
 }</code></pre>
-<p>Warning: This is not recommended inside a DrawGizmos callback since DrawGizmos is called every frame anyway.</p>
+<p>Note: Outside of play mode the duration is measured against Unity's Time.realtimeSinceStartup.</p>
+<p>Warning: It is recommended not to use this inside a DrawGizmos callback since DrawGizmos is called every frame anyway.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
