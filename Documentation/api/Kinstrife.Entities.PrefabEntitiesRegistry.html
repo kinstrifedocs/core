@@ -83,12 +83,13 @@
   <div classs="implements">
     <h5>Implements</h5>
     <div><span class="xref">IConvertGameObjectToEntity</span></div>
+    <div><span class="xref">IDeclareReferencedPrefabs</span></div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Kinstrife.Entities.html">Kinstrife.Entities</a></h6>
   <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
   <h5 id="Kinstrife_Entities_PrefabEntitiesRegistry_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class PrefabEntitiesRegistry : MonoBehaviour, IConvertGameObjectToEntity</code></pre>
+    <pre><code class="lang-csharp hljs">public class PrefabEntitiesRegistry : MonoBehaviour, IConvertGameObjectToEntity, IDeclareReferencedPrefabs</code></pre>
   </div>
   <h3 id="fields">Fields
   </h3>
@@ -291,13 +292,40 @@
   </table>
   
   
-  <a id="Kinstrife_Entities_PrefabEntitiesRegistry_GetOrInstantiateEntity_" data-uid="Kinstrife.Entities.PrefabEntitiesRegistry.GetOrInstantiateEntity*"></a>
-  <h4 id="Kinstrife_Entities_PrefabEntitiesRegistry_GetOrInstantiateEntity_System_Object_GameObject_" data-uid="Kinstrife.Entities.PrefabEntitiesRegistry.GetOrInstantiateEntity(System.Object,GameObject)">GetOrInstantiateEntity(Object, GameObject)</h4>
+  <a id="Kinstrife_Entities_PrefabEntitiesRegistry_DeclareReferencedPrefabs_" data-uid="Kinstrife.Entities.PrefabEntitiesRegistry.DeclareReferencedPrefabs*"></a>
+  <h4 id="Kinstrife_Entities_PrefabEntitiesRegistry_DeclareReferencedPrefabs_System_Collections_Generic_List_GameObject__" data-uid="Kinstrife.Entities.PrefabEntitiesRegistry.DeclareReferencedPrefabs(System.Collections.Generic.List{GameObject})">DeclareReferencedPrefabs(List&lt;GameObject&gt;)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static Entity GetOrInstantiateEntity(object key, GameObject value)</code></pre>
+    <pre><code class="lang-csharp hljs">public void DeclareReferencedPrefabs(List&lt;GameObject&gt; referencedPrefabs)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.List</span>&lt;<span class="xref">GameObject</span>&gt;</td>
+        <td><span class="parametername">referencedPrefabs</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Kinstrife_Entities_PrefabEntitiesRegistry_GetOrInstantiatePrefabEntity_" data-uid="Kinstrife.Entities.PrefabEntitiesRegistry.GetOrInstantiatePrefabEntity*"></a>
+  <h4 id="Kinstrife_Entities_PrefabEntitiesRegistry_GetOrInstantiatePrefabEntity_System_Object_GameObject_" data-uid="Kinstrife.Entities.PrefabEntitiesRegistry.GetOrInstantiatePrefabEntity(System.Object,GameObject)">GetOrInstantiatePrefabEntity(Object, GameObject)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Entity GetOrInstantiatePrefabEntity(object key, GameObject value)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -423,6 +451,9 @@
   <h3 id="implements">Implements</h3>
   <div>
       <span class="xref">IConvertGameObjectToEntity</span>
+  </div>
+  <div>
+      <span class="xref">IDeclareReferencedPrefabs</span>
   </div>
 </article>
           </div>

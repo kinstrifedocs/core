@@ -78,7 +78,7 @@
   <div classs="implements">
     <h5>Implements</h5>
     <div><span class="xref">IBufferElementData</span></div>
-    <div><a class="xref" href="Kinstrife.Action.IActionStatusFlags.html">IActionStatusFlags</a></div>
+    <div><a class="xref" href="Kinstrife.Action.IActionStatusHooks.html">IActionStatusHooks</a></div>
   </div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
@@ -105,7 +105,7 @@
   <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
   <h5 id="Kinstrife_Action_Components_ActionState_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public struct ActionState : IBufferElementData, IActionStatusFlags</code></pre>
+    <pre><code class="lang-csharp hljs">public struct ActionState : IBufferElementData, IActionStatusHooks</code></pre>
   </div>
   <h3 id="fields">Fields
   </h3>
@@ -183,12 +183,12 @@
   </table>
   
   
-  <h4 id="Kinstrife_Action_Components_ActionState_MaxDuration" data-uid="Kinstrife.Action.Components.ActionState.MaxDuration">MaxDuration</h4>
+  <h4 id="Kinstrife_Action_Components_ActionState_StateIDHash" data-uid="Kinstrife.Action.Components.ActionState.StateIDHash">StateIDHash</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public float MaxDuration</code></pre>
+    <pre><code class="lang-csharp hljs">public int StateIDHash</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -200,43 +200,19 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Single</span></td>
+        <td><span class="xref">System.Int32</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   
   
-  <h4 id="Kinstrife_Action_Components_ActionState_MinDuration" data-uid="Kinstrife.Action.Components.ActionState.MinDuration">MinDuration</h4>
+  <h4 id="Kinstrife_Action_Components_ActionState_StatusHook" data-uid="Kinstrife.Action.Components.ActionState.StatusHook">StatusHook</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public float MinDuration</code></pre>
-  </div>
-  <h5 class="fieldValue">Field Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Single</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <h4 id="Kinstrife_Action_Components_ActionState_Status" data-uid="Kinstrife.Action.Components.ActionState.Status">Status</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public ActionStatus Status</code></pre>
+    <pre><code class="lang-csharp hljs">public ActionStatus StatusHook</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -274,6 +250,30 @@
     <tbody>
       <tr>
         <td><span class="xref">System.Single</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="Kinstrife_Action_Components_ActionState_TransitionMode" data-uid="Kinstrife.Action.Components.ActionState.TransitionMode">TransitionMode</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TransitionMode TransitionMode</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Kinstrife.Action.Graph.TransitionMode.html">TransitionMode</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -410,13 +410,13 @@
   </h3>
   
   
-  <a id="Kinstrife_Action_Components_ActionState_Add_" data-uid="Kinstrife.Action.Components.ActionState.Add*"></a>
-  <h4 id="Kinstrife_Action_Components_ActionState_Add_Kinstrife_Action_ActionStatus_" data-uid="Kinstrife.Action.Components.ActionState.Add(Kinstrife.Action.ActionStatus)">Add(ActionStatus)</h4>
+  <a id="Kinstrife_Action_Components_ActionState_AddHook_" data-uid="Kinstrife.Action.Components.ActionState.AddHook*"></a>
+  <h4 id="Kinstrife_Action_Components_ActionState_AddHook_Kinstrife_Action_ActionStatus_" data-uid="Kinstrife.Action.Components.ActionState.AddHook(Kinstrife.Action.ActionStatus)">AddHook(ActionStatus)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void Add(ActionStatus status)</code></pre>
+    <pre><code class="lang-csharp hljs">public void AddHook(ActionStatus status)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -437,55 +437,13 @@
   </table>
   
   
-  <a id="Kinstrife_Action_Components_ActionState_Has_" data-uid="Kinstrife.Action.Components.ActionState.Has*"></a>
-  <h4 id="Kinstrife_Action_Components_ActionState_Has_Kinstrife_Action_ActionStatus_" data-uid="Kinstrife.Action.Components.ActionState.Has(Kinstrife.Action.ActionStatus)">Has(ActionStatus)</h4>
+  <a id="Kinstrife_Action_Components_ActionState_HasHook_" data-uid="Kinstrife.Action.Components.ActionState.HasHook*"></a>
+  <h4 id="Kinstrife_Action_Components_ActionState_HasHook_Kinstrife_Action_ActionStatus_" data-uid="Kinstrife.Action.Components.ActionState.HasHook(Kinstrife.Action.ActionStatus)">HasHook(ActionStatus)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public bool Has(ActionStatus status)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Kinstrife.Action.ActionStatus.html">ActionStatus</a></td>
-        <td><span class="parametername">status</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Boolean</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="Kinstrife_Action_Components_ActionState_Is_" data-uid="Kinstrife.Action.Components.ActionState.Is*"></a>
-  <h4 id="Kinstrife_Action_Components_ActionState_Is_Kinstrife_Action_ActionStatus_" data-uid="Kinstrife.Action.Components.ActionState.Is(Kinstrife.Action.ActionStatus)">Is(ActionStatus)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public bool Is(ActionStatus status)</code></pre>
+    <pre><code class="lang-csharp hljs">public bool HasHook(ActionStatus status)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -521,13 +479,55 @@
   </table>
   
   
-  <a id="Kinstrife_Action_Components_ActionState_Remove_" data-uid="Kinstrife.Action.Components.ActionState.Remove*"></a>
-  <h4 id="Kinstrife_Action_Components_ActionState_Remove_Kinstrife_Action_ActionStatus_" data-uid="Kinstrife.Action.Components.ActionState.Remove(Kinstrife.Action.ActionStatus)">Remove(ActionStatus)</h4>
+  <a id="Kinstrife_Action_Components_ActionState_IsHook_" data-uid="Kinstrife.Action.Components.ActionState.IsHook*"></a>
+  <h4 id="Kinstrife_Action_Components_ActionState_IsHook_Kinstrife_Action_ActionStatus_" data-uid="Kinstrife.Action.Components.ActionState.IsHook(Kinstrife.Action.ActionStatus)">IsHook(ActionStatus)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void Remove(ActionStatus status)</code></pre>
+    <pre><code class="lang-csharp hljs">public bool IsHook(ActionStatus status)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Kinstrife.Action.ActionStatus.html">ActionStatus</a></td>
+        <td><span class="parametername">status</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Kinstrife_Action_Components_ActionState_RemoveHook_" data-uid="Kinstrife.Action.Components.ActionState.RemoveHook*"></a>
+  <h4 id="Kinstrife_Action_Components_ActionState_RemoveHook_Kinstrife_Action_ActionStatus_" data-uid="Kinstrife.Action.Components.ActionState.RemoveHook(Kinstrife.Action.ActionStatus)">RemoveHook(ActionStatus)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void RemoveHook(ActionStatus status)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -601,7 +601,7 @@
       <span class="xref">IBufferElementData</span>
   </div>
   <div>
-      <a class="xref" href="Kinstrife.Action.IActionStatusFlags.html">IActionStatusFlags</a>
+      <a class="xref" href="Kinstrife.Action.IActionStatusHooks.html">IActionStatusHooks</a>
   </div>
 </article>
           </div>

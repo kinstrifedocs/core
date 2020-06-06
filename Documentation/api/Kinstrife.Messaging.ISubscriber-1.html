@@ -77,12 +77,6 @@
 IMPORTANT NOTE: OnNewMessage is not guaranteed to be called from the main-thread unless specified otherwise.</p>
 </div>
   <div class="markdown level0 conceptual"></div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
-    <div>
-      <span class="xref">System.IDisposable.Dispose()</span>
-    </div>
-  </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Kinstrife.Messaging.html">Kinstrife.Messaging</a></h6>
   <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
   <h5 id="Kinstrife_Messaging_ISubscriber_1_syntax">Syntax</h5>
@@ -178,7 +172,7 @@ IMPORTANT NOTE: OnNewMessage is not guaranteed to be called from the main-thread
   
   
   <a id="Kinstrife_Messaging_ISubscriber_1_TryInitialize_" data-uid="Kinstrife.Messaging.ISubscriber`1.TryInitialize*"></a>
-  <h4 id="Kinstrife_Messaging_ISubscriber_1_TryInitialize_Kinstrife_Messaging_ChannelDescriptor_System_Action__0__" data-uid="Kinstrife.Messaging.ISubscriber`1.TryInitialize(Kinstrife.Messaging.ChannelDescriptor,System.Action{`0})">TryInitialize(ChannelDescriptor, Action&lt;T&gt;)</h4>
+  <h4 id="Kinstrife_Messaging_ISubscriber_1_TryInitialize_Kinstrife_Messaging_ChannelDescriptor_Kinstrife_Action__0__" data-uid="Kinstrife.Messaging.ISubscriber`1.TryInitialize(Kinstrife.Messaging.ChannelDescriptor,Kinstrife.Action{`0})">TryInitialize(ChannelDescriptor, Action&lt;T&gt;)</h4>
   <div class="markdown level1 summary"><p>Try registering callback to channel whenever a new message has been received. Make sure to use a multithreading
 transport layer/channel when attempting to use this in a multi-threaded setting! (callback may be called from a
 different thread if publisher and subscriber work in different threads)</p>
@@ -204,7 +198,7 @@ different thread if publisher and subscriber work in different threads)</p>
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">System.Action</span>&lt;T&gt;</td>
+        <td><span class="xref">Kinstrife.Action</span>&lt;T&gt;</td>
         <td><span class="parametername">onReceiveCallback</span></td>
         <td></td>
       </tr>

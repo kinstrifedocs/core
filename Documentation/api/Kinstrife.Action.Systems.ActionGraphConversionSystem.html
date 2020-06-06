@@ -183,13 +183,12 @@
   
   
   <a id="Kinstrife_Action_Systems_ActionGraphConversionSystem_CreateActionEntity_" data-uid="Kinstrife.Action.Systems.ActionGraphConversionSystem.CreateActionEntity*"></a>
-  <h4 id="Kinstrife_Action_Systems_ActionGraphConversionSystem_CreateActionEntity__1_EntityManager_Entity_Kinstrife_Action_Graph_ActionGraph_" data-uid="Kinstrife.Action.Systems.ActionGraphConversionSystem.CreateActionEntity``1(EntityManager,Entity,Kinstrife.Action.Graph.ActionGraph)">CreateActionEntity&lt;T&gt;(EntityManager, Entity, ActionGraph)</h4>
+  <h4 id="Kinstrife_Action_Systems_ActionGraphConversionSystem_CreateActionEntity_Kinstrife_Action_IActionComponentData_EntityManager_Entity_Kinstrife_Action_Graph_ActionGraph_" data-uid="Kinstrife.Action.Systems.ActionGraphConversionSystem.CreateActionEntity(Kinstrife.Action.IActionComponentData,EntityManager,Entity,Kinstrife.Action.Graph.ActionGraph)">CreateActionEntity(IActionComponentData, EntityManager, Entity, ActionGraph)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static Entity CreateActionEntity&lt;T&gt;(EntityManager entityManager, Entity owner, ActionGraph graph)
-    where T : struct, IActionComponentData</code></pre>
+    <pre><code class="lang-csharp hljs">public static Entity CreateActionEntity(IActionComponentData actionComponentData, EntityManager entityManager, Entity owner, ActionGraph graph)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -201,6 +200,11 @@
       </tr>
     </thead>
     <tbody>
+      <tr>
+        <td><a class="xref" href="Kinstrife.Action.IActionComponentData.html">IActionComponentData</a></td>
+        <td><span class="parametername">actionComponentData</span></td>
+        <td></td>
+      </tr>
       <tr>
         <td><span class="xref">EntityManager</span></td>
         <td><span class="parametername">entityManager</span></td>
@@ -233,31 +237,15 @@
       </tr>
     </tbody>
   </table>
-  <h5 class="typeParameters">Type Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="parametername">T</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
   
   
   <a id="Kinstrife_Action_Systems_ActionGraphConversionSystem_InstantiateActionEntity_" data-uid="Kinstrife.Action.Systems.ActionGraphConversionSystem.InstantiateActionEntity*"></a>
-  <h4 id="Kinstrife_Action_Systems_ActionGraphConversionSystem_InstantiateActionEntity__1_EntityManager_Kinstrife_Action_ActionOwnerData_Entity_Kinstrife_Action_Graph_ActionGraph_" data-uid="Kinstrife.Action.Systems.ActionGraphConversionSystem.InstantiateActionEntity``1(EntityManager,Kinstrife.Action.ActionOwnerData,Entity,Kinstrife.Action.Graph.ActionGraph)">InstantiateActionEntity&lt;T&gt;(EntityManager, ActionOwnerData, Entity, ActionGraph)</h4>
+  <h4 id="Kinstrife_Action_Systems_ActionGraphConversionSystem_InstantiateActionEntity_EntityManager_Kinstrife_Action_ActionOwnerData_Entity_Kinstrife_Action_Graph_ActionGraph_System_Boolean_" data-uid="Kinstrife.Action.Systems.ActionGraphConversionSystem.InstantiateActionEntity(EntityManager,Kinstrife.Action.ActionOwnerData,Entity,Kinstrife.Action.Graph.ActionGraph,System.Boolean)">InstantiateActionEntity(EntityManager, ActionOwnerData, Entity, ActionGraph, Boolean)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static Entity InstantiateActionEntity&lt;T&gt;(EntityManager entityManager, ActionOwnerData ownerData, Entity ownerEntity, ActionGraph graph)
-    where T : struct, IActionComponentData</code></pre>
+    <pre><code class="lang-csharp hljs">public static Entity InstantiateActionEntity(EntityManager entityManager, ActionOwnerData ownerData, Entity ownerEntity, ActionGraph graph, bool isPrefab)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -289,6 +277,11 @@
         <td><span class="parametername">graph</span></td>
         <td></td>
       </tr>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">isPrefab</span></td>
+        <td></td>
+      </tr>
     </tbody>
   </table>
   <h5 class="returns">Returns</h5>
@@ -302,21 +295,6 @@
     <tbody>
       <tr>
         <td><span class="xref">Entity</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="typeParameters">Type Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="parametername">T</span></td>
         <td></td>
       </tr>
     </tbody>

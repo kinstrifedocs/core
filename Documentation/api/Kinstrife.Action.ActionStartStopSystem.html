@@ -95,6 +95,9 @@
     <div>
       <a class="xref" href="Kinstrife.Entities.Systems.JobComponentSystemBase.html#Kinstrife_Entities_Systems_JobComponentSystemBase_OnCreate">JobComponentSystemBase.OnCreate()</a>
     </div>
+    <div>
+      <a class="xref" href="Kinstrife.Entities.Systems.JobComponentSystemBase.html#Kinstrife_Entities_Systems_JobComponentSystemBase_Count__1">JobComponentSystemBase.Count&lt;T&gt;()</a>
+    </div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Kinstrife.Action.html">Kinstrife.Action</a></h6>
   <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
@@ -104,6 +107,100 @@
   </div>
   <h3 id="methods">Methods
   </h3>
+  
+  
+  <a id="Kinstrife_Action_ActionStartStopSystem_FindActionEntity_" data-uid="Kinstrife.Action.ActionStartStopSystem.FindActionEntity*"></a>
+  <h4 id="Kinstrife_Action_ActionStartStopSystem_FindActionEntity_Entity_System_Int32_" data-uid="Kinstrife.Action.ActionStartStopSystem.FindActionEntity(Entity,System.Int32)">FindActionEntity(Entity, Int32)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Entity FindActionEntity(Entity e, int actionID)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Entity</span></td>
+        <td><span class="parametername">e</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">actionID</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Entity</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Kinstrife_Action_ActionStartStopSystem_InternalTryStart_" data-uid="Kinstrife.Action.ActionStartStopSystem.InternalTryStart*"></a>
+  <h4 id="Kinstrife_Action_ActionStartStopSystem_InternalTryStart_Kinstrife_Action_Components_Action__Kinstrife_Action_Components_ActionInputParams__" data-uid="Kinstrife.Action.ActionStartStopSystem.InternalTryStart(Kinstrife.Action.Components.Action@,Kinstrife.Action.Components.ActionInputParams@)">InternalTryStart(ref Action, ActionInputParams)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool InternalTryStart(ref Action action, in ActionInputParams inputParams)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Kinstrife.Action.Components.Action.html">Action</a></td>
+        <td><span class="parametername">action</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Kinstrife.Action.Components.ActionInputParams.html">ActionInputParams</a></td>
+        <td><span class="parametername">inputParams</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   
   
   <a id="Kinstrife_Action_ActionStartStopSystem_OnUpdate_" data-uid="Kinstrife.Action.ActionStartStopSystem.OnUpdate*"></a>
@@ -149,12 +246,12 @@
   
   
   <a id="Kinstrife_Action_ActionStartStopSystem_TryStart_" data-uid="Kinstrife.Action.ActionStartStopSystem.TryStart*"></a>
-  <h4 id="Kinstrife_Action_ActionStartStopSystem_TryStart_Entity_ComponentDataFromEntity_Kinstrife_Action_Action___BufferFromEntity_Kinstrife_Action_Components_ActionState___" data-uid="Kinstrife.Action.ActionStartStopSystem.TryStart(Entity,ComponentDataFromEntity{Kinstrife.Action.Action}@,BufferFromEntity{Kinstrife.Action.Components.ActionState}@)">TryStart(Entity, ref ComponentDataFromEntity&lt;Action&gt;, ref BufferFromEntity&lt;ActionState&gt;)</h4>
+  <h4 id="Kinstrife_Action_ActionStartStopSystem_TryStart_Entity_ComponentDataFromEntity_Kinstrife_Action_Components_Action___" data-uid="Kinstrife.Action.ActionStartStopSystem.TryStart(Entity,ComponentDataFromEntity{Kinstrife.Action.Components.Action}@)">TryStart(Entity, ref ComponentDataFromEntity&lt;Action&gt;)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static void TryStart(Entity actionEntity, ref ComponentDataFromEntity&lt;Action&gt; actionFromEntity, ref BufferFromEntity&lt;ActionState&gt; statesFromEntity)</code></pre>
+    <pre><code class="lang-csharp hljs">public static bool TryStart(Entity actionEntity, ref ComponentDataFromEntity&lt;Action&gt; actionFromEntity)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -172,13 +269,23 @@
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">ComponentDataFromEntity</span>&lt;<a class="xref" href="Kinstrife.Action.Action.html">Action</a>&gt;</td>
+        <td><span class="xref">ComponentDataFromEntity</span>&lt;<a class="xref" href="Kinstrife.Action.Components.Action.html">Action</a>&gt;</td>
         <td><span class="parametername">actionFromEntity</span></td>
         <td></td>
       </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
       <tr>
-        <td><span class="xref">BufferFromEntity</span>&lt;<a class="xref" href="Kinstrife.Action.Components.ActionState.html">ActionState</a>&gt;</td>
-        <td><span class="parametername">statesFromEntity</span></td>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -186,12 +293,12 @@
   
   
   <a id="Kinstrife_Action_ActionStartStopSystem_TryStart_" data-uid="Kinstrife.Action.ActionStartStopSystem.TryStart*"></a>
-  <h4 id="Kinstrife_Action_ActionStartStopSystem_TryStart_Entity__Kinstrife_Action_Action__Kinstrife_Action_ActionInputStateParams__DynamicBuffer_Kinstrife_Action_Components_ActionState___" data-uid="Kinstrife.Action.ActionStartStopSystem.TryStart(Entity@,Kinstrife.Action.Action@,Kinstrife.Action.ActionInputStateParams@,DynamicBuffer{Kinstrife.Action.Components.ActionState}@)">TryStart(ref Entity, ref Action, ActionInputStateParams, ref DynamicBuffer&lt;ActionState&gt;)</h4>
+  <h4 id="Kinstrife_Action_ActionStartStopSystem_TryStart_Entity_System_Int32_" data-uid="Kinstrife.Action.ActionStartStopSystem.TryStart(Entity,System.Int32)">TryStart(Entity, Int32)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static bool TryStart(ref Entity e, ref Action action, in ActionInputStateParams stateInputParams, ref DynamicBuffer&lt;ActionState&gt; states)</code></pre>
+    <pre><code class="lang-csharp hljs">public bool TryStart(Entity owner, int actionID)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -205,22 +312,12 @@
     <tbody>
       <tr>
         <td><span class="xref">Entity</span></td>
-        <td><span class="parametername">e</span></td>
+        <td><span class="parametername">owner</span></td>
         <td></td>
       </tr>
       <tr>
-        <td><a class="xref" href="Kinstrife.Action.Action.html">Action</a></td>
-        <td><span class="parametername">action</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="Kinstrife.Action.ActionInputStateParams.html">ActionInputStateParams</a></td>
-        <td><span class="parametername">stateInputParams</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><span class="xref">DynamicBuffer</span>&lt;<a class="xref" href="Kinstrife.Action.Components.ActionState.html">ActionState</a>&gt;</td>
-        <td><span class="parametername">states</span></td>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">actionID</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -242,13 +339,45 @@
   </table>
   
   
-  <a id="Kinstrife_Action_ActionStartStopSystem_TryTerminate_" data-uid="Kinstrife.Action.ActionStartStopSystem.TryTerminate*"></a>
-  <h4 id="Kinstrife_Action_ActionStartStopSystem_TryTerminate_Entity_ComponentDataFromEntity_Kinstrife_Action_Action___BufferFromEntity_Kinstrife_Action_Components_ActionState___" data-uid="Kinstrife.Action.ActionStartStopSystem.TryTerminate(Entity,ComponentDataFromEntity{Kinstrife.Action.Action}@,BufferFromEntity{Kinstrife.Action.Components.ActionState}@)">TryTerminate(Entity, ref ComponentDataFromEntity&lt;Action&gt;, ref BufferFromEntity&lt;ActionState&gt;)</h4>
+  <a id="Kinstrife_Action_ActionStartStopSystem_TryStop_" data-uid="Kinstrife.Action.ActionStartStopSystem.TryStop*"></a>
+  <h4 id="Kinstrife_Action_ActionStartStopSystem_TryStop_Entity_System_Int32_" data-uid="Kinstrife.Action.ActionStartStopSystem.TryStop(Entity,System.Int32)">TryStop(Entity, Int32)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static void TryTerminate(Entity actionEntity, ref ComponentDataFromEntity&lt;Action&gt; actionFromEntity, ref BufferFromEntity&lt;ActionState&gt; statesFromEntity)</code></pre>
+    <pre><code class="lang-csharp hljs">public void TryStop(Entity owner, int actionID)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Entity</span></td>
+        <td><span class="parametername">owner</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">actionID</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Kinstrife_Action_ActionStartStopSystem_TryTerminate_" data-uid="Kinstrife.Action.ActionStartStopSystem.TryTerminate*"></a>
+  <h4 id="Kinstrife_Action_ActionStartStopSystem_TryTerminate_Entity_ComponentDataFromEntity_Kinstrife_Action_Components_Action___" data-uid="Kinstrife.Action.ActionStartStopSystem.TryTerminate(Entity,ComponentDataFromEntity{Kinstrife.Action.Components.Action}@)">TryTerminate(Entity, ref ComponentDataFromEntity&lt;Action&gt;)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void TryTerminate(Entity actionEntity, ref ComponentDataFromEntity&lt;Action&gt; actionFromEntity)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -266,13 +395,8 @@
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">ComponentDataFromEntity</span>&lt;<a class="xref" href="Kinstrife.Action.Action.html">Action</a>&gt;</td>
+        <td><span class="xref">ComponentDataFromEntity</span>&lt;<a class="xref" href="Kinstrife.Action.Components.Action.html">Action</a>&gt;</td>
         <td><span class="parametername">actionFromEntity</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><span class="xref">BufferFromEntity</span>&lt;<a class="xref" href="Kinstrife.Action.Components.ActionState.html">ActionState</a>&gt;</td>
-        <td><span class="parametername">statesFromEntity</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -280,12 +404,12 @@
   
   
   <a id="Kinstrife_Action_ActionStartStopSystem_TryTerminate_" data-uid="Kinstrife.Action.ActionStartStopSystem.TryTerminate*"></a>
-  <h4 id="Kinstrife_Action_ActionStartStopSystem_TryTerminate_Entity__Kinstrife_Action_Action__Kinstrife_Action_ActionInputStateParams__DynamicBuffer_Kinstrife_Action_Components_ActionState___" data-uid="Kinstrife.Action.ActionStartStopSystem.TryTerminate(Entity@,Kinstrife.Action.Action@,Kinstrife.Action.ActionInputStateParams@,DynamicBuffer{Kinstrife.Action.Components.ActionState}@)">TryTerminate(ref Entity, ref Action, ActionInputStateParams, ref DynamicBuffer&lt;ActionState&gt;)</h4>
+  <h4 id="Kinstrife_Action_ActionStartStopSystem_TryTerminate_Entity__Kinstrife_Action_Components_Action__Kinstrife_Action_Components_ActionInputParams__" data-uid="Kinstrife.Action.ActionStartStopSystem.TryTerminate(Entity@,Kinstrife.Action.Components.Action@,Kinstrife.Action.Components.ActionInputParams@)">TryTerminate(ref Entity, ref Action, ActionInputParams)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static bool TryTerminate(ref Entity e, ref Action action, in ActionInputStateParams stateInputParams, ref DynamicBuffer&lt;ActionState&gt; states)</code></pre>
+    <pre><code class="lang-csharp hljs">public static bool TryTerminate(ref Entity e, ref Action action, in ActionInputParams stateInputParams)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -303,18 +427,13 @@
         <td></td>
       </tr>
       <tr>
-        <td><a class="xref" href="Kinstrife.Action.Action.html">Action</a></td>
+        <td><a class="xref" href="Kinstrife.Action.Components.Action.html">Action</a></td>
         <td><span class="parametername">action</span></td>
         <td></td>
       </tr>
       <tr>
-        <td><a class="xref" href="Kinstrife.Action.ActionInputStateParams.html">ActionInputStateParams</a></td>
+        <td><a class="xref" href="Kinstrife.Action.Components.ActionInputParams.html">ActionInputParams</a></td>
         <td><span class="parametername">stateInputParams</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><span class="xref">DynamicBuffer</span>&lt;<a class="xref" href="Kinstrife.Action.Components.ActionState.html">ActionState</a>&gt;</td>
-        <td><span class="parametername">states</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -336,13 +455,13 @@
   </table>
   
   
-  <a id="Kinstrife_Action_ActionStartStopSystem_ValidateStart_" data-uid="Kinstrife.Action.ActionStartStopSystem.ValidateStart*"></a>
-  <h4 id="Kinstrife_Action_ActionStartStopSystem_ValidateStart_Kinstrife_Action_ActionInputStateParams__" data-uid="Kinstrife.Action.ActionStartStopSystem.ValidateStart(Kinstrife.Action.ActionInputStateParams@)">ValidateStart(ActionInputStateParams)</h4>
+  <a id="Kinstrife_Action_ActionStartStopSystem_TryToggle_" data-uid="Kinstrife.Action.ActionStartStopSystem.TryToggle*"></a>
+  <h4 id="Kinstrife_Action_ActionStartStopSystem_TryToggle_Entity_System_Int32_" data-uid="Kinstrife.Action.ActionStartStopSystem.TryToggle(Entity,System.Int32)">TryToggle(Entity, Int32)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static bool ValidateStart(in ActionInputStateParams inputParams)</code></pre>
+    <pre><code class="lang-csharp hljs">public void TryToggle(Entity owner, int actionID)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -355,7 +474,39 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="Kinstrife.Action.ActionInputStateParams.html">ActionInputStateParams</a></td>
+        <td><span class="xref">Entity</span></td>
+        <td><span class="parametername">owner</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">actionID</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Kinstrife_Action_ActionStartStopSystem_ValidateStart_" data-uid="Kinstrife.Action.ActionStartStopSystem.ValidateStart*"></a>
+  <h4 id="Kinstrife_Action_ActionStartStopSystem_ValidateStart_Kinstrife_Action_Components_ActionInputParams__" data-uid="Kinstrife.Action.ActionStartStopSystem.ValidateStart(Kinstrife.Action.Components.ActionInputParams@)">ValidateStart(ActionInputParams)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool ValidateStart(in ActionInputParams inputParams)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Kinstrife.Action.Components.ActionInputParams.html">ActionInputParams</a></td>
         <td><span class="parametername">inputParams</span></td>
         <td></td>
       </tr>
