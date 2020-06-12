@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class ActionEventsListenerAdapter
    | Kinstrife ">
-    <meta name="generator" content="docfx 2.54.0.0">
+    <meta name="generator" content="docfx 2.55.0.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
@@ -79,7 +79,7 @@
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
     <div class="level1"><span class="xref">ActionEventsListenerAdapter</span></div>
-      <div class="level2"><a class="xref" href="Kinstrife.Action.Components.SoundPlayerAdapter.html">SoundPlayerAdapter</a></div>
+      <div class="level2"><a class="xref" href="Kinstrife.Action.Components.SoundPlayerAdapter.Instance.html">SoundPlayerAdapter.Instance</a></div>
   </div>
   <div classs="implements">
     <h5>Implements</h5>
@@ -198,13 +198,55 @@
   </h3>
   
   
-  <a id="Kinstrife_Action_Components_ActionEventsListenerAdapter_OnActivate_" data-uid="Kinstrife.Action.Components.ActionEventsListenerAdapter.OnActivate*"></a>
-  <h4 id="Kinstrife_Action_Components_ActionEventsListenerAdapter_OnActivate_Entity_Entity_Kinstrife_Action_Components_Action__DynamicBuffer_Kinstrife_Action_Components_ActionState___" data-uid="Kinstrife.Action.Components.ActionEventsListenerAdapter.OnActivate(Entity,Entity,Kinstrife.Action.Components.Action@,DynamicBuffer{Kinstrife.Action.Components.ActionState}@)">OnActivate(Entity, Entity, ref Action, ref DynamicBuffer&lt;ActionState&gt;)</h4>
+  <a id="Kinstrife_Action_Components_ActionEventsListenerAdapter_CheckActive_" data-uid="Kinstrife.Action.Components.ActionEventsListenerAdapter.CheckActive*"></a>
+  <h4 id="Kinstrife_Action_Components_ActionEventsListenerAdapter_CheckActive_Entity__" data-uid="Kinstrife.Action.Components.ActionEventsListenerAdapter.CheckActive(Entity@)">CheckActive(Entity)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual void OnActivate(Entity e, Entity owner, ref Action action, ref DynamicBuffer&lt;ActionState&gt; states)</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual bool CheckActive(in Entity e)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Entity</span></td>
+        <td><span class="parametername">e</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Kinstrife_Action_Components_ActionEventsListenerAdapter_OnActivate_" data-uid="Kinstrife.Action.Components.ActionEventsListenerAdapter.OnActivate*"></a>
+  <h4 id="Kinstrife_Action_Components_ActionEventsListenerAdapter_OnActivate_Entity__Entity__Kinstrife_Action_Components_Action__DynamicBuffer_Kinstrife_Action_Components_ActionState___" data-uid="Kinstrife.Action.Components.ActionEventsListenerAdapter.OnActivate(Entity@,Entity@,Kinstrife.Action.Components.Action@,DynamicBuffer{Kinstrife.Action.Components.ActionState}@)">OnActivate(Entity, Entity, ref Action, ref DynamicBuffer&lt;ActionState&gt;)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void OnActivate(in Entity e, in Entity owner, ref Action action, ref DynamicBuffer&lt;ActionState&gt; states)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -241,12 +283,12 @@
   
   
   <a id="Kinstrife_Action_Components_ActionEventsListenerAdapter_OnDeactivate_" data-uid="Kinstrife.Action.Components.ActionEventsListenerAdapter.OnDeactivate*"></a>
-  <h4 id="Kinstrife_Action_Components_ActionEventsListenerAdapter_OnDeactivate_Entity_Entity_Kinstrife_Action_Components_Action__DynamicBuffer_Kinstrife_Action_Components_ActionState___" data-uid="Kinstrife.Action.Components.ActionEventsListenerAdapter.OnDeactivate(Entity,Entity,Kinstrife.Action.Components.Action@,DynamicBuffer{Kinstrife.Action.Components.ActionState}@)">OnDeactivate(Entity, Entity, ref Action, ref DynamicBuffer&lt;ActionState&gt;)</h4>
+  <h4 id="Kinstrife_Action_Components_ActionEventsListenerAdapter_OnDeactivate_Entity__Entity__Kinstrife_Action_Components_Action__DynamicBuffer_Kinstrife_Action_Components_ActionState___" data-uid="Kinstrife.Action.Components.ActionEventsListenerAdapter.OnDeactivate(Entity@,Entity@,Kinstrife.Action.Components.Action@,DynamicBuffer{Kinstrife.Action.Components.ActionState}@)">OnDeactivate(Entity, Entity, ref Action, ref DynamicBuffer&lt;ActionState&gt;)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual void OnDeactivate(Entity e, Entity owner, ref Action action, ref DynamicBuffer&lt;ActionState&gt; states)</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual void OnDeactivate(in Entity e, in Entity owner, ref Action action, ref DynamicBuffer&lt;ActionState&gt; states)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -283,12 +325,12 @@
   
   
   <a id="Kinstrife_Action_Components_ActionEventsListenerAdapter_OnStart_" data-uid="Kinstrife.Action.Components.ActionEventsListenerAdapter.OnStart*"></a>
-  <h4 id="Kinstrife_Action_Components_ActionEventsListenerAdapter_OnStart_Entity_Entity_System_Boolean_Kinstrife_Action_Components_Action__DynamicBuffer_Kinstrife_Action_Components_ActionState___" data-uid="Kinstrife.Action.Components.ActionEventsListenerAdapter.OnStart(Entity,Entity,System.Boolean,Kinstrife.Action.Components.Action@,DynamicBuffer{Kinstrife.Action.Components.ActionState}@)">OnStart(Entity, Entity, Boolean, ref Action, ref DynamicBuffer&lt;ActionState&gt;)</h4>
+  <h4 id="Kinstrife_Action_Components_ActionEventsListenerAdapter_OnStart_Entity__Entity__System_Boolean_Kinstrife_Action_Components_Action__DynamicBuffer_Kinstrife_Action_Components_ActionState___" data-uid="Kinstrife.Action.Components.ActionEventsListenerAdapter.OnStart(Entity@,Entity@,System.Boolean,Kinstrife.Action.Components.Action@,DynamicBuffer{Kinstrife.Action.Components.ActionState}@)">OnStart(Entity, Entity, Boolean, ref Action, ref DynamicBuffer&lt;ActionState&gt;)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void OnStart(Entity e, Entity owner, bool nodeActive, ref Action action, ref DynamicBuffer&lt;ActionState&gt; states)</code></pre>
+    <pre><code class="lang-csharp hljs">public void OnStart(in Entity e, in Entity owner, bool nodeActive, ref Action action, ref DynamicBuffer&lt;ActionState&gt; states)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -330,12 +372,12 @@
   
   
   <a id="Kinstrife_Action_Components_ActionEventsListenerAdapter_OnTerminate_" data-uid="Kinstrife.Action.Components.ActionEventsListenerAdapter.OnTerminate*"></a>
-  <h4 id="Kinstrife_Action_Components_ActionEventsListenerAdapter_OnTerminate_Entity_Entity_System_Boolean_Kinstrife_Action_Components_Action__DynamicBuffer_Kinstrife_Action_Components_ActionState___" data-uid="Kinstrife.Action.Components.ActionEventsListenerAdapter.OnTerminate(Entity,Entity,System.Boolean,Kinstrife.Action.Components.Action@,DynamicBuffer{Kinstrife.Action.Components.ActionState}@)">OnTerminate(Entity, Entity, Boolean, ref Action, ref DynamicBuffer&lt;ActionState&gt;)</h4>
+  <h4 id="Kinstrife_Action_Components_ActionEventsListenerAdapter_OnTerminate_Entity__Entity__System_Boolean_Kinstrife_Action_Components_Action__DynamicBuffer_Kinstrife_Action_Components_ActionState___" data-uid="Kinstrife.Action.Components.ActionEventsListenerAdapter.OnTerminate(Entity@,Entity@,System.Boolean,Kinstrife.Action.Components.Action@,DynamicBuffer{Kinstrife.Action.Components.ActionState}@)">OnTerminate(Entity, Entity, Boolean, ref Action, ref DynamicBuffer&lt;ActionState&gt;)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void OnTerminate(Entity e, Entity owner, bool nodeActive, ref Action action, ref DynamicBuffer&lt;ActionState&gt; states)</code></pre>
+    <pre><code class="lang-csharp hljs">public void OnTerminate(in Entity e, in Entity owner, bool nodeActive, ref Action action, ref DynamicBuffer&lt;ActionState&gt; states)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -377,12 +419,12 @@
   
   
   <a id="Kinstrife_Action_Components_ActionEventsListenerAdapter_OnUpdate_" data-uid="Kinstrife.Action.Components.ActionEventsListenerAdapter.OnUpdate*"></a>
-  <h4 id="Kinstrife_Action_Components_ActionEventsListenerAdapter_OnUpdate_Entity_Entity_System_Boolean_Kinstrife_Action_Components_Action__DynamicBuffer_Kinstrife_Action_Components_ActionState___" data-uid="Kinstrife.Action.Components.ActionEventsListenerAdapter.OnUpdate(Entity,Entity,System.Boolean,Kinstrife.Action.Components.Action@,DynamicBuffer{Kinstrife.Action.Components.ActionState}@)">OnUpdate(Entity, Entity, Boolean, ref Action, ref DynamicBuffer&lt;ActionState&gt;)</h4>
+  <h4 id="Kinstrife_Action_Components_ActionEventsListenerAdapter_OnUpdate_Entity__Entity__System_Boolean_Kinstrife_Action_Components_Action__DynamicBuffer_Kinstrife_Action_Components_ActionState___" data-uid="Kinstrife.Action.Components.ActionEventsListenerAdapter.OnUpdate(Entity@,Entity@,System.Boolean,Kinstrife.Action.Components.Action@,DynamicBuffer{Kinstrife.Action.Components.ActionState}@)">OnUpdate(Entity, Entity, Boolean, ref Action, ref DynamicBuffer&lt;ActionState&gt;)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void OnUpdate(Entity e, Entity owner, bool nodeActive, ref Action action, ref DynamicBuffer&lt;ActionState&gt; states)</code></pre>
+    <pre><code class="lang-csharp hljs">public void OnUpdate(in Entity e, in Entity owner, bool nodeActive, ref Action action, ref DynamicBuffer&lt;ActionState&gt; states)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -450,13 +492,97 @@
   </table>
   
   
-  <a id="Kinstrife_Action_Components_ActionEventsListenerAdapter_WillStart_" data-uid="Kinstrife.Action.Components.ActionEventsListenerAdapter.WillStart*"></a>
-  <h4 id="Kinstrife_Action_Components_ActionEventsListenerAdapter_WillStart_Entity_Entity_System_Boolean_Kinstrife_Action_Components_Action__DynamicBuffer_Kinstrife_Action_Components_ActionState___" data-uid="Kinstrife.Action.Components.ActionEventsListenerAdapter.WillStart(Entity,Entity,System.Boolean,Kinstrife.Action.Components.Action@,DynamicBuffer{Kinstrife.Action.Components.ActionState}@)">WillStart(Entity, Entity, Boolean, ref Action, ref DynamicBuffer&lt;ActionState&gt;)</h4>
+  <a id="Kinstrife_Action_Components_ActionEventsListenerAdapter_TryActivate_" data-uid="Kinstrife.Action.Components.ActionEventsListenerAdapter.TryActivate*"></a>
+  <h4 id="Kinstrife_Action_Components_ActionEventsListenerAdapter_TryActivate_Entity__Entity__Kinstrife_Action_Components_Action__DynamicBuffer_Kinstrife_Action_Components_ActionState___" data-uid="Kinstrife.Action.Components.ActionEventsListenerAdapter.TryActivate(Entity@,Entity@,Kinstrife.Action.Components.Action@,DynamicBuffer{Kinstrife.Action.Components.ActionState}@)">TryActivate(Entity, Entity, ref Action, ref DynamicBuffer&lt;ActionState&gt;)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void WillStart(Entity e, Entity owner, bool nodeActive, ref Action action, ref DynamicBuffer&lt;ActionState&gt; states)</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual void TryActivate(in Entity e, in Entity owner, ref Action action, ref DynamicBuffer&lt;ActionState&gt; states)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Entity</span></td>
+        <td><span class="parametername">e</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">Entity</span></td>
+        <td><span class="parametername">owner</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Kinstrife.Action.Components.Action.html">Action</a></td>
+        <td><span class="parametername">action</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">DynamicBuffer</span>&lt;<a class="xref" href="Kinstrife.Action.Components.ActionState.html">ActionState</a>&gt;</td>
+        <td><span class="parametername">states</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Kinstrife_Action_Components_ActionEventsListenerAdapter_TryDeactivate_" data-uid="Kinstrife.Action.Components.ActionEventsListenerAdapter.TryDeactivate*"></a>
+  <h4 id="Kinstrife_Action_Components_ActionEventsListenerAdapter_TryDeactivate_Entity__Entity__Kinstrife_Action_Components_Action__DynamicBuffer_Kinstrife_Action_Components_ActionState___" data-uid="Kinstrife.Action.Components.ActionEventsListenerAdapter.TryDeactivate(Entity@,Entity@,Kinstrife.Action.Components.Action@,DynamicBuffer{Kinstrife.Action.Components.ActionState}@)">TryDeactivate(Entity, Entity, ref Action, ref DynamicBuffer&lt;ActionState&gt;)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void TryDeactivate(in Entity e, in Entity owner, ref Action action, ref DynamicBuffer&lt;ActionState&gt; states)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Entity</span></td>
+        <td><span class="parametername">e</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">Entity</span></td>
+        <td><span class="parametername">owner</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Kinstrife.Action.Components.Action.html">Action</a></td>
+        <td><span class="parametername">action</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">DynamicBuffer</span>&lt;<a class="xref" href="Kinstrife.Action.Components.ActionState.html">ActionState</a>&gt;</td>
+        <td><span class="parametername">states</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Kinstrife_Action_Components_ActionEventsListenerAdapter_WillStart_" data-uid="Kinstrife.Action.Components.ActionEventsListenerAdapter.WillStart*"></a>
+  <h4 id="Kinstrife_Action_Components_ActionEventsListenerAdapter_WillStart_Entity__Entity__System_Boolean_Kinstrife_Action_Components_Action__DynamicBuffer_Kinstrife_Action_Components_ActionState___" data-uid="Kinstrife.Action.Components.ActionEventsListenerAdapter.WillStart(Entity@,Entity@,System.Boolean,Kinstrife.Action.Components.Action@,DynamicBuffer{Kinstrife.Action.Components.ActionState}@)">WillStart(Entity, Entity, Boolean, ref Action, ref DynamicBuffer&lt;ActionState&gt;)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void WillStart(in Entity e, in Entity owner, bool nodeActive, ref Action action, ref DynamicBuffer&lt;ActionState&gt; states)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -498,12 +624,12 @@
   
   
   <a id="Kinstrife_Action_Components_ActionEventsListenerAdapter_WillTerminate_" data-uid="Kinstrife.Action.Components.ActionEventsListenerAdapter.WillTerminate*"></a>
-  <h4 id="Kinstrife_Action_Components_ActionEventsListenerAdapter_WillTerminate_Entity_Entity_System_Boolean_Kinstrife_Action_Components_Action__DynamicBuffer_Kinstrife_Action_Components_ActionState___" data-uid="Kinstrife.Action.Components.ActionEventsListenerAdapter.WillTerminate(Entity,Entity,System.Boolean,Kinstrife.Action.Components.Action@,DynamicBuffer{Kinstrife.Action.Components.ActionState}@)">WillTerminate(Entity, Entity, Boolean, ref Action, ref DynamicBuffer&lt;ActionState&gt;)</h4>
+  <h4 id="Kinstrife_Action_Components_ActionEventsListenerAdapter_WillTerminate_Entity__Entity__System_Boolean_Kinstrife_Action_Components_Action__DynamicBuffer_Kinstrife_Action_Components_ActionState___" data-uid="Kinstrife.Action.Components.ActionEventsListenerAdapter.WillTerminate(Entity@,Entity@,System.Boolean,Kinstrife.Action.Components.Action@,DynamicBuffer{Kinstrife.Action.Components.ActionState}@)">WillTerminate(Entity, Entity, Boolean, ref Action, ref DynamicBuffer&lt;ActionState&gt;)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void WillTerminate(Entity e, Entity owner, bool nodeActive, ref Action action, ref DynamicBuffer&lt;ActionState&gt; states)</code></pre>
+    <pre><code class="lang-csharp hljs">public void WillTerminate(in Entity e, in Entity owner, bool nodeActive, ref Action action, ref DynamicBuffer&lt;ActionState&gt; states)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">

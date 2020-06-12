@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class SoundSystem
    | Kinstrife ">
-    <meta name="generator" content="docfx 2.54.0.0">
+    <meta name="generator" content="docfx 2.55.0.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
@@ -317,7 +317,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void PlayOneshot(Sound sound, Vector3? position = default(Vector3? ), float? volumeModulation = default(float? ), float? pitchModulation = default(float? ))</code></pre>
+    <pre><code class="lang-csharp hljs">public SoundInstance PlayOneshot(Sound sound, Vector3? position = default(Vector3? ), float? volumeModulation = default(float? ), float? pitchModulation = default(float? ))</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -352,6 +352,21 @@
         <td><span class="parametername">pitchModulation</span></td>
         <td><p>Value between 0 and 1, lerping between the min and max pitch of the sound. Will randomize within this range if left null.</p>
 </td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Kinstrife.Audio.SoundInstance.html">SoundInstance</a></td>
+        <td></td>
       </tr>
     </tbody>
   </table>
@@ -415,7 +430,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void PlayWithId(Sound sound, object id, Vector3? position = default(Vector3? ), bool loop = false, float? volumeModulation = default(float? ), float? pitchModulation = default(float? ))</code></pre>
+    <pre><code class="lang-csharp hljs">public SoundInstance PlayWithId(Sound sound, object id, Vector3? position = default(Vector3? ), bool loop = false, float? volumeModulation = default(float? ), float? pitchModulation = default(float? ))</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -462,6 +477,21 @@
       </tr>
     </tbody>
   </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Kinstrife.Audio.SoundInstance.html">SoundInstance</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   
   
   <a id="Kinstrife_Audio_SoundSystem_PlayWithIdAttached_" data-uid="Kinstrife.Audio.SoundSystem.PlayWithIdAttached*"></a>
@@ -471,7 +501,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void PlayWithIdAttached(Sound sound, object id, Transform targetTransform, Vector3 localOffset, bool loop = false, float? volumeModulation = default(float? ), float? pitchModulation = default(float? ))</code></pre>
+    <pre><code class="lang-csharp hljs">public SoundInstance PlayWithIdAttached(Sound sound, object id, Transform targetTransform, Vector3 localOffset, bool loop = false, float? volumeModulation = default(float? ), float? pitchModulation = default(float? ))</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -521,6 +551,21 @@
         <td><span class="parametername">pitchModulation</span></td>
         <td><p>Value between 0 and 1, lerping between the min and max pitch of the sound. Will randomize within this range if left null.</p>
 </td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Kinstrife.Audio.SoundInstance.html">SoundInstance</a></td>
+        <td></td>
       </tr>
     </tbody>
   </table>

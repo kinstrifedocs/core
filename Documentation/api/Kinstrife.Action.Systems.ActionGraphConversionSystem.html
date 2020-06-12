@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class ActionGraphConversionSystem
    | Kinstrife ">
-    <meta name="generator" content="docfx 2.54.0.0">
+    <meta name="generator" content="docfx 2.55.0.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
@@ -78,10 +78,20 @@
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><span class="xref">ActionGraphConversionSystem</span></div>
+    <div class="level1"><a class="xref" href="Kinstrife.Action.Systems.DataConversionSystemBase.html">DataConversionSystemBase</a></div>
+    <div class="level2"><span class="xref">ActionGraphConversionSystem</span></div>
   </div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="Kinstrife.Action.Systems.DataConversionSystemBase.html#Kinstrife_Action_Systems_DataConversionSystemBase_AddBufferToEntity__1_EntityManager_Entity_System_Int32_">DataConversionSystemBase.AddBufferToEntity&lt;T&gt;(EntityManager, Entity, Int32)</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.Action.Systems.DataConversionSystemBase.html#Kinstrife_Action_Systems_DataConversionSystemBase_InitBufferFromList__1_EntityManager_Entity_System_Collections_Generic_List___0__">DataConversionSystemBase.InitBufferFromList&lt;T&gt;(EntityManager, Entity, List&lt;T&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.Action.Systems.DataConversionSystemBase.html#Kinstrife_Action_Systems_DataConversionSystemBase_CreateBlobAssetRef__1___0_">DataConversionSystemBase.CreateBlobAssetRef&lt;T&gt;(T)</a>
+    </div>
     <div>
       <span class="xref">System.Object.ToString()</span>
     </div>
@@ -108,78 +118,10 @@
   <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
   <h5 id="Kinstrife_Action_Systems_ActionGraphConversionSystem_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static class ActionGraphConversionSystem</code></pre>
+    <pre><code class="lang-csharp hljs">public class ActionGraphConversionSystem : DataConversionSystemBase</code></pre>
   </div>
   <h3 id="methods">Methods
   </h3>
-  
-  
-  <a id="Kinstrife_Action_Systems_ActionGraphConversionSystem_AddBufferToEntity_" data-uid="Kinstrife.Action.Systems.ActionGraphConversionSystem.AddBufferToEntity*"></a>
-  <h4 id="Kinstrife_Action_Systems_ActionGraphConversionSystem_AddBufferToEntity__1_EntityManager_Entity_System_Int32_" data-uid="Kinstrife.Action.Systems.ActionGraphConversionSystem.AddBufferToEntity``1(EntityManager,Entity,System.Int32)">AddBufferToEntity&lt;T&gt;(EntityManager, Entity, Int32)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static DynamicBuffer&lt;T&gt; AddBufferToEntity&lt;T&gt;(EntityManager entityManager, Entity owner, int capacity)
-    where T : struct, IBufferElementData</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">EntityManager</span></td>
-        <td><span class="parametername">entityManager</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><span class="xref">Entity</span></td>
-        <td><span class="parametername">owner</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><span class="xref">System.Int32</span></td>
-        <td><span class="parametername">capacity</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">DynamicBuffer</span>&lt;T&gt;</td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="typeParameters">Type Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="parametername">T</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
   
   
   <a id="Kinstrife_Action_Systems_ActionGraphConversionSystem_CreateActionEntity_" data-uid="Kinstrife.Action.Systems.ActionGraphConversionSystem.CreateActionEntity*"></a>
@@ -239,13 +181,13 @@
   </table>
   
   
-  <a id="Kinstrife_Action_Systems_ActionGraphConversionSystem_InstantiateActionEntity_" data-uid="Kinstrife.Action.Systems.ActionGraphConversionSystem.InstantiateActionEntity*"></a>
-  <h4 id="Kinstrife_Action_Systems_ActionGraphConversionSystem_InstantiateActionEntity_EntityManager_Kinstrife_Action_ActionOwnerData_Entity_Kinstrife_Action_Graph_ActionGraph_System_Boolean_" data-uid="Kinstrife.Action.Systems.ActionGraphConversionSystem.InstantiateActionEntity(EntityManager,Kinstrife.Action.ActionOwnerData,Entity,Kinstrife.Action.Graph.ActionGraph,System.Boolean)">InstantiateActionEntity(EntityManager, ActionOwnerData, Entity, ActionGraph, Boolean)</h4>
+  <a id="Kinstrife_Action_Systems_ActionGraphConversionSystem_Instantiate_" data-uid="Kinstrife.Action.Systems.ActionGraphConversionSystem.Instantiate*"></a>
+  <h4 id="Kinstrife_Action_Systems_ActionGraphConversionSystem_Instantiate_EntityManager_Kinstrife_Action_Data_ActionOwnerData_Entity_System_Boolean_" data-uid="Kinstrife.Action.Systems.ActionGraphConversionSystem.Instantiate(EntityManager,Kinstrife.Action.Data.ActionOwnerData,Entity,System.Boolean)">Instantiate(EntityManager, ActionOwnerData, Entity, Boolean)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static Entity InstantiateActionEntity(EntityManager entityManager, ActionOwnerData ownerData, Entity ownerEntity, ActionGraph graph, bool isPrefab)</code></pre>
+    <pre><code class="lang-csharp hljs">public static void Instantiate(EntityManager entityManager, ActionOwnerData contextData, Entity contextEntity, bool isPrefab)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -263,13 +205,55 @@
         <td></td>
       </tr>
       <tr>
-        <td><a class="xref" href="Kinstrife.Action.ActionOwnerData.html">ActionOwnerData</a></td>
-        <td><span class="parametername">ownerData</span></td>
+        <td><a class="xref" href="Kinstrife.Action.Data.ActionOwnerData.html">ActionOwnerData</a></td>
+        <td><span class="parametername">contextData</span></td>
         <td></td>
       </tr>
       <tr>
         <td><span class="xref">Entity</span></td>
-        <td><span class="parametername">ownerEntity</span></td>
+        <td><span class="parametername">contextEntity</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">isPrefab</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Kinstrife_Action_Systems_ActionGraphConversionSystem_InstantiateOne_" data-uid="Kinstrife.Action.Systems.ActionGraphConversionSystem.InstantiateOne*"></a>
+  <h4 id="Kinstrife_Action_Systems_ActionGraphConversionSystem_InstantiateOne_EntityManager_Kinstrife_Action_Data_ActionOwnerData_Entity_Kinstrife_Action_Graph_ActionGraph_System_Boolean_" data-uid="Kinstrife.Action.Systems.ActionGraphConversionSystem.InstantiateOne(EntityManager,Kinstrife.Action.Data.ActionOwnerData,Entity,Kinstrife.Action.Graph.ActionGraph,System.Boolean)">InstantiateOne(EntityManager, ActionOwnerData, Entity, ActionGraph, Boolean)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Entity InstantiateOne(EntityManager entityManager, ActionOwnerData contextData, Entity contextEntity, ActionGraph graph, bool isPrefab)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">EntityManager</span></td>
+        <td><span class="parametername">entityManager</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Kinstrife.Action.Data.ActionOwnerData.html">ActionOwnerData</a></td>
+        <td><span class="parametername">contextData</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">Entity</span></td>
+        <td><span class="parametername">contextEntity</span></td>
         <td></td>
       </tr>
       <tr>
@@ -302,7 +286,7 @@
   
   
   <a id="Kinstrife_Action_Systems_ActionGraphConversionSystem_OutputNodesToInstructions_" data-uid="Kinstrife.Action.Systems.ActionGraphConversionSystem.OutputNodesToInstructions*"></a>
-  <h4 id="Kinstrife_Action_Systems_ActionGraphConversionSystem_OutputNodesToInstructions_EntityManager_Kinstrife_Action_ActionOwnerData_Kinstrife_Action_Graph_ActionNode_Entity__System_Boolean_Kinstrife_Action_Components_StateFlag_" data-uid="Kinstrife.Action.Systems.ActionGraphConversionSystem.OutputNodesToInstructions(EntityManager,Kinstrife.Action.ActionOwnerData,Kinstrife.Action.Graph.ActionNode,Entity@,System.Boolean,Kinstrife.Action.Components.StateFlag)">OutputNodesToInstructions(EntityManager, ActionOwnerData, ActionNode, ref Entity, Boolean, StateFlag)</h4>
+  <h4 id="Kinstrife_Action_Systems_ActionGraphConversionSystem_OutputNodesToInstructions_EntityManager_Kinstrife_Action_Data_ActionOwnerData_Kinstrife_Action_Graph_ActionNode_Entity__System_Boolean_Kinstrife_Action_Components_StateFlag_" data-uid="Kinstrife.Action.Systems.ActionGraphConversionSystem.OutputNodesToInstructions(EntityManager,Kinstrife.Action.Data.ActionOwnerData,Kinstrife.Action.Graph.ActionNode,Entity@,System.Boolean,Kinstrife.Action.Components.StateFlag)">OutputNodesToInstructions(EntityManager, ActionOwnerData, ActionNode, ref Entity, Boolean, StateFlag)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -325,7 +309,7 @@
         <td></td>
       </tr>
       <tr>
-        <td><a class="xref" href="Kinstrife.Action.ActionOwnerData.html">ActionOwnerData</a></td>
+        <td><a class="xref" href="Kinstrife.Action.Data.ActionOwnerData.html">ActionOwnerData</a></td>
         <td><span class="parametername">ownerData</span></td>
         <td></td>
       </tr>
@@ -354,7 +338,7 @@
   
   
   <a id="Kinstrife_Action_Systems_ActionGraphConversionSystem_ProcessActivator_" data-uid="Kinstrife.Action.Systems.ActionGraphConversionSystem.ProcessActivator*"></a>
-  <h4 id="Kinstrife_Action_Systems_ActionGraphConversionSystem_ProcessActivator_EntityManager_Kinstrife_Action_ActionOwnerData_Kinstrife_Action_Graph_ActionGraph_Kinstrife_Action_Graph_ActionNode_Entity__Entity__" data-uid="Kinstrife.Action.Systems.ActionGraphConversionSystem.ProcessActivator(EntityManager,Kinstrife.Action.ActionOwnerData,Kinstrife.Action.Graph.ActionGraph,Kinstrife.Action.Graph.ActionNode,Entity@,Entity@)">ProcessActivator(EntityManager, ActionOwnerData, ActionGraph, ActionNode, ref Entity, ref Entity)</h4>
+  <h4 id="Kinstrife_Action_Systems_ActionGraphConversionSystem_ProcessActivator_EntityManager_Kinstrife_Action_Data_ActionOwnerData_Kinstrife_Action_Graph_ActionGraph_Kinstrife_Action_Graph_ActionNode_Entity__Entity__" data-uid="Kinstrife.Action.Systems.ActionGraphConversionSystem.ProcessActivator(EntityManager,Kinstrife.Action.Data.ActionOwnerData,Kinstrife.Action.Graph.ActionGraph,Kinstrife.Action.Graph.ActionNode,Entity@,Entity@)">ProcessActivator(EntityManager, ActionOwnerData, ActionGraph, ActionNode, ref Entity, ref Entity)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -377,7 +361,7 @@
         <td></td>
       </tr>
       <tr>
-        <td><a class="xref" href="Kinstrife.Action.ActionOwnerData.html">ActionOwnerData</a></td>
+        <td><a class="xref" href="Kinstrife.Action.Data.ActionOwnerData.html">ActionOwnerData</a></td>
         <td><span class="parametername">ownerData</span></td>
         <td></td>
       </tr>
@@ -406,7 +390,7 @@
   
   
   <a id="Kinstrife_Action_Systems_ActionGraphConversionSystem_ProcessStates_" data-uid="Kinstrife.Action.Systems.ActionGraphConversionSystem.ProcessStates*"></a>
-  <h4 id="Kinstrife_Action_Systems_ActionGraphConversionSystem_ProcessStates_EntityManager_Kinstrife_Action_ActionOwnerData_Kinstrife_Action_Graph_ActionGraph_Entity__" data-uid="Kinstrife.Action.Systems.ActionGraphConversionSystem.ProcessStates(EntityManager,Kinstrife.Action.ActionOwnerData,Kinstrife.Action.Graph.ActionGraph,Entity@)">ProcessStates(EntityManager, ActionOwnerData, ActionGraph, ref Entity)</h4>
+  <h4 id="Kinstrife_Action_Systems_ActionGraphConversionSystem_ProcessStates_EntityManager_Kinstrife_Action_Data_ActionOwnerData_Kinstrife_Action_Graph_ActionGraph_Entity__" data-uid="Kinstrife.Action.Systems.ActionGraphConversionSystem.ProcessStates(EntityManager,Kinstrife.Action.Data.ActionOwnerData,Kinstrife.Action.Graph.ActionGraph,Entity@)">ProcessStates(EntityManager, ActionOwnerData, ActionGraph, ref Entity)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -429,7 +413,7 @@
         <td></td>
       </tr>
       <tr>
-        <td><a class="xref" href="Kinstrife.Action.ActionOwnerData.html">ActionOwnerData</a></td>
+        <td><a class="xref" href="Kinstrife.Action.Data.ActionOwnerData.html">ActionOwnerData</a></td>
         <td><span class="parametername">ownerData</span></td>
         <td></td>
       </tr>
@@ -448,7 +432,7 @@
   
   
   <a id="Kinstrife_Action_Systems_ActionGraphConversionSystem_ProcessStatesRecursive_" data-uid="Kinstrife.Action.Systems.ActionGraphConversionSystem.ProcessStatesRecursive*"></a>
-  <h4 id="Kinstrife_Action_Systems_ActionGraphConversionSystem_ProcessStatesRecursive_System_Int32_EntityManager_Kinstrife_Action_ActionOwnerData_Kinstrife_Action_Graph_StateNode_Entity__" data-uid="Kinstrife.Action.Systems.ActionGraphConversionSystem.ProcessStatesRecursive(System.Int32,EntityManager,Kinstrife.Action.ActionOwnerData,Kinstrife.Action.Graph.StateNode,Entity@)">ProcessStatesRecursive(Int32, EntityManager, ActionOwnerData, StateNode, ref Entity)</h4>
+  <h4 id="Kinstrife_Action_Systems_ActionGraphConversionSystem_ProcessStatesRecursive_System_Int32_EntityManager_Kinstrife_Action_Data_ActionOwnerData_Kinstrife_Action_Graph_StateNode_Entity__" data-uid="Kinstrife.Action.Systems.ActionGraphConversionSystem.ProcessStatesRecursive(System.Int32,EntityManager,Kinstrife.Action.Data.ActionOwnerData,Kinstrife.Action.Graph.StateNode,Entity@)">ProcessStatesRecursive(Int32, EntityManager, ActionOwnerData, StateNode, ref Entity)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -476,7 +460,7 @@
         <td></td>
       </tr>
       <tr>
-        <td><a class="xref" href="Kinstrife.Action.ActionOwnerData.html">ActionOwnerData</a></td>
+        <td><a class="xref" href="Kinstrife.Action.Data.ActionOwnerData.html">ActionOwnerData</a></td>
         <td><span class="parametername">ownerData</span></td>
         <td></td>
       </tr>

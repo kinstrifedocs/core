@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class ActionHooksBroadcaster
    | Kinstrife ">
-    <meta name="generator" content="docfx 2.54.0.0">
+    <meta name="generator" content="docfx 2.55.0.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
@@ -85,24 +85,23 @@
     <div><span class="xref">IEquatable</span>&lt;<a class="xref" href="Kinstrife.Action.Components.ActionHooksBroadcaster.html">ActionHooksBroadcaster</a>&gt;</div>
     <div><span class="xref">IDisposable</span></div>
     <div><span class="xref">ICloneable</span></div>
-    <div><a class="xref" href="Kinstrife.Action.Components.IRegisterListener.html">IRegisterListener</a></div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Kinstrife.Action.Components.html">Kinstrife.Action.Components</a></h6>
   <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
   <h5 id="Kinstrife_Action_Components_ActionHooksBroadcaster_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class ActionHooksBroadcaster : IComponentData, IEquatable&lt;ActionHooksBroadcaster&gt;, IDisposable, ICloneable, IRegisterListener</code></pre>
+    <pre><code class="lang-csharp hljs">public class ActionHooksBroadcaster : IComponentData, IEquatable&lt;ActionHooksBroadcaster&gt;, IDisposable, ICloneable</code></pre>
   </div>
   <h3 id="fields">Fields
   </h3>
   
   
-  <h4 id="Kinstrife_Action_Components_ActionHooksBroadcaster_BaseNodeHooks" data-uid="Kinstrife.Action.Components.ActionHooksBroadcaster.BaseNodeHooks">BaseNodeHooks</h4>
+  <h4 id="Kinstrife_Action_Components_ActionHooksBroadcaster_baseNodeNooks" data-uid="Kinstrife.Action.Components.ActionHooksBroadcaster.baseNodeNooks">baseNodeNooks</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public ActionHooksBroadcaster.StateNode BaseNodeHooks</code></pre>
+    <pre><code class="lang-csharp hljs">public ActionHooksBroadcaster.StateNode baseNodeNooks</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -121,14 +120,14 @@
   </table>
   
   
-  <h4 id="Kinstrife_Action_Components_ActionHooksBroadcaster_NodeHooksDict" data-uid="Kinstrife.Action.Components.ActionHooksBroadcaster.NodeHooksDict">NodeHooksDict</h4>
+  <h4 id="Kinstrife_Action_Components_ActionHooksBroadcaster_nodeHooksDict" data-uid="Kinstrife.Action.Components.ActionHooksBroadcaster.nodeHooksDict">nodeHooksDict</h4>
   <div class="markdown level1 summary"><p>Dictionary of the hook states
 Keyed by: BaseNode, ActionState, or ActionStateID (if appliccable)</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Dictionary&lt;object, ActionHooksBroadcaster.StateNode&gt; NodeHooksDict</code></pre>
+    <pre><code class="lang-csharp hljs">public Dictionary&lt;object, ActionHooksBroadcaster.StateNode&gt; nodeHooksDict</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -141,31 +140,6 @@ Keyed by: BaseNode, ActionState, or ActionStateID (if appliccable)</p>
     <tbody>
       <tr>
         <td><span class="xref">System.Collections.Generic.Dictionary</span>&lt;<span class="xref">System.Object</span>, <a class="xref" href="Kinstrife.Action.Components.ActionHooksBroadcaster.StateNode.html">ActionHooksBroadcaster.StateNode</a>&gt;</td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <h4 id="Kinstrife_Action_Components_ActionHooksBroadcaster_StateNodeHooks" data-uid="Kinstrife.Action.Components.ActionHooksBroadcaster.StateNodeHooks">StateNodeHooks</h4>
-  <div class="markdown level1 summary"><p>List of HookStates in order of internal state { BaseNode, ActionStates ... }</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public List&lt;ActionHooksBroadcaster.StateNode&gt; StateNodeHooks</code></pre>
-  </div>
-  <h5 class="fieldValue">Field Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Collections.Generic.List</span>&lt;<a class="xref" href="Kinstrife.Action.Components.ActionHooksBroadcaster.StateNode.html">ActionHooksBroadcaster.StateNode</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -293,13 +267,14 @@ Keyed by: BaseNode, ActionState, or ActionStateID (if appliccable)</p>
   </table>
   
   
-  <a id="Kinstrife_Action_Components_ActionHooksBroadcaster_RegisterListener_" data-uid="Kinstrife.Action.Components.ActionHooksBroadcaster.RegisterListener*"></a>
-  <h4 id="Kinstrife_Action_Components_ActionHooksBroadcaster_RegisterListener_Kinstrife_Action_Components_IActionEventListener_Kinstrife_Action_ActionStatus_" data-uid="Kinstrife.Action.Components.ActionHooksBroadcaster.RegisterListener(Kinstrife.Action.Components.IActionEventListener,Kinstrife.Action.ActionStatus)">RegisterListener(IActionEventListener, ActionStatus)</h4>
-  <div class="markdown level1 summary"></div>
+  <a id="Kinstrife_Action_Components_ActionHooksBroadcaster_RegisterGlobalListener_" data-uid="Kinstrife.Action.Components.ActionHooksBroadcaster.RegisterGlobalListener*"></a>
+  <h4 id="Kinstrife_Action_Components_ActionHooksBroadcaster_RegisterGlobalListener_Kinstrife_Action_Components_IActionEventListener_Kinstrife_Action_ActionStatus_" data-uid="Kinstrife.Action.Components.ActionHooksBroadcaster.RegisterGlobalListener(Kinstrife.Action.Components.IActionEventListener,Kinstrife.Action.ActionStatus)">RegisterGlobalListener(IActionEventListener, ActionStatus)</h4>
+  <div class="markdown level1 summary"><p>Registers listener to the action globally (base node)</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void RegisterListener(IActionEventListener listener, ActionStatus StatusHooks)</code></pre>
+    <pre><code class="lang-csharp hljs">public void RegisterGlobalListener(IActionEventListener listener, ActionStatus statusHooks)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -318,7 +293,45 @@ Keyed by: BaseNode, ActionState, or ActionStateID (if appliccable)</p>
       </tr>
       <tr>
         <td><a class="xref" href="Kinstrife.Action.ActionStatus.html">ActionStatus</a></td>
-        <td><span class="parametername">StatusHooks</span></td>
+        <td><span class="parametername">statusHooks</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Kinstrife_Action_Components_ActionHooksBroadcaster_RegisterListener_" data-uid="Kinstrife.Action.Components.ActionHooksBroadcaster.RegisterListener*"></a>
+  <h4 id="Kinstrife_Action_Components_ActionHooksBroadcaster_RegisterListener_System_Int32_Kinstrife_Action_Components_IActionEventListener_Kinstrife_Action_ActionStatus_" data-uid="Kinstrife.Action.Components.ActionHooksBroadcaster.RegisterListener(System.Int32,Kinstrife.Action.Components.IActionEventListener,Kinstrife.Action.ActionStatus)">RegisterListener(Int32, IActionEventListener, ActionStatus)</h4>
+  <div class="markdown level1 summary"><p>Registers listener to a state</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void RegisterListener(int stateIndex, IActionEventListener listener, ActionStatus statusHooks)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">stateIndex</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Kinstrife.Action.Components.IActionEventListener.html">IActionEventListener</a></td>
+        <td><span class="parametername">listener</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Kinstrife.Action.ActionStatus.html">ActionStatus</a></td>
+        <td><span class="parametername">statusHooks</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -332,9 +345,6 @@ Keyed by: BaseNode, ActionState, or ActionStateID (if appliccable)</p>
   </div>
   <div>
       <span class="xref">ICloneable</span>
-  </div>
-  <div>
-      <a class="xref" href="Kinstrife.Action.Components.IRegisterListener.html">IRegisterListener</a>
   </div>
 </article>
           </div>
