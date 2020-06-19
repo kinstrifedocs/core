@@ -5,10 +5,10 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Class FloatResourceData
+    <title>Class PropertyData
    | Kinstrife </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Class FloatResourceData
+    <meta name="title" content="Class PropertyData
    | Kinstrife ">
     <meta name="generator" content="docfx 2.55.0.0">
     
@@ -68,78 +68,142 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="Kinstrife.Action.Data.FloatResourceData">
+            <article class="content wrap" id="_content" data-uid="Kinstrife.Entities.Properties.PropertyData">
   
   
-  <h1 id="Kinstrife_Action_Data_FloatResourceData" data-uid="Kinstrife.Action.Data.FloatResourceData" class="text-break">Class FloatResourceData
+  <h1 id="Kinstrife_Entities_Properties_PropertyData" data-uid="Kinstrife.Entities.Properties.PropertyData" class="text-break">Class PropertyData
   </h1>
   <div class="markdown level0 summary"></div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><a class="xref" href="Kinstrife.Action.Data.ResourceData.html">ResourceData</a></div>
-    <div class="level2"><span class="xref">FloatResourceData</span></div>
+    <div class="level1"><span class="xref">PropertyData</span></div>
+      <div class="level2"><a class="xref" href="Kinstrife.Entities.Properties.FloatPropertyData.html">FloatPropertyData</a></div>
   </div>
-  <div classs="implements">
-    <h5>Implements</h5>
-    <div><a class="xref" href="Kinstrife.Action.Data.IResourceData.html">IResourceData</a></div>
-    <div><a class="xref" href="Kinstrife.Entities.Properties.IFloatPropertyData.html">IFloatPropertyData</a></div>
-    <div><a class="xref" href="Kinstrife.Entities.Properties.IFloatProperty.html">IFloatProperty</a></div>
-  </div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
-    <div>
-      <a class="xref" href="Kinstrife.Action.Data.ResourceData.html#Kinstrife_Action_Data_ResourceData_ResourceID">ResourceData.ResourceID</a>
-    </div>
-    <div>
-      <a class="xref" href="Kinstrife.Action.Data.ResourceData.html#Kinstrife_Action_Data_ResourceData_GetHashCode">ResourceData.GetHashCode()</a>
-    </div>
-  </div>
-  <h6><strong>Namespace</strong>: <a class="xref" href="Kinstrife.Action.Data.html">Kinstrife.Action.Data</a></h6>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Kinstrife.Entities.Properties.html">Kinstrife.Entities.Properties</a></h6>
   <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
-  <h5 id="Kinstrife_Action_Data_FloatResourceData_syntax">Syntax</h5>
+  <h5 id="Kinstrife_Entities_Properties_PropertyData_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class FloatResourceData : ResourceData, IResourceData, IFloatPropertyData, IFloatProperty</code></pre>
+    <pre><code class="lang-csharp hljs">public abstract class PropertyData : ScriptableObject</code></pre>
   </div>
-  <h3 id="properties">Properties
+  <h3 id="methods">Methods
   </h3>
   
   
-  <a id="Kinstrife_Action_Data_FloatResourceData_Value_" data-uid="Kinstrife.Action.Data.FloatResourceData.Value*"></a>
-  <h4 id="Kinstrife_Action_Data_FloatResourceData_Value" data-uid="Kinstrife.Action.Data.FloatResourceData.Value">Value</h4>
+  <a id="Kinstrife_Entities_Properties_PropertyData_InitComponentData_" data-uid="Kinstrife.Entities.Properties.PropertyData.InitComponentData*"></a>
+  <h4 id="Kinstrife_Entities_Properties_PropertyData_InitComponentData__1_EntityManager__Entity____0_" data-uid="Kinstrife.Entities.Properties.PropertyData.InitComponentData``1(EntityManager@,Entity@,``0)">InitComponentData&lt;T&gt;(ref EntityManager, ref Entity, T)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public float Value { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual void InitComponentData&lt;T&gt;(ref EntityManager entityManager, ref Entity e, T component)
+    where T : struct, IComponentData, IHashCodeProperty</code></pre>
   </div>
-  <h5 class="propertyValue">Property Value</h5>
+  <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
       <tr>
         <th>Type</th>
+        <th>Name</th>
         <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Single</span></td>
+        <td><span class="xref">EntityManager</span></td>
+        <td><span class="parametername">entityManager</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">Entity</span></td>
+        <td><span class="parametername">e</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">T</span></td>
+        <td><span class="parametername">component</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
-  <h3 id="methods">Methods
-  </h3>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   
   
-  <a id="Kinstrife_Action_Data_FloatResourceData_InitRuntimeComponents_" data-uid="Kinstrife.Action.Data.FloatResourceData.InitRuntimeComponents*"></a>
-  <h4 id="Kinstrife_Action_Data_FloatResourceData_InitRuntimeComponents_EntityManager__Entity_" data-uid="Kinstrife.Action.Data.FloatResourceData.InitRuntimeComponents(EntityManager@,Entity)">InitRuntimeComponents(ref EntityManager, Entity)</h4>
+  <a id="Kinstrife_Entities_Properties_PropertyData_InitPropertyElement_" data-uid="Kinstrife.Entities.Properties.PropertyData.InitPropertyElement*"></a>
+  <h4 id="Kinstrife_Entities_Properties_PropertyData_InitPropertyElement__1_EntityManager__Entity____0_" data-uid="Kinstrife.Entities.Properties.PropertyData.InitPropertyElement``1(EntityManager@,Entity@,``0)">InitPropertyElement&lt;T&gt;(ref EntityManager, ref Entity, T)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public override void InitRuntimeComponents(ref EntityManager entityManager, Entity e)</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual void InitPropertyElement&lt;T&gt;(ref EntityManager entityManager, ref Entity e, T component)
+    where T : struct, IBufferElementData, IHashCodeProperty</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">EntityManager</span></td>
+        <td><span class="parametername">entityManager</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">Entity</span></td>
+        <td><span class="parametername">e</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">T</span></td>
+        <td><span class="parametername">component</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Kinstrife_Entities_Properties_PropertyData_InitRuntimeComponents_" data-uid="Kinstrife.Entities.Properties.PropertyData.InitRuntimeComponents*"></a>
+  <h4 id="Kinstrife_Entities_Properties_PropertyData_InitRuntimeComponents_EntityManager__Entity_" data-uid="Kinstrife.Entities.Properties.PropertyData.InitRuntimeComponents(EntityManager@,Entity)">InitRuntimeComponents(ref EntityManager, Entity)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public abstract void InitRuntimeComponents(ref EntityManager entityManager, Entity e)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -163,43 +227,6 @@
       </tr>
     </tbody>
   </table>
-  <h3 id="eii">Explicit Interface Implementations
-  </h3>
-  
-  
-  <a id="Kinstrife_Action_Data_FloatResourceData_Kinstrife_Entities_Properties_IFloatProperty_FloatProperty_" data-uid="Kinstrife.Action.Data.FloatResourceData.Kinstrife#Entities#Properties#IFloatProperty#FloatProperty*"></a>
-  <h4 id="Kinstrife_Action_Data_FloatResourceData_Kinstrife_Entities_Properties_IFloatProperty_FloatProperty" data-uid="Kinstrife.Action.Data.FloatResourceData.Kinstrife#Entities#Properties#IFloatProperty#FloatProperty">IFloatProperty.FloatProperty</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">float IFloatProperty.FloatProperty { get; set; }</code></pre>
-  </div>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Single</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h3 id="implements">Implements</h3>
-  <div>
-      <a class="xref" href="Kinstrife.Action.Data.IResourceData.html">IResourceData</a>
-  </div>
-  <div>
-      <a class="xref" href="Kinstrife.Entities.Properties.IFloatPropertyData.html">IFloatPropertyData</a>
-  </div>
-  <div>
-      <a class="xref" href="Kinstrife.Entities.Properties.IFloatProperty.html">IFloatProperty</a>
-  </div>
 </article>
           </div>
           
