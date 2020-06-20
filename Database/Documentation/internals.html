@@ -71,11 +71,11 @@
 
 <p>The database system is based on Unity's <code>ScriptableObject</code>, each entry in the database system
 is a ScriptableObject instance. In order to be identifiable via a GUID, database entry
-types must inherit from <a class="xref" href="../../Documentation/api/Kinstrife.Identifier.IdentifiableObject.html">IdentifiableObject</a>, which
+types must inherit from <a href="xref:Kinstrife.Identifier.IdentifiableObject">IdentifiableObject</a>, which
 is a type of ScriptableObject that also contains a serializable, accessible GUID.</p>
 <p>The database itself is essentially a giant <code>Dictionary&lt;GUID, IdentifiableObject&gt;</code>.
-The <a class="xref" href="../../Documentation/api/Kinstrife.Database.DatabaseAccessor.html">DatabaseAccessor</a>
-allows convenient retrieval of elements by <a class="xref" href="../../Documentation/api/Kinstrife.Identifier.Guid.html">GUID</a> and <code>type</code>.
+The <a href="xref:Kinstrife.Database.DatabaseAccessor">DatabaseAccessor</a>
+allows convenient retrieval of elements by <a href="xref:Kinstrife.Identifier.Guid">GUID</a> and <code>type</code>.
 The <a href="xref:Kinstrife.Database.DatabaseLocator">DatabaseLocator</a> locates folders/data paths that
 should be searched for database entries. For now, this only works for files in Resources/Datbase/
 directories. Located database entries are injected into the database by the

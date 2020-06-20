@@ -111,6 +111,30 @@
   </h3>
   
   
+  <h4 id="Kinstrife_Action_Components_ActionState_CurrentIterationTimeActive" data-uid="Kinstrife.Action.Components.ActionState.CurrentIterationTimeActive">CurrentIterationTimeActive</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float CurrentIterationTimeActive</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
   <h4 id="Kinstrife_Action_Components_ActionState_Duration" data-uid="Kinstrife.Action.Components.ActionState.Duration">Duration</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
@@ -159,6 +183,31 @@
   </table>
   
   
+  <h4 id="Kinstrife_Action_Components_ActionState_Iteration" data-uid="Kinstrife.Action.Components.ActionState.Iteration">Iteration</h4>
+  <div class="markdown level1 summary"><p>Current iteration state is active</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int Iteration</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
   <h4 id="Kinstrife_Action_Components_ActionState_Loop" data-uid="Kinstrife.Action.Components.ActionState.Loop">Loop</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
@@ -177,6 +226,31 @@
     <tbody>
       <tr>
         <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="Kinstrife_Action_Components_ActionState_Phase" data-uid="Kinstrife.Action.Components.ActionState.Phase">Phase</h4>
+  <div class="markdown level1 summary"><p>Normalized time in current iteration cycle</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float Phase</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -232,7 +306,7 @@
   
   
   <h4 id="Kinstrife_Action_Components_ActionState_TimeActive" data-uid="Kinstrife.Action.Components.ActionState.TimeActive">TimeActive</h4>
-  <div class="markdown level1 summary"><p>Time in current state</p>
+  <div class="markdown level1 summary"><p>Total time current state is active</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -273,38 +347,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="Kinstrife.Action.Graph.TransitionMode.html">TransitionMode</a></td>
+        <td><span class="xref">TransitionMode</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <h3 id="properties">Properties
   </h3>
-  
-  
-  <a id="Kinstrife_Action_Components_ActionState_Default_" data-uid="Kinstrife.Action.Components.ActionState.Default*"></a>
-  <h4 id="Kinstrife_Action_Components_ActionState_Default" data-uid="Kinstrife.Action.Components.ActionState.Default">Default</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static ActionState Default { get; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Kinstrife.Action.Components.ActionState.html">ActionState</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
   
   
   <a id="Kinstrife_Action_Components_ActionState_IsAndWillBeActive_" data-uid="Kinstrife.Action.Components.ActionState.IsAndWillBeActive*"></a>
@@ -542,6 +591,31 @@
       <tr>
         <td><a class="xref" href="Kinstrife.Action.ActionStatus.html">ActionStatus</a></td>
         <td><span class="parametername">status</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Kinstrife_Action_Components_ActionState_ScheduleNextIteration_" data-uid="Kinstrife.Action.Components.ActionState.ScheduleNextIteration*"></a>
+  <h4 id="Kinstrife_Action_Components_ActionState_ScheduleNextIteration" data-uid="Kinstrife.Action.Components.ActionState.ScheduleNextIteration">ScheduleNextIteration()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ActionState ScheduleNextIteration()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Kinstrife.Action.Components.ActionState.html">ActionState</a></td>
         <td></td>
       </tr>
     </tbody>

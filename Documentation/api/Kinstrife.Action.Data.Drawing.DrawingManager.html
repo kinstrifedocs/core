@@ -1,0 +1,468 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class DrawingManager
+   | Kinstrife </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class DrawingManager
+   | Kinstrife ">
+    <meta name="generator" content="docfx 2.55.0.0">
+    
+    <link rel="shortcut icon" href="../../favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet"> 
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../index.html">
+                <img id="logo" class="svg" src="../../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Kinstrife.Action.Data.Drawing.DrawingManager">
+  
+  
+  <h1 id="Kinstrife_Action_Data_Drawing_DrawingManager" data-uid="Kinstrife.Action.Data.Drawing.DrawingManager" class="text-break">Class DrawingManager
+  </h1>
+  <div class="markdown level0 summary"><p>Global script which draws debug items and gizmos.
+If a Draw.* method has been used or if any script inheriting from the <a class="xref" href="Kinstrife.Action.Data.Drawing.MonoBehaviourGizmos.html">MonoBehaviourGizmos</a> class is in the scene then an instance of this script
+will be created and put on a hidden GameObject.</p>
+<p>It will inject drawing logic into any cameras that are rendered.</p>
+<p>Usually you never have to interact with this class.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">DrawingManager</span></div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Kinstrife.Action.Data.Drawing.html">Kinstrife.Action.Data.Drawing</a></h6>
+  <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
+  <h5 id="Kinstrife_Action_Data_Drawing_DrawingManager_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class DrawingManager : MonoBehaviour</code></pre>
+  </div>
+  <h3 id="fields">Fields
+  </h3>
+  
+  
+  <h4 id="Kinstrife_Action_Data_Drawing_DrawingManager_allowRenderToRenderTextures" data-uid="Kinstrife.Action.Data.Drawing.DrawingManager.allowRenderToRenderTextures">allowRenderToRenderTextures</h4>
+  <div class="markdown level1 summary"><p>Allow rendering to cameras that render to RenderTextures.
+By default cameras which render to render textures are never rendered to.
+You may enable this if you wish.</p>
+<p>See: <a class="xref" href="Kinstrife.Action.Data.Drawing.CommandBuilder.html#Kinstrife_Action_Data_Drawing_CommandBuilder_cameraTargets">cameraTargets</a>
+See: advanced (view in online documentation for working links)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool allowRenderToRenderTextures</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="Kinstrife_Action_Data_Drawing_DrawingManager_drawToAllCameras" data-uid="Kinstrife.Action.Data.Drawing.DrawingManager.drawToAllCameras">drawToAllCameras</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool drawToAllCameras</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="Kinstrife_Action_Data_Drawing_DrawingManager_gizmos" data-uid="Kinstrife.Action.Data.Drawing.DrawingManager.gizmos">gizmos</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public DrawingData gizmos</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Kinstrife.Action.Data.Drawing.DrawingData.html">DrawingData</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="properties">Properties
+  </h3>
+  
+  
+  <a id="Kinstrife_Action_Data_Drawing_DrawingManager_instance_" data-uid="Kinstrife.Action.Data.Drawing.DrawingManager.instance*"></a>
+  <h4 id="Kinstrife_Action_Data_Drawing_DrawingManager_instance" data-uid="Kinstrife.Action.Data.Drawing.DrawingManager.instance">instance</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static DrawingManager instance { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Kinstrife.Action.Data.Drawing.DrawingManager.html">DrawingManager</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  
+  
+  <a id="Kinstrife_Action_Data_Drawing_DrawingManager_GetBuilder_" data-uid="Kinstrife.Action.Data.Drawing.DrawingManager.GetBuilder*"></a>
+  <h4 id="Kinstrife_Action_Data_Drawing_DrawingManager_GetBuilder_Kinstrife_Action_Data_Drawing_DrawingData_Hasher_Kinstrife_Action_Data_Drawing_RedrawScope_System_Boolean_" data-uid="Kinstrife.Action.Data.Drawing.DrawingManager.GetBuilder(Kinstrife.Action.Data.Drawing.DrawingData.Hasher,Kinstrife.Action.Data.Drawing.RedrawScope,System.Boolean)">GetBuilder(DrawingData.Hasher, RedrawScope, Boolean)</h4>
+  <div class="markdown level1 summary"><p>Get an empty builder for queuing drawing commands.
+TODO: Example usage.</p>
+<p>See: <a class="xref" href="Kinstrife.Action.Data.Drawing.CommandBuilder.html">CommandBuilder</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static CommandBuilder GetBuilder(DrawingData.Hasher hasher, RedrawScope redrawScope = default(RedrawScope), bool renderInGame = false)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Kinstrife.Action.Data.Drawing.DrawingData.Hasher.html">DrawingData.Hasher</a></td>
+        <td><span class="parametername">hasher</span></td>
+        <td><p>Hash of whatever inputs you used to generate the drawing data.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Kinstrife.Action.Data.Drawing.RedrawScope.html">RedrawScope</a></td>
+        <td><span class="parametername">redrawScope</span></td>
+        <td><p>Scope for this command builder. See #GetRedrawScope.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">renderInGame</span></td>
+        <td><p>If true, this builder will be rendered in standalone games and in the editor even if gizmos are disabled.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Kinstrife.Action.Data.Drawing.CommandBuilder.html">CommandBuilder</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Kinstrife_Action_Data_Drawing_DrawingManager_GetBuilder_" data-uid="Kinstrife.Action.Data.Drawing.DrawingManager.GetBuilder*"></a>
+  <h4 id="Kinstrife_Action_Data_Drawing_DrawingManager_GetBuilder_Kinstrife_Action_Data_Drawing_RedrawScope_System_Boolean_" data-uid="Kinstrife.Action.Data.Drawing.DrawingManager.GetBuilder(Kinstrife.Action.Data.Drawing.RedrawScope,System.Boolean)">GetBuilder(RedrawScope, Boolean)</h4>
+  <div class="markdown level1 summary"><p>Get an empty builder for queuing drawing commands.</p>
+<p>See: <a class="xref" href="Kinstrife.Action.Data.Drawing.CommandBuilder.html">CommandBuilder</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static CommandBuilder GetBuilder(RedrawScope redrawScope, bool renderInGame = false)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Kinstrife.Action.Data.Drawing.RedrawScope.html">RedrawScope</a></td>
+        <td><span class="parametername">redrawScope</span></td>
+        <td><p>Scope for this command builder. See #GetRedrawScope.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">renderInGame</span></td>
+        <td><p>If true, this builder will be rendered in standalone games and in the editor even if gizmos are disabled.
+If false, it will only be rendered in the editor when gizmos are enabled.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Kinstrife.Action.Data.Drawing.CommandBuilder.html">CommandBuilder</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Kinstrife_Action_Data_Drawing_DrawingManager_GetBuilder_" data-uid="Kinstrife.Action.Data.Drawing.DrawingManager.GetBuilder*"></a>
+  <h4 id="Kinstrife_Action_Data_Drawing_DrawingManager_GetBuilder_System_Boolean_" data-uid="Kinstrife.Action.Data.Drawing.DrawingManager.GetBuilder(System.Boolean)">GetBuilder(Boolean)</h4>
+  <div class="markdown level1 summary"><p>Get an empty builder for queuing drawing commands.</p>
+<pre><code>// Create a new CommandBuilder
+using (var draw = DrawingManager.GetBuilder()) {
+    // Use the exact same API as the global Draw class
+    draw.WireBox(Vector3.zero, Vector3.one);
+}</code></pre>
+<p>See: <a class="xref" href="Kinstrife.Action.Data.Drawing.CommandBuilder.html">CommandBuilder</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static CommandBuilder GetBuilder(bool renderInGame = false)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">renderInGame</span></td>
+        <td><p>If true, this builder will be rendered in standalone games and in the editor even if gizmos are disabled.
+If false, it will only be rendered in the editor when gizmos are enabled.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Kinstrife.Action.Data.Drawing.CommandBuilder.html">CommandBuilder</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Kinstrife_Action_Data_Drawing_DrawingManager_GetRedrawScope_" data-uid="Kinstrife.Action.Data.Drawing.DrawingManager.GetRedrawScope*"></a>
+  <h4 id="Kinstrife_Action_Data_Drawing_DrawingManager_GetRedrawScope" data-uid="Kinstrife.Action.Data.Drawing.DrawingManager.GetRedrawScope">GetRedrawScope()</h4>
+  <div class="markdown level1 summary"><p>A scope which can be used to draw things over multiple frames.
+You can use <a class="xref" href="Kinstrife.Action.Data.Drawing.DrawingManager.html#Kinstrife_Action_Data_Drawing_DrawingManager_GetBuilder_Kinstrife_Action_Data_Drawing_RedrawScope_System_Boolean_">GetBuilder(RedrawScope, Boolean)</a> to get a builder with a given redraw scope.
+After you have disposed the builder you may call <a class="xref" href="Kinstrife.Action.Data.Drawing.RedrawScope.html#Kinstrife_Action_Data_Drawing_RedrawScope_Draw">Draw()</a> in any number of future frames to render the command builder again.</p>
+<p>Note: The data will only be kept if <a class="xref" href="Kinstrife.Action.Data.Drawing.RedrawScope.html#Kinstrife_Action_Data_Drawing_RedrawScope_Draw">Draw()</a> is called every frame.
+The command builder's data will be cleared if you do not call <a class="xref" href="Kinstrife.Action.Data.Drawing.RedrawScope.html#Kinstrife_Action_Data_Drawing_RedrawScope_Draw">Draw()</a> in a future frame.
+After that point calling <a class="xref" href="Kinstrife.Action.Data.Drawing.RedrawScope.html#Kinstrife_Action_Data_Drawing_RedrawScope_Draw">Draw()</a> will not do anything.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static RedrawScope GetRedrawScope()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Kinstrife.Action.Data.Drawing.RedrawScope.html">RedrawScope</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Kinstrife_Action_Data_Drawing_DrawingManager_Init_" data-uid="Kinstrife.Action.Data.Drawing.DrawingManager.Init*"></a>
+  <h4 id="Kinstrife_Action_Data_Drawing_DrawingManager_Init" data-uid="Kinstrife.Action.Data.Drawing.DrawingManager.Init">Init()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void Init()</code></pre>
+  </div>
+  
+  
+  <a id="Kinstrife_Action_Data_Drawing_DrawingManager_Register_" data-uid="Kinstrife.Action.Data.Drawing.DrawingManager.Register*"></a>
+  <h4 id="Kinstrife_Action_Data_Drawing_DrawingManager_Register_Kinstrife_Action_Data_Drawing_IDrawGizmos_" data-uid="Kinstrife.Action.Data.Drawing.DrawingManager.Register(Kinstrife.Action.Data.Drawing.IDrawGizmos)">Register(IDrawGizmos)</h4>
+  <div class="markdown level1 summary"><p>Registers an object for gizmo drawing.
+The DrawGizmos method on the object will be called every frame until it is destroyed (assuming there are cameras with gizmos enabled).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void Register(IDrawGizmos item)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Kinstrife.Action.Data.Drawing.IDrawGizmos.html">IDrawGizmos</a></td>
+        <td><span class="parametername">item</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+  </body>
+</html>
