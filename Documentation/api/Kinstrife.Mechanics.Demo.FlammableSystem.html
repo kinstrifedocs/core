@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class FlammableSystem
    | Kinstrife ">
-    <meta name="generator" content="docfx 2.55.0.0">
+    <meta name="generator" content="docfx 2.56.0.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
@@ -82,13 +82,14 @@
   </div>
   <div classs="implements">
     <h5>Implements</h5>
-    <div><span class="xref">IInjectable</span></div>
+    <div><a class="xref" href="Kinstrife.Core.DependencyInjection.IInjectable.html">IInjectable</a></div>
+    <div><a class="xref" href="Kinstrife.Core.DependencyInjection.IDependentBase.html">IDependentBase</a></div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Kinstrife.Mechanics.Demo.html">Kinstrife.Mechanics.Demo</a></h6>
   <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
   <h5 id="Kinstrife_Mechanics_Demo_FlammableSystem_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class FlammableSystem : JobComponentSystemBase, IInjectable</code></pre>
+    <pre><code class="lang-csharp hljs">public class FlammableSystem : JobComponentSystemBase, IInjectable, IDependentBase</code></pre>
   </div>
   <h3 id="fields">Fields
   </h3>
@@ -168,117 +169,6 @@
   </h3>
   
   
-  <a id="Kinstrife_Mechanics_Demo_FlammableSystem_AddComponent_" data-uid="Kinstrife.Mechanics.Demo.FlammableSystem.AddComponent*"></a>
-  <h4 id="Kinstrife_Mechanics_Demo_FlammableSystem_AddComponent__1_System_Int32_Entity_EntityCommandBuffer_Concurrent__" data-uid="Kinstrife.Mechanics.Demo.FlammableSystem.AddComponent``1(System.Int32,Entity,EntityCommandBuffer.Concurrent@)">AddComponent&lt;T&gt;(Int32, Entity, ref EntityCommandBuffer.Concurrent)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static void AddComponent&lt;T&gt;(int entityInQueryIndex, Entity e, ref EntityCommandBuffer.Concurrent commandBuffer)
-    where T : struct, IComponentData</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Int32</span></td>
-        <td><span class="parametername">entityInQueryIndex</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><span class="xref">Entity</span></td>
-        <td><span class="parametername">e</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><span class="xref">EntityCommandBuffer.Concurrent</span></td>
-        <td><span class="parametername">commandBuffer</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="typeParameters">Type Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="parametername">T</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="Kinstrife_Mechanics_Demo_FlammableSystem_AddComponentData_" data-uid="Kinstrife.Mechanics.Demo.FlammableSystem.AddComponentData*"></a>
-  <h4 id="Kinstrife_Mechanics_Demo_FlammableSystem_AddComponentData__1___0_System_Int32_Entity_EntityCommandBuffer_Concurrent__" data-uid="Kinstrife.Mechanics.Demo.FlammableSystem.AddComponentData``1(``0,System.Int32,Entity,EntityCommandBuffer.Concurrent@)">AddComponentData&lt;T&gt;(T, Int32, Entity, ref EntityCommandBuffer.Concurrent)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static void AddComponentData&lt;T&gt;(T componentData, int entityInQueryIndex, Entity e, ref EntityCommandBuffer.Concurrent commandBuffer)
-    where T : struct, IComponentData</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">T</span></td>
-        <td><span class="parametername">componentData</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><span class="xref">System.Int32</span></td>
-        <td><span class="parametername">entityInQueryIndex</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><span class="xref">Entity</span></td>
-        <td><span class="parametername">e</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><span class="xref">EntityCommandBuffer.Concurrent</span></td>
-        <td><span class="parametername">commandBuffer</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="typeParameters">Type Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="parametername">T</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
   <a id="Kinstrife_Mechanics_Demo_FlammableSystem_Inject_" data-uid="Kinstrife.Mechanics.Demo.FlammableSystem.Inject*"></a>
   <h4 id="Kinstrife_Mechanics_Demo_FlammableSystem_Inject_Kinstrife_Mechanics_Demo_FireGameplaySystemConfig_Kinstrife_Mechanics_Demo_FireSystem_" data-uid="Kinstrife.Mechanics.Demo.FlammableSystem.Inject(Kinstrife.Mechanics.Demo.FireGameplaySystemConfig,Kinstrife.Mechanics.Demo.FireSystem)">Inject(FireGameplaySystemConfig, FireSystem)</h4>
   <div class="markdown level1 summary"></div>
@@ -353,7 +243,10 @@
   </table>
   <h3 id="implements">Implements</h3>
   <div>
-      <span class="xref">IInjectable</span>
+      <a class="xref" href="Kinstrife.Core.DependencyInjection.IInjectable.html">IInjectable</a>
+  </div>
+  <div>
+      <a class="xref" href="Kinstrife.Core.DependencyInjection.IDependentBase.html">IDependentBase</a>
   </div>
 </article>
           </div>

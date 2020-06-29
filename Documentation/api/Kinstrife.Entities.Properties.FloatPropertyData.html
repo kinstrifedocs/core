@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class FloatPropertyData
    | Kinstrife ">
-    <meta name="generator" content="docfx 2.55.0.0">
+    <meta name="generator" content="docfx 2.56.0.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
@@ -78,28 +78,30 @@
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><a class="xref" href="Kinstrife.Entities.Properties.PropertyData.html">PropertyData</a></div>
-    <div class="level2"><span class="xref">FloatPropertyData</span></div>
+    <div class="level1"><a class="xref" href="Kinstrife.Entities.Properties.ConvertibleData.html">ConvertibleData</a></div>
+    <div class="level2"><a class="xref" href="Kinstrife.Entities.Properties.PropertyData.html">PropertyData</a></div>
+    <div class="level3"><span class="xref">FloatPropertyData</span></div>
   </div>
   <div classs="implements">
     <h5>Implements</h5>
+    <div><a class="xref" href="Kinstrife.Entities.Properties.IConvertible.html">IConvertible</a></div>
     <div><a class="xref" href="Kinstrife.Entities.Properties.IFloatPropertyData.html">IFloatPropertyData</a></div>
     <div><a class="xref" href="Kinstrife.Entities.Properties.IFloatProperty.html">IFloatProperty</a></div>
   </div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
     <div>
-      <a class="xref" href="Kinstrife.Entities.Properties.PropertyData.html#Kinstrife_Entities_Properties_PropertyData_InitComponentData__1_EntityManager__Entity____0_">PropertyData.InitComponentData&lt;T&gt;(EntityManager, Entity, T)</a>
+      <a class="xref" href="Kinstrife.Entities.Properties.ConvertibleData.html#Kinstrife_Entities_Properties_ConvertibleData_InitComponentData__1_EntityManager__Entity____0_">ConvertibleData.InitComponentData&lt;T&gt;(EntityManager, Entity, T)</a>
     </div>
     <div>
-      <a class="xref" href="Kinstrife.Entities.Properties.PropertyData.html#Kinstrife_Entities_Properties_PropertyData_InitPropertyElement__1_EntityManager__Entity____0_">PropertyData.InitPropertyElement&lt;T&gt;(EntityManager, Entity, T)</a>
+      <a class="xref" href="Kinstrife.Entities.Properties.ConvertibleData.html#Kinstrife_Entities_Properties_ConvertibleData_InitBufferElementData__1_EntityManager__Entity____0_">ConvertibleData.InitBufferElementData&lt;T&gt;(EntityManager, Entity, T)</a>
     </div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Kinstrife.Entities.Properties.html">Kinstrife.Entities.Properties</a></h6>
   <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
   <h5 id="Kinstrife_Entities_Properties_FloatPropertyData_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class FloatPropertyData : PropertyData, IFloatPropertyData, IFloatProperty</code></pre>
+    <pre><code class="lang-csharp hljs">public class FloatPropertyData : PropertyData, IConvertible, IFloatPropertyData, IFloatProperty</code></pre>
   </div>
   <h3 id="properties">Properties
   </h3>
@@ -221,7 +223,7 @@
     </tbody>
   </table>
   <h5 class="overrides">Overrides</h5>
-  <div><a class="xref" href="Kinstrife.Entities.Properties.PropertyData.html#Kinstrife_Entities_Properties_PropertyData_InitRuntimeComponents_EntityManager__Entity_">PropertyData.InitRuntimeComponents(ref EntityManager, Entity)</a></div>
+  <div><a class="xref" href="Kinstrife.Entities.Properties.ConvertibleData.html#Kinstrife_Entities_Properties_ConvertibleData_InitRuntimeComponents_EntityManager__Entity_">ConvertibleData.InitRuntimeComponents(ref EntityManager, Entity)</a></div>
   <h3 id="eii">Explicit Interface Implementations
   </h3>
   
@@ -250,6 +252,9 @@
     </tbody>
   </table>
   <h3 id="implements">Implements</h3>
+  <div>
+      <a class="xref" href="Kinstrife.Entities.Properties.IConvertible.html">IConvertible</a>
+  </div>
   <div>
       <a class="xref" href="Kinstrife.Entities.Properties.IFloatPropertyData.html">IFloatPropertyData</a>
   </div>

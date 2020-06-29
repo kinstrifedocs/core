@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class JobComponentSystemBase
    | Kinstrife ">
-    <meta name="generator" content="docfx 2.55.0.0">
+    <meta name="generator" content="docfx 2.56.0.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
@@ -80,9 +80,9 @@
     <div class="level0"><span class="xref">System.Object</span></div>
     <div class="level1"><span class="xref">JobComponentSystemBase</span></div>
       <div class="level2"><a class="xref" href="Kinstrife.Action.ActionOutputFloat3System.html">ActionOutputFloat3System</a></div>
-      <div class="level2"><a class="xref" href="Kinstrife.Action.ActionOutputResourceSystem.html">ActionOutputResourceSystem</a></div>
       <div class="level2"><a class="xref" href="Kinstrife.Action.ActionOutputSignalSystem.html">ActionOutputSignalSystem</a></div>
       <div class="level2"><a class="xref" href="Kinstrife.Action.ActionOutputSoundSystem.html">ActionOutputSoundSystem</a></div>
+      <div class="level2"><a class="xref" href="Kinstrife.Action.ActionOutputSystemBase.html">ActionOutputSystemBase</a></div>
       <div class="level2"><a class="xref" href="Kinstrife.Action.ActionOutputVFXSystem.html">ActionOutputVFXSystem</a></div>
       <div class="level2"><a class="xref" href="Kinstrife.Action.ActionScheduleSystem.html">ActionScheduleSystem</a></div>
       <div class="level2"><a class="xref" href="Kinstrife.Action.ActionStateScheduleSystem.html">ActionStateScheduleSystem</a></div>
@@ -92,6 +92,7 @@
       <div class="level2"><a class="xref" href="Kinstrife.Action.Systems.ActionActivatorSystem.html">ActionActivatorSystem</a></div>
       <div class="level2"><a class="xref" href="Kinstrife.Action.Systems.ActionEventsSystem.html">ActionEventsSystem</a></div>
       <div class="level2"><a class="xref" href="Kinstrife.Action.Systems.ActionStartStopSystem.html">ActionStartStopSystem</a></div>
+      <div class="level2"><a class="xref" href="Kinstrife.Action.Systems.SignalUtilSystem.html">SignalUtilSystem</a></div>
       <div class="level2"><a class="xref" href="Kinstrife.Entities.Systems.EntityGroupSystem.html">EntityGroupSystem</a></div>
       <div class="level2"><a class="xref" href="Kinstrife.Entities.Systems.EntitySelectionSystem.html">EntitySelectionSystem</a></div>
       <div class="level2"><a class="xref" href="Kinstrife.Entities.Systems.MouseToScreenSelectionSystem.html">MouseToScreenSelectionSystem</a></div>
@@ -188,6 +189,47 @@
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public int Count&lt;T&gt;()
     where T : struct, IComponentData</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Kinstrife_Entities_Systems_JobComponentSystemBase_CountHasBuffer_" data-uid="Kinstrife.Entities.Systems.JobComponentSystemBase.CountHasBuffer*"></a>
+  <h4 id="Kinstrife_Entities_Systems_JobComponentSystemBase_CountHasBuffer__1" data-uid="Kinstrife.Entities.Systems.JobComponentSystemBase.CountHasBuffer``1">CountHasBuffer&lt;T&gt;()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int CountHasBuffer&lt;T&gt;()
+    where T : struct, IBufferElementData</code></pre>
   </div>
   <h5 class="returns">Returns</h5>
   <table class="table table-bordered table-striped table-condensed">

@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class ScriptableObjectInstaller
    | Kinstrife ">
-    <meta name="generator" content="docfx 2.55.0.0">
+    <meta name="generator" content="docfx 2.56.0.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
@@ -82,7 +82,7 @@
       <div class="level2"><a class="xref" href="Kinstrife.Audio.AudioInstaller.html">AudioInstaller</a></div>
       <div class="level2"><a class="xref" href="Kinstrife.Collisions.CollisionSystemInstaller.html">CollisionSystemInstaller</a></div>
       <div class="level2"><a class="xref" href="Kinstrife.Database.DatabaseInstaller.html">DatabaseInstaller</a></div>
-      <div class="level2"><a class="xref" href="Kinstrife.Entities.DependencyInjection.ECSScriptableObjectInstaller.html">ECSScriptableObjectInstaller</a></div>
+      <div class="level2"><a class="xref" href="Kinstrife.Entities.DependencyInjection.DOTSScriptableObjectInstaller.html">DOTSScriptableObjectInstaller</a></div>
       <div class="level2"><a class="xref" href="Kinstrife.Vfx.VfxInstaller.html">VfxInstaller</a></div>
   </div>
   <div classs="implements">
@@ -95,6 +95,108 @@
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public abstract class ScriptableObjectInstaller : ScriptableObject, IInstaller</code></pre>
   </div>
+  <h3 id="fields">Fields
+  </h3>
+  
+  
+  <h4 id="Kinstrife_Core_DependencyInjection_ScriptableObjectInstaller__Initializables" data-uid="Kinstrife.Core.DependencyInjection.ScriptableObjectInstaller._Initializables">_Initializables</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected List&lt;IInitializable&gt; _Initializables</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.List</span>&lt;<a class="xref" href="Kinstrife.Core.DependencyInjection.IInitializable.html">IInitializable</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="Kinstrife_Core_DependencyInjection_ScriptableObjectInstaller__Injectables" data-uid="Kinstrife.Core.DependencyInjection.ScriptableObjectInstaller._Injectables">_Injectables</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected List&lt;IInjectable&gt; _Injectables</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.List</span>&lt;<a class="xref" href="Kinstrife.Core.DependencyInjection.IInjectable.html">IInjectable</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="properties">Properties
+  </h3>
+  
+  
+  <a id="Kinstrife_Core_DependencyInjection_ScriptableObjectInstaller_Initializables_" data-uid="Kinstrife.Core.DependencyInjection.ScriptableObjectInstaller.Initializables*"></a>
+  <h4 id="Kinstrife_Core_DependencyInjection_ScriptableObjectInstaller_Initializables" data-uid="Kinstrife.Core.DependencyInjection.ScriptableObjectInstaller.Initializables">Initializables</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IReadOnlyList&lt;IInitializable&gt; Initializables { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IReadOnlyList</span>&lt;<a class="xref" href="Kinstrife.Core.DependencyInjection.IInitializable.html">IInitializable</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Kinstrife_Core_DependencyInjection_ScriptableObjectInstaller_Injectables_" data-uid="Kinstrife.Core.DependencyInjection.ScriptableObjectInstaller.Injectables*"></a>
+  <h4 id="Kinstrife_Core_DependencyInjection_ScriptableObjectInstaller_Injectables" data-uid="Kinstrife.Core.DependencyInjection.ScriptableObjectInstaller.Injectables">Injectables</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IReadOnlyList&lt;IInjectable&gt; Injectables { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IReadOnlyList</span>&lt;<a class="xref" href="Kinstrife.Core.DependencyInjection.IInjectable.html">IInjectable</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   <h3 id="methods">Methods
   </h3>
   

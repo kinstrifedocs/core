@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class FireGameplaySystemConfig
    | Kinstrife ">
-    <meta name="generator" content="docfx 2.55.0.0">
+    <meta name="generator" content="docfx 2.56.0.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
@@ -78,14 +78,48 @@
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><span class="xref">FireGameplaySystemConfig</span></div>
+    <div class="level1"><a class="xref" href="Kinstrife.Core.Config.ConfigData.html">ConfigData</a></div>
+    <div class="level2"><span class="xref">FireGameplaySystemConfig</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="Kinstrife.Core.Config.ConfigData.html#Kinstrife_Core_Config_ConfigData_ValidateSingleton_System_Type_">ConfigData.ValidateSingleton(Type)</a>
+    </div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Kinstrife.Mechanics.Demo.html">Kinstrife.Mechanics.Demo</a></h6>
   <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
   <h5 id="Kinstrife_Mechanics_Demo_FireGameplaySystemConfig_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class FireGameplaySystemConfig : Core.Config.ConfigData</code></pre>
+    <pre><code class="lang-csharp hljs">[ConfigMenu(&quot;Mechanics/FireGameplaySystemConfig&quot;)]
+public class FireGameplaySystemConfig : ConfigData</code></pre>
   </div>
+  <h3 id="fields">Fields
+  </h3>
+  
+  
+  <h4 id="Kinstrife_Mechanics_Demo_FireGameplaySystemConfig_Mode" data-uid="Kinstrife.Mechanics.Demo.FireGameplaySystemConfig.Mode">Mode</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public DebugFireSystem.DebugMode Mode</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Kinstrife.Mechanics.Demo.DebugFireSystem.DebugMode.html">DebugFireSystem.DebugMode</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   <h3 id="properties">Properties
   </h3>
   
@@ -159,6 +193,31 @@
     <tbody>
       <tr>
         <td><span class="xref">System.Single</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Kinstrife_Mechanics_Demo_FireGameplaySystemConfig_FireActiveSignal_" data-uid="Kinstrife.Mechanics.Demo.FireGameplaySystemConfig.FireActiveSignal*"></a>
+  <h4 id="Kinstrife_Mechanics_Demo_FireGameplaySystemConfig_FireActiveSignal" data-uid="Kinstrife.Mechanics.Demo.FireGameplaySystemConfig.FireActiveSignal">FireActiveSignal</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Signal FireActiveSignal { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Kinstrife.Action.Data.Signal.html">Signal</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -338,6 +397,8 @@
       </tr>
     </tbody>
   </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Kinstrife.Core.Config.ConfigData.html#Kinstrife_Core_Config_ConfigData_Moddable">ConfigData.Moddable</a></div>
   
   
   <a id="Kinstrife_Mechanics_Demo_FireGameplaySystemConfig_OnFireMultiplier_" data-uid="Kinstrife.Mechanics.Demo.FireGameplaySystemConfig.OnFireMultiplier*"></a>
@@ -363,6 +424,31 @@
       </tr>
     </tbody>
   </table>
+  
+  
+  <a id="Kinstrife_Mechanics_Demo_FireGameplaySystemConfig_OnFireSignal_" data-uid="Kinstrife.Mechanics.Demo.FireGameplaySystemConfig.OnFireSignal*"></a>
+  <h4 id="Kinstrife_Mechanics_Demo_FireGameplaySystemConfig_OnFireSignal" data-uid="Kinstrife.Mechanics.Demo.FireGameplaySystemConfig.OnFireSignal">OnFireSignal</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Signal OnFireSignal { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Kinstrife.Action.Data.Signal.html">Signal</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   <h3 id="methods">Methods
   </h3>
   
@@ -375,6 +461,8 @@
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">protected override void Initialize()</code></pre>
   </div>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Kinstrife.Core.Config.ConfigData.html#Kinstrife_Core_Config_ConfigData_Initialize">ConfigData.Initialize()</a></div>
   
   
   <a id="Kinstrife_Mechanics_Demo_FireGameplaySystemConfig_OnValidate_" data-uid="Kinstrife.Mechanics.Demo.FireGameplaySystemConfig.OnValidate*"></a>

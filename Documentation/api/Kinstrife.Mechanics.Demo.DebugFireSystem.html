@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class DebugFireSystem
    | Kinstrife ">
-    <meta name="generator" content="docfx 2.55.0.0">
+    <meta name="generator" content="docfx 2.56.0.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
@@ -80,49 +80,65 @@
     <div class="level0"><span class="xref">System.Object</span></div>
     <div class="level1"><span class="xref">DebugFireSystem</span></div>
   </div>
+  <div classs="implements">
+    <h5>Implements</h5>
+    <div><a class="xref" href="Kinstrife.Core.DependencyInjection.IInjectable.html">IInjectable</a></div>
+    <div><a class="xref" href="Kinstrife.Core.DependencyInjection.IDependentBase.html">IDependentBase</a></div>
+  </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Kinstrife.Mechanics.Demo.html">Kinstrife.Mechanics.Demo</a></h6>
   <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
   <h5 id="Kinstrife_Mechanics_Demo_DebugFireSystem_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class DebugFireSystem : DebugSystem</code></pre>
+    <pre><code class="lang-csharp hljs">public class DebugFireSystem : JobComponentSystemBase, IInjectable, IDependentBase</code></pre>
   </div>
-  <h3 id="fields">Fields
+  <h3 id="methods">Methods
   </h3>
   
   
-  <h4 id="Kinstrife_Mechanics_Demo_DebugFireSystem_Mode" data-uid="Kinstrife.Mechanics.Demo.DebugFireSystem.Mode">Mode</h4>
+  <a id="Kinstrife_Mechanics_Demo_DebugFireSystem_Inject_" data-uid="Kinstrife.Mechanics.Demo.DebugFireSystem.Inject*"></a>
+  <h4 id="Kinstrife_Mechanics_Demo_DebugFireSystem_Inject_Kinstrife_Mechanics_Demo_FireGameplaySystemConfig_" data-uid="Kinstrife.Mechanics.Demo.DebugFireSystem.Inject(Kinstrife.Mechanics.Demo.FireGameplaySystemConfig)">Inject(FireGameplaySystemConfig)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public DebugFireSystem.DebugMode Mode</code></pre>
+    <pre><code class="lang-csharp hljs">public void Inject(FireGameplaySystemConfig Config)</code></pre>
   </div>
-  <h5 class="fieldValue">Field Value</h5>
+  <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
       <tr>
         <th>Type</th>
+        <th>Name</th>
         <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="Kinstrife.Mechanics.Demo.DebugFireSystem.DebugMode.html">DebugFireSystem.DebugMode</a></td>
+        <td><a class="xref" href="Kinstrife.Mechanics.Demo.FireGameplaySystemConfig.html">FireGameplaySystemConfig</a></td>
+        <td><span class="parametername">Config</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
-  <h3 id="methods">Methods
-  </h3>
   
   
-  <a id="Kinstrife_Mechanics_Demo_DebugFireSystem_DrawDebug_" data-uid="Kinstrife.Mechanics.Demo.DebugFireSystem.DrawDebug*"></a>
-  <h4 id="Kinstrife_Mechanics_Demo_DebugFireSystem_DrawDebug_JobHandle_" data-uid="Kinstrife.Mechanics.Demo.DebugFireSystem.DrawDebug(JobHandle)">DrawDebug(JobHandle)</h4>
+  <a id="Kinstrife_Mechanics_Demo_DebugFireSystem_NextMode_" data-uid="Kinstrife.Mechanics.Demo.DebugFireSystem.NextMode*"></a>
+  <h4 id="Kinstrife_Mechanics_Demo_DebugFireSystem_NextMode" data-uid="Kinstrife.Mechanics.Demo.DebugFireSystem.NextMode">NextMode()</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected override JobHandle DrawDebug(JobHandle inputDeps)</code></pre>
+    <pre><code class="lang-csharp hljs">public void NextMode()</code></pre>
+  </div>
+  
+  
+  <a id="Kinstrife_Mechanics_Demo_DebugFireSystem_OnUpdate_" data-uid="Kinstrife.Mechanics.Demo.DebugFireSystem.OnUpdate*"></a>
+  <h4 id="Kinstrife_Mechanics_Demo_DebugFireSystem_OnUpdate_JobHandle_" data-uid="Kinstrife.Mechanics.Demo.DebugFireSystem.OnUpdate(JobHandle)">OnUpdate(JobHandle)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override JobHandle OnUpdate(JobHandle inputDeps)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -158,16 +174,6 @@
   </table>
   
   
-  <a id="Kinstrife_Mechanics_Demo_DebugFireSystem_NextMode_" data-uid="Kinstrife.Mechanics.Demo.DebugFireSystem.NextMode*"></a>
-  <h4 id="Kinstrife_Mechanics_Demo_DebugFireSystem_NextMode" data-uid="Kinstrife.Mechanics.Demo.DebugFireSystem.NextMode">NextMode()</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void NextMode()</code></pre>
-  </div>
-  
-  
   <a id="Kinstrife_Mechanics_Demo_DebugFireSystem_SetDebugMode_" data-uid="Kinstrife.Mechanics.Demo.DebugFireSystem.SetDebugMode*"></a>
   <h4 id="Kinstrife_Mechanics_Demo_DebugFireSystem_SetDebugMode_Kinstrife_Mechanics_Demo_DebugFireSystem_DebugMode_" data-uid="Kinstrife.Mechanics.Demo.DebugFireSystem.SetDebugMode(Kinstrife.Mechanics.Demo.DebugFireSystem.DebugMode)">SetDebugMode(DebugFireSystem.DebugMode)</h4>
   <div class="markdown level1 summary"></div>
@@ -193,6 +199,13 @@
       </tr>
     </tbody>
   </table>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <a class="xref" href="Kinstrife.Core.DependencyInjection.IInjectable.html">IInjectable</a>
+  </div>
+  <div>
+      <a class="xref" href="Kinstrife.Core.DependencyInjection.IDependentBase.html">IDependentBase</a>
+  </div>
 </article>
           </div>
           

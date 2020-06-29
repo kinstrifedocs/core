@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Struct ResourceProvider
    | Kinstrife ">
-    <meta name="generator" content="docfx 2.55.0.0">
+    <meta name="generator" content="docfx 2.56.0.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
@@ -77,8 +77,13 @@
   <div class="markdown level0 conceptual"></div>
   <div classs="implements">
     <h5>Implements</h5>
+    <div><a class="xref" href="Kinstrife.Entities.Properties.IEntityContext.html">IEntityContext</a></div>
+    <div><a class="xref" href="Kinstrife.Entities.Properties.IIdentifiableComponent.html">IIdentifiableComponent</a></div>
     <div><span class="xref">IComponentData</span></div>
-    <div><a class="xref" href="Kinstrife.Action.Components.IResourceProvider.html">IResourceProvider</a></div>
+    <div><a class="xref" href="Kinstrife.Entities.Properties.IIdentifiable.html">IIdentifiable</a></div>
+    <div><a class="xref" href="Kinstrife.Entities.Properties.IHashCodeProperty.html">IHashCodeProperty</a></div>
+    <div><a class="xref" href="Kinstrife.Entities.Components.IDebugName.html">IDebugName</a></div>
+    <div><a class="xref" href="Kinstrife.Entities.ICustomInspector.html">ICustomInspector</a></div>
   </div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
@@ -105,14 +110,106 @@
   <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
   <h5 id="Kinstrife_Action_Components_ResourceProvider_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public struct ResourceProvider : IComponentData, IResourceProvider</code></pre>
+    <pre><code class="lang-csharp hljs">public struct ResourceProvider : IEntityContext, IIdentifiableComponent, IComponentData, IIdentifiable, IHashCodeProperty, IDebugName, ICustomInspector</code></pre>
   </div>
+  <h3 id="fields">Fields
+  </h3>
+  
+  
+  <h4 id="Kinstrife_Action_Components_ResourceProvider_HashCode" data-uid="Kinstrife.Action.Components.ResourceProvider.HashCode">HashCode</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int HashCode</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="Kinstrife_Action_Components_ResourceProvider_IsActive" data-uid="Kinstrife.Action.Components.ResourceProvider.IsActive">IsActive</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsActive</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="eii">Explicit Interface Implementations
+  </h3>
+  
+  
+  <a id="Kinstrife_Action_Components_ResourceProvider_Kinstrife_Entities_Properties_IHashCodeProperty_HashCodeProperty_" data-uid="Kinstrife.Action.Components.ResourceProvider.Kinstrife#Entities#Properties#IHashCodeProperty#HashCodeProperty*"></a>
+  <h4 id="Kinstrife_Action_Components_ResourceProvider_Kinstrife_Entities_Properties_IHashCodeProperty_HashCodeProperty" data-uid="Kinstrife.Action.Components.ResourceProvider.Kinstrife#Entities#Properties#IHashCodeProperty#HashCodeProperty">IHashCodeProperty.HashCodeProperty</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">int IHashCodeProperty.HashCodeProperty { get; set; }</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   <h3 id="implements">Implements</h3>
+  <div>
+      <a class="xref" href="Kinstrife.Entities.Properties.IEntityContext.html">IEntityContext</a>
+  </div>
+  <div>
+      <a class="xref" href="Kinstrife.Entities.Properties.IIdentifiableComponent.html">IIdentifiableComponent</a>
+  </div>
   <div>
       <span class="xref">IComponentData</span>
   </div>
   <div>
-      <a class="xref" href="Kinstrife.Action.Components.IResourceProvider.html">IResourceProvider</a>
+      <a class="xref" href="Kinstrife.Entities.Properties.IIdentifiable.html">IIdentifiable</a>
+  </div>
+  <div>
+      <a class="xref" href="Kinstrife.Entities.Properties.IHashCodeProperty.html">IHashCodeProperty</a>
+  </div>
+  <div>
+      <a class="xref" href="Kinstrife.Entities.Components.IDebugName.html">IDebugName</a>
+  </div>
+  <div>
+      <a class="xref" href="Kinstrife.Entities.ICustomInspector.html">ICustomInspector</a>
   </div>
 </article>
           </div>
