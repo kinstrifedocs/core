@@ -82,13 +82,15 @@
   </div>
   <div classs="implements">
     <h5>Implements</h5>
+    <div><a class="xref" href="Kinstrife.Core.DependencyInjection.IInjectable.html">IInjectable</a></div>
+    <div><a class="xref" href="Kinstrife.Core.DependencyInjection.IDependent.html">IDependent</a></div>
     <div><span class="xref">IConvertGameObjectToEntity</span></div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Kinstrife.Mechanics.Demo.html">Kinstrife.Mechanics.Demo</a></h6>
   <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
   <h5 id="Kinstrife_Mechanics_Demo_FlammableAuthoring_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class FlammableAuthoring : MonoBehaviour, IConvertGameObjectToEntity</code></pre>
+    <pre><code class="lang-csharp hljs">public class FlammableAuthoring : MonoBehaviour, IInjectable, IDependent, IConvertGameObjectToEntity</code></pre>
   </div>
   <h3 id="fields">Fields
   </h3>
@@ -227,7 +229,40 @@
       </tr>
     </tbody>
   </table>
+  
+  
+  <a id="Kinstrife_Mechanics_Demo_FlammableAuthoring_Inject_" data-uid="Kinstrife.Mechanics.Demo.FlammableAuthoring.Inject*"></a>
+  <h4 id="Kinstrife_Mechanics_Demo_FlammableAuthoring_Inject_Kinstrife_Action_Data_ActionOwnerData_" data-uid="Kinstrife.Mechanics.Demo.FlammableAuthoring.Inject(Kinstrife.Action.Data.ActionOwnerData)">Inject(ActionOwnerData)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Inject(ActionOwnerData ownerData)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Kinstrife.Action.Data.ActionOwnerData.html">ActionOwnerData</a></td>
+        <td><span class="parametername">ownerData</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   <h3 id="implements">Implements</h3>
+  <div>
+      <a class="xref" href="Kinstrife.Core.DependencyInjection.IInjectable.html">IInjectable</a>
+  </div>
+  <div>
+      <a class="xref" href="Kinstrife.Core.DependencyInjection.IDependent.html">IDependent</a>
+  </div>
   <div>
       <span class="xref">IConvertGameObjectToEntity</span>
   </div>

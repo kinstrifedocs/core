@@ -81,6 +81,11 @@
     <div class="level1"><a class="xref" href="Kinstrife.Entities.Properties.ConvertibleUtil.html">ConvertibleUtil</a></div>
     <div class="level2"><span class="xref">ActionGraphConversionUtil</span></div>
   </div>
+  <div classs="implements">
+    <h5>Implements</h5>
+    <div><a class="xref" href="Kinstrife.Core.DependencyInjection.IInjectable.html">IInjectable</a></div>
+    <div><a class="xref" href="Kinstrife.Core.DependencyInjection.IDependent.html">IDependent</a></div>
+  </div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
     <div>
@@ -106,6 +111,9 @@
     </div>
     <div>
       <a class="xref" href="Kinstrife.Entities.Properties.ConvertibleUtil.html#Kinstrife_Entities_Properties_ConvertibleUtil_ProcessGenericProperties__2___0____1_">ConvertibleUtil.ProcessGenericProperties&lt;T, U&gt;(T, U)</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.Entities.Properties.ConvertibleUtil.html#Kinstrife_Entities_Properties_ConvertibleUtil_CreateContextEntityFromAtomic__2_EntityManager__Entity___1_Entity_System_Boolean_">ConvertibleUtil.CreateContextEntityFromAtomic&lt;T, U&gt;(EntityManager, Entity, U, Entity, Boolean)</a>
     </div>
     <div>
       <a class="xref" href="Kinstrife.Entities.Properties.ConvertibleUtil.html#Kinstrife_Entities_Properties_ConvertibleUtil_CreateContextEntity__2_EntityManager__Entity___1_System_Boolean_">ConvertibleUtil.CreateContextEntity&lt;T, U&gt;(EntityManager, Entity, U, Boolean)</a>
@@ -136,7 +144,7 @@
   <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
   <h5 id="Kinstrife_Action_Systems_ActionGraphConversionUtil_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class ActionGraphConversionUtil : ConvertibleUtil</code></pre>
+    <pre><code class="lang-csharp hljs">public class ActionGraphConversionUtil : ConvertibleUtil, IInjectable, IDependent</code></pre>
   </div>
   <h3 id="methods">Methods
   </h3>
@@ -247,7 +255,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static Entity InstantiateOne(EntityManager entityManager, ActionOwnerData contextData, Entity contextEntity, ActionGraph graph, bool isPrefab)</code></pre>
+    <pre><code class="lang-csharp hljs">public static Entity InstantiateOne(EntityManager entityManager, ActionOwnerData contextData, Entity rootEntity, ActionGraph graph, bool isPrefab)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -271,7 +279,7 @@
       </tr>
       <tr>
         <td><span class="xref">Entity</span></td>
-        <td><span class="parametername">contextEntity</span></td>
+        <td><span class="parametername">rootEntity</span></td>
         <td></td>
       </tr>
       <tr>
@@ -494,6 +502,13 @@
       </tr>
     </tbody>
   </table>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <a class="xref" href="Kinstrife.Core.DependencyInjection.IInjectable.html">IInjectable</a>
+  </div>
+  <div>
+      <a class="xref" href="Kinstrife.Core.DependencyInjection.IDependent.html">IDependent</a>
+  </div>
 </article>
           </div>
           

@@ -79,11 +79,9 @@
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
     <div class="level1"><span class="xref">ScriptableObjectInstaller</span></div>
-      <div class="level2"><a class="xref" href="Kinstrife.Audio.AudioInstaller.html">AudioInstaller</a></div>
       <div class="level2"><a class="xref" href="Kinstrife.Collisions.CollisionSystemInstaller.html">CollisionSystemInstaller</a></div>
       <div class="level2"><a class="xref" href="Kinstrife.Database.DatabaseInstaller.html">DatabaseInstaller</a></div>
       <div class="level2"><a class="xref" href="Kinstrife.Entities.DependencyInjection.DOTSScriptableObjectInstaller.html">DOTSScriptableObjectInstaller</a></div>
-      <div class="level2"><a class="xref" href="Kinstrife.Vfx.VfxInstaller.html">VfxInstaller</a></div>
   </div>
   <div classs="implements">
     <h5>Implements</h5>
@@ -95,151 +93,17 @@
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public abstract class ScriptableObjectInstaller : ScriptableObject, IInstaller</code></pre>
   </div>
-  <h3 id="fields">Fields
-  </h3>
-  
-  
-  <h4 id="Kinstrife_Core_DependencyInjection_ScriptableObjectInstaller__Initializables" data-uid="Kinstrife.Core.DependencyInjection.ScriptableObjectInstaller._Initializables">_Initializables</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected List&lt;IInitializable&gt; _Initializables</code></pre>
-  </div>
-  <h5 class="fieldValue">Field Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Collections.Generic.List</span>&lt;<a class="xref" href="Kinstrife.Core.DependencyInjection.IInitializable.html">IInitializable</a>&gt;</td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <h4 id="Kinstrife_Core_DependencyInjection_ScriptableObjectInstaller__Injectables" data-uid="Kinstrife.Core.DependencyInjection.ScriptableObjectInstaller._Injectables">_Injectables</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected List&lt;IInjectable&gt; _Injectables</code></pre>
-  </div>
-  <h5 class="fieldValue">Field Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Collections.Generic.List</span>&lt;<a class="xref" href="Kinstrife.Core.DependencyInjection.IInjectable.html">IInjectable</a>&gt;</td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h3 id="properties">Properties
-  </h3>
-  
-  
-  <a id="Kinstrife_Core_DependencyInjection_ScriptableObjectInstaller_Initializables_" data-uid="Kinstrife.Core.DependencyInjection.ScriptableObjectInstaller.Initializables*"></a>
-  <h4 id="Kinstrife_Core_DependencyInjection_ScriptableObjectInstaller_Initializables" data-uid="Kinstrife.Core.DependencyInjection.ScriptableObjectInstaller.Initializables">Initializables</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public IReadOnlyList&lt;IInitializable&gt; Initializables { get; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Collections.Generic.IReadOnlyList</span>&lt;<a class="xref" href="Kinstrife.Core.DependencyInjection.IInitializable.html">IInitializable</a>&gt;</td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="Kinstrife_Core_DependencyInjection_ScriptableObjectInstaller_Injectables_" data-uid="Kinstrife.Core.DependencyInjection.ScriptableObjectInstaller.Injectables*"></a>
-  <h4 id="Kinstrife_Core_DependencyInjection_ScriptableObjectInstaller_Injectables" data-uid="Kinstrife.Core.DependencyInjection.ScriptableObjectInstaller.Injectables">Injectables</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public IReadOnlyList&lt;IInjectable&gt; Injectables { get; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Collections.Generic.IReadOnlyList</span>&lt;<a class="xref" href="Kinstrife.Core.DependencyInjection.IInjectable.html">IInjectable</a>&gt;</td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
   <h3 id="methods">Methods
   </h3>
   
   
-  <a id="Kinstrife_Core_DependencyInjection_ScriptableObjectInstaller_Inject_" data-uid="Kinstrife.Core.DependencyInjection.ScriptableObjectInstaller.Inject*"></a>
-  <h4 id="Kinstrife_Core_DependencyInjection_ScriptableObjectInstaller_Inject_Kinstrife_Core_DependencyInjection_Container_Kinstrife_Core_DependencyInjection_IInjectable_" data-uid="Kinstrife.Core.DependencyInjection.ScriptableObjectInstaller.Inject(Kinstrife.Core.DependencyInjection.Container,Kinstrife.Core.DependencyInjection.IInjectable)">Inject(Container, IInjectable)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected void Inject(Container container, IInjectable injectable)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Kinstrife.Core.DependencyInjection.Container.html">Container</a></td>
-        <td><span class="parametername">container</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="Kinstrife.Core.DependencyInjection.IInjectable.html">IInjectable</a></td>
-        <td><span class="parametername">injectable</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
   <a id="Kinstrife_Core_DependencyInjection_ScriptableObjectInstaller_InstallBindings_" data-uid="Kinstrife.Core.DependencyInjection.ScriptableObjectInstaller.InstallBindings*"></a>
-  <h4 id="Kinstrife_Core_DependencyInjection_ScriptableObjectInstaller_InstallBindings_Kinstrife_Core_DependencyInjection_Container_" data-uid="Kinstrife.Core.DependencyInjection.ScriptableObjectInstaller.InstallBindings(Kinstrife.Core.DependencyInjection.Container)">InstallBindings(Container)</h4>
+  <h4 id="Kinstrife_Core_DependencyInjection_ScriptableObjectInstaller_InstallBindings_Kinstrife_Core_DependencyInjection_Container_Kinstrife_Core_DependencyInjection_IDISource_" data-uid="Kinstrife.Core.DependencyInjection.ScriptableObjectInstaller.InstallBindings(Kinstrife.Core.DependencyInjection.Container,Kinstrife.Core.DependencyInjection.IDISource)">InstallBindings(Container, IDISource)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public abstract void InstallBindings(Container container)</code></pre>
+    <pre><code class="lang-csharp hljs">public abstract void InstallBindings(Container container, IDISource source)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -254,6 +118,11 @@
       <tr>
         <td><a class="xref" href="Kinstrife.Core.DependencyInjection.Container.html">Container</a></td>
         <td><span class="parametername">container</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Kinstrife.Core.DependencyInjection.IDISource.html">IDISource</a></td>
+        <td><span class="parametername">source</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -261,12 +130,12 @@
   
   
   <a id="Kinstrife_Core_DependencyInjection_ScriptableObjectInstaller_UninstallBindings_" data-uid="Kinstrife.Core.DependencyInjection.ScriptableObjectInstaller.UninstallBindings*"></a>
-  <h4 id="Kinstrife_Core_DependencyInjection_ScriptableObjectInstaller_UninstallBindings_Kinstrife_Core_DependencyInjection_Container_" data-uid="Kinstrife.Core.DependencyInjection.ScriptableObjectInstaller.UninstallBindings(Kinstrife.Core.DependencyInjection.Container)">UninstallBindings(Container)</h4>
+  <h4 id="Kinstrife_Core_DependencyInjection_ScriptableObjectInstaller_UninstallBindings_Kinstrife_Core_DependencyInjection_Container_Kinstrife_Core_DependencyInjection_IDISource_" data-uid="Kinstrife.Core.DependencyInjection.ScriptableObjectInstaller.UninstallBindings(Kinstrife.Core.DependencyInjection.Container,Kinstrife.Core.DependencyInjection.IDISource)">UninstallBindings(Container, IDISource)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public abstract void UninstallBindings(Container container)</code></pre>
+    <pre><code class="lang-csharp hljs">public abstract void UninstallBindings(Container container, IDISource source)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -281,6 +150,11 @@
       <tr>
         <td><a class="xref" href="Kinstrife.Core.DependencyInjection.Container.html">Container</a></td>
         <td><span class="parametername">container</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Kinstrife.Core.DependencyInjection.IDISource.html">IDISource</a></td>
+        <td><span class="parametername">source</span></td>
         <td></td>
       </tr>
     </tbody>

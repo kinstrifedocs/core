@@ -82,13 +82,15 @@
   </div>
   <div classs="implements">
     <h5>Implements</h5>
-    <div><a class="xref" href="Kinstrife.Core.DependencyInjection.IDIRoot.html">IDIRoot</a></div>
+    <div><a class="xref" href="Kinstrife.Core.DependencyInjection.IDISource.html">IDISource</a></div>
+    <div><a class="xref" href="Kinstrife.Core.DependencyInjection.IInjectable.html">IInjectable</a></div>
+    <div><a class="xref" href="Kinstrife.Core.DependencyInjection.IDependent.html">IDependent</a></div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Kinstrife.Core.DependencyInjection.Demo.html">Kinstrife.Core.DependencyInjection.Demo</a></h6>
   <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
   <h5 id="Kinstrife_Core_DependencyInjection_Demo_MockModule_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class MockModule : MonoBehaviour, IDIRoot</code></pre>
+    <pre><code class="lang-csharp hljs">public class MockModule : MonoBehaviour, IDISource, IInjectable, IDependent</code></pre>
   </div>
   <h3 id="fields">Fields
   </h3>
@@ -120,6 +122,31 @@
   </h3>
   
   
+  <a id="Kinstrife_Core_DependencyInjection_Demo_MockModule_Context_" data-uid="Kinstrife.Core.DependencyInjection.Demo.MockModule.Context*"></a>
+  <h4 id="Kinstrife_Core_DependencyInjection_Demo_MockModule_Context" data-uid="Kinstrife.Core.DependencyInjection.Demo.MockModule.Context">Context</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Context Context { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Kinstrife.Core.DependencyInjection.Context.html">Context</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
   <a id="Kinstrife_Core_DependencyInjection_Demo_MockModule_Locators_" data-uid="Kinstrife.Core.DependencyInjection.Demo.MockModule.Locators*"></a>
   <h4 id="Kinstrife_Core_DependencyInjection_Demo_MockModule_Locators" data-uid="Kinstrife.Core.DependencyInjection.Demo.MockModule.Locators">Locators</h4>
   <div class="markdown level1 summary"></div>
@@ -143,8 +170,60 @@
       </tr>
     </tbody>
   </table>
+  
+  
+  <a id="Kinstrife_Core_DependencyInjection_Demo_MockModule_ParentContext_" data-uid="Kinstrife.Core.DependencyInjection.Demo.MockModule.ParentContext*"></a>
+  <h4 id="Kinstrife_Core_DependencyInjection_Demo_MockModule_ParentContext" data-uid="Kinstrife.Core.DependencyInjection.Demo.MockModule.ParentContext">ParentContext</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Context ParentContext { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Kinstrife.Core.DependencyInjection.Context.html">Context</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   <h3 id="methods">Methods
   </h3>
+  
+  
+  <a id="Kinstrife_Core_DependencyInjection_Demo_MockModule_Inject_" data-uid="Kinstrife.Core.DependencyInjection.Demo.MockModule.Inject*"></a>
+  <h4 id="Kinstrife_Core_DependencyInjection_Demo_MockModule_Inject_Kinstrife_Core_DependencyInjection_IDISource_" data-uid="Kinstrife.Core.DependencyInjection.Demo.MockModule.Inject(Kinstrife.Core.DependencyInjection.IDISource)">Inject(IDISource)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Inject(IDISource root)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Kinstrife.Core.DependencyInjection.IDISource.html">IDISource</a></td>
+        <td><span class="parametername">root</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   
   
   <a id="Kinstrife_Core_DependencyInjection_Demo_MockModule_InjectDependencies_" data-uid="Kinstrife.Core.DependencyInjection.Demo.MockModule.InjectDependencies*"></a>
@@ -165,6 +244,33 @@
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public void InstallContext()</code></pre>
   </div>
+  
+  
+  <a id="Kinstrife_Core_DependencyInjection_Demo_MockModule_RegisterDependent_" data-uid="Kinstrife.Core.DependencyInjection.Demo.MockModule.RegisterDependent*"></a>
+  <h4 id="Kinstrife_Core_DependencyInjection_Demo_MockModule_RegisterDependent_Kinstrife_Core_DependencyInjection_IDependent_" data-uid="Kinstrife.Core.DependencyInjection.Demo.MockModule.RegisterDependent(Kinstrife.Core.DependencyInjection.IDependent)">RegisterDependent(IDependent)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void RegisterDependent(IDependent dependent)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Kinstrife.Core.DependencyInjection.IDependent.html">IDependent</a></td>
+        <td><span class="parametername">dependent</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   
   
   <a id="Kinstrife_Core_DependencyInjection_Demo_MockModule_SetParentContext_" data-uid="Kinstrife.Core.DependencyInjection.Demo.MockModule.SetParentContext*"></a>
@@ -194,7 +300,13 @@
   </table>
   <h3 id="implements">Implements</h3>
   <div>
-      <a class="xref" href="Kinstrife.Core.DependencyInjection.IDIRoot.html">IDIRoot</a>
+      <a class="xref" href="Kinstrife.Core.DependencyInjection.IDISource.html">IDISource</a>
+  </div>
+  <div>
+      <a class="xref" href="Kinstrife.Core.DependencyInjection.IInjectable.html">IInjectable</a>
+  </div>
+  <div>
+      <a class="xref" href="Kinstrife.Core.DependencyInjection.IDependent.html">IDependent</a>
   </div>
 </article>
           </div>
