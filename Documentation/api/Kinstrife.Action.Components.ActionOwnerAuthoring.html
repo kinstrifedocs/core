@@ -82,16 +82,43 @@
   </div>
   <div classs="implements">
     <h5>Implements</h5>
+    <div><a class="xref" href="Kinstrife.Core.DependencyInjection.IInjectable.html">IInjectable</a></div>
+    <div><a class="xref" href="Kinstrife.Core.DependencyInjection.IDependent.html">IDependent</a></div>
     <div><span class="xref">IConvertGameObjectToEntity</span></div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Kinstrife.Action.Components.html">Kinstrife.Action.Components</a></h6>
   <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
   <h5 id="Kinstrife_Action_Components_ActionOwnerAuthoring_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class ActionOwnerAuthoring : MonoBehaviour, IConvertGameObjectToEntity</code></pre>
+    <pre><code class="lang-csharp hljs">public class ActionOwnerAuthoring : MonoBehaviour, IInjectable, IDependent, IConvertGameObjectToEntity</code></pre>
   </div>
   <h3 id="properties">Properties
   </h3>
+  
+  
+  <a id="Kinstrife_Action_Components_ActionOwnerAuthoring_Animator_" data-uid="Kinstrife.Action.Components.ActionOwnerAuthoring.Animator*"></a>
+  <h4 id="Kinstrife_Action_Components_ActionOwnerAuthoring_Animator" data-uid="Kinstrife.Action.Components.ActionOwnerAuthoring.Animator">Animator</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Animator Animator { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Animator</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   
   
   <a id="Kinstrife_Action_Components_ActionOwnerAuthoring_Data_" data-uid="Kinstrife.Action.Components.ActionOwnerAuthoring.Data*"></a>
@@ -113,6 +140,31 @@
     <tbody>
       <tr>
         <td><a class="xref" href="Kinstrife.Action.Data.ActionOwnerData.html">ActionOwnerData</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Kinstrife_Action_Components_ActionOwnerAuthoring_PlayableGraph_" data-uid="Kinstrife.Action.Components.ActionOwnerAuthoring.PlayableGraph*"></a>
+  <h4 id="Kinstrife_Action_Components_ActionOwnerAuthoring_PlayableGraph" data-uid="Kinstrife.Action.Components.ActionOwnerAuthoring.PlayableGraph">PlayableGraph</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public PlayableGraph PlayableGraph { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">PlayableGraph</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -267,7 +319,45 @@
       </tr>
     </tbody>
   </table>
+  
+  
+  <a id="Kinstrife_Action_Components_ActionOwnerAuthoring_Inject_" data-uid="Kinstrife.Action.Components.ActionOwnerAuthoring.Inject*"></a>
+  <h4 id="Kinstrife_Action_Components_ActionOwnerAuthoring_Inject_PlayableGraph_Animator_" data-uid="Kinstrife.Action.Components.ActionOwnerAuthoring.Inject(PlayableGraph,Animator)">Inject(PlayableGraph, Animator)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Inject(PlayableGraph playableGraph, Animator animator)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">PlayableGraph</span></td>
+        <td><span class="parametername">playableGraph</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">Animator</span></td>
+        <td><span class="parametername">animator</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   <h3 id="implements">Implements</h3>
+  <div>
+      <a class="xref" href="Kinstrife.Core.DependencyInjection.IInjectable.html">IInjectable</a>
+  </div>
+  <div>
+      <a class="xref" href="Kinstrife.Core.DependencyInjection.IDependent.html">IDependent</a>
+  </div>
   <div>
       <span class="xref">IConvertGameObjectToEntity</span>
   </div>
