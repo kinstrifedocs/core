@@ -5,10 +5,10 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Class ApplicationInstaller
+    <title>Class DependentsLocator
    | Kinstrife </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Class ApplicationInstaller
+    <meta name="title" content="Class DependentsLocator
    | Kinstrife ">
     <meta name="generator" content="docfx 2.56.1.0">
     
@@ -68,67 +68,104 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="Kinstrife.Application.ApplicationInstaller">
+            <article class="content wrap" id="_content" data-uid="Kinstrife.Core.DependencyInjection.DependentsLocator">
   
   
-  <h1 id="Kinstrife_Application_ApplicationInstaller" data-uid="Kinstrife.Application.ApplicationInstaller" class="text-break">Class ApplicationInstaller
+  <h1 id="Kinstrife_Core_DependencyInjection_DependentsLocator" data-uid="Kinstrife.Core.DependencyInjection.DependentsLocator" class="text-break">Class DependentsLocator
   </h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><p>Monobehaviour wrapper for Locator</p>
+</div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><span class="xref">ApplicationInstaller</span></div>
+    <div class="level1"><span class="xref">DependentsLocator</span></div>
   </div>
-  <h6><strong>Namespace</strong>: <a class="xref" href="Kinstrife.Application.html">Kinstrife.Application</a></h6>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Kinstrife.Core.DependencyInjection.html">Kinstrife.Core.DependencyInjection</a></h6>
   <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
-  <h5 id="Kinstrife_Application_ApplicationInstaller_syntax">Syntax</h5>
+  <h5 id="Kinstrife_Core_DependencyInjection_DependentsLocator_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class ApplicationInstaller : Installer</code></pre>
+    <pre><code class="lang-csharp hljs">public class DependentsLocator : MonoBehaviour</code></pre>
   </div>
-  <h3 id="methods">Methods
+  <h3 id="properties">Properties
   </h3>
   
   
-  <a id="Kinstrife_Application_ApplicationInstaller_InstallBindings_" data-uid="Kinstrife.Application.ApplicationInstaller.InstallBindings*"></a>
-  <h4 id="Kinstrife_Application_ApplicationInstaller_InstallBindings_Container_IDISource_" data-uid="Kinstrife.Application.ApplicationInstaller.InstallBindings(Container,IDISource)">InstallBindings(Container, IDISource)</h4>
+  <a id="Kinstrife_Core_DependencyInjection_DependentsLocator_Locator_" data-uid="Kinstrife.Core.DependencyInjection.DependentsLocator.Locator*"></a>
+  <h4 id="Kinstrife_Core_DependencyInjection_DependentsLocator_Locator" data-uid="Kinstrife.Core.DependencyInjection.DependentsLocator.Locator">Locator</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public override void InstallBindings(Container container, IDISource source)</code></pre>
+    <pre><code class="lang-csharp hljs">public DependentsCache Locator { get; }</code></pre>
   </div>
-  <h5 class="parameters">Parameters</h5>
+  <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
       <tr>
         <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Kinstrife.Core.DependencyInjection.DependentsCache.html">DependentsCache</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  
+  
+  <a id="Kinstrife_Core_DependencyInjection_DependentsLocator_GetCachedDependents_" data-uid="Kinstrife.Core.DependencyInjection.DependentsLocator.GetCachedDependents*"></a>
+  <h4 id="Kinstrife_Core_DependencyInjection_DependentsLocator_GetCachedDependents__1" data-uid="Kinstrife.Core.DependencyInjection.DependentsLocator.GetCachedDependents``1">GetCachedDependents&lt;T&gt;()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public List&lt;T&gt; GetCachedDependents&lt;T&gt;()
+    where T : IDependent</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.List</span>&lt;T&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
         <th>Name</th>
         <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Container</span></td>
-        <td><span class="parametername">container</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><span class="xref">IDISource</span></td>
-        <td><span class="parametername">source</span></td>
+        <td><span class="parametername">T</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   
   
-  <a id="Kinstrife_Application_ApplicationInstaller_UninstallBindings_" data-uid="Kinstrife.Application.ApplicationInstaller.UninstallBindings*"></a>
-  <h4 id="Kinstrife_Application_ApplicationInstaller_UninstallBindings_Container_IDISource_" data-uid="Kinstrife.Application.ApplicationInstaller.UninstallBindings(Container,IDISource)">UninstallBindings(Container, IDISource)</h4>
+  <a id="Kinstrife_Core_DependencyInjection_DependentsLocator_LocateInHierarchy_" data-uid="Kinstrife.Core.DependencyInjection.DependentsLocator.LocateInHierarchy*"></a>
+  <h4 id="Kinstrife_Core_DependencyInjection_DependentsLocator_LocateInHierarchy_System_Boolean_" data-uid="Kinstrife.Core.DependencyInjection.DependentsLocator.LocateInHierarchy(System.Boolean)">LocateInHierarchy(Boolean)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public override void UninstallBindings(Container container, IDISource source)</code></pre>
+    <pre><code class="lang-csharp hljs">public void LocateInHierarchy(bool force = false)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -141,13 +178,8 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Container</span></td>
-        <td><span class="parametername">container</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><span class="xref">IDISource</span></td>
-        <td><span class="parametername">source</span></td>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">force</span></td>
         <td></td>
       </tr>
     </tbody>

@@ -5,10 +5,10 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Class DISourceDOTS
+    <title>Class DISourceStandalone
    | Kinstrife </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Class DISourceDOTS
+    <meta name="title" content="Class DISourceStandalone
    | Kinstrife ">
     <meta name="generator" content="docfx 2.56.1.0">
     
@@ -68,10 +68,10 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="Kinstrife.Entities.DISourceDOTS">
+            <article class="content wrap" id="_content" data-uid="Kinstrife.Core.DependencyInjection.DISourceStandalone">
   
   
-  <h1 id="Kinstrife_Entities_DISourceDOTS" data-uid="Kinstrife.Entities.DISourceDOTS" class="text-break">Class DISourceDOTS
+  <h1 id="Kinstrife_Core_DependencyInjection_DISourceStandalone" data-uid="Kinstrife.Core.DependencyInjection.DISourceStandalone" class="text-break">Class DISourceStandalone
   </h1>
   <div class="markdown level0 summary"></div>
   <div class="markdown level0 conceptual"></div>
@@ -79,29 +79,15 @@
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
     <div class="level1"><a class="xref" href="Kinstrife.Core.DependencyInjection.DISource.html">DISource</a></div>
-    <div class="level2"><a class="xref" href="Kinstrife.Core.DependencyInjection.DISourceStandalone.html">DISourceStandalone</a></div>
-    <div class="level3"><span class="xref">DISourceDOTS</span></div>
+    <div class="level2"><span class="xref">DISourceStandalone</span></div>
+      <div class="level3"><a class="xref" href="Kinstrife.Entities.DISourceDOTS.html">DISourceDOTS</a></div>
   </div>
   <div classs="implements">
     <h5>Implements</h5>
     <div><a class="xref" href="Kinstrife.Core.DependencyInjection.IDISource.html">IDISource</a></div>
-    <div><a class="xref" href="Kinstrife.Core.DependencyInjection.IInitializable.html">IInitializable</a></div>
-    <div><a class="xref" href="Kinstrife.Core.DependencyInjection.IDependent.html">IDependent</a></div>
   </div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
-    <div>
-      <a class="xref" href="Kinstrife.Core.DependencyInjection.DISourceStandalone.html#Kinstrife_Core_DependencyInjection_DISourceStandalone_isRoot">DISourceStandalone.isRoot</a>
-    </div>
-    <div>
-      <a class="xref" href="Kinstrife.Core.DependencyInjection.DISourceStandalone.html#Kinstrife_Core_DependencyInjection_DISourceStandalone_initializeOnAwake">DISourceStandalone.initializeOnAwake</a>
-    </div>
-    <div>
-      <a class="xref" href="Kinstrife.Core.DependencyInjection.DISourceStandalone.html#Kinstrife_Core_DependencyInjection_DISourceStandalone_initializeOnStart">DISourceStandalone.initializeOnStart</a>
-    </div>
-    <div>
-      <a class="xref" href="Kinstrife.Core.DependencyInjection.DISourceStandalone.html#Kinstrife_Core_DependencyInjection_DISourceStandalone_Initialized">DISourceStandalone.Initialized</a>
-    </div>
     <div>
       <a class="xref" href="Kinstrife.Core.DependencyInjection.DISource.html#Kinstrife_Core_DependencyInjection_DISource_context">DISource.context</a>
     </div>
@@ -139,18 +125,119 @@
       <a class="xref" href="Kinstrife.Core.DependencyInjection.DISource.html#Kinstrife_Core_DependencyInjection_DISource_InitializeDependents">DISource.InitializeDependents()</a>
     </div>
   </div>
-  <h6><strong>Namespace</strong>: <a class="xref" href="Kinstrife.Entities.html">Kinstrife.Entities</a></h6>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Kinstrife.Core.DependencyInjection.html">Kinstrife.Core.DependencyInjection</a></h6>
   <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
-  <h5 id="Kinstrife_Entities_DISourceDOTS_syntax">Syntax</h5>
+  <h5 id="Kinstrife_Core_DependencyInjection_DISourceStandalone_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class DISourceDOTS : DISourceStandalone, IDISource, IInitializable, IDependent</code></pre>
+    <pre><code class="lang-csharp hljs">public class DISourceStandalone : DISource, IDISource</code></pre>
   </div>
+  <h3 id="fields">Fields
+  </h3>
+  
+  
+  <h4 id="Kinstrife_Core_DependencyInjection_DISourceStandalone_initializeOnAwake" data-uid="Kinstrife.Core.DependencyInjection.DISourceStandalone.initializeOnAwake">initializeOnAwake</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected bool initializeOnAwake</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="Kinstrife_Core_DependencyInjection_DISourceStandalone_initializeOnStart" data-uid="Kinstrife.Core.DependencyInjection.DISourceStandalone.initializeOnStart">initializeOnStart</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected bool initializeOnStart</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="Kinstrife_Core_DependencyInjection_DISourceStandalone_isRoot" data-uid="Kinstrife.Core.DependencyInjection.DISourceStandalone.isRoot">isRoot</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected bool isRoot</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="properties">Properties
+  </h3>
+  
+  
+  <a id="Kinstrife_Core_DependencyInjection_DISourceStandalone_Initialized_" data-uid="Kinstrife.Core.DependencyInjection.DISourceStandalone.Initialized*"></a>
+  <h4 id="Kinstrife_Core_DependencyInjection_DISourceStandalone_Initialized" data-uid="Kinstrife.Core.DependencyInjection.DISourceStandalone.Initialized">Initialized</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool Initialized { get; protected set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   <h3 id="methods">Methods
   </h3>
   
   
-  <a id="Kinstrife_Entities_DISourceDOTS_Awake_" data-uid="Kinstrife.Entities.DISourceDOTS.Awake*"></a>
-  <h4 id="Kinstrife_Entities_DISourceDOTS_Awake" data-uid="Kinstrife.Entities.DISourceDOTS.Awake">Awake()</h4>
+  <a id="Kinstrife_Core_DependencyInjection_DISourceStandalone_Awake_" data-uid="Kinstrife.Core.DependencyInjection.DISourceStandalone.Awake*"></a>
+  <h4 id="Kinstrife_Core_DependencyInjection_DISourceStandalone_Awake" data-uid="Kinstrife.Core.DependencyInjection.DISourceStandalone.Awake">Awake()</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -158,50 +245,30 @@
     <pre><code class="lang-csharp hljs">protected override void Awake()</code></pre>
   </div>
   <h5 class="overrides">Overrides</h5>
-  <div><a class="xref" href="Kinstrife.Core.DependencyInjection.DISourceStandalone.html#Kinstrife_Core_DependencyInjection_DISourceStandalone_Awake">DISourceStandalone.Awake()</a></div>
+  <div><a class="xref" href="Kinstrife.Core.DependencyInjection.DISource.html#Kinstrife_Core_DependencyInjection_DISource_Awake">DISource.Awake()</a></div>
   
   
-  <a id="Kinstrife_Entities_DISourceDOTS_ConvertDependents_" data-uid="Kinstrife.Entities.DISourceDOTS.ConvertDependents*"></a>
-  <h4 id="Kinstrife_Entities_DISourceDOTS_ConvertDependents" data-uid="Kinstrife.Entities.DISourceDOTS.ConvertDependents">ConvertDependents()</h4>
+  <a id="Kinstrife_Core_DependencyInjection_DISourceStandalone_Initialize_" data-uid="Kinstrife.Core.DependencyInjection.DISourceStandalone.Initialize*"></a>
+  <h4 id="Kinstrife_Core_DependencyInjection_DISourceStandalone_Initialize" data-uid="Kinstrife.Core.DependencyInjection.DISourceStandalone.Initialize">Initialize()</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual void ConvertDependents()</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual void Initialize()</code></pre>
   </div>
   
   
-  <a id="Kinstrife_Entities_DISourceDOTS_Initialize_" data-uid="Kinstrife.Entities.DISourceDOTS.Initialize*"></a>
-  <h4 id="Kinstrife_Entities_DISourceDOTS_Initialize" data-uid="Kinstrife.Entities.DISourceDOTS.Initialize">Initialize()</h4>
+  <a id="Kinstrife_Core_DependencyInjection_DISourceStandalone_Start_" data-uid="Kinstrife.Core.DependencyInjection.DISourceStandalone.Start*"></a>
+  <h4 id="Kinstrife_Core_DependencyInjection_DISourceStandalone_Start" data-uid="Kinstrife.Core.DependencyInjection.DISourceStandalone.Start">Start()</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public override void Initialize()</code></pre>
+    <pre><code class="lang-csharp hljs">protected virtual void Start()</code></pre>
   </div>
-  <h5 class="overrides">Overrides</h5>
-  <div><a class="xref" href="Kinstrife.Core.DependencyInjection.DISourceStandalone.html#Kinstrife_Core_DependencyInjection_DISourceStandalone_Initialize">DISourceStandalone.Initialize()</a></div>
-  
-  
-  <a id="Kinstrife_Entities_DISourceDOTS_Start_" data-uid="Kinstrife.Entities.DISourceDOTS.Start*"></a>
-  <h4 id="Kinstrife_Entities_DISourceDOTS_Start" data-uid="Kinstrife.Entities.DISourceDOTS.Start">Start()</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected override void Start()</code></pre>
-  </div>
-  <h5 class="overrides">Overrides</h5>
-  <div><a class="xref" href="Kinstrife.Core.DependencyInjection.DISourceStandalone.html#Kinstrife_Core_DependencyInjection_DISourceStandalone_Start">DISourceStandalone.Start()</a></div>
   <h3 id="implements">Implements</h3>
   <div>
       <a class="xref" href="Kinstrife.Core.DependencyInjection.IDISource.html">IDISource</a>
-  </div>
-  <div>
-      <a class="xref" href="Kinstrife.Core.DependencyInjection.IInitializable.html">IInitializable</a>
-  </div>
-  <div>
-      <a class="xref" href="Kinstrife.Core.DependencyInjection.IDependent.html">IDependent</a>
   </div>
 </article>
           </div>

@@ -79,22 +79,44 @@
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
     <div class="level1"><span class="xref">DISource</span></div>
-      <div class="level2"><a class="xref" href="Kinstrife.Entities.DISourceDOTS.html">DISourceDOTS</a></div>
+      <div class="level2"><a class="xref" href="Kinstrife.Core.DependencyInjection.DISourceStandalone.html">DISourceStandalone</a></div>
   </div>
   <div classs="implements">
     <h5>Implements</h5>
     <div><a class="xref" href="Kinstrife.Core.DependencyInjection.IDISource.html">IDISource</a></div>
-    <div><a class="xref" href="Kinstrife.Core.DependencyInjection.IInitializable.html">IInitializable</a></div>
-    <div><a class="xref" href="Kinstrife.Core.DependencyInjection.IDependent.html">IDependent</a></div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Kinstrife.Core.DependencyInjection.html">Kinstrife.Core.DependencyInjection</a></h6>
   <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
   <h5 id="Kinstrife_Core_DependencyInjection_DISource_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class DISource : MonoBehaviour, IDISource, IInitializable, IDependent</code></pre>
+    <pre><code class="lang-csharp hljs">public abstract class DISource : MonoBehaviour, IDISource</code></pre>
   </div>
   <h3 id="fields">Fields
   </h3>
+  
+  
+  <h4 id="Kinstrife_Core_DependencyInjection_DISource_context" data-uid="Kinstrife.Core.DependencyInjection.DISource.context">context</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected Context context</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Kinstrife.Core.DependencyInjection.Context.html">Context</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   
   
   <h4 id="Kinstrife_Core_DependencyInjection_DISource_dependentsCache" data-uid="Kinstrife.Core.DependencyInjection.DISource.dependentsCache">dependentsCache</h4>
@@ -121,12 +143,12 @@
   </table>
   
   
-  <h4 id="Kinstrife_Core_DependencyInjection_DISource_initializeOnAwake" data-uid="Kinstrife.Core.DependencyInjection.DISource.initializeOnAwake">initializeOnAwake</h4>
+  <h4 id="Kinstrife_Core_DependencyInjection_DISource_parentContext" data-uid="Kinstrife.Core.DependencyInjection.DISource.parentContext">parentContext</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected bool initializeOnAwake</code></pre>
+    <pre><code class="lang-csharp hljs">protected Context parentContext</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -138,55 +160,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Boolean</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <h4 id="Kinstrife_Core_DependencyInjection_DISource_initializeOnStart" data-uid="Kinstrife.Core.DependencyInjection.DISource.initializeOnStart">initializeOnStart</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected bool initializeOnStart</code></pre>
-  </div>
-  <h5 class="fieldValue">Field Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Boolean</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <h4 id="Kinstrife_Core_DependencyInjection_DISource_isRoot" data-uid="Kinstrife.Core.DependencyInjection.DISource.isRoot">isRoot</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected bool isRoot</code></pre>
-  </div>
-  <h5 class="fieldValue">Field Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Boolean</span></td>
+        <td><a class="xref" href="Kinstrife.Core.DependencyInjection.Context.html">Context</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -214,31 +188,6 @@
     <tbody>
       <tr>
         <td><a class="xref" href="Kinstrife.Core.DependencyInjection.Context.html">Context</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="Kinstrife_Core_DependencyInjection_DISource_Initialized_" data-uid="Kinstrife.Core.DependencyInjection.DISource.Initialized*"></a>
-  <h4 id="Kinstrife_Core_DependencyInjection_DISource_Initialized" data-uid="Kinstrife.Core.DependencyInjection.DISource.Initialized">Initialized</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public bool Initialized { get; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Boolean</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -282,16 +231,6 @@
   </div>
   
   
-  <a id="Kinstrife_Core_DependencyInjection_DISource_Initialize_" data-uid="Kinstrife.Core.DependencyInjection.DISource.Initialize*"></a>
-  <h4 id="Kinstrife_Core_DependencyInjection_DISource_Initialize" data-uid="Kinstrife.Core.DependencyInjection.DISource.Initialize">Initialize()</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual void Initialize()</code></pre>
-  </div>
-  
-  
   <a id="Kinstrife_Core_DependencyInjection_DISource_InitializeCache_" data-uid="Kinstrife.Core.DependencyInjection.DISource.InitializeCache*"></a>
   <h4 id="Kinstrife_Core_DependencyInjection_DISource_InitializeCache" data-uid="Kinstrife.Core.DependencyInjection.DISource.InitializeCache">InitializeCache()</h4>
   <div class="markdown level1 summary"></div>
@@ -328,7 +267,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void InstallContext()</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual void InstallContext()</code></pre>
   </div>
   
   
@@ -338,7 +277,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void LocateDependentsInHierarchy()</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual void LocateDependentsInHierarchy()</code></pre>
   </div>
   
   
@@ -395,25 +334,9 @@
       </tr>
     </tbody>
   </table>
-  
-  
-  <a id="Kinstrife_Core_DependencyInjection_DISource_Start_" data-uid="Kinstrife.Core.DependencyInjection.DISource.Start*"></a>
-  <h4 id="Kinstrife_Core_DependencyInjection_DISource_Start" data-uid="Kinstrife.Core.DependencyInjection.DISource.Start">Start()</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected virtual void Start()</code></pre>
-  </div>
   <h3 id="implements">Implements</h3>
   <div>
       <a class="xref" href="Kinstrife.Core.DependencyInjection.IDISource.html">IDISource</a>
-  </div>
-  <div>
-      <a class="xref" href="Kinstrife.Core.DependencyInjection.IInitializable.html">IInitializable</a>
-  </div>
-  <div>
-      <a class="xref" href="Kinstrife.Core.DependencyInjection.IDependent.html">IDependent</a>
   </div>
 </article>
           </div>
