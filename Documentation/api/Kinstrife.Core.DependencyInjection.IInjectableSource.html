@@ -5,10 +5,10 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Class MechanicsInstaller
+    <title>Interface IInjectableSource
    | Kinstrife </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Class MechanicsInstaller
+    <meta name="title" content="Interface IInjectableSource
    | Kinstrife ">
     <meta name="generator" content="docfx 2.56.1.0">
     
@@ -68,40 +68,77 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="Kinstrife.Action.Components.MechanicsInstaller">
+            <article class="content wrap" id="_content" data-uid="Kinstrife.Core.DependencyInjection.IInjectableSource">
   
   
-  <h1 id="Kinstrife_Action_Components_MechanicsInstaller" data-uid="Kinstrife.Action.Components.MechanicsInstaller" class="text-break">Class MechanicsInstaller
+  <h1 id="Kinstrife_Core_DependencyInjection_IInjectableSource" data-uid="Kinstrife.Core.DependencyInjection.IInjectableSource" class="text-break">Interface IInjectableSource
   </h1>
   <div class="markdown level0 summary"></div>
   <div class="markdown level0 conceptual"></div>
-  <div class="inheritance">
-    <h5>Inheritance</h5>
-    <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><a class="xref" href="Kinstrife.Core.DependencyInjection.Installer.html">Installer</a></div>
-    <div class="level2"><span class="xref">MechanicsInstaller</span></div>
-  </div>
-  <div classs="implements">
-    <h5>Implements</h5>
-    <div><a class="xref" href="Kinstrife.Core.DependencyInjection.IInstaller.html">IInstaller</a></div>
-  </div>
-  <h6><strong>Namespace</strong>: <a class="xref" href="Kinstrife.Action.Components.html">Kinstrife.Action.Components</a></h6>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Kinstrife.Core.DependencyInjection.html">Kinstrife.Core.DependencyInjection</a></h6>
   <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
-  <h5 id="Kinstrife_Action_Components_MechanicsInstaller_syntax">Syntax</h5>
+  <h5 id="Kinstrife_Core_DependencyInjection_IInjectableSource_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class MechanicsInstaller : Installer, IInstaller</code></pre>
+    <pre><code class="lang-csharp hljs">public interface IInjectableSource</code></pre>
   </div>
+  <h3 id="properties">Properties
+  </h3>
+  
+  
+  <a id="Kinstrife_Core_DependencyInjection_IInjectableSource_Context_" data-uid="Kinstrife.Core.DependencyInjection.IInjectableSource.Context*"></a>
+  <h4 id="Kinstrife_Core_DependencyInjection_IInjectableSource_Context" data-uid="Kinstrife.Core.DependencyInjection.IInjectableSource.Context">Context</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Context Context { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Kinstrife.Core.DependencyInjection.Context.html">Context</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   <h3 id="methods">Methods
   </h3>
   
   
-  <a id="Kinstrife_Action_Components_MechanicsInstaller_InstallBindings_" data-uid="Kinstrife.Action.Components.MechanicsInstaller.InstallBindings*"></a>
-  <h4 id="Kinstrife_Action_Components_MechanicsInstaller_InstallBindings_Kinstrife_Core_DependencyInjection_Container_Kinstrife_Core_DependencyInjection_IInjectableSource_" data-uid="Kinstrife.Action.Components.MechanicsInstaller.InstallBindings(Kinstrife.Core.DependencyInjection.Container,Kinstrife.Core.DependencyInjection.IInjectableSource)">InstallBindings(Container, IInjectableSource)</h4>
+  <a id="Kinstrife_Core_DependencyInjection_IInjectableSource_InjectDependencies_" data-uid="Kinstrife.Core.DependencyInjection.IInjectableSource.InjectDependencies*"></a>
+  <h4 id="Kinstrife_Core_DependencyInjection_IInjectableSource_InjectDependencies" data-uid="Kinstrife.Core.DependencyInjection.IInjectableSource.InjectDependencies">InjectDependencies()</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public override void InstallBindings(Container container, IInjectableSource source)</code></pre>
+    <pre><code class="lang-csharp hljs">void InjectDependencies()</code></pre>
+  </div>
+  
+  
+  <a id="Kinstrife_Core_DependencyInjection_IInjectableSource_InstallContext_" data-uid="Kinstrife.Core.DependencyInjection.IInjectableSource.InstallContext*"></a>
+  <h4 id="Kinstrife_Core_DependencyInjection_IInjectableSource_InstallContext" data-uid="Kinstrife.Core.DependencyInjection.IInjectableSource.InstallContext">InstallContext()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void InstallContext()</code></pre>
+  </div>
+  
+  
+  <a id="Kinstrife_Core_DependencyInjection_IInjectableSource_RegisterDependent_" data-uid="Kinstrife.Core.DependencyInjection.IInjectableSource.RegisterDependent*"></a>
+  <h4 id="Kinstrife_Core_DependencyInjection_IInjectableSource_RegisterDependent_Kinstrife_Core_DependencyInjection_IDependent_" data-uid="Kinstrife.Core.DependencyInjection.IInjectableSource.RegisterDependent(Kinstrife.Core.DependencyInjection.IDependent)">RegisterDependent(IDependent)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void RegisterDependent(IDependent dependent)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -114,28 +151,21 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="Kinstrife.Core.DependencyInjection.Container.html">Container</a></td>
-        <td><span class="parametername">container</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="Kinstrife.Core.DependencyInjection.IInjectableSource.html">IInjectableSource</a></td>
-        <td><span class="parametername">source</span></td>
+        <td><a class="xref" href="Kinstrife.Core.DependencyInjection.IDependent.html">IDependent</a></td>
+        <td><span class="parametername">dependent</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
-  <h5 class="overrides">Overrides</h5>
-  <div><a class="xref" href="Kinstrife.Core.DependencyInjection.Installer.html#Kinstrife_Core_DependencyInjection_Installer_InstallBindings_Kinstrife_Core_DependencyInjection_Container_Kinstrife_Core_DependencyInjection_IInjectableSource_">Installer.InstallBindings(Container, IInjectableSource)</a></div>
   
   
-  <a id="Kinstrife_Action_Components_MechanicsInstaller_UninstallBindings_" data-uid="Kinstrife.Action.Components.MechanicsInstaller.UninstallBindings*"></a>
-  <h4 id="Kinstrife_Action_Components_MechanicsInstaller_UninstallBindings_Kinstrife_Core_DependencyInjection_Container_Kinstrife_Core_DependencyInjection_IInjectableSource_" data-uid="Kinstrife.Action.Components.MechanicsInstaller.UninstallBindings(Kinstrife.Core.DependencyInjection.Container,Kinstrife.Core.DependencyInjection.IInjectableSource)">UninstallBindings(Container, IInjectableSource)</h4>
+  <a id="Kinstrife_Core_DependencyInjection_IInjectableSource_SetParentContext_" data-uid="Kinstrife.Core.DependencyInjection.IInjectableSource.SetParentContext*"></a>
+  <h4 id="Kinstrife_Core_DependencyInjection_IInjectableSource_SetParentContext_Kinstrife_Core_DependencyInjection_Context_" data-uid="Kinstrife.Core.DependencyInjection.IInjectableSource.SetParentContext(Kinstrife.Core.DependencyInjection.Context)">SetParentContext(Context)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public override void UninstallBindings(Container container, IInjectableSource source)</code></pre>
+    <pre><code class="lang-csharp hljs">void SetParentContext(Context context)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -148,23 +178,12 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="Kinstrife.Core.DependencyInjection.Container.html">Container</a></td>
-        <td><span class="parametername">container</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="Kinstrife.Core.DependencyInjection.IInjectableSource.html">IInjectableSource</a></td>
-        <td><span class="parametername">source</span></td>
+        <td><a class="xref" href="Kinstrife.Core.DependencyInjection.Context.html">Context</a></td>
+        <td><span class="parametername">context</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
-  <h5 class="overrides">Overrides</h5>
-  <div><a class="xref" href="Kinstrife.Core.DependencyInjection.Installer.html#Kinstrife_Core_DependencyInjection_Installer_UninstallBindings_Kinstrife_Core_DependencyInjection_Container_Kinstrife_Core_DependencyInjection_IInjectableSource_">Installer.UninstallBindings(Container, IInjectableSource)</a></div>
-  <h3 id="implements">Implements</h3>
-  <div>
-      <a class="xref" href="Kinstrife.Core.DependencyInjection.IInstaller.html">IInstaller</a>
-  </div>
 </article>
           </div>
           

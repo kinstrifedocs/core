@@ -78,53 +78,47 @@
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><a class="xref" href="Kinstrife.Action.Components.AdapterComponent-1.html">AdapterComponent</a>&lt;<a class="xref" href="Kinstrife.Action.Graph.OutputNodePlayable.html">OutputNodePlayable</a>&gt;</div>
+    <div class="level1"><a class="xref" href="Kinstrife.Action.Components.AdapterComponent-1.html">AdapterComponent</a>&lt;<a class="xref" href="Kinstrife.Action.Components.PlayableAdapter.Instruction.html">PlayableAdapter.Instruction</a>&gt;</div>
     <div class="level2"><span class="xref">PlayableAdapter</span></div>
   </div>
   <div classs="implements">
     <h5>Implements</h5>
+    <div><span class="xref">IEquatable</span>&lt;<a class="xref" href="Kinstrife.Action.Components.AdapterComponent-1.html">AdapterComponent</a>&lt;<a class="xref" href="Kinstrife.Action.Components.PlayableAdapter.Instruction.html">PlayableAdapter.Instruction</a>&gt;&gt;</div>
+    <div><span class="xref">IDisposable</span></div>
+    <div><span class="xref">ICloneable</span></div>
     <div><span class="xref">IComponentData</span></div>
   </div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
     <div>
-      <span class="xref">System.Object.ToString()</span>
+      <a class="xref" href="Kinstrife.Action.Components.AdapterComponent-1.html#Kinstrife_Action_Components_AdapterComponent_1_CreateInstance_ActionNode__0_">AdapterComponent&lt;PlayableAdapter.Instruction&gt;.CreateInstance(ActionNode, PlayableAdapter.Instruction)</a>
     </div>
     <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
+      <a class="xref" href="Kinstrife.Action.Components.AdapterComponent-1.html#Kinstrife_Action_Components_AdapterComponent_1_Clone">AdapterComponent&lt;PlayableAdapter.Instruction&gt;.Clone()</a>
     </div>
     <div>
-      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+      <a class="xref" href="Kinstrife.Action.Components.AdapterComponent-1.html#Kinstrife_Action_Components_AdapterComponent_1_Dispose">AdapterComponent&lt;PlayableAdapter.Instruction&gt;.Dispose()</a>
     </div>
     <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetHashCode()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetType()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
+      <a class="xref" href="Kinstrife.Action.Components.AdapterComponent-1.html#Kinstrife_Action_Components_AdapterComponent_1_Equals_Kinstrife_Action_Components_AdapterComponent__0__">AdapterComponent&lt;PlayableAdapter.Instruction&gt;.Equals(AdapterComponent&lt;PlayableAdapter.Instruction&gt;)</a>
     </div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Kinstrife.Action.Components.html">Kinstrife.Action.Components</a></h6>
   <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
   <h5 id="Kinstrife_Action_Components_PlayableAdapter_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class PlayableAdapter : AdapterComponent&lt;OutputNodePlayable&gt;, IComponentData</code></pre>
+    <pre><code class="lang-csharp hljs">public class PlayableAdapter : AdapterComponent&lt;PlayableAdapter.Instruction&gt;, IEquatable&lt;AdapterComponent&lt;PlayableAdapter.Instruction&gt;&gt;, IDisposable, ICloneable, IComponentData</code></pre>
   </div>
   <h3 id="fields">Fields
   </h3>
   
   
-  <h4 id="Kinstrife_Action_Components_PlayableAdapter_playableGraph" data-uid="Kinstrife.Action.Components.PlayableAdapter.playableGraph">playableGraph</h4>
+  <h4 id="Kinstrife_Action_Components_PlayableAdapter_instructions" data-uid="Kinstrife.Action.Components.PlayableAdapter.instructions">instructions</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public PlayableGraph playableGraph</code></pre>
+    <pre><code class="lang-csharp hljs">protected Dictionary&lt;ActionNode, PlayableAdapter.Instruction&gt; instructions</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -136,7 +130,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">PlayableGraph</span></td>
+        <td><span class="xref">System.Collections.Generic.Dictionary</span>&lt;<a class="xref" href="Kinstrife.Action.Graph.ActionNode.html">ActionNode</a>, <a class="xref" href="Kinstrife.Action.Components.PlayableAdapter.Instruction.html">PlayableAdapter.Instruction</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -151,7 +145,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public override IReadOnlyDictionary&lt;OutputNodePlayable, ActionEventsListenerAdapter&gt; Instructions { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public override IReadOnlyDictionary&lt;ActionNode, PlayableAdapter.Instruction&gt; Instructions { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -163,24 +157,24 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Generic.IReadOnlyDictionary</span>&lt;<a class="xref" href="Kinstrife.Action.Graph.OutputNodePlayable.html">OutputNodePlayable</a>, <a class="xref" href="Kinstrife.Action.Components.ActionEventsListenerAdapter.html">ActionEventsListenerAdapter</a>&gt;</td>
+        <td><span class="xref">System.Collections.Generic.IReadOnlyDictionary</span>&lt;<a class="xref" href="Kinstrife.Action.Graph.ActionNode.html">ActionNode</a>, <a class="xref" href="Kinstrife.Action.Components.PlayableAdapter.Instruction.html">PlayableAdapter.Instruction</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <h5 class="overrides">Overrides</h5>
-  <div><span class="xref">Kinstrife.Action.Components.AdapterComponent&lt;Kinstrife.Action.Graph.OutputNodePlayable&gt;.Instructions</span></div>
+  <div><span class="xref">Kinstrife.Action.Components.AdapterComponent&lt;Kinstrife.Action.Components.PlayableAdapter.Instruction&gt;.Instructions</span></div>
   <h3 id="methods">Methods
   </h3>
   
   
   <a id="Kinstrife_Action_Components_PlayableAdapter_CreateInstance_" data-uid="Kinstrife.Action.Components.PlayableAdapter.CreateInstance*"></a>
-  <h4 id="Kinstrife_Action_Components_PlayableAdapter_CreateInstance_Kinstrife_Action_Graph_OutputNodePlayable_Kinstrife_Action_Components_PlayableAdapter_Instruction_" data-uid="Kinstrife.Action.Components.PlayableAdapter.CreateInstance(Kinstrife.Action.Graph.OutputNodePlayable,Kinstrife.Action.Components.PlayableAdapter.Instruction)">CreateInstance(OutputNodePlayable, PlayableAdapter.Instruction)</h4>
+  <h4 id="Kinstrife_Action_Components_PlayableAdapter_CreateInstance_Kinstrife_Action_Graph_ActionNode_Kinstrife_Action_Components_PlayableAdapter_Instruction_" data-uid="Kinstrife.Action.Components.PlayableAdapter.CreateInstance(Kinstrife.Action.Graph.ActionNode,Kinstrife.Action.Components.PlayableAdapter.Instruction)">CreateInstance(ActionNode, PlayableAdapter.Instruction)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void CreateInstance(OutputNodePlayable key, PlayableAdapter.Instruction value)</code></pre>
+    <pre><code class="lang-csharp hljs">public override void CreateInstance(ActionNode key, PlayableAdapter.Instruction value)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -193,7 +187,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="Kinstrife.Action.Graph.OutputNodePlayable.html">OutputNodePlayable</a></td>
+        <td><a class="xref" href="Kinstrife.Action.Graph.ActionNode.html">ActionNode</a></td>
         <td><span class="parametername">key</span></td>
         <td></td>
       </tr>
@@ -205,6 +199,15 @@
     </tbody>
   </table>
   <h3 id="implements">Implements</h3>
+  <div>
+      <span class="xref">IEquatable&lt;&gt;</span>
+  </div>
+  <div>
+      <span class="xref">IDisposable</span>
+  </div>
+  <div>
+      <span class="xref">ICloneable</span>
+  </div>
   <div>
       <span class="xref">IComponentData</span>
   </div>

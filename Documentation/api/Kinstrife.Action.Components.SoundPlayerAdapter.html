@@ -78,25 +78,74 @@
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><span class="xref">SoundPlayerAdapter</span></div>
+    <div class="level1"><a class="xref" href="Kinstrife.Action.Components.AdapterComponent-1.html">AdapterComponent</a>&lt;<a class="xref" href="Kinstrife.Action.Components.SoundPlayerAdapter.Instruction.html">SoundPlayerAdapter.Instruction</a>&gt;</div>
+    <div class="level2"><span class="xref">SoundPlayerAdapter</span></div>
+  </div>
+  <div classs="implements">
+    <h5>Implements</h5>
+    <div><span class="xref">IEquatable</span>&lt;<a class="xref" href="Kinstrife.Action.Components.AdapterComponent-1.html">AdapterComponent</a>&lt;<a class="xref" href="Kinstrife.Action.Components.SoundPlayerAdapter.Instruction.html">SoundPlayerAdapter.Instruction</a>&gt;&gt;</div>
+    <div><span class="xref">IDisposable</span></div>
+    <div><span class="xref">ICloneable</span></div>
+    <div><span class="xref">IComponentData</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="Kinstrife.Action.Components.AdapterComponent-1.html#Kinstrife_Action_Components_AdapterComponent_1_CreateInstance_ActionNode__0_">AdapterComponent&lt;SoundPlayerAdapter.Instruction&gt;.CreateInstance(ActionNode, SoundPlayerAdapter.Instruction)</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.Action.Components.AdapterComponent-1.html#Kinstrife_Action_Components_AdapterComponent_1_Clone">AdapterComponent&lt;SoundPlayerAdapter.Instruction&gt;.Clone()</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.Action.Components.AdapterComponent-1.html#Kinstrife_Action_Components_AdapterComponent_1_Dispose">AdapterComponent&lt;SoundPlayerAdapter.Instruction&gt;.Dispose()</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.Action.Components.AdapterComponent-1.html#Kinstrife_Action_Components_AdapterComponent_1_Equals_Kinstrife_Action_Components_AdapterComponent__0__">AdapterComponent&lt;SoundPlayerAdapter.Instruction&gt;.Equals(AdapterComponent&lt;SoundPlayerAdapter.Instruction&gt;)</a>
+    </div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Kinstrife.Action.Components.html">Kinstrife.Action.Components</a></h6>
   <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
   <h5 id="Kinstrife_Action_Components_SoundPlayerAdapter_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class SoundPlayerAdapter : IComponentData</code></pre>
+    <pre><code class="lang-csharp hljs">public class SoundPlayerAdapter : AdapterComponent&lt;SoundPlayerAdapter.Instruction&gt;, IEquatable&lt;AdapterComponent&lt;SoundPlayerAdapter.Instruction&gt;&gt;, IDisposable, ICloneable, IComponentData</code></pre>
   </div>
-  <h3 id="properties">Properties
+  <h3 id="fields">Fields
   </h3>
   
   
-  <a id="Kinstrife_Action_Components_SoundPlayerAdapter_Instances_" data-uid="Kinstrife.Action.Components.SoundPlayerAdapter.Instances*"></a>
-  <h4 id="Kinstrife_Action_Components_SoundPlayerAdapter_Instances" data-uid="Kinstrife.Action.Components.SoundPlayerAdapter.Instances">Instances</h4>
+  <h4 id="Kinstrife_Action_Components_SoundPlayerAdapter_instructions" data-uid="Kinstrife.Action.Components.SoundPlayerAdapter.instructions">instructions</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public IReadOnlyDictionary&lt;OutputNodeSound, SoundPlayerAdapter.Instruction&gt; Instances { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">protected Dictionary&lt;ActionNode, SoundPlayerAdapter.Instruction&gt; instructions</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.Dictionary</span>&lt;<a class="xref" href="Kinstrife.Action.Graph.ActionNode.html">ActionNode</a>, <a class="xref" href="Kinstrife.Action.Components.SoundPlayerAdapter.Instruction.html">SoundPlayerAdapter.Instruction</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="properties">Properties
+  </h3>
+  
+  
+  <a id="Kinstrife_Action_Components_SoundPlayerAdapter_Instructions_" data-uid="Kinstrife.Action.Components.SoundPlayerAdapter.Instructions*"></a>
+  <h4 id="Kinstrife_Action_Components_SoundPlayerAdapter_Instructions" data-uid="Kinstrife.Action.Components.SoundPlayerAdapter.Instructions">Instructions</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override IReadOnlyDictionary&lt;ActionNode, SoundPlayerAdapter.Instruction&gt; Instructions { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -108,22 +157,24 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Generic.IReadOnlyDictionary</span>&lt;<a class="xref" href="Kinstrife.Action.Graph.OutputNodeSound.html">OutputNodeSound</a>, <a class="xref" href="Kinstrife.Action.Components.SoundPlayerAdapter.Instruction.html">SoundPlayerAdapter.Instruction</a>&gt;</td>
+        <td><span class="xref">System.Collections.Generic.IReadOnlyDictionary</span>&lt;<a class="xref" href="Kinstrife.Action.Graph.ActionNode.html">ActionNode</a>, <a class="xref" href="Kinstrife.Action.Components.SoundPlayerAdapter.Instruction.html">SoundPlayerAdapter.Instruction</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">Kinstrife.Action.Components.AdapterComponent&lt;Kinstrife.Action.Components.SoundPlayerAdapter.Instruction&gt;.Instructions</span></div>
   <h3 id="methods">Methods
   </h3>
   
   
   <a id="Kinstrife_Action_Components_SoundPlayerAdapter_CreateInstance_" data-uid="Kinstrife.Action.Components.SoundPlayerAdapter.CreateInstance*"></a>
-  <h4 id="Kinstrife_Action_Components_SoundPlayerAdapter_CreateInstance_Kinstrife_Action_Graph_OutputNodeSound_Kinstrife_Action_Components_SoundPlayerAdapter_Instruction_" data-uid="Kinstrife.Action.Components.SoundPlayerAdapter.CreateInstance(Kinstrife.Action.Graph.OutputNodeSound,Kinstrife.Action.Components.SoundPlayerAdapter.Instruction)">CreateInstance(OutputNodeSound, SoundPlayerAdapter.Instruction)</h4>
+  <h4 id="Kinstrife_Action_Components_SoundPlayerAdapter_CreateInstance_Kinstrife_Action_Graph_ActionNode_Kinstrife_Action_Components_SoundPlayerAdapter_Instruction_" data-uid="Kinstrife.Action.Components.SoundPlayerAdapter.CreateInstance(Kinstrife.Action.Graph.ActionNode,Kinstrife.Action.Components.SoundPlayerAdapter.Instruction)">CreateInstance(ActionNode, SoundPlayerAdapter.Instruction)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void CreateInstance(OutputNodeSound key, SoundPlayerAdapter.Instruction value)</code></pre>
+    <pre><code class="lang-csharp hljs">public override void CreateInstance(ActionNode key, SoundPlayerAdapter.Instruction value)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -136,7 +187,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="Kinstrife.Action.Graph.OutputNodeSound.html">OutputNodeSound</a></td>
+        <td><a class="xref" href="Kinstrife.Action.Graph.ActionNode.html">ActionNode</a></td>
         <td><span class="parametername">key</span></td>
         <td></td>
       </tr>
@@ -147,6 +198,19 @@
       </tr>
     </tbody>
   </table>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <span class="xref">IEquatable&lt;&gt;</span>
+  </div>
+  <div>
+      <span class="xref">IDisposable</span>
+  </div>
+  <div>
+      <span class="xref">ICloneable</span>
+  </div>
+  <div>
+      <span class="xref">IComponentData</span>
+  </div>
 </article>
           </div>
           
