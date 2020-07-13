@@ -5,9 +5,9 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Dependency Injection (DI) basics | Kinstrife </title>
+    <title>uid: dependencyinjectionbasics | Kinstrife </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Dependency Injection (DI) basics | Kinstrife ">
+    <meta name="title" content="uid: dependencyinjectionbasics | Kinstrife ">
     <meta name="generator" content="docfx 2.56.1.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
@@ -66,13 +66,36 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="dependencyinjectionbasics">
-<h1 id="dependency-injection-di-basics">Dependency Injection (DI) basics</h1>
+            <article class="content wrap" id="_content" data-uid="">
 
+<hr>
+<h2 id="uid-dependencyinjectionbasics">uid: dependencyinjectionbasics</h2>
+<h1 id="dependency-injection-di-basics">Dependency Injection (DI) basics</h1>
 <blockquote>
-<p><code>&quot;com.kinstrife.core.dependency-injection&quot;: &quot;file:C:/GameDev/Core/Packages/Dependency Injection&quot;</code></p>
+<p><code>&quot;com.kinstrife.core.dependency-injection&quot;: &quot;file:/GameDev/Core/Packages/Dependency Injection&quot;</code></p>
 </blockquote>
-<p>TODO</p>
+<h2 id="intro">Intro</h2>
+<p>This package contains a lightweight, performant dependency injection framework. It can be used to turn your application into a collection of loosely-coupled parts with highly segmented responsibilities.</p>
+<h2 id="quickstart">Quickstart</h2>
+<p>Dependency Injection requires a <code>Context</code> , a <code>InjectableSourcer</code>, and a controller to direct the application flow. If the scene exists outside of an application flow environment, the standalone variant of the <code>InjectableSourcer</code> is used (<code>DIInitializer</code>).</p>
+<ol>
+<li>Create a GameObject with a <code>Context</code></li>
+<li>Add a <code>InjectableSourcer</code></li>
+<li>Add a controller that runs the injection (<code>DIInitializer</code> or custom, e.g. <code>Module</code>)</li>
+</ol>
+<h2 id="core-concepts">Core Concepts</h2>
+<h3 id="context">Context</h3>
+<p>The <a href="Scripts/Context.cs"><code>Context</code></a> exists at the core of the dependency injection functionality, its primary function is to reference the <a href="Scripts/Container.cs"><code>Container</code></a>, and run the installation.</p>
+<h3 id="installer">Installer</h3>
+<p><a href="Scripts/Installer.cs"><code>Installers</code></a> are run on the Context as a way to bind dependencies to a container. They are available as either a Monobehaviour or ScriptableObject.</p>
+<h3 id="injectablesourcer">InjectableSourcer</h3>
+<p>The  <a href="Scripts/InjectableSourcer.cs"><code>InjectableSourcer</code></a>  and allow the specification of the DI hierarchy through referencing a Context and its parent . Their</p>
+<h3 id="iinjectable">IInjectable</h3>
+<h2 id="internal-implementation">Internal Implementation</h2>
+<h3 id="container">Container</h3>
+<h3 id="injector">Injector</h3>
+<h2 id="uml-diagram">UML Diagram</h2>
+<p><a href="https://app.diagrams.net/#G19nEZ9rnV26Mfpgd0J5D1g_sRuskQ1Dnc">https://app.diagrams.net/#G19nEZ9rnV26Mfpgd0J5D1g_sRuskQ1Dnc</a></p>
 </article>
           </div>
           
