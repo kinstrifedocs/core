@@ -89,13 +89,12 @@ e. g. for the actor module, where unneeded actors for the next mode/scene can be
   <div classs="implements">
     <h5>Implements</h5>
     <div><span class="xref">IInjectable</span></div>
-    <div><span class="xref">IDISource</span></div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Kinstrife.Application.html">Kinstrife.Application</a></h6>
   <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
   <h5 id="Kinstrife_Application_Module_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public abstract class Module : DISource, IInjectable, IDISource</code></pre>
+    <pre><code class="lang-csharp hljs">public abstract class Module : MonoBehaviour, IInjectable</code></pre>
   </div>
   <h3 id="fields">Fields
   </h3>
@@ -245,6 +244,30 @@ e. g. for the actor module, where unneeded actors for the next mode/scene can be
   </table>
   
   
+  <h4 id="Kinstrife_Application_Module_source" data-uid="Kinstrife.Application.Module.source">source</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected DISource source</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">DISource</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
   <h4 id="Kinstrife_Application_Module_timeController" data-uid="Kinstrife.Application.Module.timeController">timeController</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
@@ -354,7 +377,7 @@ e. g. for the actor module, where unneeded actors for the next mode/scene can be
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public override void InjectDependencies()</code></pre>
+    <pre><code class="lang-csharp hljs">public void InjectDependencies()</code></pre>
   </div>
   
   
@@ -364,7 +387,7 @@ e. g. for the actor module, where unneeded actors for the next mode/scene can be
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public override void InstallContext()</code></pre>
+    <pre><code class="lang-csharp hljs">public void InstallContext()</code></pre>
   </div>
   
   
@@ -406,7 +429,7 @@ e. g. for the actor module, where unneeded actors for the next mode/scene can be
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public override void LocateDependentsInHierarchy()</code></pre>
+    <pre><code class="lang-csharp hljs">public void LocateDependentsInHierarchy()</code></pre>
   </div>
   
   
@@ -471,6 +494,33 @@ up in its proper order to avoid setup dependency issues.</p>
     <tbody>
       <tr>
         <td><span class="xref">IPromise</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Kinstrife_Application_Module_RegisterChildContext_" data-uid="Kinstrife.Application.Module.RegisterChildContext*"></a>
+  <h4 id="Kinstrife_Application_Module_RegisterChildContext_DIInitializer_" data-uid="Kinstrife.Application.Module.RegisterChildContext(DIInitializer)">RegisterChildContext(DIInitializer)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void RegisterChildContext(DIInitializer childContext)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">DIInitializer</span></td>
+        <td><span class="parametername">childContext</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -543,6 +593,33 @@ up in its proper order to avoid setup dependency issues.</p>
     <tbody>
       <tr>
         <td><span class="xref">IPromise</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Kinstrife_Application_Module_SetParentContext_" data-uid="Kinstrife.Application.Module.SetParentContext*"></a>
+  <h4 id="Kinstrife_Application_Module_SetParentContext_Context_" data-uid="Kinstrife.Application.Module.SetParentContext(Context)">SetParentContext(Context)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetParentContext(Context context)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Context</span></td>
+        <td><span class="parametername">context</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -624,9 +701,6 @@ up in its proper order to avoid setup dependency issues.</p>
   <h3 id="implements">Implements</h3>
   <div>
       <span class="xref">IInjectable</span>
-  </div>
-  <div>
-      <span class="xref">IDISource</span>
   </div>
 </article>
           </div>

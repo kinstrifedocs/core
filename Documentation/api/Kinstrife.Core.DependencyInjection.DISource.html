@@ -79,6 +79,7 @@
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
     <div class="level1"><span class="xref">DISource</span></div>
+      <div class="level2"><a class="xref" href="Kinstrife.Core.DependencyInjection.DIInitializer.html">DIInitializer</a></div>
       <div class="level2"><a class="xref" href="Kinstrife.Core.DependencyInjection.DISourceStandalone.html">DISourceStandalone</a></div>
   </div>
   <div classs="implements">
@@ -89,7 +90,7 @@
   <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
   <h5 id="Kinstrife_Core_DependencyInjection_DISource_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public abstract class DISource : MonoBehaviour, IDISource</code></pre>
+    <pre><code class="lang-csharp hljs">public class DISource : MonoBehaviour, IDISource</code></pre>
   </div>
   <h3 id="fields">Fields
   </h3>
@@ -194,6 +195,31 @@
   </table>
   
   
+  <a id="Kinstrife_Core_DependencyInjection_DISource_DependentsCache_" data-uid="Kinstrife.Core.DependencyInjection.DISource.DependentsCache*"></a>
+  <h4 id="Kinstrife_Core_DependencyInjection_DISource_DependentsCache" data-uid="Kinstrife.Core.DependencyInjection.DISource.DependentsCache">DependentsCache</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public DependentsCache DependentsCache { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Kinstrife.Core.DependencyInjection.DependentsCache.html">DependentsCache</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
   <a id="Kinstrife_Core_DependencyInjection_DISource_ParentContext_" data-uid="Kinstrife.Core.DependencyInjection.DISource.ParentContext*"></a>
   <h4 id="Kinstrife_Core_DependencyInjection_DISource_ParentContext" data-uid="Kinstrife.Core.DependencyInjection.DISource.ParentContext">ParentContext</h4>
   <div class="markdown level1 summary"></div>
@@ -238,16 +264,6 @@
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public void InitializeCache()</code></pre>
-  </div>
-  
-  
-  <a id="Kinstrife_Core_DependencyInjection_DISource_InitializeDependents_" data-uid="Kinstrife.Core.DependencyInjection.DISource.InitializeDependents*"></a>
-  <h4 id="Kinstrife_Core_DependencyInjection_DISource_InitializeDependents" data-uid="Kinstrife.Core.DependencyInjection.DISource.InitializeDependents">InitializeDependents()</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual void InitializeDependents()</code></pre>
   </div>
   
   
@@ -303,6 +319,50 @@
       <tr>
         <td><a class="xref" href="Kinstrife.Core.DependencyInjection.IDependent.html">IDependent</a></td>
         <td><span class="parametername">dependent</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Kinstrife_Core_DependencyInjection_DISource_RegisterDependents_" data-uid="Kinstrife.Core.DependencyInjection.DISource.RegisterDependents*"></a>
+  <h4 id="Kinstrife_Core_DependencyInjection_DISource_RegisterDependents__1_System_Collections_Generic_List___0__" data-uid="Kinstrife.Core.DependencyInjection.DISource.RegisterDependents``1(System.Collections.Generic.List{``0})">RegisterDependents&lt;T&gt;(List&lt;T&gt;)</h4>
+  <div class="markdown level1 summary"><p>Adds this dependent to the cache for future initialization</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void RegisterDependents&lt;T&gt;(List&lt;T&gt; dependents)
+    where T : IDependent</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.List</span>&lt;T&gt;</td>
+        <td><span class="parametername">dependents</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T</span></td>
         <td></td>
       </tr>
     </tbody>
