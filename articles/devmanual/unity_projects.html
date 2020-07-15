@@ -5,9 +5,9 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Authoring packages | Kinstrife </title>
+    <title>Managing Unity projects | Kinstrife </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Authoring packages | Kinstrife ">
+    <meta name="title" content="Managing Unity projects | Kinstrife ">
     <meta name="generator" content="docfx 2.56.1.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
@@ -66,24 +66,17 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="howto.md">
-<h2 id="creating-packages">Creating packages</h2>
+            <article class="content wrap" id="_content" data-uid="unity_projects">
+<h1 id="managing-unity-projects">Managing Unity projects</h1>
 
-<p>Packages can be created with the package creator utility. It is located at <code>Packages/create_package.bat</code> in the Core repo. Simply double click the batch file to start the utility and follow its instructions.</p>
-<p>Note that this is only a basic set-up and you might want to create an additional assembly definition e.g. for Editor scripts. If you are working on a larger package, you should also strongly consider to expand the documentation in the <code>index.md</code>.</p>
-<h2 id="documenting-packages">Documenting packages</h2>
-<p>In addition to the API documentation (generated from triple slash XML comments) it is very helpful to create articles explaining basic concepts and usage of a package. This is done in the following files:</p>
-<ul>
-<li><code>index.md</code> - the 'homepage' for your package, should contain information about basic functionality and concepts. This file is created automatically by the package creation utility.</li>
-<li><code>toc.yml</code> - an optional table of content definition if there are additional documentation files</li>
-<li><code>Documentation\*.md</code> - any additional markdown files that act as sub-pages. They need to be linked in the <code>toc.yml</code>. May also contain images that can be linked in documentation files.</li>
-</ul>
-<h4 id="documentation-template">Documentation template</h4>
-<p>The easiest way to add further documentation to a package is to copy the Documentation folder from the <strong>ExamplePackage</strong> as mentioned above. Make sure to update your new table of contents (<code>toc.yml</code>)  once you renamed and updated the files for your package!</p>
-<div class="NOTE">
-<h5>Note</h5>
-<p>In addition to a starter template, the ExamplePackage <em>index.md</em> also contains some useful examples of markdown features like this note.</p>
-</div>
+<p>Rather than having a single (huge) Unity project for all of our development, our package-based setup allows us to have various projects with shared code and assets. Unity's editor slows down considerably with larger projects and in many cases, compile times are also longer - as a result, it is often preferable to develop in smaller (partial) projects.</p>
+<p>Because of this setup, projects by themselves <strong>do not contain any assets or scripts</strong>. Additionally, most project settings are symlinked to our Core project, located at <em>Core\Projects\KinstrifeCore</em>. The only relevant information in projects is the list of packages in their project manifest (located in the project's <em>Packages</em> folder). In practice, Projects of course also have their library folder, which stores imported assets - as a result, it makes sense to have multiple projects around with readily imported assets, rather than using a single project while constantly swapping (and re-importing) packages.</p>
+<p>In short, Unity projects should generally be seen as <strong>workspaces</strong> rather than an all-encompassing sources of truth as in most other Unity development projects.</p>
+<h2 id="opening-projects">Opening projects</h2>
+<p>Projects can be opened via the Unity hub. All missing folders (which are ignored by git) will be automatically generated.</p>
+<h2 id="creating-projects">Creating projects</h2>
+<p>Create a new project as you regularly would via the Unity hub. After doing so, run the project setup wizard located at <em>Core\Projects\KinstrifeCore\SetupUnityProject.bat</em>, providing the path of the newly created package as input when prompted.</p>
+<p>Some settings will be replaced by symlinks to the KinstrifeCore project settings. This is the case e.g. with the TagManager.asset, to ensure that all projects use the same physics layer names and setup. The list of project settings to link is defined in <em>SetupSettingsToSymlink.txt</em> in the Core folder.</p>
 </article>
           </div>
           
@@ -92,7 +85,7 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://kinstrife.visualstudio.com/Core/_git/Core?path=Packages/Documentation/articles/packages/howto.md&amp;version=GBmaster&amp;line=1" class="contribution-link">Improve this Doc</a>
+                    <a href="https://kinstrife.visualstudio.com/Core/_git/Core?path=Packages/Documentation/articles/devmanual/unity_projects.md&amp;version=GBmaster&amp;line=1" class="contribution-link">Improve this Doc</a>
                   </li>
                 </ul>
               </div>
