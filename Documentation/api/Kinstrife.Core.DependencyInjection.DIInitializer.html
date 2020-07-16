@@ -113,10 +113,7 @@
       <a class="xref" href="Kinstrife.Core.DependencyInjection.InjectableSource.html#Kinstrife_Core_DependencyInjection_InjectableSource_InstallContext">InjectableSource.InstallContext()</a>
     </div>
     <div>
-      <a class="xref" href="Kinstrife.Core.DependencyInjection.InjectableSource.html#Kinstrife_Core_DependencyInjection_InjectableSource_InitializeCache">InjectableSource.InitializeCache()</a>
-    </div>
-    <div>
-      <a class="xref" href="Kinstrife.Core.DependencyInjection.InjectableSource.html#Kinstrife_Core_DependencyInjection_InjectableSource_LocateDependentsInHierarchy">InjectableSource.LocateDependentsInHierarchy()</a>
+      <a class="xref" href="Kinstrife.Core.DependencyInjection.InjectableSource.html#Kinstrife_Core_DependencyInjection_InjectableSource_RefreshCache">InjectableSource.RefreshCache()</a>
     </div>
     <div>
       <a class="xref" href="Kinstrife.Core.DependencyInjection.InjectableSource.html#Kinstrife_Core_DependencyInjection_InjectableSource_RegisterDependent_Kinstrife_Core_DependencyInjection_IDependent_">InjectableSource.RegisterDependent(IDependent)</a>
@@ -136,6 +133,30 @@
   </div>
   <h3 id="fields">Fields
   </h3>
+  
+  
+  <h4 id="Kinstrife_Core_DependencyInjection_DIInitializer_getAllSceneLocators" data-uid="Kinstrife.Core.DependencyInjection.DIInitializer.getAllSceneLocators">getAllSceneLocators</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected bool getAllSceneLocators</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   
   
   <h4 id="Kinstrife_Core_DependencyInjection_DIInitializer_initializeOnAwake" data-uid="Kinstrife.Core.DependencyInjection.DIInitializer.initializeOnAwake">initializeOnAwake</h4>
@@ -180,6 +201,30 @@
     <tbody>
       <tr>
         <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="Kinstrife_Core_DependencyInjection_DIInitializer_locators" data-uid="Kinstrife.Core.DependencyInjection.DIInitializer.locators">locators</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public List&lt;DependentsLocator&gt; locators</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.List</span>&lt;<a class="xref" href="Kinstrife.Core.DependencyInjection.DependentsLocator.html">DependentsLocator</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -245,6 +290,18 @@
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public virtual void InitializeDependents()</code></pre>
   </div>
+  
+  
+  <a id="Kinstrife_Core_DependencyInjection_DIInitializer_LocateDependentsInHierarchy_" data-uid="Kinstrife.Core.DependencyInjection.DIInitializer.LocateDependentsInHierarchy*"></a>
+  <h4 id="Kinstrife_Core_DependencyInjection_DIInitializer_LocateDependentsInHierarchy" data-uid="Kinstrife.Core.DependencyInjection.DIInitializer.LocateDependentsInHierarchy">LocateDependentsInHierarchy()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override void LocateDependentsInHierarchy()</code></pre>
+  </div>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Kinstrife.Core.DependencyInjection.InjectableSource.html#Kinstrife_Core_DependencyInjection_InjectableSource_LocateDependentsInHierarchy">InjectableSource.LocateDependentsInHierarchy()</a></div>
   
   
   <a id="Kinstrife_Core_DependencyInjection_DIInitializer_Start_" data-uid="Kinstrife.Core.DependencyInjection.DIInitializer.Start*"></a>
