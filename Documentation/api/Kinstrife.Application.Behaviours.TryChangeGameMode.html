@@ -5,10 +5,10 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Class StatefulFlowInstaller
+    <title>Class TryChangeGameMode
    | Kinstrife </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Class StatefulFlowInstaller
+    <meta name="title" content="Class TryChangeGameMode
    | Kinstrife ">
     <meta name="generator" content="docfx 2.56.1.0">
     
@@ -68,41 +68,67 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="Kinstrife.StateFlow.StatefulFlowInstaller">
+            <article class="content wrap" id="_content" data-uid="Kinstrife.Application.Behaviours.TryChangeGameMode">
   
   
-  <h1 id="Kinstrife_StateFlow_StatefulFlowInstaller" data-uid="Kinstrife.StateFlow.StatefulFlowInstaller" class="text-break">Class StatefulFlowInstaller
+  <h1 id="Kinstrife_Application_Behaviours_TryChangeGameMode" data-uid="Kinstrife.Application.Behaviours.TryChangeGameMode" class="text-break">Class TryChangeGameMode
   </h1>
-  <div class="markdown level0 summary"><p>A simple installer to install a referenced StatefulFlowComponent into a hierarchy</p>
-</div>
+  <div class="markdown level0 summary"></div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><a class="xref" href="Kinstrife.Core.DependencyInjection.Installer.html">Installer</a></div>
-    <div class="level2"><span class="xref">StatefulFlowInstaller</span></div>
+    <div class="level1"><span class="xref">TryChangeGameMode</span></div>
   </div>
   <div classs="implements">
     <h5>Implements</h5>
-    <div><a class="xref" href="Kinstrife.Core.DependencyInjection.IInstaller.html">IInstaller</a></div>
+    <div><a class="xref" href="Kinstrife.Core.DependencyInjection.IInjectable.html">IInjectable</a></div>
+    <div><a class="xref" href="Kinstrife.Core.DependencyInjection.IDependent.html">IDependent</a></div>
   </div>
-  <h6><strong>Namespace</strong>: <a class="xref" href="Kinstrife.StateFlow.html">Kinstrife.StateFlow</a></h6>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Kinstrife.Application.Behaviours.html">Kinstrife.Application.Behaviours</a></h6>
   <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
-  <h5 id="Kinstrife_StateFlow_StatefulFlowInstaller_syntax">Syntax</h5>
+  <h5 id="Kinstrife_Application_Behaviours_TryChangeGameMode_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class StatefulFlowInstaller : Installer, IInstaller</code></pre>
+    <pre><code class="lang-csharp hljs">public class TryChangeGameMode : MonoBehaviour, IInjectable, IDependent</code></pre>
   </div>
+  <h3 id="properties">Properties
+  </h3>
+  
+  
+  <a id="Kinstrife_Application_Behaviours_TryChangeGameMode_GameMode_" data-uid="Kinstrife.Application.Behaviours.TryChangeGameMode.GameMode*"></a>
+  <h4 id="Kinstrife_Application_Behaviours_TryChangeGameMode_GameMode" data-uid="Kinstrife.Application.Behaviours.TryChangeGameMode.GameMode">GameMode</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public GameMode GameMode { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Kinstrife.Application.GameMode.html">GameMode</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   <h3 id="methods">Methods
   </h3>
   
   
-  <a id="Kinstrife_StateFlow_StatefulFlowInstaller_InstallBindings_" data-uid="Kinstrife.StateFlow.StatefulFlowInstaller.InstallBindings*"></a>
-  <h4 id="Kinstrife_StateFlow_StatefulFlowInstaller_InstallBindings_Kinstrife_Core_DependencyInjection_Container_Kinstrife_Core_DependencyInjection_IInjectableSource_" data-uid="Kinstrife.StateFlow.StatefulFlowInstaller.InstallBindings(Kinstrife.Core.DependencyInjection.Container,Kinstrife.Core.DependencyInjection.IInjectableSource)">InstallBindings(Container, IInjectableSource)</h4>
+  <a id="Kinstrife_Application_Behaviours_TryChangeGameMode_Inject_" data-uid="Kinstrife.Application.Behaviours.TryChangeGameMode.Inject*"></a>
+  <h4 id="Kinstrife_Application_Behaviours_TryChangeGameMode_Inject_Kinstrife_Application_ApplicationFlow_" data-uid="Kinstrife.Application.Behaviours.TryChangeGameMode.Inject(Kinstrife.Application.ApplicationFlow)">Inject(ApplicationFlow)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public override void InstallBindings(Container container, IInjectableSource source)</code></pre>
+    <pre><code class="lang-csharp hljs">public void Inject(ApplicationFlow flow)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -115,28 +141,31 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="Kinstrife.Core.DependencyInjection.Container.html">Container</a></td>
-        <td><span class="parametername">container</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="Kinstrife.Core.DependencyInjection.IInjectableSource.html">IInjectableSource</a></td>
-        <td><span class="parametername">source</span></td>
+        <td><a class="xref" href="Kinstrife.Application.ApplicationFlow.html">ApplicationFlow</a></td>
+        <td><span class="parametername">flow</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
-  <h5 class="overrides">Overrides</h5>
-  <div><a class="xref" href="Kinstrife.Core.DependencyInjection.Installer.html#Kinstrife_Core_DependencyInjection_Installer_InstallBindings_Kinstrife_Core_DependencyInjection_Container_Kinstrife_Core_DependencyInjection_IInjectableSource_">Installer.InstallBindings(Container, IInjectableSource)</a></div>
   
   
-  <a id="Kinstrife_StateFlow_StatefulFlowInstaller_UninstallBindings_" data-uid="Kinstrife.StateFlow.StatefulFlowInstaller.UninstallBindings*"></a>
-  <h4 id="Kinstrife_StateFlow_StatefulFlowInstaller_UninstallBindings_Kinstrife_Core_DependencyInjection_Container_Kinstrife_Core_DependencyInjection_IInjectableSource_" data-uid="Kinstrife.StateFlow.StatefulFlowInstaller.UninstallBindings(Kinstrife.Core.DependencyInjection.Container,Kinstrife.Core.DependencyInjection.IInjectableSource)">UninstallBindings(Container, IInjectableSource)</h4>
+  <a id="Kinstrife_Application_Behaviours_TryChangeGameMode_TryChange_" data-uid="Kinstrife.Application.Behaviours.TryChangeGameMode.TryChange*"></a>
+  <h4 id="Kinstrife_Application_Behaviours_TryChangeGameMode_TryChange" data-uid="Kinstrife.Application.Behaviours.TryChangeGameMode.TryChange">TryChange()</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public override void UninstallBindings(Container container, IInjectableSource source)</code></pre>
+    <pre><code class="lang-csharp hljs">public void TryChange()</code></pre>
+  </div>
+  
+  
+  <a id="Kinstrife_Application_Behaviours_TryChangeGameMode_TryChange_" data-uid="Kinstrife.Application.Behaviours.TryChangeGameMode.TryChange*"></a>
+  <h4 id="Kinstrife_Application_Behaviours_TryChangeGameMode_TryChange_Kinstrife_Application_GameMode_" data-uid="Kinstrife.Application.Behaviours.TryChangeGameMode.TryChange(Kinstrife.Application.GameMode)">TryChange(GameMode)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void TryChange(GameMode targetMode)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -149,22 +178,18 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="Kinstrife.Core.DependencyInjection.Container.html">Container</a></td>
-        <td><span class="parametername">container</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="Kinstrife.Core.DependencyInjection.IInjectableSource.html">IInjectableSource</a></td>
-        <td><span class="parametername">source</span></td>
+        <td><a class="xref" href="Kinstrife.Application.GameMode.html">GameMode</a></td>
+        <td><span class="parametername">targetMode</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
-  <h5 class="overrides">Overrides</h5>
-  <div><a class="xref" href="Kinstrife.Core.DependencyInjection.Installer.html#Kinstrife_Core_DependencyInjection_Installer_UninstallBindings_Kinstrife_Core_DependencyInjection_Container_Kinstrife_Core_DependencyInjection_IInjectableSource_">Installer.UninstallBindings(Container, IInjectableSource)</a></div>
   <h3 id="implements">Implements</h3>
   <div>
-      <a class="xref" href="Kinstrife.Core.DependencyInjection.IInstaller.html">IInstaller</a>
+      <a class="xref" href="Kinstrife.Core.DependencyInjection.IInjectable.html">IInjectable</a>
+  </div>
+  <div>
+      <a class="xref" href="Kinstrife.Core.DependencyInjection.IDependent.html">IDependent</a>
   </div>
 </article>
           </div>
