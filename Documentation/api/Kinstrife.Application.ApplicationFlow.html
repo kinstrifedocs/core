@@ -147,6 +147,30 @@ Coroutines.</p>
   </table>
   
   
+  <h4 id="Kinstrife_Application_ApplicationFlow_OnLoadLocation" data-uid="Kinstrife.Application.ApplicationFlow.OnLoadLocation">OnLoadLocation</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Action&lt;LocationHandle&gt; OnLoadLocation</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Action</span>&lt;<a class="xref" href="Kinstrife.Application.LocationHandle.html">LocationHandle</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
   <h4 id="Kinstrife_Application_ApplicationFlow_PauseModeChange" data-uid="Kinstrife.Application.ApplicationFlow.PauseModeChange">PauseModeChange</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
@@ -192,6 +216,56 @@ Coroutines.</p>
     <tbody>
       <tr>
         <td><a class="xref" href="Kinstrife.Application.Module.html">Module</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Kinstrife_Application_ApplicationFlow_CurrentLocation_" data-uid="Kinstrife.Application.ApplicationFlow.CurrentLocation*"></a>
+  <h4 id="Kinstrife_Application_ApplicationFlow_CurrentLocation" data-uid="Kinstrife.Application.ApplicationFlow.CurrentLocation">CurrentLocation</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Location CurrentLocation { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Kinstrife.Application.Location.html">Location</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Kinstrife_Application_ApplicationFlow_CurrentLocationHandle_" data-uid="Kinstrife.Application.ApplicationFlow.CurrentLocationHandle*"></a>
+  <h4 id="Kinstrife_Application_ApplicationFlow_CurrentLocationHandle" data-uid="Kinstrife.Application.ApplicationFlow.CurrentLocationHandle">CurrentLocationHandle</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public LocationHandle CurrentLocationHandle { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Kinstrife.Application.LocationHandle.html">LocationHandle</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -332,6 +406,38 @@ Coroutines.</p>
   </table>
   
   
+  <a id="Kinstrife_Application_ApplicationFlow_RegisterLocation_" data-uid="Kinstrife.Application.ApplicationFlow.RegisterLocation*"></a>
+  <h4 id="Kinstrife_Application_ApplicationFlow_RegisterLocation_Kinstrife_Application_LocationHandle_Kinstrife_Application_Location_" data-uid="Kinstrife.Application.ApplicationFlow.RegisterLocation(Kinstrife.Application.LocationHandle,Kinstrife.Application.Location)">RegisterLocation(LocationHandle, Location)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void RegisterLocation(LocationHandle handle, Location location)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Kinstrife.Application.LocationHandle.html">LocationHandle</a></td>
+        <td><span class="parametername">handle</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Kinstrife.Application.Location.html">Location</a></td>
+        <td><span class="parametername">location</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
   <a id="Kinstrife_Application_ApplicationFlow_RegisterModule_" data-uid="Kinstrife.Application.ApplicationFlow.RegisterModule*"></a>
   <h4 id="Kinstrife_Application_ApplicationFlow_RegisterModule_Kinstrife_Application_Module_Kinstrife_Application_ModuleDefinition_" data-uid="Kinstrife.Application.ApplicationFlow.RegisterModule(Kinstrife.Application.Module,Kinstrife.Application.ModuleDefinition)">RegisterModule(Module, ModuleDefinition)</h4>
   <div class="markdown level1 summary"></div>
@@ -371,6 +477,16 @@ Coroutines.</p>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public void ResetCurrentMode()</code></pre>
+  </div>
+  
+  
+  <a id="Kinstrife_Application_ApplicationFlow_RunDebugInitialization_" data-uid="Kinstrife.Application.ApplicationFlow.RunDebugInitialization*"></a>
+  <h4 id="Kinstrife_Application_ApplicationFlow_RunDebugInitialization" data-uid="Kinstrife.Application.ApplicationFlow.RunDebugInitialization">RunDebugInitialization()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void RunDebugInitialization()</code></pre>
   </div>
   
   

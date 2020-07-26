@@ -5,10 +5,10 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Class TryChangeGameMode
+    <title>Interface Easing.IFloat3Lerp
    | Kinstrife </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Class TryChangeGameMode
+    <meta name="title" content="Interface Easing.IFloat3Lerp
    | Kinstrife ">
     <meta name="generator" content="docfx 2.56.1.0">
     
@@ -68,41 +68,39 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="Kinstrife.Application.Behaviours.TryChangeGameMode">
+            <article class="content wrap" id="_content" data-uid="Kinstrife.Mathematics.Easing.IFloat3Lerp">
   
   
-  <h1 id="Kinstrife_Application_Behaviours_TryChangeGameMode" data-uid="Kinstrife.Application.Behaviours.TryChangeGameMode" class="text-break">Class TryChangeGameMode
+  <h1 id="Kinstrife_Mathematics_Easing_IFloat3Lerp" data-uid="Kinstrife.Mathematics.Easing.IFloat3Lerp" class="text-break">Interface Easing.IFloat3Lerp
   </h1>
-  <div class="markdown level0 summary"><p>Component for switching game modes via events (such as UI)</p>
-</div>
+  <div class="markdown level0 summary"></div>
   <div class="markdown level0 conceptual"></div>
-  <div class="inheritance">
-    <h5>Inheritance</h5>
-    <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><span class="xref">TryChangeGameMode</span></div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="Kinstrife.Mathematics.Easing.ILerp.html#Kinstrife_Mathematics_Easing_ILerp_LerpTime">Easing.ILerp.LerpTime</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.Mathematics.Easing.ILerp.html#Kinstrife_Mathematics_Easing_ILerp_LerpTowards_System_Single_">Easing.ILerp.LerpTowards(Single)</a>
+    </div>
   </div>
-  <div classs="implements">
-    <h5>Implements</h5>
-    <div><a class="xref" href="Kinstrife.Core.DependencyInjection.IInjectable.html">IInjectable</a></div>
-    <div><a class="xref" href="Kinstrife.Core.DependencyInjection.IDependent.html">IDependent</a></div>
-  </div>
-  <h6><strong>Namespace</strong>: <a class="xref" href="Kinstrife.Application.Behaviours.html">Kinstrife.Application.Behaviours</a></h6>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Kinstrife.Mathematics.html">Kinstrife.Mathematics</a></h6>
   <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
-  <h5 id="Kinstrife_Application_Behaviours_TryChangeGameMode_syntax">Syntax</h5>
+  <h5 id="Kinstrife_Mathematics_Easing_IFloat3Lerp_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class TryChangeGameMode : MonoBehaviour, IInjectable, IDependent</code></pre>
+    <pre><code class="lang-csharp hljs">public interface IFloat3Lerp : Easing.ILerp</code></pre>
   </div>
   <h3 id="properties">Properties
   </h3>
   
   
-  <a id="Kinstrife_Application_Behaviours_TryChangeGameMode_GameMode_" data-uid="Kinstrife.Application.Behaviours.TryChangeGameMode.GameMode*"></a>
-  <h4 id="Kinstrife_Application_Behaviours_TryChangeGameMode_GameMode" data-uid="Kinstrife.Application.Behaviours.TryChangeGameMode.GameMode">GameMode</h4>
+  <a id="Kinstrife_Mathematics_Easing_IFloat3Lerp_Target_" data-uid="Kinstrife.Mathematics.Easing.IFloat3Lerp.Target*"></a>
+  <h4 id="Kinstrife_Mathematics_Easing_IFloat3Lerp_Target" data-uid="Kinstrife.Mathematics.Easing.IFloat3Lerp.Target">Target</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public GameMode GameMode { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">float3 Target { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -114,7 +112,32 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="Kinstrife.Application.GameMode.html">GameMode</a></td>
+        <td><span class="xref">float3</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Kinstrife_Mathematics_Easing_IFloat3Lerp_Value_" data-uid="Kinstrife.Mathematics.Easing.IFloat3Lerp.Value*"></a>
+  <h4 id="Kinstrife_Mathematics_Easing_IFloat3Lerp_Value" data-uid="Kinstrife.Mathematics.Easing.IFloat3Lerp.Value">Value</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">float3 Value { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">float3</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -123,13 +146,13 @@
   </h3>
   
   
-  <a id="Kinstrife_Application_Behaviours_TryChangeGameMode_Inject_" data-uid="Kinstrife.Application.Behaviours.TryChangeGameMode.Inject*"></a>
-  <h4 id="Kinstrife_Application_Behaviours_TryChangeGameMode_Inject_Kinstrife_Application_ApplicationFlow_" data-uid="Kinstrife.Application.Behaviours.TryChangeGameMode.Inject(Kinstrife.Application.ApplicationFlow)">Inject(ApplicationFlow)</h4>
+  <a id="Kinstrife_Mathematics_Easing_IFloat3Lerp_LerpTowards_" data-uid="Kinstrife.Mathematics.Easing.IFloat3Lerp.LerpTowards*"></a>
+  <h4 id="Kinstrife_Mathematics_Easing_IFloat3Lerp_LerpTowards_float3_System_Single_" data-uid="Kinstrife.Mathematics.Easing.IFloat3Lerp.LerpTowards(float3,System.Single)">LerpTowards(float3, Single)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void Inject(ApplicationFlow flow)</code></pre>
+    <pre><code class="lang-csharp hljs">void LerpTowards(float3 target, float deltaTime)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -142,56 +165,17 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="Kinstrife.Application.ApplicationFlow.html">ApplicationFlow</a></td>
-        <td><span class="parametername">flow</span></td>
+        <td><span class="xref">float3</span></td>
+        <td><span class="parametername">target</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><span class="parametername">deltaTime</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
-  
-  
-  <a id="Kinstrife_Application_Behaviours_TryChangeGameMode_TryChange_" data-uid="Kinstrife.Application.Behaviours.TryChangeGameMode.TryChange*"></a>
-  <h4 id="Kinstrife_Application_Behaviours_TryChangeGameMode_TryChange" data-uid="Kinstrife.Application.Behaviours.TryChangeGameMode.TryChange">TryChange()</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void TryChange()</code></pre>
-  </div>
-  
-  
-  <a id="Kinstrife_Application_Behaviours_TryChangeGameMode_TryChange_" data-uid="Kinstrife.Application.Behaviours.TryChangeGameMode.TryChange*"></a>
-  <h4 id="Kinstrife_Application_Behaviours_TryChangeGameMode_TryChange_Kinstrife_Application_GameMode_" data-uid="Kinstrife.Application.Behaviours.TryChangeGameMode.TryChange(Kinstrife.Application.GameMode)">TryChange(GameMode)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void TryChange(GameMode targetMode)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Kinstrife.Application.GameMode.html">GameMode</a></td>
-        <td><span class="parametername">targetMode</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h3 id="implements">Implements</h3>
-  <div>
-      <a class="xref" href="Kinstrife.Core.DependencyInjection.IInjectable.html">IInjectable</a>
-  </div>
-  <div>
-      <a class="xref" href="Kinstrife.Core.DependencyInjection.IDependent.html">IDependent</a>
-  </div>
 </article>
           </div>
           

@@ -5,10 +5,10 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Class OnStateEnter
+    <title>Class LocationHandle
    | Kinstrife </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Class OnStateEnter
+    <meta name="title" content="Class LocationHandle
    | Kinstrife ">
     <meta name="generator" content="docfx 2.56.1.0">
     
@@ -68,63 +68,35 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="Kinstrife.StateFlow.OnStateEnter">
+            <article class="content wrap" id="_content" data-uid="Kinstrife.Application.LocationHandle">
   
   
-  <h1 id="Kinstrife_StateFlow_OnStateEnter" data-uid="Kinstrife.StateFlow.OnStateEnter" class="text-break">Class OnStateEnter
+  <h1 id="Kinstrife_Application_LocationHandle" data-uid="Kinstrife.Application.LocationHandle" class="text-break">Class LocationHandle
   </h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><p>Scene handle for location</p>
+</div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><a class="xref" href="Kinstrife.StateFlow.StateMachineMonobehaviourBase.html">StateMachineMonobehaviourBase</a></div>
-    <div class="level2"><span class="xref">OnStateEnter</span></div>
-      <div class="level3"><a class="xref" href="Kinstrife.StateFlow.EnableOnState.html">EnableOnState</a></div>
-      <div class="level3"><a class="xref" href="Kinstrife.StateFlow.EnableOnStateWooPanel.html">EnableOnStateWooPanel</a></div>
+    <div class="level1"><span class="xref">LocationHandle</span></div>
   </div>
-  <div classs="implements">
-    <h5>Implements</h5>
-    <div><span class="xref">IInitializable</span></div>
-    <div><span class="xref">IInjectable</span></div>
-  </div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
-    <div>
-      <a class="xref" href="Kinstrife.StateFlow.StateMachineMonobehaviourBase.html#Kinstrife_StateFlow_StateMachineMonobehaviourBase_stateMachine">StateMachineMonobehaviourBase.stateMachine</a>
-    </div>
-    <div>
-      <a class="xref" href="Kinstrife.StateFlow.StateMachineMonobehaviourBase.html#Kinstrife_StateFlow_StateMachineMonobehaviourBase_currentStateID">StateMachineMonobehaviourBase.currentStateID</a>
-    </div>
-    <div>
-      <a class="xref" href="Kinstrife.StateFlow.StateMachineMonobehaviourBase.html#Kinstrife_StateFlow_StateMachineMonobehaviourBase_Inject_Kinstrife_StateFlow_IStateMachine_">StateMachineMonobehaviourBase.Inject(IStateMachine)</a>
-    </div>
-    <div>
-      <a class="xref" href="Kinstrife.StateFlow.StateMachineMonobehaviourBase.html#Kinstrife_StateFlow_StateMachineMonobehaviourBase_Initialized">StateMachineMonobehaviourBase.Initialized</a>
-    </div>
-    <div>
-      <a class="xref" href="Kinstrife.StateFlow.StateMachineMonobehaviourBase.html#Kinstrife_StateFlow_StateMachineMonobehaviourBase_Initialize">StateMachineMonobehaviourBase.Initialize()</a>
-    </div>
-    <div>
-      <a class="xref" href="Kinstrife.StateFlow.StateMachineMonobehaviourBase.html#Kinstrife_StateFlow_StateMachineMonobehaviourBase_onNewState">StateMachineMonobehaviourBase.onNewState</a>
-    </div>
-  </div>
-  <h6><strong>Namespace</strong>: <a class="xref" href="Kinstrife.StateFlow.html">Kinstrife.StateFlow</a></h6>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Kinstrife.Application.html">Kinstrife.Application</a></h6>
   <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
-  <h5 id="Kinstrife_StateFlow_OnStateEnter_syntax">Syntax</h5>
+  <h5 id="Kinstrife_Application_LocationHandle_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class OnStateEnter : StateMachineMonobehaviourBase, IInitializable, IInjectable</code></pre>
+    <pre><code class="lang-csharp hljs">public class LocationHandle : MonoBehaviour</code></pre>
   </div>
   <h3 id="fields">Fields
   </h3>
   
   
-  <h4 id="Kinstrife_StateFlow_OnStateEnter_OnValidStateEnter" data-uid="Kinstrife.StateFlow.OnStateEnter.OnValidStateEnter">OnValidStateEnter</h4>
+  <h4 id="Kinstrife_Application_LocationHandle_OnCreation" data-uid="Kinstrife.Application.LocationHandle.OnCreation">OnCreation</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public UnityEvent OnValidStateEnter</code></pre>
+    <pre><code class="lang-csharp hljs">public static Action&lt;LocationHandle, Location&gt; OnCreation</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -136,19 +108,19 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">UnityEvent</span></td>
+        <td><span class="xref">System.Action</span>&lt;<a class="xref" href="Kinstrife.Application.LocationHandle.html">LocationHandle</a>, <a class="xref" href="Kinstrife.Application.Location.html">Location</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   
   
-  <h4 id="Kinstrife_StateFlow_OnStateEnter_OnValidStateExit" data-uid="Kinstrife.StateFlow.OnStateEnter.OnValidStateExit">OnValidStateExit</h4>
+  <h4 id="Kinstrife_Application_LocationHandle_OnInitialize" data-uid="Kinstrife.Application.LocationHandle.OnInitialize">OnInitialize</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public UnityEvent OnValidStateExit</code></pre>
+    <pre><code class="lang-csharp hljs">public UnityEvent OnInitialize</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -169,13 +141,13 @@
   </h3>
   
   
-  <a id="Kinstrife_StateFlow_OnStateEnter_IsActive_" data-uid="Kinstrife.StateFlow.OnStateEnter.IsActive*"></a>
-  <h4 id="Kinstrife_StateFlow_OnStateEnter_IsActive" data-uid="Kinstrife.StateFlow.OnStateEnter.IsActive">IsActive</h4>
+  <a id="Kinstrife_Application_LocationHandle_Location_" data-uid="Kinstrife.Application.LocationHandle.Location*"></a>
+  <h4 id="Kinstrife_Application_LocationHandle_Location" data-uid="Kinstrife.Application.LocationHandle.Location">Location</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public bool IsActive { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Location Location { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -187,7 +159,32 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Boolean</span></td>
+        <td><a class="xref" href="Kinstrife.Application.Location.html">Location</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Kinstrife_Application_LocationHandle_Source_" data-uid="Kinstrife.Application.LocationHandle.Source*"></a>
+  <h4 id="Kinstrife_Application_LocationHandle_Source" data-uid="Kinstrife.Application.LocationHandle.Source">Source</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public DIInitializer Source { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Kinstrife.Core.DependencyInjection.DIInitializer.html">DIInitializer</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -196,76 +193,13 @@
   </h3>
   
   
-  <a id="Kinstrife_StateFlow_OnStateEnter_OnNewState_" data-uid="Kinstrife.StateFlow.OnStateEnter.OnNewState*"></a>
-  <h4 id="Kinstrife_StateFlow_OnStateEnter_OnNewState_Kinstrife_StateFlow_IFlowState_" data-uid="Kinstrife.StateFlow.OnStateEnter.OnNewState(Kinstrife.StateFlow.IFlowState)">OnNewState(IFlowState)</h4>
+  <a id="Kinstrife_Application_LocationHandle_Start_" data-uid="Kinstrife.Application.LocationHandle.Start*"></a>
+  <h4 id="Kinstrife_Application_LocationHandle_Start" data-uid="Kinstrife.Application.LocationHandle.Start">Start()</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected override void OnNewState(IFlowState newState)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Kinstrife.StateFlow.IFlowState.html">IFlowState</a></td>
-        <td><span class="parametername">newState</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="overrides">Overrides</h5>
-  <div><a class="xref" href="Kinstrife.StateFlow.StateMachineMonobehaviourBase.html#Kinstrife_StateFlow_StateMachineMonobehaviourBase_OnNewState_Kinstrife_StateFlow_IFlowState_">StateMachineMonobehaviourBase.OnNewState(IFlowState)</a></div>
-  
-  
-  <a id="Kinstrife_StateFlow_OnStateEnter_PostStateEnter_" data-uid="Kinstrife.StateFlow.OnStateEnter.PostStateEnter*"></a>
-  <h4 id="Kinstrife_StateFlow_OnStateEnter_PostStateEnter_System_Boolean_" data-uid="Kinstrife.StateFlow.OnStateEnter.PostStateEnter(System.Boolean)">PostStateEnter(Boolean)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected virtual void PostStateEnter(bool wasEntered)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Boolean</span></td>
-        <td><span class="parametername">wasEntered</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="Kinstrife_StateFlow_OnStateEnter_Refresh_" data-uid="Kinstrife.StateFlow.OnStateEnter.Refresh*"></a>
-  <h4 id="Kinstrife_StateFlow_OnStateEnter_Refresh" data-uid="Kinstrife.StateFlow.OnStateEnter.Refresh">Refresh()</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected virtual void Refresh()</code></pre>
-  </div>
-  <h3 id="implements">Implements</h3>
-  <div>
-      <span class="xref">IInitializable</span>
-  </div>
-  <div>
-      <span class="xref">IInjectable</span>
+    <pre><code class="lang-csharp hljs">protected virtual void Start()</code></pre>
   </div>
 </article>
           </div>
