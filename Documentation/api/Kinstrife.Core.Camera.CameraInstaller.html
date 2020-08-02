@@ -5,10 +5,10 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Class ConfigData
+    <title>Class CameraInstaller
    | Kinstrife </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Class ConfigData
+    <meta name="title" content="Class CameraInstaller
    | Kinstrife ">
     <meta name="generator" content="docfx 2.56.2.0">
     
@@ -68,82 +68,40 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="Kinstrife.Core.Config.ConfigData">
+            <article class="content wrap" id="_content" data-uid="Kinstrife.Core.Camera.CameraInstaller">
   
   
-  <h1 id="Kinstrife_Core_Config_ConfigData" data-uid="Kinstrife.Core.Config.ConfigData" class="text-break">Class ConfigData
+  <h1 id="Kinstrife_Core_Camera_CameraInstaller" data-uid="Kinstrife.Core.Camera.CameraInstaller" class="text-break">Class CameraInstaller
   </h1>
   <div class="markdown level0 summary"></div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><span class="xref">ConfigData</span></div>
-      <div class="level2"><a class="xref" href="Kinstrife.Collisions.Damage.DamageCalculationConfig.html">DamageCalculationConfig</a></div>
-      <div class="level2"><a class="xref" href="Kinstrife.Core.Camera.CameraConfig.html">CameraConfig</a></div>
-      <div class="level2"><a class="xref" href="Kinstrife.Core.Config.ApplicationConfig.html">ApplicationConfig</a></div>
-      <div class="level2"><a class="xref" href="Kinstrife.Core.Config.DebugConfig.html">DebugConfig</a></div>
-      <div class="level2"><a class="xref" href="Kinstrife.Core.Config.EntitySelectionConfig.html">EntitySelectionConfig</a></div>
-      <div class="level2"><a class="xref" href="Kinstrife.Entities.Atomics.AtomicsConfig.html">AtomicsConfig</a></div>
-      <div class="level2"><a class="xref" href="Kinstrife.Mechanics.Demo.FireGameplaySystemConfig.html">FireGameplaySystemConfig</a></div>
-      <div class="level2"><a class="xref" href="Kinstrife.Mechanics.Demo.LightFlickerConfig.html">LightFlickerConfig</a></div>
+    <div class="level1"><a class="xref" href="Kinstrife.Core.DependencyInjection.ScriptableObjectInstaller.html">ScriptableObjectInstaller</a></div>
+    <div class="level2"><span class="xref">CameraInstaller</span></div>
   </div>
-  <h6><strong>Namespace</strong>: <a class="xref" href="Kinstrife.Core.Config.html">Kinstrife.Core.Config</a></h6>
+  <div classs="implements">
+    <h5>Implements</h5>
+    <div><a class="xref" href="Kinstrife.Core.DependencyInjection.IInstaller.html">IInstaller</a></div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Kinstrife.Core.Camera.html">Kinstrife.Core.Camera</a></h6>
   <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
-  <h5 id="Kinstrife_Core_Config_ConfigData_syntax">Syntax</h5>
+  <h5 id="Kinstrife_Core_Camera_CameraInstaller_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public abstract class ConfigData : ScriptableObject</code></pre>
+    <pre><code class="lang-csharp hljs">public class CameraInstaller : ScriptableObjectInstaller, IInstaller</code></pre>
   </div>
-  <h3 id="properties">Properties
-  </h3>
-  
-  
-  <a id="Kinstrife_Core_Config_ConfigData_Moddable_" data-uid="Kinstrife.Core.Config.ConfigData.Moddable*"></a>
-  <h4 id="Kinstrife_Core_Config_ConfigData_Moddable" data-uid="Kinstrife.Core.Config.ConfigData.Moddable">Moddable</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected abstract bool Moddable { get; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Boolean</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
   <h3 id="methods">Methods
   </h3>
   
   
-  <a id="Kinstrife_Core_Config_ConfigData_Initialize_" data-uid="Kinstrife.Core.Config.ConfigData.Initialize*"></a>
-  <h4 id="Kinstrife_Core_Config_ConfigData_Initialize" data-uid="Kinstrife.Core.Config.ConfigData.Initialize">Initialize()</h4>
-  <div class="markdown level1 summary"><p>This method is called when config data is initially loaded at runtime.</p>
-</div>
+  <a id="Kinstrife_Core_Camera_CameraInstaller_InstallBindings_" data-uid="Kinstrife.Core.Camera.CameraInstaller.InstallBindings*"></a>
+  <h4 id="Kinstrife_Core_Camera_CameraInstaller_InstallBindings_Kinstrife_Core_DependencyInjection_Container_Kinstrife_Core_DependencyInjection_IInjectableSource_" data-uid="Kinstrife.Core.Camera.CameraInstaller.InstallBindings(Kinstrife.Core.DependencyInjection.Container,Kinstrife.Core.DependencyInjection.IInjectableSource)">InstallBindings(Container, IInjectableSource)</h4>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected abstract void Initialize()</code></pre>
-  </div>
-  
-  
-  <a id="Kinstrife_Core_Config_ConfigData_ValidateSingleton_" data-uid="Kinstrife.Core.Config.ConfigData.ValidateSingleton*"></a>
-  <h4 id="Kinstrife_Core_Config_ConfigData_ValidateSingleton_System_Type_" data-uid="Kinstrife.Core.Config.ConfigData.ValidateSingleton(System.Type)">ValidateSingleton(Type)</h4>
-  <div class="markdown level1 summary"><p>Logs errors when there is not exactly one instance of the given parameter <code data-dev-comment-type="paramref" class="paramref">type</code> in a 'Resources/Config/' directory.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected void ValidateSingleton(Type type)</code></pre>
+    <pre><code class="lang-csharp hljs">public override void InstallBindings(Container container, IInjectableSource source)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -156,13 +114,57 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Type</span></td>
-        <td><span class="parametername">type</span></td>
-        <td><p>The type to validate as a singleton. Must inherit from ConfigData.</p>
-</td>
+        <td><a class="xref" href="Kinstrife.Core.DependencyInjection.Container.html">Container</a></td>
+        <td><span class="parametername">container</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Kinstrife.Core.DependencyInjection.IInjectableSource.html">IInjectableSource</a></td>
+        <td><span class="parametername">source</span></td>
+        <td></td>
       </tr>
     </tbody>
   </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Kinstrife.Core.DependencyInjection.ScriptableObjectInstaller.html#Kinstrife_Core_DependencyInjection_ScriptableObjectInstaller_InstallBindings_Kinstrife_Core_DependencyInjection_Container_Kinstrife_Core_DependencyInjection_IInjectableSource_">ScriptableObjectInstaller.InstallBindings(Container, IInjectableSource)</a></div>
+  
+  
+  <a id="Kinstrife_Core_Camera_CameraInstaller_UninstallBindings_" data-uid="Kinstrife.Core.Camera.CameraInstaller.UninstallBindings*"></a>
+  <h4 id="Kinstrife_Core_Camera_CameraInstaller_UninstallBindings_Kinstrife_Core_DependencyInjection_Container_Kinstrife_Core_DependencyInjection_IInjectableSource_" data-uid="Kinstrife.Core.Camera.CameraInstaller.UninstallBindings(Kinstrife.Core.DependencyInjection.Container,Kinstrife.Core.DependencyInjection.IInjectableSource)">UninstallBindings(Container, IInjectableSource)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override void UninstallBindings(Container container, IInjectableSource source)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Kinstrife.Core.DependencyInjection.Container.html">Container</a></td>
+        <td><span class="parametername">container</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Kinstrife.Core.DependencyInjection.IInjectableSource.html">IInjectableSource</a></td>
+        <td><span class="parametername">source</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Kinstrife.Core.DependencyInjection.ScriptableObjectInstaller.html#Kinstrife_Core_DependencyInjection_ScriptableObjectInstaller_UninstallBindings_Kinstrife_Core_DependencyInjection_Container_Kinstrife_Core_DependencyInjection_IInjectableSource_">ScriptableObjectInstaller.UninstallBindings(Container, IInjectableSource)</a></div>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <a class="xref" href="Kinstrife.Core.DependencyInjection.IInstaller.html">IInstaller</a>
+  </div>
 </article>
           </div>
           

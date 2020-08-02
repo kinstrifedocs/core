@@ -5,10 +5,10 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Class MouseUtils
+    <title>Class FirstPersonCameraController
    | Kinstrife </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Class MouseUtils
+    <meta name="title" content="Class FirstPersonCameraController
    | Kinstrife ">
     <meta name="generator" content="docfx 2.56.2.0">
     
@@ -68,84 +68,310 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="Kinstrife.Entities.Systems.MouseUtils">
+            <article class="content wrap" id="_content" data-uid="Kinstrife.Logic.Actor.FirstPersonCameraController">
   
   
-  <h1 id="Kinstrife_Entities_Systems_MouseUtils" data-uid="Kinstrife.Entities.Systems.MouseUtils" class="text-break">Class MouseUtils
+  <h1 id="Kinstrife_Logic_Actor_FirstPersonCameraController" data-uid="Kinstrife.Logic.Actor.FirstPersonCameraController" class="text-break">Class FirstPersonCameraController
   </h1>
   <div class="markdown level0 summary"></div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><span class="xref">MouseUtils</span></div>
+    <div class="level1"><span class="xref">FirstPersonCameraController</span></div>
   </div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
-    <div>
-      <span class="xref">System.Object.ToString()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetHashCode()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetType()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
-    </div>
+  <div classs="implements">
+    <h5>Implements</h5>
+    <div><span class="xref">IInjectable</span></div>
   </div>
-  <h6><strong>Namespace</strong>: <a class="xref" href="Kinstrife.Entities.Systems.html">Kinstrife.Entities.Systems</a></h6>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Kinstrife.Logic.Actor.html">Kinstrife.Logic.Actor</a></h6>
   <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
-  <h5 id="Kinstrife_Entities_Systems_MouseUtils_syntax">Syntax</h5>
+  <h5 id="Kinstrife_Logic_Actor_FirstPersonCameraController_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static class MouseUtils</code></pre>
+    <pre><code class="lang-csharp hljs">public class FirstPersonCameraController : MonoBehaviour, IInjectable</code></pre>
   </div>
+  <h3 id="fields">Fields
+  </h3>
+  
+  
+  <h4 id="Kinstrife_Logic_Actor_FirstPersonCameraController_baseRotationSensitivity" data-uid="Kinstrife.Logic.Actor.FirstPersonCameraController.baseRotationSensitivity">baseRotationSensitivity</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float baseRotationSensitivity</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="Kinstrife_Logic_Actor_FirstPersonCameraController_cam" data-uid="Kinstrife.Logic.Actor.FirstPersonCameraController.cam">cam</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Camera cam</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../../Camera/Index.html">Camera</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="Kinstrife_Logic_Actor_FirstPersonCameraController_noSmooth" data-uid="Kinstrife.Logic.Actor.FirstPersonCameraController.noSmooth">noSmooth</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool noSmooth</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="Kinstrife_Logic_Actor_FirstPersonCameraController_rotationSmooth" data-uid="Kinstrife.Logic.Actor.FirstPersonCameraController.rotationSmooth">rotationSmooth</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float rotationSmooth</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="Kinstrife_Logic_Actor_FirstPersonCameraController_useWorldPosition" data-uid="Kinstrife.Logic.Actor.FirstPersonCameraController.useWorldPosition">useWorldPosition</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool useWorldPosition</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="Kinstrife_Logic_Actor_FirstPersonCameraController_yMaxLimit" data-uid="Kinstrife.Logic.Actor.FirstPersonCameraController.yMaxLimit">yMaxLimit</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float yMaxLimit</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="Kinstrife_Logic_Actor_FirstPersonCameraController_yMinLimit" data-uid="Kinstrife.Logic.Actor.FirstPersonCameraController.yMinLimit">yMinLimit</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float yMinLimit</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="Kinstrife_Logic_Actor_FirstPersonCameraController_YSensitivity" data-uid="Kinstrife.Logic.Actor.FirstPersonCameraController.YSensitivity">YSensitivity</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float YSensitivity</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="properties">Properties
+  </h3>
+  
+  
+  <a id="Kinstrife_Logic_Actor_FirstPersonCameraController_Cam_" data-uid="Kinstrife.Logic.Actor.FirstPersonCameraController.Cam*"></a>
+  <h4 id="Kinstrife_Logic_Actor_FirstPersonCameraController_Cam" data-uid="Kinstrife.Logic.Actor.FirstPersonCameraController.Cam">Cam</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Camera Cam { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../../Camera/Index.html">Camera</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Kinstrife_Logic_Actor_FirstPersonCameraController_X_" data-uid="Kinstrife.Logic.Actor.FirstPersonCameraController.X*"></a>
+  <h4 id="Kinstrife_Logic_Actor_FirstPersonCameraController_X" data-uid="Kinstrife.Logic.Actor.FirstPersonCameraController.X">X</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float X { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Kinstrife_Logic_Actor_FirstPersonCameraController_Y_" data-uid="Kinstrife.Logic.Actor.FirstPersonCameraController.Y*"></a>
+  <h4 id="Kinstrife_Logic_Actor_FirstPersonCameraController_Y" data-uid="Kinstrife.Logic.Actor.FirstPersonCameraController.Y">Y</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float Y { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   <h3 id="methods">Methods
   </h3>
   
   
-  <a id="Kinstrife_Entities_Systems_MouseUtils_GetMouseWorldPosition_" data-uid="Kinstrife.Entities.Systems.MouseUtils.GetMouseWorldPosition*"></a>
-  <h4 id="Kinstrife_Entities_Systems_MouseUtils_GetMouseWorldPosition" data-uid="Kinstrife.Entities.Systems.MouseUtils.GetMouseWorldPosition">GetMouseWorldPosition()</h4>
+  <a id="Kinstrife_Logic_Actor_FirstPersonCameraController_UpdateCamera_" data-uid="Kinstrife.Logic.Actor.FirstPersonCameraController.UpdateCamera*"></a>
+  <h4 id="Kinstrife_Logic_Actor_FirstPersonCameraController_UpdateCamera_Vector2_System_Single_System_Single_System_Single_" data-uid="Kinstrife.Logic.Actor.FirstPersonCameraController.UpdateCamera(Vector2,System.Single,System.Single,System.Single)">UpdateCamera(Vector2, Single, Single, Single)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static Vector3 GetMouseWorldPosition()</code></pre>
-  </div>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">Vector3</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="Kinstrife_Entities_Systems_MouseUtils_GetMouseWorldPosition_" data-uid="Kinstrife.Entities.Systems.MouseUtils.GetMouseWorldPosition*"></a>
-  <h4 id="Kinstrife_Entities_Systems_MouseUtils_GetMouseWorldPosition_Camera_" data-uid="Kinstrife.Entities.Systems.MouseUtils.GetMouseWorldPosition(Camera)">GetMouseWorldPosition(Camera)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static Vector3 GetMouseWorldPosition(Camera worldCamera)</code></pre>
+    <pre><code class="lang-csharp hljs">public void UpdateCamera(Vector2 input, float sensitivity, float acceleration, float deltaTime)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -158,188 +384,31 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="../../Camera/Index.html">Camera</a></td>
-        <td><span class="parametername">worldCamera</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">Vector3</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="Kinstrife_Entities_Systems_MouseUtils_GetMouseWorldPosition_" data-uid="Kinstrife.Entities.Systems.MouseUtils.GetMouseWorldPosition*"></a>
-  <h4 id="Kinstrife_Entities_Systems_MouseUtils_GetMouseWorldPosition_Vector3_Camera_" data-uid="Kinstrife.Entities.Systems.MouseUtils.GetMouseWorldPosition(Vector3,Camera)">GetMouseWorldPosition(Vector3, Camera)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static Vector3 GetMouseWorldPosition(Vector3 screenPosition, Camera worldCamera)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">Vector3</span></td>
-        <td><span class="parametername">screenPosition</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="../../Camera/Index.html">Camera</a></td>
-        <td><span class="parametername">worldCamera</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">Vector3</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="Kinstrife_Entities_Systems_MouseUtils_GetMouseWorldPositionZeroZ_" data-uid="Kinstrife.Entities.Systems.MouseUtils.GetMouseWorldPositionZeroZ*"></a>
-  <h4 id="Kinstrife_Entities_Systems_MouseUtils_GetMouseWorldPositionZeroZ" data-uid="Kinstrife.Entities.Systems.MouseUtils.GetMouseWorldPositionZeroZ">GetMouseWorldPositionZeroZ()</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static Vector3 GetMouseWorldPositionZeroZ()</code></pre>
-  </div>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">Vector3</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="Kinstrife_Entities_Systems_MouseUtils_MouseWorldPosition_" data-uid="Kinstrife.Entities.Systems.MouseUtils.MouseWorldPosition*"></a>
-  <h4 id="Kinstrife_Entities_Systems_MouseUtils_MouseWorldPosition_Camera_" data-uid="Kinstrife.Entities.Systems.MouseUtils.MouseWorldPosition(Camera)">MouseWorldPosition(Camera)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static Vector3 MouseWorldPosition(Camera camera)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="../../Camera/Index.html">Camera</a></td>
-        <td><span class="parametername">camera</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">Vector3</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="Kinstrife_Entities_Systems_MouseUtils_ScreenToWorldRaycast_" data-uid="Kinstrife.Entities.Systems.MouseUtils.ScreenToWorldRaycast*"></a>
-  <h4 id="Kinstrife_Entities_Systems_MouseUtils_ScreenToWorldRaycast_LayerMask_System_Single_" data-uid="Kinstrife.Entities.Systems.MouseUtils.ScreenToWorldRaycast(LayerMask,System.Single)">ScreenToWorldRaycast(LayerMask, Single)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static Vector3 ScreenToWorldRaycast(LayerMask layerMask, float length = 1000F)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">LayerMask</span></td>
-        <td><span class="parametername">layerMask</span></td>
+        <td><span class="xref">Vector2</span></td>
+        <td><span class="parametername">input</span></td>
         <td></td>
       </tr>
       <tr>
         <td><span class="xref">System.Single</span></td>
-        <td><span class="parametername">length</span></td>
+        <td><span class="parametername">sensitivity</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><span class="parametername">acceleration</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><span class="parametername">deltaTime</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">Vector3</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <span class="xref">IInjectable</span>
+  </div>
 </article>
           </div>
           

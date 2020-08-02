@@ -5,10 +5,10 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Class ConfigData
+    <title>Class StateRouter
    | Kinstrife </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Class ConfigData
+    <meta name="title" content="Class StateRouter
    | Kinstrife ">
     <meta name="generator" content="docfx 2.56.2.0">
     
@@ -68,43 +68,67 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="Kinstrife.Core.Config.ConfigData">
+            <article class="content wrap" id="_content" data-uid="Kinstrife.Core.Camera.StateRouter">
   
   
-  <h1 id="Kinstrife_Core_Config_ConfigData" data-uid="Kinstrife.Core.Config.ConfigData" class="text-break">Class ConfigData
+  <h1 id="Kinstrife_Core_Camera_StateRouter" data-uid="Kinstrife.Core.Camera.StateRouter" class="text-break">Class StateRouter
   </h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><p>Routes one state and maps it to the next. Then tries to change state to state machine</p>
+</div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><span class="xref">ConfigData</span></div>
-      <div class="level2"><a class="xref" href="Kinstrife.Collisions.Damage.DamageCalculationConfig.html">DamageCalculationConfig</a></div>
-      <div class="level2"><a class="xref" href="Kinstrife.Core.Camera.CameraConfig.html">CameraConfig</a></div>
-      <div class="level2"><a class="xref" href="Kinstrife.Core.Config.ApplicationConfig.html">ApplicationConfig</a></div>
-      <div class="level2"><a class="xref" href="Kinstrife.Core.Config.DebugConfig.html">DebugConfig</a></div>
-      <div class="level2"><a class="xref" href="Kinstrife.Core.Config.EntitySelectionConfig.html">EntitySelectionConfig</a></div>
-      <div class="level2"><a class="xref" href="Kinstrife.Entities.Atomics.AtomicsConfig.html">AtomicsConfig</a></div>
-      <div class="level2"><a class="xref" href="Kinstrife.Mechanics.Demo.FireGameplaySystemConfig.html">FireGameplaySystemConfig</a></div>
-      <div class="level2"><a class="xref" href="Kinstrife.Mechanics.Demo.LightFlickerConfig.html">LightFlickerConfig</a></div>
+    <div class="level1"><span class="xref">StateRouter</span></div>
   </div>
-  <h6><strong>Namespace</strong>: <a class="xref" href="Kinstrife.Core.Config.html">Kinstrife.Core.Config</a></h6>
+  <div classs="implements">
+    <h5>Implements</h5>
+    <div><span class="xref">IInjectable</span></div>
+    <div><span class="xref">IInitializable</span></div>
+    <div><span class="xref">ILateInitializable</span></div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Kinstrife.Core.Camera.html">Kinstrife.Core.Camera</a></h6>
   <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
-  <h5 id="Kinstrife_Core_Config_ConfigData_syntax">Syntax</h5>
+  <h5 id="Kinstrife_Core_Camera_StateRouter_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public abstract class ConfigData : ScriptableObject</code></pre>
+    <pre><code class="lang-csharp hljs">public class StateRouter : MonoBehaviour, IInjectable, IInitializable, ILateInitializable</code></pre>
   </div>
   <h3 id="properties">Properties
   </h3>
   
   
-  <a id="Kinstrife_Core_Config_ConfigData_Moddable_" data-uid="Kinstrife.Core.Config.ConfigData.Moddable*"></a>
-  <h4 id="Kinstrife_Core_Config_ConfigData_Moddable" data-uid="Kinstrife.Core.Config.ConfigData.Moddable">Moddable</h4>
+  <a id="Kinstrife_Core_Camera_StateRouter_Initialized_" data-uid="Kinstrife.Core.Camera.StateRouter.Initialized*"></a>
+  <h4 id="Kinstrife_Core_Camera_StateRouter_Initialized" data-uid="Kinstrife.Core.Camera.StateRouter.Initialized">Initialized</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected abstract bool Moddable { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public bool Initialized { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Kinstrife_Core_Camera_StateRouter_LateInitialized_" data-uid="Kinstrife.Core.Camera.StateRouter.LateInitialized*"></a>
+  <h4 id="Kinstrife_Core_Camera_StateRouter_LateInitialized" data-uid="Kinstrife.Core.Camera.StateRouter.LateInitialized">LateInitialized</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool LateInitialized { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -125,25 +149,23 @@
   </h3>
   
   
-  <a id="Kinstrife_Core_Config_ConfigData_Initialize_" data-uid="Kinstrife.Core.Config.ConfigData.Initialize*"></a>
-  <h4 id="Kinstrife_Core_Config_ConfigData_Initialize" data-uid="Kinstrife.Core.Config.ConfigData.Initialize">Initialize()</h4>
-  <div class="markdown level1 summary"><p>This method is called when config data is initially loaded at runtime.</p>
-</div>
+  <a id="Kinstrife_Core_Camera_StateRouter_Initialize_" data-uid="Kinstrife.Core.Camera.StateRouter.Initialize*"></a>
+  <h4 id="Kinstrife_Core_Camera_StateRouter_Initialize" data-uid="Kinstrife.Core.Camera.StateRouter.Initialize">Initialize()</h4>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected abstract void Initialize()</code></pre>
+    <pre><code class="lang-csharp hljs">public void Initialize()</code></pre>
   </div>
   
   
-  <a id="Kinstrife_Core_Config_ConfigData_ValidateSingleton_" data-uid="Kinstrife.Core.Config.ConfigData.ValidateSingleton*"></a>
-  <h4 id="Kinstrife_Core_Config_ConfigData_ValidateSingleton_System_Type_" data-uid="Kinstrife.Core.Config.ConfigData.ValidateSingleton(System.Type)">ValidateSingleton(Type)</h4>
-  <div class="markdown level1 summary"><p>Logs errors when there is not exactly one instance of the given parameter <code data-dev-comment-type="paramref" class="paramref">type</code> in a 'Resources/Config/' directory.</p>
-</div>
+  <a id="Kinstrife_Core_Camera_StateRouter_Inject_" data-uid="Kinstrife.Core.Camera.StateRouter.Inject*"></a>
+  <h4 id="Kinstrife_Core_Camera_StateRouter_Inject_IStateMachine_" data-uid="Kinstrife.Core.Camera.StateRouter.Inject(IStateMachine)">Inject(IStateMachine)</h4>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected void ValidateSingleton(Type type)</code></pre>
+    <pre><code class="lang-csharp hljs">public void Inject(IStateMachine stateMachine)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -156,13 +178,59 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Type</span></td>
-        <td><span class="parametername">type</span></td>
-        <td><p>The type to validate as a singleton. Must inherit from ConfigData.</p>
-</td>
+        <td><span class="xref">IStateMachine</span></td>
+        <td><span class="parametername">stateMachine</span></td>
+        <td></td>
       </tr>
     </tbody>
   </table>
+  
+  
+  <a id="Kinstrife_Core_Camera_StateRouter_LateInitialize_" data-uid="Kinstrife.Core.Camera.StateRouter.LateInitialize*"></a>
+  <h4 id="Kinstrife_Core_Camera_StateRouter_LateInitialize" data-uid="Kinstrife.Core.Camera.StateRouter.LateInitialize">LateInitialize()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void LateInitialize()</code></pre>
+  </div>
+  
+  
+  <a id="Kinstrife_Core_Camera_StateRouter_OnReceiveMessage_" data-uid="Kinstrife.Core.Camera.StateRouter.OnReceiveMessage*"></a>
+  <h4 id="Kinstrife_Core_Camera_StateRouter_OnReceiveMessage_StateID_" data-uid="Kinstrife.Core.Camera.StateRouter.OnReceiveMessage(StateID)">OnReceiveMessage(StateID)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void OnReceiveMessage(StateID message)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">StateID</span></td>
+        <td><span class="parametername">message</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <span class="xref">IInjectable</span>
+  </div>
+  <div>
+      <span class="xref">IInitializable</span>
+  </div>
+  <div>
+      <span class="xref">ILateInitializable</span>
+  </div>
 </article>
           </div>
           
