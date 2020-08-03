@@ -5,10 +5,10 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Class Edge
+    <title>Class Pair&lt;T&gt;
    | Kinstrife </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Class Edge
+    <meta name="title" content="Class Pair&lt;T&gt;
    | Kinstrife ">
     <meta name="generator" content="docfx 2.56.2.0">
     
@@ -68,63 +68,50 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="Kinstrife.Core.SplineNetwork.Edge">
+            <article class="content wrap" id="_content" data-uid="Kinstrife.Core.DataStructures.Pair`1">
   
   
-  <h1 id="Kinstrife_Core_SplineNetwork_Edge" data-uid="Kinstrife.Core.SplineNetwork.Edge" class="text-break">Class Edge
+  <h1 id="Kinstrife_Core_DataStructures_Pair_1" data-uid="Kinstrife.Core.DataStructures.Pair`1" class="text-break">Class Pair&lt;T&gt;
   </h1>
   <div class="markdown level0 summary"></div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><span class="xref">Edge</span></div>
+    <div class="level1"><span class="xref">Pair&lt;T&gt;</span></div>
   </div>
-  <div classs="implements">
-    <h5>Implements</h5>
-    <div><a class="xref" href="Kinstrife.Core.SplineNetwork.IEdge.html">IEdge</a></div>
-  </div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
-    <div>
-      <span class="xref">System.Object.ToString()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetHashCode()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetType()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
-    </div>
-  </div>
-  <h6><strong>Namespace</strong>: <a class="xref" href="Kinstrife.Core.SplineNetwork.html">Kinstrife.Core.SplineNetwork</a></h6>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Kinstrife.Core.DataStructures.html">Kinstrife.Core.DataStructures</a></h6>
   <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
-  <h5 id="Kinstrife_Core_SplineNetwork_Edge_syntax">Syntax</h5>
+  <h5 id="Kinstrife_Core_DataStructures_Pair_1_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class Edge : IEdge</code></pre>
+    <pre><code class="lang-csharp hljs">public class Pair&lt;T&gt; : IEquatable&lt;Pair&lt;T&gt;&gt;</code></pre>
   </div>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   <h3 id="constructors">Constructors
   </h3>
   
   
-  <a id="Kinstrife_Core_SplineNetwork_Edge__ctor_" data-uid="Kinstrife.Core.SplineNetwork.Edge.#ctor*"></a>
-  <h4 id="Kinstrife_Core_SplineNetwork_Edge__ctor_Kinstrife_Core_SplineNetwork_INode_Kinstrife_Core_SplineNetwork_INode_System_Single_" data-uid="Kinstrife.Core.SplineNetwork.Edge.#ctor(Kinstrife.Core.SplineNetwork.INode,Kinstrife.Core.SplineNetwork.INode,System.Single)">Edge(INode, INode, Single)</h4>
+  <a id="Kinstrife_Core_DataStructures_Pair_1__ctor_" data-uid="Kinstrife.Core.DataStructures.Pair`1.#ctor*"></a>
+  <h4 id="Kinstrife_Core_DataStructures_Pair_1__ctor__0__0_" data-uid="Kinstrife.Core.DataStructures.Pair`1.#ctor(`0,`0)">Pair(T, T)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Edge(INode start, INode end, float length)</code></pre>
+    <pre><code class="lang-csharp hljs">public Pair(T a, T b)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -137,35 +124,29 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="Kinstrife.Core.SplineNetwork.INode.html">INode</a></td>
-        <td><span class="parametername">start</span></td>
+        <td><span class="xref">T</span></td>
+        <td><span class="parametername">a</span></td>
         <td></td>
       </tr>
       <tr>
-        <td><a class="xref" href="Kinstrife.Core.SplineNetwork.INode.html">INode</a></td>
-        <td><span class="parametername">end</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><span class="xref">System.Single</span></td>
-        <td><span class="parametername">length</span></td>
+        <td><span class="xref">T</span></td>
+        <td><span class="parametername">b</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
-  <h3 id="properties">Properties
+  <h3 id="fields">Fields
   </h3>
   
   
-  <a id="Kinstrife_Core_SplineNetwork_Edge_A_" data-uid="Kinstrife.Core.SplineNetwork.Edge.A*"></a>
-  <h4 id="Kinstrife_Core_SplineNetwork_Edge_A" data-uid="Kinstrife.Core.SplineNetwork.Edge.A">A</h4>
+  <h4 id="Kinstrife_Core_DataStructures_Pair_1_A" data-uid="Kinstrife.Core.DataStructures.Pair`1.A">A</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public INode A { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public T A</code></pre>
   </div>
-  <h5 class="propertyValue">Property Value</h5>
+  <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
       <tr>
@@ -175,22 +156,21 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="Kinstrife.Core.SplineNetwork.INode.html">INode</a></td>
+        <td><span class="xref">T</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   
   
-  <a id="Kinstrife_Core_SplineNetwork_Edge_B_" data-uid="Kinstrife.Core.SplineNetwork.Edge.B*"></a>
-  <h4 id="Kinstrife_Core_SplineNetwork_Edge_B" data-uid="Kinstrife.Core.SplineNetwork.Edge.B">B</h4>
+  <h4 id="Kinstrife_Core_DataStructures_Pair_1_B" data-uid="Kinstrife.Core.DataStructures.Pair`1.B">B</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public INode B { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public T B</code></pre>
   </div>
-  <h5 class="propertyValue">Property Value</h5>
+  <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
       <tr>
@@ -200,82 +180,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="Kinstrife.Core.SplineNetwork.INode.html">INode</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="Kinstrife_Core_SplineNetwork_Edge_Cost_" data-uid="Kinstrife.Core.SplineNetwork.Edge.Cost*"></a>
-  <h4 id="Kinstrife_Core_SplineNetwork_Edge_Cost" data-uid="Kinstrife.Core.SplineNetwork.Edge.Cost">Cost</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public float Cost { get; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Single</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="Kinstrife_Core_SplineNetwork_Edge_EuclideanDistance_" data-uid="Kinstrife.Core.SplineNetwork.Edge.EuclideanDistance*"></a>
-  <h4 id="Kinstrife_Core_SplineNetwork_Edge_EuclideanDistance" data-uid="Kinstrife.Core.SplineNetwork.Edge.EuclideanDistance">EuclideanDistance</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public float EuclideanDistance { get; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Single</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="Kinstrife_Core_SplineNetwork_Edge_Length_" data-uid="Kinstrife.Core.SplineNetwork.Edge.Length*"></a>
-  <h4 id="Kinstrife_Core_SplineNetwork_Edge_Length" data-uid="Kinstrife.Core.SplineNetwork.Edge.Length">Length</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public float Length { get; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Single</span></td>
+        <td><span class="xref">T</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -284,13 +189,13 @@
   </h3>
   
   
-  <a id="Kinstrife_Core_SplineNetwork_Edge_HasNode_" data-uid="Kinstrife.Core.SplineNetwork.Edge.HasNode*"></a>
-  <h4 id="Kinstrife_Core_SplineNetwork_Edge_HasNode_Kinstrife_Core_SplineNetwork_INode_" data-uid="Kinstrife.Core.SplineNetwork.Edge.HasNode(Kinstrife.Core.SplineNetwork.INode)">HasNode(INode)</h4>
+  <a id="Kinstrife_Core_DataStructures_Pair_1_Equals_" data-uid="Kinstrife.Core.DataStructures.Pair`1.Equals*"></a>
+  <h4 id="Kinstrife_Core_DataStructures_Pair_1_Equals_Kinstrife_Core_DataStructures_Pair__0__" data-uid="Kinstrife.Core.DataStructures.Pair`1.Equals(Kinstrife.Core.DataStructures.Pair{`0})">Equals(Pair&lt;T&gt;)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public bool HasNode(INode node)</code></pre>
+    <pre><code class="lang-csharp hljs">public bool Equals(Pair&lt;T&gt; other)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -303,8 +208,8 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="Kinstrife.Core.SplineNetwork.INode.html">INode</a></td>
-        <td><span class="parametername">node</span></td>
+        <td><a class="xref" href="Kinstrife.Core.DataStructures.Pair-1.html">Pair</a>&lt;T&gt;</td>
+        <td><span class="parametername">other</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -324,10 +229,169 @@
       </tr>
     </tbody>
   </table>
-  <h3 id="implements">Implements</h3>
-  <div>
-      <a class="xref" href="Kinstrife.Core.SplineNetwork.IEdge.html">IEdge</a>
+  
+  
+  <a id="Kinstrife_Core_DataStructures_Pair_1_Equals_" data-uid="Kinstrife.Core.DataStructures.Pair`1.Equals*"></a>
+  <h4 id="Kinstrife_Core_DataStructures_Pair_1_Equals_System_Object_" data-uid="Kinstrife.Core.DataStructures.Pair`1.Equals(System.Object)">Equals(Object)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override bool Equals(object obj)</code></pre>
   </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Object</span></td>
+        <td><span class="parametername">obj</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Kinstrife_Core_DataStructures_Pair_1_GetHashCode_" data-uid="Kinstrife.Core.DataStructures.Pair`1.GetHashCode*"></a>
+  <h4 id="Kinstrife_Core_DataStructures_Pair_1_GetHashCode" data-uid="Kinstrife.Core.DataStructures.Pair`1.GetHashCode">GetHashCode()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override int GetHashCode()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="operators">Operators
+  </h3>
+  
+  
+  <a id="Kinstrife_Core_DataStructures_Pair_1_op_Equality_" data-uid="Kinstrife.Core.DataStructures.Pair`1.op_Equality*"></a>
+  <h4 id="Kinstrife_Core_DataStructures_Pair_1_op_Equality_Kinstrife_Core_DataStructures_Pair__0__Kinstrife_Core_DataStructures_Pair__0__" data-uid="Kinstrife.Core.DataStructures.Pair`1.op_Equality(Kinstrife.Core.DataStructures.Pair{`0},Kinstrife.Core.DataStructures.Pair{`0})">Equality(Pair&lt;T&gt;, Pair&lt;T&gt;)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool operator ==(Pair&lt;T&gt; contact1, Pair&lt;T&gt; contact2)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Kinstrife.Core.DataStructures.Pair-1.html">Pair</a>&lt;T&gt;</td>
+        <td><span class="parametername">contact1</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Kinstrife.Core.DataStructures.Pair-1.html">Pair</a>&lt;T&gt;</td>
+        <td><span class="parametername">contact2</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Kinstrife_Core_DataStructures_Pair_1_op_Inequality_" data-uid="Kinstrife.Core.DataStructures.Pair`1.op_Inequality*"></a>
+  <h4 id="Kinstrife_Core_DataStructures_Pair_1_op_Inequality_Kinstrife_Core_DataStructures_Pair__0__Kinstrife_Core_DataStructures_Pair__0__" data-uid="Kinstrife.Core.DataStructures.Pair`1.op_Inequality(Kinstrife.Core.DataStructures.Pair{`0},Kinstrife.Core.DataStructures.Pair{`0})">Inequality(Pair&lt;T&gt;, Pair&lt;T&gt;)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool operator !=(Pair&lt;T&gt; contact1, Pair&lt;T&gt; contact2)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Kinstrife.Core.DataStructures.Pair-1.html">Pair</a>&lt;T&gt;</td>
+        <td><span class="parametername">contact1</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Kinstrife.Core.DataStructures.Pair-1.html">Pair</a>&lt;T&gt;</td>
+        <td><span class="parametername">contact2</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
 </article>
           </div>
           
