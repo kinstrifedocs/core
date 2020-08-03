@@ -5,10 +5,10 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Interface KinstrifeInputActions.IUIInteractActions
+    <title>Class InteractionSystem
    | Kinstrife </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Interface KinstrifeInputActions.IUIInteractActions
+    <meta name="title" content="Class InteractionSystem
    | Kinstrife ">
     <meta name="generator" content="docfx 2.56.2.0">
     
@@ -68,30 +68,40 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="Kinstrife.Core.Input.KinstrifeInputActions.IUIInteractActions">
+            <article class="content wrap" id="_content" data-uid="Kinstrife.Core.Interaction.Systems.InteractionSystem">
   
   
-  <h1 id="Kinstrife_Core_Input_KinstrifeInputActions_IUIInteractActions" data-uid="Kinstrife.Core.Input.KinstrifeInputActions.IUIInteractActions" class="text-break">Interface KinstrifeInputActions.IUIInteractActions
+  <h1 id="Kinstrife_Core_Interaction_Systems_InteractionSystem" data-uid="Kinstrife.Core.Interaction.Systems.InteractionSystem" class="text-break">Class InteractionSystem
   </h1>
   <div class="markdown level0 summary"></div>
   <div class="markdown level0 conceptual"></div>
-  <h6><strong>Namespace</strong>: <a class="xref" href="Kinstrife.Core.Input.html">Kinstrife.Core.Input</a></h6>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">InteractionSystem</span></div>
+  </div>
+  <div classs="implements">
+    <h5>Implements</h5>
+    <div><a class="xref" href="Kinstrife.Core.DependencyInjection.IInjectable.html">IInjectable</a></div>
+    <div><a class="xref" href="Kinstrife.Core.DependencyInjection.IDependent.html">IDependent</a></div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Kinstrife.Core.Interaction.Systems.html">Kinstrife.Core.Interaction.Systems</a></h6>
   <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
-  <h5 id="Kinstrife_Core_Input_KinstrifeInputActions_IUIInteractActions_syntax">Syntax</h5>
+  <h5 id="Kinstrife_Core_Interaction_Systems_InteractionSystem_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public interface IUIInteractActions</code></pre>
+    <pre><code class="lang-csharp hljs">public class InteractionSystem : Entities.ComponentSystem, IInjectable, IDependent</code></pre>
   </div>
   <h3 id="methods">Methods
   </h3>
   
   
-  <a id="Kinstrife_Core_Input_KinstrifeInputActions_IUIInteractActions_OnBack_" data-uid="Kinstrife.Core.Input.KinstrifeInputActions.IUIInteractActions.OnBack*"></a>
-  <h4 id="Kinstrife_Core_Input_KinstrifeInputActions_IUIInteractActions_OnBack_InputAction_CallbackContext_" data-uid="Kinstrife.Core.Input.KinstrifeInputActions.IUIInteractActions.OnBack(InputAction.CallbackContext)">OnBack(InputAction.CallbackContext)</h4>
+  <a id="Kinstrife_Core_Interaction_Systems_InteractionSystem_DoRaycast_" data-uid="Kinstrife.Core.Interaction.Systems.InteractionSystem.DoRaycast*"></a>
+  <h4 id="Kinstrife_Core_Interaction_Systems_InteractionSystem_DoRaycast_Vector3_Vector3_" data-uid="Kinstrife.Core.Interaction.Systems.InteractionSystem.DoRaycast(Vector3,Vector3)">DoRaycast(Vector3, Vector3)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">void OnBack(InputAction.CallbackContext context)</code></pre>
+    <pre><code class="lang-csharp hljs">public void DoRaycast(Vector3 cameraCenter, Vector3 forward)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -104,21 +114,26 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">InputAction.CallbackContext</span></td>
-        <td><span class="parametername">context</span></td>
+        <td><span class="xref">Vector3</span></td>
+        <td><span class="parametername">cameraCenter</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">Vector3</span></td>
+        <td><span class="parametername">forward</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   
   
-  <a id="Kinstrife_Core_Input_KinstrifeInputActions_IUIInteractActions_OnDetailsHold_" data-uid="Kinstrife.Core.Input.KinstrifeInputActions.IUIInteractActions.OnDetailsHold*"></a>
-  <h4 id="Kinstrife_Core_Input_KinstrifeInputActions_IUIInteractActions_OnDetailsHold_InputAction_CallbackContext_" data-uid="Kinstrife.Core.Input.KinstrifeInputActions.IUIInteractActions.OnDetailsHold(InputAction.CallbackContext)">OnDetailsHold(InputAction.CallbackContext)</h4>
+  <a id="Kinstrife_Core_Interaction_Systems_InteractionSystem_FocusChannelReaction_" data-uid="Kinstrife.Core.Interaction.Systems.InteractionSystem.FocusChannelReaction*"></a>
+  <h4 id="Kinstrife_Core_Interaction_Systems_InteractionSystem_FocusChannelReaction_Kinstrife_Application_ApplicationFocusState_" data-uid="Kinstrife.Core.Interaction.Systems.InteractionSystem.FocusChannelReaction(Kinstrife.Application.ApplicationFocusState)">FocusChannelReaction(ApplicationFocusState)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">void OnDetailsHold(InputAction.CallbackContext context)</code></pre>
+    <pre><code class="lang-csharp hljs">public void FocusChannelReaction(ApplicationFocusState focusState)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -131,21 +146,21 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">InputAction.CallbackContext</span></td>
-        <td><span class="parametername">context</span></td>
+        <td><a class="xref" href="Kinstrife.Application.ApplicationFocusState.html">ApplicationFocusState</a></td>
+        <td><span class="parametername">focusState</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   
   
-  <a id="Kinstrife_Core_Input_KinstrifeInputActions_IUIInteractActions_OnInteract_" data-uid="Kinstrife.Core.Input.KinstrifeInputActions.IUIInteractActions.OnInteract*"></a>
-  <h4 id="Kinstrife_Core_Input_KinstrifeInputActions_IUIInteractActions_OnInteract_InputAction_CallbackContext_" data-uid="Kinstrife.Core.Input.KinstrifeInputActions.IUIInteractActions.OnInteract(InputAction.CallbackContext)">OnInteract(InputAction.CallbackContext)</h4>
+  <a id="Kinstrife_Core_Interaction_Systems_InteractionSystem_Inject_" data-uid="Kinstrife.Core.Interaction.Systems.InteractionSystem.Inject*"></a>
+  <h4 id="Kinstrife_Core_Interaction_Systems_InteractionSystem_Inject_Kinstrife_Core_Interaction_InteractionConfig_" data-uid="Kinstrife.Core.Interaction.Systems.InteractionSystem.Inject(Kinstrife.Core.Interaction.InteractionConfig)">Inject(InteractionConfig)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">void OnInteract(InputAction.CallbackContext context)</code></pre>
+    <pre><code class="lang-csharp hljs">public void Inject(InteractionConfig config)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -158,66 +173,29 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">InputAction.CallbackContext</span></td>
-        <td><span class="parametername">context</span></td>
+        <td><a class="xref" href="Kinstrife.Core.Interaction.InteractionConfig.html">InteractionConfig</a></td>
+        <td><span class="parametername">config</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   
   
-  <a id="Kinstrife_Core_Input_KinstrifeInputActions_IUIInteractActions_OnMove_" data-uid="Kinstrife.Core.Input.KinstrifeInputActions.IUIInteractActions.OnMove*"></a>
-  <h4 id="Kinstrife_Core_Input_KinstrifeInputActions_IUIInteractActions_OnMove_InputAction_CallbackContext_" data-uid="Kinstrife.Core.Input.KinstrifeInputActions.IUIInteractActions.OnMove(InputAction.CallbackContext)">OnMove(InputAction.CallbackContext)</h4>
+  <a id="Kinstrife_Core_Interaction_Systems_InteractionSystem_OnUpdate_" data-uid="Kinstrife.Core.Interaction.Systems.InteractionSystem.OnUpdate*"></a>
+  <h4 id="Kinstrife_Core_Interaction_Systems_InteractionSystem_OnUpdate" data-uid="Kinstrife.Core.Interaction.Systems.InteractionSystem.OnUpdate">OnUpdate()</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">void OnMove(InputAction.CallbackContext context)</code></pre>
+    <pre><code class="lang-csharp hljs">protected override void OnUpdate()</code></pre>
   </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">InputAction.CallbackContext</span></td>
-        <td><span class="parametername">context</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="Kinstrife_Core_Input_KinstrifeInputActions_IUIInteractActions_OnMoveCursor_" data-uid="Kinstrife.Core.Input.KinstrifeInputActions.IUIInteractActions.OnMoveCursor*"></a>
-  <h4 id="Kinstrife_Core_Input_KinstrifeInputActions_IUIInteractActions_OnMoveCursor_InputAction_CallbackContext_" data-uid="Kinstrife.Core.Input.KinstrifeInputActions.IUIInteractActions.OnMoveCursor(InputAction.CallbackContext)">OnMoveCursor(InputAction.CallbackContext)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">void OnMoveCursor(InputAction.CallbackContext context)</code></pre>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <a class="xref" href="Kinstrife.Core.DependencyInjection.IInjectable.html">IInjectable</a>
   </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">InputAction.CallbackContext</span></td>
-        <td><span class="parametername">context</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
+  <div>
+      <a class="xref" href="Kinstrife.Core.DependencyInjection.IDependent.html">IDependent</a>
+  </div>
 </article>
           </div>
           
