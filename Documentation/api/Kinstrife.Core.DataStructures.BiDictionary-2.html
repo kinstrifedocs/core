@@ -73,7 +73,9 @@
   
   <h1 id="Kinstrife_Core_DataStructures_BiDictionary_2" data-uid="Kinstrife.Core.DataStructures.BiDictionary`2" class="text-break">Class BiDictionary&lt;TAlpha, TBeta&gt;
   </h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><p>Stores one-to-one correspondence (a bijection, if you want to get mathematical). This implementation only works for two different types.
+The reason for this is that indexing would not work if both types were the same - this is a result of choosing convenience features over flexibility.</p>
+</div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
@@ -121,11 +123,13 @@
     <tbody>
       <tr>
         <td><span class="parametername">TAlpha</span></td>
-        <td></td>
+        <td><p>Must not be same as <code data-dev-comment-type="typeparamref" class="typeparamref">TBeta</code></p>
+</td>
       </tr>
       <tr>
         <td><span class="parametername">TBeta</span></td>
-        <td></td>
+        <td><p>Must not be same as <code data-dev-comment-type="typeparamref" class="typeparamref">TAlpha</code></p>
+</td>
       </tr>
     </tbody>
   </table>
