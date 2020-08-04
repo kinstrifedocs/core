@@ -5,10 +5,10 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Class StateID
+    <title>Class FlowStatePublisher
    | Kinstrife </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Class StateID
+    <meta name="title" content="Class FlowStatePublisher
    | Kinstrife ">
     <meta name="generator" content="docfx 2.56.2.0">
     
@@ -68,87 +68,74 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="Kinstrife.StateFlow.StateID">
+            <article class="content wrap" id="_content" data-uid="Kinstrife.Messaging.Stateflow.FlowStatePublisher">
   
   
-  <h1 id="Kinstrife_StateFlow_StateID" data-uid="Kinstrife.StateFlow.StateID" class="text-break">Class StateID
+  <h1 id="Kinstrife_Messaging_Stateflow_FlowStatePublisher" data-uid="Kinstrife.Messaging.Stateflow.FlowStatePublisher" class="text-break">Class FlowStatePublisher
   </h1>
-  <div class="markdown level0 summary"><p>Exemplary state ID.</p>
-</div>
+  <div class="markdown level0 summary"></div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><span class="xref">StateID</span></div>
-      <div class="level2"><a class="xref" href="Kinstrife.Application.GameMode.html">GameMode</a></div>
-      <div class="level2"><a class="xref" href="Kinstrife.Core.Input.InputFocusState.html">InputFocusState</a></div>
+    <div class="level1"><a class="xref" href="Kinstrife.Messaging.PublisherBehaviour-1.html">PublisherBehaviour</a>&lt;<a class="xref" href="Kinstrife.StateFlow.StateID.html">StateID</a>&gt;</div>
+    <div class="level2"><a class="xref" href="Kinstrife.Messaging.Stateflow.StatePublisherBehaviour-1.html">StatePublisherBehaviour</a>&lt;<a class="xref" href="Kinstrife.StateFlow.StateID.html">StateID</a>&gt;</div>
+    <div class="level3"><span class="xref">FlowStatePublisher</span></div>
   </div>
   <div classs="implements">
     <h5>Implements</h5>
-    <div><a class="xref" href="Kinstrife.StateFlow.IFlowState.html">IFlowState</a></div>
+    <div><a class="xref" href="Kinstrife.Core.DependencyInjection.IInjectable.html">IInjectable</a></div>
+    <div><a class="xref" href="Kinstrife.Core.DependencyInjection.IInitializable.html">IInitializable</a></div>
+    <div><a class="xref" href="Kinstrife.Core.DependencyInjection.IDependent.html">IDependent</a></div>
   </div>
-  <h6><strong>Namespace</strong>: <a class="xref" href="Kinstrife.StateFlow.html">Kinstrife.StateFlow</a></h6>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="Kinstrife.Messaging.Stateflow.StatePublisherBehaviour-1.html#Kinstrife_Messaging_Stateflow_StatePublisherBehaviour_1_Inject_Kinstrife_Messaging_IPublisher__0__Kinstrife_StateFlow_FlowgraphBase_">StatePublisherBehaviour&lt;StateID&gt;.Inject(IPublisher&lt;StateID&gt;, FlowgraphBase)</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.Messaging.Stateflow.StatePublisherBehaviour-1.html#Kinstrife_Messaging_Stateflow_StatePublisherBehaviour_1_Initialize">StatePublisherBehaviour&lt;StateID&gt;.Initialize()</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.Messaging.PublisherBehaviour-1.html#Kinstrife_Messaging_PublisherBehaviour_1_channelDescriptor">PublisherBehaviour&lt;StateID&gt;.channelDescriptor</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.Messaging.PublisherBehaviour-1.html#Kinstrife_Messaging_PublisherBehaviour_1_Inject_Kinstrife_Messaging_IPublisher__0__">PublisherBehaviour&lt;StateID&gt;.Inject(IPublisher&lt;StateID&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.Messaging.PublisherBehaviour-1.html#Kinstrife_Messaging_PublisherBehaviour_1_Initialized">PublisherBehaviour&lt;StateID&gt;.Initialized</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.Messaging.PublisherBehaviour-1.html#Kinstrife_Messaging_PublisherBehaviour_1_Publish__0_">PublisherBehaviour&lt;StateID&gt;.Publish(StateID)</a>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Kinstrife.Messaging.Stateflow.html">Kinstrife.Messaging.Stateflow</a></h6>
   <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
-  <h5 id="Kinstrife_StateFlow_StateID_syntax">Syntax</h5>
+  <h5 id="Kinstrife_Messaging_Stateflow_FlowStatePublisher_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[Serializable]
-public class StateID : ScriptableObject, IFlowState</code></pre>
+    <pre><code class="lang-csharp hljs">public class FlowStatePublisher : StatePublisherBehaviour&lt;StateID&gt;, IInjectable, IInitializable, IDependent</code></pre>
   </div>
-  <h3 id="properties">Properties
+  <h3 id="constructors">Constructors
   </h3>
   
   
-  <a id="Kinstrife_StateFlow_StateID_Description_" data-uid="Kinstrife.StateFlow.StateID.Description*"></a>
-  <h4 id="Kinstrife_StateFlow_StateID_Description" data-uid="Kinstrife.StateFlow.StateID.Description">Description</h4>
+  <a id="Kinstrife_Messaging_Stateflow_FlowStatePublisher__ctor_" data-uid="Kinstrife.Messaging.Stateflow.FlowStatePublisher.#ctor*"></a>
+  <h4 id="Kinstrife_Messaging_Stateflow_FlowStatePublisher__ctor" data-uid="Kinstrife.Messaging.Stateflow.FlowStatePublisher.#ctor">FlowStatePublisher()</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public string Description { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public FlowStatePublisher()</code></pre>
   </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.String</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="Kinstrife_StateFlow_StateID_Name_" data-uid="Kinstrife.StateFlow.StateID.Name*"></a>
-  <h4 id="Kinstrife_StateFlow_StateID_Name" data-uid="Kinstrife.StateFlow.StateID.Name">Name</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public string Name { get; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.String</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
   <h3 id="implements">Implements</h3>
   <div>
-      <a class="xref" href="Kinstrife.StateFlow.IFlowState.html">IFlowState</a>
+      <a class="xref" href="Kinstrife.Core.DependencyInjection.IInjectable.html">IInjectable</a>
+  </div>
+  <div>
+      <a class="xref" href="Kinstrife.Core.DependencyInjection.IInitializable.html">IInitializable</a>
+  </div>
+  <div>
+      <a class="xref" href="Kinstrife.Core.DependencyInjection.IDependent.html">IDependent</a>
   </div>
 </article>
           </div>

@@ -78,7 +78,8 @@
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><span class="xref">StatefulFlowgraph</span></div>
+    <div class="level1"><a class="xref" href="Kinstrife.StateFlow.FlowgraphBase.html">FlowgraphBase</a></div>
+    <div class="level2"><span class="xref">StatefulFlowgraph</span></div>
   </div>
   <div classs="implements">
     <h5>Implements</h5>
@@ -86,6 +87,75 @@
   </div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="Kinstrife.StateFlow.FlowgraphBase.html#Kinstrife_StateFlow_FlowgraphBase_graph">FlowgraphBase.graph</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.StateFlow.FlowgraphBase.html#Kinstrife_StateFlow_FlowgraphBase_GraphAsset">FlowgraphBase.GraphAsset</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.StateFlow.FlowgraphBase.html#Kinstrife_StateFlow_FlowgraphBase_currentStateID">FlowgraphBase.currentStateID</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.StateFlow.FlowgraphBase.html#Kinstrife_StateFlow_FlowgraphBase_owner">FlowgraphBase.owner</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.StateFlow.FlowgraphBase.html#Kinstrife_StateFlow_FlowgraphBase_OnLeavingState">FlowgraphBase.OnLeavingState</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.StateFlow.FlowgraphBase.html#Kinstrife_StateFlow_FlowgraphBase_OnEnteringState">FlowgraphBase.OnEnteringState</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.StateFlow.FlowgraphBase.html#Kinstrife_StateFlow_FlowgraphBase_previousStateNode">FlowgraphBase.previousStateNode</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.StateFlow.FlowgraphBase.html#Kinstrife_StateFlow_FlowgraphBase_currentStateNode">FlowgraphBase.currentStateNode</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.StateFlow.FlowgraphBase.html#Kinstrife_StateFlow_FlowgraphBase_traversedStates">FlowgraphBase.traversedStates</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.StateFlow.FlowgraphBase.html#Kinstrife_StateFlow_FlowgraphBase_Initialized">FlowgraphBase.Initialized</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.StateFlow.FlowgraphBase.html#Kinstrife_StateFlow_FlowgraphBase_Transitioning">FlowgraphBase.Transitioning</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.StateFlow.FlowgraphBase.html#Kinstrife_StateFlow_FlowgraphBase_CurrentState">FlowgraphBase.CurrentState</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.StateFlow.FlowgraphBase.html#Kinstrife_StateFlow_FlowgraphBase_PreviousState">FlowgraphBase.PreviousState</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.StateFlow.FlowgraphBase.html#Kinstrife_StateFlow_FlowgraphBase_ParentState">FlowgraphBase.ParentState</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.StateFlow.FlowgraphBase.html#Kinstrife_StateFlow_FlowgraphBase_TraversedNodes">FlowgraphBase.TraversedNodes</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.StateFlow.FlowgraphBase.html#Kinstrife_StateFlow_FlowgraphBase_CurrentNodeIndex">FlowgraphBase.CurrentNodeIndex</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.StateFlow.FlowgraphBase.html#Kinstrife_StateFlow_FlowgraphBase_PreviousNodeIndex">FlowgraphBase.PreviousNodeIndex</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.StateFlow.FlowgraphBase.html#Kinstrife_StateFlow_FlowgraphBase_Name">FlowgraphBase.Name</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.StateFlow.FlowgraphBase.html#Kinstrife_StateFlow_FlowgraphBase_StartState">FlowgraphBase.StartState</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.StateFlow.FlowgraphBase.html#Kinstrife_StateFlow_FlowgraphBase_Transition_Kinstrife_StateFlow_FlowNode_">FlowgraphBase.Transition(FlowNode)</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.StateFlow.FlowgraphBase.html#Kinstrife_StateFlow_FlowgraphBase_UpdateStateTraversals">FlowgraphBase.UpdateStateTraversals()</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.StateFlow.FlowgraphBase.html#Kinstrife_StateFlow_FlowgraphBase_InternalSetNode_Kinstrife_StateFlow_FlowNode_">FlowgraphBase.InternalSetNode(FlowNode)</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.StateFlow.FlowgraphBase.html#Kinstrife_StateFlow_FlowgraphBase_TryGetNode_Kinstrife_StateFlow_IFlowState_Kinstrife_StateFlow_FlowNode__">FlowgraphBase.TryGetNode(IFlowState, FlowNode)</a>
+    </div>
     <div>
       <span class="xref">System.Object.ToString()</span>
     </div>
@@ -113,341 +183,8 @@
   <h5 id="Kinstrife_StateFlow_StatefulFlowgraph_syntax">Syntax</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">[Serializable]
-public class StatefulFlowgraph : IStateMachine</code></pre>
+public class StatefulFlowgraph : FlowgraphBase, IStateMachine</code></pre>
   </div>
-  <h3 id="constructors">Constructors
-  </h3>
-  
-  
-  <a id="Kinstrife_StateFlow_StatefulFlowgraph__ctor_" data-uid="Kinstrife.StateFlow.StatefulFlowgraph.#ctor*"></a>
-  <h4 id="Kinstrife_StateFlow_StatefulFlowgraph__ctor_Kinstrife_StateFlow_FlowGraph_" data-uid="Kinstrife.StateFlow.StatefulFlowgraph.#ctor(Kinstrife.StateFlow.FlowGraph)">StatefulFlowgraph(FlowGraph)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public StatefulFlowgraph(FlowGraph graph)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Kinstrife.StateFlow.FlowGraph.html">FlowGraph</a></td>
-        <td><span class="parametername">graph</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h3 id="fields">Fields
-  </h3>
-  
-  
-  <h4 id="Kinstrife_StateFlow_StatefulFlowgraph_owner" data-uid="Kinstrife.StateFlow.StatefulFlowgraph.owner">owner</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public UnityEngine.Object owner</code></pre>
-  </div>
-  <h5 class="fieldValue">Field Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">UnityEngine.Object</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h3 id="properties">Properties
-  </h3>
-  
-  
-  <a id="Kinstrife_StateFlow_StatefulFlowgraph_CurrentNodeIndex_" data-uid="Kinstrife.StateFlow.StatefulFlowgraph.CurrentNodeIndex*"></a>
-  <h4 id="Kinstrife_StateFlow_StatefulFlowgraph_CurrentNodeIndex" data-uid="Kinstrife.StateFlow.StatefulFlowgraph.CurrentNodeIndex">CurrentNodeIndex</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public int CurrentNodeIndex { get; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Int32</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="Kinstrife_StateFlow_StatefulFlowgraph_CurrentState_" data-uid="Kinstrife.StateFlow.StatefulFlowgraph.CurrentState*"></a>
-  <h4 id="Kinstrife_StateFlow_StatefulFlowgraph_CurrentState" data-uid="Kinstrife.StateFlow.StatefulFlowgraph.CurrentState">CurrentState</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public IFlowState CurrentState { get; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Kinstrife.StateFlow.IFlowState.html">IFlowState</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="Kinstrife_StateFlow_StatefulFlowgraph_GraphAsset_" data-uid="Kinstrife.StateFlow.StatefulFlowgraph.GraphAsset*"></a>
-  <h4 id="Kinstrife_StateFlow_StatefulFlowgraph_GraphAsset" data-uid="Kinstrife.StateFlow.StatefulFlowgraph.GraphAsset">GraphAsset</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public FlowGraph GraphAsset { get; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Kinstrife.StateFlow.FlowGraph.html">FlowGraph</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="Kinstrife_StateFlow_StatefulFlowgraph_Initialized_" data-uid="Kinstrife.StateFlow.StatefulFlowgraph.Initialized*"></a>
-  <h4 id="Kinstrife_StateFlow_StatefulFlowgraph_Initialized" data-uid="Kinstrife.StateFlow.StatefulFlowgraph.Initialized">Initialized</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public bool Initialized { get; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Boolean</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="Kinstrife_StateFlow_StatefulFlowgraph_Name_" data-uid="Kinstrife.StateFlow.StatefulFlowgraph.Name*"></a>
-  <h4 id="Kinstrife_StateFlow_StatefulFlowgraph_Name" data-uid="Kinstrife.StateFlow.StatefulFlowgraph.Name">Name</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public string Name { get; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.String</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="Kinstrife_StateFlow_StatefulFlowgraph_ParentState_" data-uid="Kinstrife.StateFlow.StatefulFlowgraph.ParentState*"></a>
-  <h4 id="Kinstrife_StateFlow_StatefulFlowgraph_ParentState" data-uid="Kinstrife.StateFlow.StatefulFlowgraph.ParentState">ParentState</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public IFlowState ParentState { get; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Kinstrife.StateFlow.IFlowState.html">IFlowState</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="Kinstrife_StateFlow_StatefulFlowgraph_PreviousNodeIndex_" data-uid="Kinstrife.StateFlow.StatefulFlowgraph.PreviousNodeIndex*"></a>
-  <h4 id="Kinstrife_StateFlow_StatefulFlowgraph_PreviousNodeIndex" data-uid="Kinstrife.StateFlow.StatefulFlowgraph.PreviousNodeIndex">PreviousNodeIndex</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public int PreviousNodeIndex { get; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Int32</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="Kinstrife_StateFlow_StatefulFlowgraph_PreviousState_" data-uid="Kinstrife.StateFlow.StatefulFlowgraph.PreviousState*"></a>
-  <h4 id="Kinstrife_StateFlow_StatefulFlowgraph_PreviousState" data-uid="Kinstrife.StateFlow.StatefulFlowgraph.PreviousState">PreviousState</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public IFlowState PreviousState { get; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Kinstrife.StateFlow.IFlowState.html">IFlowState</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="Kinstrife_StateFlow_StatefulFlowgraph_StartState_" data-uid="Kinstrife.StateFlow.StatefulFlowgraph.StartState*"></a>
-  <h4 id="Kinstrife_StateFlow_StatefulFlowgraph_StartState" data-uid="Kinstrife.StateFlow.StatefulFlowgraph.StartState">StartState</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public IFlowState StartState { get; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Kinstrife.StateFlow.IFlowState.html">IFlowState</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="Kinstrife_StateFlow_StatefulFlowgraph_Transitioning_" data-uid="Kinstrife.StateFlow.StatefulFlowgraph.Transitioning*"></a>
-  <h4 id="Kinstrife_StateFlow_StatefulFlowgraph_Transitioning" data-uid="Kinstrife.StateFlow.StatefulFlowgraph.Transitioning">Transitioning</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public bool Transitioning { get; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Boolean</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="Kinstrife_StateFlow_StatefulFlowgraph_TraversedNodes_" data-uid="Kinstrife.StateFlow.StatefulFlowgraph.TraversedNodes*"></a>
-  <h4 id="Kinstrife_StateFlow_StatefulFlowgraph_TraversedNodes" data-uid="Kinstrife.StateFlow.StatefulFlowgraph.TraversedNodes">TraversedNodes</h4>
-  <div class="markdown level1 summary"><p>List of traversed nodes from starting state to current state.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public List&lt;StateID&gt; TraversedNodes { get; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Collections.Generic.List</span>&lt;<a class="xref" href="Kinstrife.StateFlow.StateID.html">StateID</a>&gt;</td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
   <h3 id="methods">Methods
   </h3>
   
@@ -458,7 +195,7 @@ public class StatefulFlowgraph : IStateMachine</code></pre>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public bool CanTransition(IFlowState target)</code></pre>
+    <pre><code class="lang-csharp hljs">public override bool CanTransition(IFlowState target)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -492,6 +229,8 @@ public class StatefulFlowgraph : IStateMachine</code></pre>
       </tr>
     </tbody>
   </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Kinstrife.StateFlow.FlowgraphBase.html#Kinstrife_StateFlow_FlowgraphBase_CanTransition_Kinstrife_StateFlow_IFlowState_">FlowgraphBase.CanTransition(IFlowState)</a></div>
   
   
   <a id="Kinstrife_StateFlow_StatefulFlowgraph_Initialize_" data-uid="Kinstrife.StateFlow.StatefulFlowgraph.Initialize*"></a>
@@ -500,7 +239,7 @@ public class StatefulFlowgraph : IStateMachine</code></pre>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void Initialize(bool forceReinitialization = false, IFlowState startState = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public override void Initialize(bool forceReinitialization = false, IFlowState startState = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -524,6 +263,8 @@ public class StatefulFlowgraph : IStateMachine</code></pre>
       </tr>
     </tbody>
   </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Kinstrife.StateFlow.FlowgraphBase.html#Kinstrife_StateFlow_FlowgraphBase_Initialize_System_Boolean_Kinstrife_StateFlow_IFlowState_">FlowgraphBase.Initialize(Boolean, IFlowState)</a></div>
   
   
   <a id="Kinstrife_StateFlow_StatefulFlowgraph_PossibleNextStates_" data-uid="Kinstrife.StateFlow.StatefulFlowgraph.PossibleNextStates*"></a>
@@ -532,7 +273,7 @@ public class StatefulFlowgraph : IStateMachine</code></pre>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public ICollection&lt;IFlowState&gt; PossibleNextStates()</code></pre>
+    <pre><code class="lang-csharp hljs">public override ICollection&lt;IFlowState&gt; PossibleNextStates()</code></pre>
   </div>
   <h5 class="returns">Returns</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -549,6 +290,8 @@ public class StatefulFlowgraph : IStateMachine</code></pre>
       </tr>
     </tbody>
   </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Kinstrife.StateFlow.FlowgraphBase.html#Kinstrife_StateFlow_FlowgraphBase_PossibleNextStates">FlowgraphBase.PossibleNextStates()</a></div>
   
   
   <a id="Kinstrife_StateFlow_StatefulFlowgraph_TryTransition_" data-uid="Kinstrife.StateFlow.StatefulFlowgraph.TryTransition*"></a>
@@ -557,7 +300,7 @@ public class StatefulFlowgraph : IStateMachine</code></pre>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public bool TryTransition(IFlowState target)</code></pre>
+    <pre><code class="lang-csharp hljs">public override bool TryTransition(IFlowState target)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -591,56 +334,8 @@ public class StatefulFlowgraph : IStateMachine</code></pre>
       </tr>
     </tbody>
   </table>
-  <h3 id="events">Events
-  </h3>
-  
-  
-  <h4 id="Kinstrife_StateFlow_StatefulFlowgraph_OnEnteringState" data-uid="Kinstrife.StateFlow.StatefulFlowgraph.OnEnteringState">OnEnteringState</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public event StateMachineEvent OnEnteringState</code></pre>
-  </div>
-  <h5 class="eventType">Event Type</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Kinstrife.StateFlow.StateMachineEvent.html">StateMachineEvent</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <h4 id="Kinstrife_StateFlow_StatefulFlowgraph_OnLeavingState" data-uid="Kinstrife.StateFlow.StatefulFlowgraph.OnLeavingState">OnLeavingState</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public event StateMachineEvent OnLeavingState</code></pre>
-  </div>
-  <h5 class="eventType">Event Type</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Kinstrife.StateFlow.StateMachineEvent.html">StateMachineEvent</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Kinstrife.StateFlow.FlowgraphBase.html#Kinstrife_StateFlow_FlowgraphBase_TryTransition_Kinstrife_StateFlow_IFlowState_">FlowgraphBase.TryTransition(IFlowState)</a></div>
   <h3 id="implements">Implements</h3>
   <div>
       <a class="xref" href="Kinstrife.StateFlow.IStateMachine.html">IStateMachine</a>

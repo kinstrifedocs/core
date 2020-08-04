@@ -5,10 +5,10 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Class InteractionSystem
+    <title>Class InputFocusState
    | Kinstrife </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Class InteractionSystem
+    <meta name="title" content="Class InputFocusState
    | Kinstrife ">
     <meta name="generator" content="docfx 2.56.2.0">
     
@@ -68,41 +68,100 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="Kinstrife.Core.Interaction.Systems.InteractionSystem">
+            <article class="content wrap" id="_content" data-uid="Kinstrife.Core.Input.InputFocusState">
   
   
-  <h1 id="Kinstrife_Core_Interaction_Systems_InteractionSystem" data-uid="Kinstrife.Core.Interaction.Systems.InteractionSystem" class="text-break">Class InteractionSystem
+  <h1 id="Kinstrife_Core_Input_InputFocusState" data-uid="Kinstrife.Core.Input.InputFocusState" class="text-break">Class InputFocusState
   </h1>
   <div class="markdown level0 summary"></div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><span class="xref">InteractionSystem</span></div>
+    <div class="level1"><a class="xref" href="Kinstrife.StateFlow.StateID.html">StateID</a></div>
+    <div class="level2"><span class="xref">InputFocusState</span></div>
   </div>
   <div classs="implements">
     <h5>Implements</h5>
-    <div><a class="xref" href="Kinstrife.Core.DependencyInjection.IInjectable.html">IInjectable</a></div>
-    <div><a class="xref" href="Kinstrife.Core.DependencyInjection.IInitializable.html">IInitializable</a></div>
-    <div><a class="xref" href="Kinstrife.Core.DependencyInjection.IDependent.html">IDependent</a></div>
+    <div><a class="xref" href="Kinstrife.StateFlow.IFlowState.html">IFlowState</a></div>
   </div>
-  <h6><strong>Namespace</strong>: <a class="xref" href="Kinstrife.Core.Interaction.Systems.html">Kinstrife.Core.Interaction.Systems</a></h6>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="Kinstrife.StateFlow.StateID.html#Kinstrife_StateFlow_StateID_Name">StateID.Name</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.StateFlow.StateID.html#Kinstrife_StateFlow_StateID_Description">StateID.Description</a>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Kinstrife.Core.Input.html">Kinstrife.Core.Input</a></h6>
   <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
-  <h5 id="Kinstrife_Core_Interaction_Systems_InteractionSystem_syntax">Syntax</h5>
+  <h5 id="Kinstrife_Core_Input_InputFocusState_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class InteractionSystem : ComponentSystem, IInjectable, IInitializable, IDependent</code></pre>
+    <pre><code class="lang-csharp hljs">[Serializable]
+public class InputFocusState : StateID, IFlowState</code></pre>
   </div>
   <h3 id="properties">Properties
   </h3>
   
   
-  <a id="Kinstrife_Core_Interaction_Systems_InteractionSystem_Initialized_" data-uid="Kinstrife.Core.Interaction.Systems.InteractionSystem.Initialized*"></a>
-  <h4 id="Kinstrife_Core_Interaction_Systems_InteractionSystem_Initialized" data-uid="Kinstrife.Core.Interaction.Systems.InteractionSystem.Initialized">Initialized</h4>
+  <a id="Kinstrife_Core_Input_InputFocusState_CursorLockMode_" data-uid="Kinstrife.Core.Input.InputFocusState.CursorLockMode*"></a>
+  <h4 id="Kinstrife_Core_Input_InputFocusState_CursorLockMode" data-uid="Kinstrife.Core.Input.InputFocusState.CursorLockMode">CursorLockMode</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public bool Initialized { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public CursorLockMode CursorLockMode { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">CursorLockMode</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Kinstrife_Core_Input_InputFocusState_CursorState_" data-uid="Kinstrife.Core.Input.InputFocusState.CursorState*"></a>
+  <h4 id="Kinstrife_Core_Input_InputFocusState_CursorState" data-uid="Kinstrife.Core.Input.InputFocusState.CursorState">CursorState</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public CursorState CursorState { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Kinstrife.Core.Input.CursorState.html">CursorState</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Kinstrife_Core_Input_InputFocusState_ShowCursor_" data-uid="Kinstrife.Core.Input.InputFocusState.ShowCursor*"></a>
+  <h4 id="Kinstrife_Core_Input_InputFocusState_ShowCursor" data-uid="Kinstrife.Core.Input.InputFocusState.ShowCursor">ShowCursor</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool ShowCursor { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -119,101 +178,84 @@
       </tr>
     </tbody>
   </table>
-  <h3 id="methods">Methods
-  </h3>
   
   
-  <a id="Kinstrife_Core_Interaction_Systems_InteractionSystem_DoRaycast_" data-uid="Kinstrife.Core.Interaction.Systems.InteractionSystem.DoRaycast*"></a>
-  <h4 id="Kinstrife_Core_Interaction_Systems_InteractionSystem_DoRaycast_Vector3_Vector3_" data-uid="Kinstrife.Core.Interaction.Systems.InteractionSystem.DoRaycast(Vector3,Vector3)">DoRaycast(Vector3, Vector3)</h4>
+  <a id="Kinstrife_Core_Input_InputFocusState_TimeScale_" data-uid="Kinstrife.Core.Input.InputFocusState.TimeScale*"></a>
+  <h4 id="Kinstrife_Core_Input_InputFocusState_TimeScale" data-uid="Kinstrife.Core.Input.InputFocusState.TimeScale">TimeScale</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void DoRaycast(Vector3 cameraCenter, Vector3 forward)</code></pre>
+    <pre><code class="lang-csharp hljs">public float TimeScale { get; }</code></pre>
   </div>
-  <h5 class="parameters">Parameters</h5>
+  <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
       <tr>
         <th>Type</th>
-        <th>Name</th>
         <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Vector3</span></td>
-        <td><span class="parametername">cameraCenter</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><span class="xref">Vector3</span></td>
-        <td><span class="parametername">forward</span></td>
+        <td><span class="xref">System.Single</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   
   
-  <a id="Kinstrife_Core_Interaction_Systems_InteractionSystem_Initialize_" data-uid="Kinstrife.Core.Interaction.Systems.InteractionSystem.Initialize*"></a>
-  <h4 id="Kinstrife_Core_Interaction_Systems_InteractionSystem_Initialize" data-uid="Kinstrife.Core.Interaction.Systems.InteractionSystem.Initialize">Initialize()</h4>
+  <a id="Kinstrife_Core_Input_InputFocusState_UIInteraction_" data-uid="Kinstrife.Core.Input.InputFocusState.UIInteraction*"></a>
+  <h4 id="Kinstrife_Core_Input_InputFocusState_UIInteraction" data-uid="Kinstrife.Core.Input.InputFocusState.UIInteraction">UIInteraction</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void Initialize()</code></pre>
+    <pre><code class="lang-csharp hljs">public bool UIInteraction { get; }</code></pre>
   </div>
-  
-  
-  <a id="Kinstrife_Core_Interaction_Systems_InteractionSystem_Inject_" data-uid="Kinstrife.Core.Interaction.Systems.InteractionSystem.Inject*"></a>
-  <h4 id="Kinstrife_Core_Interaction_Systems_InteractionSystem_Inject_Kinstrife_Core_Interaction_InteractionConfig_Kinstrife_Messaging_ISubscriber_Kinstrife_Core_Input_InputFocusState__" data-uid="Kinstrife.Core.Interaction.Systems.InteractionSystem.Inject(Kinstrife.Core.Interaction.InteractionConfig,Kinstrife.Messaging.ISubscriber{Kinstrife.Core.Input.InputFocusState})">Inject(InteractionConfig, ISubscriber&lt;InputFocusState&gt;)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void Inject(InteractionConfig config, ISubscriber&lt;InputFocusState&gt; inputFocusSubscriber)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
+  <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
       <tr>
         <th>Type</th>
-        <th>Name</th>
         <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="Kinstrife.Core.Interaction.InteractionConfig.html">InteractionConfig</a></td>
-        <td><span class="parametername">config</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="Kinstrife.Messaging.ISubscriber-1.html">ISubscriber</a>&lt;<a class="xref" href="Kinstrife.Core.Input.InputFocusState.html">InputFocusState</a>&gt;</td>
-        <td><span class="parametername">inputFocusSubscriber</span></td>
+        <td><span class="xref">System.Boolean</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   
   
-  <a id="Kinstrife_Core_Interaction_Systems_InteractionSystem_OnUpdate_" data-uid="Kinstrife.Core.Interaction.Systems.InteractionSystem.OnUpdate*"></a>
-  <h4 id="Kinstrife_Core_Interaction_Systems_InteractionSystem_OnUpdate" data-uid="Kinstrife.Core.Interaction.Systems.InteractionSystem.OnUpdate">OnUpdate()</h4>
+  <a id="Kinstrife_Core_Input_InputFocusState_WorldInteraction_" data-uid="Kinstrife.Core.Input.InputFocusState.WorldInteraction*"></a>
+  <h4 id="Kinstrife_Core_Input_InputFocusState_WorldInteraction" data-uid="Kinstrife.Core.Input.InputFocusState.WorldInteraction">WorldInteraction</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected override void OnUpdate()</code></pre>
+    <pre><code class="lang-csharp hljs">public bool WorldInteraction { get; }</code></pre>
   </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   <h3 id="implements">Implements</h3>
   <div>
-      <a class="xref" href="Kinstrife.Core.DependencyInjection.IInjectable.html">IInjectable</a>
-  </div>
-  <div>
-      <a class="xref" href="Kinstrife.Core.DependencyInjection.IInitializable.html">IInitializable</a>
-  </div>
-  <div>
-      <a class="xref" href="Kinstrife.Core.DependencyInjection.IDependent.html">IDependent</a>
+      <a class="xref" href="Kinstrife.StateFlow.IFlowState.html">IFlowState</a>
   </div>
 </article>
           </div>

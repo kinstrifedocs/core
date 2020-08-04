@@ -5,10 +5,10 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Class StateID
+    <title>Class FlowgraphInstaller
    | Kinstrife </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Class StateID
+    <meta name="title" content="Class FlowgraphInstaller
    | Kinstrife ">
     <meta name="generator" content="docfx 2.56.2.0">
     
@@ -68,87 +68,103 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="Kinstrife.StateFlow.StateID">
+            <article class="content wrap" id="_content" data-uid="Kinstrife.StateFlow.FlowgraphInstaller">
   
   
-  <h1 id="Kinstrife_StateFlow_StateID" data-uid="Kinstrife.StateFlow.StateID" class="text-break">Class StateID
+  <h1 id="Kinstrife_StateFlow_FlowgraphInstaller" data-uid="Kinstrife.StateFlow.FlowgraphInstaller" class="text-break">Class FlowgraphInstaller
   </h1>
-  <div class="markdown level0 summary"><p>Exemplary state ID.</p>
+  <div class="markdown level0 summary"><p>A simple installer to install a referenced StatefulFlowComponent into a hierarchy</p>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><span class="xref">StateID</span></div>
-      <div class="level2"><a class="xref" href="Kinstrife.Application.GameMode.html">GameMode</a></div>
-      <div class="level2"><a class="xref" href="Kinstrife.Core.Input.InputFocusState.html">InputFocusState</a></div>
+    <div class="level1"><a class="xref" href="Kinstrife.Core.DependencyInjection.Installer.html">Installer</a></div>
+    <div class="level2"><span class="xref">FlowgraphInstaller</span></div>
   </div>
   <div classs="implements">
     <h5>Implements</h5>
-    <div><a class="xref" href="Kinstrife.StateFlow.IFlowState.html">IFlowState</a></div>
+    <div><a class="xref" href="Kinstrife.Core.DependencyInjection.IInstaller.html">IInstaller</a></div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Kinstrife.StateFlow.html">Kinstrife.StateFlow</a></h6>
   <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
-  <h5 id="Kinstrife_StateFlow_StateID_syntax">Syntax</h5>
+  <h5 id="Kinstrife_StateFlow_FlowgraphInstaller_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[Serializable]
-public class StateID : ScriptableObject, IFlowState</code></pre>
+    <pre><code class="lang-csharp hljs">public class FlowgraphInstaller : Installer, IInstaller</code></pre>
   </div>
-  <h3 id="properties">Properties
+  <h3 id="methods">Methods
   </h3>
   
   
-  <a id="Kinstrife_StateFlow_StateID_Description_" data-uid="Kinstrife.StateFlow.StateID.Description*"></a>
-  <h4 id="Kinstrife_StateFlow_StateID_Description" data-uid="Kinstrife.StateFlow.StateID.Description">Description</h4>
+  <a id="Kinstrife_StateFlow_FlowgraphInstaller_InstallBindings_" data-uid="Kinstrife.StateFlow.FlowgraphInstaller.InstallBindings*"></a>
+  <h4 id="Kinstrife_StateFlow_FlowgraphInstaller_InstallBindings_Kinstrife_Core_DependencyInjection_Container_Kinstrife_Core_DependencyInjection_IInjectableSource_" data-uid="Kinstrife.StateFlow.FlowgraphInstaller.InstallBindings(Kinstrife.Core.DependencyInjection.Container,Kinstrife.Core.DependencyInjection.IInjectableSource)">InstallBindings(Container, IInjectableSource)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public string Description { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public override void InstallBindings(Container container, IInjectableSource source)</code></pre>
   </div>
-  <h5 class="propertyValue">Property Value</h5>
+  <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
       <tr>
         <th>Type</th>
+        <th>Name</th>
         <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><a class="xref" href="Kinstrife.Core.DependencyInjection.Container.html">Container</a></td>
+        <td><span class="parametername">container</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Kinstrife.Core.DependencyInjection.IInjectableSource.html">IInjectableSource</a></td>
+        <td><span class="parametername">source</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Kinstrife.Core.DependencyInjection.Installer.html#Kinstrife_Core_DependencyInjection_Installer_InstallBindings_Kinstrife_Core_DependencyInjection_Container_Kinstrife_Core_DependencyInjection_IInjectableSource_">Installer.InstallBindings(Container, IInjectableSource)</a></div>
   
   
-  <a id="Kinstrife_StateFlow_StateID_Name_" data-uid="Kinstrife.StateFlow.StateID.Name*"></a>
-  <h4 id="Kinstrife_StateFlow_StateID_Name" data-uid="Kinstrife.StateFlow.StateID.Name">Name</h4>
+  <a id="Kinstrife_StateFlow_FlowgraphInstaller_UninstallBindings_" data-uid="Kinstrife.StateFlow.FlowgraphInstaller.UninstallBindings*"></a>
+  <h4 id="Kinstrife_StateFlow_FlowgraphInstaller_UninstallBindings_Kinstrife_Core_DependencyInjection_Container_Kinstrife_Core_DependencyInjection_IInjectableSource_" data-uid="Kinstrife.StateFlow.FlowgraphInstaller.UninstallBindings(Kinstrife.Core.DependencyInjection.Container,Kinstrife.Core.DependencyInjection.IInjectableSource)">UninstallBindings(Container, IInjectableSource)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public string Name { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public override void UninstallBindings(Container container, IInjectableSource source)</code></pre>
   </div>
-  <h5 class="propertyValue">Property Value</h5>
+  <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
       <tr>
         <th>Type</th>
+        <th>Name</th>
         <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><a class="xref" href="Kinstrife.Core.DependencyInjection.Container.html">Container</a></td>
+        <td><span class="parametername">container</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Kinstrife.Core.DependencyInjection.IInjectableSource.html">IInjectableSource</a></td>
+        <td><span class="parametername">source</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Kinstrife.Core.DependencyInjection.Installer.html#Kinstrife_Core_DependencyInjection_Installer_UninstallBindings_Kinstrife_Core_DependencyInjection_Container_Kinstrife_Core_DependencyInjection_IInjectableSource_">Installer.UninstallBindings(Container, IInjectableSource)</a></div>
   <h3 id="implements">Implements</h3>
   <div>
-      <a class="xref" href="Kinstrife.StateFlow.IFlowState.html">IFlowState</a>
+      <a class="xref" href="Kinstrife.Core.DependencyInjection.IInstaller.html">IInstaller</a>
   </div>
 </article>
           </div>

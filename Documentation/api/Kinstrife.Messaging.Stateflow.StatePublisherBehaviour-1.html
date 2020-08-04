@@ -5,10 +5,10 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Class InteractionSystem
+    <title>Class StatePublisherBehaviour&lt;TMessage&gt;
    | Kinstrife </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Class InteractionSystem
+    <meta name="title" content="Class StatePublisherBehaviour&lt;TMessage&gt;
    | Kinstrife ">
     <meta name="generator" content="docfx 2.56.2.0">
     
@@ -68,17 +68,21 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="Kinstrife.Core.Interaction.Systems.InteractionSystem">
+            <article class="content wrap" id="_content" data-uid="Kinstrife.Messaging.Stateflow.StatePublisherBehaviour`1">
   
   
-  <h1 id="Kinstrife_Core_Interaction_Systems_InteractionSystem" data-uid="Kinstrife.Core.Interaction.Systems.InteractionSystem" class="text-break">Class InteractionSystem
+  <h1 id="Kinstrife_Messaging_Stateflow_StatePublisherBehaviour_1" data-uid="Kinstrife.Messaging.Stateflow.StatePublisherBehaviour`1" class="text-break">Class StatePublisherBehaviour&lt;TMessage&gt;
   </h1>
   <div class="markdown level0 summary"></div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><span class="xref">InteractionSystem</span></div>
+    <div class="level1"><a class="xref" href="Kinstrife.Messaging.PublisherBehaviour-1.html">PublisherBehaviour</a>&lt;TMessage&gt;</div>
+    <div class="level2"><span class="xref">StatePublisherBehaviour&lt;TMessage&gt;</span></div>
+      <div class="level3"><a class="xref" href="Kinstrife.Core.Camera.CameraStatePublisher.html">CameraStatePublisher</a></div>
+      <div class="level3"><a class="xref" href="Kinstrife.Core.Input.InputFocusPublisher.html">InputFocusPublisher</a></div>
+      <div class="level3"><a class="xref" href="Kinstrife.Messaging.Stateflow.FlowStatePublisher.html">FlowStatePublisher</a></div>
   </div>
   <div classs="implements">
     <h5>Implements</h5>
@@ -86,35 +90,38 @@
     <div><a class="xref" href="Kinstrife.Core.DependencyInjection.IInitializable.html">IInitializable</a></div>
     <div><a class="xref" href="Kinstrife.Core.DependencyInjection.IDependent.html">IDependent</a></div>
   </div>
-  <h6><strong>Namespace</strong>: <a class="xref" href="Kinstrife.Core.Interaction.Systems.html">Kinstrife.Core.Interaction.Systems</a></h6>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="Kinstrife.Messaging.PublisherBehaviour-1.html#Kinstrife_Messaging_PublisherBehaviour_1_channelDescriptor">PublisherBehaviour&lt;TMessage&gt;.channelDescriptor</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.Messaging.PublisherBehaviour-1.html#Kinstrife_Messaging_PublisherBehaviour_1_Inject_Kinstrife_Messaging_IPublisher__0__">PublisherBehaviour&lt;TMessage&gt;.Inject(IPublisher&lt;TMessage&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.Messaging.PublisherBehaviour-1.html#Kinstrife_Messaging_PublisherBehaviour_1_Initialized">PublisherBehaviour&lt;TMessage&gt;.Initialized</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.Messaging.PublisherBehaviour-1.html#Kinstrife_Messaging_PublisherBehaviour_1_Publish__0_">PublisherBehaviour&lt;TMessage&gt;.Publish(TMessage)</a>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Kinstrife.Messaging.Stateflow.html">Kinstrife.Messaging.Stateflow</a></h6>
   <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
-  <h5 id="Kinstrife_Core_Interaction_Systems_InteractionSystem_syntax">Syntax</h5>
+  <h5 id="Kinstrife_Messaging_Stateflow_StatePublisherBehaviour_1_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class InteractionSystem : ComponentSystem, IInjectable, IInitializable, IDependent</code></pre>
+    <pre><code class="lang-csharp hljs">public abstract class StatePublisherBehaviour&lt;TMessage&gt; : PublisherBehaviour&lt;TMessage&gt;, IInjectable, IInitializable, IDependent where TMessage : IFlowState</code></pre>
   </div>
-  <h3 id="properties">Properties
-  </h3>
-  
-  
-  <a id="Kinstrife_Core_Interaction_Systems_InteractionSystem_Initialized_" data-uid="Kinstrife.Core.Interaction.Systems.InteractionSystem.Initialized*"></a>
-  <h4 id="Kinstrife_Core_Interaction_Systems_InteractionSystem_Initialized" data-uid="Kinstrife.Core.Interaction.Systems.InteractionSystem.Initialized">Initialized</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public bool Initialized { get; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
+  <h5 class="typeParameters">Type Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
       <tr>
-        <th>Type</th>
+        <th>Name</th>
         <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">TMessage</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -123,13 +130,25 @@
   </h3>
   
   
-  <a id="Kinstrife_Core_Interaction_Systems_InteractionSystem_DoRaycast_" data-uid="Kinstrife.Core.Interaction.Systems.InteractionSystem.DoRaycast*"></a>
-  <h4 id="Kinstrife_Core_Interaction_Systems_InteractionSystem_DoRaycast_Vector3_Vector3_" data-uid="Kinstrife.Core.Interaction.Systems.InteractionSystem.DoRaycast(Vector3,Vector3)">DoRaycast(Vector3, Vector3)</h4>
+  <a id="Kinstrife_Messaging_Stateflow_StatePublisherBehaviour_1_Initialize_" data-uid="Kinstrife.Messaging.Stateflow.StatePublisherBehaviour`1.Initialize*"></a>
+  <h4 id="Kinstrife_Messaging_Stateflow_StatePublisherBehaviour_1_Initialize" data-uid="Kinstrife.Messaging.Stateflow.StatePublisherBehaviour`1.Initialize">Initialize()</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void DoRaycast(Vector3 cameraCenter, Vector3 forward)</code></pre>
+    <pre><code class="lang-csharp hljs">public override void Initialize()</code></pre>
+  </div>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">Kinstrife.Messaging.PublisherBehaviour&lt;TMessage&gt;.Initialize()</span></div>
+  
+  
+  <a id="Kinstrife_Messaging_Stateflow_StatePublisherBehaviour_1_Inject_" data-uid="Kinstrife.Messaging.Stateflow.StatePublisherBehaviour`1.Inject*"></a>
+  <h4 id="Kinstrife_Messaging_Stateflow_StatePublisherBehaviour_1_Inject_Kinstrife_Messaging_IPublisher__0__Kinstrife_StateFlow_FlowgraphBase_" data-uid="Kinstrife.Messaging.Stateflow.StatePublisherBehaviour`1.Inject(Kinstrife.Messaging.IPublisher{`0},Kinstrife.StateFlow.FlowgraphBase)">Inject(IPublisher&lt;TMessage&gt;, FlowgraphBase)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Inject(IPublisher&lt;TMessage&gt; publisher, FlowgraphBase stateMachine)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -142,69 +161,17 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Vector3</span></td>
-        <td><span class="parametername">cameraCenter</span></td>
+        <td><a class="xref" href="Kinstrife.Messaging.IPublisher-1.html">IPublisher</a>&lt;TMessage&gt;</td>
+        <td><span class="parametername">publisher</span></td>
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">Vector3</span></td>
-        <td><span class="parametername">forward</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="Kinstrife_Core_Interaction_Systems_InteractionSystem_Initialize_" data-uid="Kinstrife.Core.Interaction.Systems.InteractionSystem.Initialize*"></a>
-  <h4 id="Kinstrife_Core_Interaction_Systems_InteractionSystem_Initialize" data-uid="Kinstrife.Core.Interaction.Systems.InteractionSystem.Initialize">Initialize()</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void Initialize()</code></pre>
-  </div>
-  
-  
-  <a id="Kinstrife_Core_Interaction_Systems_InteractionSystem_Inject_" data-uid="Kinstrife.Core.Interaction.Systems.InteractionSystem.Inject*"></a>
-  <h4 id="Kinstrife_Core_Interaction_Systems_InteractionSystem_Inject_Kinstrife_Core_Interaction_InteractionConfig_Kinstrife_Messaging_ISubscriber_Kinstrife_Core_Input_InputFocusState__" data-uid="Kinstrife.Core.Interaction.Systems.InteractionSystem.Inject(Kinstrife.Core.Interaction.InteractionConfig,Kinstrife.Messaging.ISubscriber{Kinstrife.Core.Input.InputFocusState})">Inject(InteractionConfig, ISubscriber&lt;InputFocusState&gt;)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void Inject(InteractionConfig config, ISubscriber&lt;InputFocusState&gt; inputFocusSubscriber)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Kinstrife.Core.Interaction.InteractionConfig.html">InteractionConfig</a></td>
-        <td><span class="parametername">config</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="Kinstrife.Messaging.ISubscriber-1.html">ISubscriber</a>&lt;<a class="xref" href="Kinstrife.Core.Input.InputFocusState.html">InputFocusState</a>&gt;</td>
-        <td><span class="parametername">inputFocusSubscriber</span></td>
+        <td><a class="xref" href="Kinstrife.StateFlow.FlowgraphBase.html">FlowgraphBase</a></td>
+        <td><span class="parametername">stateMachine</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
-  
-  
-  <a id="Kinstrife_Core_Interaction_Systems_InteractionSystem_OnUpdate_" data-uid="Kinstrife.Core.Interaction.Systems.InteractionSystem.OnUpdate*"></a>
-  <h4 id="Kinstrife_Core_Interaction_Systems_InteractionSystem_OnUpdate" data-uid="Kinstrife.Core.Interaction.Systems.InteractionSystem.OnUpdate">OnUpdate()</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected override void OnUpdate()</code></pre>
-  </div>
   <h3 id="implements">Implements</h3>
   <div>
       <a class="xref" href="Kinstrife.Core.DependencyInjection.IInjectable.html">IInjectable</a>

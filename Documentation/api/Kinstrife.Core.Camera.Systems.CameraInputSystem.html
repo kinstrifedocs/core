@@ -5,10 +5,10 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Class InteractionSystem
+    <title>Class CameraInputSystem
    | Kinstrife </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Class InteractionSystem
+    <meta name="title" content="Class CameraInputSystem
    | Kinstrife ">
     <meta name="generator" content="docfx 2.56.2.0">
     
@@ -68,17 +68,19 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="Kinstrife.Core.Interaction.Systems.InteractionSystem">
+            <article class="content wrap" id="_content" data-uid="Kinstrife.Core.Camera.Systems.CameraInputSystem">
   
   
-  <h1 id="Kinstrife_Core_Interaction_Systems_InteractionSystem" data-uid="Kinstrife.Core.Interaction.Systems.InteractionSystem" class="text-break">Class InteractionSystem
+  <h1 id="Kinstrife_Core_Camera_Systems_CameraInputSystem" data-uid="Kinstrife.Core.Camera.Systems.CameraInputSystem" class="text-break">Class CameraInputSystem
   </h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><p>Listens to PlayerInput and converts it into CameraInputState,
+using inputs from Application Focus State (which it subscribes to)  ///</p>
+</div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><span class="xref">InteractionSystem</span></div>
+    <div class="level1"><span class="xref">CameraInputSystem</span></div>
   </div>
   <div classs="implements">
     <h5>Implements</h5>
@@ -86,18 +88,18 @@
     <div><a class="xref" href="Kinstrife.Core.DependencyInjection.IInitializable.html">IInitializable</a></div>
     <div><a class="xref" href="Kinstrife.Core.DependencyInjection.IDependent.html">IDependent</a></div>
   </div>
-  <h6><strong>Namespace</strong>: <a class="xref" href="Kinstrife.Core.Interaction.Systems.html">Kinstrife.Core.Interaction.Systems</a></h6>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Kinstrife.Core.Camera.Systems.html">Kinstrife.Core.Camera.Systems</a></h6>
   <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
-  <h5 id="Kinstrife_Core_Interaction_Systems_InteractionSystem_syntax">Syntax</h5>
+  <h5 id="Kinstrife_Core_Camera_Systems_CameraInputSystem_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class InteractionSystem : ComponentSystem, IInjectable, IInitializable, IDependent</code></pre>
+    <pre><code class="lang-csharp hljs">public class CameraInputSystem : ComponentSystem, IInjectable, IInitializable, IDependent</code></pre>
   </div>
   <h3 id="properties">Properties
   </h3>
   
   
-  <a id="Kinstrife_Core_Interaction_Systems_InteractionSystem_Initialized_" data-uid="Kinstrife.Core.Interaction.Systems.InteractionSystem.Initialized*"></a>
-  <h4 id="Kinstrife_Core_Interaction_Systems_InteractionSystem_Initialized" data-uid="Kinstrife.Core.Interaction.Systems.InteractionSystem.Initialized">Initialized</h4>
+  <a id="Kinstrife_Core_Camera_Systems_CameraInputSystem_Initialized_" data-uid="Kinstrife.Core.Camera.Systems.CameraInputSystem.Initialized*"></a>
+  <h4 id="Kinstrife_Core_Camera_Systems_CameraInputSystem_Initialized" data-uid="Kinstrife.Core.Camera.Systems.CameraInputSystem.Initialized">Initialized</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -123,40 +125,8 @@
   </h3>
   
   
-  <a id="Kinstrife_Core_Interaction_Systems_InteractionSystem_DoRaycast_" data-uid="Kinstrife.Core.Interaction.Systems.InteractionSystem.DoRaycast*"></a>
-  <h4 id="Kinstrife_Core_Interaction_Systems_InteractionSystem_DoRaycast_Vector3_Vector3_" data-uid="Kinstrife.Core.Interaction.Systems.InteractionSystem.DoRaycast(Vector3,Vector3)">DoRaycast(Vector3, Vector3)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void DoRaycast(Vector3 cameraCenter, Vector3 forward)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">Vector3</span></td>
-        <td><span class="parametername">cameraCenter</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><span class="xref">Vector3</span></td>
-        <td><span class="parametername">forward</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="Kinstrife_Core_Interaction_Systems_InteractionSystem_Initialize_" data-uid="Kinstrife.Core.Interaction.Systems.InteractionSystem.Initialize*"></a>
-  <h4 id="Kinstrife_Core_Interaction_Systems_InteractionSystem_Initialize" data-uid="Kinstrife.Core.Interaction.Systems.InteractionSystem.Initialize">Initialize()</h4>
+  <a id="Kinstrife_Core_Camera_Systems_CameraInputSystem_Initialize_" data-uid="Kinstrife.Core.Camera.Systems.CameraInputSystem.Initialize*"></a>
+  <h4 id="Kinstrife_Core_Camera_Systems_CameraInputSystem_Initialize" data-uid="Kinstrife.Core.Camera.Systems.CameraInputSystem.Initialize">Initialize()</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -165,13 +135,13 @@
   </div>
   
   
-  <a id="Kinstrife_Core_Interaction_Systems_InteractionSystem_Inject_" data-uid="Kinstrife.Core.Interaction.Systems.InteractionSystem.Inject*"></a>
-  <h4 id="Kinstrife_Core_Interaction_Systems_InteractionSystem_Inject_Kinstrife_Core_Interaction_InteractionConfig_Kinstrife_Messaging_ISubscriber_Kinstrife_Core_Input_InputFocusState__" data-uid="Kinstrife.Core.Interaction.Systems.InteractionSystem.Inject(Kinstrife.Core.Interaction.InteractionConfig,Kinstrife.Messaging.ISubscriber{Kinstrife.Core.Input.InputFocusState})">Inject(InteractionConfig, ISubscriber&lt;InputFocusState&gt;)</h4>
+  <a id="Kinstrife_Core_Camera_Systems_CameraInputSystem_Inject_" data-uid="Kinstrife.Core.Camera.Systems.CameraInputSystem.Inject*"></a>
+  <h4 id="Kinstrife_Core_Camera_Systems_CameraInputSystem_Inject_PlayerInput_Kinstrife_Messaging_ISubscriber_Kinstrife_Core_Input_ApplicationInputState__Kinstrife_Core_Input_KinstrifeInputActions_Kinstrife_Messaging_ISubscriber_Kinstrife_Core_Camera_CameraState__Kinstrife_Messaging_ISubscriber_Kinstrife_Core_Input_InputFocusState__" data-uid="Kinstrife.Core.Camera.Systems.CameraInputSystem.Inject(PlayerInput,Kinstrife.Messaging.ISubscriber{Kinstrife.Core.Input.ApplicationInputState},Kinstrife.Core.Input.KinstrifeInputActions,Kinstrife.Messaging.ISubscriber{Kinstrife.Core.Camera.CameraState},Kinstrife.Messaging.ISubscriber{Kinstrife.Core.Input.InputFocusState})">Inject(PlayerInput, ISubscriber&lt;ApplicationInputState&gt;, KinstrifeInputActions, ISubscriber&lt;CameraState&gt;, ISubscriber&lt;InputFocusState&gt;)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void Inject(InteractionConfig config, ISubscriber&lt;InputFocusState&gt; inputFocusSubscriber)</code></pre>
+    <pre><code class="lang-csharp hljs">public void Inject(PlayerInput playerInput, ISubscriber&lt;ApplicationInputState&gt; inputSubscriber, KinstrifeInputActions inputActions, ISubscriber&lt;CameraState&gt; camStateSubscriber, ISubscriber&lt;InputFocusState&gt; inputFocusSubscriber)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -184,8 +154,23 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="Kinstrife.Core.Interaction.InteractionConfig.html">InteractionConfig</a></td>
-        <td><span class="parametername">config</span></td>
+        <td><span class="xref">PlayerInput</span></td>
+        <td><span class="parametername">playerInput</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Kinstrife.Messaging.ISubscriber-1.html">ISubscriber</a>&lt;<a class="xref" href="Kinstrife.Core.Input.ApplicationInputState.html">ApplicationInputState</a>&gt;</td>
+        <td><span class="parametername">inputSubscriber</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Kinstrife.Core.Input.KinstrifeInputActions.html">KinstrifeInputActions</a></td>
+        <td><span class="parametername">inputActions</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Kinstrife.Messaging.ISubscriber-1.html">ISubscriber</a>&lt;<a class="xref" href="Kinstrife.Core.Camera.CameraState.html">CameraState</a>&gt;</td>
+        <td><span class="parametername">camStateSubscriber</span></td>
         <td></td>
       </tr>
       <tr>
@@ -197,8 +182,8 @@
   </table>
   
   
-  <a id="Kinstrife_Core_Interaction_Systems_InteractionSystem_OnUpdate_" data-uid="Kinstrife.Core.Interaction.Systems.InteractionSystem.OnUpdate*"></a>
-  <h4 id="Kinstrife_Core_Interaction_Systems_InteractionSystem_OnUpdate" data-uid="Kinstrife.Core.Interaction.Systems.InteractionSystem.OnUpdate">OnUpdate()</h4>
+  <a id="Kinstrife_Core_Camera_Systems_CameraInputSystem_OnUpdate_" data-uid="Kinstrife.Core.Camera.Systems.CameraInputSystem.OnUpdate*"></a>
+  <h4 id="Kinstrife_Core_Camera_Systems_CameraInputSystem_OnUpdate" data-uid="Kinstrife.Core.Camera.Systems.CameraInputSystem.OnUpdate">OnUpdate()</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
