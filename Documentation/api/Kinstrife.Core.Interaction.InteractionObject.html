@@ -80,11 +80,461 @@
     <div class="level0"><span class="xref">System.Object</span></div>
     <div class="level1"><span class="xref">InteractionObject</span></div>
   </div>
+  <div classs="implements">
+    <h5>Implements</h5>
+    <div><a class="xref" href="Kinstrife.Core.DependencyInjection.IInitializable.html">IInitializable</a></div>
+    <div><a class="xref" href="Kinstrife.Core.DependencyInjection.IDependent.html">IDependent</a></div>
+  </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Kinstrife.Core.Interaction.html">Kinstrife.Core.Interaction</a></h6>
   <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
   <h5 id="Kinstrife_Core_Interaction_InteractionObject_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class InteractionObject : ScriptableObject</code></pre>
+    <pre><code class="lang-csharp hljs">public class InteractionObject : MonoBehaviour, IInitializable, IDependent</code></pre>
+  </div>
+  <h3 id="fields">Fields
+  </h3>
+  
+  
+  <h4 id="Kinstrife_Core_Interaction_InteractionObject_onInteractCanceled" data-uid="Kinstrife.Core.Interaction.InteractionObject.onInteractCanceled">onInteractCanceled</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public UnityEvent onInteractCanceled</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">UnityEvent</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="Kinstrife_Core_Interaction_InteractionObject_onInteractComplete" data-uid="Kinstrife.Core.Interaction.InteractionObject.onInteractComplete">onInteractComplete</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public UnityEvent onInteractComplete</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">UnityEvent</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="Kinstrife_Core_Interaction_InteractionObject_onInteractEnter" data-uid="Kinstrife.Core.Interaction.InteractionObject.onInteractEnter">onInteractEnter</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public UnityEvent onInteractEnter</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">UnityEvent</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="Kinstrife_Core_Interaction_InteractionObject_onInteractExit" data-uid="Kinstrife.Core.Interaction.InteractionObject.onInteractExit">onInteractExit</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public UnityEvent onInteractExit</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">UnityEvent</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="Kinstrife_Core_Interaction_InteractionObject_onInteractPerformed" data-uid="Kinstrife.Core.Interaction.InteractionObject.onInteractPerformed">onInteractPerformed</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public UnityEvent onInteractPerformed</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">UnityEvent</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="properties">Properties
+  </h3>
+  
+  
+  <a id="Kinstrife_Core_Interaction_InteractionObject_Action_" data-uid="Kinstrife.Core.Interaction.InteractionObject.Action*"></a>
+  <h4 id="Kinstrife_Core_Interaction_InteractionObject_Action" data-uid="Kinstrife.Core.Interaction.InteractionObject.Action">Action</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public InteractionAction Action { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Kinstrife.Core.Interaction.InteractionAction.html">InteractionAction</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Kinstrife_Core_Interaction_InteractionObject_CanInteract_" data-uid="Kinstrife.Core.Interaction.InteractionObject.CanInteract*"></a>
+  <h4 id="Kinstrife_Core_Interaction_InteractionObject_CanInteract" data-uid="Kinstrife.Core.Interaction.InteractionObject.CanInteract">CanInteract</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool CanInteract { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Kinstrife_Core_Interaction_InteractionObject_ColorFromSetting_" data-uid="Kinstrife.Core.Interaction.InteractionObject.ColorFromSetting*"></a>
+  <h4 id="Kinstrife_Core_Interaction_InteractionObject_ColorFromSetting" data-uid="Kinstrife.Core.Interaction.InteractionObject.ColorFromSetting">ColorFromSetting</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool ColorFromSetting { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Kinstrife_Core_Interaction_InteractionObject_Initialized_" data-uid="Kinstrife.Core.Interaction.InteractionObject.Initialized*"></a>
+  <h4 id="Kinstrife_Core_Interaction_InteractionObject_Initialized" data-uid="Kinstrife.Core.Interaction.InteractionObject.Initialized">Initialized</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool Initialized { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Kinstrife_Core_Interaction_InteractionObject_IsActive_" data-uid="Kinstrife.Core.Interaction.InteractionObject.IsActive*"></a>
+  <h4 id="Kinstrife_Core_Interaction_InteractionObject_IsActive" data-uid="Kinstrife.Core.Interaction.InteractionObject.IsActive">IsActive</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsActive { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Kinstrife_Core_Interaction_InteractionObject_IsInteracting_" data-uid="Kinstrife.Core.Interaction.InteractionObject.IsInteracting*"></a>
+  <h4 id="Kinstrife_Core_Interaction_InteractionObject_IsInteracting" data-uid="Kinstrife.Core.Interaction.InteractionObject.IsInteracting">IsInteracting</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsInteracting { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Kinstrife_Core_Interaction_InteractionObject_Settings_" data-uid="Kinstrife.Core.Interaction.InteractionObject.Settings*"></a>
+  <h4 id="Kinstrife_Core_Interaction_InteractionObject_Settings" data-uid="Kinstrife.Core.Interaction.InteractionObject.Settings">Settings</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public InteractionSetting Settings { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Kinstrife.Core.Interaction.InteractionSetting.html">InteractionSetting</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Kinstrife_Core_Interaction_InteractionObject_Tooltip_" data-uid="Kinstrife.Core.Interaction.InteractionObject.Tooltip*"></a>
+  <h4 id="Kinstrife_Core_Interaction_InteractionObject_Tooltip" data-uid="Kinstrife.Core.Interaction.InteractionObject.Tooltip">Tooltip</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string Tooltip { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  
+  
+  <a id="Kinstrife_Core_Interaction_InteractionObject_CancelInteraction_" data-uid="Kinstrife.Core.Interaction.InteractionObject.CancelInteraction*"></a>
+  <h4 id="Kinstrife_Core_Interaction_InteractionObject_CancelInteraction" data-uid="Kinstrife.Core.Interaction.InteractionObject.CancelInteraction">CancelInteraction()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void CancelInteraction()</code></pre>
+  </div>
+  
+  
+  <a id="Kinstrife_Core_Interaction_InteractionObject_CompleteInteraction_" data-uid="Kinstrife.Core.Interaction.InteractionObject.CompleteInteraction*"></a>
+  <h4 id="Kinstrife_Core_Interaction_InteractionObject_CompleteInteraction" data-uid="Kinstrife.Core.Interaction.InteractionObject.CompleteInteraction">CompleteInteraction()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void CompleteInteraction()</code></pre>
+  </div>
+  
+  
+  <a id="Kinstrife_Core_Interaction_InteractionObject_GetDescription_" data-uid="Kinstrife.Core.Interaction.InteractionObject.GetDescription*"></a>
+  <h4 id="Kinstrife_Core_Interaction_InteractionObject_GetDescription" data-uid="Kinstrife.Core.Interaction.InteractionObject.GetDescription">GetDescription()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string GetDescription()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Kinstrife_Core_Interaction_InteractionObject_Initialize_" data-uid="Kinstrife.Core.Interaction.InteractionObject.Initialize*"></a>
+  <h4 id="Kinstrife_Core_Interaction_InteractionObject_Initialize" data-uid="Kinstrife.Core.Interaction.InteractionObject.Initialize">Initialize()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Initialize()</code></pre>
+  </div>
+  
+  
+  <a id="Kinstrife_Core_Interaction_InteractionObject_OnInteractEnter_" data-uid="Kinstrife.Core.Interaction.InteractionObject.OnInteractEnter*"></a>
+  <h4 id="Kinstrife_Core_Interaction_InteractionObject_OnInteractEnter" data-uid="Kinstrife.Core.Interaction.InteractionObject.OnInteractEnter">OnInteractEnter()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void OnInteractEnter()</code></pre>
+  </div>
+  
+  
+  <a id="Kinstrife_Core_Interaction_InteractionObject_OnInteractExit_" data-uid="Kinstrife.Core.Interaction.InteractionObject.OnInteractExit*"></a>
+  <h4 id="Kinstrife_Core_Interaction_InteractionObject_OnInteractExit" data-uid="Kinstrife.Core.Interaction.InteractionObject.OnInteractExit">OnInteractExit()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void OnInteractExit()</code></pre>
+  </div>
+  
+  
+  <a id="Kinstrife_Core_Interaction_InteractionObject_SetActive_" data-uid="Kinstrife.Core.Interaction.InteractionObject.SetActive*"></a>
+  <h4 id="Kinstrife_Core_Interaction_InteractionObject_SetActive_System_Boolean_" data-uid="Kinstrife.Core.Interaction.InteractionObject.SetActive(System.Boolean)">SetActive(Boolean)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetActive(bool value)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">value</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Kinstrife_Core_Interaction_InteractionObject_StartInteraction_" data-uid="Kinstrife.Core.Interaction.InteractionObject.StartInteraction*"></a>
+  <h4 id="Kinstrife_Core_Interaction_InteractionObject_StartInteraction" data-uid="Kinstrife.Core.Interaction.InteractionObject.StartInteraction">StartInteraction()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void StartInteraction()</code></pre>
+  </div>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <a class="xref" href="Kinstrife.Core.DependencyInjection.IInitializable.html">IInitializable</a>
+  </div>
+  <div>
+      <a class="xref" href="Kinstrife.Core.DependencyInjection.IDependent.html">IDependent</a>
   </div>
 </article>
           </div>

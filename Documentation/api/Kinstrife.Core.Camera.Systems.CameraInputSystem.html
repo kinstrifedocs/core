@@ -87,12 +87,13 @@ using inputs from Application Focus State (which it subscribes to)  ///</p>
     <div><a class="xref" href="Kinstrife.Core.DependencyInjection.IInjectable.html">IInjectable</a></div>
     <div><a class="xref" href="Kinstrife.Core.DependencyInjection.IInitializable.html">IInitializable</a></div>
     <div><a class="xref" href="Kinstrife.Core.DependencyInjection.IDependent.html">IDependent</a></div>
+    <div><a class="xref" href="Kinstrife.Core.Input.IInputHandler.html">IInputHandler</a></div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Kinstrife.Core.Camera.Systems.html">Kinstrife.Core.Camera.Systems</a></h6>
   <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
   <h5 id="Kinstrife_Core_Camera_Systems_CameraInputSystem_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class CameraInputSystem : ComponentSystem, IInjectable, IInitializable, IDependent</code></pre>
+    <pre><code class="lang-csharp hljs">public class CameraInputSystem : ComponentSystem, IInjectable, IInitializable, IDependent, IInputHandler</code></pre>
   </div>
   <h3 id="properties">Properties
   </h3>
@@ -123,6 +124,51 @@ using inputs from Application Focus State (which it subscribes to)  ///</p>
   </table>
   <h3 id="methods">Methods
   </h3>
+  
+  
+  <a id="Kinstrife_Core_Camera_Systems_CameraInputSystem_DisableInput_" data-uid="Kinstrife.Core.Camera.Systems.CameraInputSystem.DisableInput*"></a>
+  <h4 id="Kinstrife_Core_Camera_Systems_CameraInputSystem_DisableInput" data-uid="Kinstrife.Core.Camera.Systems.CameraInputSystem.DisableInput">DisableInput()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void DisableInput()</code></pre>
+  </div>
+  
+  
+  <a id="Kinstrife_Core_Camera_Systems_CameraInputSystem_EnableInput_" data-uid="Kinstrife.Core.Camera.Systems.CameraInputSystem.EnableInput*"></a>
+  <h4 id="Kinstrife_Core_Camera_Systems_CameraInputSystem_EnableInput" data-uid="Kinstrife.Core.Camera.Systems.CameraInputSystem.EnableInput">EnableInput()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void EnableInput()</code></pre>
+  </div>
+  
+  
+  <a id="Kinstrife_Core_Camera_Systems_CameraInputSystem_GetInput_" data-uid="Kinstrife.Core.Camera.Systems.CameraInputSystem.GetInput*"></a>
+  <h4 id="Kinstrife_Core_Camera_Systems_CameraInputSystem_GetInput" data-uid="Kinstrife.Core.Camera.Systems.CameraInputSystem.GetInput">GetInput()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IInputState GetInput()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Kinstrife.Core.Input.IInputState.html">IInputState</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   
   
   <a id="Kinstrife_Core_Camera_Systems_CameraInputSystem_Initialize_" data-uid="Kinstrife.Core.Camera.Systems.CameraInputSystem.Initialize*"></a>
@@ -199,6 +245,9 @@ using inputs from Application Focus State (which it subscribes to)  ///</p>
   </div>
   <div>
       <a class="xref" href="Kinstrife.Core.DependencyInjection.IDependent.html">IDependent</a>
+  </div>
+  <div>
+      <a class="xref" href="Kinstrife.Core.Input.IInputHandler.html">IInputHandler</a>
   </div>
 </article>
           </div>

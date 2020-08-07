@@ -1,0 +1,350 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class InputFocusDirector
+   | Kinstrife </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class InputFocusDirector
+   | Kinstrife ">
+    <meta name="generator" content="docfx 2.56.2.0">
+    
+    <link rel="shortcut icon" href="../../favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet"> 
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../index.html">
+                <img id="logo" class="svg" src="../../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Kinstrife.Core.Input.InputFocusDirector">
+  
+  
+  <h1 id="Kinstrife_Core_Input_InputFocusDirector" data-uid="Kinstrife.Core.Input.InputFocusDirector" class="text-break">Class InputFocusDirector
+  </h1>
+  <div class="markdown level0 summary"><p>Input focus controller settings for current Mode</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><a class="xref" href="Kinstrife.Messaging.PublisherBehaviour-1.html">PublisherBehaviour</a>&lt;<a class="xref" href="Kinstrife.Core.Input.InputFocusState.html">InputFocusState</a>&gt;</div>
+    <div class="level2"><a class="xref" href="Kinstrife.Messaging.Stateflow.StatePublisherBehaviour-1.html">StatePublisherBehaviour</a>&lt;<a class="xref" href="Kinstrife.Core.Input.InputFocusState.html">InputFocusState</a>&gt;</div>
+    <div class="level3"><span class="xref">InputFocusDirector</span></div>
+  </div>
+  <div classs="implements">
+    <h5>Implements</h5>
+    <div><a class="xref" href="Kinstrife.Core.DependencyInjection.IInjectable.html">IInjectable</a></div>
+    <div><a class="xref" href="Kinstrife.Core.DependencyInjection.IInitializable.html">IInitializable</a></div>
+    <div><a class="xref" href="Kinstrife.Core.DependencyInjection.IDependent.html">IDependent</a></div>
+    <div><a class="xref" href="Kinstrife.Core.Input.IInputHandler.html">IInputHandler</a></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="Kinstrife.Messaging.Stateflow.StatePublisherBehaviour-1.html#Kinstrife_Messaging_Stateflow_StatePublisherBehaviour_1_graph">StatePublisherBehaviour&lt;InputFocusState&gt;.graph</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.Messaging.Stateflow.StatePublisherBehaviour-1.html#Kinstrife_Messaging_Stateflow_StatePublisherBehaviour_1_Inject_Kinstrife_Messaging_IPublisher__0__Kinstrife_StateFlow_FlowgraphBase_">StatePublisherBehaviour&lt;InputFocusState&gt;.Inject(IPublisher&lt;InputFocusState&gt;, FlowgraphBase)</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.Messaging.PublisherBehaviour-1.html#Kinstrife_Messaging_PublisherBehaviour_1_channelDescriptor">PublisherBehaviour&lt;InputFocusState&gt;.channelDescriptor</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.Messaging.PublisherBehaviour-1.html#Kinstrife_Messaging_PublisherBehaviour_1_Inject_Kinstrife_Messaging_IPublisher__0__">PublisherBehaviour&lt;InputFocusState&gt;.Inject(IPublisher&lt;InputFocusState&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.Messaging.PublisherBehaviour-1.html#Kinstrife_Messaging_PublisherBehaviour_1_Initialized">PublisherBehaviour&lt;InputFocusState&gt;.Initialized</a>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Kinstrife.Core.Input.html">Kinstrife.Core.Input</a></h6>
+  <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
+  <h5 id="Kinstrife_Core_Input_InputFocusDirector_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class InputFocusDirector : StatePublisherBehaviour&lt;InputFocusState&gt;, IInjectable, IInitializable, IDependent, IInputHandler</code></pre>
+  </div>
+  <h3 id="constructors">Constructors
+  </h3>
+  
+  
+  <a id="Kinstrife_Core_Input_InputFocusDirector__ctor_" data-uid="Kinstrife.Core.Input.InputFocusDirector.#ctor*"></a>
+  <h4 id="Kinstrife_Core_Input_InputFocusDirector__ctor" data-uid="Kinstrife.Core.Input.InputFocusDirector.#ctor">InputFocusDirector()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public InputFocusDirector()</code></pre>
+  </div>
+  <h3 id="properties">Properties
+  </h3>
+  
+  
+  <a id="Kinstrife_Core_Input_InputFocusDirector_ActiveFocusState_" data-uid="Kinstrife.Core.Input.InputFocusDirector.ActiveFocusState*"></a>
+  <h4 id="Kinstrife_Core_Input_InputFocusDirector_ActiveFocusState" data-uid="Kinstrife.Core.Input.InputFocusDirector.ActiveFocusState">ActiveFocusState</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public InputFocusState ActiveFocusState { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Kinstrife.Core.Input.InputFocusState.html">InputFocusState</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  
+  
+  <a id="Kinstrife_Core_Input_InputFocusDirector_DisableInput_" data-uid="Kinstrife.Core.Input.InputFocusDirector.DisableInput*"></a>
+  <h4 id="Kinstrife_Core_Input_InputFocusDirector_DisableInput" data-uid="Kinstrife.Core.Input.InputFocusDirector.DisableInput">DisableInput()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void DisableInput()</code></pre>
+  </div>
+  
+  
+  <a id="Kinstrife_Core_Input_InputFocusDirector_EnableInput_" data-uid="Kinstrife.Core.Input.InputFocusDirector.EnableInput*"></a>
+  <h4 id="Kinstrife_Core_Input_InputFocusDirector_EnableInput" data-uid="Kinstrife.Core.Input.InputFocusDirector.EnableInput">EnableInput()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void EnableInput()</code></pre>
+  </div>
+  
+  
+  <a id="Kinstrife_Core_Input_InputFocusDirector_Initialize_" data-uid="Kinstrife.Core.Input.InputFocusDirector.Initialize*"></a>
+  <h4 id="Kinstrife_Core_Input_InputFocusDirector_Initialize" data-uid="Kinstrife.Core.Input.InputFocusDirector.Initialize">Initialize()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override void Initialize()</code></pre>
+  </div>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">Kinstrife.Messaging.Stateflow.StatePublisherBehaviour&lt;Kinstrife.Core.Input.InputFocusState&gt;.Initialize()</span></div>
+  
+  
+  <a id="Kinstrife_Core_Input_InputFocusDirector_Inject_" data-uid="Kinstrife.Core.Input.InputFocusDirector.Inject*"></a>
+  <h4 id="Kinstrife_Core_Input_InputFocusDirector_Inject_Kinstrife_Messaging_ISubscriber_Kinstrife_Core_Input_InputFocusState__Kinstrife_Messaging_IPublisher_Kinstrife_Core_Input_InputFocusState__Kinstrife_StateFlow_FlowgraphBase_Kinstrife_Core_Input_KinstrifeInputActions_" data-uid="Kinstrife.Core.Input.InputFocusDirector.Inject(Kinstrife.Messaging.ISubscriber{Kinstrife.Core.Input.InputFocusState},Kinstrife.Messaging.IPublisher{Kinstrife.Core.Input.InputFocusState},Kinstrife.StateFlow.FlowgraphBase,Kinstrife.Core.Input.KinstrifeInputActions)">Inject(ISubscriber&lt;InputFocusState&gt;, IPublisher&lt;InputFocusState&gt;, FlowgraphBase, KinstrifeInputActions)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Inject(ISubscriber&lt;InputFocusState&gt; subscriber, IPublisher&lt;InputFocusState&gt; publisher, FlowgraphBase flowGraph, KinstrifeInputActions inputActions)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Kinstrife.Messaging.ISubscriber-1.html">ISubscriber</a>&lt;<a class="xref" href="Kinstrife.Core.Input.InputFocusState.html">InputFocusState</a>&gt;</td>
+        <td><span class="parametername">subscriber</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Kinstrife.Messaging.IPublisher-1.html">IPublisher</a>&lt;<a class="xref" href="Kinstrife.Core.Input.InputFocusState.html">InputFocusState</a>&gt;</td>
+        <td><span class="parametername">publisher</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Kinstrife.StateFlow.FlowgraphBase.html">FlowgraphBase</a></td>
+        <td><span class="parametername">flowGraph</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Kinstrife.Core.Input.KinstrifeInputActions.html">KinstrifeInputActions</a></td>
+        <td><span class="parametername">inputActions</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Kinstrife_Core_Input_InputFocusDirector_OnDestroy_" data-uid="Kinstrife.Core.Input.InputFocusDirector.OnDestroy*"></a>
+  <h4 id="Kinstrife_Core_Input_InputFocusDirector_OnDestroy" data-uid="Kinstrife.Core.Input.InputFocusDirector.OnDestroy">OnDestroy()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override void OnDestroy()</code></pre>
+  </div>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">Kinstrife.Messaging.Stateflow.StatePublisherBehaviour&lt;Kinstrife.Core.Input.InputFocusState&gt;.OnDestroy()</span></div>
+  
+  
+  <a id="Kinstrife_Core_Input_InputFocusDirector_OnEnteringState_" data-uid="Kinstrife.Core.Input.InputFocusDirector.OnEnteringState*"></a>
+  <h4 id="Kinstrife_Core_Input_InputFocusDirector_OnEnteringState_Kinstrife_StateFlow_IFlowState_" data-uid="Kinstrife.Core.Input.InputFocusDirector.OnEnteringState(Kinstrife.StateFlow.IFlowState)">OnEnteringState(IFlowState)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override void OnEnteringState(IFlowState state)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Kinstrife.StateFlow.IFlowState.html">IFlowState</a></td>
+        <td><span class="parametername">state</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">Kinstrife.Messaging.Stateflow.StatePublisherBehaviour&lt;Kinstrife.Core.Input.InputFocusState&gt;.OnEnteringState(Kinstrife.StateFlow.IFlowState)</span></div>
+  
+  
+  <a id="Kinstrife_Core_Input_InputFocusDirector_Publish_" data-uid="Kinstrife.Core.Input.InputFocusDirector.Publish*"></a>
+  <h4 id="Kinstrife_Core_Input_InputFocusDirector_Publish_Kinstrife_Core_Input_InputFocusState_" data-uid="Kinstrife.Core.Input.InputFocusDirector.Publish(Kinstrife.Core.Input.InputFocusState)">Publish(InputFocusState)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override void Publish(InputFocusState message)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Kinstrife.Core.Input.InputFocusState.html">InputFocusState</a></td>
+        <td><span class="parametername">message</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">Kinstrife.Messaging.PublisherBehaviour&lt;Kinstrife.Core.Input.InputFocusState&gt;.Publish(Kinstrife.Core.Input.InputFocusState)</span></div>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <a class="xref" href="Kinstrife.Core.DependencyInjection.IInjectable.html">IInjectable</a>
+  </div>
+  <div>
+      <a class="xref" href="Kinstrife.Core.DependencyInjection.IInitializable.html">IInitializable</a>
+  </div>
+  <div>
+      <a class="xref" href="Kinstrife.Core.DependencyInjection.IDependent.html">IDependent</a>
+  </div>
+  <div>
+      <a class="xref" href="Kinstrife.Core.Input.IInputHandler.html">IInputHandler</a>
+  </div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+  </body>
+</html>
