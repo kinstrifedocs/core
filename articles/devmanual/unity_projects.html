@@ -73,10 +73,10 @@
 <p>Rather than having a single (huge) Unity project for all of our development, our <strong>package-based</strong> setup allows us to have various projects with shared code and assets. Unity's editor slows down considerably with larger projects and in many cases, compile times are also longer - as a result, it is often preferable to develop in smaller (partial) projects.</p>
 <p>With our setup, <strong>projects by themselves do not contain any assets or scripts</strong>. Additionally, most project settings are symlinked to our Core project, located at <em>Core\Projects\KinstrifeCore</em>. The only relevant information in projects is the list of packages in their project manifest (located in the project's <em>Packages</em> folder). Projects of course have their library folder, which stores imported assets - as a result, it makes sense to have multiple projects around with readily imported assets, rather than using a single project while constantly swapping (and re-importing) packages.</p>
 <p>In short, Unity projects should generally be seen as <strong>workspaces</strong> rather than an all-encompassing sources of truth as in most other Unity development projects.</p>
-<p> </p>
+<hr>
 <h2 id="opening-projects">Opening projects</h2>
 <p>Projects can be opened via the Unity hub. All missing folders (which are ignored by git) will be automatically generated.</p>
-<p> </p>
+<hr>
 <h2 id="creating-projects">Creating projects</h2>
 <p>Create a new project as you regularly would via the Unity hub. After doing so, run the project setup wizard located at <em>Core\Projects\KinstrifeCore\SetupUnityProject.bat</em>, providing the path of the newly created package as input when prompted.</p>
 <p>Some settings will be replaced by symlinks to the KinstrifeCore project settings. This is the case e.g. with the TagManager.asset, to ensure that all projects use the same physics layer names and setup. The list of project settings to link is defined in <em>SetupSettingsToSymlink.txt</em> in the Core folder.</p>
