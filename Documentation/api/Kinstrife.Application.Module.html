@@ -148,30 +148,6 @@ e. g. for the actor module, where unneeded actors for the next mode/scene can be
   </table>
   
   
-  <h4 id="Kinstrife_Application_Module_locators" data-uid="Kinstrife.Application.Module.locators">locators</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public List&lt;ContextLocator&gt; locators</code></pre>
-  </div>
-  <h5 class="fieldValue">Field Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Collections.Generic.List</span>&lt;<span class="xref">ContextLocator</span>&gt;</td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
   <h4 id="Kinstrife_Application_Module_OnCreation" data-uid="Kinstrife.Application.Module.OnCreation">OnCreation</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
@@ -319,31 +295,6 @@ e. g. for the actor module, where unneeded actors for the next mode/scene can be
   </table>
   
   
-  <a id="Kinstrife_Application_Module_Locators_" data-uid="Kinstrife.Application.Module.Locators*"></a>
-  <h4 id="Kinstrife_Application_Module_Locators" data-uid="Kinstrife.Application.Module.Locators">Locators</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public IEnumerable&lt;ContextLocator&gt; Locators { get; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<span class="xref">ContextLocator</span>&gt;</td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
   <a id="Kinstrife_Application_Module_ModuleDefinition_" data-uid="Kinstrife.Application.Module.ModuleDefinition*"></a>
   <h4 id="Kinstrife_Application_Module_ModuleDefinition" data-uid="Kinstrife.Application.Module.ModuleDefinition">ModuleDefinition</h4>
   <div class="markdown level1 summary"></div>
@@ -421,16 +372,6 @@ e. g. for the actor module, where unneeded actors for the next mode/scene can be
       </tr>
     </tbody>
   </table>
-  
-  
-  <a id="Kinstrife_Application_Module_LocateDependentsInHierarchy_" data-uid="Kinstrife.Application.Module.LocateDependentsInHierarchy*"></a>
-  <h4 id="Kinstrife_Application_Module_LocateDependentsInHierarchy" data-uid="Kinstrife.Application.Module.LocateDependentsInHierarchy">LocateDependentsInHierarchy()</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void LocateDependentsInHierarchy()</code></pre>
-  </div>
   
   
   <a id="Kinstrife_Application_Module_MakePrimary_" data-uid="Kinstrife.Application.Module.MakePrimary*"></a>
@@ -674,12 +615,12 @@ up in its proper order to avoid setup dependency issues.</p>
   
   
   <a id="Kinstrife_Application_Module_TrySwitchGameMode_" data-uid="Kinstrife.Application.Module.TrySwitchGameMode*"></a>
-  <h4 id="Kinstrife_Application_Module_TrySwitchGameMode_Kinstrife_Application_GameMode_" data-uid="Kinstrife.Application.Module.TrySwitchGameMode(Kinstrife.Application.GameMode)">TrySwitchGameMode(GameMode)</h4>
+  <h4 id="Kinstrife_Application_Module_TrySwitchGameMode_Kinstrife_Application_GameMode_System_Boolean_" data-uid="Kinstrife.Application.Module.TrySwitchGameMode(Kinstrife.Application.GameMode,System.Boolean)">TrySwitchGameMode(GameMode, Boolean)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void TrySwitchGameMode(GameMode gameMode)</code></pre>
+    <pre><code class="lang-csharp hljs">public void TrySwitchGameMode(GameMode gameMode, bool resetCurrent = false)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -694,6 +635,11 @@ up in its proper order to avoid setup dependency issues.</p>
       <tr>
         <td><a class="xref" href="Kinstrife.Application.GameMode.html">GameMode</a></td>
         <td><span class="parametername">gameMode</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">resetCurrent</span></td>
         <td></td>
       </tr>
     </tbody>

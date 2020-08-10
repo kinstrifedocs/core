@@ -134,12 +134,12 @@
   
   
   <a id="Kinstrife_Core_Camera_Systems_CameraPriorityActivationSystem_Inject_" data-uid="Kinstrife.Core.Camera.Systems.CameraPriorityActivationSystem.Inject*"></a>
-  <h4 id="Kinstrife_Core_Camera_Systems_CameraPriorityActivationSystem_Inject_Kinstrife_Core_Camera_CameraConfig_Cinemachine_CinemachineBrain_" data-uid="Kinstrife.Core.Camera.Systems.CameraPriorityActivationSystem.Inject(Kinstrife.Core.Camera.CameraConfig,Cinemachine.CinemachineBrain)">Inject(CameraConfig, Cinemachine.CinemachineBrain)</h4>
+  <h4 id="Kinstrife_Core_Camera_Systems_CameraPriorityActivationSystem_Inject_Kinstrife_Core_Camera_CameraConfig_Kinstrife_Core_Camera_CameraRig_" data-uid="Kinstrife.Core.Camera.Systems.CameraPriorityActivationSystem.Inject(Kinstrife.Core.Camera.CameraConfig,Kinstrife.Core.Camera.CameraRig)">Inject(CameraConfig, CameraRig)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void Inject(CameraConfig config, Cinemachine.CinemachineBrain brain)</code></pre>
+    <pre><code class="lang-csharp hljs">public void Inject(CameraConfig config, CameraRig cameraRig)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -157,12 +157,22 @@
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">Cinemachine.CinemachineBrain</span></td>
-        <td><span class="parametername">brain</span></td>
+        <td><a class="xref" href="Kinstrife.Core.Camera.CameraRig.html">CameraRig</a></td>
+        <td><span class="parametername">cameraRig</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
+  
+  
+  <a id="Kinstrife_Core_Camera_Systems_CameraPriorityActivationSystem_OnDestroy_" data-uid="Kinstrife.Core.Camera.Systems.CameraPriorityActivationSystem.OnDestroy*"></a>
+  <h4 id="Kinstrife_Core_Camera_Systems_CameraPriorityActivationSystem_OnDestroy" data-uid="Kinstrife.Core.Camera.Systems.CameraPriorityActivationSystem.OnDestroy">OnDestroy()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override void OnDestroy()</code></pre>
+  </div>
   
   
   <a id="Kinstrife_Core_Camera_Systems_CameraPriorityActivationSystem_OnUpdate_" data-uid="Kinstrife.Core.Camera.Systems.CameraPriorityActivationSystem.OnUpdate*"></a>
@@ -176,30 +186,13 @@
   
   
   <a id="Kinstrife_Core_Camera_Systems_CameraPriorityActivationSystem_UpdateActiveCameraTag_" data-uid="Kinstrife.Core.Camera.Systems.CameraPriorityActivationSystem.UpdateActiveCameraTag*"></a>
-  <h4 id="Kinstrife_Core_Camera_Systems_CameraPriorityActivationSystem_UpdateActiveCameraTag_Kinstrife_Core_Camera_CameraState_" data-uid="Kinstrife.Core.Camera.Systems.CameraPriorityActivationSystem.UpdateActiveCameraTag(Kinstrife.Core.Camera.CameraState)">UpdateActiveCameraTag(CameraState)</h4>
+  <h4 id="Kinstrife_Core_Camera_Systems_CameraPriorityActivationSystem_UpdateActiveCameraTag" data-uid="Kinstrife.Core.Camera.Systems.CameraPriorityActivationSystem.UpdateActiveCameraTag">UpdateActiveCameraTag()</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void UpdateActiveCameraTag(CameraState newState)</code></pre>
+    <pre><code class="lang-csharp hljs">public void UpdateActiveCameraTag()</code></pre>
   </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Kinstrife.Core.Camera.CameraState.html">CameraState</a></td>
-        <td><span class="parametername">newState</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
   <h3 id="implements">Implements</h3>
   <div>
       <a class="xref" href="Kinstrife.Core.DependencyInjection.IInjectable.html">IInjectable</a>
