@@ -69,14 +69,11 @@
             <article class="content wrap" id="_content" data-uid="">
 <h1 id="identification-and-guid">Identification and GUID</h1>
 
-<p>When serializing data (e.g. for storing it on a disk or sending it over a network) it can be convenient to be able to
-reference data objects indirectly via GUID. This is the case, for example, with database entries, which should not be
-saved directly, but instead should only have some sort of reference serialized into a savegame. In C#, this can be done
-nicely with the built-in <a href="https://docs.microsoft.com/en-us/dotnet/api/system.guid?view=netframework-4.8">GUID struct</a>.
-Unfortunately, Unity cannot serialize this struct and as a result, it cannot be nicely included/saved in e.g. ScriptableObjects.
-As a result, this package contains a custom GUID type which contains a regular System.Guid as well as a version that is
-serialized as a string (which <em>can</em> be serialized by Unity's serializer). For convenience's sake, there is also an
-IdentifiableObject type, which is a standard ScriptableObject with the sole addition of a Kinstrife Guid.</p>
+<blockquote>
+<p><code>&quot;com.kinstrife.core.identification&quot; : &quot;file:/GameDev/Core/Packages/Identification&quot;</code></p>
+</blockquote>
+<p>When serializing data (e.g. for storing it on a disk or sending it over a network) it can be convenient to be able to reference data objects indirectly via GUID. This is the case, for example, with database entries, which should not be saved directly, but instead should only have some sort of reference serialized into a savegame. In C#, this can be done nicely with the built-in <a href="https://docs.microsoft.com/en-us/dotnet/api/system.guid?view=netframework-4.8">GUID struct</a>.
+Unfortunately, Unity cannot serialize this struct and it cannot be nicely included/saved in e.g. ScriptableObjects. As a result, this package contains a custom GUID type which contains a regular System.Guid as well as a version that is serialized as a string (which <em>can</em> be serialized by Unity's serializer). For convenience's sake, there is also an IdentifiableObject type, which is a standard ScriptableObject with the sole addition of a Kinstrife Guid.</p>
 </article>
           </div>
           
