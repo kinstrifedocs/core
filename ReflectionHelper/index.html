@@ -72,8 +72,31 @@
 <blockquote>
 <p><code>&quot;com.kinstrife.core.reflection-helper&quot;: &quot;file:/GameDev/Core/Packages/ReflectionHelper&quot;</code></p>
 </blockquote>
-<p>TODO</p>
-</article>
+<p> </p>
+<p>Utilities for working with reflection, particularly for generic methods and attributes.</p>
+<p> </p>
+<h4 id="extended-type-info">Extended Type Info</h4>
+<p>The <code>ExtendedTypeInfo</code> class contains additional information about attributes assigned to the type and its members. It also allows for  optimized and convenient access to a type's fields and properties via a TypeAccessor. <code>ExtendedTypeInfo</code> for a type can be fetched from the static <code>TypeInfoCache</code>.</p>
+<p> </p>
+<h4 id="accessing-fields--properties">Accessing fields &amp; properties</h4>
+<p>Accessing fields &amp; properties for both reading and writing is simple:</p>
+<pre><code>:::csharp
+// Fetch the extended type info
+var typeInfo = TypeInfoCache.GetExtendedTypeInfo(typeof(Foo));
+
+// Retrieve a value from a field
+var myBar = (Foo)typeInfo.Accessor[referenceObject, &quot;bar&quot;];
+
+// Write a value
+referenceAttributeInfo.Accessor[referenceObject, &quot;baz&quot;] = myBaz;
+</code></pre>
+<h4 id="attribute-info">Attribute Info</h4>
+<p>You can also retrieve members of a type which are tagged with a specific attribute:</p>
+<pre><code class="lang-csharp" name="Main">List&lt;ValueWithAttribute&gt; result = new List&lt;ValueWithAttribute&gt;();
+TypeInfoCache.GetMemberValuesWithAttribute&lt;SomeAttributeAttribute&gt;(target, result);
+foreach (var entry in result)
+  Debug.Log($&quot;Member with value {entry.Value.ToString()} and attribute text: {((SomeAttributeAttribute)entry.Attribute).info}&quot;);
+</code></pre></article>
           </div>
           
           <div class="hidden-sm col-md-2" role="complementary">

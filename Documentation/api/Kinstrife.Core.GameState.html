@@ -78,19 +78,22 @@
     <h3 id="classes">Classes
   </h3>
       <h4><a class="xref" href="Kinstrife.Core.GameState.GameState.html">GameState</a></h4>
-      <section></section>
+      <section><p>Database storing GameState in singletons and components. Based on Unity's ECS. Only add entities, components and singletons via this interface, not directly through <a class="xref" href="Kinstrife.Core.GameState.GameState.html#Kinstrife_Core_GameState_GameState_EntityManager">EntityManager</a> or <a class="xref" href="Kinstrife.Core.GameState.GameState.html#Kinstrife_Core_GameState_GameState_WorldInstance">WorldInstance</a>!</p>
+</section>
       <h4><a class="xref" href="Kinstrife.Core.GameState.Reference-1.html">Reference&lt;T&gt;</a></h4>
-      <section></section>
+      <section><p>Instead of referencing database (<a class="xref" href="Kinstrife.Identifier.IdentifiableObject.html">IdentifiableObject</a>) and game state objects directly, instances of <a class="xref" href="Kinstrife.Core.GameState.IPersistentComponent.html">IPersistentComponent</a>
+should utilize this reference wrapper to ensure correct serialization/deserialization.</p>
+</section>
       <h4><a class="xref" href="Kinstrife.Core.GameState.Serialization.html">Serialization</a></h4>
       <section></section>
     <h3 id="interfaces">Interfaces
   </h3>
       <h4><a class="xref" href="Kinstrife.Core.GameState.IPersistentComponent.html">IPersistentComponent</a></h4>
-      <section></section>
-      <h4><a class="xref" href="Kinstrife.Core.GameState.IPersistentData.html">IPersistentData</a></h4>
-      <section></section>
+      <section><p>Component data with multiple instances in the game state, assignable to entities with a specific GUID.</p>
+</section>
       <h4><a class="xref" href="Kinstrife.Core.GameState.IPersistentSingletonData.html">IPersistentSingletonData</a></h4>
-      <section></section>
+      <section><p>Singleton which will be saved/persisten.t</p>
+</section>
 </article>
           </div>
           

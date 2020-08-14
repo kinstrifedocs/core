@@ -77,23 +77,29 @@
   <div class="markdown level0 remarks"></div>
     <h3 id="classes">Classes
   </h3>
-      <h4><a class="xref" href="Kinstrife.Core.ReflectionHelpers.AttributeInfoCache.html">AttributeInfoCache</a></h4>
-      <section></section>
+      <h4><a class="xref" href="Kinstrife.Core.ReflectionHelpers.ExtendedTypeInfo.html">ExtendedTypeInfo</a></h4>
+      <section><p>Contains additional utilities for a type, such as getting member values based on attributes and an optimized way to read/write to fields/properties.</p>
+</section>
       <h4><a class="xref" href="Kinstrife.Core.ReflectionHelpers.GenericMethodInfoHelper.html">GenericMethodInfoHelper</a></h4>
       <section><p>Help construct non-generic <span class="xref">System.Reflection.MethodInfo</span> from generic methods that can be used to invoke them.
 This is useful when a generic method needs to be invoked, but only a Type reference is available, not a Type symbol, as is often the case when using reflection.
 Only works for methods with a single generic type parameter.</p>
 </section>
       <h4><a class="xref" href="Kinstrife.Core.ReflectionHelpers.TypeAccessor.html">TypeAccessor</a></h4>
-      <section></section>
-      <h4><a class="xref" href="Kinstrife.Core.ReflectionHelpers.TypeAttributeInfo.html">TypeAttributeInfo</a></h4>
-      <section></section>
+      <section><p>Access fields and properties in an optimized manner. Utilizes <see cref="!:FastMember"></see> for properties,
+but as FastMember only supports properties, this wrapper is needed to also offer this functionality for fields.</p>
+</section>
       <h4><a class="xref" href="Kinstrife.Core.ReflectionHelpers.TypeHelpers.html">TypeHelpers</a></h4>
-      <section></section>
+      <section><p>Various utilities for using Types with reflection.</p>
+</section>
+      <h4><a class="xref" href="Kinstrife.Core.ReflectionHelpers.TypeInfoCache.html">TypeInfoCache</a></h4>
+      <section><p>Access extended type info such as attribute data and access instance members in an optimized manner.</p>
+</section>
     <h3 id="structs">Structs
   </h3>
       <h4><a class="xref" href="Kinstrife.Core.ReflectionHelpers.ValueWithAttribute.html">ValueWithAttribute</a></h4>
-      <section></section>
+      <section><p>Combination of a field/property value and an attribute instance that the field has been tagged with</p>
+</section>
 </article>
           </div>
           

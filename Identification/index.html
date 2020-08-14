@@ -72,8 +72,20 @@
 <blockquote>
 <p><code>&quot;com.kinstrife.core.identification&quot; : &quot;file:/GameDev/Core/Packages/Identification&quot;</code></p>
 </blockquote>
-<p>When serializing data (e.g. for storing it on a disk or sending it over a network) it can be convenient to be able to reference data objects indirectly via GUID. This is the case, for example, with database entries, which should not be saved directly, but instead should only have some sort of reference serialized into a savegame. In C#, this can be done nicely with the built-in <a href="https://docs.microsoft.com/en-us/dotnet/api/system.guid?view=netframework-4.8">GUID struct</a>.
-Unfortunately, Unity cannot serialize this struct and it cannot be nicely included/saved in e.g. ScriptableObjects. As a result, this package contains a custom GUID type which contains a regular System.Guid as well as a version that is serialized as a string (which <em>can</em> be serialized by Unity's serializer). For convenience's sake, there is also an IdentifiableObject type, which is a standard ScriptableObject with the sole addition of a Kinstrife Guid.</p>
+<p> </p>
+<h4 id="motivation">Motivation</h4>
+<p>When serializing data (e.g. for storing it on a disk or sending it over a network) it can be convenient to be able to reference data objects indirectly via an identifier. This is the case, for example, with database entries, which should not be saved directly, but instead should only have some sort of reference serialized into a savegame.</p>
+<p> </p>
+<h4 id="guid">GUID</h4>
+<p>C# has a very nice built-in identifier: the <a href="https://docs.microsoft.com/en-us/dotnet/api/system.guid?view=netframework-4.8">GUID struct</a>.
+Unfortunately, Unity cannot serialize this struct and it cannot be nicely included/saved in e.g. ScriptableObjects. As a result, this package contains a custom GUID type which contains a regular System.Guid as well as a version that is serialized as a string (which <em>can</em> be serialized by Unity's serializer).</p>
+<h4 id="built-ins">Built-ins</h4>
+<p>For convenience's sake, there are some pre-made identifiable classes:</p>
+<ul>
+<li><code>IdentifiableObject</code>, a standard <code>ScriptableObject</code> except with a Kinstrife Guid</li>
+<li><code>IdentifiableBehaviour</code>, just as above, except as a <code>MonoBehaviour</code></li>
+<li><code>IIdentifiable</code>, requiring the type to publically return a <code>System.Guid</code></li>
+</ul>
 </article>
           </div>
           

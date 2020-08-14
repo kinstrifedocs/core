@@ -73,12 +73,17 @@
   
   <h1 id="Kinstrife_Core_GameState_GameState" data-uid="Kinstrife.Core.GameState.GameState" class="text-break">Class GameState
   </h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><p>Database storing GameState in singletons and components. Based on Unity's ECS. Only add entities, components and singletons via this interface, not directly through <a class="xref" href="Kinstrife.Core.GameState.GameState.html#Kinstrife_Core_GameState_GameState_EntityManager">EntityManager</a> or <a class="xref" href="Kinstrife.Core.GameState.GameState.html#Kinstrife_Core_GameState_GameState_WorldInstance">WorldInstance</a>!</p>
+</div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
     <div class="level1"><span class="xref">GameState</span></div>
+  </div>
+  <div classs="implements">
+    <h5>Implements</h5>
+    <div><span class="xref">System.IDisposable</span></div>
   </div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
@@ -108,7 +113,7 @@
   <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
   <h5 id="Kinstrife_Core_GameState_GameState_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class GameState</code></pre>
+    <pre><code class="lang-csharp hljs">public class GameState : IDisposable</code></pre>
   </div>
   <h3 id="constructors">Constructors
   </h3>
@@ -125,12 +130,12 @@
   
   
   <a id="Kinstrife_Core_GameState_GameState__ctor_" data-uid="Kinstrife.Core.GameState.GameState.#ctor*"></a>
-  <h4 id="Kinstrife_Core_GameState_GameState__ctor_System_Byte___" data-uid="Kinstrife.Core.GameState.GameState.#ctor(System.Byte[])">GameState(Byte[])</h4>
+  <h4 id="Kinstrife_Core_GameState_GameState__ctor_System_Byte___Kinstrife_Database_DatabaseAccessor_" data-uid="Kinstrife.Core.GameState.GameState.#ctor(System.Byte[],Kinstrife.Database.DatabaseAccessor)">GameState(Byte[], DatabaseAccessor)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public GameState(byte[] serializedData)</code></pre>
+    <pre><code class="lang-csharp hljs">public GameState(byte[] serializedData, DatabaseAccessor databaseAccessor)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -147,6 +152,11 @@
         <td><span class="parametername">serializedData</span></td>
         <td></td>
       </tr>
+      <tr>
+        <td><a class="xref" href="Kinstrife.Database.DatabaseAccessor.html">DatabaseAccessor</a></td>
+        <td><span class="parametername">databaseAccessor</span></td>
+        <td></td>
+      </tr>
     </tbody>
   </table>
   <h3 id="properties">Properties
@@ -155,7 +165,8 @@
   
   <a id="Kinstrife_Core_GameState_GameState_EntityManager_" data-uid="Kinstrife.Core.GameState.GameState.EntityManager*"></a>
   <h4 id="Kinstrife_Core_GameState_GameState_EntityManager" data-uid="Kinstrife.Core.GameState.GameState.EntityManager">EntityManager</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>GameState's entity manager. Only use this for entity queries, not for adding/removing components and/or entities!</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -180,11 +191,13 @@
   
   <a id="Kinstrife_Core_GameState_GameState_WorldInstance_" data-uid="Kinstrife.Core.GameState.GameState.WorldInstance*"></a>
   <h4 id="Kinstrife_Core_GameState_GameState_WorldInstance" data-uid="Kinstrife.Core.GameState.GameState.WorldInstance">WorldInstance</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>This GameState's ECS world. Only use this if you have a really good reason to do so.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public World WorldInstance { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">[Obsolete(&quot;Only use this if you absolutely have to!&quot;)]
+public World WorldInstance { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -313,7 +326,8 @@
   
   <a id="Kinstrife_Core_GameState_GameState_CreateEntity_" data-uid="Kinstrife.Core.GameState.GameState.CreateEntity*"></a>
   <h4 id="Kinstrife_Core_GameState_GameState_CreateEntity" data-uid="Kinstrife.Core.GameState.GameState.CreateEntity">CreateEntity()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Create persistent entity that will be serialized with GameState-</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -330,47 +344,11 @@
     <tbody>
       <tr>
         <td><span class="xref">Entity</span></td>
-        <td></td>
+        <td><p>Created entity.</p>
+</td>
       </tr>
     </tbody>
   </table>
-  
-  
-  <a id="Kinstrife_Core_GameState_GameState_Deserialize_" data-uid="Kinstrife.Core.GameState.GameState.Deserialize*"></a>
-  <h4 id="Kinstrife_Core_GameState_GameState_Deserialize_System_Byte___" data-uid="Kinstrife.Core.GameState.GameState.Deserialize(System.Byte[])">Deserialize(Byte[])</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void Deserialize(byte[] serializedData)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Byte</span>[]</td>
-        <td><span class="parametername">serializedData</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="Kinstrife_Core_GameState_GameState_Destroy_" data-uid="Kinstrife.Core.GameState.GameState.Destroy*"></a>
-  <h4 id="Kinstrife_Core_GameState_GameState_Destroy" data-uid="Kinstrife.Core.GameState.GameState.Destroy">Destroy()</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void Destroy()</code></pre>
-  </div>
   
   
   <a id="Kinstrife_Core_GameState_GameState_DestroyEntity_" data-uid="Kinstrife.Core.GameState.GameState.DestroyEntity*"></a>
@@ -398,6 +376,16 @@
       </tr>
     </tbody>
   </table>
+  
+  
+  <a id="Kinstrife_Core_GameState_GameState_Dispose_" data-uid="Kinstrife.Core.GameState.GameState.Dispose*"></a>
+  <h4 id="Kinstrife_Core_GameState_GameState_Dispose" data-uid="Kinstrife.Core.GameState.GameState.Dispose">Dispose()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Dispose()</code></pre>
+  </div>
   
   
   <a id="Kinstrife_Core_GameState_GameState_GetComponent_" data-uid="Kinstrife.Core.GameState.GameState.GetComponent*"></a>
@@ -684,6 +672,57 @@
       </tr>
     </tbody>
   </table>
+  
+  
+  <a id="Kinstrife_Core_GameState_GameState_TryGetEntityGuid_" data-uid="Kinstrife.Core.GameState.GameState.TryGetEntityGuid*"></a>
+  <h4 id="Kinstrife_Core_GameState_GameState_TryGetEntityGuid_Entity_System_Guid__" data-uid="Kinstrife.Core.GameState.GameState.TryGetEntityGuid(Entity,System.Guid@)">TryGetEntityGuid(Entity, out Guid)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool TryGetEntityGuid(Entity entity, out Guid guid)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Entity</span></td>
+        <td><span class="parametername">entity</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Guid</span></td>
+        <td><span class="parametername">guid</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <span class="xref">System.IDisposable</span>
+  </div>
 </article>
           </div>
           

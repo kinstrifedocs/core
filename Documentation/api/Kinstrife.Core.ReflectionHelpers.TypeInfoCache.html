@@ -5,10 +5,10 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Class TypeAccessor
+    <title>Class TypeInfoCache
    | Kinstrife </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Class TypeAccessor
+    <meta name="title" content="Class TypeInfoCache
    | Kinstrife ">
     <meta name="generator" content="docfx 2.56.2.0">
     
@@ -68,19 +68,18 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="Kinstrife.Core.ReflectionHelpers.TypeAccessor">
+            <article class="content wrap" id="_content" data-uid="Kinstrife.Core.ReflectionHelpers.TypeInfoCache">
   
   
-  <h1 id="Kinstrife_Core_ReflectionHelpers_TypeAccessor" data-uid="Kinstrife.Core.ReflectionHelpers.TypeAccessor" class="text-break">Class TypeAccessor
+  <h1 id="Kinstrife_Core_ReflectionHelpers_TypeInfoCache" data-uid="Kinstrife.Core.ReflectionHelpers.TypeInfoCache" class="text-break">Class TypeInfoCache
   </h1>
-  <div class="markdown level0 summary"><p>Access fields and properties in an optimized manner. Utilizes <see cref="!:FastMember"></see> for properties,
-but as FastMember only supports properties, this wrapper is needed to also offer this functionality for fields.</p>
+  <div class="markdown level0 summary"><p>Access extended type info such as attribute data and access instance members in an optimized manner.</p>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><span class="xref">TypeAccessor</span></div>
+    <div class="level1"><span class="xref">TypeInfoCache</span></div>
   </div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
@@ -108,22 +107,22 @@ but as FastMember only supports properties, this wrapper is needed to also offer
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Kinstrife.Core.ReflectionHelpers.html">Kinstrife.Core.ReflectionHelpers</a></h6>
   <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
-  <h5 id="Kinstrife_Core_ReflectionHelpers_TypeAccessor_syntax">Syntax</h5>
+  <h5 id="Kinstrife_Core_ReflectionHelpers_TypeInfoCache_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class TypeAccessor</code></pre>
+    <pre><code class="lang-csharp hljs">public static class TypeInfoCache</code></pre>
   </div>
-  <h3 id="constructors">Constructors
+  <h3 id="methods">Methods
   </h3>
   
   
-  <a id="Kinstrife_Core_ReflectionHelpers_TypeAccessor__ctor_" data-uid="Kinstrife.Core.ReflectionHelpers.TypeAccessor.#ctor*"></a>
-  <h4 id="Kinstrife_Core_ReflectionHelpers_TypeAccessor__ctor_Type_System_Collections_Generic_IEnumerable_FieldInfo__" data-uid="Kinstrife.Core.ReflectionHelpers.TypeAccessor.#ctor(Type,System.Collections.Generic.IEnumerable{FieldInfo})">TypeAccessor(Type, IEnumerable&lt;FieldInfo&gt;)</h4>
-  <div class="markdown level1 summary"><p>Create new type accessor for <code data-dev-comment-type="paramref" class="paramref">type</code></p>
+  <a id="Kinstrife_Core_ReflectionHelpers_TypeInfoCache_GetExtendedTypeInfo_" data-uid="Kinstrife.Core.ReflectionHelpers.TypeInfoCache.GetExtendedTypeInfo*"></a>
+  <h4 id="Kinstrife_Core_ReflectionHelpers_TypeInfoCache_GetExtendedTypeInfo_Type_" data-uid="Kinstrife.Core.ReflectionHelpers.TypeInfoCache.GetExtendedTypeInfo(Type)">GetExtendedTypeInfo(Type)</h4>
+  <div class="markdown level1 summary"><p>Gets additional information about <code data-dev-comment-type="paramref" class="paramref">targetType</code>, including attribute data and accelerated member access (read/write) functionality.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public TypeAccessor(Type type, IEnumerable&lt;FieldInfo&gt; privateFields)</code></pre>
+    <pre><code class="lang-csharp hljs">public static ExtendedTypeInfo GetExtendedTypeInfo(Type targetType)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -137,30 +136,12 @@ but as FastMember only supports properties, this wrapper is needed to also offer
     <tbody>
       <tr>
         <td><span class="xref">Type</span></td>
-        <td><span class="parametername">type</span></td>
-        <td><p>Type to create accessor for</p>
-</td>
-      </tr>
-      <tr>
-        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<span class="xref">FieldInfo</span>&gt;</td>
-        <td><span class="parametername">privateFields</span></td>
-        <td><p>List of private fields on <code data-dev-comment-type="paramref" class="paramref">type</code></p>
-</td>
+        <td><span class="parametername">targetType</span></td>
+        <td></td>
       </tr>
     </tbody>
   </table>
-  <h3 id="fields">Fields
-  </h3>
-  
-  
-  <h4 id="Kinstrife_Core_ReflectionHelpers_TypeAccessor_Type" data-uid="Kinstrife.Core.ReflectionHelpers.TypeAccessor.Type">Type</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly Type Type</code></pre>
-  </div>
-  <h5 class="fieldValue">Field Value</h5>
+  <h5 class="returns">Returns</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
       <tr>
@@ -170,23 +151,22 @@ but as FastMember only supports properties, this wrapper is needed to also offer
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Type</span></td>
+        <td><a class="xref" href="Kinstrife.Core.ReflectionHelpers.ExtendedTypeInfo.html">ExtendedTypeInfo</a></td>
         <td></td>
       </tr>
     </tbody>
   </table>
-  <h3 id="properties">Properties
-  </h3>
   
   
-  <a id="Kinstrife_Core_ReflectionHelpers_TypeAccessor_Item_" data-uid="Kinstrife.Core.ReflectionHelpers.TypeAccessor.Item*"></a>
-  <h4 id="Kinstrife_Core_ReflectionHelpers_TypeAccessor_Item_System_Object_System_String_" data-uid="Kinstrife.Core.ReflectionHelpers.TypeAccessor.Item(System.Object,System.String)">Item[Object, String]</h4>
-  <div class="markdown level1 summary"><p>Access (write or read) field or property on an instance (<code data-dev-comment-type="paramref" class="paramref">target</code>) of this <a class="xref" href="Kinstrife.Core.ReflectionHelpers.TypeAccessor.html">TypeAccessor</a>'s type</p>
+  <a id="Kinstrife_Core_ReflectionHelpers_TypeInfoCache_GetMemberValuesWithAttribute_" data-uid="Kinstrife.Core.ReflectionHelpers.TypeInfoCache.GetMemberValuesWithAttribute*"></a>
+  <h4 id="Kinstrife_Core_ReflectionHelpers_TypeInfoCache_GetMemberValuesWithAttribute__1_System_Object_System_Collections_Generic_ICollection_Kinstrife_Core_ReflectionHelpers_ValueWithAttribute__" data-uid="Kinstrife.Core.ReflectionHelpers.TypeInfoCache.GetMemberValuesWithAttribute``1(System.Object,System.Collections.Generic.ICollection{Kinstrife.Core.ReflectionHelpers.ValueWithAttribute})">GetMemberValuesWithAttribute&lt;AttributeType&gt;(Object, ICollection&lt;ValueWithAttribute&gt;)</h4>
+  <div class="markdown level1 summary"><p>Get values of members tagged with <code data-dev-comment-type="typeparamref" class="typeparamref">AttributeType</code> in specified <code data-dev-comment-type="paramref" class="paramref">target</code> instance. Only works for attributes that allow for a single instance per member.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public object this[object target, string memberName] { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public static void GetMemberValuesWithAttribute&lt;AttributeType&gt;(object target, ICollection&lt;ValueWithAttribute&gt; resultBuffer)
+    where AttributeType : Attribute</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -201,29 +181,29 @@ but as FastMember only supports properties, this wrapper is needed to also offer
       <tr>
         <td><span class="xref">System.Object</span></td>
         <td><span class="parametername">target</span></td>
-        <td><p>Instance whose members should be accessed</p>
+        <td><p>Instance to return values from</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.String</span></td>
-        <td><span class="parametername">memberName</span></td>
-        <td><p>Name of member to be accessed</p>
+        <td><span class="xref">System.Collections.Generic.ICollection</span>&lt;<a class="xref" href="Kinstrife.Core.ReflectionHelpers.ValueWithAttribute.html">ValueWithAttribute</a>&gt;</td>
+        <td><span class="parametername">resultBuffer</span></td>
+        <td><p>Collection in which results will be filled (to avoid memory allocations). This method does <em>not</em> clear the buffer before writing!</p>
 </td>
       </tr>
     </tbody>
   </table>
-  <h5 class="propertyValue">Property Value</h5>
+  <h5 class="typeParameters">Type Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
       <tr>
-        <th>Type</th>
+        <th>Name</th>
         <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Object</span></td>
-        <td><p>Value of member when reading</p>
+        <td><span class="parametername">AttributeType</span></td>
+        <td><p>Attribute to filter members by</p>
 </td>
       </tr>
     </tbody>
