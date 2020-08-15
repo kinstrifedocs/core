@@ -73,13 +73,14 @@
 <p><code>&quot;com.kinstrife.core.identification&quot; : &quot;file:/GameDev/Core/Packages/Identification&quot;</code></p>
 </blockquote>
 <p> </p>
-<h4 id="motivation">Motivation</h4>
+<h3 id="motivation">Motivation</h3>
 <p>When serializing data (e.g. for storing it on a disk or sending it over a network) it can be convenient to be able to reference data objects indirectly via an identifier. This is the case, for example, with database entries, which should not be saved directly, but instead should only have some sort of reference serialized into a savegame.</p>
 <p> </p>
-<h4 id="guid">GUID</h4>
+<h3 id="guid">GUID</h3>
 <p>C# has a very nice built-in identifier: the <a href="https://docs.microsoft.com/en-us/dotnet/api/system.guid?view=netframework-4.8">GUID struct</a>.
 Unfortunately, Unity cannot serialize this struct and it cannot be nicely included/saved in e.g. ScriptableObjects. As a result, this package contains a custom GUID type which contains a regular System.Guid as well as a version that is serialized as a string (which <em>can</em> be serialized by Unity's serializer).</p>
-<h4 id="built-ins">Built-ins</h4>
+<p> </p>
+<h3 id="built-ins">Built-ins</h3>
 <p>For convenience's sake, there are some pre-made identifiable classes:</p>
 <ul>
 <li><code>IdentifiableObject</code>, a standard <code>ScriptableObject</code> except with a Kinstrife Guid</li>

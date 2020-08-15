@@ -74,27 +74,33 @@
 </blockquote>
 <p> </p>
 <p>Handles data management of game state during runtime as well as (de-)serialization when saving to a file. It is built upon Unity's ECS and as a result, you should be familiar with most concepts. Fortunately, you will not have to deal with all the technical voodoo behind this, there's only a few simple rules to make things work:</p>
-<h4 id="data-types">Data types</h4>
+<h3 id="data-types">Data types</h3>
 <p><strong>Singletons:</strong>
 As the name implies, there is only one instance of this type of data, useful for tracking time.</p>
 <p><strong>Components:</strong>
 Just like ECS components, GameState components need to inherit from a specific interface, <code>IPersistentComponent</code> and are always assigned to an <code>Entity</code>. There can be only one component of the same type per entity, but there can be lots of entities with the same type of components.</p>
 <p><strong>Static data:</strong>
 Database entries. Not strictly a part of this package, but they need to be handled specially, see the Reference section below.</p>
-<h4 id="always-use-the-gamestate-instance-except-when-using-entityquery">Always use the GameState instance... except when using EntityQuery</h4>
+<p> </p>
+<h3 id="always-use-the-gamestate-instance-except-when-using-entityquery">Always use the GameState instance... except when using EntityQuery</h3>
 <p>When creating/deleting entities and components, it might be tempting to use the GameState's entity manager. <strong>Just... don't.</strong> Simply use all these nice public methods like <code>CreateEntity</code>or <code>GetComponent</code> that are provided by your <code>GameState</code> instance (which should be injected with DI). This ensures that everything goes nicely and smoothly in GameState land.
 An exception to this is if you want to use the <code>EntityQuery</code> feature of this ECS: In this scenario it's fine to utilize the EntityManager (that's why it's <code>public</code>).</p>
-<h4 id="creating-custom-data-types">Creating custom data types</h4>
+<p> </p>
+<h3 id="creating-custom-data-types">Creating custom data types</h3>
 <p>This one is pretty easy.</p>
 <p><strong>For Singletons,</strong> simply inherit from <code>IPersistentSingletonData</code> and mark your type with the <code>[MessagePackObject]</code> attribute (from the MessagePack package), et voilà, you're done. You can now add and access your singletons via the GameState instance via <code>GetOrAddSingleton</code>.</p>
 <p><strong>For components</strong>, things are nearly as simple. Inherit from <code>IPersistentComponent</code> and also use the <code>[MessagePackObject]</code> attribute. However, you'll see that you need to implement a property returning a <code>System.Guid</code> and a <code>SetGuid</code>. Just create a private <code>System.Guid</code> field, create the property and method, and boom, done.</p>
 <p> </p>
 <p><strong>But wait:</strong> You'll probably want some or perhaps all of your data to be saved, right? In that case, you should also add MessagePack's <code>Key</code> attribute, including an <code>int</code> identifier, which should only be used once per type. When deleting fields, <em>do not reuse the identifier</em> but 'retire' it instead. Your tagged fields and properties will now be saved, huzzah!</p>
-<h4 id="references">References</h4>
+<p> </p>
+<h3 id="references">References</h3>
 <p>At some point, you will probably want to reference database entries or other GameState components. There can be lots of headaches attached to that, but not to worry, <code>GameState</code> will gladly help out if you follow its commandments:</p>
 <p>Use generic <code>Reference&lt;T&gt;</code> fields! <code>T</code> must either be a database type (inherit from <code>IdentifiableObject</code>) or a GameState component (inherit from <code>IPersistentComponent</code>). References should also be marked with a <code>[Key]</code> attribute if they are to be saved!</p>
 <p>References are implicitly converted to the type they reference, so reading is very straightforward. To write to a reference, simply access its value. Alternatively, you may want to add a property of type <code>T</code> that simply wraps <code>Reference&lt;T&gt;.Value</code>.</p>
-<h4 id="example-types">Example types</h4>
+<p> </p>
+<h2 id="examples">Examples</h2>
+<p> </p>
+<h3 id="example-types">Example types</h3>
 <p>TODO</p>
 </article>
           </div>
