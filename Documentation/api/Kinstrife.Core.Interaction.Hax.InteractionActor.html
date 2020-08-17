@@ -5,10 +5,10 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Class InteractionAction
+    <title>Struct InteractionActor
    | Kinstrife </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Class InteractionAction
+    <meta name="title" content="Struct InteractionActor
    | Kinstrife ">
     <meta name="generator" content="docfx 2.56.2.0">
     
@@ -68,39 +68,56 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="Kinstrife.Core.Interaction.InteractionAction">
+            <article class="content wrap" id="_content" data-uid="Kinstrife.Core.Interaction.Hax.InteractionActor">
   
   
-  <h1 id="Kinstrife_Core_Interaction_InteractionAction" data-uid="Kinstrife.Core.Interaction.InteractionAction" class="text-break">Class InteractionAction
+  <h1 id="Kinstrife_Core_Interaction_Hax_InteractionActor" data-uid="Kinstrife.Core.Interaction.Hax.InteractionActor" class="text-break">Struct InteractionActor
   </h1>
   <div class="markdown level0 summary"></div>
   <div class="markdown level0 conceptual"></div>
-  <div class="inheritance">
-    <h5>Inheritance</h5>
-    <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><span class="xref">InteractionAction</span></div>
-      <div class="level2"><a class="xref" href="Kinstrife.Core.Interaction.PhysicsGrab.html">PhysicsGrab</a></div>
-      <div class="level2"><a class="xref" href="Kinstrife.Core.Interaction.PhysicsThrowAction.html">PhysicsThrowAction</a></div>
+  <div classs="implements">
+    <h5>Implements</h5>
+    <div><span class="xref">IComponentData</span></div>
   </div>
-  <h6><strong>Namespace</strong>: <a class="xref" href="Kinstrife.Core.Interaction.html">Kinstrife.Core.Interaction</a></h6>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.ValueType.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.ValueType.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.ValueType.ToString()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Kinstrife.Core.Interaction.Hax.html">Kinstrife.Core.Interaction.Hax</a></h6>
   <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
-  <h5 id="Kinstrife_Core_Interaction_InteractionAction_syntax">Syntax</h5>
+  <h5 id="Kinstrife_Core_Interaction_Hax_InteractionActor_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public abstract class InteractionAction : MonoBehaviour</code></pre>
+    <pre><code class="lang-csharp hljs">public struct InteractionActor : IComponentData</code></pre>
   </div>
-  <h3 id="properties">Properties
+  <h3 id="fields">Fields
   </h3>
   
   
-  <a id="Kinstrife_Core_Interaction_InteractionAction_Description_" data-uid="Kinstrife.Core.Interaction.InteractionAction.Description*"></a>
-  <h4 id="Kinstrife_Core_Interaction_InteractionAction_Description" data-uid="Kinstrife.Core.Interaction.InteractionAction.Description">Description</h4>
+  <h4 id="Kinstrife_Core_Interaction_Hax_InteractionActor_InteractionMode" data-uid="Kinstrife.Core.Interaction.Hax.InteractionActor.InteractionMode">InteractionMode</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public string Description { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public InteractionActor.Mode InteractionMode</code></pre>
   </div>
-  <h5 class="propertyValue">Property Value</h5>
+  <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
       <tr>
@@ -110,22 +127,21 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><a class="xref" href="Kinstrife.Core.Interaction.Hax.InteractionActor.Mode.html">InteractionActor.Mode</a></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   
   
-  <a id="Kinstrife_Core_Interaction_InteractionAction_Setting_" data-uid="Kinstrife.Core.Interaction.InteractionAction.Setting*"></a>
-  <h4 id="Kinstrife_Core_Interaction_InteractionAction_Setting" data-uid="Kinstrife.Core.Interaction.InteractionAction.Setting">Setting</h4>
+  <h4 id="Kinstrife_Core_Interaction_Hax_InteractionActor_IsPlayer" data-uid="Kinstrife.Core.Interaction.Hax.InteractionActor.IsPlayer">IsPlayer</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public InteractionSetting Setting { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public bool IsPlayer</code></pre>
   </div>
-  <h5 class="propertyValue">Property Value</h5>
+  <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
       <tr>
@@ -135,34 +151,21 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="Kinstrife.Core.Interaction.InteractionSetting.html">InteractionSetting</a></td>
+        <td><span class="xref">System.Boolean</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
-  <h3 id="methods">Methods
-  </h3>
   
   
-  <a id="Kinstrife_Core_Interaction_InteractionAction_FinishAction_" data-uid="Kinstrife.Core.Interaction.InteractionAction.FinishAction*"></a>
-  <h4 id="Kinstrife_Core_Interaction_InteractionAction_FinishAction" data-uid="Kinstrife.Core.Interaction.InteractionAction.FinishAction">FinishAction()</h4>
+  <h4 id="Kinstrife_Core_Interaction_Hax_InteractionActor_layerMask" data-uid="Kinstrife.Core.Interaction.Hax.InteractionActor.layerMask">layerMask</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public abstract void FinishAction()</code></pre>
+    <pre><code class="lang-csharp hljs">public LayerMask layerMask</code></pre>
   </div>
-  
-  
-  <a id="Kinstrife_Core_Interaction_InteractionAction_GetDescription_" data-uid="Kinstrife.Core.Interaction.InteractionAction.GetDescription*"></a>
-  <h4 id="Kinstrife_Core_Interaction_InteractionAction_GetDescription" data-uid="Kinstrife.Core.Interaction.InteractionAction.GetDescription">GetDescription()</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public string GetDescription()</code></pre>
-  </div>
-  <h5 class="returns">Returns</h5>
+  <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
       <tr>
@@ -172,20 +175,62 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">LayerMask</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   
   
-  <a id="Kinstrife_Core_Interaction_InteractionAction_StartAction_" data-uid="Kinstrife.Core.Interaction.InteractionAction.StartAction*"></a>
-  <h4 id="Kinstrife_Core_Interaction_InteractionAction_StartAction" data-uid="Kinstrife.Core.Interaction.InteractionAction.StartAction">StartAction()</h4>
+  <h4 id="Kinstrife_Core_Interaction_Hax_InteractionActor_MaxDistance" data-uid="Kinstrife.Core.Interaction.Hax.InteractionActor.MaxDistance">MaxDistance</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public abstract void StartAction()</code></pre>
+    <pre><code class="lang-csharp hljs">public float MaxDistance</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="Kinstrife_Core_Interaction_Hax_InteractionActor_Ray" data-uid="Kinstrife.Core.Interaction.Hax.InteractionActor.Ray">Ray</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Ray Ray</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Ray</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <span class="xref">IComponentData</span>
   </div>
 </article>
           </div>

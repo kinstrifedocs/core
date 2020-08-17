@@ -5,18 +5,20 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>State Messaging | Kinstrife </title>
+    <title>Enum InteractState
+   | Kinstrife </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="State Messaging | Kinstrife ">
+    <meta name="title" content="Enum InteractState
+   | Kinstrife ">
     <meta name="generator" content="docfx 2.56.2.0">
     
-    <link rel="shortcut icon" href="../favicon.ico">
-    <link rel="stylesheet" href="../styles/docfx.vendor.css">
-    <link rel="stylesheet" href="../styles/docfx.css">
-    <link rel="stylesheet" href="../styles/main.css">
+    <link rel="shortcut icon" href="../../favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet"> 
-    <meta property="docfx:navrel" content="../toc.html">
-    <meta property="docfx:tocrel" content="../articles/packages/toc.html">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
     
     
     
@@ -34,8 +36,8 @@
                 <span class="icon-bar"></span>
               </button>
               
-              <a class="navbar-brand" href="../index.html">
-                <img id="logo" class="svg" src="../logo.svg" alt="">
+              <a class="navbar-brand" href="../../index.html">
+                <img id="logo" class="svg" src="../../logo.svg" alt="">
               </a>
             </div>
             <div class="collapse navbar-collapse" id="navbar">
@@ -66,32 +68,55 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="StateMessaging">
-<h1 id="state-messaging">State Messaging</h1>
-
-<blockquote>
-<p>&quot;com.kinstrife.core.state-messaging&quot;: &quot;file://GameDev/Core/Packages/StateMessaging&quot;
-Package that builds on <a class="xref" href="../Documentation/api/Kinstrife.Audio.SoundCategory.html">Messaging</a>,  &amp; <a href="https://kinstrifedocs.github.io/core/StateFlow/index.html">Stateflow</a> and provides implementation utilities for messaging state-based types, and coupling with flowgraphs.
-Additionally this package is home to core channel handles that use the <code>StateID</code>. message type</p>
-</blockquote>
-<h2 id="channels">Channels</h2>
-<ul>
-<li>PrimaryModuleChannelHandle</li>
-<li>UIChannelHandle</li>
-</ul>
-<h2 id="behaviours">Behaviours</h2>
-<p>The behaviours get a flowgraph injected, and will couple with them in a given direction.</p>
-<h3 id="abstract">Abstract</h3>
-<p>The following abstract MonoBehaviours are available to extend (check out the concrete implementations on how-to):</p>
-<ul>
-<li><code>StatePublisherBehaviour&lt;TMessage&gt;</code> - Publishes over a selected channel when the injected <code>FlowGraphBase</code> changes state fires the <code>OnNewState</code> event</li>
-<li><code>StateSubscriberBehaviour&lt;TMessage&gt;</code> - Subscribes to a selected channel, and applies the received state message to the state machine</li>
-</ul>
-<h3 id="concrete">Concrete</h3>
-<ul>
-<li><code>StateIDPublisher</code></li>
-<li><code>StateIDSubscriber</code></li>
-</ul>
+            <article class="content wrap" id="_content" data-uid="Kinstrife.Core.Interaction.Systems.InteractState">
+  
+  
+  <h1 id="Kinstrife_Core_Interaction_Systems_InteractState" data-uid="Kinstrife.Core.Interaction.Systems.InteractState" class="text-break">Enum InteractState
+  </h1>
+  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 conceptual"></div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Kinstrife.Core.Interaction.Systems.html">Kinstrife.Core.Interaction.Systems</a></h6>
+  <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
+  <h5 id="Kinstrife_Core_Interaction_Systems_InteractState_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public enum InteractState</code></pre>
+  </div>
+  <h3 id="fields">Fields
+  </h3>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    <thead>
+    <tbody>
+      <tr>
+        <td id="Kinstrife_Core_Interaction_Systems_InteractState_Active">Active</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td id="Kinstrife_Core_Interaction_Systems_InteractState_Details">Details</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td id="Kinstrife_Core_Interaction_Systems_InteractState_Forbidden">Forbidden</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td id="Kinstrife_Core_Interaction_Systems_InteractState_Hover">Hover</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td id="Kinstrife_Core_Interaction_Systems_InteractState_None">None</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td id="Kinstrife_Core_Interaction_Systems_InteractState_Release">Release</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </thead></thead></table>
 </article>
           </div>
           
@@ -99,9 +124,6 @@ Additionally this package is home to core channel handles that use the <code>Sta
             <div class="sideaffix">
               <div class="contribution">
                 <ul class="nav">
-                  <li>
-                    <a href="https://kinstrife.visualstudio.com/Core/_git/Core?path=Packages/StateMessaging/index.md&amp;version=GBmaster&amp;line=1" class="contribution-link">Improve this Doc</a>
-                  </li>
                 </ul>
               </div>
               <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
@@ -126,8 +148,8 @@ Additionally this package is home to core channel handles that use the <code>Sta
       </footer>
     </div>
     
-    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
-    <script type="text/javascript" src="../styles/docfx.js"></script>
-    <script type="text/javascript" src="../styles/main.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
   </body>
 </html>
