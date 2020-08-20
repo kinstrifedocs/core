@@ -82,11 +82,15 @@ should utilize this reference wrapper to ensure correct serialization/deserializ
     <div class="level0"><span class="xref">System.Object</span></div>
     <div class="level1"><span class="xref">Reference&lt;T&gt;</span></div>
   </div>
+  <div classs="implements">
+    <h5>Implements</h5>
+    <div><span class="xref">IEquatable</span>&lt;<a class="xref" href="Kinstrife.Core.GameState.Reference-1.html">Reference</a>&lt;T&gt;&gt;</div>
+  </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Kinstrife.Core.GameState.html">Kinstrife.Core.GameState</a></h6>
   <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
   <h5 id="Kinstrife_Core_GameState_Reference_1_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public sealed class Reference&lt;T&gt; : IEquatable&lt;T&gt; where T : IIdentifiable</code></pre>
+    <pre><code class="lang-csharp hljs">public sealed class Reference&lt;T&gt; : IEquatable&lt;T&gt;, IEquatable&lt;Reference&lt;T&gt;&gt; where T : IIdentifiable</code></pre>
   </div>
   <h5 class="typeParameters">Type Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -192,6 +196,48 @@ should utilize this reference wrapper to ensure correct serialization/deserializ
     <tbody>
       <tr>
         <td><span class="xref">T</span></td>
+        <td><span class="parametername">other</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Kinstrife_Core_GameState_Reference_1_Equals_" data-uid="Kinstrife.Core.GameState.Reference`1.Equals*"></a>
+  <h4 id="Kinstrife_Core_GameState_Reference_1_Equals_Kinstrife_Core_GameState_Reference__0__" data-uid="Kinstrife.Core.GameState.Reference`1.Equals(Kinstrife.Core.GameState.Reference{`0})">Equals(Reference&lt;T&gt;)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool Equals(Reference&lt;T&gt; other)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Kinstrife.Core.GameState.Reference-1.html">Reference</a>&lt;T&gt;</td>
         <td><span class="parametername">other</span></td>
         <td></td>
       </tr>
@@ -415,6 +461,53 @@ should utilize this reference wrapper to ensure correct serialization/deserializ
   
   
   <a id="Kinstrife_Core_GameState_Reference_1_op_Equality_" data-uid="Kinstrife.Core.GameState.Reference`1.op_Equality*"></a>
+  <h4 id="Kinstrife_Core_GameState_Reference_1_op_Equality_Kinstrife_Core_GameState_Reference__0__Kinstrife_Core_GameState_Reference__0__" data-uid="Kinstrife.Core.GameState.Reference`1.op_Equality(Kinstrife.Core.GameState.Reference{`0},Kinstrife.Core.GameState.Reference{`0})">Equality(Reference&lt;T&gt;, Reference&lt;T&gt;)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool operator ==(Reference&lt;T&gt; a, Reference&lt;T&gt; b)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Kinstrife.Core.GameState.Reference-1.html">Reference</a>&lt;T&gt;</td>
+        <td><span class="parametername">a</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Kinstrife.Core.GameState.Reference-1.html">Reference</a>&lt;T&gt;</td>
+        <td><span class="parametername">b</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Kinstrife_Core_GameState_Reference_1_op_Equality_" data-uid="Kinstrife.Core.GameState.Reference`1.op_Equality*"></a>
   <h4 id="Kinstrife_Core_GameState_Reference_1_op_Equality_Kinstrife_Core_GameState_Reference__0__Kinstrife_Identifier_Guid_" data-uid="Kinstrife.Core.GameState.Reference`1.op_Equality(Kinstrife.Core.GameState.Reference{`0},Kinstrife.Identifier.Guid)">Equality(Reference&lt;T&gt;, Guid)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
@@ -598,6 +691,53 @@ should utilize this reference wrapper to ensure correct serialization/deserializ
   
   
   <a id="Kinstrife_Core_GameState_Reference_1_op_Inequality_" data-uid="Kinstrife.Core.GameState.Reference`1.op_Inequality*"></a>
+  <h4 id="Kinstrife_Core_GameState_Reference_1_op_Inequality_Kinstrife_Core_GameState_Reference__0__Kinstrife_Core_GameState_Reference__0__" data-uid="Kinstrife.Core.GameState.Reference`1.op_Inequality(Kinstrife.Core.GameState.Reference{`0},Kinstrife.Core.GameState.Reference{`0})">Inequality(Reference&lt;T&gt;, Reference&lt;T&gt;)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool operator !=(Reference&lt;T&gt; a, Reference&lt;T&gt; b)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Kinstrife.Core.GameState.Reference-1.html">Reference</a>&lt;T&gt;</td>
+        <td><span class="parametername">a</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Kinstrife.Core.GameState.Reference-1.html">Reference</a>&lt;T&gt;</td>
+        <td><span class="parametername">b</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Kinstrife_Core_GameState_Reference_1_op_Inequality_" data-uid="Kinstrife.Core.GameState.Reference`1.op_Inequality*"></a>
   <h4 id="Kinstrife_Core_GameState_Reference_1_op_Inequality_Kinstrife_Core_GameState_Reference__0__Kinstrife_Identifier_Guid_" data-uid="Kinstrife.Core.GameState.Reference`1.op_Inequality(Kinstrife.Core.GameState.Reference{`0},Kinstrife.Identifier.Guid)">Inequality(Reference&lt;T&gt;, Guid)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
@@ -689,6 +829,10 @@ should utilize this reference wrapper to ensure correct serialization/deserializ
       </tr>
     </tbody>
   </table>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <span class="xref">IEquatable&lt;&gt;</span>
+  </div>
 </article>
           </div>
           

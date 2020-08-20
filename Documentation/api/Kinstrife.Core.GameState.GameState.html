@@ -73,7 +73,7 @@
   
   <h1 id="Kinstrife_Core_GameState_GameState" data-uid="Kinstrife.Core.GameState.GameState" class="text-break">Class GameState
   </h1>
-  <div class="markdown level0 summary"><p>Database storing GameState in singletons and components. Based on Unity's ECS. Only add entities, components and singletons via this interface, not directly through <a class="xref" href="Kinstrife.Core.GameState.GameState.html#Kinstrife_Core_GameState_GameState_EntityManager">EntityManager</a> or <a class="xref" href="Kinstrife.Core.GameState.GameState.html#Kinstrife_Core_GameState_GameState_WorldInstance">WorldInstance</a>!</p>
+  <div class="markdown level0 summary"><p>Database storing GameState in singletons and components. Based on Unity's ECS. Only add entities, components and singletons via this interface, not directly through <a class="xref" href="Kinstrife.Core.GameState.GameState.html#Kinstrife_Core_GameState_GameState_EntityManager">EntityManager</a> or <span class="xref">Kinstrife.Core.GameState.GameState.WorldInstance</span>!</p>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
@@ -127,38 +127,6 @@
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public GameState()</code></pre>
   </div>
-  
-  
-  <a id="Kinstrife_Core_GameState_GameState__ctor_" data-uid="Kinstrife.Core.GameState.GameState.#ctor*"></a>
-  <h4 id="Kinstrife_Core_GameState_GameState__ctor_System_Byte___Kinstrife_Database_DatabaseAccessor_" data-uid="Kinstrife.Core.GameState.GameState.#ctor(System.Byte[],Kinstrife.Database.DatabaseAccessor)">GameState(Byte[], DatabaseAccessor)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public GameState(byte[] serializedData, DatabaseAccessor databaseAccessor)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Byte</span>[]</td>
-        <td><span class="parametername">serializedData</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="Kinstrife.Database.DatabaseAccessor.html">DatabaseAccessor</a></td>
-        <td><span class="parametername">databaseAccessor</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
   <h3 id="properties">Properties
   </h3>
   
@@ -187,33 +155,6 @@
       </tr>
     </tbody>
   </table>
-  
-  
-  <a id="Kinstrife_Core_GameState_GameState_WorldInstance_" data-uid="Kinstrife.Core.GameState.GameState.WorldInstance*"></a>
-  <h4 id="Kinstrife_Core_GameState_GameState_WorldInstance" data-uid="Kinstrife.Core.GameState.GameState.WorldInstance">WorldInstance</h4>
-  <div class="markdown level1 summary"><p>This GameState's ECS world. Only use this if you have a really good reason to do so.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[Obsolete(&quot;Only use this if you absolutely have to!&quot;)]
-public World WorldInstance { get; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">World</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
   <h3 id="methods">Methods
   </h3>
   
@@ -225,7 +166,7 @@ public World WorldInstance { get; }</code></pre>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public T AddComponent&lt;T&gt;(Entity entity)
-    where T : class, IPersistentComponent</code></pre>
+    where T : class, IPersistentComponent, new()</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -351,6 +292,38 @@ public World WorldInstance { get; }</code></pre>
   </table>
   
   
+  <a id="Kinstrife_Core_GameState_GameState_Deserialize_" data-uid="Kinstrife.Core.GameState.GameState.Deserialize*"></a>
+  <h4 id="Kinstrife_Core_GameState_GameState_Deserialize_System_Byte___Kinstrife_Database_DatabaseAccessor_" data-uid="Kinstrife.Core.GameState.GameState.Deserialize(System.Byte[],Kinstrife.Database.DatabaseAccessor)">Deserialize(Byte[], DatabaseAccessor)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Deserialize(byte[] serializedData, DatabaseAccessor databaseAccessor)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Byte</span>[]</td>
+        <td><span class="parametername">serializedData</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Kinstrife.Database.DatabaseAccessor.html">DatabaseAccessor</a></td>
+        <td><span class="parametername">databaseAccessor</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
   <a id="Kinstrife_Core_GameState_GameState_DestroyEntity_" data-uid="Kinstrife.Core.GameState.GameState.DestroyEntity*"></a>
   <h4 id="Kinstrife_Core_GameState_GameState_DestroyEntity_Entity_" data-uid="Kinstrife.Core.GameState.GameState.DestroyEntity(Entity)">DestroyEntity(Entity)</h4>
   <div class="markdown level1 summary"></div>
@@ -453,7 +426,7 @@ public World WorldInstance { get; }</code></pre>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public T GetOrAddComponent&lt;T&gt;(Entity entity)
-    where T : class, IPersistentComponent</code></pre>
+    where T : class, IPersistentComponent, new()</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -504,13 +477,13 @@ public World WorldInstance { get; }</code></pre>
   </table>
   
   
-  <a id="Kinstrife_Core_GameState_GameState_GetOrAddSingleton_" data-uid="Kinstrife.Core.GameState.GameState.GetOrAddSingleton*"></a>
-  <h4 id="Kinstrife_Core_GameState_GameState_GetOrAddSingleton__1" data-uid="Kinstrife.Core.GameState.GameState.GetOrAddSingleton``1">GetOrAddSingleton&lt;T&gt;()</h4>
+  <a id="Kinstrife_Core_GameState_GameState_GetOrCreateSingleton_" data-uid="Kinstrife.Core.GameState.GameState.GetOrCreateSingleton*"></a>
+  <h4 id="Kinstrife_Core_GameState_GameState_GetOrCreateSingleton__1" data-uid="Kinstrife.Core.GameState.GameState.GetOrCreateSingleton``1">GetOrCreateSingleton&lt;T&gt;()</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public T GetOrAddSingleton&lt;T&gt;()
+    <pre><code class="lang-csharp hljs">public T GetOrCreateSingleton&lt;T&gt;()
     where T : class, IPersistentSingletonData, new()</code></pre>
   </div>
   <h5 class="returns">Returns</h5>

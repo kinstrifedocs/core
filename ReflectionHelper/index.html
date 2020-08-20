@@ -75,10 +75,10 @@
 <p> </p>
 <p>Utilities for working with reflection, particularly for generic methods and attributes.</p>
 <p> </p>
-<h3 id="extended-type-info">Extended Type Info</h3>
+<h4 id="extended-type-info">Extended Type Info</h4>
 <p>The <code>ExtendedTypeInfo</code> class contains additional information about attributes assigned to the type and its members. It also allows for  optimized and convenient access to a type's fields and properties via a TypeAccessor. <code>ExtendedTypeInfo</code> for a type can be fetched from the static <code>TypeInfoCache</code>.</p>
 <p> </p>
-<h3 id="accessing-fields--properties">Accessing fields &amp; properties</h3>
+<h4 id="accessing-fields--properties">Accessing fields &amp; properties</h4>
 <p>Accessing fields &amp; properties for both reading and writing is simple:</p>
 <pre><code class="lang-csharp">// Fetch the extended type info
 var typeInfo = TypeInfoCache.GetExtendedTypeInfo(typeof(Foo));
@@ -90,13 +90,24 @@ var myBar = (Foo)typeInfo.Accessor[referenceObject, &quot;bar&quot;];
 referenceAttributeInfo.Accessor[referenceObject, &quot;baz&quot;] = myBaz;
 </code></pre>
 <p> </p>
-<h3 id="attribute-info">Attribute Info</h3>
+<h4 id="attribute-info">Attribute Info</h4>
 <p>You can also retrieve members of a type which are tagged with a specific attribute:</p>
 <pre><code class="lang-csharp" name="Main">List&lt;ValueWithAttribute&gt; result = new List&lt;ValueWithAttribute&gt;();
-TypeInfoCache.GetMemberValuesWithAttribute&lt;SomeAttributeAttribute&gt;(target, result);
+TypeInfoCache.GetMemberValuesWithAttribute&lt;SomeMemberAttribute&gt;(target, result);
+Assert.IsTrue(result.Count == target.memberNameAttributeText.Count, &quot;More or fewer members detected than are actually tagged&quot;);
 foreach (var entry in result)
-  Debug.Log($&quot;Member with value {entry.Value.ToString()} and attribute text: {((SomeAttributeAttribute)entry.Attribute).info}&quot;);
-</code></pre></article>
+  Assert.IsTrue(target.memberNameAttributeText.ContainsValue(((SomeMemberAttribute)entry.Attribute).info));
+</code></pre>
+<p> </p>
+<h4 id="generic-method-info-helper">Generic method info helper</h4>
+<p>Sometimes you need to call a generic method but you only have a Type <em>reference</em> (i.e. an instance of <code>System.Type</code>) rather than a Type <em>symbol</em> (a <code>T</code>, rather than a <code>typeof(T)</code>). This can result in some awkwardness and ideally, the generated method info should also be cached. To this end, you can use the <code>GenericMethodInfoHelper</code></p>
+<pre><code class="lang-csharp">var methodHelper = new GenericMethodInfoHelper(typeof(ReferenceResolver), &quot;ResolveReferencesOfComponentType&quot;, staticMethod: true);
+var concreteMethodInfo = methodHelper.GetConcreteMethodInfo(componentType);
+var parameters = new object[] { gameState, database };
+concreteMethodInfo.Invoke(null, parameters);
+</code></pre>
+<p>Usually, you'd want to reuse the <code>GenericMethodInfoHelper</code> instance and cache it in the class, sometimes that is also the case with the <code>parameters</code> array. Keep in mind that invoking methods that way is less performant than direct calls and should be used sparingly. However, at the same time, it does not allow you to obtain a call stack and exception location, making it a pain to debug, so you'd want to place it as deep in your call hierarchy as performance allows.</p>
+</article>
           </div>
           
           <div class="hidden-sm col-md-2" role="complementary">

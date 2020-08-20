@@ -1,0 +1,125 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Game State Package Implementation | Kinstrife </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Game State Package Implementation | Kinstrife ">
+    <meta name="generator" content="docfx 2.56.2.0">
+    
+    <link rel="shortcut icon" href="../../favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet"> 
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="../../articles/packages/toc.html">
+    
+    
+    
+  </head>  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../index.html">
+                <img id="logo" class="svg" src="../../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="GameState_internals">
+<h1 id="game-state-package-implementation">Game State Package Implementation</h1>
+
+<p> </p>
+<p>The internal implementation consists of multiple important subsystems and processes:</p>
+<ul>
+<li><strong>GameState:</strong> Is essentially only a wrapper around Unity's ECS, with the addition of adding an instance of a <code>Persistent</code> component so that each entity has a corresponding <code>System.Guid</code> assigned. Supported data types are either specialized ECS components (inheriting from GameState's <code>IPersistentComponent</code> interface) or any type that implements GameState's <code>ISingletonData</code>.</li>
+<li><strong>DiskFormat:</strong> Rather than marking the GameState directly as a serializable MessagePack object, the disk format consists of special types that essentially just hold dictionaries of GUIDs, strings (for serialized types) and byte arrays for each serialized object.</li>
+<li><strong>Serialization:</strong> Relatively straightforward: 1) Find all serializable types, i.e. all types that inherit from <code>IPersistentComponent</code> or <code>ISingletonData</code>. Then iterate through these types, serialize the singleton instances, or in the case of components, find all components of that type and serialize them. Types are serialized to strings.</li>
+<li><strong>Deserialization:</strong> A bit trickier, but essentially the same in reverse. The disk format class <code>SerializedGameState</code> handily already divides its serialized objects into singletons and component arrays. Deserialization then iterates through the singletons, deserializes them and adds them to the provided <code>GameState</code> instance. Similarly to serialization, we iterate through all component types. For each component type, we deserialize all component instances/byte arrays and add them to the GameState. The probably trickiest part here, deserializing types is explained below in more detail.</li>
+<li><strong>ReferenceResolver:</strong> Probably the trickiest part here. We can't just serialize <code>IPersistentComponent</code> instances or database entries every time they are referenced - this issue is addressed with GameState's generic <code>Reference&lt;&gt;</code> type. They get serialized and deserialized automatically - however, this only covers their GUID property. So after deserializing, we need to find and re-link which objects the references were pointing to before serialization. This happens in the reference resolver. Going through all Singleton and Component types, we first find all members of those types (via reflection) that have MessagePack's <code>Key</code> attribute and then check which are either a <code>Reference&lt;&gt;</code> or a collection of references (<code>List&lt;Reference&lt;&gt;&gt;</code> or Dictionary with a reference as a key and/or value type). Through ReflectionHelper, we can then set the Reference members' <code>Value</code> once we retrieved it: We need to figure out whether it points to a database or a dynamic type, in which case we either retrieve it from our <code>DatabaseAccessor</code> or <code>GameState</code> instance. This is done for every singleton instance and component instance that has been added to the GameState in the deserialization process.</li>
+</ul>
+<hr>
+<h2 id="gotchas">Gotchas</h2>
+<h4 id="invoking-generic-methods">Invoking generic methods</h4>
+<p>A recurring issue is the need to invoke generic methods (such as GameState's/EntityManager's <code>GetComponent&lt;&gt;</code>), even though we only have a Type <em>reference</em> (i.e. an instance of <code>System.Type</code>) rather than a Type <em>symbol</em> (a <code>T</code>, rather than a <code>typeof(T)</code>). A utility class was added to ReflectionHelper (<code>GenericMethodInfoHelper</code>) to address this issue. You will see it being used in multiple places. Unfortunately, this makes debugging the package a lot harder because it obscures the call stack and the code location when exceptions are thrown. It is, however, unfortunately necessary and there is no other way to go about this.</p>
+<h4 id="type-serialization">Type serialization</h4>
+<p>Serializing types is easy: We simply convert the full type name (including namespaces) to a string and serialize that. Deserializing is a bit trickier: We find all potentially serialized types (implementing <code>IPersistentComponent</code> or <code>ISingletonData</code>) and add them to a dictionary with their (string) name as keys. In order to allow name changes in assembly definitions and individual types (<strong>but not namespaces</strong>), there is a <code>PreviouslyNamed</code> attribute. We also check each type for such an attribute and also add keys as specified in the instance of the <code>PreviouslyNamed</code> attribute.</p>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://kinstrife.visualstudio.com/Core/_git/Core?path=Packages/GameState/Documentation~/internals.md&amp;version=GBmaster&amp;line=1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+  </body>
+</html>

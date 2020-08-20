@@ -157,8 +157,49 @@ TODO: Maybe try doing this async at some point?</p>
   </h3>
   
   
+  <a id="Kinstrife_Database_DatabaseAccessor_GetEntriesOfType_" data-uid="Kinstrife.Database.DatabaseAccessor.GetEntriesOfType*"></a>
+  <h4 id="Kinstrife_Database_DatabaseAccessor_GetEntriesOfType__1" data-uid="Kinstrife.Database.DatabaseAccessor.GetEntriesOfType``1">GetEntriesOfType&lt;T&gt;()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IReadOnlyList&lt;T&gt; GetEntriesOfType&lt;T&gt;()
+    where T : IdentifiableObject</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IReadOnlyList</span>&lt;T&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
   <a id="Kinstrife_Database_DatabaseAccessor_GetEntry_" data-uid="Kinstrife.Database.DatabaseAccessor.GetEntry*"></a>
-  <h4 id="Kinstrife_Database_DatabaseAccessor_GetEntry_Kinstrife_Identifier_Guid_System_Type__" data-uid="Kinstrife.Database.DatabaseAccessor.GetEntry(Kinstrife.Identifier.Guid,System.Type@)">GetEntry(Guid, out Type)</h4>
+  <h4 id="Kinstrife_Database_DatabaseAccessor_GetEntry_System_Guid_System_Type__" data-uid="Kinstrife.Database.DatabaseAccessor.GetEntry(System.Guid,System.Type@)">GetEntry(Guid, out Type)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -176,7 +217,7 @@ TODO: Maybe try doing this async at some point?</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="Kinstrife.Identifier.Guid.html">Guid</a></td>
+        <td><span class="xref">System.Guid</span></td>
         <td><span class="parametername">guid</span></td>
         <td></td>
       </tr>
@@ -205,7 +246,7 @@ TODO: Maybe try doing this async at some point?</p>
   
   
   <a id="Kinstrife_Database_DatabaseAccessor_GetEntry_" data-uid="Kinstrife.Database.DatabaseAccessor.GetEntry*"></a>
-  <h4 id="Kinstrife_Database_DatabaseAccessor_GetEntry__1_Kinstrife_Identifier_Guid_" data-uid="Kinstrife.Database.DatabaseAccessor.GetEntry``1(Kinstrife.Identifier.Guid)">GetEntry&lt;T&gt;(Guid)</h4>
+  <h4 id="Kinstrife_Database_DatabaseAccessor_GetEntry__1_System_Guid_" data-uid="Kinstrife.Database.DatabaseAccessor.GetEntry``1(System.Guid)">GetEntry&lt;T&gt;(Guid)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -224,7 +265,7 @@ TODO: Maybe try doing this async at some point?</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="Kinstrife.Identifier.Guid.html">Guid</a></td>
+        <td><span class="xref">System.Guid</span></td>
         <td><span class="parametername">guid</span></td>
         <td></td>
       </tr>
@@ -262,46 +303,14 @@ TODO: Maybe try doing this async at some point?</p>
   </table>
   
   
-  <a id="Kinstrife_Database_DatabaseAccessor_InjectData_" data-uid="Kinstrife.Database.DatabaseAccessor.InjectData*"></a>
-  <h4 id="Kinstrife_Database_DatabaseAccessor_InjectData_Kinstrife_Identifier_IdentifiableObject___System_Boolean_" data-uid="Kinstrife.Database.DatabaseAccessor.InjectData(Kinstrife.Identifier.IdentifiableObject[],System.Boolean)">InjectData(IdentifiableObject[], Boolean)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void InjectData(IdentifiableObject[] data, bool overrideExisting)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Kinstrife.Identifier.IdentifiableObject.html">IdentifiableObject</a>[]</td>
-        <td><span class="parametername">data</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><span class="xref">System.Boolean</span></td>
-        <td><span class="parametername">overrideExisting</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
   <a id="Kinstrife_Database_DatabaseAccessor_TryGetEntriesOfType_" data-uid="Kinstrife.Database.DatabaseAccessor.TryGetEntriesOfType*"></a>
-  <h4 id="Kinstrife_Database_DatabaseAccessor_TryGetEntriesOfType__1___0____" data-uid="Kinstrife.Database.DatabaseAccessor.TryGetEntriesOfType``1(``0[]@)">TryGetEntriesOfType&lt;T&gt;(out T[])</h4>
+  <h4 id="Kinstrife_Database_DatabaseAccessor_TryGetEntriesOfType__1_System_Collections_Generic_IReadOnlyList___0___" data-uid="Kinstrife.Database.DatabaseAccessor.TryGetEntriesOfType``1(System.Collections.Generic.IReadOnlyList{``0}@)">TryGetEntriesOfType&lt;T&gt;(out IReadOnlyList&lt;T&gt;)</h4>
   <div class="markdown level1 summary"><p>Try to get all entries of specific type.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public bool TryGetEntriesOfType&lt;T&gt;(out T[] entries)
+    <pre><code class="lang-csharp hljs">public bool TryGetEntriesOfType&lt;T&gt;(out IReadOnlyList&lt;T&gt; entries)
     where T : IdentifiableObject</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -315,7 +324,7 @@ TODO: Maybe try doing this async at some point?</p>
     </thead>
     <tbody>
       <tr>
-        <td>T[]</td>
+        <td><span class="xref">System.Collections.Generic.IReadOnlyList</span>&lt;T&gt;</td>
         <td><span class="parametername">entries</span></td>
         <td></td>
       </tr>
