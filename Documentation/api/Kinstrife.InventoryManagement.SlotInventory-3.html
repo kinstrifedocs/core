@@ -88,6 +88,8 @@
     <div><a class="xref" href="Kinstrife.InventoryManagement.IInventory-1.html">IInventory</a>&lt;T&gt;</div>
     <div><a class="xref" href="Kinstrife.InventoryManagement.INotifyInventoryChanged-1.html">INotifyInventoryChanged</a>&lt;T&gt;</div>
     <div><span class="xref">INotifyPropertyChanged</span></div>
+    <div><span class="xref">System.Collections.Generic.IReadOnlyDictionary</span>&lt;U, V&gt;</div>
+    <div><span class="xref">System.Collections.Generic.IReadOnlyCollection</span>&lt;<span class="xref">System.Collections.Generic.KeyValuePair</span>&lt;U, V&gt;&gt;</div>
     <div><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<span class="xref">System.Collections.Generic.KeyValuePair</span>&lt;U, V&gt;&gt;</div>
     <div><span class="xref">System.Collections.IEnumerable</span></div>
   </div>
@@ -119,7 +121,7 @@
   <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
   <h5 id="Kinstrife_InventoryManagement_SlotInventory_3_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public abstract class SlotInventory&lt;T, U, V&gt; : IStackableSlotInventory&lt;T, U&gt;, ILimitedInventory&lt;T&gt;, IInventory&lt;T&gt;, INotifyInventoryChanged&lt;T&gt;, INotifyPropertyChanged, IEnumerable&lt;KeyValuePair&lt;U, V&gt;&gt;, IEnumerable where T : class where V : SlotInventory&lt;T, U, V&gt;.SlotEntry, new()</code></pre>
+    <pre><code class="lang-csharp hljs">public abstract class SlotInventory&lt;T, U, V&gt; : IStackableSlotInventory&lt;T, U&gt;, ILimitedInventory&lt;T&gt;, IInventory&lt;T&gt;, INotifyInventoryChanged&lt;T&gt;, INotifyPropertyChanged, IReadOnlyDictionary&lt;U, V&gt;, IReadOnlyCollection&lt;KeyValuePair&lt;U, V&gt;&gt;, IEnumerable&lt;KeyValuePair&lt;U, V&gt;&gt;, IEnumerable where T : class where V : SlotInventory&lt;T, U, V&gt;.SlotEntry, new()</code></pre>
   </div>
   <h5 class="typeParameters">Type Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -216,9 +218,102 @@
   </h3>
   
   
+  <a id="Kinstrife_InventoryManagement_SlotInventory_3_Count_" data-uid="Kinstrife.InventoryManagement.SlotInventory`3.Count*"></a>
+  <h4 id="Kinstrife_InventoryManagement_SlotInventory_3_Count" data-uid="Kinstrife.InventoryManagement.SlotInventory`3.Count">Count</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int Count { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Kinstrife_InventoryManagement_SlotInventory_3_Item_" data-uid="Kinstrife.InventoryManagement.SlotInventory`3.Item*"></a>
+  <h4 id="Kinstrife_InventoryManagement_SlotInventory_3_Item__1_" data-uid="Kinstrife.InventoryManagement.SlotInventory`3.Item(`1)">Item[U]</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public V this[U key] { get; }</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">U</span></td>
+        <td><span class="parametername">key</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">V</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Kinstrife_InventoryManagement_SlotInventory_3_Keys_" data-uid="Kinstrife.InventoryManagement.SlotInventory`3.Keys*"></a>
+  <h4 id="Kinstrife_InventoryManagement_SlotInventory_3_Keys" data-uid="Kinstrife.InventoryManagement.SlotInventory`3.Keys">Keys</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IEnumerable&lt;U&gt; Keys { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;U&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
   <a id="Kinstrife_InventoryManagement_SlotInventory_3_Storage_" data-uid="Kinstrife.InventoryManagement.SlotInventory`3.Storage*"></a>
   <h4 id="Kinstrife_InventoryManagement_SlotInventory_3_Storage" data-uid="Kinstrife.InventoryManagement.SlotInventory`3.Storage">Storage</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Abstract property to get storage that should point to serializable Dictionary instances in concrete implementations</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -235,6 +330,31 @@
     <tbody>
       <tr>
         <td><span class="xref">System.Collections.Generic.Dictionary</span>&lt;U, V&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Kinstrife_InventoryManagement_SlotInventory_3_Values_" data-uid="Kinstrife.InventoryManagement.SlotInventory`3.Values*"></a>
+  <h4 id="Kinstrife_InventoryManagement_SlotInventory_3_Values" data-uid="Kinstrife.InventoryManagement.SlotInventory`3.Values">Values</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IEnumerable&lt;V&gt; Values { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;V&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -509,6 +629,48 @@
       <tr>
         <td><span class="xref">System.UInt32</span></td>
         <td><span class="parametername">amount</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Kinstrife_InventoryManagement_SlotInventory_3_ContainsKey_" data-uid="Kinstrife.InventoryManagement.SlotInventory`3.ContainsKey*"></a>
+  <h4 id="Kinstrife_InventoryManagement_SlotInventory_3_ContainsKey__1_" data-uid="Kinstrife.InventoryManagement.SlotInventory`3.ContainsKey(`1)">ContainsKey(U)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool ContainsKey(U key)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">U</span></td>
+        <td><span class="parametername">key</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -858,7 +1020,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public IReadOnlyList&lt;U&gt; GetSlots(T identifier)</code></pre>
+    <pre><code class="lang-csharp hljs">public IEnumerable&lt;U&gt; GetSlots(T identifier)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -887,7 +1049,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Generic.IReadOnlyList</span>&lt;U&gt;</td>
+        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;U&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -913,6 +1075,38 @@
     <tbody>
       <tr>
         <td><span class="xref">System.UInt32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Kinstrife_InventoryManagement_SlotInventory_3_StorageChanged_" data-uid="Kinstrife.InventoryManagement.SlotInventory`3.StorageChanged*"></a>
+  <h4 id="Kinstrife_InventoryManagement_SlotInventory_3_StorageChanged__0_System_Int32_" data-uid="Kinstrife.InventoryManagement.SlotInventory`3.StorageChanged(`0,System.Int32)">StorageChanged(T, Int32)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void StorageChanged(T identifier, int amount)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">T</span></td>
+        <td><span class="parametername">identifier</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">amount</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -1360,6 +1554,53 @@
   </table>
   
   
+  <a id="Kinstrife_InventoryManagement_SlotInventory_3_TryGetValue_" data-uid="Kinstrife.InventoryManagement.SlotInventory`3.TryGetValue*"></a>
+  <h4 id="Kinstrife_InventoryManagement_SlotInventory_3_TryGetValue__1__2__" data-uid="Kinstrife.InventoryManagement.SlotInventory`3.TryGetValue(`1,`2@)">TryGetValue(U, out V)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool TryGetValue(U key, out V value)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">U</span></td>
+        <td><span class="parametername">key</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">V</span></td>
+        <td><span class="parametername">value</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
   <a id="Kinstrife_InventoryManagement_SlotInventory_3_TryRemove_" data-uid="Kinstrife.InventoryManagement.SlotInventory`3.TryRemove*"></a>
   <h4 id="Kinstrife_InventoryManagement_SlotInventory_3_TryRemove__0__1_System_UInt32_System_Boolean_System_Boolean_" data-uid="Kinstrife.InventoryManagement.SlotInventory`3.TryRemove(`0,`1,System.UInt32,System.Boolean,System.Boolean)">TryRemove(T, U, UInt32, Boolean, Boolean)</h4>
   <div class="markdown level1 summary"></div>
@@ -1582,6 +1823,12 @@
   </div>
   <div>
       <span class="xref">INotifyPropertyChanged</span>
+  </div>
+  <div>
+      <span class="xref">System.Collections.Generic.IReadOnlyDictionary&lt;TKey, TValue&gt;</span>
+  </div>
+  <div>
+      <span class="xref">System.Collections.Generic.IReadOnlyCollection&lt;T&gt;</span>
   </div>
   <div>
       <span class="xref">System.Collections.Generic.IEnumerable&lt;T&gt;</span>

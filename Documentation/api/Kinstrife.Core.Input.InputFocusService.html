@@ -1,0 +1,524 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class InputFocusService
+   | Kinstrife </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class InputFocusService
+   | Kinstrife ">
+    <meta name="generator" content="docfx 2.56.2.0">
+    
+    <link rel="shortcut icon" href="../../favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet"> 
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../index.html">
+                <img id="logo" class="svg" src="../../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Kinstrife.Core.Input.InputFocusService">
+  
+  
+  <h1 id="Kinstrife_Core_Input_InputFocusService" data-uid="Kinstrife.Core.Input.InputFocusService" class="text-break">Class InputFocusService
+  </h1>
+  <div class="markdown level0 summary"><p>Input focus controller settings for current</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><a class="xref" href="Kinstrife.Messaging.ServiceBehaviour-2.html">ServiceBehaviour</a>&lt;<span class="xref">System.Boolean</span>, <a class="xref" href="Kinstrife.Core.Input.InputFocusState.html">InputFocusState</a>&gt;</div>
+    <div class="level2"><span class="xref">InputFocusService</span></div>
+  </div>
+  <div classs="implements">
+    <h5>Implements</h5>
+    <div><a class="xref" href="Kinstrife.Core.DependencyInjection.IInjectable.html">IInjectable</a></div>
+    <div><a class="xref" href="Kinstrife.Core.DependencyInjection.IInitializable.html">IInitializable</a></div>
+    <div><a class="xref" href="Kinstrife.Core.DependencyInjection.IDependent.html">IDependent</a></div>
+    <div><a class="xref" href="Kinstrife.Core.Input.IInputHandler.html">IInputHandler</a></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="Kinstrife.Messaging.ServiceBehaviour-2.html#Kinstrife_Messaging_ServiceBehaviour_2_server">ServiceBehaviour&lt;Boolean, InputFocusState&gt;.server</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.Messaging.ServiceBehaviour-2.html#Kinstrife_Messaging_ServiceBehaviour_2_descriptor">ServiceBehaviour&lt;Boolean, InputFocusState&gt;.descriptor</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.Messaging.ServiceBehaviour-2.html#Kinstrife_Messaging_ServiceBehaviour_2_Inject_Kinstrife_Messaging_IServiceServer__0__1__">ServiceBehaviour&lt;Boolean, InputFocusState&gt;.Inject(IServiceServer&lt;Boolean, InputFocusState&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.Messaging.ServiceBehaviour-2.html#Kinstrife_Messaging_ServiceBehaviour_2_Initialized">ServiceBehaviour&lt;Boolean, InputFocusState&gt;.Initialized</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.Messaging.ServiceBehaviour-2.html#Kinstrife_Messaging_ServiceBehaviour_2_Initialize">ServiceBehaviour&lt;Boolean, InputFocusState&gt;.Initialize()</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.Messaging.ServiceBehaviour-2.html#Kinstrife_Messaging_ServiceBehaviour_2_HandleRequest__1_">ServiceBehaviour&lt;Boolean, InputFocusState&gt;.HandleRequest(InputFocusState)</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.Messaging.ServiceBehaviour-2.html#Kinstrife_Messaging_ServiceBehaviour_2_OnDestroy">ServiceBehaviour&lt;Boolean, InputFocusState&gt;.OnDestroy()</a>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Kinstrife.Core.Input.html">Kinstrife.Core.Input</a></h6>
+  <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
+  <h5 id="Kinstrife_Core_Input_InputFocusService_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class InputFocusService : ServiceBehaviour&lt;bool, InputFocusState&gt;, IInjectable, IInitializable, IDependent, IInputHandler</code></pre>
+  </div>
+  <h3 id="constructors">Constructors
+  </h3>
+  
+  
+  <a id="Kinstrife_Core_Input_InputFocusService__ctor_" data-uid="Kinstrife.Core.Input.InputFocusService.#ctor*"></a>
+  <h4 id="Kinstrife_Core_Input_InputFocusService__ctor" data-uid="Kinstrife.Core.Input.InputFocusService.#ctor">InputFocusService()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public InputFocusService()</code></pre>
+  </div>
+  <h3 id="fields">Fields
+  </h3>
+  
+  
+  <h4 id="Kinstrife_Core_Input_InputFocusService_OnTransition" data-uid="Kinstrife.Core.Input.InputFocusService.OnTransition">OnTransition</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Action&lt;UniTask&lt;bool&gt;&gt; OnTransition</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Action</span>&lt;<span class="xref">UniTask</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="Kinstrife_Core_Input_InputFocusService_OnTransitionEnd" data-uid="Kinstrife.Core.Input.InputFocusService.OnTransitionEnd">OnTransitionEnd</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Action&lt;InputFocusState, InputFocusState&gt; OnTransitionEnd</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Action</span>&lt;<a class="xref" href="Kinstrife.Core.Input.InputFocusState.html">InputFocusState</a>, <a class="xref" href="Kinstrife.Core.Input.InputFocusState.html">InputFocusState</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="Kinstrife_Core_Input_InputFocusService_OnTransitionStart" data-uid="Kinstrife.Core.Input.InputFocusService.OnTransitionStart">OnTransitionStart</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Action&lt;InputFocusState, InputFocusState&gt; OnTransitionStart</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Action</span>&lt;<a class="xref" href="Kinstrife.Core.Input.InputFocusState.html">InputFocusState</a>, <a class="xref" href="Kinstrife.Core.Input.InputFocusState.html">InputFocusState</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="properties">Properties
+  </h3>
+  
+  
+  <a id="Kinstrife_Core_Input_InputFocusService_ActiveFocusState_" data-uid="Kinstrife.Core.Input.InputFocusService.ActiveFocusState*"></a>
+  <h4 id="Kinstrife_Core_Input_InputFocusService_ActiveFocusState" data-uid="Kinstrife.Core.Input.InputFocusService.ActiveFocusState">ActiveFocusState</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public InputFocusState ActiveFocusState { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Kinstrife.Core.Input.InputFocusState.html">InputFocusState</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Kinstrife_Core_Input_InputFocusService_FlowGraph_" data-uid="Kinstrife.Core.Input.InputFocusService.FlowGraph*"></a>
+  <h4 id="Kinstrife_Core_Input_InputFocusService_FlowGraph" data-uid="Kinstrife.Core.Input.InputFocusService.FlowGraph">FlowGraph</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public FreeFlowGraphAsync FlowGraph { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Kinstrife.StateFlow.FreeFlowGraphAsync.html">FreeFlowGraphAsync</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  
+  
+  <a id="Kinstrife_Core_Input_InputFocusService_DisableInput_" data-uid="Kinstrife.Core.Input.InputFocusService.DisableInput*"></a>
+  <h4 id="Kinstrife_Core_Input_InputFocusService_DisableInput" data-uid="Kinstrife.Core.Input.InputFocusService.DisableInput">DisableInput()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void DisableInput()</code></pre>
+  </div>
+  
+  
+  <a id="Kinstrife_Core_Input_InputFocusService_EnableInput_" data-uid="Kinstrife.Core.Input.InputFocusService.EnableInput*"></a>
+  <h4 id="Kinstrife_Core_Input_InputFocusService_EnableInput" data-uid="Kinstrife.Core.Input.InputFocusService.EnableInput">EnableInput()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void EnableInput()</code></pre>
+  </div>
+  
+  
+  <a id="Kinstrife_Core_Input_InputFocusService_HandleRequest_" data-uid="Kinstrife.Core.Input.InputFocusService.HandleRequest*"></a>
+  <h4 id="Kinstrife_Core_Input_InputFocusService_HandleRequest_Kinstrife_Core_Input_InputFocusState_" data-uid="Kinstrife.Core.Input.InputFocusService.HandleRequest(Kinstrife.Core.Input.InputFocusState)">HandleRequest(InputFocusState)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override UniTask&lt;bool&gt; HandleRequest(InputFocusState payload)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Kinstrife.Core.Input.InputFocusState.html">InputFocusState</a></td>
+        <td><span class="parametername">payload</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">UniTask</span>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">Kinstrife.Messaging.ServiceBehaviour&lt;System.Boolean, Kinstrife.Core.Input.InputFocusState&gt;.HandleRequest(Kinstrife.Core.Input.InputFocusState)</span></div>
+  
+  
+  <a id="Kinstrife_Core_Input_InputFocusService_Initialize_" data-uid="Kinstrife.Core.Input.InputFocusService.Initialize*"></a>
+  <h4 id="Kinstrife_Core_Input_InputFocusService_Initialize" data-uid="Kinstrife.Core.Input.InputFocusService.Initialize">Initialize()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override void Initialize()</code></pre>
+  </div>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">Kinstrife.Messaging.ServiceBehaviour&lt;System.Boolean, Kinstrife.Core.Input.InputFocusState&gt;.Initialize()</span></div>
+  
+  
+  <a id="Kinstrife_Core_Input_InputFocusService_Inject_" data-uid="Kinstrife.Core.Input.InputFocusService.Inject*"></a>
+  <h4 id="Kinstrife_Core_Input_InputFocusService_Inject_Kinstrife_Core_Input_InputConfig_Kinstrife_Messaging_IServiceServer_System_Boolean_Kinstrife_Core_Input_InputFocusState__Kinstrife_Messaging_IPublisher_Kinstrife_Core_Input_InputFocusState__Kinstrife_Core_Input_KinstrifeInputActions_Kinstrife_Application_ApplicationFlow_" data-uid="Kinstrife.Core.Input.InputFocusService.Inject(Kinstrife.Core.Input.InputConfig,Kinstrife.Messaging.IServiceServer{System.Boolean,Kinstrife.Core.Input.InputFocusState},Kinstrife.Messaging.IPublisher{Kinstrife.Core.Input.InputFocusState},Kinstrife.Core.Input.KinstrifeInputActions,Kinstrife.Application.ApplicationFlow)">Inject(InputConfig, IServiceServer&lt;Boolean, InputFocusState&gt;, IPublisher&lt;InputFocusState&gt;, KinstrifeInputActions, ApplicationFlow)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Inject(InputConfig config, IServiceServer&lt;bool, InputFocusState&gt; server, IPublisher&lt;InputFocusState&gt; publisher, KinstrifeInputActions inputActions, ApplicationFlow applicationFlow)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Kinstrife.Core.Input.InputConfig.html">InputConfig</a></td>
+        <td><span class="parametername">config</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Kinstrife.Messaging.IServiceServer-2.html">IServiceServer</a>&lt;<span class="xref">System.Boolean</span>, <a class="xref" href="Kinstrife.Core.Input.InputFocusState.html">InputFocusState</a>&gt;</td>
+        <td><span class="parametername">server</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Kinstrife.Messaging.IPublisher-1.html">IPublisher</a>&lt;<a class="xref" href="Kinstrife.Core.Input.InputFocusState.html">InputFocusState</a>&gt;</td>
+        <td><span class="parametername">publisher</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Kinstrife.Core.Input.KinstrifeInputActions.html">KinstrifeInputActions</a></td>
+        <td><span class="parametername">inputActions</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Kinstrife.Application.ApplicationFlow.html">ApplicationFlow</a></td>
+        <td><span class="parametername">applicationFlow</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Kinstrife_Core_Input_InputFocusService_InternalTryChangeStateAsync_" data-uid="Kinstrife.Core.Input.InputFocusService.InternalTryChangeStateAsync*"></a>
+  <h4 id="Kinstrife_Core_Input_InputFocusService_InternalTryChangeStateAsync_Kinstrife_Core_Input_InputFocusState_System_Boolean_System_Int32_" data-uid="Kinstrife.Core.Input.InputFocusService.InternalTryChangeStateAsync(Kinstrife.Core.Input.InputFocusState,System.Boolean,System.Int32)">InternalTryChangeStateAsync(InputFocusState, Boolean, Int32)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public UniTask&lt;bool&gt; InternalTryChangeStateAsync(InputFocusState state, bool overrideTransition, int durationMs = -1)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Kinstrife.Core.Input.InputFocusState.html">InputFocusState</a></td>
+        <td><span class="parametername">state</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">overrideTransition</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">durationMs</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">UniTask</span>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Kinstrife_Core_Input_InputFocusService_OnDestroy_" data-uid="Kinstrife.Core.Input.InputFocusService.OnDestroy*"></a>
+  <h4 id="Kinstrife_Core_Input_InputFocusService_OnDestroy" data-uid="Kinstrife.Core.Input.InputFocusService.OnDestroy">OnDestroy()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override void OnDestroy()</code></pre>
+  </div>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">Kinstrife.Messaging.ServiceBehaviour&lt;System.Boolean, Kinstrife.Core.Input.InputFocusState&gt;.OnDestroy()</span></div>
+  
+  
+  <a id="Kinstrife_Core_Input_InputFocusService_OnEnteringState_" data-uid="Kinstrife.Core.Input.InputFocusService.OnEnteringState*"></a>
+  <h4 id="Kinstrife_Core_Input_InputFocusService_OnEnteringState_Kinstrife_StateFlow_IFlowState_" data-uid="Kinstrife.Core.Input.InputFocusService.OnEnteringState(Kinstrife.StateFlow.IFlowState)">OnEnteringState(IFlowState)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected void OnEnteringState(IFlowState state)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Kinstrife.StateFlow.IFlowState.html">IFlowState</a></td>
+        <td><span class="parametername">state</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <a class="xref" href="Kinstrife.Core.DependencyInjection.IInjectable.html">IInjectable</a>
+  </div>
+  <div>
+      <a class="xref" href="Kinstrife.Core.DependencyInjection.IInitializable.html">IInitializable</a>
+  </div>
+  <div>
+      <a class="xref" href="Kinstrife.Core.DependencyInjection.IDependent.html">IDependent</a>
+  </div>
+  <div>
+      <a class="xref" href="Kinstrife.Core.Input.IInputHandler.html">IInputHandler</a>
+  </div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+  </body>
+</html>

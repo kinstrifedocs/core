@@ -1,0 +1,528 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class LimitedInventory&lt;T&gt;
+   | Kinstrife </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class LimitedInventory&lt;T&gt;
+   | Kinstrife ">
+    <meta name="generator" content="docfx 2.56.2.0">
+    
+    <link rel="shortcut icon" href="../../favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet"> 
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../index.html">
+                <img id="logo" class="svg" src="../../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Kinstrife.InventoryManagement.LimitedInventory`1">
+  
+  
+  <h1 id="Kinstrife_InventoryManagement_LimitedInventory_1" data-uid="Kinstrife.InventoryManagement.LimitedInventory`1" class="text-break">Class LimitedInventory&lt;T&gt;
+  </h1>
+  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><a class="xref" href="Kinstrife.InventoryManagement.UnlimitedInventory-1.html">UnlimitedInventory</a>&lt;T&gt;</div>
+    <div class="level2"><span class="xref">LimitedInventory&lt;T&gt;</span></div>
+  </div>
+  <div classs="implements">
+    <h5>Implements</h5>
+    <div><span class="xref">INotifyPropertyChanged</span></div>
+    <div><span class="xref">System.Collections.Generic.IReadOnlyDictionary</span>&lt;T, <span class="xref">System.UInt32</span>&gt;</div>
+    <div><span class="xref">System.Collections.Generic.IReadOnlyCollection</span>&lt;<span class="xref">System.Collections.Generic.KeyValuePair</span>&lt;T, <span class="xref">System.UInt32</span>&gt;&gt;</div>
+    <div><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<span class="xref">System.Collections.Generic.KeyValuePair</span>&lt;T, <span class="xref">System.UInt32</span>&gt;&gt;</div>
+    <div><span class="xref">System.Collections.IEnumerable</span></div>
+    <div><a class="xref" href="Kinstrife.InventoryManagement.ILimitedInventory-1.html">ILimitedInventory</a>&lt;T&gt;</div>
+    <div><a class="xref" href="Kinstrife.InventoryManagement.IInventory-1.html">IInventory</a>&lt;T&gt;</div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="Kinstrife.InventoryManagement.UnlimitedInventory-1.html#Kinstrife_InventoryManagement_UnlimitedInventory_1_Storage">UnlimitedInventory&lt;T&gt;.Storage</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.InventoryManagement.UnlimitedInventory-1.html#Kinstrife_InventoryManagement_UnlimitedInventory_1_PropertyChanged">UnlimitedInventory&lt;T&gt;.PropertyChanged</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.InventoryManagement.UnlimitedInventory-1.html#Kinstrife_InventoryManagement_UnlimitedInventory_1_OnStorageChanged">UnlimitedInventory&lt;T&gt;.OnStorageChanged</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.InventoryManagement.UnlimitedInventory-1.html#Kinstrife_InventoryManagement_UnlimitedInventory_1_EntryTypeCount">UnlimitedInventory&lt;T&gt;.EntryTypeCount</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.InventoryManagement.UnlimitedInventory-1.html#Kinstrife_InventoryManagement_UnlimitedInventory_1_Contains__0_System_UInt32_">UnlimitedInventory&lt;T&gt;.Contains(T, UInt32)</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.InventoryManagement.UnlimitedInventory-1.html#Kinstrife_InventoryManagement_UnlimitedInventory_1_TryExchange__0__0_System_UInt32_System_UInt32_">UnlimitedInventory&lt;T&gt;.TryExchange(T, T, UInt32, UInt32)</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.InventoryManagement.UnlimitedInventory-1.html#Kinstrife_InventoryManagement_UnlimitedInventory_1_TryRemove__0_System_UInt32_System_Boolean_">UnlimitedInventory&lt;T&gt;.TryRemove(T, UInt32, Boolean)</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.InventoryManagement.UnlimitedInventory-1.html#Kinstrife_InventoryManagement_UnlimitedInventory_1_TryClear">UnlimitedInventory&lt;T&gt;.TryClear()</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.InventoryManagement.UnlimitedInventory-1.html#Kinstrife_InventoryManagement_UnlimitedInventory_1_GetAmount__0_">UnlimitedInventory&lt;T&gt;.GetAmount(T)</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.InventoryManagement.UnlimitedInventory-1.html#Kinstrife_InventoryManagement_UnlimitedInventory_1_NotifyPropertyChanged__0_System_Int32_">UnlimitedInventory&lt;T&gt;.NotifyPropertyChanged(T, Int32)</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.InventoryManagement.UnlimitedInventory-1.html#Kinstrife_InventoryManagement_UnlimitedInventory_1_Keys">UnlimitedInventory&lt;T&gt;.Keys</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.InventoryManagement.UnlimitedInventory-1.html#Kinstrife_InventoryManagement_UnlimitedInventory_1_Values">UnlimitedInventory&lt;T&gt;.Values</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.InventoryManagement.UnlimitedInventory-1.html#Kinstrife_InventoryManagement_UnlimitedInventory_1_Count">UnlimitedInventory&lt;T&gt;.Count</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.InventoryManagement.UnlimitedInventory-1.html#Kinstrife_InventoryManagement_UnlimitedInventory_1_Item__0_">UnlimitedInventory&lt;T&gt;.Item[T]</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.InventoryManagement.UnlimitedInventory-1.html#Kinstrife_InventoryManagement_UnlimitedInventory_1_GetEnumerator">UnlimitedInventory&lt;T&gt;.GetEnumerator()</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.InventoryManagement.UnlimitedInventory-1.html#Kinstrife_InventoryManagement_UnlimitedInventory_1_System_Collections_IEnumerable_GetEnumerator">UnlimitedInventory&lt;T&gt;.IEnumerable.GetEnumerator()</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.InventoryManagement.UnlimitedInventory-1.html#Kinstrife_InventoryManagement_UnlimitedInventory_1_ContainsKey__0_">UnlimitedInventory&lt;T&gt;.ContainsKey(T)</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.InventoryManagement.UnlimitedInventory-1.html#Kinstrife_InventoryManagement_UnlimitedInventory_1_TryGetValue__0_System_UInt32__">UnlimitedInventory&lt;T&gt;.TryGetValue(T, UInt32)</a>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Kinstrife.InventoryManagement.html">Kinstrife.InventoryManagement</a></h6>
+  <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
+  <h5 id="Kinstrife_InventoryManagement_LimitedInventory_1_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public abstract class LimitedInventory&lt;T&gt; : UnlimitedInventory&lt;T&gt;, INotifyPropertyChanged, IReadOnlyDictionary&lt;T, uint&gt;, IReadOnlyCollection&lt;KeyValuePair&lt;T, uint&gt;&gt;, IEnumerable&lt;KeyValuePair&lt;T, uint&gt;&gt;, IEnumerable, ILimitedInventory&lt;T&gt;, IInventory&lt;T&gt;</code></pre>
+  </div>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="properties">Properties
+  </h3>
+  
+  
+  <a id="Kinstrife_InventoryManagement_LimitedInventory_1_FreeCapacity_" data-uid="Kinstrife.InventoryManagement.LimitedInventory`1.FreeCapacity*"></a>
+  <h4 id="Kinstrife_InventoryManagement_LimitedInventory_1_FreeCapacity" data-uid="Kinstrife.InventoryManagement.LimitedInventory`1.FreeCapacity">FreeCapacity</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public abstract float FreeCapacity { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  
+  
+  <a id="Kinstrife_InventoryManagement_LimitedInventory_1_AvailableCapacity_" data-uid="Kinstrife.InventoryManagement.LimitedInventory`1.AvailableCapacity*"></a>
+  <h4 id="Kinstrife_InventoryManagement_LimitedInventory_1_AvailableCapacity__0_" data-uid="Kinstrife.InventoryManagement.LimitedInventory`1.AvailableCapacity(`0)">AvailableCapacity(T)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public abstract uint AvailableCapacity(T identifier)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">T</span></td>
+        <td><span class="parametername">identifier</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.UInt32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Kinstrife_InventoryManagement_LimitedInventory_1_CanFit_" data-uid="Kinstrife.InventoryManagement.LimitedInventory`1.CanFit*"></a>
+  <h4 id="Kinstrife_InventoryManagement_LimitedInventory_1_CanFit__0_System_UInt32_" data-uid="Kinstrife.InventoryManagement.LimitedInventory`1.CanFit(`0,System.UInt32)">CanFit(T, UInt32)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool CanFit(T identifier, uint amount = 1U)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">T</span></td>
+        <td><span class="parametername">identifier</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.UInt32</span></td>
+        <td><span class="parametername">amount</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Kinstrife_InventoryManagement_LimitedInventory_1_ExchangeIsPossible_" data-uid="Kinstrife.InventoryManagement.LimitedInventory`1.ExchangeIsPossible*"></a>
+  <h4 id="Kinstrife_InventoryManagement_LimitedInventory_1_ExchangeIsPossible__0__0_System_UInt32_System_UInt32_" data-uid="Kinstrife.InventoryManagement.LimitedInventory`1.ExchangeIsPossible(`0,`0,System.UInt32,System.UInt32)">ExchangeIsPossible(T, T, UInt32, UInt32)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override bool ExchangeIsPossible(T toAdd, T toRemove, uint amountToAdd = 1U, uint amountToRemove = 1U)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">T</span></td>
+        <td><span class="parametername">toAdd</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">T</span></td>
+        <td><span class="parametername">toRemove</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.UInt32</span></td>
+        <td><span class="parametername">amountToAdd</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.UInt32</span></td>
+        <td><span class="parametername">amountToRemove</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">Kinstrife.InventoryManagement.UnlimitedInventory&lt;T&gt;.ExchangeIsPossible(T, T, System.UInt32, System.UInt32)</span></div>
+  
+  
+  <a id="Kinstrife_InventoryManagement_LimitedInventory_1_TryAdd_" data-uid="Kinstrife.InventoryManagement.LimitedInventory`1.TryAdd*"></a>
+  <h4 id="Kinstrife_InventoryManagement_LimitedInventory_1_TryAdd__0_System_UInt32_" data-uid="Kinstrife.InventoryManagement.LimitedInventory`1.TryAdd(`0,System.UInt32)">TryAdd(T, UInt32)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override bool TryAdd(T identifier, uint amount = 1U)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">T</span></td>
+        <td><span class="parametername">identifier</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.UInt32</span></td>
+        <td><span class="parametername">amount</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">Kinstrife.InventoryManagement.UnlimitedInventory&lt;T&gt;.TryAdd(T, System.UInt32)</span></div>
+  
+  
+  <a id="Kinstrife_InventoryManagement_LimitedInventory_1_TryAdd_" data-uid="Kinstrife.InventoryManagement.LimitedInventory`1.TryAdd*"></a>
+  <h4 id="Kinstrife_InventoryManagement_LimitedInventory_1_TryAdd__0_System_UInt32_System_Boolean_" data-uid="Kinstrife.InventoryManagement.LimitedInventory`1.TryAdd(`0,System.UInt32,System.Boolean)">TryAdd(T, UInt32, Boolean)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool TryAdd(T identifier, uint amount = 1U, bool allOrNothing = true)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">T</span></td>
+        <td><span class="parametername">identifier</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.UInt32</span></td>
+        <td><span class="parametername">amount</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">allOrNothing</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <span class="xref">INotifyPropertyChanged</span>
+  </div>
+  <div>
+      <span class="xref">System.Collections.Generic.IReadOnlyDictionary&lt;TKey, TValue&gt;</span>
+  </div>
+  <div>
+      <span class="xref">System.Collections.Generic.IReadOnlyCollection&lt;T&gt;</span>
+  </div>
+  <div>
+      <span class="xref">System.Collections.Generic.IEnumerable&lt;T&gt;</span>
+  </div>
+  <div>
+      <span class="xref">System.Collections.IEnumerable</span>
+  </div>
+  <div>
+      <a class="xref" href="Kinstrife.InventoryManagement.ILimitedInventory-1.html">ILimitedInventory&lt;T&gt;</a>
+  </div>
+  <div>
+      <a class="xref" href="Kinstrife.InventoryManagement.IInventory-1.html">IInventory&lt;T&gt;</a>
+  </div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+  </body>
+</html>

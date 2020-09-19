@@ -78,19 +78,44 @@
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><span class="xref">CameraRig</span></div>
+    <div class="level1"><a class="xref" href="Kinstrife.Messaging.ServiceBehaviour-2.html">ServiceBehaviour</a>&lt;<span class="xref">System.Boolean</span>, <a class="xref" href="Kinstrife.Core.Camera.CameraState.html">CameraState</a>&gt;</div>
+    <div class="level2"><span class="xref">CameraRig</span></div>
   </div>
   <div classs="implements">
     <h5>Implements</h5>
-    <div><a class="xref" href="Kinstrife.Core.DependencyInjection.IInjectable.html">IInjectable</a></div>
     <div><a class="xref" href="Kinstrife.Core.DependencyInjection.IInitializable.html">IInitializable</a></div>
+    <div><a class="xref" href="Kinstrife.Core.DependencyInjection.IInjectable.html">IInjectable</a></div>
     <div><a class="xref" href="Kinstrife.Core.DependencyInjection.IDependent.html">IDependent</a></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="Kinstrife.Messaging.ServiceBehaviour-2.html#Kinstrife_Messaging_ServiceBehaviour_2_server">ServiceBehaviour&lt;Boolean, CameraState&gt;.server</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.Messaging.ServiceBehaviour-2.html#Kinstrife_Messaging_ServiceBehaviour_2_descriptor">ServiceBehaviour&lt;Boolean, CameraState&gt;.descriptor</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.Messaging.ServiceBehaviour-2.html#Kinstrife_Messaging_ServiceBehaviour_2_Inject_Kinstrife_Messaging_IServiceServer__0__1__">ServiceBehaviour&lt;Boolean, CameraState&gt;.Inject(IServiceServer&lt;Boolean, CameraState&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.Messaging.ServiceBehaviour-2.html#Kinstrife_Messaging_ServiceBehaviour_2_Initialized">ServiceBehaviour&lt;Boolean, CameraState&gt;.Initialized</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.Messaging.ServiceBehaviour-2.html#Kinstrife_Messaging_ServiceBehaviour_2_Initialize">ServiceBehaviour&lt;Boolean, CameraState&gt;.Initialize()</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.Messaging.ServiceBehaviour-2.html#Kinstrife_Messaging_ServiceBehaviour_2_HandleRequest__1_">ServiceBehaviour&lt;Boolean, CameraState&gt;.HandleRequest(CameraState)</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.Messaging.ServiceBehaviour-2.html#Kinstrife_Messaging_ServiceBehaviour_2_OnDestroy">ServiceBehaviour&lt;Boolean, CameraState&gt;.OnDestroy()</a>
+    </div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Kinstrife.Core.Camera.html">Kinstrife.Core.Camera</a></h6>
   <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
   <h5 id="Kinstrife_Core_Camera_CameraRig_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class CameraRig : MonoBehaviour, IInjectable, IInitializable, IDependent</code></pre>
+    <pre><code class="lang-csharp hljs">public class CameraRig : ServiceBehaviour&lt;bool, CameraState&gt;, IInitializable, IInjectable, IDependent</code></pre>
   </div>
   <h3 id="fields">Fields
   </h3>
@@ -289,31 +314,6 @@
       </tr>
     </tbody>
   </table>
-  
-  
-  <a id="Kinstrife_Core_Camera_CameraRig_Initialized_" data-uid="Kinstrife.Core.Camera.CameraRig.Initialized*"></a>
-  <h4 id="Kinstrife_Core_Camera_CameraRig_Initialized" data-uid="Kinstrife.Core.Camera.CameraRig.Initialized">Initialized</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public bool Initialized { get; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Boolean</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
   <h3 id="methods">Methods
   </h3>
   
@@ -328,23 +328,13 @@
   </div>
   
   
-  <a id="Kinstrife_Core_Camera_CameraRig_Initialize_" data-uid="Kinstrife.Core.Camera.CameraRig.Initialize*"></a>
-  <h4 id="Kinstrife_Core_Camera_CameraRig_Initialize" data-uid="Kinstrife.Core.Camera.CameraRig.Initialize">Initialize()</h4>
+  <a id="Kinstrife_Core_Camera_CameraRig_HandleRequest_" data-uid="Kinstrife.Core.Camera.CameraRig.HandleRequest*"></a>
+  <h4 id="Kinstrife_Core_Camera_CameraRig_HandleRequest_Kinstrife_Core_Camera_CameraState_" data-uid="Kinstrife.Core.Camera.CameraRig.HandleRequest(Kinstrife.Core.Camera.CameraState)">HandleRequest(CameraState)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void Initialize()</code></pre>
-  </div>
-  
-  
-  <a id="Kinstrife_Core_Camera_CameraRig_Inject_" data-uid="Kinstrife.Core.Camera.CameraRig.Inject*"></a>
-  <h4 id="Kinstrife_Core_Camera_CameraRig_Inject_Kinstrife_Core_Camera_CameraConfig_Kinstrife_StateFlow_FlowGraphBase_" data-uid="Kinstrife.Core.Camera.CameraRig.Inject(Kinstrife.Core.Camera.CameraConfig,Kinstrife.StateFlow.FlowGraphBase)">Inject(CameraConfig, FlowGraphBase)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void Inject(CameraConfig config, FlowGraphBase flowGraph)</code></pre>
+    <pre><code class="lang-csharp hljs">protected override UniTask&lt;bool&gt; HandleRequest(CameraState payload)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -356,6 +346,55 @@
       </tr>
     </thead>
     <tbody>
+      <tr>
+        <td><a class="xref" href="Kinstrife.Core.Camera.CameraState.html">CameraState</a></td>
+        <td><span class="parametername">payload</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">UniTask</span>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">Kinstrife.Messaging.ServiceBehaviour&lt;System.Boolean, Kinstrife.Core.Camera.CameraState&gt;.HandleRequest(Kinstrife.Core.Camera.CameraState)</span></div>
+  
+  
+  <a id="Kinstrife_Core_Camera_CameraRig_Inject_" data-uid="Kinstrife.Core.Camera.CameraRig.Inject*"></a>
+  <h4 id="Kinstrife_Core_Camera_CameraRig_Inject_Kinstrife_Messaging_IServiceServer_System_Boolean_Kinstrife_Core_Camera_CameraState__Kinstrife_Core_Camera_CameraConfig_Kinstrife_StateFlow_FlowGraphBase_" data-uid="Kinstrife.Core.Camera.CameraRig.Inject(Kinstrife.Messaging.IServiceServer{System.Boolean,Kinstrife.Core.Camera.CameraState},Kinstrife.Core.Camera.CameraConfig,Kinstrife.StateFlow.FlowGraphBase)">Inject(IServiceServer&lt;Boolean, CameraState&gt;, CameraConfig, FlowGraphBase)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Inject(IServiceServer&lt;bool, CameraState&gt; server, CameraConfig config, FlowGraphBase flowGraph)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Kinstrife.Messaging.IServiceServer-2.html">IServiceServer</a>&lt;<span class="xref">System.Boolean</span>, <a class="xref" href="Kinstrife.Core.Camera.CameraState.html">CameraState</a>&gt;</td>
+        <td><span class="parametername">server</span></td>
+        <td></td>
+      </tr>
       <tr>
         <td><a class="xref" href="Kinstrife.Core.Camera.CameraConfig.html">CameraConfig</a></td>
         <td><span class="parametername">config</span></td>
@@ -370,10 +409,10 @@
   </table>
   <h3 id="implements">Implements</h3>
   <div>
-      <a class="xref" href="Kinstrife.Core.DependencyInjection.IInjectable.html">IInjectable</a>
+      <a class="xref" href="Kinstrife.Core.DependencyInjection.IInitializable.html">IInitializable</a>
   </div>
   <div>
-      <a class="xref" href="Kinstrife.Core.DependencyInjection.IInitializable.html">IInitializable</a>
+      <a class="xref" href="Kinstrife.Core.DependencyInjection.IInjectable.html">IInjectable</a>
   </div>
   <div>
       <a class="xref" href="Kinstrife.Core.DependencyInjection.IDependent.html">IDependent</a>

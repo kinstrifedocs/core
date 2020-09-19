@@ -73,11 +73,11 @@
   
   <h1 id="Kinstrife_Application_Module" data-uid="Kinstrife.Application.Module" class="text-break">Class Module
   </h1>
-  <div class="markdown level0 summary"><p>Handles application flow / flow of control in a single module
-Should abstract away anything from application flow so that other
-scripts in a module do not depend on it, i. e. requesting a change of GameMode,
-changing the timescale (including pausing/unpausing) etc. should all be done here</p>
-<p>TODO: Might need some sort of callback when loading starts but the module persists
+  <div class="markdown level0 summary"><p>Handles application flow / flow of control in a single module. Should abstract away anything from application flow so that other
+scripts in a module do not depend on it, i. e. requesting a change of GameMode, changing the timescale (including pausing/unpausing)
+etc. should all be done here.
+This is essentially an in-scene representation of <a class="xref" href="Kinstrife.Application.Module.html#Kinstrife_Application_Module_ModuleDefinition">ModuleDefinition</a>.
+TODO: Might need some sort of callback when loading starts but the module persists
 e. g. for the actor module, where unneeded actors for the next mode/scene can be cleared</p>
 </div>
   <div class="markdown level0 conceptual"></div>
@@ -85,6 +85,7 @@ e. g. for the actor module, where unneeded actors for the next mode/scene can be
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
     <div class="level1"><span class="xref">Module</span></div>
+      <div class="level2"><a class="xref" href="Kinstrife.Application.PrimaryModule.html">PrimaryModule</a></div>
   </div>
   <div classs="implements">
     <h5>Implements</h5>
@@ -148,32 +149,9 @@ e. g. for the actor module, where unneeded actors for the next mode/scene can be
   </table>
   
   
-  <h4 id="Kinstrife_Application_Module_OnCreation" data-uid="Kinstrife.Application.Module.OnCreation">OnCreation</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static Action&lt;Module, ModuleDefinition&gt; OnCreation</code></pre>
-  </div>
-  <h5 class="fieldValue">Field Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Action</span>&lt;<a class="xref" href="Kinstrife.Application.Module.html">Module</a>, <a class="xref" href="Kinstrife.Application.ModuleDefinition.html">ModuleDefinition</a>&gt;</td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
   <h4 id="Kinstrife_Application_Module_OnPauseChanged" data-uid="Kinstrife.Application.Module.OnPauseChanged">OnPauseChanged</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Fires when game was either paused (true) or unpaused (false)</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -197,7 +175,8 @@ e. g. for the actor module, where unneeded actors for the next mode/scene can be
   
   
   <h4 id="Kinstrife_Application_Module_OnPrimaryChanged" data-uid="Kinstrife.Application.Module.OnPrimaryChanged">OnPrimaryChanged</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Fires when module was either made primary (true) or non-primary (false)</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -297,7 +276,8 @@ e. g. for the actor module, where unneeded actors for the next mode/scene can be
   
   <a id="Kinstrife_Application_Module_ModuleDefinition_" data-uid="Kinstrife.Application.Module.ModuleDefinition*"></a>
   <h4 id="Kinstrife_Application_Module_ModuleDefinition" data-uid="Kinstrife.Application.Module.ModuleDefinition">ModuleDefinition</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Module static data</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -322,16 +302,6 @@ e. g. for the actor module, where unneeded actors for the next mode/scene can be
   </h3>
   
   
-  <a id="Kinstrife_Application_Module_InjectDependencies_" data-uid="Kinstrife.Application.Module.InjectDependencies*"></a>
-  <h4 id="Kinstrife_Application_Module_InjectDependencies" data-uid="Kinstrife.Application.Module.InjectDependencies">InjectDependencies()</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void InjectDependencies()</code></pre>
-  </div>
-  
-  
   <a id="Kinstrife_Application_Module_InstallContext_" data-uid="Kinstrife.Application.Module.InstallContext*"></a>
   <h4 id="Kinstrife_Application_Module_InstallContext" data-uid="Kinstrife.Application.Module.InstallContext">InstallContext()</h4>
   <div class="markdown level1 summary"></div>
@@ -342,45 +312,13 @@ e. g. for the actor module, where unneeded actors for the next mode/scene can be
   </div>
   
   
-  <a id="Kinstrife_Application_Module_InternalInitialize_" data-uid="Kinstrife.Application.Module.InternalInitialize*"></a>
-  <h4 id="Kinstrife_Application_Module_InternalInitialize_Kinstrife_Application_ApplicationFlow_Kinstrife_Application_TimeController_" data-uid="Kinstrife.Application.Module.InternalInitialize(Kinstrife.Application.ApplicationFlow,Kinstrife.Application.TimeController)">InternalInitialize(ApplicationFlow, TimeController)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void InternalInitialize(ApplicationFlow applicationFlow, TimeController timeController)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Kinstrife.Application.ApplicationFlow.html">ApplicationFlow</a></td>
-        <td><span class="parametername">applicationFlow</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="Kinstrife.Application.TimeController.html">TimeController</a></td>
-        <td><span class="parametername">timeController</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
   <a id="Kinstrife_Application_Module_MakePrimary_" data-uid="Kinstrife.Application.Module.MakePrimary*"></a>
   <h4 id="Kinstrife_Application_Module_MakePrimary_System_Boolean_" data-uid="Kinstrife.Application.Module.MakePrimary(System.Boolean)">MakePrimary(Boolean)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public abstract void MakePrimary(bool primary)</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual void MakePrimary(bool primary)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -412,7 +350,7 @@ e. g. for the actor module, where unneeded actors for the next mode/scene can be
   
   
   <a id="Kinstrife_Application_Module_PrimaryInitialization_" data-uid="Kinstrife.Application.Module.PrimaryInitialization*"></a>
-  <h4 id="Kinstrife_Application_Module_PrimaryInitialization" data-uid="Kinstrife.Application.Module.PrimaryInitialization">PrimaryInitialization()</h4>
+  <h4 id="Kinstrife_Application_Module_PrimaryInitialization_Kinstrife_Application_ModuleDefinition_" data-uid="Kinstrife.Application.Module.PrimaryInitialization(Kinstrife.Application.ModuleDefinition)">PrimaryInitialization(ModuleDefinition)</h4>
   <div class="markdown level1 summary"><p>Call all code that is necessary to make the module function as expected
 Make sure to utilize time-slicing to split expensive operations
 over multiple frames to maintain interactivity.
@@ -422,8 +360,25 @@ up in its proper order to avoid setup dependency issues.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public abstract IPromise PrimaryInitialization()</code></pre>
+    <pre><code class="lang-csharp hljs">public abstract UniTask PrimaryInitialization(ModuleDefinition nextPrimaryModule)</code></pre>
   </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Kinstrife.Application.ModuleDefinition.html">ModuleDefinition</a></td>
+        <td><span class="parametername">nextPrimaryModule</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   <h5 class="returns">Returns</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
@@ -434,7 +389,7 @@ up in its proper order to avoid setup dependency issues.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">IPromise</span></td>
+        <td><span class="xref">UniTask</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -511,18 +466,35 @@ up in its proper order to avoid setup dependency issues.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void RunInstallation()</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual void RunInstallation()</code></pre>
   </div>
   
   
   <a id="Kinstrife_Application_Module_SecondaryInitialization_" data-uid="Kinstrife.Application.Module.SecondaryInitialization*"></a>
-  <h4 id="Kinstrife_Application_Module_SecondaryInitialization" data-uid="Kinstrife.Application.Module.SecondaryInitialization">SecondaryInitialization()</h4>
+  <h4 id="Kinstrife_Application_Module_SecondaryInitialization_Kinstrife_Application_ModuleDefinition_" data-uid="Kinstrife.Application.Module.SecondaryInitialization(Kinstrife.Application.ModuleDefinition)">SecondaryInitialization(ModuleDefinition)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public abstract IPromise SecondaryInitialization()</code></pre>
+    <pre><code class="lang-csharp hljs">public abstract UniTask SecondaryInitialization(ModuleDefinition nextPrimaryModule)</code></pre>
   </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Kinstrife.Application.ModuleDefinition.html">ModuleDefinition</a></td>
+        <td><span class="parametername">nextPrimaryModule</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   <h5 class="returns">Returns</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
@@ -533,7 +505,7 @@ up in its proper order to avoid setup dependency issues.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">IPromise</span></td>
+        <td><span class="xref">UniTask</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -615,12 +587,12 @@ up in its proper order to avoid setup dependency issues.</p>
   
   
   <a id="Kinstrife_Application_Module_TrySwitchGameMode_" data-uid="Kinstrife.Application.Module.TrySwitchGameMode*"></a>
-  <h4 id="Kinstrife_Application_Module_TrySwitchGameMode_Kinstrife_Application_GameMode_System_Boolean_" data-uid="Kinstrife.Application.Module.TrySwitchGameMode(Kinstrife.Application.GameMode,System.Boolean)">TrySwitchGameMode(GameMode, Boolean)</h4>
+  <h4 id="Kinstrife_Application_Module_TrySwitchGameMode_Kinstrife_Application_GameMode_Kinstrife_Application_Location_System_Boolean_" data-uid="Kinstrife.Application.Module.TrySwitchGameMode(Kinstrife.Application.GameMode,Kinstrife.Application.Location,System.Boolean)">TrySwitchGameMode(GameMode, Location, Boolean)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void TrySwitchGameMode(GameMode gameMode, bool resetCurrent = false)</code></pre>
+    <pre><code class="lang-csharp hljs">public void TrySwitchGameMode(GameMode gameMode, Location location = null, bool resetCurrent = false)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -635,6 +607,11 @@ up in its proper order to avoid setup dependency issues.</p>
       <tr>
         <td><a class="xref" href="Kinstrife.Application.GameMode.html">GameMode</a></td>
         <td><span class="parametername">gameMode</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Kinstrife.Application.Location.html">Location</a></td>
+        <td><span class="parametername">location</span></td>
         <td></td>
       </tr>
       <tr>

@@ -79,7 +79,7 @@
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
     <div class="level1"><span class="xref">FlowGraphBase</span></div>
-      <div class="level2"><a class="xref" href="Kinstrife.StateFlow.FreeFlowgraph.html">FreeFlowgraph</a></div>
+      <div class="level2"><a class="xref" href="Kinstrife.StateFlow.FreeFlowGraph.html">FreeFlowGraph</a></div>
       <div class="level2"><a class="xref" href="Kinstrife.StateFlow.StatefulFlowgraph.html">StatefulFlowgraph</a></div>
   </div>
   <div classs="implements">
@@ -237,6 +237,54 @@ public abstract class FlowGraphBase : IStateMachine</code></pre>
     <tbody>
       <tr>
         <td><a class="xref" href="Kinstrife.StateFlow.FlowNode.html">FlowNode</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="Kinstrife_StateFlow_FlowGraphBase_transitionFrom" data-uid="Kinstrife.StateFlow.FlowGraphBase.transitionFrom">transitionFrom</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected StateID transitionFrom</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Kinstrife.StateFlow.StateID.html">StateID</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="Kinstrife_StateFlow_FlowGraphBase_transitionTo" data-uid="Kinstrife.StateFlow.FlowGraphBase.transitionTo">transitionTo</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected StateID transitionTo</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Kinstrife.StateFlow.StateID.html">StateID</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -813,6 +861,53 @@ public abstract class FlowGraphBase : IStateMachine</code></pre>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">protected void UpdateStateTraversals()</code></pre>
   </div>
+  
+  
+  <a id="Kinstrife_StateFlow_FlowGraphBase_ValidTransition_" data-uid="Kinstrife.StateFlow.FlowGraphBase.ValidTransition*"></a>
+  <h4 id="Kinstrife_StateFlow_FlowGraphBase_ValidTransition_Kinstrife_StateFlow_IFlowState_System_Boolean_" data-uid="Kinstrife.StateFlow.FlowGraphBase.ValidTransition(Kinstrife.StateFlow.IFlowState,System.Boolean)">ValidTransition(IFlowState, Boolean)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected bool ValidTransition(IFlowState target, bool force = false)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Kinstrife.StateFlow.IFlowState.html">IFlowState</a></td>
+        <td><span class="parametername">target</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">force</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   <h3 id="events">Events
   </h3>
   

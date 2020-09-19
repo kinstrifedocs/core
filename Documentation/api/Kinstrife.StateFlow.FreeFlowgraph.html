@@ -5,10 +5,10 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Class FreeFlowgraph
+    <title>Class FreeFlowGraph
    | Kinstrife </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Class FreeFlowgraph
+    <meta name="title" content="Class FreeFlowGraph
    | Kinstrife ">
     <meta name="generator" content="docfx 2.56.2.0">
     
@@ -68,10 +68,10 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="Kinstrife.StateFlow.FreeFlowgraph">
+            <article class="content wrap" id="_content" data-uid="Kinstrife.StateFlow.FreeFlowGraph">
   
   
-  <h1 id="Kinstrife_StateFlow_FreeFlowgraph" data-uid="Kinstrife.StateFlow.FreeFlowgraph" class="text-break">Class FreeFlowgraph
+  <h1 id="Kinstrife_StateFlow_FreeFlowGraph" data-uid="Kinstrife.StateFlow.FreeFlowGraph" class="text-break">Class FreeFlowGraph
   </h1>
   <div class="markdown level0 summary"></div>
   <div class="markdown level0 conceptual"></div>
@@ -79,7 +79,8 @@
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
     <div class="level1"><a class="xref" href="Kinstrife.StateFlow.FlowGraphBase.html">FlowGraphBase</a></div>
-    <div class="level2"><span class="xref">FreeFlowgraph</span></div>
+    <div class="level2"><span class="xref">FreeFlowGraph</span></div>
+      <div class="level3"><a class="xref" href="Kinstrife.StateFlow.FreeFlowGraphAsync.html">FreeFlowGraphAsync</a></div>
   </div>
   <div classs="implements">
     <h5>Implements</h5>
@@ -95,6 +96,12 @@
     </div>
     <div>
       <a class="xref" href="Kinstrife.StateFlow.FlowGraphBase.html#Kinstrife_StateFlow_FlowGraphBase_currentStateID">FlowGraphBase.currentStateID</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.StateFlow.FlowGraphBase.html#Kinstrife_StateFlow_FlowGraphBase_transitionFrom">FlowGraphBase.transitionFrom</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.StateFlow.FlowGraphBase.html#Kinstrife_StateFlow_FlowGraphBase_transitionTo">FlowGraphBase.transitionTo</a>
     </div>
     <div>
       <a class="xref" href="Kinstrife.StateFlow.FlowGraphBase.html#Kinstrife_StateFlow_FlowGraphBase_owner">FlowGraphBase.owner</a>
@@ -148,6 +155,9 @@
       <a class="xref" href="Kinstrife.StateFlow.FlowGraphBase.html#Kinstrife_StateFlow_FlowGraphBase_Transition_Kinstrife_StateFlow_FlowNode_">FlowGraphBase.Transition(FlowNode)</a>
     </div>
     <div>
+      <a class="xref" href="Kinstrife.StateFlow.FlowGraphBase.html#Kinstrife_StateFlow_FlowGraphBase_ValidTransition_Kinstrife_StateFlow_IFlowState_System_Boolean_">FlowGraphBase.ValidTransition(IFlowState, Boolean)</a>
+    </div>
+    <div>
       <a class="xref" href="Kinstrife.StateFlow.FlowGraphBase.html#Kinstrife_StateFlow_FlowGraphBase_UpdateStateTraversals">FlowGraphBase.UpdateStateTraversals()</a>
     </div>
     <div>
@@ -180,17 +190,17 @@
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Kinstrife.StateFlow.html">Kinstrife.StateFlow</a></h6>
   <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
-  <h5 id="Kinstrife_StateFlow_FreeFlowgraph_syntax">Syntax</h5>
+  <h5 id="Kinstrife_StateFlow_FreeFlowGraph_syntax">Syntax</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">[Serializable]
-public class FreeFlowgraph : FlowGraphBase, IStateMachine</code></pre>
+public class FreeFlowGraph : FlowGraphBase, IStateMachine</code></pre>
   </div>
   <h3 id="methods">Methods
   </h3>
   
   
-  <a id="Kinstrife_StateFlow_FreeFlowgraph_CanTransition_" data-uid="Kinstrife.StateFlow.FreeFlowgraph.CanTransition*"></a>
-  <h4 id="Kinstrife_StateFlow_FreeFlowgraph_CanTransition_Kinstrife_StateFlow_IFlowState_" data-uid="Kinstrife.StateFlow.FreeFlowgraph.CanTransition(Kinstrife.StateFlow.IFlowState)">CanTransition(IFlowState)</h4>
+  <a id="Kinstrife_StateFlow_FreeFlowGraph_CanTransition_" data-uid="Kinstrife.StateFlow.FreeFlowGraph.CanTransition*"></a>
+  <h4 id="Kinstrife_StateFlow_FreeFlowGraph_CanTransition_Kinstrife_StateFlow_IFlowState_" data-uid="Kinstrife.StateFlow.FreeFlowGraph.CanTransition(Kinstrife.StateFlow.IFlowState)">CanTransition(IFlowState)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -233,8 +243,8 @@ public class FreeFlowgraph : FlowGraphBase, IStateMachine</code></pre>
   <div><a class="xref" href="Kinstrife.StateFlow.FlowGraphBase.html#Kinstrife_StateFlow_FlowGraphBase_CanTransition_Kinstrife_StateFlow_IFlowState_">FlowGraphBase.CanTransition(IFlowState)</a></div>
   
   
-  <a id="Kinstrife_StateFlow_FreeFlowgraph_Initialize_" data-uid="Kinstrife.StateFlow.FreeFlowgraph.Initialize*"></a>
-  <h4 id="Kinstrife_StateFlow_FreeFlowgraph_Initialize_System_Boolean_Kinstrife_StateFlow_IFlowState_" data-uid="Kinstrife.StateFlow.FreeFlowgraph.Initialize(System.Boolean,Kinstrife.StateFlow.IFlowState)">Initialize(Boolean, IFlowState)</h4>
+  <a id="Kinstrife_StateFlow_FreeFlowGraph_Initialize_" data-uid="Kinstrife.StateFlow.FreeFlowGraph.Initialize*"></a>
+  <h4 id="Kinstrife_StateFlow_FreeFlowGraph_Initialize_System_Boolean_Kinstrife_StateFlow_IFlowState_" data-uid="Kinstrife.StateFlow.FreeFlowGraph.Initialize(System.Boolean,Kinstrife.StateFlow.IFlowState)">Initialize(Boolean, IFlowState)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -267,8 +277,8 @@ public class FreeFlowgraph : FlowGraphBase, IStateMachine</code></pre>
   <div><a class="xref" href="Kinstrife.StateFlow.FlowGraphBase.html#Kinstrife_StateFlow_FlowGraphBase_Initialize_System_Boolean_Kinstrife_StateFlow_IFlowState_">FlowGraphBase.Initialize(Boolean, IFlowState)</a></div>
   
   
-  <a id="Kinstrife_StateFlow_FreeFlowgraph_PossibleNextStates_" data-uid="Kinstrife.StateFlow.FreeFlowgraph.PossibleNextStates*"></a>
-  <h4 id="Kinstrife_StateFlow_FreeFlowgraph_PossibleNextStates" data-uid="Kinstrife.StateFlow.FreeFlowgraph.PossibleNextStates">PossibleNextStates()</h4>
+  <a id="Kinstrife_StateFlow_FreeFlowGraph_PossibleNextStates_" data-uid="Kinstrife.StateFlow.FreeFlowGraph.PossibleNextStates*"></a>
+  <h4 id="Kinstrife_StateFlow_FreeFlowGraph_PossibleNextStates" data-uid="Kinstrife.StateFlow.FreeFlowGraph.PossibleNextStates">PossibleNextStates()</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -294,8 +304,8 @@ public class FreeFlowgraph : FlowGraphBase, IStateMachine</code></pre>
   <div><a class="xref" href="Kinstrife.StateFlow.FlowGraphBase.html#Kinstrife_StateFlow_FlowGraphBase_PossibleNextStates">FlowGraphBase.PossibleNextStates()</a></div>
   
   
-  <a id="Kinstrife_StateFlow_FreeFlowgraph_TryTransition_" data-uid="Kinstrife.StateFlow.FreeFlowgraph.TryTransition*"></a>
-  <h4 id="Kinstrife_StateFlow_FreeFlowgraph_TryTransition_Kinstrife_StateFlow_IFlowState_" data-uid="Kinstrife.StateFlow.FreeFlowgraph.TryTransition(Kinstrife.StateFlow.IFlowState)">TryTransition(IFlowState)</h4>
+  <a id="Kinstrife_StateFlow_FreeFlowGraph_TryTransition_" data-uid="Kinstrife.StateFlow.FreeFlowGraph.TryTransition*"></a>
+  <h4 id="Kinstrife_StateFlow_FreeFlowGraph_TryTransition_Kinstrife_StateFlow_IFlowState_" data-uid="Kinstrife.StateFlow.FreeFlowGraph.TryTransition(Kinstrife.StateFlow.IFlowState)">TryTransition(IFlowState)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>

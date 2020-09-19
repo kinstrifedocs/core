@@ -66,10 +66,26 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="">
+            <article class="content wrap" id="_content" data-uid="inventory_management">
 <h1 id="inventory-basics">Inventory Basics</h1>
 
-<p>TODO</p>
+<blockquote>
+<p><code>&quot;com.kinstrife.core.inventory-management&quot;: &quot;file:/GameDev/Core/Packages/InventoryManagement&quot;</code></p>
+</blockquote>
+<p> </p>
+<p>This package handles boilerplate code for managing 'belongs to'-type relationships and transactions.</p>
+<h5 id="intro">Intro</h5>
+<p>In games, objects often have a 'belongs to'-type relationship: Player inventories, equipment, assigning functions to buildings etc. Similarly, many features in games can be broken down to transactions. Equipping items, buying from merchants, transferring people from one group to another can be described as the same action.</p>
+<h3 id="quickstart">Quickstart</h3>
+<p>This package contains generic abstract classes as <em>templates</em> - they are yours for the taking! In many cases, you only need to choose your inventory types and add a Dictionary field, perhaps with a MessagePack attribute for serialization. You can of course add further additional logic - but you don't have to Ü</p>
+<p>Currently implemented templates are:</p>
+<ul>
+<li>UnlimitedInventory: For when you just need to keep track of numbers</li>
+<li>LimitedInventory: Useful if you have something like a maximum capacity or other logic that limits whether something can be added</li>
+<li>SlotInventory: A classic for equippable items, but can have other versatile uses</li>
+</ul>
+<h3 id="interfaces">Interfaces</h3>
+<p>Functionality of this package is defined via interfaces. While in most cases inheriting from the templates above should be enough, you can simply implement the interface to ensure interoperability with all other inventories.</p>
 </article>
           </div>
           

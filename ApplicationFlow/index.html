@@ -5,9 +5,9 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Building blocks | Kinstrife </title>
+    <title>Kinstrife Application flow | Kinstrife </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Building blocks | Kinstrife ">
+    <meta name="title" content="Kinstrife Application flow | Kinstrife ">
     <meta name="generator" content="docfx 2.56.2.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
@@ -66,22 +66,47 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="">
-<h2 id="building-blocks">Building blocks</h2>
+            <article class="content wrap" id="_content" data-uid="application_flow_index">
+<h1 id="kinstrife-application-flow">Kinstrife Application flow</h1>
 
+<blockquote>
+<p><code>&quot;com.kinstrife.core.application-flow&quot;: &quot;file:/GameDev/Core/Packages/ApplicationFlow#1.0.0&quot;</code></p>
+</blockquote>
+<p> </p>
+<p>The application flow package enables large-scale modularization of Unity projects. At the same time, it enforces top-down control/calling of the code, which is difficult to maintain with traditional (MonoBehaviour) Unity projects. Lastly, in combination with the dependency injection package, it utilizes the principle of 'inversion of control' - a generic framework is the 'skeleton' of an application and more concrete implementations are filled in to create the 'meat' of the application.</p>
+<p>TL;DR: Main reasons</p>
+<ul>
+<li>Project modularization</li>
+<li>Top-down flow of control</li>
+<li>Generic extensible skeleton/framework</li>
+</ul>
+<p> </p>
+<h2 id="building-blocks">Building blocks</h2>
 <h3 id="game-modes">Game Modes</h3>
-<p>The game is a state machine, consisting of a defined set of modes as states, as well as transitions between them. This is implemented in the application flow package. Modes are per se abstract entities: They are essentially collections of Modules and their behavior is defined by the modules they contain.</p>
+<p>The application/game is essentially a sequence of multiple states, like the campaign map, combat, dialogue etc. Each of these states is a <em>GameMode</em>, which forms a meaningful combination of features - these features are not implemented by the <em>GameMode</em> itself though, but rather the <em>Modules</em> of which it consists.</p>
 <h3 id="modules">Modules</h3>
-<p>Modules are stand-alone parts of the game. They should work by themselves, i. e. they should not require other modules to be present in a Unity project in order to run (except for the game master.)</p>
-<p>NOTE: It is important not to circumvent this concept by creating ‘linking packages’ that closely couple modules to each other. Packages may be included in multiple Modules, but a shared package dependency should ideally not lead to tight coupling between these modules. Each module should instead contain separate instances of whatever exists in those packages. The core functionality of a module should be contained in one or more packages that are only used by that respective module. While these will likely link various packages, it should not lead to tight coupling between them, which would make them unusable for other packages!</p>
-<p>Modules need to reside in a single scene. When the game transitions to another mode, scenes of needed but not yet loaded modules will be loaded and vice versa.
-Modules will need to communicate with each other at times. However, they should also not require each other to be in the same project or, in fact, exist. This is achieved through messaging.</p>
-<p>TODO: Initialization</p>
+<p>Modules are stand-alone parts of the game: They are modular, large-scale features. They should work by themselves, i. e. they should not require other modules to be present in a Unity project in order to run and should not directly reference other modules. Modules need to reside in a single scene. When the game transitions to another mode, scenes of needed but not yet loaded modules will be loaded and vice versa (unloaded).</p>
+<p>Modules will need to communicate with each other at times. However, they should also not require each other to be in the same project or, in fact, exist. This cam be achieved through the messaging package via messages and services.</p>
+<p>A key aspect of modules and this entire package is that initialization and control of low are top-down. Initialization and the beginning of gameplay loops  should not be triggered by individual MonoBehaviours in <code>Start()</code> - instead, module handles (a MonoBehaviour called <code>Module</code>) should coordinate initialization. In a first initialization round, it should ensure that its inner workings are set up correctly. This should be split up over multiple frames and/or be multithreaded if it is work intensive: the rendering thread should not be blocked while loading/initializing. In the second initialization round, additional setup that requires communication with other modules may happen. This ensures that all modules are properly initialized before trying to trigger/access each other's functionalities via messaging.</p>
+<h3 id="module-packages">Module Packages</h3>
+<p>Modules commonly utilize multiple packages, particularly from the Core repository. However, they should have at least a single package that is dedicated to their specific functionality and that can be used to test/run a module in isolation.</p>
+<div class="NOTE">
+<h5>Note</h5>
+<p>The independence of modules should not be circumvented this by creating ‘linking' packages that closely couple modules together.</p>
+</div>
+<p>Packages may be included in multiple Modules, but a shared package dependency should ideally not lead to tight coupling between these modules. Each module should instead probably contain separate instances of whatever exists in those packages. The core functionality of a module should be contained in one or more packages that are only used by that respective module. While these will likely link various packages, it should not lead to tight coupling between them, which would make them unusable for other packages!</p>
 <h3 id="locations">Locations</h3>
-<p>TODO</p>
+<p>Modules are focused around <em>functionality</em> and <em>features</em>. However, a large part of games consists of statically authored environments - these are <em>Locations</em> in the context of this package.</p>
 <h2 id="application-flow">Application flow</h2>
 <p>TODO flow
 TODO loading</p>
+<h2 id="common-use-cases">Common use cases</h2>
+<h3 id="creating-a-module">Creating a module</h3>
+<p>TODO</p>
+<h3 id="create-a-mode">Create a mode</h3>
+<p>TODO</p>
+<h3 id="creating-a-location">Creating a location</h3>
+<p>TODO</p>
 </article>
           </div>
           

@@ -73,7 +73,9 @@
   
   <h1 id="Kinstrife_Application_GameMode" data-uid="Kinstrife.Application.GameMode" class="text-break">Class GameMode
   </h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><p>Describes a discrete state of the game, e.g. a main menu or campaign map mode. Does not contain any logic in itself but instead
+is composed from one or multiple <a class="xref" href="Kinstrife.Application.Module.html">Module</a>s</p>
+</div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
@@ -104,13 +106,13 @@
   </h3>
   
   
-  <a id="Kinstrife_Application_GameMode_HasLocation_" data-uid="Kinstrife.Application.GameMode.HasLocation*"></a>
-  <h4 id="Kinstrife_Application_GameMode_HasLocation" data-uid="Kinstrife.Application.GameMode.HasLocation">HasLocation</h4>
+  <a id="Kinstrife_Application_GameMode_DefaultLocation_" data-uid="Kinstrife.Application.GameMode.DefaultLocation*"></a>
+  <h4 id="Kinstrife_Application_GameMode_DefaultLocation" data-uid="Kinstrife.Application.GameMode.DefaultLocation">DefaultLocation</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public bool HasLocation { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Location DefaultLocation { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -122,7 +124,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Boolean</span></td>
+        <td><a class="xref" href="Kinstrife.Application.Location.html">Location</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -131,11 +133,12 @@
   
   <a id="Kinstrife_Application_GameMode_Modules_" data-uid="Kinstrife.Application.GameMode.Modules*"></a>
   <h4 id="Kinstrife_Application_GameMode_Modules" data-uid="Kinstrife.Application.GameMode.Modules">Modules</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Collection of modules making up the game mode</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public ICollection&lt;ModuleDefinition&gt; Modules { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public IReadOnlyCollection&lt;ModuleDefinition&gt; Modules { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -147,7 +150,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Generic.ICollection</span>&lt;<a class="xref" href="Kinstrife.Application.ModuleDefinition.html">ModuleDefinition</a>&gt;</td>
+        <td><span class="xref">System.Collections.Generic.IReadOnlyCollection</span>&lt;<a class="xref" href="Kinstrife.Application.ModuleDefinition.html">ModuleDefinition</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -156,7 +159,8 @@
   
   <a id="Kinstrife_Application_GameMode_PrimaryModule_" data-uid="Kinstrife.Application.GameMode.PrimaryModule*"></a>
   <h4 id="Kinstrife_Application_GameMode_PrimaryModule" data-uid="Kinstrife.Application.GameMode.PrimaryModule">PrimaryModule</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Primary module to switch to when starting the game mode</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">

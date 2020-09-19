@@ -74,10 +74,8 @@
   <h1 id="Kinstrife_Application_ApplicationFlow" data-uid="Kinstrife.Application.ApplicationFlow" class="text-break">Class ApplicationFlow
   </h1>
   <div class="markdown level0 summary"><p>Controls the loading, starting and ending of game modes and modules as well as pausing them.
-The only reason why this is currently a MonoBehaviour is because it requires StartCoroutine.
-If not a MonoBehaviour anymore, get rid of inject attributes and use constructor injection...
-After switching to a higher .NET runtime, this should be handled by async code and no longer require
-Coroutines.</p>
+The only reason why this is currently a MonoBehaviour is because it requires StartCoroutine.</p>
+<p>TODO: Refactor! Split me up! Also: Use UniTask instead of coroutines.</p>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
@@ -93,7 +91,7 @@ Coroutines.</p>
   <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
   <h5 id="Kinstrife_Application_ApplicationFlow_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class ApplicationFlow : MonoBehaviour, IInjectable</code></pre>
+    <pre><code class="lang-csharp hljs">public sealed class ApplicationFlow : MonoBehaviour, IInjectable</code></pre>
   </div>
   <h3 id="fields">Fields
   </h3>
@@ -147,12 +145,12 @@ Coroutines.</p>
   </table>
   
   
-  <h4 id="Kinstrife_Application_ApplicationFlow_OnLoadLocation" data-uid="Kinstrife.Application.ApplicationFlow.OnLoadLocation">OnLoadLocation</h4>
+  <h4 id="Kinstrife_Application_ApplicationFlow_OnLocationReady" data-uid="Kinstrife.Application.ApplicationFlow.OnLocationReady">OnLocationReady</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Action&lt;LocationHandle&gt; OnLoadLocation</code></pre>
+    <pre><code class="lang-csharp hljs">public Action&lt;LocationHandle&gt; OnLocationReady</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -189,6 +187,30 @@ Coroutines.</p>
     <tbody>
       <tr>
         <td><span class="xref">System.Action</span>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="Kinstrife_Application_ApplicationFlow_PrimaryModuleChanged" data-uid="Kinstrife.Application.ApplicationFlow.PrimaryModuleChanged">PrimaryModuleChanged</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Action&lt;Module&gt; PrimaryModuleChanged</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Action</span>&lt;<a class="xref" href="Kinstrife.Application.Module.html">Module</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -570,7 +592,7 @@ Coroutines.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public bool TrySwitchMode(GameMode targetMode, bool resetcurrent = false)</code></pre>
+    <pre><code class="lang-csharp hljs">public bool TrySwitchMode(GameMode targetMode, bool resetAlreadyLoaded = false)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -589,7 +611,7 @@ Coroutines.</p>
       </tr>
       <tr>
         <td><span class="xref">System.Boolean</span></td>
-        <td><span class="parametername">resetcurrent</span></td>
+        <td><span class="parametername">resetAlreadyLoaded</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -613,7 +635,7 @@ Coroutines.</p>
   
   <a id="Kinstrife_Application_ApplicationFlow_TrySwitchPrimaryModule_" data-uid="Kinstrife.Application.ApplicationFlow.TrySwitchPrimaryModule*"></a>
   <h4 id="Kinstrife_Application_ApplicationFlow_TrySwitchPrimaryModule_Kinstrife_Application_ModuleDefinition_" data-uid="Kinstrife.Application.ApplicationFlow.TrySwitchPrimaryModule(Kinstrife.Application.ModuleDefinition)">TrySwitchPrimaryModule(ModuleDefinition)</h4>
-  <div class="markdown level1 summary"><p>Try switching the primary module</p>
+  <div class="markdown level1 summary"><p>Try switching the primary module.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
