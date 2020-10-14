@@ -8,7 +8,7 @@
     <title>Game State | Kinstrife </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Game State | Kinstrife ">
-    <meta name="generator" content="docfx 2.56.2.0">
+    <meta name="generator" content="docfx 2.56.3.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -86,6 +86,23 @@ Database entries. Not strictly a part of this package, but they need to be handl
 <p>When creating/deleting entities and components, it might be tempting to use the GameState's entity manager. <strong>Just... don't.</strong> Simply use all these nice public methods like <code>CreateEntity</code>or <code>GetComponent</code> that are provided by your <code>GameState</code> instance (which should be injected with DI). This ensures that everything goes nicely and smoothly in GameState land.
 An exception to this is if you want to use the <code>EntityQuery</code> feature of this ECS: In this scenario it's fine to utilize the EntityManager (that's why it's <code>public</code>).</p>
 <p> </p>
+<h4 id="when-changing-dynamic-data-types-in-a-potentially-savegame-breaking-way">When changing dynamic data types in a potentially savegame-breaking way...</h4>
+<p> </p>
+<ol>
+<li>Increment the <code>SerializedAsVersion</code> assignment in the <code>OnBeforeSerialize()</code> method in <code>GameStateMetaData</code>. Remember that number.</li>
+<li>Create method that checks whether game state's serialized version was below that new version number. If that is the case, apply a fix that makes the old game state work with the new savegame-breaking changes you made. <strong>TODO:</strong> Explain how to go about that, perhaps with some example code or a callback to hook into...</li>
+</ol>
+<p>Savegames <em>break</em> when you:</p>
+<ul>
+<li>Change messagepack keys (which you should never do anyway)</li>
+<li>introduce new dynamic data which should be on some existing entities</li>
+<li>want to change the type of a variable (in which case you should assign that a new MessagePack Key and keep the old variable as private obsolete legacy)...</li>
+</ul>
+<p>They <em>do not break</em> when you:</p>
+<ul>
+<li>Rename a variable (no issue when keeping the )</li>
+<li>Rename a dynamic data type (if you use the <code>PreviouslyNamed</code> attribute)</li>
+</ul>
 <h2 id="guides">Guides</h2>
 <h3 id="creating-custom-data-types">Creating custom data types</h3>
 <p><strong>For Singletons,</strong> alternatively, simply inherit from <code>IPersistentSingletonData</code> and mark your type with the <code>[MessagePackObject]</code> attribute (from the MessagePack package), et voilà, you're done. You can now add and access your singletons via the GameState instance via <code>GetOrAddSingleton</code>.</p>

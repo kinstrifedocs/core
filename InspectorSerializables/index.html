@@ -1,0 +1,137 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Inspector Serializables | Kinstrife </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Inspector Serializables | Kinstrife ">
+    <meta name="generator" content="docfx 2.56.3.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet"> 
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="../articles/packages/toc.html">
+    
+    
+    
+  </head>  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="InspectorSerializables">
+<h1 id="inspector-serializables">Inspector Serializables</h1>
+
+<blockquote>
+<p><code>com.kinstrife.core.inspector-serializables&quot;: &quot;file:/GameDev/Core/Packages/InspectorSerializables&quot;</code></p>
+</blockquote>
+<p> </p>
+<p>Adds common types that are not serialized by Unity out of the box, such as dictionaries as well as type and interface references. These can now be serialized and displayed in the editor (via workarounds).</p>
+<p> </p>
+<h3 id="serializable-dictionary">Serializable dictionary</h3>
+<p>Inherit from <code>SerializableDictionary&lt;TKey, TValue&gt;</code> (from the <code>Kinstrife.Core.InspectorSerializables</code> namespace) with the concrete types you want to use, e.g. <code>IntStringDictionary : SerializableDictionary&lt;int, string&gt;</code>. The newly created class must be decorated with the <code>[System.Serializable]</code>attribute. The concrete subclass can then be serialized as expected.</p>
+<p> </p>
+<h3 id="serializable-interfaces">Serializable interfaces</h3>
+<p>Based on the <a href="https://assetstore.unity.com/packages/tools/localization/iunified-12117">IUnified asset</a>. If there are tricky bugs, try checking if there has been an update on the asset store and/or try contacting the asset author.</p>
+<p>Inherit from <code>IUnifiedContainer&lt;TInterface&gt;</code> to create a concrete subclass for the interface you want to reference. The newly created class must be decorated with the <code>[System.Serializable]</code>attribute. The concrete subclass can then be serialized as expected. The interface reference can be retrieved and set via the <code>Result</code> property.
+Keep in mind that when using this in the editor, this only works for referencing classes that 1) implement the interface and 2) inherit from <code>UnityEngine.Object</code>, other object references cannot be serialized by Unity.</p>
+<p><strong>For collections:</strong> When iterating over collections of <code>IUnifiedContainer</code> subclasses, you can access values directly as interfaces instead of using the <code>Result</code> property, for example:</p>
+<pre><code class="lang-csharp">interface ISomeInterface { void DoX(); }
+
+[System.Serializable]
+class SomeInterfaceContainer : IUnifiedContainer&lt;ISomeInterface&gt; { }
+
+List&lt;SomeInterfaceContainer&gt; myInterfaceList = new List&lt;SomeInterfaceContainer&gt;();
+
+void Test()
+{
+    foreach (ISomeInterface someInterface in myInterfaceList)
+        someInterface.DoX();
+}
+</code></pre>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://kinstrife.visualstudio.com/Core/_git/Core?path=Packages/InspectorSerializables/index.md&amp;version=GBmaster&amp;line=1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>
