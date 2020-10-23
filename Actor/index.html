@@ -73,8 +73,16 @@
 <p><code>com.kinstrife.core.actor&quot;: &quot;file:/GameDev/Core/Packages/Actor&quot;</code></p>
 </blockquote>
 <p>Package containing technical functionality with which actors can be defined and preprocessed for authoring. The following functionality &amp; components are available:</p>
+<h3 id="actor-1">Actor</h3>
+<p>Base data container component containing reference to the <code>Skeleton</code> &amp; <code>Animator</code>. Used as primary access point for referencing an actor.</p>
+<blockquote>
+<p><code>HumanActor</code> type is available for actors that are human</p>
+</blockquote>
 <h3 id="skeleton-definition">Skeleton Definition</h3>
 <p>Asset in which the result from the skeleton extraction is stored as the ground truth for the avatar. Used for retargeting purposes. Contains a mapping of &lt;<code>string</code>, <code>BoneAsset</code>&gt;.</p>
+<blockquote>
+<p>If the skeleton is human, a <code>HumanSkeletonDefinition</code> ought to be used, which contains a reference to the Unity <code>Avatar</code></p>
+</blockquote>
 <h4 id="boneasset">BoneAsset</h4>
 <p>Asset that stores the state for an individual bone in <code>BoneInfo</code>. Can be referenced by other functionality to refer to a specific bone.</p>
 <h4 id="boneinfo">BoneInfo</h4>
