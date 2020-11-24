@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Struct TransformOffset
    | Kinstrife ">
-    <meta name="generator" content="docfx 2.56.4.0">
+    <meta name="generator" content="docfx 2.56.5.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
@@ -106,6 +106,31 @@
   </h3>
   
   
+  <h4 id="Kinstrife_Rigging_TransformOffset_Isolate" data-uid="Kinstrife.Rigging.TransformOffset.Isolate">Isolate</h4>
+  <div class="markdown level1 summary"><p>Isolates the transform offset to the current transform, and inversely modifies its children</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool Isolate</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
   <h4 id="Kinstrife_Rigging_TransformOffset_Position" data-uid="Kinstrife.Rigging.TransformOffset.Position">Position</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
@@ -181,12 +206,12 @@
   
   
   <a id="Kinstrife_Rigging_TransformOffset_IsDiff_" data-uid="Kinstrife.Rigging.TransformOffset.IsDiff*"></a>
-  <h4 id="Kinstrife_Rigging_TransformOffset_IsDiff_System_Single_" data-uid="Kinstrife.Rigging.TransformOffset.IsDiff(System.Single)">IsDiff(Single)</h4>
+  <h4 id="Kinstrife_Rigging_TransformOffset_IsDiff_System_Single_System_Single_System_Single_" data-uid="Kinstrife.Rigging.TransformOffset.IsDiff(System.Single,System.Single,System.Single)">IsDiff(Single, Single, Single)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public bool IsDiff(float error)</code></pre>
+    <pre><code class="lang-csharp hljs">public bool IsDiff(float posError, float rotError, float scaleError)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -200,7 +225,17 @@
     <tbody>
       <tr>
         <td><span class="xref">System.Single</span></td>
-        <td><span class="parametername">error</span></td>
+        <td><span class="parametername">posError</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><span class="parametername">rotError</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><span class="parametername">scaleError</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -223,12 +258,12 @@
   
   
   <a id="Kinstrife_Rigging_TransformOffset_Trim_" data-uid="Kinstrife.Rigging.TransformOffset.Trim*"></a>
-  <h4 id="Kinstrife_Rigging_TransformOffset_Trim_System_Single_" data-uid="Kinstrife.Rigging.TransformOffset.Trim(System.Single)">Trim(Single)</h4>
+  <h4 id="Kinstrife_Rigging_TransformOffset_Trim_System_Single_System_Single_System_Single_" data-uid="Kinstrife.Rigging.TransformOffset.Trim(System.Single,System.Single,System.Single)">Trim(Single, Single, Single)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void Trim(float tolerance)</code></pre>
+    <pre><code class="lang-csharp hljs">public void Trim(float posTolerance, float rotTolerance, float scaleTolerance)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -242,7 +277,17 @@
     <tbody>
       <tr>
         <td><span class="xref">System.Single</span></td>
-        <td><span class="parametername">tolerance</span></td>
+        <td><span class="parametername">posTolerance</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><span class="parametername">rotTolerance</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><span class="parametername">scaleTolerance</span></td>
         <td></td>
       </tr>
     </tbody>

@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class MorphAssetCollection
    | Kinstrife ">
-    <meta name="generator" content="docfx 2.56.4.0">
+    <meta name="generator" content="docfx 2.56.5.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
@@ -96,13 +96,19 @@
       <a class="xref" href="Kinstrife.Rigging.MorphAsset.html#Kinstrife_Rigging_MorphAsset_NegativeMultiplier">MorphAsset.NegativeMultiplier</a>
     </div>
     <div>
+      <a class="xref" href="Kinstrife.Rigging.MorphAsset.html#Kinstrife_Rigging_MorphAsset_Min">MorphAsset.Min</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.Rigging.MorphAsset.html#Kinstrife_Rigging_MorphAsset_Max">MorphAsset.Max</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.Rigging.MorphAsset.html#Kinstrife_Rigging_MorphAsset_SubMorphs">MorphAsset.SubMorphs</a>
+    </div>
+    <div>
       <a class="xref" href="Kinstrife.Rigging.MorphAsset.html#Kinstrife_Rigging_MorphAsset_GetMultiplier_System_Single_">MorphAsset.GetMultiplier(Single)</a>
     </div>
     <div>
       <a class="xref" href="Kinstrife.Rigging.MorphAsset.html#Kinstrife_Rigging_MorphAsset_InspectorSetValues">MorphAsset.InspectorSetValues()</a>
-    </div>
-    <div>
-      <a class="xref" href="Kinstrife.Rigging.MorphAsset.html#Kinstrife_Rigging_MorphAsset_Apply_Skeleton_System_Single_">MorphAsset.Apply(Skeleton, Single)</a>
     </div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Kinstrife.Rigging.html">Kinstrife.Rigging</a></h6>
@@ -111,18 +117,19 @@
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public class MorphAssetCollection : MorphAsset</code></pre>
   </div>
-  <h3 id="fields">Fields
+  <h3 id="properties">Properties
   </h3>
   
   
-  <h4 id="Kinstrife_Rigging_MorphAssetCollection_MorphAssets" data-uid="Kinstrife.Rigging.MorphAssetCollection.MorphAssets">MorphAssets</h4>
+  <a id="Kinstrife_Rigging_MorphAssetCollection_Morphs_" data-uid="Kinstrife.Rigging.MorphAssetCollection.Morphs*"></a>
+  <h4 id="Kinstrife_Rigging_MorphAssetCollection_Morphs" data-uid="Kinstrife.Rigging.MorphAssetCollection.Morphs">Morphs</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public MorphAssetCollection.MorphAssetDict MorphAssets</code></pre>
+    <pre><code class="lang-csharp hljs">public IReadOnlyList&lt;MorphAssetCollection.CompoundMorph&gt; Morphs { get; }</code></pre>
   </div>
-  <h5 class="fieldValue">Field Value</h5>
+  <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
       <tr>
@@ -132,7 +139,57 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="Kinstrife.Rigging.MorphAssetCollection.MorphAssetDict.html">MorphAssetCollection.MorphAssetDict</a></td>
+        <td><span class="xref">System.Collections.Generic.IReadOnlyList</span>&lt;<a class="xref" href="Kinstrife.Rigging.MorphAssetCollection.CompoundMorph.html">MorphAssetCollection.CompoundMorph</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Kinstrife_Rigging_MorphAssetCollection_NormalizeWeights_" data-uid="Kinstrife.Rigging.MorphAssetCollection.NormalizeWeights*"></a>
+  <h4 id="Kinstrife_Rigging_MorphAssetCollection_NormalizeWeights" data-uid="Kinstrife.Rigging.MorphAssetCollection.NormalizeWeights">NormalizeWeights</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool NormalizeWeights { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Kinstrife_Rigging_MorphAssetCollection_SetSubAsset_" data-uid="Kinstrife.Rigging.MorphAssetCollection.SetSubAsset*"></a>
+  <h4 id="Kinstrife_Rigging_MorphAssetCollection_SetSubAsset" data-uid="Kinstrife.Rigging.MorphAssetCollection.SetSubAsset">SetSubAsset</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool SetSubAsset { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -142,12 +199,12 @@
   
   
   <a id="Kinstrife_Rigging_MorphAssetCollection_Apply_" data-uid="Kinstrife.Rigging.MorphAssetCollection.Apply*"></a>
-  <h4 id="Kinstrife_Rigging_MorphAssetCollection_Apply_Kinstrife_Actor_Skeleton_System_Single_" data-uid="Kinstrife.Rigging.MorphAssetCollection.Apply(Kinstrife.Actor.Skeleton,System.Single)">Apply(Skeleton, Single)</h4>
+  <h4 id="Kinstrife_Rigging_MorphAssetCollection_Apply_Kinstrife_Actor_Actor_System_Single_" data-uid="Kinstrife.Rigging.MorphAssetCollection.Apply(Kinstrife.Actor.Actor,System.Single)">Apply(Actor, Single)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public override void Apply(Skeleton skeleton, float value)</code></pre>
+    <pre><code class="lang-csharp hljs">public override void Apply(Actor actor, float value)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -160,8 +217,8 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="Kinstrife.Actor.Skeleton.html">Skeleton</a></td>
-        <td><span class="parametername">skeleton</span></td>
+        <td><a class="xref" href="Kinstrife.Actor.Actor.html">Actor</a></td>
+        <td><span class="parametername">actor</span></td>
         <td></td>
       </tr>
       <tr>
@@ -171,6 +228,8 @@
       </tr>
     </tbody>
   </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Kinstrife.Rigging.MorphAsset.html#Kinstrife_Rigging_MorphAsset_Apply_Kinstrife_Actor_Actor_System_Single_">MorphAsset.Apply(Actor, Single)</a></div>
 </article>
           </div>
           

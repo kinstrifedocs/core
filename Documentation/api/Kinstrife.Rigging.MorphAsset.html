@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class MorphAsset
    | Kinstrife ">
-    <meta name="generator" content="docfx 2.56.4.0">
+    <meta name="generator" content="docfx 2.56.5.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
@@ -80,6 +80,7 @@
     <div class="level0"><span class="xref">System.Object</span></div>
     <div class="level1"><span class="xref">MorphAsset</span></div>
       <div class="level2"><a class="xref" href="Kinstrife.Rigging.BoneMorphAsset.html">BoneMorphAsset</a></div>
+      <div class="level2"><a class="xref" href="Kinstrife.Rigging.MeshMorphAsset.html">MeshMorphAsset</a></div>
       <div class="level2"><a class="xref" href="Kinstrife.Rigging.MorphAssetCollection.html">MorphAssetCollection</a></div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Kinstrife.Rigging.html">Kinstrife.Rigging</a></h6>
@@ -88,6 +89,32 @@
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public class MorphAsset : ScriptableObject</code></pre>
   </div>
+  <h3 id="fields">Fields
+  </h3>
+  
+  
+  <h4 id="Kinstrife_Rigging_MorphAsset_SubMorphs" data-uid="Kinstrife.Rigging.MorphAsset.SubMorphs">SubMorphs</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public List&lt;MorphAsset&gt; SubMorphs</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.List</span>&lt;<a class="xref" href="Kinstrife.Rigging.MorphAsset.html">MorphAsset</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   <h3 id="properties">Properties
   </h3>
   
@@ -111,6 +138,56 @@
     <tbody>
       <tr>
         <td><span class="xref">Texture2D</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Kinstrife_Rigging_MorphAsset_Max_" data-uid="Kinstrife.Rigging.MorphAsset.Max*"></a>
+  <h4 id="Kinstrife_Rigging_MorphAsset_Max" data-uid="Kinstrife.Rigging.MorphAsset.Max">Max</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float Max { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Kinstrife_Rigging_MorphAsset_Min_" data-uid="Kinstrife.Rigging.MorphAsset.Min*"></a>
+  <h4 id="Kinstrife_Rigging_MorphAsset_Min" data-uid="Kinstrife.Rigging.MorphAsset.Min">Min</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float Min { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -195,12 +272,12 @@
   
   
   <a id="Kinstrife_Rigging_MorphAsset_Apply_" data-uid="Kinstrife.Rigging.MorphAsset.Apply*"></a>
-  <h4 id="Kinstrife_Rigging_MorphAsset_Apply_Skeleton_System_Single_" data-uid="Kinstrife.Rigging.MorphAsset.Apply(Skeleton,System.Single)">Apply(Skeleton, Single)</h4>
+  <h4 id="Kinstrife_Rigging_MorphAsset_Apply_Kinstrife_Actor_Actor_System_Single_" data-uid="Kinstrife.Rigging.MorphAsset.Apply(Kinstrife.Actor.Actor,System.Single)">Apply(Actor, Single)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual void Apply(Skeleton skeleton, float value)</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual void Apply(Actor actor, float value)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -213,8 +290,8 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Skeleton</span></td>
-        <td><span class="parametername">skeleton</span></td>
+        <td><a class="xref" href="Kinstrife.Actor.Actor.html">Actor</a></td>
+        <td><span class="parametername">actor</span></td>
         <td></td>
       </tr>
       <tr>
