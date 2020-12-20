@@ -78,113 +78,70 @@
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><span class="xref">ModuleNavigationInputHandler</span></div>
+    <div class="level1"><a class="xref" href="Kinstrife.Messaging.SubscriberBehaviour-1.html">SubscriberBehaviour</a>&lt;<a class="xref" href="Kinstrife.Core.Input.InputFocusState.html">InputFocusState</a>&gt;</div>
+    <div class="level2"><a class="xref" href="Kinstrife.Messaging.MessageValidator-1.html">MessageValidator</a>&lt;<a class="xref" href="Kinstrife.Core.Input.InputFocusState.html">InputFocusState</a>&gt;</div>
+    <div class="level3"><a class="xref" href="Kinstrife.Core.Input.InputFocusSubscriber.html">InputFocusSubscriber</a></div>
+    <div class="level4"><span class="xref">ModuleNavigationInputHandler</span></div>
   </div>
   <div classs="implements">
     <h5>Implements</h5>
-    <div><a class="xref" href="Kinstrife.Core.DependencyInjection.IInjectable.html">IInjectable</a></div>
     <div><a class="xref" href="Kinstrife.Core.DependencyInjection.IInitializable.html">IInitializable</a></div>
+    <div><a class="xref" href="Kinstrife.Core.DependencyInjection.IInjectable.html">IInjectable</a></div>
     <div><a class="xref" href="Kinstrife.Core.DependencyInjection.IDependent.html">IDependent</a></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="Kinstrife.Core.Input.InputFocusSubscriber.html#Kinstrife_Core_Input_InputFocusSubscriber_SetActive">InputFocusSubscriber.SetActive</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.Messaging.MessageValidator-1.html#Kinstrife_Messaging_MessageValidator_1_IsActive">MessageValidator&lt;InputFocusState&gt;.IsActive</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.Messaging.MessageValidator-1.html#Kinstrife_Messaging_MessageValidator_1_ChannelReaction__0_">MessageValidator&lt;InputFocusState&gt;.ChannelReaction(InputFocusState)</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.Messaging.MessageValidator-1.html#Kinstrife_Messaging_MessageValidator_1_onValidMessage">MessageValidator&lt;InputFocusState&gt;.onValidMessage</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.Messaging.MessageValidator-1.html#Kinstrife_Messaging_MessageValidator_1_onInvalidMessage">MessageValidator&lt;InputFocusState&gt;.onInvalidMessage</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.Messaging.SubscriberBehaviour-1.html#Kinstrife_Messaging_SubscriberBehaviour_1_channelDescriptor">SubscriberBehaviour&lt;InputFocusState&gt;.channelDescriptor</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.Messaging.SubscriberBehaviour-1.html#Kinstrife_Messaging_SubscriberBehaviour_1_Inject_Kinstrife_Messaging_ISubscriber__0__">SubscriberBehaviour&lt;InputFocusState&gt;.Inject(ISubscriber&lt;InputFocusState&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.Messaging.SubscriberBehaviour-1.html#Kinstrife_Messaging_SubscriberBehaviour_1_lastMessage">SubscriberBehaviour&lt;InputFocusState&gt;.lastMessage</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.Messaging.SubscriberBehaviour-1.html#Kinstrife_Messaging_SubscriberBehaviour_1_Initialized">SubscriberBehaviour&lt;InputFocusState&gt;.Initialized</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.Messaging.SubscriberBehaviour-1.html#Kinstrife_Messaging_SubscriberBehaviour_1_IsInvalid__0_">SubscriberBehaviour&lt;InputFocusState&gt;.IsInvalid(InputFocusState)</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.Messaging.SubscriberBehaviour-1.html#Kinstrife_Messaging_SubscriberBehaviour_1_onReceiveMessage">SubscriberBehaviour&lt;InputFocusState&gt;.onReceiveMessage</a>
+    </div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Kinstrife.Core.Input.html">Kinstrife.Core.Input</a></h6>
   <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
   <h5 id="Kinstrife_Core_Input_ModuleNavigationInputHandler_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class ModuleNavigationInputHandler : MonoBehaviour, IInjectable, IInitializable, IDependent</code></pre>
+    <pre><code class="lang-csharp hljs">public class ModuleNavigationInputHandler : InputFocusSubscriber, IInitializable, IInjectable, IDependent</code></pre>
   </div>
-  <h3 id="properties">Properties
-  </h3>
-  
-  
-  <a id="Kinstrife_Core_Input_ModuleNavigationInputHandler_Initialized_" data-uid="Kinstrife.Core.Input.ModuleNavigationInputHandler.Initialized*"></a>
-  <h4 id="Kinstrife_Core_Input_ModuleNavigationInputHandler_Initialized" data-uid="Kinstrife.Core.Input.ModuleNavigationInputHandler.Initialized">Initialized</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public bool Initialized { get; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Boolean</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="Kinstrife_Core_Input_ModuleNavigationInputHandler_IsActive_" data-uid="Kinstrife.Core.Input.ModuleNavigationInputHandler.IsActive*"></a>
-  <h4 id="Kinstrife_Core_Input_ModuleNavigationInputHandler_IsActive" data-uid="Kinstrife.Core.Input.ModuleNavigationInputHandler.IsActive">IsActive</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public bool IsActive { get; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Boolean</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
   <h3 id="methods">Methods
   </h3>
   
   
   <a id="Kinstrife_Core_Input_ModuleNavigationInputHandler_Activate_" data-uid="Kinstrife.Core.Input.ModuleNavigationInputHandler.Activate*"></a>
-  <h4 id="Kinstrife_Core_Input_ModuleNavigationInputHandler_Activate" data-uid="Kinstrife.Core.Input.ModuleNavigationInputHandler.Activate">Activate()</h4>
+  <h4 id="Kinstrife_Core_Input_ModuleNavigationInputHandler_Activate_Kinstrife_Core_Input_InputFocusState_" data-uid="Kinstrife.Core.Input.ModuleNavigationInputHandler.Activate(Kinstrife.Core.Input.InputFocusState)">Activate(InputFocusState)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void Activate()</code></pre>
-  </div>
-  
-  
-  <a id="Kinstrife_Core_Input_ModuleNavigationInputHandler_Deactivate_" data-uid="Kinstrife.Core.Input.ModuleNavigationInputHandler.Deactivate*"></a>
-  <h4 id="Kinstrife_Core_Input_ModuleNavigationInputHandler_Deactivate" data-uid="Kinstrife.Core.Input.ModuleNavigationInputHandler.Deactivate">Deactivate()</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void Deactivate()</code></pre>
-  </div>
-  
-  
-  <a id="Kinstrife_Core_Input_ModuleNavigationInputHandler_Initialize_" data-uid="Kinstrife.Core.Input.ModuleNavigationInputHandler.Initialize*"></a>
-  <h4 id="Kinstrife_Core_Input_ModuleNavigationInputHandler_Initialize" data-uid="Kinstrife.Core.Input.ModuleNavigationInputHandler.Initialize">Initialize()</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void Initialize()</code></pre>
-  </div>
-  
-  
-  <a id="Kinstrife_Core_Input_ModuleNavigationInputHandler_Inject_" data-uid="Kinstrife.Core.Input.ModuleNavigationInputHandler.Inject*"></a>
-  <h4 id="Kinstrife_Core_Input_ModuleNavigationInputHandler_Inject_Kinstrife_Application_Module_Kinstrife_Core_Input_KinstrifeInputActions_Kinstrife_Application_ApplicationFlow_" data-uid="Kinstrife.Core.Input.ModuleNavigationInputHandler.Inject(Kinstrife.Application.Module,Kinstrife.Core.Input.KinstrifeInputActions,Kinstrife.Application.ApplicationFlow)">Inject(Module, KinstrifeInputActions, ApplicationFlow)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void Inject(Module module, KinstrifeInputActions inputActions, ApplicationFlow applicationFlow)</code></pre>
+    <pre><code class="lang-csharp hljs">protected override void Activate(InputFocusState message)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -197,10 +154,75 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="Kinstrife.Application.Module.html">Module</a></td>
-        <td><span class="parametername">module</span></td>
+        <td><a class="xref" href="Kinstrife.Core.Input.InputFocusState.html">InputFocusState</a></td>
+        <td><span class="parametername">message</span></td>
         <td></td>
       </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Kinstrife.Core.Input.InputFocusSubscriber.html#Kinstrife_Core_Input_InputFocusSubscriber_Activate_Kinstrife_Core_Input_InputFocusState_">InputFocusSubscriber.Activate(InputFocusState)</a></div>
+  
+  
+  <a id="Kinstrife_Core_Input_ModuleNavigationInputHandler_Deactivate_" data-uid="Kinstrife.Core.Input.ModuleNavigationInputHandler.Deactivate*"></a>
+  <h4 id="Kinstrife_Core_Input_ModuleNavigationInputHandler_Deactivate_Kinstrife_Core_Input_InputFocusState_" data-uid="Kinstrife.Core.Input.ModuleNavigationInputHandler.Deactivate(Kinstrife.Core.Input.InputFocusState)">Deactivate(InputFocusState)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override void Deactivate(InputFocusState message)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Kinstrife.Core.Input.InputFocusState.html">InputFocusState</a></td>
+        <td><span class="parametername">message</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Kinstrife.Core.Input.InputFocusSubscriber.html#Kinstrife_Core_Input_InputFocusSubscriber_Deactivate_Kinstrife_Core_Input_InputFocusState_">InputFocusSubscriber.Deactivate(InputFocusState)</a></div>
+  
+  
+  <a id="Kinstrife_Core_Input_ModuleNavigationInputHandler_Initialize_" data-uid="Kinstrife.Core.Input.ModuleNavigationInputHandler.Initialize*"></a>
+  <h4 id="Kinstrife_Core_Input_ModuleNavigationInputHandler_Initialize" data-uid="Kinstrife.Core.Input.ModuleNavigationInputHandler.Initialize">Initialize()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override void Initialize()</code></pre>
+  </div>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">Kinstrife.Messaging.SubscriberBehaviour&lt;Kinstrife.Core.Input.InputFocusState&gt;.Initialize()</span></div>
+  
+  
+  <a id="Kinstrife_Core_Input_ModuleNavigationInputHandler_Inject_" data-uid="Kinstrife.Core.Input.ModuleNavigationInputHandler.Inject*"></a>
+  <h4 id="Kinstrife_Core_Input_ModuleNavigationInputHandler_Inject_Kinstrife_Core_Input_KinstrifeInputActions_Kinstrife_Application_ApplicationFlow_Kinstrife_Messaging_ISubscriber_Kinstrife_Core_Input_InputFocusState__" data-uid="Kinstrife.Core.Input.ModuleNavigationInputHandler.Inject(Kinstrife.Core.Input.KinstrifeInputActions,Kinstrife.Application.ApplicationFlow,Kinstrife.Messaging.ISubscriber{Kinstrife.Core.Input.InputFocusState})">Inject(KinstrifeInputActions, ApplicationFlow, ISubscriber&lt;InputFocusState&gt;)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Inject(KinstrifeInputActions inputActions, ApplicationFlow applicationFlow, ISubscriber&lt;InputFocusState&gt; sub)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
       <tr>
         <td><a class="xref" href="Kinstrife.Core.Input.KinstrifeInputActions.html">KinstrifeInputActions</a></td>
         <td><span class="parametername">inputActions</span></td>
@@ -211,14 +233,31 @@
         <td><span class="parametername">applicationFlow</span></td>
         <td></td>
       </tr>
+      <tr>
+        <td><a class="xref" href="Kinstrife.Messaging.ISubscriber-1.html">ISubscriber</a>&lt;<a class="xref" href="Kinstrife.Core.Input.InputFocusState.html">InputFocusState</a>&gt;</td>
+        <td><span class="parametername">sub</span></td>
+        <td></td>
+      </tr>
     </tbody>
   </table>
+  
+  
+  <a id="Kinstrife_Core_Input_ModuleNavigationInputHandler_OnDestroy_" data-uid="Kinstrife.Core.Input.ModuleNavigationInputHandler.OnDestroy*"></a>
+  <h4 id="Kinstrife_Core_Input_ModuleNavigationInputHandler_OnDestroy" data-uid="Kinstrife.Core.Input.ModuleNavigationInputHandler.OnDestroy">OnDestroy()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override void OnDestroy()</code></pre>
+  </div>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">Kinstrife.Messaging.SubscriberBehaviour&lt;Kinstrife.Core.Input.InputFocusState&gt;.OnDestroy()</span></div>
   <h3 id="implements">Implements</h3>
   <div>
-      <a class="xref" href="Kinstrife.Core.DependencyInjection.IInjectable.html">IInjectable</a>
+      <a class="xref" href="Kinstrife.Core.DependencyInjection.IInitializable.html">IInitializable</a>
   </div>
   <div>
-      <a class="xref" href="Kinstrife.Core.DependencyInjection.IInitializable.html">IInitializable</a>
+      <a class="xref" href="Kinstrife.Core.DependencyInjection.IInjectable.html">IInjectable</a>
   </div>
   <div>
       <a class="xref" href="Kinstrife.Core.DependencyInjection.IDependent.html">IDependent</a>
