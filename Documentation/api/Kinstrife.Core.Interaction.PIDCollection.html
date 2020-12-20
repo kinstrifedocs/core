@@ -5,10 +5,10 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Class JobComponentSystemBase
+    <title>Class PIDCollection
    | Kinstrife </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Class JobComponentSystemBase
+    <meta name="title" content="Class PIDCollection
    | Kinstrife ">
     <meta name="generator" content="docfx 2.56.6.0">
     
@@ -68,53 +68,103 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="Kinstrife.Entities.Systems.JobComponentSystemBase">
+            <article class="content wrap" id="_content" data-uid="Kinstrife.Core.Interaction.PIDCollection">
   
   
-  <h1 id="Kinstrife_Entities_Systems_JobComponentSystemBase" data-uid="Kinstrife.Entities.Systems.JobComponentSystemBase" class="text-break">Class JobComponentSystemBase
+  <h1 id="Kinstrife_Core_Interaction_PIDCollection" data-uid="Kinstrife.Core.Interaction.PIDCollection" class="text-break">Class PIDCollection
   </h1>
   <div class="markdown level0 summary"></div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><span class="xref">JobComponentSystemBase</span></div>
-      <div class="level2"><a class="xref" href="Kinstrife.Action.ActionOutputFloat3System.html">ActionOutputFloat3System</a></div>
-      <div class="level2"><a class="xref" href="Kinstrife.Action.ActionOutputSignalSystem.html">ActionOutputSignalSystem</a></div>
-      <div class="level2"><a class="xref" href="Kinstrife.Action.ActionOutputSystemBase.html">ActionOutputSystemBase</a></div>
-      <div class="level2"><a class="xref" href="Kinstrife.Action.ActionOutputVFXSystem.html">ActionOutputVFXSystem</a></div>
-      <div class="level2"><a class="xref" href="Kinstrife.Action.ActionStateScheduleSystem.html">ActionStateScheduleSystem</a></div>
-      <div class="level2"><a class="xref" href="Kinstrife.Action.ActionSystemBase.html">ActionSystemBase</a></div>
-      <div class="level2"><a class="xref" href="Kinstrife.Action.EndFrameActionStateSystem.html">EndFrameActionStateSystem</a></div>
-      <div class="level2"><a class="xref" href="Kinstrife.Action.EndFrameActionSystem.html">EndFrameActionSystem</a></div>
-      <div class="level2"><a class="xref" href="Kinstrife.Action.Systems.ActionActivatorSystem.html">ActionActivatorSystem</a></div>
-      <div class="level2"><a class="xref" href="Kinstrife.Action.Systems.ActionEventsSystem.html">ActionEventsSystem</a></div>
-      <div class="level2"><a class="xref" href="Kinstrife.Action.Systems.ActionScheduleSystem.html">ActionScheduleSystem</a></div>
-      <div class="level2"><a class="xref" href="Kinstrife.Action.Systems.ActionStartStopSystem.html">ActionStartStopSystem</a></div>
-      <div class="level2"><a class="xref" href="Kinstrife.Action.Systems.SignalTriggerSystem.html">SignalTriggerSystem</a></div>
-      <div class="level2"><a class="xref" href="Kinstrife.Action.Systems.SignalUtilSystem.html">SignalUtilSystem</a></div>
-      <div class="level2"><a class="xref" href="Kinstrife.Core.Interaction.Systems.MouseToScreenSelectionSystem.html">MouseToScreenSelectionSystem</a></div>
-      <div class="level2"><a class="xref" href="Kinstrife.Entities.Systems.EntityGroupSystem.html">EntityGroupSystem</a></div>
-      <div class="level2"><a class="xref" href="Kinstrife.Entities.Systems.EntitySelectionSystem.html">EntitySelectionSystem</a></div>
-      <div class="level2"><a class="xref" href="Kinstrife.Entities.Systems.FireLightFlickerSystem.html">FireLightFlickerSystem</a></div>
-      <div class="level2"><a class="xref" href="Kinstrife.SpatialPartitioning.Quadrant.QuadrantSystem.html">QuadrantSystem</a></div>
+    <div class="level1"><span class="xref">PIDCollection</span></div>
   </div>
-  <h6><strong>Namespace</strong>: <a class="xref" href="Kinstrife.Entities.Systems.html">Kinstrife.Entities.Systems</a></h6>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Kinstrife.Core.Interaction.html">Kinstrife.Core.Interaction</a></h6>
   <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
-  <h5 id="Kinstrife_Entities_Systems_JobComponentSystemBase_syntax">Syntax</h5>
+  <h5 id="Kinstrife_Core_Interaction_PIDCollection_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public abstract class JobComponentSystemBase : JobComponentSystem</code></pre>
+    <pre><code class="lang-csharp hljs">[Serializable]
+public class PIDCollection</code></pre>
   </div>
+  <h3 id="constructors">Constructors
+  </h3>
+  
+  
+  <a id="Kinstrife_Core_Interaction_PIDCollection__ctor_" data-uid="Kinstrife.Core.Interaction.PIDCollection.#ctor*"></a>
+  <h4 id="Kinstrife_Core_Interaction_PIDCollection__ctor_System_Single_System_Single_System_Single_System_Int32_" data-uid="Kinstrife.Core.Interaction.PIDCollection.#ctor(System.Single,System.Single,System.Single,System.Int32)">PIDCollection(Single, Single, Single, Int32)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public PIDCollection(float pFactor, float iFactor, float dFactor, int count)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><span class="parametername">pFactor</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><span class="parametername">iFactor</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><span class="parametername">dFactor</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">count</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   <h3 id="fields">Fields
   </h3>
   
   
-  <h4 id="Kinstrife_Entities_Systems_JobComponentSystemBase_CommandBufferNative" data-uid="Kinstrife.Entities.Systems.JobComponentSystemBase.CommandBufferNative">CommandBufferNative</h4>
+  <h4 id="Kinstrife_Core_Interaction_PIDCollection_dFactor" data-uid="Kinstrife.Core.Interaction.PIDCollection.dFactor">dFactor</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected NativeStream CommandBufferNative</code></pre>
+    <pre><code class="lang-csharp hljs">public float dFactor</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -126,19 +176,19 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">NativeStream</span></td>
+        <td><span class="xref">System.Single</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   
   
-  <h4 id="Kinstrife_Entities_Systems_JobComponentSystemBase_EndInitializationEntityCommandBufferSystem" data-uid="Kinstrife.Entities.Systems.JobComponentSystemBase.EndInitializationEntityCommandBufferSystem">EndInitializationEntityCommandBufferSystem</h4>
+  <h4 id="Kinstrife_Core_Interaction_PIDCollection_iFactor" data-uid="Kinstrife.Core.Interaction.PIDCollection.iFactor">iFactor</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected EndInitializationEntityCommandBufferSystem EndInitializationEntityCommandBufferSystem</code></pre>
+    <pre><code class="lang-csharp hljs">public float iFactor</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -150,19 +200,19 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">EndInitializationEntityCommandBufferSystem</span></td>
+        <td><span class="xref">System.Single</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   
   
-  <h4 id="Kinstrife_Entities_Systems_JobComponentSystemBase_EndSimulationEntityCommandBufferSystem" data-uid="Kinstrife.Entities.Systems.JobComponentSystemBase.EndSimulationEntityCommandBufferSystem">EndSimulationEntityCommandBufferSystem</h4>
+  <h4 id="Kinstrife_Core_Interaction_PIDCollection_pFactor" data-uid="Kinstrife.Core.Interaction.PIDCollection.pFactor">pFactor</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected EndSimulationEntityCommandBufferSystem EndSimulationEntityCommandBufferSystem</code></pre>
+    <pre><code class="lang-csharp hljs">public float pFactor</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -174,7 +224,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">EndSimulationEntityCommandBufferSystem</span></td>
+        <td><span class="xref">System.Single</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -183,15 +233,46 @@
   </h3>
   
   
-  <a id="Kinstrife_Entities_Systems_JobComponentSystemBase_Count_" data-uid="Kinstrife.Entities.Systems.JobComponentSystemBase.Count*"></a>
-  <h4 id="Kinstrife_Entities_Systems_JobComponentSystemBase_Count__1" data-uid="Kinstrife.Entities.Systems.JobComponentSystemBase.Count``1">Count&lt;T&gt;()</h4>
+  <a id="Kinstrife_Core_Interaction_PIDCollection_Update_" data-uid="Kinstrife.Core.Interaction.PIDCollection.Update*"></a>
+  <h4 id="Kinstrife_Core_Interaction_PIDCollection_Update_System_Single_System_Single_System_Single_System_Int32_" data-uid="Kinstrife.Core.Interaction.PIDCollection.Update(System.Single,System.Single,System.Single,System.Int32)">Update(Single, Single, Single, Int32)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public int Count&lt;T&gt;()
-    where T : struct, IComponentData</code></pre>
+    <pre><code class="lang-csharp hljs">public float Update(float setpoint, float actual, float timeFrame, int index)</code></pre>
   </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><span class="parametername">setpoint</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><span class="parametername">actual</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><span class="parametername">timeFrame</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">index</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   <h5 class="returns">Returns</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
@@ -202,77 +283,11 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Int32</span></td>
+        <td><span class="xref">System.Single</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
-  <h5 class="typeParameters">Type Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="parametername">T</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="Kinstrife_Entities_Systems_JobComponentSystemBase_CountHasBuffer_" data-uid="Kinstrife.Entities.Systems.JobComponentSystemBase.CountHasBuffer*"></a>
-  <h4 id="Kinstrife_Entities_Systems_JobComponentSystemBase_CountHasBuffer__1" data-uid="Kinstrife.Entities.Systems.JobComponentSystemBase.CountHasBuffer``1">CountHasBuffer&lt;T&gt;()</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public int CountHasBuffer&lt;T&gt;()
-    where T : struct, IBufferElementData</code></pre>
-  </div>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Int32</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="typeParameters">Type Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="parametername">T</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="Kinstrife_Entities_Systems_JobComponentSystemBase_OnCreate_" data-uid="Kinstrife.Entities.Systems.JobComponentSystemBase.OnCreate*"></a>
-  <h4 id="Kinstrife_Entities_Systems_JobComponentSystemBase_OnCreate" data-uid="Kinstrife.Entities.Systems.JobComponentSystemBase.OnCreate">OnCreate()</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected override void OnCreate()</code></pre>
-  </div>
 </article>
           </div>
           
