@@ -90,7 +90,8 @@
   <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
   <h5 id="Kinstrife_Action_Graph_ActionNode_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public abstract class ActionNode : Node</code></pre>
+    <pre><code class="lang-csharp hljs">[Serializable]
+public abstract class ActionNode : BaseNode</code></pre>
   </div>
   <h3 id="fields">Fields
   </h3>
@@ -114,6 +115,30 @@
     <tbody>
       <tr>
         <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="Kinstrife_Action_Graph_ActionNode_messageType" data-uid="Kinstrife.Action.Graph.ActionNode.messageType">messageType</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public NodeMessageType messageType</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">NodeMessageType</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -246,89 +271,14 @@
   
   
   <a id="Kinstrife_Action_Graph_ActionNode_ConnectedInputNodes_" data-uid="Kinstrife.Action.Graph.ActionNode.ConnectedInputNodes*"></a>
-  <h4 id="Kinstrife_Action_Graph_ActionNode_ConnectedInputNodes__1_System_String_" data-uid="Kinstrife.Action.Graph.ActionNode.ConnectedInputNodes``1(System.String)">ConnectedInputNodes&lt;T&gt;(String)</h4>
+  <h4 id="Kinstrife_Action_Graph_ActionNode_ConnectedInputNodes__1" data-uid="Kinstrife.Action.Graph.ActionNode.ConnectedInputNodes``1">ConnectedInputNodes&lt;T&gt;()</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public IEnumerable&lt;T&gt; ConnectedInputNodes&lt;T&gt;(string name = &quot;From&quot;)
+    <pre><code class="lang-csharp hljs">public IEnumerable&lt;T&gt; ConnectedInputNodes&lt;T&gt;()
     where T : ActionNode</code></pre>
   </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.String</span></td>
-        <td><span class="parametername">name</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;T&gt;</td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="typeParameters">Type Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="parametername">T</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="Kinstrife_Action_Graph_ActionNode_ConnectedNodes_" data-uid="Kinstrife.Action.Graph.ActionNode.ConnectedNodes*"></a>
-  <h4 id="Kinstrife_Action_Graph_ActionNode_ConnectedNodes__1_System_String_" data-uid="Kinstrife.Action.Graph.ActionNode.ConnectedNodes``1(System.String)">ConnectedNodes&lt;T&gt;(String)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public IEnumerable&lt;T&gt; ConnectedNodes&lt;T&gt;(string name)
-    where T : ActionNode</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.String</span></td>
-        <td><span class="parametername">name</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
   <h5 class="returns">Returns</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
@@ -362,31 +312,14 @@
   
   
   <a id="Kinstrife_Action_Graph_ActionNode_ConnectedOutputNodes_" data-uid="Kinstrife.Action.Graph.ActionNode.ConnectedOutputNodes*"></a>
-  <h4 id="Kinstrife_Action_Graph_ActionNode_ConnectedOutputNodes__1_System_String_" data-uid="Kinstrife.Action.Graph.ActionNode.ConnectedOutputNodes``1(System.String)">ConnectedOutputNodes&lt;T&gt;(String)</h4>
+  <h4 id="Kinstrife_Action_Graph_ActionNode_ConnectedOutputNodes__1" data-uid="Kinstrife.Action.Graph.ActionNode.ConnectedOutputNodes``1">ConnectedOutputNodes&lt;T&gt;()</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public IEnumerable&lt;T&gt; ConnectedOutputNodes&lt;T&gt;(string name = &quot;To&quot;)
+    <pre><code class="lang-csharp hljs">public IEnumerable&lt;T&gt; ConnectedOutputNodes&lt;T&gt;()
     where T : ActionNode</code></pre>
   </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.String</span></td>
-        <td><span class="parametername">name</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
   <h5 class="returns">Returns</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
@@ -477,72 +410,55 @@
   </table>
   
   
-  <a id="Kinstrife_Action_Graph_ActionNode_GetConnectionOfType_" data-uid="Kinstrife.Action.Graph.ActionNode.GetConnectionOfType*"></a>
-  <h4 id="Kinstrife_Action_Graph_ActionNode_GetConnectionOfType__1_System_String_" data-uid="Kinstrife.Action.Graph.ActionNode.GetConnectionOfType``1(System.String)">GetConnectionOfType&lt;T&gt;(String)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public T GetConnectionOfType&lt;T&gt;(string name)
-    where T : ActionNode</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.String</span></td>
-        <td><span class="parametername">name</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">T</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="typeParameters">Type Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="parametername">T</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
   <a id="Kinstrife_Action_Graph_ActionNode_GetInputConnectionOfType_" data-uid="Kinstrife.Action.Graph.ActionNode.GetInputConnectionOfType*"></a>
-  <h4 id="Kinstrife_Action_Graph_ActionNode_GetInputConnectionOfType__1_System_String_" data-uid="Kinstrife.Action.Graph.ActionNode.GetInputConnectionOfType``1(System.String)">GetInputConnectionOfType&lt;T&gt;(String)</h4>
+  <h4 id="Kinstrife_Action_Graph_ActionNode_GetInputConnectionOfType__1" data-uid="Kinstrife.Action.Graph.ActionNode.GetInputConnectionOfType``1">GetInputConnectionOfType&lt;T&gt;()</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public T GetInputConnectionOfType&lt;T&gt;(string name = &quot;From&quot;)
+    <pre><code class="lang-csharp hljs">public T GetInputConnectionOfType&lt;T&gt;()
     where T : ActionNode</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">T</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Kinstrife_Action_Graph_ActionNode_GetInputNodes_" data-uid="Kinstrife.Action.Graph.ActionNode.GetInputNodes*"></a>
+  <h4 id="Kinstrife_Action_Graph_ActionNode_GetInputNodes_System_String_" data-uid="Kinstrife.Action.Graph.ActionNode.GetInputNodes(System.String)">GetInputNodes(String)</h4>
+  <div class="markdown level1 summary"><p>Get all the nodes connected to the output ports of this node</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IEnumerable&lt;BaseNode&gt; GetInputNodes(string name)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -571,54 +487,23 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">T</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="typeParameters">Type Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="parametername">T</span></td>
-        <td></td>
+        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<span class="xref">BaseNode</span>&gt;</td>
+        <td><p>an enumerable of node</p>
+</td>
       </tr>
     </tbody>
   </table>
   
   
   <a id="Kinstrife_Action_Graph_ActionNode_GetOutputConnectionOfType_" data-uid="Kinstrife.Action.Graph.ActionNode.GetOutputConnectionOfType*"></a>
-  <h4 id="Kinstrife_Action_Graph_ActionNode_GetOutputConnectionOfType__1_System_String_" data-uid="Kinstrife.Action.Graph.ActionNode.GetOutputConnectionOfType``1(System.String)">GetOutputConnectionOfType&lt;T&gt;(String)</h4>
+  <h4 id="Kinstrife_Action_Graph_ActionNode_GetOutputConnectionOfType__1" data-uid="Kinstrife.Action.Graph.ActionNode.GetOutputConnectionOfType``1">GetOutputConnectionOfType&lt;T&gt;()</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public T GetOutputConnectionOfType&lt;T&gt;(string name = &quot;To&quot;)
+    <pre><code class="lang-csharp hljs">public T GetOutputConnectionOfType&lt;T&gt;()
     where T : ActionNode</code></pre>
   </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.String</span></td>
-        <td><span class="parametername">name</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
   <h5 class="returns">Returns</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
@@ -651,14 +536,14 @@
   </table>
   
   
-  <a id="Kinstrife_Action_Graph_ActionNode_HasConnectionOfType_" data-uid="Kinstrife.Action.Graph.ActionNode.HasConnectionOfType*"></a>
-  <h4 id="Kinstrife_Action_Graph_ActionNode_HasConnectionOfType__1_System_String_" data-uid="Kinstrife.Action.Graph.ActionNode.HasConnectionOfType``1(System.String)">HasConnectionOfType&lt;T&gt;(String)</h4>
-  <div class="markdown level1 summary"></div>
+  <a id="Kinstrife_Action_Graph_ActionNode_GetOutputNodes_" data-uid="Kinstrife.Action.Graph.ActionNode.GetOutputNodes*"></a>
+  <h4 id="Kinstrife_Action_Graph_ActionNode_GetOutputNodes_System_String_" data-uid="Kinstrife.Action.Graph.ActionNode.GetOutputNodes(System.String)">GetOutputNodes(String)</h4>
+  <div class="markdown level1 summary"><p>Get all the nodes connected to the output ports of this node</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public bool HasConnectionOfType&lt;T&gt;(string name)
-    where T : ActionNode</code></pre>
+    <pre><code class="lang-csharp hljs">public IEnumerable&lt;BaseNode&gt; GetOutputNodes(string name)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -687,23 +572,9 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Boolean</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="typeParameters">Type Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="parametername">T</span></td>
-        <td></td>
+        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<span class="xref">BaseNode</span>&gt;</td>
+        <td><p>an enumerable of node</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -752,31 +623,14 @@
   
   
   <a id="Kinstrife_Action_Graph_ActionNode_HasInputConnectionOfType_" data-uid="Kinstrife.Action.Graph.ActionNode.HasInputConnectionOfType*"></a>
-  <h4 id="Kinstrife_Action_Graph_ActionNode_HasInputConnectionOfType__1_System_String_" data-uid="Kinstrife.Action.Graph.ActionNode.HasInputConnectionOfType``1(System.String)">HasInputConnectionOfType&lt;T&gt;(String)</h4>
+  <h4 id="Kinstrife_Action_Graph_ActionNode_HasInputConnectionOfType__1" data-uid="Kinstrife.Action.Graph.ActionNode.HasInputConnectionOfType``1">HasInputConnectionOfType&lt;T&gt;()</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public bool HasInputConnectionOfType&lt;T&gt;(string name = &quot;From&quot;)
+    <pre><code class="lang-csharp hljs">public bool HasInputConnectionOfType&lt;T&gt;()
     where T : ActionNode</code></pre>
   </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.String</span></td>
-        <td><span class="parametername">name</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
   <h5 class="returns">Returns</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
@@ -807,16 +661,17 @@
       </tr>
     </tbody>
   </table>
+  <h3 id="operators">Operators
+  </h3>
   
   
-  <a id="Kinstrife_Action_Graph_ActionNode_HasOutputConnectionOfType_" data-uid="Kinstrife.Action.Graph.ActionNode.HasOutputConnectionOfType*"></a>
-  <h4 id="Kinstrife_Action_Graph_ActionNode_HasOutputConnectionOfType__1_System_String_" data-uid="Kinstrife.Action.Graph.ActionNode.HasOutputConnectionOfType``1(System.String)">HasOutputConnectionOfType&lt;T&gt;(String)</h4>
+  <a id="Kinstrife_Action_Graph_ActionNode_op_Implicit_" data-uid="Kinstrife.Action.Graph.ActionNode.op_Implicit*"></a>
+  <h4 id="Kinstrife_Action_Graph_ActionNode_op_Implicit_Kinstrife_Action_Graph_ActionNode__System_Boolean" data-uid="Kinstrife.Action.Graph.ActionNode.op_Implicit(Kinstrife.Action.Graph.ActionNode)~System.Boolean">Implicit(ActionNode to Boolean)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public bool HasOutputConnectionOfType&lt;T&gt;(string name = &quot;To&quot;)
-    where T : ActionNode</code></pre>
+    <pre><code class="lang-csharp hljs">public static implicit operator bool (ActionNode node)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -829,8 +684,8 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
-        <td><span class="parametername">name</span></td>
+        <td><a class="xref" href="Kinstrife.Action.Graph.ActionNode.html">ActionNode</a></td>
+        <td><span class="parametername">node</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -846,21 +701,6 @@
     <tbody>
       <tr>
         <td><span class="xref">System.Boolean</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="typeParameters">Type Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="parametername">T</span></td>
         <td></td>
       </tr>
     </tbody>
