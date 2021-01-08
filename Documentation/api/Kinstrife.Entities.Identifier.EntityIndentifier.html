@@ -114,6 +114,203 @@
   </h3>
   
   
+  <a id="Kinstrife_Entities_Identifier_EntityIndentifier_Equals_" data-uid="Kinstrife.Entities.Identifier.EntityIndentifier.Equals*"></a>
+  <h4 id="Kinstrife_Entities_Identifier_EntityIndentifier_Equals_System_Int32_System_Int32_" data-uid="Kinstrife.Entities.Identifier.EntityIndentifier.Equals(System.Int32,System.Int32)">Equals(Int32, Int32)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool Equals(int a, int b)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">a</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">b</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Kinstrife_Entities_Identifier_EntityIndentifier_FindElementWithHashCode_" data-uid="Kinstrife.Entities.Identifier.EntityIndentifier.FindElementWithHashCode*"></a>
+  <h4 id="Kinstrife_Entities_Identifier_EntityIndentifier_FindElementWithHashCode__1_DynamicBuffer___0___System_Int32_System_Boolean__" data-uid="Kinstrife.Entities.Identifier.EntityIndentifier.FindElementWithHashCode``1(DynamicBuffer{``0}@,System.Int32,System.Boolean@)">FindElementWithHashCode&lt;TTarget&gt;(ref DynamicBuffer&lt;TTarget&gt;, Int32, out Boolean)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static TTarget FindElementWithHashCode&lt;TTarget&gt;(ref DynamicBuffer&lt;TTarget&gt; buffer, int hashCode, out bool found)
+    where TTarget : struct, IIdentifiableElement</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">DynamicBuffer</span>&lt;TTarget&gt;</td>
+        <td><span class="parametername">buffer</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">hashCode</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">found</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">TTarget</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">TTarget</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Kinstrife_Entities_Identifier_EntityIndentifier_FindElementWithHashCode_" data-uid="Kinstrife.Entities.Identifier.EntityIndentifier.FindElementWithHashCode*"></a>
+  <h4 id="Kinstrife_Entities_Identifier_EntityIndentifier_FindElementWithHashCode__2_Entity_BufferFromEntity___0__BufferFromEntity___1__System_Int32_System_Boolean__" data-uid="Kinstrife.Entities.Identifier.EntityIndentifier.FindElementWithHashCode``2(Entity,BufferFromEntity{``0},BufferFromEntity{``1},System.Int32,System.Boolean@)">FindElementWithHashCode&lt;TLink, TTarget&gt;(Entity, BufferFromEntity&lt;TLink&gt;, BufferFromEntity&lt;TTarget&gt;, Int32, out Boolean)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static TTarget FindElementWithHashCode&lt;TLink, TTarget&gt;(Entity root, BufferFromEntity&lt;TLink&gt; linksFromEntity, BufferFromEntity&lt;TTarget&gt; targetBufferFromEntity, int hashCode, out bool found)
+    where TLink : struct, ISubEntityLinkElement where TTarget : struct, IIdentifiableElement</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Entity</span></td>
+        <td><span class="parametername">root</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">BufferFromEntity</span>&lt;TLink&gt;</td>
+        <td><span class="parametername">linksFromEntity</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">BufferFromEntity</span>&lt;TTarget&gt;</td>
+        <td><span class="parametername">targetBufferFromEntity</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">hashCode</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">found</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">TTarget</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">TLink</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="parametername">TTarget</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
   <a id="Kinstrife_Entities_Identifier_EntityIndentifier_GetIdentifierForObject_" data-uid="Kinstrife.Entities.Identifier.EntityIndentifier.GetIdentifierForObject*"></a>
   <h4 id="Kinstrife_Entities_Identifier_EntityIndentifier_GetIdentifierForObject_System_Object_" data-uid="Kinstrife.Entities.Identifier.EntityIndentifier.GetIdentifierForObject(System.Object)">GetIdentifierForObject(Object)</h4>
   <div class="markdown level1 summary"></div>

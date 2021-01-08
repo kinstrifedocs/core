@@ -78,28 +78,25 @@
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><a class="xref" href="Kinstrife.Entities.Systems.JobComponentSystemBase.html">JobComponentSystemBase</a></div>
+    <div class="level1"><a class="xref" href="Kinstrife.Entities.JobComponentSystemBase.html">JobComponentSystemBase</a></div>
     <div class="level2"><span class="xref">ProcedureStartStopSystem</span></div>
   </div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
     <div>
-      <a class="xref" href="Kinstrife.Entities.Systems.JobComponentSystemBase.html#Kinstrife_Entities_Systems_JobComponentSystemBase_EndSimulationEntityCommandBufferSystem">JobComponentSystemBase.EndSimulationEntityCommandBufferSystem</a>
+      <a class="xref" href="Kinstrife.Entities.JobComponentSystemBase.html#Kinstrife_Entities_JobComponentSystemBase_EndSimulationEntityCommandBufferSystem">JobComponentSystemBase.EndSimulationEntityCommandBufferSystem</a>
     </div>
     <div>
-      <a class="xref" href="Kinstrife.Entities.Systems.JobComponentSystemBase.html#Kinstrife_Entities_Systems_JobComponentSystemBase_EndInitializationEntityCommandBufferSystem">JobComponentSystemBase.EndInitializationEntityCommandBufferSystem</a>
+      <a class="xref" href="Kinstrife.Entities.JobComponentSystemBase.html#Kinstrife_Entities_JobComponentSystemBase_EndInitializationEntityCommandBufferSystem">JobComponentSystemBase.EndInitializationEntityCommandBufferSystem</a>
     </div>
     <div>
-      <a class="xref" href="Kinstrife.Entities.Systems.JobComponentSystemBase.html#Kinstrife_Entities_Systems_JobComponentSystemBase_CommandBufferNative">JobComponentSystemBase.CommandBufferNative</a>
+      <a class="xref" href="Kinstrife.Entities.JobComponentSystemBase.html#Kinstrife_Entities_JobComponentSystemBase_OnCreate">JobComponentSystemBase.OnCreate()</a>
     </div>
     <div>
-      <a class="xref" href="Kinstrife.Entities.Systems.JobComponentSystemBase.html#Kinstrife_Entities_Systems_JobComponentSystemBase_OnCreate">JobComponentSystemBase.OnCreate()</a>
+      <a class="xref" href="Kinstrife.Entities.JobComponentSystemBase.html#Kinstrife_Entities_JobComponentSystemBase_Count__1">JobComponentSystemBase.Count&lt;T&gt;()</a>
     </div>
     <div>
-      <a class="xref" href="Kinstrife.Entities.Systems.JobComponentSystemBase.html#Kinstrife_Entities_Systems_JobComponentSystemBase_Count__1">JobComponentSystemBase.Count&lt;T&gt;()</a>
-    </div>
-    <div>
-      <a class="xref" href="Kinstrife.Entities.Systems.JobComponentSystemBase.html#Kinstrife_Entities_Systems_JobComponentSystemBase_CountHasBuffer__1">JobComponentSystemBase.CountHasBuffer&lt;T&gt;()</a>
+      <a class="xref" href="Kinstrife.Entities.JobComponentSystemBase.html#Kinstrife_Entities_JobComponentSystemBase_CountHasBuffer__1">JobComponentSystemBase.CountHasBuffer&lt;T&gt;()</a>
     </div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Kinstrife.Entities.Procedures.html">Kinstrife.Entities.Procedures</a></h6>
@@ -202,12 +199,12 @@
   
   
   <a id="Kinstrife_Entities_Procedures_ProcedureStartStopSystem_TryStart_" data-uid="Kinstrife.Entities.Procedures.ProcedureStartStopSystem.TryStart*"></a>
-  <h4 id="Kinstrife_Entities_Procedures_ProcedureStartStopSystem_TryStart_Entity_ComponentDataFromEntity_Kinstrife_Entities_Procedures_Procedure___" data-uid="Kinstrife.Entities.Procedures.ProcedureStartStopSystem.TryStart(Entity,ComponentDataFromEntity{Kinstrife.Entities.Procedures.Procedure}@)">TryStart(Entity, ref ComponentDataFromEntity&lt;Procedure&gt;)</h4>
+  <h4 id="Kinstrife_Entities_Procedures_ProcedureStartStopSystem_TryStart_Entity_System_Int32_" data-uid="Kinstrife.Entities.Procedures.ProcedureStartStopSystem.TryStart(Entity,System.Int32)">TryStart(Entity, Int32)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static bool TryStart(Entity actionEntity, ref ComponentDataFromEntity&lt;Procedure&gt; actionFromEntity)</code></pre>
+    <pre><code class="lang-csharp hljs">public bool TryStart(Entity owner, int procedureIndex)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -221,12 +218,12 @@
     <tbody>
       <tr>
         <td><span class="xref">Entity</span></td>
-        <td><span class="parametername">actionEntity</span></td>
+        <td><span class="parametername">owner</span></td>
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">ComponentDataFromEntity</span>&lt;<a class="xref" href="Kinstrife.Entities.Procedures.Procedure.html">Procedure</a>&gt;</td>
-        <td><span class="parametername">actionFromEntity</span></td>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">procedureIndex</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -249,12 +246,12 @@
   
   
   <a id="Kinstrife_Entities_Procedures_ProcedureStartStopSystem_TryStart_" data-uid="Kinstrife.Entities.Procedures.ProcedureStartStopSystem.TryStart*"></a>
-  <h4 id="Kinstrife_Entities_Procedures_ProcedureStartStopSystem_TryStart_Entity_System_Int32_" data-uid="Kinstrife.Entities.Procedures.ProcedureStartStopSystem.TryStart(Entity,System.Int32)">TryStart(Entity, Int32)</h4>
+  <h4 id="Kinstrife_Entities_Procedures_ProcedureStartStopSystem_TryStart_Entity__ComponentDataFromEntity_Kinstrife_Entities_Procedures_Procedure___" data-uid="Kinstrife.Entities.Procedures.ProcedureStartStopSystem.TryStart(Entity@,ComponentDataFromEntity{Kinstrife.Entities.Procedures.Procedure}@)">TryStart(Entity, ref ComponentDataFromEntity&lt;Procedure&gt;)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public bool TryStart(Entity owner, int actionID)</code></pre>
+    <pre><code class="lang-csharp hljs">public static bool TryStart(in Entity e, ref ComponentDataFromEntity&lt;Procedure&gt; procedureFromEntity)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -268,12 +265,12 @@
     <tbody>
       <tr>
         <td><span class="xref">Entity</span></td>
-        <td><span class="parametername">owner</span></td>
+        <td><span class="parametername">e</span></td>
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">System.Int32</span></td>
-        <td><span class="parametername">actionID</span></td>
+        <td><span class="xref">ComponentDataFromEntity</span>&lt;<a class="xref" href="Kinstrife.Entities.Procedures.Procedure.html">Procedure</a>&gt;</td>
+        <td><span class="parametername">procedureFromEntity</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -301,7 +298,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void TryStop(Entity owner, int actionID)</code></pre>
+    <pre><code class="lang-csharp hljs">public bool TryStop(Entity owner, int procedureIndex)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -320,7 +317,22 @@
       </tr>
       <tr>
         <td><span class="xref">System.Int32</span></td>
-        <td><span class="parametername">actionID</span></td>
+        <td><span class="parametername">procedureIndex</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -328,12 +340,12 @@
   
   
   <a id="Kinstrife_Entities_Procedures_ProcedureStartStopSystem_TryTerminate_" data-uid="Kinstrife.Entities.Procedures.ProcedureStartStopSystem.TryTerminate*"></a>
-  <h4 id="Kinstrife_Entities_Procedures_ProcedureStartStopSystem_TryTerminate_Entity_ComponentDataFromEntity_Kinstrife_Entities_Procedures_Procedure___" data-uid="Kinstrife.Entities.Procedures.ProcedureStartStopSystem.TryTerminate(Entity,ComponentDataFromEntity{Kinstrife.Entities.Procedures.Procedure}@)">TryTerminate(Entity, ref ComponentDataFromEntity&lt;Procedure&gt;)</h4>
+  <h4 id="Kinstrife_Entities_Procedures_ProcedureStartStopSystem_TryTerminate_Entity__ComponentDataFromEntity_Kinstrife_Entities_Procedures_Procedure___" data-uid="Kinstrife.Entities.Procedures.ProcedureStartStopSystem.TryTerminate(Entity@,ComponentDataFromEntity{Kinstrife.Entities.Procedures.Procedure}@)">TryTerminate(Entity, ref ComponentDataFromEntity&lt;Procedure&gt;)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static void TryTerminate(Entity actionEntity, ref ComponentDataFromEntity&lt;Procedure&gt; actionFromEntity)</code></pre>
+    <pre><code class="lang-csharp hljs">public static bool TryTerminate(in Entity e, ref ComponentDataFromEntity&lt;Procedure&gt; procedureFromEntity)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -347,12 +359,27 @@
     <tbody>
       <tr>
         <td><span class="xref">Entity</span></td>
-        <td><span class="parametername">actionEntity</span></td>
+        <td><span class="parametername">e</span></td>
         <td></td>
       </tr>
       <tr>
         <td><span class="xref">ComponentDataFromEntity</span>&lt;<a class="xref" href="Kinstrife.Entities.Procedures.Procedure.html">Procedure</a>&gt;</td>
-        <td><span class="parametername">actionFromEntity</span></td>
+        <td><span class="parametername">procedureFromEntity</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -360,12 +387,12 @@
   
   
   <a id="Kinstrife_Entities_Procedures_ProcedureStartStopSystem_TryTerminate_" data-uid="Kinstrife.Entities.Procedures.ProcedureStartStopSystem.TryTerminate*"></a>
-  <h4 id="Kinstrife_Entities_Procedures_ProcedureStartStopSystem_TryTerminate_Entity__Kinstrife_Entities_Procedures_Procedure__Kinstrife_Entities_Procedures_ProcedureInputStream__" data-uid="Kinstrife.Entities.Procedures.ProcedureStartStopSystem.TryTerminate(Entity@,Kinstrife.Entities.Procedures.Procedure@,Kinstrife.Entities.Procedures.ProcedureInputStream@)">TryTerminate(ref Entity, ref Procedure, ProcedureInputStream)</h4>
+  <h4 id="Kinstrife_Entities_Procedures_ProcedureStartStopSystem_TryTerminate_Entity__Kinstrife_Entities_Procedures_Procedure__Kinstrife_Entities_Procedures_ProcedureInputStream__" data-uid="Kinstrife.Entities.Procedures.ProcedureStartStopSystem.TryTerminate(Entity@,Kinstrife.Entities.Procedures.Procedure@,Kinstrife.Entities.Procedures.ProcedureInputStream@)">TryTerminate(Entity, ref Procedure, ProcedureInputStream)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static bool TryTerminate(ref Entity e, ref Procedure action, in ProcedureInputStream stateInputParams)</code></pre>
+    <pre><code class="lang-csharp hljs">public static bool TryTerminate(in Entity e, ref Procedure action, in ProcedureInputStream stateInputParams)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
