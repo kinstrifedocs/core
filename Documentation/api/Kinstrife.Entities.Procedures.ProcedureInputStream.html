@@ -112,12 +112,12 @@ Analogous to Animator parameters</p>
   </h3>
   
   
-  <h4 id="Kinstrife_Entities_Procedures_ProcedureInputStream_KeepCurrentState" data-uid="Kinstrife.Entities.Procedures.ProcedureInputStream.KeepCurrentState">KeepCurrentState</h4>
+  <h4 id="Kinstrife_Entities_Procedures_ProcedureInputStream_CurrentRequest" data-uid="Kinstrife.Entities.Procedures.ProcedureInputStream.CurrentRequest">CurrentRequest</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public BoolInputParameter KeepCurrentState</code></pre>
+    <pre><code class="lang-csharp hljs">public Operation CurrentRequest</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -129,7 +129,7 @@ Analogous to Animator parameters</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">BoolInputParameter</span></td>
+        <td><a class="xref" href="Kinstrife.Entities.Procedures.Operation.html">Operation</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -160,12 +160,12 @@ Analogous to Animator parameters</p>
   </table>
   
   
-  <h4 id="Kinstrife_Entities_Procedures_ProcedureInputStream_RequestStart" data-uid="Kinstrife.Entities.Procedures.ProcedureInputStream.RequestStart">RequestStart</h4>
+  <h4 id="Kinstrife_Entities_Procedures_ProcedureInputStream_RequestInfo" data-uid="Kinstrife.Entities.Procedures.ProcedureInputStream.RequestInfo">RequestInfo</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public BoolInputParameter RequestStart</code></pre>
+    <pre><code class="lang-csharp hljs">public RequestMetaData RequestInfo</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -177,31 +177,7 @@ Analogous to Animator parameters</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">BoolInputParameter</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <h4 id="Kinstrife_Entities_Procedures_ProcedureInputStream_RequestStop" data-uid="Kinstrife.Entities.Procedures.ProcedureInputStream.RequestStop">RequestStop</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public BoolInputParameter RequestStop</code></pre>
-  </div>
-  <h5 class="fieldValue">Field Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">BoolInputParameter</span></td>
+        <td><a class="xref" href="Kinstrife.Entities.Procedures.RequestMetaData.html">RequestMetaData</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -210,14 +186,68 @@ Analogous to Animator parameters</p>
   </h3>
   
   
-  <a id="Kinstrife_Entities_Procedures_ProcedureInputStream_Reset_" data-uid="Kinstrife.Entities.Procedures.ProcedureInputStream.Reset*"></a>
-  <h4 id="Kinstrife_Entities_Procedures_ProcedureInputStream_Reset" data-uid="Kinstrife.Entities.Procedures.ProcedureInputStream.Reset">Reset()</h4>
+  <a id="Kinstrife_Entities_Procedures_ProcedureInputStream_InternalUpdateEndFrame_" data-uid="Kinstrife.Entities.Procedures.ProcedureInputStream.InternalUpdateEndFrame*"></a>
+  <h4 id="Kinstrife_Entities_Procedures_ProcedureInputStream_InternalUpdateEndFrame_System_Double_" data-uid="Kinstrife.Entities.Procedures.ProcedureInputStream.InternalUpdateEndFrame(System.Double)">InternalUpdateEndFrame(Double)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void Reset()</code></pre>
+    <pre><code class="lang-csharp hljs">public void InternalUpdateEndFrame(double elapsedTime)</code></pre>
   </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Double</span></td>
+        <td><span class="parametername">elapsedTime</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Kinstrife_Entities_Procedures_ProcedureInputStream_Request_" data-uid="Kinstrife.Entities.Procedures.ProcedureInputStream.Request*"></a>
+  <h4 id="Kinstrife_Entities_Procedures_ProcedureInputStream_Request_Kinstrife_Entities_Procedures_Operation_System_Double_System_Single_" data-uid="Kinstrife.Entities.Procedures.ProcedureInputStream.Request(Kinstrife.Entities.Procedures.Operation,System.Double,System.Single)">Request(Operation, Double, Single)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Request(Operation operation, double elapsedTime, float lifetime = 0F)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Kinstrife.Entities.Procedures.Operation.html">Operation</a></td>
+        <td><span class="parametername">operation</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Double</span></td>
+        <td><span class="parametername">elapsedTime</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><span class="parametername">lifetime</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   <h3 id="implements">Implements</h3>
   <div>
       <span class="xref">IComponentData</span>

@@ -176,13 +176,13 @@
   </table>
   
   
-  <a id="Kinstrife_Blueprints_ProcedureGraphConversion_OutputNodesToInstructions_" data-uid="Kinstrife.Blueprints.ProcedureGraphConversion.OutputNodesToInstructions*"></a>
-  <h4 id="Kinstrife_Blueprints_ProcedureGraphConversion_OutputNodesToInstructions_EntityManager_Kinstrife_GraphTools_BaseNode_Entity_Kinstrife_Entities_Procedures_SubStateId_" data-uid="Kinstrife.Blueprints.ProcedureGraphConversion.OutputNodesToInstructions(EntityManager,Kinstrife.GraphTools.BaseNode,Entity,Kinstrife.Entities.Procedures.SubStateId)">OutputNodesToInstructions(EntityManager, BaseNode, Entity, SubStateId)</h4>
+  <a id="Kinstrife_Blueprints_ProcedureGraphConversion_InputNodesToInstructions_" data-uid="Kinstrife.Blueprints.ProcedureGraphConversion.InputNodesToInstructions*"></a>
+  <h4 id="Kinstrife_Blueprints_ProcedureGraphConversion_InputNodesToInstructions_EntityManager__Kinstrife_Blueprints_ProcedureGraphAsset_Kinstrife_GraphTools_BaseNode_Entity_Kinstrife_Entities_Procedures_SubStateId_" data-uid="Kinstrife.Blueprints.ProcedureGraphConversion.InputNodesToInstructions(EntityManager@,Kinstrife.Blueprints.ProcedureGraphAsset,Kinstrife.GraphTools.BaseNode,Entity,Kinstrife.Entities.Procedures.SubStateId)">InputNodesToInstructions(ref EntityManager, ProcedureGraphAsset, BaseNode, Entity, SubStateId)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static void OutputNodesToInstructions(EntityManager entityManager, BaseNode node, Entity e, SubStateId state = SubStateId.None)</code></pre>
+    <pre><code class="lang-csharp hljs">public static void InputNodesToInstructions(ref EntityManager entityManager, ProcedureGraphAsset graphAsset, BaseNode node, Entity e, SubStateId state = SubStateId.None)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -197,6 +197,58 @@
       <tr>
         <td><span class="xref">EntityManager</span></td>
         <td><span class="parametername">entityManager</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Kinstrife.Blueprints.ProcedureGraphAsset.html">ProcedureGraphAsset</a></td>
+        <td><span class="parametername">graphAsset</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Kinstrife.GraphTools.BaseNode.html">BaseNode</a></td>
+        <td><span class="parametername">node</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">Entity</span></td>
+        <td><span class="parametername">e</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Kinstrife.Entities.Procedures.SubStateId.html">SubStateId</a></td>
+        <td><span class="parametername">state</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Kinstrife_Blueprints_ProcedureGraphConversion_OutputNodesToInstructions_" data-uid="Kinstrife.Blueprints.ProcedureGraphConversion.OutputNodesToInstructions*"></a>
+  <h4 id="Kinstrife_Blueprints_ProcedureGraphConversion_OutputNodesToInstructions_EntityManager__Kinstrife_Blueprints_ProcedureGraphAsset_Kinstrife_GraphTools_BaseNode_Entity_Kinstrife_Entities_Procedures_SubStateId_" data-uid="Kinstrife.Blueprints.ProcedureGraphConversion.OutputNodesToInstructions(EntityManager@,Kinstrife.Blueprints.ProcedureGraphAsset,Kinstrife.GraphTools.BaseNode,Entity,Kinstrife.Entities.Procedures.SubStateId)">OutputNodesToInstructions(ref EntityManager, ProcedureGraphAsset, BaseNode, Entity, SubStateId)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void OutputNodesToInstructions(ref EntityManager entityManager, ProcedureGraphAsset graphAsset, BaseNode node, Entity e, SubStateId state = SubStateId.None)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">EntityManager</span></td>
+        <td><span class="parametername">entityManager</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Kinstrife.Blueprints.ProcedureGraphAsset.html">ProcedureGraphAsset</a></td>
+        <td><span class="parametername">graphAsset</span></td>
         <td></td>
       </tr>
       <tr>
@@ -219,12 +271,12 @@
   
   
   <a id="Kinstrife_Blueprints_ProcedureGraphConversion_ProcessState_" data-uid="Kinstrife.Blueprints.ProcedureGraphConversion.ProcessState*"></a>
-  <h4 id="Kinstrife_Blueprints_ProcedureGraphConversion_ProcessState_System_Int32_EntityManager_Kinstrife_Blueprints_StateNode_Entity__" data-uid="Kinstrife.Blueprints.ProcedureGraphConversion.ProcessState(System.Int32,EntityManager,Kinstrife.Blueprints.StateNode,Entity@)">ProcessState(Int32, EntityManager, StateNode, ref Entity)</h4>
+  <h4 id="Kinstrife_Blueprints_ProcedureGraphConversion_ProcessState_System_Int32_EntityManager_Kinstrife_Blueprints_ProcedureGraphAsset_Kinstrife_Blueprints_StateNode_Entity__" data-uid="Kinstrife.Blueprints.ProcedureGraphConversion.ProcessState(System.Int32,EntityManager,Kinstrife.Blueprints.ProcedureGraphAsset,Kinstrife.Blueprints.StateNode,Entity@)">ProcessState(Int32, EntityManager, ProcedureGraphAsset, StateNode, ref Entity)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static void ProcessState(int index, EntityManager entityManager, StateNode node, ref Entity e)</code></pre>
+    <pre><code class="lang-csharp hljs">public static void ProcessState(int index, EntityManager entityManager, ProcedureGraphAsset graphAsset, StateNode node, ref Entity e)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -244,6 +296,11 @@
       <tr>
         <td><span class="xref">EntityManager</span></td>
         <td><span class="parametername">entityManager</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Kinstrife.Blueprints.ProcedureGraphAsset.html">ProcedureGraphAsset</a></td>
+        <td><span class="parametername">graphAsset</span></td>
         <td></td>
       </tr>
       <tr>
@@ -296,49 +353,6 @@
       <tr>
         <td><span class="xref">Entity</span></td>
         <td><span class="parametername">e</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="Kinstrife_Blueprints_ProcedureGraphConversion_ProcessStatesRecursive_" data-uid="Kinstrife.Blueprints.ProcedureGraphConversion.ProcessStatesRecursive*"></a>
-  <h4 id="Kinstrife_Blueprints_ProcedureGraphConversion_ProcessStatesRecursive_System_Int32_EntityManager_Kinstrife_Blueprints_StateNode_Entity__" data-uid="Kinstrife.Blueprints.ProcedureGraphConversion.ProcessStatesRecursive(System.Int32,EntityManager,Kinstrife.Blueprints.StateNode,Entity@)">ProcessStatesRecursive(Int32, EntityManager, StateNode, ref Entity)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[Obsolete]
-public static void ProcessStatesRecursive(int index, EntityManager entityManager, StateNode node, ref Entity actionEntity)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Int32</span></td>
-        <td><span class="parametername">index</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><span class="xref">EntityManager</span></td>
-        <td><span class="parametername">entityManager</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="Kinstrife.Blueprints.StateNode.html">StateNode</a></td>
-        <td><span class="parametername">node</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><span class="xref">Entity</span></td>
-        <td><span class="parametername">actionEntity</span></td>
         <td></td>
       </tr>
     </tbody>

@@ -105,17 +105,43 @@
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public class ProcedureStartStopSystem : JobComponentSystemBase</code></pre>
   </div>
-  <h3 id="methods">Methods
+  <h3 id="fields">Fields
   </h3>
   
   
-  <a id="Kinstrife_Entities_Procedures_ProcedureStartStopSystem_InternalTryStop_" data-uid="Kinstrife.Entities.Procedures.ProcedureStartStopSystem.InternalTryStop*"></a>
-  <h4 id="Kinstrife_Entities_Procedures_ProcedureStartStopSystem_InternalTryStop_Kinstrife_Entities_Procedures_Procedure__Kinstrife_Entities_Procedures_CombinedConstraintsResults__" data-uid="Kinstrife.Entities.Procedures.ProcedureStartStopSystem.InternalTryStop(Kinstrife.Entities.Procedures.Procedure@,Kinstrife.Entities.Procedures.CombinedConstraintsResults@)">InternalTryStop(ref Procedure, CombinedConstraintsResults)</h4>
+  <h4 id="Kinstrife_Entities_Procedures_ProcedureStartStopSystem_ElapsedTime" data-uid="Kinstrife.Entities.Procedures.ProcedureStartStopSystem.ElapsedTime">ElapsedTime</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static bool InternalTryStop(ref Procedure procedure, in CombinedConstraintsResults constraints)</code></pre>
+    <pre><code class="lang-csharp hljs">public static double ElapsedTime</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Double</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  
+  
+  <a id="Kinstrife_Entities_Procedures_ProcedureStartStopSystem_InternalRequestStart_" data-uid="Kinstrife.Entities.Procedures.ProcedureStartStopSystem.InternalRequestStart*"></a>
+  <h4 id="Kinstrife_Entities_Procedures_ProcedureStartStopSystem_InternalRequestStart_Kinstrife_Entities_Procedures_ProcedureInputStream__" data-uid="Kinstrife.Entities.Procedures.ProcedureStartStopSystem.InternalRequestStart(Kinstrife.Entities.Procedures.ProcedureInputStream@)">InternalRequestStart(ref ProcedureInputStream)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool InternalRequestStart(ref ProcedureInputStream input)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -128,13 +154,8 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="Kinstrife.Entities.Procedures.Procedure.html">Procedure</a></td>
-        <td><span class="parametername">procedure</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="Kinstrife.Entities.Procedures.CombinedConstraintsResults.html">CombinedConstraintsResults</a></td>
-        <td><span class="parametername">constraints</span></td>
+        <td><a class="xref" href="Kinstrife.Entities.Procedures.ProcedureInputStream.html">ProcedureInputStream</a></td>
+        <td><span class="parametername">input</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -154,6 +175,106 @@
       </tr>
     </tbody>
   </table>
+  
+  
+  <a id="Kinstrife_Entities_Procedures_ProcedureStartStopSystem_InternalRequestStop_" data-uid="Kinstrife.Entities.Procedures.ProcedureStartStopSystem.InternalRequestStop*"></a>
+  <h4 id="Kinstrife_Entities_Procedures_ProcedureStartStopSystem_InternalRequestStop_Kinstrife_Entities_Procedures_ProcedureInputStream__" data-uid="Kinstrife.Entities.Procedures.ProcedureStartStopSystem.InternalRequestStop(Kinstrife.Entities.Procedures.ProcedureInputStream@)">InternalRequestStop(ref ProcedureInputStream)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool InternalRequestStop(ref ProcedureInputStream input)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Kinstrife.Entities.Procedures.ProcedureInputStream.html">ProcedureInputStream</a></td>
+        <td><span class="parametername">input</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Kinstrife_Entities_Procedures_ProcedureStartStopSystem_InternalTryStop_" data-uid="Kinstrife.Entities.Procedures.ProcedureStartStopSystem.InternalTryStop*"></a>
+  <h4 id="Kinstrife_Entities_Procedures_ProcedureStartStopSystem_InternalTryStop_Kinstrife_Entities_Procedures_Procedure__Kinstrife_Entities_Procedures_ConstraintsEvaluation__System_Boolean_" data-uid="Kinstrife.Entities.Procedures.ProcedureStartStopSystem.InternalTryStop(Kinstrife.Entities.Procedures.Procedure@,Kinstrife.Entities.Procedures.ConstraintsEvaluation@,System.Boolean)">InternalTryStop(ref Procedure, ConstraintsEvaluation, Boolean)</h4>
+  <div class="markdown level1 summary"><p>Tries to stop the <a class="xref" href="Kinstrife.Entities.Procedures.Procedure.html">Procedure</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool InternalTryStop(ref Procedure procedure, in ConstraintsEvaluation constraints, bool validateContraints = true)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Kinstrife.Entities.Procedures.Procedure.html">Procedure</a></td>
+        <td><span class="parametername">procedure</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Kinstrife.Entities.Procedures.ConstraintsEvaluation.html">ConstraintsEvaluation</a></td>
+        <td><span class="parametername">constraints</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">validateContraints</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><p>Returns <code>true</code> when status changed, <code>false</code> when unchanged.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Kinstrife_Entities_Procedures_ProcedureStartStopSystem_InternalTryStop_Kinstrife_Entities_Procedures_Procedure__Kinstrife_Entities_Procedures_ConstraintsEvaluation__System_Boolean__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>Will try to validate there are no unsatisfied <code>deactivation</code> constraints by default, without re-evaluating them.
+When accessing this <code>Procedure</code> component through <see cref="!:ComponentDataFromEntity&lt;T>"></see>, be sure to write it back to the data array.</p>
+</div>
   
   
   <a id="Kinstrife_Entities_Procedures_ProcedureStartStopSystem_OnUpdate_" data-uid="Kinstrife.Entities.Procedures.ProcedureStartStopSystem.OnUpdate*"></a>
@@ -247,7 +368,8 @@
   
   <a id="Kinstrife_Entities_Procedures_ProcedureStartStopSystem_RequestStart_" data-uid="Kinstrife.Entities.Procedures.ProcedureStartStopSystem.RequestStart*"></a>
   <h4 id="Kinstrife_Entities_Procedures_ProcedureStartStopSystem_RequestStart_Entity__ComponentDataFromEntity_Kinstrife_Entities_Procedures_ProcedureInputStream___" data-uid="Kinstrife.Entities.Procedures.ProcedureStartStopSystem.RequestStart(Entity@,ComponentDataFromEntity{Kinstrife.Entities.Procedures.ProcedureInputStream}@)">RequestStart(Entity, ref ComponentDataFromEntity&lt;ProcedureInputStream&gt;)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Request the procedure to start (recommended usage).</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -286,10 +408,14 @@
     <tbody>
       <tr>
         <td><span class="xref">System.Boolean</span></td>
-        <td></td>
+        <td><p>Returns <code>true</code> when status changed, <code>false</code> when unchanged.</p>
+</td>
       </tr>
     </tbody>
   </table>
+  <h5 id="Kinstrife_Entities_Procedures_ProcedureStartStopSystem_RequestStart_Entity__ComponentDataFromEntity_Kinstrife_Entities_Procedures_ProcedureInputStream____remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>This causes all <code>Activation</code> constraints to be evaluated in the next phase.</p>
+</div>
   
   
   <a id="Kinstrife_Entities_Procedures_ProcedureStartStopSystem_RequestStop_" data-uid="Kinstrife.Entities.Procedures.ProcedureStartStopSystem.RequestStop*"></a>
@@ -341,7 +467,8 @@
   
   <a id="Kinstrife_Entities_Procedures_ProcedureStartStopSystem_RequestStop_" data-uid="Kinstrife.Entities.Procedures.ProcedureStartStopSystem.RequestStop*"></a>
   <h4 id="Kinstrife_Entities_Procedures_ProcedureStartStopSystem_RequestStop_Entity__ComponentDataFromEntity_Kinstrife_Entities_Procedures_ProcedureInputStream___" data-uid="Kinstrife.Entities.Procedures.ProcedureStartStopSystem.RequestStop(Entity@,ComponentDataFromEntity{Kinstrife.Entities.Procedures.ProcedureInputStream}@)">RequestStop(Entity, ref ComponentDataFromEntity&lt;ProcedureInputStream&gt;)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Request the procedure to stop (recommended usage).</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -380,10 +507,14 @@
     <tbody>
       <tr>
         <td><span class="xref">System.Boolean</span></td>
-        <td></td>
+        <td><p>Returns <code>true</code> when status changed, <code>false</code> when unchanged.</p>
+</td>
       </tr>
     </tbody>
   </table>
+  <h5 id="Kinstrife_Entities_Procedures_ProcedureStartStopSystem_RequestStop_Entity__ComponentDataFromEntity_Kinstrife_Entities_Procedures_ProcedureInputStream____remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>This request causes all <code>Deactivation</code> constraints to be evaluated in the next phase.</p>
+</div>
   
   
   <a id="Kinstrife_Entities_Procedures_ProcedureStartStopSystem_RequestToggle_" data-uid="Kinstrife.Entities.Procedures.ProcedureStartStopSystem.RequestToggle*"></a>
@@ -434,13 +565,13 @@
   
   
   <a id="Kinstrife_Entities_Procedures_ProcedureStartStopSystem_TryStart_" data-uid="Kinstrife.Entities.Procedures.ProcedureStartStopSystem.TryStart*"></a>
-  <h4 id="Kinstrife_Entities_Procedures_ProcedureStartStopSystem_TryStart_Entity_System_Int32_" data-uid="Kinstrife.Entities.Procedures.ProcedureStartStopSystem.TryStart(Entity,System.Int32)">TryStart(Entity, Int32)</h4>
+  <h4 id="Kinstrife_Entities_Procedures_ProcedureStartStopSystem_TryStart_Entity_System_Int32_System_Boolean_" data-uid="Kinstrife.Entities.Procedures.ProcedureStartStopSystem.TryStart(Entity,System.Int32,System.Boolean)">TryStart(Entity, Int32, Boolean)</h4>
   <div class="markdown level1 summary"><p>Trying to start without re-evaluating constraints, but checking them</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public bool TryStart(Entity owner, int procedureIndex)</code></pre>
+    <pre><code class="lang-csharp hljs">public bool TryStart(Entity owner, int procedureIndex, bool validateConstraints = true)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -460,6 +591,11 @@
       <tr>
         <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">procedureIndex</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">validateConstraints</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -482,12 +618,13 @@
   
   
   <a id="Kinstrife_Entities_Procedures_ProcedureStartStopSystem_TryStart_" data-uid="Kinstrife.Entities.Procedures.ProcedureStartStopSystem.TryStart*"></a>
-  <h4 id="Kinstrife_Entities_Procedures_ProcedureStartStopSystem_TryStart_Entity__ComponentDataFromEntity_Kinstrife_Entities_Procedures_Procedure___Kinstrife_Entities_Procedures_CombinedConstraintsResults__" data-uid="Kinstrife.Entities.Procedures.ProcedureStartStopSystem.TryStart(Entity@,ComponentDataFromEntity{Kinstrife.Entities.Procedures.Procedure}@,Kinstrife.Entities.Procedures.CombinedConstraintsResults@)">TryStart(Entity, ref ComponentDataFromEntity&lt;Procedure&gt;, CombinedConstraintsResults)</h4>
-  <div class="markdown level1 summary"></div>
+  <h4 id="Kinstrife_Entities_Procedures_ProcedureStartStopSystem_TryStart_Entity__ComponentDataFromEntity_Kinstrife_Entities_Procedures_Procedure___Kinstrife_Entities_Procedures_ConstraintsEvaluation__System_Boolean_" data-uid="Kinstrife.Entities.Procedures.ProcedureStartStopSystem.TryStart(Entity@,ComponentDataFromEntity{Kinstrife.Entities.Procedures.Procedure}@,Kinstrife.Entities.Procedures.ConstraintsEvaluation@,System.Boolean)">TryStart(Entity, ref ComponentDataFromEntity&lt;Procedure&gt;, ConstraintsEvaluation, Boolean)</h4>
+  <div class="markdown level1 summary"><p>Tries to start the procedure without re-evaluating the current constraints.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static bool TryStart(in Entity e, ref ComponentDataFromEntity&lt;Procedure&gt; procedureFromEntity, in CombinedConstraintsResults constraints)</code></pre>
+    <pre><code class="lang-csharp hljs">public static bool TryStart(in Entity e, ref ComponentDataFromEntity&lt;Procedure&gt; procedureFromEntity, in ConstraintsEvaluation constraints, bool validateConstraints = true)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -510,8 +647,70 @@
         <td></td>
       </tr>
       <tr>
-        <td><a class="xref" href="Kinstrife.Entities.Procedures.CombinedConstraintsResults.html">CombinedConstraintsResults</a></td>
+        <td><a class="xref" href="Kinstrife.Entities.Procedures.ConstraintsEvaluation.html">ConstraintsEvaluation</a></td>
         <td><span class="parametername">constraints</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">validateConstraints</span></td>
+        <td><p>Set this to false to force the operation, and skip the constraint validation check step (not recommended).</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><p>Returns <code>true</code> when status changed, <code>false</code> when unchanged.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Kinstrife_Entities_Procedures_ProcedureStartStopSystem_TryStart_Entity__ComponentDataFromEntity_Kinstrife_Entities_Procedures_Procedure___Kinstrife_Entities_Procedures_ConstraintsEvaluation__System_Boolean__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>Will try to validate there are no unsatisfied <code>Activation</code> constraints by default, but will not re-evaluate them. Use<a class="xref" href="Kinstrife.Entities.Procedures.ProcedureStartStopSystem.html#Kinstrife_Entities_Procedures_ProcedureStartStopSystem_RequestStart_Entity__ComponentDataFromEntity_Kinstrife_Entities_Procedures_ProcedureInputStream___">RequestStart(Entity, ref ComponentDataFromEntity&lt;ProcedureInputStream&gt;)</a> to not skip the re-evaluation step.</p>
+</div>
+  
+  
+  <a id="Kinstrife_Entities_Procedures_ProcedureStartStopSystem_TryStop_" data-uid="Kinstrife.Entities.Procedures.ProcedureStartStopSystem.TryStop*"></a>
+  <h4 id="Kinstrife_Entities_Procedures_ProcedureStartStopSystem_TryStop_Entity_System_Int32_System_Boolean_" data-uid="Kinstrife.Entities.Procedures.ProcedureStartStopSystem.TryStop(Entity,System.Int32,System.Boolean)">TryStop(Entity, Int32, Boolean)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool TryStop(Entity owner, int procedureIndex, bool validateConstraints)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Entity</span></td>
+        <td><span class="parametername">owner</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">procedureIndex</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">validateConstraints</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -534,59 +733,13 @@
   
   
   <a id="Kinstrife_Entities_Procedures_ProcedureStartStopSystem_TryStop_" data-uid="Kinstrife.Entities.Procedures.ProcedureStartStopSystem.TryStop*"></a>
-  <h4 id="Kinstrife_Entities_Procedures_ProcedureStartStopSystem_TryStop_Entity_System_Int32_" data-uid="Kinstrife.Entities.Procedures.ProcedureStartStopSystem.TryStop(Entity,System.Int32)">TryStop(Entity, Int32)</h4>
-  <div class="markdown level1 summary"></div>
+  <h4 id="Kinstrife_Entities_Procedures_ProcedureStartStopSystem_TryStop_Entity__ComponentDataFromEntity_Kinstrife_Entities_Procedures_Procedure___Kinstrife_Entities_Procedures_ConstraintsEvaluation__System_Boolean_" data-uid="Kinstrife.Entities.Procedures.ProcedureStartStopSystem.TryStop(Entity@,ComponentDataFromEntity{Kinstrife.Entities.Procedures.Procedure}@,Kinstrife.Entities.Procedures.ConstraintsEvaluation@,System.Boolean)">TryStop(Entity, ref ComponentDataFromEntity&lt;Procedure&gt;, ConstraintsEvaluation, Boolean)</h4>
+  <div class="markdown level1 summary"><p>Tries to stop the procedure without re-evaluating the current constraints.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public bool TryStop(Entity owner, int procedureIndex)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">Entity</span></td>
-        <td><span class="parametername">owner</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><span class="xref">System.Int32</span></td>
-        <td><span class="parametername">procedureIndex</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Boolean</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="Kinstrife_Entities_Procedures_ProcedureStartStopSystem_TryTerminate_" data-uid="Kinstrife.Entities.Procedures.ProcedureStartStopSystem.TryTerminate*"></a>
-  <h4 id="Kinstrife_Entities_Procedures_ProcedureStartStopSystem_TryTerminate_Entity__ComponentDataFromEntity_Kinstrife_Entities_Procedures_Procedure___Kinstrife_Entities_Procedures_CombinedConstraintsResults__" data-uid="Kinstrife.Entities.Procedures.ProcedureStartStopSystem.TryTerminate(Entity@,ComponentDataFromEntity{Kinstrife.Entities.Procedures.Procedure}@,Kinstrife.Entities.Procedures.CombinedConstraintsResults@)">TryTerminate(Entity, ref ComponentDataFromEntity&lt;Procedure&gt;, CombinedConstraintsResults)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static bool TryTerminate(in Entity e, ref ComponentDataFromEntity&lt;Procedure&gt; procedureFromEntity, in CombinedConstraintsResults constraints)</code></pre>
+    <pre><code class="lang-csharp hljs">public static bool TryStop(in Entity e, ref ComponentDataFromEntity&lt;Procedure&gt; procedureFromEntity, in ConstraintsEvaluation constraints, bool validateConstraints = true)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -609,9 +762,15 @@
         <td></td>
       </tr>
       <tr>
-        <td><a class="xref" href="Kinstrife.Entities.Procedures.CombinedConstraintsResults.html">CombinedConstraintsResults</a></td>
+        <td><a class="xref" href="Kinstrife.Entities.Procedures.ConstraintsEvaluation.html">ConstraintsEvaluation</a></td>
         <td><span class="parametername">constraints</span></td>
         <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">validateConstraints</span></td>
+        <td><p>Set this to false to force the operation, and skip the constraint validation check step (not recommended).</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -626,19 +785,23 @@
     <tbody>
       <tr>
         <td><span class="xref">System.Boolean</span></td>
-        <td></td>
+        <td><p>Returns <code>true</code> when status changed, <code>false</code> when unchanged.</p>
+</td>
       </tr>
     </tbody>
   </table>
+  <h5 id="Kinstrife_Entities_Procedures_ProcedureStartStopSystem_TryStop_Entity__ComponentDataFromEntity_Kinstrife_Entities_Procedures_Procedure___Kinstrife_Entities_Procedures_ConstraintsEvaluation__System_Boolean__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>Will try to validate there are no unsatisfied <code>Deactivation</code> constraints by default, but will not re-evaluate them. Use <a class="xref" href="Kinstrife.Entities.Procedures.ProcedureStartStopSystem.html#Kinstrife_Entities_Procedures_ProcedureStartStopSystem_RequestStop_Entity__ComponentDataFromEntity_Kinstrife_Entities_Procedures_ProcedureInputStream___">RequestStop(Entity, ref ComponentDataFromEntity&lt;ProcedureInputStream&gt;)</a> to not skip the re-evaluation step.</p>
+</div>
   
   
   <a id="Kinstrife_Entities_Procedures_ProcedureStartStopSystem_TryToggle_" data-uid="Kinstrife.Entities.Procedures.ProcedureStartStopSystem.TryToggle*"></a>
-  <h4 id="Kinstrife_Entities_Procedures_ProcedureStartStopSystem_TryToggle_Entity_System_Int32_" data-uid="Kinstrife.Entities.Procedures.ProcedureStartStopSystem.TryToggle(Entity,System.Int32)">TryToggle(Entity, Int32)</h4>
+  <h4 id="Kinstrife_Entities_Procedures_ProcedureStartStopSystem_TryToggle_Entity_System_Int32_System_Boolean_" data-uid="Kinstrife.Entities.Procedures.ProcedureStartStopSystem.TryToggle(Entity,System.Int32,System.Boolean)">TryToggle(Entity, Int32, Boolean)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void TryToggle(Entity owner, int actionID)</code></pre>
+    <pre><code class="lang-csharp hljs">public void TryToggle(Entity owner, int actionID, bool validateConstraints = true)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -658,6 +821,11 @@
       <tr>
         <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">actionID</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">validateConstraints</span></td>
         <td></td>
       </tr>
     </tbody>
