@@ -121,7 +121,9 @@
       <h4><a class="xref" href="Kinstrife.Entities.Procedures.ProcedureManagedInitializationSystemBase-2.html">ProcedureManagedInitializationSystemBase&lt;TComponentType, TSystemState&gt;</a></h4>
       <section></section>
       <h4><a class="xref" href="Kinstrife.Entities.Procedures.Procedures.html">Procedures</a></h4>
-      <section></section>
+      <section><p>High level utility methods for interfacing with procedures.
+Contains Operations (Start/Stop) for different phases (Request-&gt;Try/Force), IsActive</p>
+</section>
       <h4><a class="xref" href="Kinstrife.Entities.Procedures.ProcedureScheduleSystem.html">ProcedureScheduleSystem</a></h4>
       <section></section>
       <h4><a class="xref" href="Kinstrife.Entities.Procedures.ProcedureScheduleSystemGroup.html">ProcedureScheduleSystemGroup</a></h4>
@@ -140,7 +142,7 @@
       <h4><a class="xref" href="Kinstrife.Entities.Procedures.StatusEventsBroadcaster.StatusEventsContainer.html">StatusEventsBroadcaster.StatusEventsContainer</a></h4>
       <section><p>Container for a state that has any managed listeners. Can be procedure or sub states</p>
 </section>
-      <h4><a class="xref" href="Kinstrife.Entities.Procedures.StatusEventsListener.html">StatusEventsListener</a></h4>
+      <h4><a class="xref" href="Kinstrife.Entities.Procedures.StatusEventsInstruction.html">StatusEventsInstruction</a></h4>
       <section><p>Will activate/deactive based on the procedure's status flags overlap with the listener's status.</p>
 </section>
       <h4><a class="xref" href="Kinstrife.Entities.Procedures.StatusFlags.html">StatusFlags</a></h4>
@@ -171,9 +173,9 @@
       <section></section>
       <h4><a class="xref" href="Kinstrife.Entities.Procedures.DurationConstraint.html">DurationConstraint</a></h4>
       <section></section>
-      <h4><a class="xref" href="Kinstrife.Entities.Procedures.DurationConstraintInstruction.html">DurationConstraintInstruction</a></h4>
+      <h4><a class="xref" href="Kinstrife.Entities.Procedures.DurationConstraint.SettingsBlob.html">DurationConstraint.SettingsBlob</a></h4>
       <section></section>
-      <h4><a class="xref" href="Kinstrife.Entities.Procedures.DurationConstraintSettingsBlob.html">DurationConstraintSettingsBlob</a></h4>
+      <h4><a class="xref" href="Kinstrife.Entities.Procedures.DurationConstraintInstruction.html">DurationConstraintInstruction</a></h4>
       <section></section>
       <h4><a class="xref" href="Kinstrife.Entities.Procedures.EventsChangeFilter.html">EventsChangeFilter</a></h4>
       <section></section>
@@ -192,11 +194,7 @@ Analogous to Animator parameters</p>
 </section>
       <h4><a class="xref" href="Kinstrife.Entities.Procedures.ProcedureOwner.html">ProcedureOwner</a></h4>
       <section></section>
-      <h4><a class="xref" href="Kinstrife.Entities.Procedures.RequestMetaData.html">RequestMetaData</a></h4>
-      <section></section>
       <h4><a class="xref" href="Kinstrife.Entities.Procedures.StateMachine.html">StateMachine</a></h4>
-      <section></section>
-      <h4><a class="xref" href="Kinstrife.Entities.Procedures.StatusEventsBroadcaster.HasListeners.html">StatusEventsBroadcaster.HasListeners</a></h4>
       <section></section>
       <h4><a class="xref" href="Kinstrife.Entities.Procedures.StatusEventsHooksInfo.html">StatusEventsHooksInfo</a></h4>
       <section><p>Contains info on whether events need to be checked on which status of the procedure (or any of its sub states)</p>
@@ -212,15 +210,27 @@ Analogous to Animator parameters</p>
       <h4><a class="xref" href="Kinstrife.Entities.Procedures.IConvertibleToCompactInstruction.html">IConvertibleToCompactInstruction</a></h4>
       <section><p>Compact instruction is an immutable permutation of an input or output instruction.</p>
 </section>
+      <h4><a class="xref" href="Kinstrife.Entities.Procedures.IConvertibleToInstructions-1.html">IConvertibleToInstructions&lt;TInstructionType&gt;</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Kinstrife.Entities.Procedures.IConvertibleToSettingsBlob-1.html">IConvertibleToSettingsBlob&lt;TSettingsBlobType&gt;</a></h4>
+      <section></section>
       <h4><a class="xref" href="Kinstrife.Entities.Procedures.IEventsDataSource.html">IEventsDataSource</a></h4>
       <section><p>Is a data source from which event listeners are created</p>
 </section>
+      <h4><a class="xref" href="Kinstrife.Entities.Procedures.IHasSettingsBlobAssetReference-1.html">IHasSettingsBlobAssetReference&lt;TSettingsBlobType&gt;</a></h4>
+      <section></section>
       <h4><a class="xref" href="Kinstrife.Entities.Procedures.IHasStatusFlags.html">IHasStatusFlags</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Kinstrife.Entities.Procedures.IInstruction.html">IInstruction</a></h4>
       <section></section>
       <h4><a class="xref" href="Kinstrife.Entities.Procedures.IRegisterAtBroadcaster.html">IRegisterAtBroadcaster</a></h4>
       <section><p>Interface for custom logic listening to broadcaster</p>
 </section>
       <h4><a class="xref" href="Kinstrife.Entities.Procedures.IRegisterListener.html">IRegisterListener</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Kinstrife.Entities.Procedures.ISettingsBlob.html">ISettingsBlob</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Kinstrife.Entities.Procedures.ISettingsBlob-1.html">ISettingsBlob&lt;TInstructionType&gt;</a></h4>
       <section></section>
       <h4><a class="xref" href="Kinstrife.Entities.Procedures.IStatusFlagEventsListener.html">IStatusFlagEventsListener</a></h4>
       <section></section>

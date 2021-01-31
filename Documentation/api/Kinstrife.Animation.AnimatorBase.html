@@ -80,11 +80,66 @@
     <div class="level0"><span class="xref">System.Object</span></div>
     <div class="level1"><span class="xref">AnimatorBase</span></div>
   </div>
+  <div classs="implements">
+    <h5>Implements</h5>
+    <div><a class="xref" href="Kinstrife.Animation.IAnimator.html">IAnimator</a></div>
+  </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Kinstrife.Animation.html">Kinstrife.Animation</a></h6>
   <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
   <h5 id="Kinstrife_Animation_AnimatorBase_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public abstract class AnimatorBase : MonoBehaviour</code></pre>
+    <pre><code class="lang-csharp hljs">public abstract class AnimatorBase : MonoBehaviour, IAnimator</code></pre>
+  </div>
+  <h3 id="methods">Methods
+  </h3>
+  
+  
+  <a id="Kinstrife_Animation_AnimatorBase_AsAnimator_" data-uid="Kinstrife.Animation.AnimatorBase.AsAnimator*"></a>
+  <h4 id="Kinstrife_Animation_AnimatorBase_AsAnimator__2" data-uid="Kinstrife.Animation.AnimatorBase.AsAnimator``2">AsAnimator&lt;TAnimator, TPlayableData&gt;()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TAnimator AsAnimator&lt;TAnimator, TPlayableData&gt;()
+    where TAnimator : IAnimator&lt;TPlayableData&gt; where TPlayableData : IPlayableData</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">TAnimator</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">TAnimator</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="parametername">TPlayableData</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <a class="xref" href="Kinstrife.Animation.IAnimator.html">IAnimator</a>
   </div>
 </article>
           </div>

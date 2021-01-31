@@ -79,8 +79,9 @@
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
     <div class="level1"><a class="xref" href="Kinstrife.GraphTools.BaseNode.html">BaseNode</a></div>
-    <div class="level2"><a class="xref" href="Kinstrife.Blueprints.ConstraintNode.html">ConstraintNode</a></div>
-    <div class="level3"><span class="xref">DurationConstraintNode</span></div>
+    <div class="level2"><a class="xref" href="Kinstrife.Blueprints.InputNode.html">InputNode</a></div>
+    <div class="level3"><a class="xref" href="Kinstrife.Blueprints.ConstraintNode.html">ConstraintNode</a></div>
+    <div class="level4"><span class="xref">DurationConstraintNode</span></div>
   </div>
   <div classs="implements">
     <h5>Implements</h5>
@@ -88,6 +89,8 @@
     <div><a class="xref" href="Kinstrife.Entities.IConvertible.html">IConvertible</a></div>
     <div><a class="xref" href="Kinstrife.Entities.Properties.IHasNameProperty.html">IHasNameProperty</a></div>
     <div><a class="xref" href="Kinstrife.Entities.Procedures.IConnectedToStates.html">IConnectedToStates</a></div>
+    <div><a class="xref" href="Kinstrife.Entities.Procedures.IConvertibleToInstructions-1.html">IConvertibleToInstructions</a>&lt;<a class="xref" href="Kinstrife.Entities.Procedures.DurationConstraintInstruction.html">DurationConstraintInstruction</a>&gt;</div>
+    <div><a class="xref" href="Kinstrife.Entities.Procedures.IConvertibleToSettingsBlob-1.html">IConvertibleToSettingsBlob</a>&lt;<a class="xref" href="Kinstrife.Entities.Procedures.DurationConstraint.SettingsBlob.html">DurationConstraint.SettingsBlob</a>&gt;</div>
   </div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
@@ -95,7 +98,7 @@
       <a class="xref" href="Kinstrife.Blueprints.ConstraintNode.html#Kinstrife_Blueprints_ConstraintNode_dependent">ConstraintNode.dependent</a>
     </div>
     <div>
-      <a class="xref" href="Kinstrife.Blueprints.ConstraintNode.html#Kinstrife_Blueprints_ConstraintNode_ConstraintMode">ConstraintNode.ConstraintMode</a>
+      <a class="xref" href="Kinstrife.Blueprints.ConstraintNode.html#Kinstrife_Blueprints_ConstraintNode_ConstrainedOperations">ConstraintNode.ConstrainedOperations</a>
     </div>
     <div>
       <a class="xref" href="Kinstrife.Blueprints.ConstraintNode.html#Kinstrife_Blueprints_ConstraintNode_Name">ConstraintNode.Name</a>
@@ -144,7 +147,7 @@
   <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
   <h5 id="Kinstrife_Blueprints_DurationConstraintNode_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class DurationConstraintNode : ConstraintNode, ICustomSubEntityLinkRelation, IConvertible, IHasNameProperty, IConnectedToStates</code></pre>
+    <pre><code class="lang-csharp hljs">public class DurationConstraintNode : ConstraintNode, ICustomSubEntityLinkRelation, IConvertible, IHasNameProperty, IConnectedToStates, IConvertibleToInstructions&lt;DurationConstraintInstruction&gt;, IConvertibleToSettingsBlob&lt;DurationConstraint.SettingsBlob&gt;</code></pre>
   </div>
   <h3 id="fields">Fields
   </h3>
@@ -266,14 +269,13 @@
   </table>
   
   
-  <a id="Kinstrife_Blueprints_DurationConstraintNode_CreateBlobAssetRef_" data-uid="Kinstrife.Blueprints.DurationConstraintNode.CreateBlobAssetRef*"></a>
-  <h4 id="Kinstrife_Blueprints_DurationConstraintNode_CreateBlobAssetRef__1___0_" data-uid="Kinstrife.Blueprints.DurationConstraintNode.CreateBlobAssetRef``1(``0)">CreateBlobAssetRef&lt;T&gt;(T)</h4>
+  <a id="Kinstrife_Blueprints_DurationConstraintNode_ConstructRoot_" data-uid="Kinstrife.Blueprints.DurationConstraintNode.ConstructRoot*"></a>
+  <h4 id="Kinstrife_Blueprints_DurationConstraintNode_ConstructRoot_BlobBuilder__" data-uid="Kinstrife.Blueprints.DurationConstraintNode.ConstructRoot(BlobBuilder@)">ConstructRoot(ref BlobBuilder)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static BlobAssetReference&lt;T&gt; CreateBlobAssetRef&lt;T&gt;(T data)
-    where T : struct</code></pre>
+    <pre><code class="lang-csharp hljs">public DurationConstraint.SettingsBlob ConstructRoot(ref BlobBuilder blobBuilder)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -286,8 +288,8 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">T</span></td>
-        <td><span class="parametername">data</span></td>
+        <td><span class="xref">BlobBuilder</span></td>
+        <td><span class="parametername">blobBuilder</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -302,22 +304,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">BlobAssetReference</span>&lt;T&gt;</td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="typeParameters">Type Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="parametername">T</span></td>
+        <td><a class="xref" href="Kinstrife.Entities.Procedures.DurationConstraint.SettingsBlob.html">DurationConstraint.SettingsBlob</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -330,7 +317,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static void CreateCompactInstructionsBlob(ref EntityManager entityManager, ProcedureGraphAsset graphAsset, in Entity e)</code></pre>
+    <pre><code class="lang-csharp hljs">public override void CreateCompactInstructionsBlob(ref EntityManager entityManager, ProcedureGraphAsset graphAsset, in Entity e)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -355,6 +342,33 @@
       <tr>
         <td><span class="xref">Entity</span></td>
         <td><span class="parametername">e</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Kinstrife.Blueprints.ConstraintNode.html#Kinstrife_Blueprints_ConstraintNode_CreateCompactInstructionsBlob_EntityManager__Kinstrife_Blueprints_ProcedureGraphAsset_Entity__">ConstraintNode.CreateCompactInstructionsBlob(ref EntityManager, ProcedureGraphAsset, Entity)</a></div>
+  
+  
+  <a id="Kinstrife_Blueprints_DurationConstraintNode_GetInstruction_" data-uid="Kinstrife.Blueprints.DurationConstraintNode.GetInstruction*"></a>
+  <h4 id="Kinstrife_Blueprints_DurationConstraintNode_GetInstruction" data-uid="Kinstrife.Blueprints.DurationConstraintNode.GetInstruction">GetInstruction()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public DurationConstraintInstruction GetInstruction()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Kinstrife.Entities.Procedures.DurationConstraintInstruction.html">DurationConstraintInstruction</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -405,6 +419,12 @@
   </div>
   <div>
       <a class="xref" href="Kinstrife.Entities.Procedures.IConnectedToStates.html">IConnectedToStates</a>
+  </div>
+  <div>
+      <a class="xref" href="Kinstrife.Entities.Procedures.IConvertibleToInstructions-1.html">IConvertibleToInstructions&lt;TInstructionType&gt;</a>
+  </div>
+  <div>
+      <a class="xref" href="Kinstrife.Entities.Procedures.IConvertibleToSettingsBlob-1.html">IConvertibleToSettingsBlob&lt;TSettingsBlobType&gt;</a>
   </div>
 </article>
           </div>

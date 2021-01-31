@@ -187,64 +187,6 @@
   </table>
   
   
-  <a id="Kinstrife_Entities_EntityConversion_CreateBlobAssetRef_" data-uid="Kinstrife.Entities.EntityConversion.CreateBlobAssetRef*"></a>
-  <h4 id="Kinstrife_Entities_EntityConversion_CreateBlobAssetRef__1___0_" data-uid="Kinstrife.Entities.EntityConversion.CreateBlobAssetRef``1(``0)">CreateBlobAssetRef&lt;T&gt;(T)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static BlobAssetReference&lt;T&gt; CreateBlobAssetRef&lt;T&gt;(T data)
-    where T : struct</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">T</span></td>
-        <td><span class="parametername">data</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">BlobAssetReference</span>&lt;T&gt;</td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="typeParameters">Type Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="parametername">T</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
   <a id="Kinstrife_Entities_EntityConversion_EnsureHasBuffer_" data-uid="Kinstrife.Entities.EntityConversion.EnsureHasBuffer*"></a>
   <h4 id="Kinstrife_Entities_EntityConversion_EnsureHasBuffer__1_EntityManager__Entity_" data-uid="Kinstrife.Entities.EntityConversion.EnsureHasBuffer``1(EntityManager@,Entity)">EnsureHasBuffer&lt;T&gt;(ref EntityManager, Entity)</h4>
   <div class="markdown level1 summary"></div>
@@ -510,6 +452,63 @@
         <td><span class="parametername">entityManager</span></td>
         <td></td>
       </tr>
+      <tr>
+        <td><span class="xref">Entity</span></td>
+        <td><span class="parametername">e</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">T</span></td>
+        <td><span class="parametername">component</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">U</span></td>
+        <td><span class="parametername">convertibleData</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="parametername">U</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Kinstrife_Entities_EntityConversion_InitObject_" data-uid="Kinstrife.Entities.EntityConversion.InitObject*"></a>
+  <h4 id="Kinstrife_Entities_EntityConversion_InitObject__2_Entity___0____1_" data-uid="Kinstrife.Entities.EntityConversion.InitObject``2(Entity,``0@,``1)">InitObject&lt;T, U&gt;(Entity, ref T, U)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void InitObject&lt;T, U&gt;(Entity e, ref T component, U convertibleData)
+    where T : struct</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
       <tr>
         <td><span class="xref">Entity</span></td>
         <td><span class="parametername">e</span></td>

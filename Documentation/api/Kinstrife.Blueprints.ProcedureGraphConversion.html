@@ -176,13 +176,78 @@
   </table>
   
   
+  <a id="Kinstrife_Blueprints_ProcedureGraphConversion_CreateCompactInstructionsBlob_" data-uid="Kinstrife.Blueprints.ProcedureGraphConversion.CreateCompactInstructionsBlob*"></a>
+  <h4 id="Kinstrife_Blueprints_ProcedureGraphConversion_CreateCompactInstructionsBlob__4_EntityManager__Kinstrife_Blueprints_ProcedureGraphAsset_Entity__" data-uid="Kinstrife.Blueprints.ProcedureGraphConversion.CreateCompactInstructionsBlob``4(EntityManager@,Kinstrife.Blueprints.ProcedureGraphAsset,Entity@)">CreateCompactInstructionsBlob&lt;TNodeType, TConstraintType, TSettingsBlobType, TInstructionType&gt;(ref EntityManager, ProcedureGraphAsset, Entity)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void CreateCompactInstructionsBlob&lt;TNodeType, TConstraintType, TSettingsBlobType, TInstructionType&gt;(ref EntityManager entityManager, ProcedureGraphAsset graphAsset, in Entity e)
+    where TNodeType : BaseNode, IConvertibleToInstructions&lt;TInstructionType&gt;, IConvertibleToSettingsBlob&lt;TSettingsBlobType&gt; where TConstraintType : struct, IComponentData, IHasSettingsBlobAssetReference&lt;TSettingsBlobType&gt; where TSettingsBlobType : struct, ISettingsBlob&lt;TInstructionType&gt; where TInstructionType : struct, IInstruction</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">EntityManager</span></td>
+        <td><span class="parametername">entityManager</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Kinstrife.Blueprints.ProcedureGraphAsset.html">ProcedureGraphAsset</a></td>
+        <td><span class="parametername">graphAsset</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">Entity</span></td>
+        <td><span class="parametername">e</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">TNodeType</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="parametername">TConstraintType</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="parametername">TSettingsBlobType</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="parametername">TInstructionType</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
   <a id="Kinstrife_Blueprints_ProcedureGraphConversion_InputNodesToInstructions_" data-uid="Kinstrife.Blueprints.ProcedureGraphConversion.InputNodesToInstructions*"></a>
   <h4 id="Kinstrife_Blueprints_ProcedureGraphConversion_InputNodesToInstructions_EntityManager__Kinstrife_Blueprints_ProcedureGraphAsset_Kinstrife_GraphTools_BaseNode_Entity_Kinstrife_Entities_Procedures_SubStateId_" data-uid="Kinstrife.Blueprints.ProcedureGraphConversion.InputNodesToInstructions(EntityManager@,Kinstrife.Blueprints.ProcedureGraphAsset,Kinstrife.GraphTools.BaseNode,Entity,Kinstrife.Entities.Procedures.SubStateId)">InputNodesToInstructions(ref EntityManager, ProcedureGraphAsset, BaseNode, Entity, SubStateId)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static void InputNodesToInstructions(ref EntityManager entityManager, ProcedureGraphAsset graphAsset, BaseNode node, Entity e, SubStateId state = SubStateId.None)</code></pre>
+    <pre><code class="lang-csharp hljs">public static void InputNodesToInstructions(ref EntityManager entityManager, ProcedureGraphAsset graphAsset, BaseNode node, Entity e, SubStateId state)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -229,7 +294,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static void OutputNodesToInstructions(ref EntityManager entityManager, ProcedureGraphAsset graphAsset, BaseNode node, Entity e, SubStateId state = SubStateId.None)</code></pre>
+    <pre><code class="lang-csharp hljs">public static void OutputNodesToInstructions(ref EntityManager entityManager, ProcedureGraphAsset graphAsset, BaseNode node, Entity e, SubStateId state)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">

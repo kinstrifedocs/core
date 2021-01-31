@@ -88,6 +88,7 @@
     <div><a class="xref" href="Kinstrife.Entities.Procedures.IEventsDataSource.html">IEventsDataSource</a></div>
     <div><a class="xref" href="Kinstrife.Entities.Procedures.IConnectedToStates.html">IConnectedToStates</a></div>
     <div><a class="xref" href="Kinstrife.Entities.IConvertible.html">IConvertible</a></div>
+    <div><a class="xref" href="Kinstrife.Animation.IPlayableSource-1.html">IPlayableSource</a>&lt;<a class="xref" href="Kinstrife.Animation.PlayableAssetBase.html">PlayableAssetBase</a>&gt;</div>
   </div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
@@ -139,7 +140,7 @@
   <h5 id="Kinstrife_Blueprints_OutputNodePlayable_syntax">Syntax</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">[Serializable]
-public class OutputNodePlayable : OutputNodeActivatable, IEventsDataSource, IConnectedToStates, IConvertible</code></pre>
+public class OutputNodePlayable : OutputNodeActivatable, IEventsDataSource, IConnectedToStates, IConvertible, IPlayableSource&lt;PlayableAssetBase&gt;</code></pre>
   </div>
   <h3 id="fields">Fields
   </h3>
@@ -246,6 +247,56 @@ public class OutputNodePlayable : OutputNodeActivatable, IEventsDataSource, ICon
   </table>
   
   
+  <a id="Kinstrife_Blueprints_OutputNodePlayable_GetInstruction_" data-uid="Kinstrife.Blueprints.OutputNodePlayable.GetInstruction*"></a>
+  <h4 id="Kinstrife_Blueprints_OutputNodePlayable_GetInstruction" data-uid="Kinstrife.Blueprints.OutputNodePlayable.GetInstruction">GetInstruction</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual PlayableAdapterComponent.Instruction GetInstruction { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Kinstrife.Entities.Procedures.PlayableAdapterComponent.Instruction.html">PlayableAdapterComponent.Instruction</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Kinstrife_Blueprints_OutputNodePlayable_GetPlayableData_" data-uid="Kinstrife.Blueprints.OutputNodePlayable.GetPlayableData*"></a>
+  <h4 id="Kinstrife_Blueprints_OutputNodePlayable_GetPlayableData" data-uid="Kinstrife.Blueprints.OutputNodePlayable.GetPlayableData">GetPlayableData</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual PlayableAssetBase GetPlayableData { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Kinstrife.Animation.PlayableAssetBase.html">PlayableAssetBase</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
   <a id="Kinstrife_Blueprints_OutputNodePlayable_Speed_" data-uid="Kinstrife.Blueprints.OutputNodePlayable.Speed*"></a>
   <h4 id="Kinstrife_Blueprints_OutputNodePlayable_Speed" data-uid="Kinstrife.Blueprints.OutputNodePlayable.Speed">Speed</h4>
   <div class="markdown level1 summary"></div>
@@ -337,6 +388,9 @@ public class OutputNodePlayable : OutputNodeActivatable, IEventsDataSource, ICon
   </div>
   <div>
       <a class="xref" href="Kinstrife.Entities.IConvertible.html">IConvertible</a>
+  </div>
+  <div>
+      <a class="xref" href="Kinstrife.Animation.IPlayableSource-1.html">IPlayableSource&lt;TDataType&gt;</a>
   </div>
 </article>
           </div>

@@ -78,6 +78,7 @@
   <div classs="implements">
     <h5>Implements</h5>
     <div><span class="xref">IComponentData</span></div>
+    <div><a class="xref" href="Kinstrife.Entities.Procedures.IHasSettingsBlobAssetReference-1.html">IHasSettingsBlobAssetReference</a>&lt;<a class="xref" href="Kinstrife.Entities.Procedures.DurationConstraint.SettingsBlob.html">DurationConstraint.SettingsBlob</a>&gt;</div>
   </div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
@@ -104,7 +105,7 @@
   <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
   <h5 id="Kinstrife_Entities_Procedures_DurationConstraint_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public struct DurationConstraint : IComponentData</code></pre>
+    <pre><code class="lang-csharp hljs">public struct DurationConstraint : IComponentData, IHasSettingsBlobAssetReference&lt;DurationConstraint.SettingsBlob&gt;</code></pre>
   </div>
   <h3 id="fields">Fields
   </h3>
@@ -115,7 +116,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public BlobAssetReference&lt;DurationConstraintSettingsBlob&gt; Settings</code></pre>
+    <pre><code class="lang-csharp hljs">public BlobAssetReference&lt;DurationConstraint.SettingsBlob&gt; Settings</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -127,7 +128,63 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">BlobAssetReference</span>&lt;<a class="xref" href="Kinstrife.Entities.Procedures.DurationConstraintSettingsBlob.html">DurationConstraintSettingsBlob</a>&gt;</td>
+        <td><span class="xref">BlobAssetReference</span>&lt;<a class="xref" href="Kinstrife.Entities.Procedures.DurationConstraint.SettingsBlob.html">DurationConstraint.SettingsBlob</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="properties">Properties
+  </h3>
+  
+  
+  <a id="Kinstrife_Entities_Procedures_DurationConstraint_IsCreated_" data-uid="Kinstrife.Entities.Procedures.DurationConstraint.IsCreated*"></a>
+  <h4 id="Kinstrife_Entities_Procedures_DurationConstraint_IsCreated" data-uid="Kinstrife.Entities.Procedures.DurationConstraint.IsCreated">IsCreated</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsCreated { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  
+  
+  <a id="Kinstrife_Entities_Procedures_DurationConstraint_SetSettingsBlob_" data-uid="Kinstrife.Entities.Procedures.DurationConstraint.SetSettingsBlob*"></a>
+  <h4 id="Kinstrife_Entities_Procedures_DurationConstraint_SetSettingsBlob_BlobAssetReference_Kinstrife_Entities_Procedures_DurationConstraint_SettingsBlob___" data-uid="Kinstrife.Entities.Procedures.DurationConstraint.SetSettingsBlob(BlobAssetReference{Kinstrife.Entities.Procedures.DurationConstraint.SettingsBlob}@)">SetSettingsBlob(ref BlobAssetReference&lt;DurationConstraint.SettingsBlob&gt;)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetSettingsBlob(ref BlobAssetReference&lt;DurationConstraint.SettingsBlob&gt; blobAssetReference)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">BlobAssetReference</span>&lt;<a class="xref" href="Kinstrife.Entities.Procedures.DurationConstraint.SettingsBlob.html">DurationConstraint.SettingsBlob</a>&gt;</td>
+        <td><span class="parametername">blobAssetReference</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -135,6 +192,9 @@
   <h3 id="implements">Implements</h3>
   <div>
       <span class="xref">IComponentData</span>
+  </div>
+  <div>
+      <a class="xref" href="Kinstrife.Entities.Procedures.IHasSettingsBlobAssetReference-1.html">IHasSettingsBlobAssetReference&lt;TSettingsBlobType&gt;</a>
   </div>
 </article>
           </div>
