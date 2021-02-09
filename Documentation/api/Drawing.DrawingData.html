@@ -141,6 +141,18 @@ if (!gizmos.Draw(hasher)) {
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public class DrawingData</code></pre>
   </div>
+  <h3 id="constructors">Constructors
+  </h3>
+  
+  
+  <a id="Drawing_DrawingData__ctor_" data-uid="Drawing.DrawingData.#ctor*"></a>
+  <h4 id="Drawing_DrawingData__ctor" data-uid="Drawing.DrawingData.#ctor">DrawingData()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public DrawingData()</code></pre>
+  </div>
   <h3 id="fields">Fields
   </h3>
   
@@ -170,7 +182,7 @@ if (!gizmos.Draw(hasher)) {
   
   
   <h4 id="Drawing_DrawingData_lineMaterial" data-uid="Drawing.DrawingData.lineMaterial">lineMaterial</h4>
-  <div class="markdown level1 summary"><p>Material to use for the navmesh outline in the editor</p>
+  <div class="markdown level1 summary"><p>Material to use for lines</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -195,12 +207,37 @@ if (!gizmos.Draw(hasher)) {
   
   
   <h4 id="Drawing_DrawingData_surfaceMaterial" data-uid="Drawing.DrawingData.surfaceMaterial">surfaceMaterial</h4>
-  <div class="markdown level1 summary"><p>Material to use for the navmesh in the editor</p>
+  <div class="markdown level1 summary"><p>Material to use for surfaces</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public Material surfaceMaterial</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Material</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="Drawing_DrawingData_textMaterial" data-uid="Drawing.DrawingData.textMaterial">textMaterial</h4>
+  <div class="markdown level1 summary"><p>Material to use for text</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Material textMaterial</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -584,13 +621,13 @@ If false, it will only be rendered in the editor when gizmos are enabled.</p>
   
   
   <a id="Drawing_DrawingData_Render_" data-uid="Drawing.DrawingData.Render*"></a>
-  <h4 id="Drawing_DrawingData_Render_Camera_System_Boolean_CommandBuffer_System_Boolean_" data-uid="Drawing.DrawingData.Render(Camera,System.Boolean,CommandBuffer,System.Boolean)">Render(Camera, Boolean, CommandBuffer, Boolean)</h4>
+  <h4 id="Drawing_DrawingData_Render_Camera_System_Boolean_CommandBuffer_System_Boolean_Drawing_DetectedRenderPipeline_" data-uid="Drawing.DrawingData.Render(Camera,System.Boolean,CommandBuffer,System.Boolean,Drawing.DetectedRenderPipeline)">Render(Camera, Boolean, CommandBuffer, Boolean, DetectedRenderPipeline)</h4>
   <div class="markdown level1 summary"><p>Call after all <a class="xref" href="Drawing.DrawingData.html#Drawing_DrawingData_Draw_Drawing_DrawingData_Hasher_">Draw(DrawingData.Hasher)</a> commands for the frame have been done to draw everything.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void Render(Camera cam, bool allowGizmos, CommandBuffer commandBuffer, bool allowCameraDefault)</code></pre>
+    <pre><code class="lang-csharp hljs">public void Render(Camera cam, bool allowGizmos, CommandBuffer commandBuffer, bool allowCameraDefault, DetectedRenderPipeline detectedRenderPipeline)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -622,6 +659,11 @@ If false, it will only be rendered in the editor when gizmos are enabled.</p>
         <td><span class="parametername">allowCameraDefault</span></td>
         <td><p>Indicates if built-in command builders and custom ones without a custom CommandBuilder.cameraTargets should render to this camera.</p>
 </td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Drawing.DetectedRenderPipeline.html">DetectedRenderPipeline</a></td>
+        <td><span class="parametername">detectedRenderPipeline</span></td>
+        <td></td>
       </tr>
     </tbody>
   </table>

@@ -5,10 +5,10 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Class CircularBuffer&lt;T&gt;
+    <title>Class DrawingUtilities
    | Kinstrife </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Class CircularBuffer&lt;T&gt;
+    <meta name="title" content="Class DrawingUtilities
    | Kinstrife ">
     <meta name="generator" content="docfx 2.56.6.0">
     
@@ -68,25 +68,18 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="Kinstrife.Core.DataStructures.CircularBuffer`1">
+            <article class="content wrap" id="_content" data-uid="Drawing.DrawingUtilities">
   
   
-  <h1 id="Kinstrife_Core_DataStructures_CircularBuffer_1" data-uid="Kinstrife.Core.DataStructures.CircularBuffer`1" class="text-break">Class CircularBuffer&lt;T&gt;
+  <h1 id="Drawing_DrawingUtilities" data-uid="Drawing.DrawingUtilities" class="text-break">Class DrawingUtilities
   </h1>
-  <div class="markdown level0 summary"><p>Basically a limited size queue. Not threadsafe.</p>
+  <div class="markdown level0 summary"><p>Various high-level utilities that are useful when drawing things</p>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><span class="xref">CircularBuffer&lt;T&gt;</span></div>
-  </div>
-  <div classs="implements">
-    <h5>Implements</h5>
-    <div><span class="xref">System.Collections.Generic.IReadOnlyList</span>&lt;T&gt;</div>
-    <div><span class="xref">System.Collections.Generic.IReadOnlyCollection</span>&lt;T&gt;</div>
-    <div><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;T&gt;</div>
-    <div><span class="xref">System.Collections.IEnumerable</span></div>
+    <div class="level1"><span class="xref">DrawingUtilities</span></div>
   </div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
@@ -112,163 +105,30 @@
       <span class="xref">System.Object.MemberwiseClone()</span>
     </div>
   </div>
-  <h6><strong>Namespace</strong>: <a class="xref" href="Kinstrife.Core.DataStructures.html">Kinstrife.Core.DataStructures</a></h6>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Drawing.html">Drawing</a></h6>
   <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
-  <h5 id="Kinstrife_Core_DataStructures_CircularBuffer_1_syntax">Syntax</h5>
+  <h5 id="Drawing_DrawingUtilities_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[Serializable]
-public sealed class CircularBuffer&lt;T&gt; : IReadOnlyList&lt;T&gt;, IReadOnlyCollection&lt;T&gt;, IEnumerable&lt;T&gt;, IEnumerable</code></pre>
+    <pre><code class="lang-csharp hljs">public static class DrawingUtilities</code></pre>
   </div>
-  <h5 class="typeParameters">Type Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="parametername">T</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h3 id="constructors">Constructors
-  </h3>
-  
-  
-  <a id="Kinstrife_Core_DataStructures_CircularBuffer_1__ctor_" data-uid="Kinstrife.Core.DataStructures.CircularBuffer`1.#ctor*"></a>
-  <h4 id="Kinstrife_Core_DataStructures_CircularBuffer_1__ctor_System_Int32_" data-uid="Kinstrife.Core.DataStructures.CircularBuffer`1.#ctor(System.Int32)">CircularBuffer(Int32)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public CircularBuffer(int capacity)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Int32</span></td>
-        <td><span class="parametername">capacity</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h3 id="fields">Fields
-  </h3>
-  
-  
-  <h4 id="Kinstrife_Core_DataStructures_CircularBuffer_1_Capacity" data-uid="Kinstrife.Core.DataStructures.CircularBuffer`1.Capacity">Capacity</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly int Capacity</code></pre>
-  </div>
-  <h5 class="fieldValue">Field Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Int32</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h3 id="properties">Properties
-  </h3>
-  
-  
-  <a id="Kinstrife_Core_DataStructures_CircularBuffer_1_Count_" data-uid="Kinstrife.Core.DataStructures.CircularBuffer`1.Count*"></a>
-  <h4 id="Kinstrife_Core_DataStructures_CircularBuffer_1_Count" data-uid="Kinstrife.Core.DataStructures.CircularBuffer`1.Count">Count</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public int Count { get; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Int32</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="Kinstrife_Core_DataStructures_CircularBuffer_1_Item_" data-uid="Kinstrife.Core.DataStructures.CircularBuffer`1.Item*"></a>
-  <h4 id="Kinstrife_Core_DataStructures_CircularBuffer_1_Item_System_Int32_" data-uid="Kinstrife.Core.DataStructures.CircularBuffer`1.Item(System.Int32)">Item[Int32]</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public T this[int index] { get; }</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Int32</span></td>
-        <td><span class="parametername">index</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">T</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
   <h3 id="methods">Methods
   </h3>
   
   
-  <a id="Kinstrife_Core_DataStructures_CircularBuffer_1_Add_" data-uid="Kinstrife.Core.DataStructures.CircularBuffer`1.Add*"></a>
-  <h4 id="Kinstrife_Core_DataStructures_CircularBuffer_1_Add__0_" data-uid="Kinstrife.Core.DataStructures.CircularBuffer`1.Add(`0)">Add(T)</h4>
-  <div class="markdown level1 summary"></div>
+  <a id="Drawing_DrawingUtilities_BoundsFrom_" data-uid="Drawing.DrawingUtilities.BoundsFrom*"></a>
+  <h4 id="Drawing_DrawingUtilities_BoundsFrom_GameObject_" data-uid="Drawing.DrawingUtilities.BoundsFrom(GameObject)">BoundsFrom(GameObject)</h4>
+  <div class="markdown level1 summary"><p>Bounding box of a GameObject.
+Sometimes you want to quickly draw the bounding box of an object. This is not always trivial as the object may have any number of children with colliders and renderers.
+You can use this method to calculate the bounding box easily.</p>
+<p>The bounding box is calculated based on the colliders and renderers on this object and all its children.</p>
+<p>[Open online documentation to see images]</p>
+<pre><code>Draw.WireBox(DrawingUtilities.BoundsFrom(transform), Color.black);</code></pre>
+<p>See: <a class="xref" href="Drawing.DrawingUtilities.html#Drawing_DrawingUtilities_BoundsFrom_Transform_">BoundsFrom(Transform)</a></p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void Add(T item)</code></pre>
+    <pre><code class="lang-csharp hljs">public static Bounds BoundsFrom(GameObject gameObject)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -281,32 +141,12 @@ public sealed class CircularBuffer&lt;T&gt; : IReadOnlyList&lt;T&gt;, IReadOnlyC
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">T</span></td>
-        <td><span class="parametername">item</span></td>
+        <td><span class="xref">GameObject</span></td>
+        <td><span class="parametername">gameObject</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
-  
-  
-  <a id="Kinstrife_Core_DataStructures_CircularBuffer_1_Clear_" data-uid="Kinstrife.Core.DataStructures.CircularBuffer`1.Clear*"></a>
-  <h4 id="Kinstrife_Core_DataStructures_CircularBuffer_1_Clear" data-uid="Kinstrife.Core.DataStructures.CircularBuffer`1.Clear">Clear()</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void Clear()</code></pre>
-  </div>
-  
-  
-  <a id="Kinstrife_Core_DataStructures_CircularBuffer_1_GetEnumerator_" data-uid="Kinstrife.Core.DataStructures.CircularBuffer`1.GetEnumerator*"></a>
-  <h4 id="Kinstrife_Core_DataStructures_CircularBuffer_1_GetEnumerator" data-uid="Kinstrife.Core.DataStructures.CircularBuffer`1.GetEnumerator">GetEnumerator()</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public IEnumerator&lt;T&gt; GetEnumerator()</code></pre>
-  </div>
   <h5 class="returns">Returns</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
@@ -317,21 +157,38 @@ public sealed class CircularBuffer&lt;T&gt; : IReadOnlyList&lt;T&gt;, IReadOnlyC
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Generic.IEnumerator</span>&lt;T&gt;</td>
+        <td><span class="xref">Bounds</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   
   
-  <a id="Kinstrife_Core_DataStructures_CircularBuffer_1_GetLatest_" data-uid="Kinstrife.Core.DataStructures.CircularBuffer`1.GetLatest*"></a>
-  <h4 id="Kinstrife_Core_DataStructures_CircularBuffer_1_GetLatest" data-uid="Kinstrife.Core.DataStructures.CircularBuffer`1.GetLatest">GetLatest()</h4>
+  <a id="Drawing_DrawingUtilities_BoundsFrom_" data-uid="Drawing.DrawingUtilities.BoundsFrom*"></a>
+  <h4 id="Drawing_DrawingUtilities_BoundsFrom_NativeArray_float3__" data-uid="Drawing.DrawingUtilities.BoundsFrom(NativeArray{float3})">BoundsFrom(NativeArray&lt;float3&gt;)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public T GetLatest()</code></pre>
+    <pre><code class="lang-csharp hljs">public static Bounds BoundsFrom(NativeArray&lt;float3&gt; points)</code></pre>
   </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">NativeArray</span>&lt;<span class="xref">float3</span>&gt;</td>
+        <td><span class="parametername">points</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   <h5 class="returns">Returns</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
@@ -342,21 +199,38 @@ public sealed class CircularBuffer&lt;T&gt; : IReadOnlyList&lt;T&gt;, IReadOnlyC
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">T</span></td>
+        <td><span class="xref">Bounds</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   
   
-  <a id="Kinstrife_Core_DataStructures_CircularBuffer_1_ToArray_" data-uid="Kinstrife.Core.DataStructures.CircularBuffer`1.ToArray*"></a>
-  <h4 id="Kinstrife_Core_DataStructures_CircularBuffer_1_ToArray" data-uid="Kinstrife.Core.DataStructures.CircularBuffer`1.ToArray">ToArray()</h4>
+  <a id="Drawing_DrawingUtilities_BoundsFrom_" data-uid="Drawing.DrawingUtilities.BoundsFrom*"></a>
+  <h4 id="Drawing_DrawingUtilities_BoundsFrom_System_Collections_Generic_List_Vector3__" data-uid="Drawing.DrawingUtilities.BoundsFrom(System.Collections.Generic.List{Vector3})">BoundsFrom(List&lt;Vector3&gt;)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public T[] ToArray()</code></pre>
+    <pre><code class="lang-csharp hljs">public static Bounds BoundsFrom(List&lt;Vector3&gt; points)</code></pre>
   </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.List</span>&lt;<span class="xref">Vector3</span>&gt;</td>
+        <td><span class="parametername">points</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   <h5 class="returns">Returns</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
@@ -367,23 +241,45 @@ public sealed class CircularBuffer&lt;T&gt; : IReadOnlyList&lt;T&gt;, IReadOnlyC
     </thead>
     <tbody>
       <tr>
-        <td>T[]</td>
+        <td><span class="xref">Bounds</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
-  <h3 id="eii">Explicit Interface Implementations
-  </h3>
   
   
-  <a id="Kinstrife_Core_DataStructures_CircularBuffer_1_System_Collections_IEnumerable_GetEnumerator_" data-uid="Kinstrife.Core.DataStructures.CircularBuffer`1.System#Collections#IEnumerable#GetEnumerator*"></a>
-  <h4 id="Kinstrife_Core_DataStructures_CircularBuffer_1_System_Collections_IEnumerable_GetEnumerator" data-uid="Kinstrife.Core.DataStructures.CircularBuffer`1.System#Collections#IEnumerable#GetEnumerator">IEnumerable.GetEnumerator()</h4>
-  <div class="markdown level1 summary"></div>
+  <a id="Drawing_DrawingUtilities_BoundsFrom_" data-uid="Drawing.DrawingUtilities.BoundsFrom*"></a>
+  <h4 id="Drawing_DrawingUtilities_BoundsFrom_Transform_" data-uid="Drawing.DrawingUtilities.BoundsFrom(Transform)">BoundsFrom(Transform)</h4>
+  <div class="markdown level1 summary"><p>Bounding box of a Transform.
+Sometimes you want to quickly draw the bounding box of an object. This is not always trivial as the object may have any number of children with colliders and renderers.
+You can use this method to calculate the bounding box easily.</p>
+<p>The bounding box is calculated based on the colliders and renderers on this object and all its children.</p>
+<p>[Open online documentation to see images]</p>
+<pre><code>Draw.WireBox(DrawingUtilities.BoundsFrom(transform), Color.black);</code></pre>
+<p>See: <a class="xref" href="Drawing.DrawingUtilities.html#Drawing_DrawingUtilities_BoundsFrom_GameObject_">BoundsFrom(GameObject)</a></p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">IEnumerator IEnumerable.GetEnumerator()</code></pre>
+    <pre><code class="lang-csharp hljs">public static Bounds BoundsFrom(Transform transform)</code></pre>
   </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Transform</span></td>
+        <td><span class="parametername">transform</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   <h5 class="returns">Returns</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
@@ -394,24 +290,53 @@ public sealed class CircularBuffer&lt;T&gt; : IReadOnlyList&lt;T&gt;, IReadOnlyC
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.IEnumerator</span></td>
+        <td><span class="xref">Bounds</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
-  <h3 id="implements">Implements</h3>
-  <div>
-      <span class="xref">System.Collections.Generic.IReadOnlyList&lt;T&gt;</span>
+  
+  
+  <a id="Drawing_DrawingUtilities_BoundsFrom_" data-uid="Drawing.DrawingUtilities.BoundsFrom*"></a>
+  <h4 id="Drawing_DrawingUtilities_BoundsFrom_Vector3___" data-uid="Drawing.DrawingUtilities.BoundsFrom(Vector3[])">BoundsFrom(Vector3[])</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Bounds BoundsFrom(Vector3[] points)</code></pre>
   </div>
-  <div>
-      <span class="xref">System.Collections.Generic.IReadOnlyCollection&lt;T&gt;</span>
-  </div>
-  <div>
-      <span class="xref">System.Collections.Generic.IEnumerable&lt;T&gt;</span>
-  </div>
-  <div>
-      <span class="xref">System.Collections.IEnumerable</span>
-  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Vector3</span>[]</td>
+        <td><span class="parametername">points</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Bounds</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
 </article>
           </div>
           

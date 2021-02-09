@@ -171,6 +171,89 @@ See: ingame (view in online documentation for working links)</p>
   </h3>
   
   
+  <a id="Drawing_Draw_Arc_" data-uid="Drawing.Draw.Arc*"></a>
+  <h4 id="Drawing_Draw_Arc_float3_float3_float3_" data-uid="Drawing.Draw.Arc(float3,float3,float3)">Arc(float3, float3, float3)</h4>
+  <div class="markdown level1 summary"><p>\copydoc Drawing::CommandBuilder::Arc(float3,float3,float3)
+Warning: This method cannot be used inside of Burst jobs. See job-system (view in online documentation for working links) instead.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void Arc(float3 center, float3 start, float3 end)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">float3</span></td>
+        <td><span class="parametername">center</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">float3</span></td>
+        <td><span class="parametername">start</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">float3</span></td>
+        <td><span class="parametername">end</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Drawing_Draw_Arc_" data-uid="Drawing.Draw.Arc*"></a>
+  <h4 id="Drawing_Draw_Arc_float3_float3_float3_Color_" data-uid="Drawing.Draw.Arc(float3,float3,float3,Color)">Arc(float3, float3, float3, Color)</h4>
+  <div class="markdown level1 summary"><p>\copydoc Drawing::CommandBuilder::Arc(float3,float3,float3,Color)
+Warning: This method cannot be used inside of Burst jobs. See job-system (view in online documentation for working links) instead.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void Arc(float3 center, float3 start, float3 end, Color color)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">float3</span></td>
+        <td><span class="parametername">center</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">float3</span></td>
+        <td><span class="parametername">start</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">float3</span></td>
+        <td><span class="parametername">end</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">Color</span></td>
+        <td><span class="parametername">color</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
   <a id="Drawing_Draw_Arrow_" data-uid="Drawing.Draw.Arrow*"></a>
   <h4 id="Drawing_Draw_Arrow_float3_float3_" data-uid="Drawing.Draw.Arrow(float3,float3)">Arrow(float3, float3)</h4>
   <div class="markdown level1 summary"><p>\copydoc Drawing::CommandBuilder::Arrow(float3,float3)
@@ -1658,13 +1741,11 @@ Warning: This method cannot be used inside of Burst jobs. See job-system (view i
   
   <a id="Drawing_Draw_InLocalSpace_" data-uid="Drawing.Draw.InLocalSpace*"></a>
   <h4 id="Drawing_Draw_InLocalSpace_Transform_" data-uid="Drawing.Draw.InLocalSpace(Transform)">InLocalSpace(Transform)</h4>
-  <div class="markdown level1 summary"><p>\copydoc Drawing::CommandBuilder::InLocalSpace(Transform)
-Warning: This method cannot be used inside of Burst jobs. See job-system (view in online documentation for working links) instead.</p>
-</div>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static CommandBuilder.ScopeMatrix InLocalSpace(Transform transform)</code></pre>
+    <pre><code class="lang-csharp hljs">public static CommandBuilder.ScopeEmpty InLocalSpace(Transform transform)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1693,7 +1774,7 @@ Warning: This method cannot be used inside of Burst jobs. See job-system (view i
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="Drawing.CommandBuilder.ScopeMatrix.html">CommandBuilder.ScopeMatrix</a></td>
+        <td><a class="xref" href="Drawing.CommandBuilder.ScopeEmpty.html">CommandBuilder.ScopeEmpty</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -1702,13 +1783,11 @@ Warning: This method cannot be used inside of Burst jobs. See job-system (view i
   
   <a id="Drawing_Draw_InScreenSpace_" data-uid="Drawing.Draw.InScreenSpace*"></a>
   <h4 id="Drawing_Draw_InScreenSpace_Camera_" data-uid="Drawing.Draw.InScreenSpace(Camera)">InScreenSpace(Camera)</h4>
-  <div class="markdown level1 summary"><p>\copydoc Drawing::CommandBuilder::InScreenSpace(Camera)
-Warning: This method cannot be used inside of Burst jobs. See job-system (view in online documentation for working links) instead.</p>
-</div>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static CommandBuilder.ScopeMatrix InScreenSpace(Camera camera)</code></pre>
+    <pre><code class="lang-csharp hljs">public static CommandBuilder.ScopeEmpty InScreenSpace(Camera camera)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1737,7 +1816,7 @@ Warning: This method cannot be used inside of Burst jobs. See job-system (view i
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="Drawing.CommandBuilder.ScopeMatrix.html">CommandBuilder.ScopeMatrix</a></td>
+        <td><a class="xref" href="Drawing.CommandBuilder.ScopeEmpty.html">CommandBuilder.ScopeEmpty</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -2094,6 +2173,172 @@ Warning: This method cannot be used inside of Burst jobs. See job-system (view i
       <tr>
         <td><span class="xref">Vector3</span></td>
         <td><span class="parametername">b</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">Color</span></td>
+        <td><span class="parametername">color</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Drawing_Draw_PlaneWithNormal_" data-uid="Drawing.Draw.PlaneWithNormal*"></a>
+  <h4 id="Drawing_Draw_PlaneWithNormal_float3_float3_float2_" data-uid="Drawing.Draw.PlaneWithNormal(float3,float3,float2)">PlaneWithNormal(float3, float3, float2)</h4>
+  <div class="markdown level1 summary"><p>\copydoc Drawing::CommandBuilder::PlaneWithNormal(float3,float3,float2)
+Warning: This method cannot be used inside of Burst jobs. See job-system (view in online documentation for working links) instead.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void PlaneWithNormal(float3 center, float3 normal, float2 size)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">float3</span></td>
+        <td><span class="parametername">center</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">float3</span></td>
+        <td><span class="parametername">normal</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">float2</span></td>
+        <td><span class="parametername">size</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Drawing_Draw_PlaneWithNormal_" data-uid="Drawing.Draw.PlaneWithNormal*"></a>
+  <h4 id="Drawing_Draw_PlaneWithNormal_float3_float3_float2_Color_" data-uid="Drawing.Draw.PlaneWithNormal(float3,float3,float2,Color)">PlaneWithNormal(float3, float3, float2, Color)</h4>
+  <div class="markdown level1 summary"><p>\copydoc Drawing::CommandBuilder::PlaneWithNormal(float3,float3,float2,Color)
+Warning: This method cannot be used inside of Burst jobs. See job-system (view in online documentation for working links) instead.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void PlaneWithNormal(float3 center, float3 normal, float2 size, Color color)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">float3</span></td>
+        <td><span class="parametername">center</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">float3</span></td>
+        <td><span class="parametername">normal</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">float2</span></td>
+        <td><span class="parametername">size</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">Color</span></td>
+        <td><span class="parametername">color</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Drawing_Draw_PlaneWithNormal_" data-uid="Drawing.Draw.PlaneWithNormal*"></a>
+  <h4 id="Drawing_Draw_PlaneWithNormal_float3_Quaternion_float2_" data-uid="Drawing.Draw.PlaneWithNormal(float3,Quaternion,float2)">PlaneWithNormal(float3, Quaternion, float2)</h4>
+  <div class="markdown level1 summary"><p>\copydoc Drawing::CommandBuilder::PlaneWithNormal(float3,Quaternion,float2)
+Warning: This method cannot be used inside of Burst jobs. See job-system (view in online documentation for working links) instead.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void PlaneWithNormal(float3 center, Quaternion rotation, float2 size)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">float3</span></td>
+        <td><span class="parametername">center</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">Quaternion</span></td>
+        <td><span class="parametername">rotation</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">float2</span></td>
+        <td><span class="parametername">size</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Drawing_Draw_PlaneWithNormal_" data-uid="Drawing.Draw.PlaneWithNormal*"></a>
+  <h4 id="Drawing_Draw_PlaneWithNormal_float3_Quaternion_float2_Color_" data-uid="Drawing.Draw.PlaneWithNormal(float3,Quaternion,float2,Color)">PlaneWithNormal(float3, Quaternion, float2, Color)</h4>
+  <div class="markdown level1 summary"><p>\copydoc Drawing::CommandBuilder::PlaneWithNormal(float3,Quaternion,float2,Color)
+Warning: This method cannot be used inside of Burst jobs. See job-system (view in online documentation for working links) instead.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void PlaneWithNormal(float3 center, Quaternion rotation, float2 size, Color color)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">float3</span></td>
+        <td><span class="parametername">center</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">Quaternion</span></td>
+        <td><span class="parametername">rotation</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">float2</span></td>
+        <td><span class="parametername">size</span></td>
         <td></td>
       </tr>
       <tr>
@@ -2533,6 +2778,30 @@ Warning: This method cannot be used inside of Burst jobs. See job-system (view i
   </div>
   
   
+  <a id="Drawing_Draw_PopDuration_" data-uid="Drawing.Draw.PopDuration*"></a>
+  <h4 id="Drawing_Draw_PopDuration" data-uid="Drawing.Draw.PopDuration">PopDuration()</h4>
+  <div class="markdown level1 summary"><p>\copydoc Drawing::CommandBuilder::PopDuration()
+Warning: This method cannot be used inside of Burst jobs. See job-system (view in online documentation for working links) instead.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void PopDuration()</code></pre>
+  </div>
+  
+  
+  <a id="Drawing_Draw_PopLineWidth_" data-uid="Drawing.Draw.PopLineWidth*"></a>
+  <h4 id="Drawing_Draw_PopLineWidth" data-uid="Drawing.Draw.PopLineWidth">PopLineWidth()</h4>
+  <div class="markdown level1 summary"><p>\copydoc Drawing::CommandBuilder::PopLineWidth()
+Warning: This method cannot be used inside of Burst jobs. See job-system (view in online documentation for working links) instead.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void PopLineWidth()</code></pre>
+  </div>
+  
+  
   <a id="Drawing_Draw_PopMatrix_" data-uid="Drawing.Draw.PopMatrix*"></a>
   <h4 id="Drawing_Draw_PopMatrix" data-uid="Drawing.Draw.PopMatrix">PopMatrix()</h4>
   <div class="markdown level1 summary"><p>\copydoc Drawing::CommandBuilder::PopMatrix()
@@ -2553,7 +2822,8 @@ Warning: This method cannot be used inside of Burst jobs. See job-system (view i
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static void PopPersist()</code></pre>
+    <pre><code class="lang-csharp hljs">[Obsolete(&quot;Renamed to PopDuration for consistency&quot;)]
+public static void PopPersist()</code></pre>
   </div>
   
   
@@ -2580,6 +2850,69 @@ Warning: This method cannot be used inside of Burst jobs. See job-system (view i
       <tr>
         <td><span class="xref">Color</span></td>
         <td><span class="parametername">color</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Drawing_Draw_PushDuration_" data-uid="Drawing.Draw.PushDuration*"></a>
+  <h4 id="Drawing_Draw_PushDuration_System_Single_" data-uid="Drawing.Draw.PushDuration(System.Single)">PushDuration(Single)</h4>
+  <div class="markdown level1 summary"><p>\copydoc Drawing::CommandBuilder::PushDuration(float)
+Warning: This method cannot be used inside of Burst jobs. See job-system (view in online documentation for working links) instead.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void PushDuration(float duration)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><span class="parametername">duration</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Drawing_Draw_PushLineWidth_" data-uid="Drawing.Draw.PushLineWidth*"></a>
+  <h4 id="Drawing_Draw_PushLineWidth_System_Single_System_Boolean_" data-uid="Drawing.Draw.PushLineWidth(System.Single,System.Boolean)">PushLineWidth(Single, Boolean)</h4>
+  <div class="markdown level1 summary"><p>\copydoc Drawing::CommandBuilder::PushLineWidth(float,bool)
+Warning: This method cannot be used inside of Burst jobs. See job-system (view in online documentation for working links) instead.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void PushLineWidth(float pixels, bool automaticJoins = true)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><span class="parametername">pixels</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">automaticJoins</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -2623,7 +2956,8 @@ Warning: This method cannot be used inside of Burst jobs. See job-system (view i
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static void PushPersist(float duration)</code></pre>
+    <pre><code class="lang-csharp hljs">[Obsolete(&quot;Renamed to PushDuration for consistency&quot;)]
+public static void PushPersist(float duration)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -3187,6 +3521,235 @@ Warning: This method cannot be used inside of Burst jobs. See job-system (view i
   </table>
   
   
+  <a id="Drawing_Draw_SolidPlane_" data-uid="Drawing.Draw.SolidPlane*"></a>
+  <h4 id="Drawing_Draw_SolidPlane_float3_float3_float2_" data-uid="Drawing.Draw.SolidPlane(float3,float3,float2)">SolidPlane(float3, float3, float2)</h4>
+  <div class="markdown level1 summary"><p>\copydoc Drawing::CommandBuilder::SolidPlane(float3,float3,float2)
+Warning: This method cannot be used inside of Burst jobs. See job-system (view in online documentation for working links) instead.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void SolidPlane(float3 center, float3 normal, float2 size)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">float3</span></td>
+        <td><span class="parametername">center</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">float3</span></td>
+        <td><span class="parametername">normal</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">float2</span></td>
+        <td><span class="parametername">size</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Drawing_Draw_SolidPlane_" data-uid="Drawing.Draw.SolidPlane*"></a>
+  <h4 id="Drawing_Draw_SolidPlane_float3_float3_float2_Color_" data-uid="Drawing.Draw.SolidPlane(float3,float3,float2,Color)">SolidPlane(float3, float3, float2, Color)</h4>
+  <div class="markdown level1 summary"><p>\copydoc Drawing::CommandBuilder::SolidPlane(float3,float3,float2,Color)
+Warning: This method cannot be used inside of Burst jobs. See job-system (view in online documentation for working links) instead.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void SolidPlane(float3 center, float3 normal, float2 size, Color color)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">float3</span></td>
+        <td><span class="parametername">center</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">float3</span></td>
+        <td><span class="parametername">normal</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">float2</span></td>
+        <td><span class="parametername">size</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">Color</span></td>
+        <td><span class="parametername">color</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Drawing_Draw_SolidPlane_" data-uid="Drawing.Draw.SolidPlane*"></a>
+  <h4 id="Drawing_Draw_SolidPlane_float3_Quaternion_float2_" data-uid="Drawing.Draw.SolidPlane(float3,Quaternion,float2)">SolidPlane(float3, Quaternion, float2)</h4>
+  <div class="markdown level1 summary"><p>\copydoc Drawing::CommandBuilder::SolidPlane(float3,Quaternion,float2)
+Warning: This method cannot be used inside of Burst jobs. See job-system (view in online documentation for working links) instead.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void SolidPlane(float3 center, Quaternion rotation, float2 size)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">float3</span></td>
+        <td><span class="parametername">center</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">Quaternion</span></td>
+        <td><span class="parametername">rotation</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">float2</span></td>
+        <td><span class="parametername">size</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Drawing_Draw_SolidPlane_" data-uid="Drawing.Draw.SolidPlane*"></a>
+  <h4 id="Drawing_Draw_SolidPlane_float3_Quaternion_float2_Color_" data-uid="Drawing.Draw.SolidPlane(float3,Quaternion,float2,Color)">SolidPlane(float3, Quaternion, float2, Color)</h4>
+  <div class="markdown level1 summary"><p>\copydoc Drawing::CommandBuilder::SolidPlane(float3,Quaternion,float2,Color)
+Warning: This method cannot be used inside of Burst jobs. See job-system (view in online documentation for working links) instead.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void SolidPlane(float3 center, Quaternion rotation, float2 size, Color color)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">float3</span></td>
+        <td><span class="parametername">center</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">Quaternion</span></td>
+        <td><span class="parametername">rotation</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">float2</span></td>
+        <td><span class="parametername">size</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">Color</span></td>
+        <td><span class="parametername">color</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Drawing_Draw_SolidRectangle_" data-uid="Drawing.Draw.SolidRectangle*"></a>
+  <h4 id="Drawing_Draw_SolidRectangle_Rect_" data-uid="Drawing.Draw.SolidRectangle(Rect)">SolidRectangle(Rect)</h4>
+  <div class="markdown level1 summary"><p>\copydoc Drawing::CommandBuilder::SolidRectangle(Rect)
+Warning: This method cannot be used inside of Burst jobs. See job-system (view in online documentation for working links) instead.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void SolidRectangle(Rect rect)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Rect</span></td>
+        <td><span class="parametername">rect</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Drawing_Draw_SolidRectangle_" data-uid="Drawing.Draw.SolidRectangle*"></a>
+  <h4 id="Drawing_Draw_SolidRectangle_Rect_Color_" data-uid="Drawing.Draw.SolidRectangle(Rect,Color)">SolidRectangle(Rect, Color)</h4>
+  <div class="markdown level1 summary"><p>\copydoc Drawing::CommandBuilder::SolidRectangle(Rect,Color)
+Warning: This method cannot be used inside of Burst jobs. See job-system (view in online documentation for working links) instead.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void SolidRectangle(Rect rect, Color color)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Rect</span></td>
+        <td><span class="parametername">rect</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">Color</span></td>
+        <td><span class="parametername">color</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
   <a id="Drawing_Draw_WireBox_" data-uid="Drawing.Draw.WireBox*"></a>
   <h4 id="Drawing_Draw_WireBox_Bounds_" data-uid="Drawing.Draw.WireBox(Bounds)">WireBox(Bounds)</h4>
   <div class="markdown level1 summary"><p>\copydoc Drawing::CommandBuilder::WireBox(Bounds)
@@ -3414,7 +3977,7 @@ Warning: This method cannot be used inside of Burst jobs. See job-system (view i
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static void WireCapsule(float3 bottom, float3 top, float radius)</code></pre>
+    <pre><code class="lang-csharp hljs">public static void WireCapsule(float3 start, float3 end, float radius)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -3428,12 +3991,12 @@ Warning: This method cannot be used inside of Burst jobs. See job-system (view i
     <tbody>
       <tr>
         <td><span class="xref">float3</span></td>
-        <td><span class="parametername">bottom</span></td>
+        <td><span class="parametername">start</span></td>
         <td></td>
       </tr>
       <tr>
         <td><span class="xref">float3</span></td>
-        <td><span class="parametername">top</span></td>
+        <td><span class="parametername">end</span></td>
         <td></td>
       </tr>
       <tr>
@@ -3453,7 +4016,7 @@ Warning: This method cannot be used inside of Burst jobs. See job-system (view i
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static void WireCapsule(float3 bottom, float3 top, float radius, Color color)</code></pre>
+    <pre><code class="lang-csharp hljs">public static void WireCapsule(float3 start, float3 end, float radius, Color color)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -3467,12 +4030,12 @@ Warning: This method cannot be used inside of Burst jobs. See job-system (view i
     <tbody>
       <tr>
         <td><span class="xref">float3</span></td>
-        <td><span class="parametername">bottom</span></td>
+        <td><span class="parametername">start</span></td>
         <td></td>
       </tr>
       <tr>
         <td><span class="xref">float3</span></td>
-        <td><span class="parametername">top</span></td>
+        <td><span class="parametername">end</span></td>
         <td></td>
       </tr>
       <tr>
@@ -3497,7 +4060,7 @@ Warning: This method cannot be used inside of Burst jobs. See job-system (view i
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static void WireCapsule(float3 position, float3 up, float height, float radius)</code></pre>
+    <pre><code class="lang-csharp hljs">public static void WireCapsule(float3 position, float3 direction, float length, float radius)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -3516,12 +4079,12 @@ Warning: This method cannot be used inside of Burst jobs. See job-system (view i
       </tr>
       <tr>
         <td><span class="xref">float3</span></td>
-        <td><span class="parametername">up</span></td>
+        <td><span class="parametername">direction</span></td>
         <td></td>
       </tr>
       <tr>
         <td><span class="xref">System.Single</span></td>
-        <td><span class="parametername">height</span></td>
+        <td><span class="parametername">length</span></td>
         <td></td>
       </tr>
       <tr>
@@ -3541,7 +4104,7 @@ Warning: This method cannot be used inside of Burst jobs. See job-system (view i
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static void WireCapsule(float3 position, float3 up, float height, float radius, Color color)</code></pre>
+    <pre><code class="lang-csharp hljs">public static void WireCapsule(float3 position, float3 direction, float length, float radius, Color color)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -3560,12 +4123,12 @@ Warning: This method cannot be used inside of Burst jobs. See job-system (view i
       </tr>
       <tr>
         <td><span class="xref">float3</span></td>
-        <td><span class="parametername">up</span></td>
+        <td><span class="parametername">direction</span></td>
         <td></td>
       </tr>
       <tr>
         <td><span class="xref">System.Single</span></td>
-        <td><span class="parametername">height</span></td>
+        <td><span class="parametername">length</span></td>
         <td></td>
       </tr>
       <tr>
@@ -4080,6 +4643,172 @@ Warning: This method cannot be used inside of Burst jobs. See job-system (view i
   </table>
   
   
+  <a id="Drawing_Draw_WirePlane_" data-uid="Drawing.Draw.WirePlane*"></a>
+  <h4 id="Drawing_Draw_WirePlane_float3_float3_float2_" data-uid="Drawing.Draw.WirePlane(float3,float3,float2)">WirePlane(float3, float3, float2)</h4>
+  <div class="markdown level1 summary"><p>\copydoc Drawing::CommandBuilder::WirePlane(float3,float3,float2)
+Warning: This method cannot be used inside of Burst jobs. See job-system (view in online documentation for working links) instead.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void WirePlane(float3 center, float3 normal, float2 size)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">float3</span></td>
+        <td><span class="parametername">center</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">float3</span></td>
+        <td><span class="parametername">normal</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">float2</span></td>
+        <td><span class="parametername">size</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Drawing_Draw_WirePlane_" data-uid="Drawing.Draw.WirePlane*"></a>
+  <h4 id="Drawing_Draw_WirePlane_float3_float3_float2_Color_" data-uid="Drawing.Draw.WirePlane(float3,float3,float2,Color)">WirePlane(float3, float3, float2, Color)</h4>
+  <div class="markdown level1 summary"><p>\copydoc Drawing::CommandBuilder::WirePlane(float3,float3,float2,Color)
+Warning: This method cannot be used inside of Burst jobs. See job-system (view in online documentation for working links) instead.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void WirePlane(float3 center, float3 normal, float2 size, Color color)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">float3</span></td>
+        <td><span class="parametername">center</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">float3</span></td>
+        <td><span class="parametername">normal</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">float2</span></td>
+        <td><span class="parametername">size</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">Color</span></td>
+        <td><span class="parametername">color</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Drawing_Draw_WirePlane_" data-uid="Drawing.Draw.WirePlane*"></a>
+  <h4 id="Drawing_Draw_WirePlane_float3_Quaternion_float2_" data-uid="Drawing.Draw.WirePlane(float3,Quaternion,float2)">WirePlane(float3, Quaternion, float2)</h4>
+  <div class="markdown level1 summary"><p>\copydoc Drawing::CommandBuilder::WirePlane(float3,Quaternion,float2)
+Warning: This method cannot be used inside of Burst jobs. See job-system (view in online documentation for working links) instead.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void WirePlane(float3 center, Quaternion rotation, float2 size)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">float3</span></td>
+        <td><span class="parametername">center</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">Quaternion</span></td>
+        <td><span class="parametername">rotation</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">float2</span></td>
+        <td><span class="parametername">size</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Drawing_Draw_WirePlane_" data-uid="Drawing.Draw.WirePlane*"></a>
+  <h4 id="Drawing_Draw_WirePlane_float3_Quaternion_float2_Color_" data-uid="Drawing.Draw.WirePlane(float3,Quaternion,float2,Color)">WirePlane(float3, Quaternion, float2, Color)</h4>
+  <div class="markdown level1 summary"><p>\copydoc Drawing::CommandBuilder::WirePlane(float3,Quaternion,float2,Color)
+Warning: This method cannot be used inside of Burst jobs. See job-system (view in online documentation for working links) instead.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void WirePlane(float3 center, Quaternion rotation, float2 size, Color color)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">float3</span></td>
+        <td><span class="parametername">center</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">Quaternion</span></td>
+        <td><span class="parametername">rotation</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">float2</span></td>
+        <td><span class="parametername">size</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">Color</span></td>
+        <td><span class="parametername">color</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
   <a id="Drawing_Draw_WirePolygon_" data-uid="Drawing.Draw.WirePolygon*"></a>
   <h4 id="Drawing_Draw_WirePolygon_float3_System_Int32_Quaternion_System_Single_" data-uid="Drawing.Draw.WirePolygon(float3,System.Int32,Quaternion,System.Single)">WirePolygon(float3, Int32, Quaternion, Single)</h4>
   <div class="markdown level1 summary"><p>\copydoc Drawing::CommandBuilder::WirePolygon(float3,int,Quaternion,float)
@@ -4174,14 +4903,14 @@ Warning: This method cannot be used inside of Burst jobs. See job-system (view i
   
   
   <a id="Drawing_Draw_WireRectangle_" data-uid="Drawing.Draw.WireRectangle*"></a>
-  <h4 id="Drawing_Draw_WireRectangle_float3_Quaternion_float3_" data-uid="Drawing.Draw.WireRectangle(float3,Quaternion,float3)">WireRectangle(float3, Quaternion, float3)</h4>
-  <div class="markdown level1 summary"><p>\copydoc Drawing::CommandBuilder::WireRectangle(float3,Quaternion,float3)
+  <h4 id="Drawing_Draw_WireRectangle_float3_Quaternion_float2_" data-uid="Drawing.Draw.WireRectangle(float3,Quaternion,float2)">WireRectangle(float3, Quaternion, float2)</h4>
+  <div class="markdown level1 summary"><p>\copydoc Drawing::CommandBuilder::WireRectangle(float3,Quaternion,float2)
 Warning: This method cannot be used inside of Burst jobs. See job-system (view in online documentation for working links) instead.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static void WireRectangle(float3 center, Quaternion rotation, float3 size)</code></pre>
+    <pre><code class="lang-csharp hljs">public static void WireRectangle(float3 center, Quaternion rotation, float2 size)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -4204,7 +4933,7 @@ Warning: This method cannot be used inside of Burst jobs. See job-system (view i
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">float3</span></td>
+        <td><span class="xref">float2</span></td>
         <td><span class="parametername">size</span></td>
         <td></td>
       </tr>
@@ -4213,14 +4942,14 @@ Warning: This method cannot be used inside of Burst jobs. See job-system (view i
   
   
   <a id="Drawing_Draw_WireRectangle_" data-uid="Drawing.Draw.WireRectangle*"></a>
-  <h4 id="Drawing_Draw_WireRectangle_float3_Quaternion_float3_Color_" data-uid="Drawing.Draw.WireRectangle(float3,Quaternion,float3,Color)">WireRectangle(float3, Quaternion, float3, Color)</h4>
-  <div class="markdown level1 summary"><p>\copydoc Drawing::CommandBuilder::WireRectangle(float3,Quaternion,float3,Color)
+  <h4 id="Drawing_Draw_WireRectangle_float3_Quaternion_float2_Color_" data-uid="Drawing.Draw.WireRectangle(float3,Quaternion,float2,Color)">WireRectangle(float3, Quaternion, float2, Color)</h4>
+  <div class="markdown level1 summary"><p>\copydoc Drawing::CommandBuilder::WireRectangle(float3,Quaternion,float2,Color)
 Warning: This method cannot be used inside of Burst jobs. See job-system (view in online documentation for working links) instead.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static void WireRectangle(float3 center, Quaternion rotation, float3 size, Color color)</code></pre>
+    <pre><code class="lang-csharp hljs">public static void WireRectangle(float3 center, Quaternion rotation, float2 size, Color color)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -4243,7 +4972,7 @@ Warning: This method cannot be used inside of Burst jobs. See job-system (view i
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">float3</span></td>
+        <td><span class="xref">float2</span></td>
         <td><span class="parametername">size</span></td>
         <td></td>
       </tr>
@@ -4320,14 +5049,14 @@ Warning: This method cannot be used inside of Burst jobs. See job-system (view i
   
   
   <a id="Drawing_Draw_WireRectangleXZ_" data-uid="Drawing.Draw.WireRectangleXZ*"></a>
-  <h4 id="Drawing_Draw_WireRectangleXZ_float3_float3_" data-uid="Drawing.Draw.WireRectangleXZ(float3,float3)">WireRectangleXZ(float3, float3)</h4>
-  <div class="markdown level1 summary"><p>\copydoc Drawing::CommandBuilder::WireRectangleXZ(float3,float3)
+  <h4 id="Drawing_Draw_WireRectangleXZ_float3_float2_" data-uid="Drawing.Draw.WireRectangleXZ(float3,float2)">WireRectangleXZ(float3, float2)</h4>
+  <div class="markdown level1 summary"><p>\copydoc Drawing::CommandBuilder::WireRectangleXZ(float3,float2)
 Warning: This method cannot be used inside of Burst jobs. See job-system (view in online documentation for working links) instead.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static void WireRectangleXZ(float3 center, float3 size)</code></pre>
+    <pre><code class="lang-csharp hljs">public static void WireRectangleXZ(float3 center, float2 size)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -4345,7 +5074,7 @@ Warning: This method cannot be used inside of Burst jobs. See job-system (view i
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">float3</span></td>
+        <td><span class="xref">float2</span></td>
         <td><span class="parametername">size</span></td>
         <td></td>
       </tr>
@@ -4354,14 +5083,14 @@ Warning: This method cannot be used inside of Burst jobs. See job-system (view i
   
   
   <a id="Drawing_Draw_WireRectangleXZ_" data-uid="Drawing.Draw.WireRectangleXZ*"></a>
-  <h4 id="Drawing_Draw_WireRectangleXZ_float3_float3_Color_" data-uid="Drawing.Draw.WireRectangleXZ(float3,float3,Color)">WireRectangleXZ(float3, float3, Color)</h4>
-  <div class="markdown level1 summary"><p>\copydoc Drawing::CommandBuilder::WireRectangleXZ(float3,float3,Color)
+  <h4 id="Drawing_Draw_WireRectangleXZ_float3_float2_Color_" data-uid="Drawing.Draw.WireRectangleXZ(float3,float2,Color)">WireRectangleXZ(float3, float2, Color)</h4>
+  <div class="markdown level1 summary"><p>\copydoc Drawing::CommandBuilder::WireRectangleXZ(float3,float2,Color)
 Warning: This method cannot be used inside of Burst jobs. See job-system (view in online documentation for working links) instead.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static void WireRectangleXZ(float3 center, float3 size, Color color)</code></pre>
+    <pre><code class="lang-csharp hljs">public static void WireRectangleXZ(float3 center, float2 size, Color color)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -4379,7 +5108,7 @@ Warning: This method cannot be used inside of Burst jobs. See job-system (view i
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">float3</span></td>
+        <td><span class="xref">float2</span></td>
         <td><span class="parametername">size</span></td>
         <td></td>
       </tr>
@@ -4633,13 +5362,11 @@ Warning: This method cannot be used inside of Burst jobs. See job-system (view i
   
   <a id="Drawing_Draw_WithColor_" data-uid="Drawing.Draw.WithColor*"></a>
   <h4 id="Drawing_Draw_WithColor_Color_" data-uid="Drawing.Draw.WithColor(Color)">WithColor(Color)</h4>
-  <div class="markdown level1 summary"><p>\copydoc Drawing::CommandBuilder::WithColor(Color)
-Warning: This method cannot be used inside of Burst jobs. See job-system (view in online documentation for working links) instead.</p>
-</div>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static CommandBuilder.ScopeColor WithColor(Color color)</code></pre>
+    <pre><code class="lang-csharp hljs">public static CommandBuilder.ScopeEmpty WithColor(Color color)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -4668,7 +5395,7 @@ Warning: This method cannot be used inside of Burst jobs. See job-system (view i
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="Drawing.CommandBuilder.ScopeColor.html">CommandBuilder.ScopeColor</a></td>
+        <td><a class="xref" href="Drawing.CommandBuilder.ScopeEmpty.html">CommandBuilder.ScopeEmpty</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -4677,13 +5404,11 @@ Warning: This method cannot be used inside of Burst jobs. See job-system (view i
   
   <a id="Drawing_Draw_WithDuration_" data-uid="Drawing.Draw.WithDuration*"></a>
   <h4 id="Drawing_Draw_WithDuration_System_Single_" data-uid="Drawing.Draw.WithDuration(System.Single)">WithDuration(Single)</h4>
-  <div class="markdown level1 summary"><p>\copydoc Drawing::CommandBuilder::WithDuration(float)
-Warning: This method cannot be used inside of Burst jobs. See job-system (view in online documentation for working links) instead.</p>
-</div>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static CommandBuilder.ScopePersist WithDuration(float duration)</code></pre>
+    <pre><code class="lang-csharp hljs">public static CommandBuilder.ScopeEmpty WithDuration(float duration)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -4712,7 +5437,54 @@ Warning: This method cannot be used inside of Burst jobs. See job-system (view i
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="Drawing.CommandBuilder.ScopePersist.html">CommandBuilder.ScopePersist</a></td>
+        <td><a class="xref" href="Drawing.CommandBuilder.ScopeEmpty.html">CommandBuilder.ScopeEmpty</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Drawing_Draw_WithLineWidth_" data-uid="Drawing.Draw.WithLineWidth*"></a>
+  <h4 id="Drawing_Draw_WithLineWidth_System_Single_System_Boolean_" data-uid="Drawing.Draw.WithLineWidth(System.Single,System.Boolean)">WithLineWidth(Single, Boolean)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static CommandBuilder.ScopeEmpty WithLineWidth(float pixels, bool automaticJoins = true)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><span class="parametername">pixels</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">automaticJoins</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Drawing.CommandBuilder.ScopeEmpty.html">CommandBuilder.ScopeEmpty</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -4721,13 +5493,11 @@ Warning: This method cannot be used inside of Burst jobs. See job-system (view i
   
   <a id="Drawing_Draw_WithMatrix_" data-uid="Drawing.Draw.WithMatrix*"></a>
   <h4 id="Drawing_Draw_WithMatrix_Matrix4x4_" data-uid="Drawing.Draw.WithMatrix(Matrix4x4)">WithMatrix(Matrix4x4)</h4>
-  <div class="markdown level1 summary"><p>\copydoc Drawing::CommandBuilder::WithMatrix(Matrix4x4)
-Warning: This method cannot be used inside of Burst jobs. See job-system (view in online documentation for working links) instead.</p>
-</div>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static CommandBuilder.ScopeMatrix WithMatrix(Matrix4x4 matrix)</code></pre>
+    <pre><code class="lang-csharp hljs">public static CommandBuilder.ScopeEmpty WithMatrix(Matrix4x4 matrix)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -4756,7 +5526,7 @@ Warning: This method cannot be used inside of Burst jobs. See job-system (view i
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="Drawing.CommandBuilder.ScopeMatrix.html">CommandBuilder.ScopeMatrix</a></td>
+        <td><a class="xref" href="Drawing.CommandBuilder.ScopeEmpty.html">CommandBuilder.ScopeEmpty</a></td>
         <td></td>
       </tr>
     </tbody>
