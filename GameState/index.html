@@ -129,12 +129,10 @@ An exception to this is if you want to use the <code>EntityQuery</code> feature 
 <h2 id="examples">Examples</h2>
 <h3 id="gamestate-api">GameState API</h3>
 <p><strong>Creating entities, adding, getting and removing components:</strong></p>
-<pre><code class="lang-csharp" name="Main">var entity = gameState.CreateEntity();
-var component = gameState.GetOrAddComponent&lt;DatabaseInstance&gt;(entity);
-Assert.IsTrue(gameState.GetOrAddComponent&lt;DatabaseInstance&gt;(entity) == component);
-gameState.RemoveComponent&lt;DatabaseInstance&gt;(entity);
-Assert.IsTrue(gameState.GetComponent&lt;DatabaseInstance&gt;(entity) == null);
-</code></pre>
+<div class="WARNING">
+<h5>Warning</h5>
+<p>It looks like the sample you are looking for does not exist.</p>
+</div>
 <p><strong>Accessing singletons:</strong></p>
 <p><code>var singleton = gameState.GetOrCreateSingleton&lt;SingletonA&gt;();</code></p>
 <h3 id="example-types">Example types</h3>

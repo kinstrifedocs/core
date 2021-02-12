@@ -5,10 +5,10 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Class TimeCaptureControlSystem
+    <title>Class MouseUtils
    | Kinstrife </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Class TimeCaptureControlSystem
+    <meta name="title" content="Class MouseUtils
    | Kinstrife ">
     <meta name="generator" content="docfx 2.56.6.0">
     
@@ -68,199 +68,84 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="Kinstrife.Entities.Systems.TimeCaptureControlSystem">
+            <article class="content wrap" id="_content" data-uid="Kinstrife.Entities.MouseUtils">
   
   
-  <h1 id="Kinstrife_Entities_Systems_TimeCaptureControlSystem" data-uid="Kinstrife.Entities.Systems.TimeCaptureControlSystem" class="text-break">Class TimeCaptureControlSystem
+  <h1 id="Kinstrife_Entities_MouseUtils" data-uid="Kinstrife.Entities.MouseUtils" class="text-break">Class MouseUtils
   </h1>
   <div class="markdown level0 summary"></div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><span class="xref">TimeCaptureControlSystem</span></div>
+    <div class="level1"><span class="xref">MouseUtils</span></div>
   </div>
-  <div classs="implements">
-    <h5>Implements</h5>
-    <div><a class="xref" href="Kinstrife.Core.DependencyInjection.IInjectable.html">IInjectable</a></div>
-    <div><a class="xref" href="Kinstrife.Core.DependencyInjection.IDependent.html">IDependent</a></div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
   </div>
-  <h6><strong>Namespace</strong>: <a class="xref" href="Kinstrife.Entities.Systems.html">Kinstrife.Entities.Systems</a></h6>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Kinstrife.Entities.html">Kinstrife.Entities</a></h6>
   <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
-  <h5 id="Kinstrife_Entities_Systems_TimeCaptureControlSystem_syntax">Syntax</h5>
+  <h5 id="Kinstrife_Entities_MouseUtils_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class TimeCaptureControlSystem : ComponentSystem, IInjectable, IDependent</code></pre>
+    <pre><code class="lang-csharp hljs">public static class MouseUtils</code></pre>
   </div>
-  <h3 id="fields">Fields
-  </h3>
-  
-  
-  <h4 id="Kinstrife_Entities_Systems_TimeCaptureControlSystem_currentFrameRate" data-uid="Kinstrife.Entities.Systems.TimeCaptureControlSystem.currentFrameRate">currentFrameRate</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static float currentFrameRate</code></pre>
-  </div>
-  <h5 class="fieldValue">Field Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Single</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <h4 id="Kinstrife_Entities_Systems_TimeCaptureControlSystem_effectiveTimeScale" data-uid="Kinstrife.Entities.Systems.TimeCaptureControlSystem.effectiveTimeScale">effectiveTimeScale</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static float effectiveTimeScale</code></pre>
-  </div>
-  <h5 class="fieldValue">Field Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Single</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <h4 id="Kinstrife_Entities_Systems_TimeCaptureControlSystem_targetFrameRate" data-uid="Kinstrife.Entities.Systems.TimeCaptureControlSystem.targetFrameRate">targetFrameRate</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static int targetFrameRate</code></pre>
-  </div>
-  <h5 class="fieldValue">Field Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Int32</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <h4 id="Kinstrife_Entities_Systems_TimeCaptureControlSystem_targetTimeScale" data-uid="Kinstrife.Entities.Systems.TimeCaptureControlSystem.targetTimeScale">targetTimeScale</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static float targetTimeScale</code></pre>
-  </div>
-  <h5 class="fieldValue">Field Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Single</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <h4 id="Kinstrife_Entities_Systems_TimeCaptureControlSystem_timeScaleDiffToApply" data-uid="Kinstrife.Entities.Systems.TimeCaptureControlSystem.timeScaleDiffToApply">timeScaleDiffToApply</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static float timeScaleDiffToApply</code></pre>
-  </div>
-  <h5 class="fieldValue">Field Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Single</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
   <h3 id="methods">Methods
   </h3>
   
   
-  <a id="Kinstrife_Entities_Systems_TimeCaptureControlSystem_Inject_" data-uid="Kinstrife.Entities.Systems.TimeCaptureControlSystem.Inject*"></a>
-  <h4 id="Kinstrife_Entities_Systems_TimeCaptureControlSystem_Inject_Kinstrife_Core_Config_ApplicationConfig_" data-uid="Kinstrife.Entities.Systems.TimeCaptureControlSystem.Inject(Kinstrife.Core.Config.ApplicationConfig)">Inject(ApplicationConfig)</h4>
+  <a id="Kinstrife_Entities_MouseUtils_GetMouseWorldPosition_" data-uid="Kinstrife.Entities.MouseUtils.GetMouseWorldPosition*"></a>
+  <h4 id="Kinstrife_Entities_MouseUtils_GetMouseWorldPosition" data-uid="Kinstrife.Entities.MouseUtils.GetMouseWorldPosition">GetMouseWorldPosition()</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void Inject(ApplicationConfig applicationConfig)</code></pre>
+    <pre><code class="lang-csharp hljs">public static Vector3 GetMouseWorldPosition()</code></pre>
   </div>
-  <h5 class="parameters">Parameters</h5>
+  <h5 class="returns">Returns</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
       <tr>
         <th>Type</th>
-        <th>Name</th>
         <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="Kinstrife.Core.Config.ApplicationConfig.html">ApplicationConfig</a></td>
-        <td><span class="parametername">applicationConfig</span></td>
+        <td><span class="xref">Vector3</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   
   
-  <a id="Kinstrife_Entities_Systems_TimeCaptureControlSystem_OnUpdate_" data-uid="Kinstrife.Entities.Systems.TimeCaptureControlSystem.OnUpdate*"></a>
-  <h4 id="Kinstrife_Entities_Systems_TimeCaptureControlSystem_OnUpdate" data-uid="Kinstrife.Entities.Systems.TimeCaptureControlSystem.OnUpdate">OnUpdate()</h4>
+  <a id="Kinstrife_Entities_MouseUtils_GetMouseWorldPosition_" data-uid="Kinstrife.Entities.MouseUtils.GetMouseWorldPosition*"></a>
+  <h4 id="Kinstrife_Entities_MouseUtils_GetMouseWorldPosition_Camera_" data-uid="Kinstrife.Entities.MouseUtils.GetMouseWorldPosition(Camera)">GetMouseWorldPosition(Camera)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected override void OnUpdate()</code></pre>
-  </div>
-  
-  
-  <a id="Kinstrife_Entities_Systems_TimeCaptureControlSystem_SetTargetTimeScale_" data-uid="Kinstrife.Entities.Systems.TimeCaptureControlSystem.SetTargetTimeScale*"></a>
-  <h4 id="Kinstrife_Entities_Systems_TimeCaptureControlSystem_SetTargetTimeScale_System_Single_" data-uid="Kinstrife.Entities.Systems.TimeCaptureControlSystem.SetTargetTimeScale(System.Single)">SetTargetTimeScale(Single)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void SetTargetTimeScale(float timeScale)</code></pre>
+    <pre><code class="lang-csharp hljs">public static Vector3 GetMouseWorldPosition(Camera worldCamera)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -272,20 +157,214 @@
       </tr>
     </thead>
     <tbody>
+      <tr>
+        <td><a class="xref" href="../../Camera/Index.html">Camera</a></td>
+        <td><span class="parametername">worldCamera</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Vector3</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Kinstrife_Entities_MouseUtils_GetMouseWorldPosition_" data-uid="Kinstrife.Entities.MouseUtils.GetMouseWorldPosition*"></a>
+  <h4 id="Kinstrife_Entities_MouseUtils_GetMouseWorldPosition_Vector3_Camera_" data-uid="Kinstrife.Entities.MouseUtils.GetMouseWorldPosition(Vector3,Camera)">GetMouseWorldPosition(Vector3, Camera)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Vector3 GetMouseWorldPosition(Vector3 screenPosition, Camera worldCamera)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Vector3</span></td>
+        <td><span class="parametername">screenPosition</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="../../Camera/Index.html">Camera</a></td>
+        <td><span class="parametername">worldCamera</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Vector3</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Kinstrife_Entities_MouseUtils_GetMouseWorldPositionZeroZ_" data-uid="Kinstrife.Entities.MouseUtils.GetMouseWorldPositionZeroZ*"></a>
+  <h4 id="Kinstrife_Entities_MouseUtils_GetMouseWorldPositionZeroZ" data-uid="Kinstrife.Entities.MouseUtils.GetMouseWorldPositionZeroZ">GetMouseWorldPositionZeroZ()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Vector3 GetMouseWorldPositionZeroZ()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Vector3</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Kinstrife_Entities_MouseUtils_InputMousePosition_" data-uid="Kinstrife.Entities.MouseUtils.InputMousePosition*"></a>
+  <h4 id="Kinstrife_Entities_MouseUtils_InputMousePosition" data-uid="Kinstrife.Entities.MouseUtils.InputMousePosition">InputMousePosition()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Vector2 InputMousePosition()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Vector2</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Kinstrife_Entities_MouseUtils_MouseWorldPosition_" data-uid="Kinstrife.Entities.MouseUtils.MouseWorldPosition*"></a>
+  <h4 id="Kinstrife_Entities_MouseUtils_MouseWorldPosition_Camera_" data-uid="Kinstrife.Entities.MouseUtils.MouseWorldPosition(Camera)">MouseWorldPosition(Camera)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Vector3 MouseWorldPosition(Camera camera)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../../Camera/Index.html">Camera</a></td>
+        <td><span class="parametername">camera</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Vector3</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Kinstrife_Entities_MouseUtils_ScreenToWorldRaycast_" data-uid="Kinstrife.Entities.MouseUtils.ScreenToWorldRaycast*"></a>
+  <h4 id="Kinstrife_Entities_MouseUtils_ScreenToWorldRaycast_LayerMask_System_Single_" data-uid="Kinstrife.Entities.MouseUtils.ScreenToWorldRaycast(LayerMask,System.Single)">ScreenToWorldRaycast(LayerMask, Single)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Vector3 ScreenToWorldRaycast(LayerMask layerMask, float length = 1000F)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">LayerMask</span></td>
+        <td><span class="parametername">layerMask</span></td>
+        <td></td>
+      </tr>
       <tr>
         <td><span class="xref">System.Single</span></td>
-        <td><span class="parametername">timeScale</span></td>
+        <td><span class="parametername">length</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
-  <h3 id="implements">Implements</h3>
-  <div>
-      <a class="xref" href="Kinstrife.Core.DependencyInjection.IInjectable.html">IInjectable</a>
-  </div>
-  <div>
-      <a class="xref" href="Kinstrife.Core.DependencyInjection.IDependent.html">IDependent</a>
-  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Vector3</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
 </article>
           </div>
           
