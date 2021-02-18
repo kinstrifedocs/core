@@ -5,10 +5,10 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Class RetargetingAsset.BoneMap
+    <title>Class InstancePool&lt;TInstanceType&gt;
    | Kinstrife </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Class RetargetingAsset.BoneMap
+    <meta name="title" content="Class InstancePool&lt;TInstanceType&gt;
    | Kinstrife ">
     <meta name="generator" content="docfx 2.56.6.0">
     
@@ -68,17 +68,21 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="Kinstrife.Rigging.RetargetingAsset.BoneMap">
+            <article class="content wrap" id="_content" data-uid="Kinstrife.Entities.InstancePool`1">
   
   
-  <h1 id="Kinstrife_Rigging_RetargetingAsset_BoneMap" data-uid="Kinstrife.Rigging.RetargetingAsset.BoneMap" class="text-break">Class RetargetingAsset.BoneMap
+  <h1 id="Kinstrife_Entities_InstancePool_1" data-uid="Kinstrife.Entities.InstancePool`1" class="text-break">Class InstancePool&lt;TInstanceType&gt;
   </h1>
   <div class="markdown level0 summary"></div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><span class="xref">RetargetingAsset.BoneMap</span></div>
+    <div class="level1"><span class="xref">InstancePool&lt;TInstanceType&gt;</span></div>
+  </div>
+  <div classs="implements">
+    <h5>Implements</h5>
+    <div><span class="xref">System.IDisposable</span></div>
   </div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
@@ -104,25 +108,133 @@
       <span class="xref">System.Object.MemberwiseClone()</span>
     </div>
   </div>
-  <h6><strong>Namespace</strong>: <a class="xref" href="Kinstrife.Rigging.html">Kinstrife.Rigging</a></h6>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Kinstrife.Entities.html">Kinstrife.Entities</a></h6>
   <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
-  <h5 id="Kinstrife_Rigging_RetargetingAsset_BoneMap_syntax">Syntax</h5>
+  <h5 id="Kinstrife_Entities_InstancePool_1_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[Serializable]
-public class BoneMap</code></pre>
+    <pre><code class="lang-csharp hljs">public abstract class InstancePool&lt;TInstanceType&gt; : IDisposable where TInstanceType : IDisposable</code></pre>
   </div>
-  <h3 id="fields">Fields
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">TInstanceType</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="constructors">Constructors
   </h3>
   
   
-  <h4 id="Kinstrife_Rigging_RetargetingAsset_BoneMap_error" data-uid="Kinstrife.Rigging.RetargetingAsset.BoneMap.error">error</h4>
+  <a id="Kinstrife_Entities_InstancePool_1__ctor_" data-uid="Kinstrife.Entities.InstancePool`1.#ctor*"></a>
+  <h4 id="Kinstrife_Entities_InstancePool_1__ctor_Scene_System_Boolean_" data-uid="Kinstrife.Entities.InstancePool`1.#ctor(Scene,System.Boolean)">InstancePool(Scene, Boolean)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public float error</code></pre>
+    <pre><code class="lang-csharp hljs">public InstancePool(Scene scene, bool canExpand = true)</code></pre>
   </div>
-  <h5 class="fieldValue">Field Value</h5>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Scene</span></td>
+        <td><span class="parametername">scene</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">canExpand</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Kinstrife_Entities_InstancePool_1__ctor_" data-uid="Kinstrife.Entities.InstancePool`1.#ctor*"></a>
+  <h4 id="Kinstrife_Entities_InstancePool_1__ctor_System_Int32_Scene_System_Boolean_" data-uid="Kinstrife.Entities.InstancePool`1.#ctor(System.Int32,Scene,System.Boolean)">InstancePool(Int32, Scene, Boolean)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public InstancePool(int initialPoolSize, Scene scene, bool canExpand = true)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">initialPoolSize</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">Scene</span></td>
+        <td><span class="parametername">scene</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">canExpand</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  
+  
+  <a id="Kinstrife_Entities_InstancePool_1_CreateInstance_" data-uid="Kinstrife.Entities.InstancePool`1.CreateInstance*"></a>
+  <h4 id="Kinstrife_Entities_InstancePool_1_CreateInstance_System_Int32_Scene_" data-uid="Kinstrife.Entities.InstancePool`1.CreateInstance(System.Int32,Scene)">CreateInstance(Int32, Scene)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected abstract TInstanceType CreateInstance(int index, Scene scene)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">index</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">Scene</span></td>
+        <td><span class="parametername">scene</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
       <tr>
@@ -132,107 +244,52 @@ public class BoneMap</code></pre>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Single</span></td>
+        <td><span class="xref">TInstanceType</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   
   
-  <h4 id="Kinstrife_Rigging_RetargetingAsset_BoneMap_posError" data-uid="Kinstrife.Rigging.RetargetingAsset.BoneMap.posError">posError</h4>
+  <a id="Kinstrife_Entities_InstancePool_1_Dispose_" data-uid="Kinstrife.Entities.InstancePool`1.Dispose*"></a>
+  <h4 id="Kinstrife_Entities_InstancePool_1_Dispose" data-uid="Kinstrife.Entities.InstancePool`1.Dispose">Dispose()</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Vector3 posError</code></pre>
+    <pre><code class="lang-csharp hljs">public void Dispose()</code></pre>
   </div>
-  <h5 class="fieldValue">Field Value</h5>
+  
+  
+  <a id="Kinstrife_Entities_InstancePool_1_Initialize_" data-uid="Kinstrife.Entities.InstancePool`1.Initialize*"></a>
+  <h4 id="Kinstrife_Entities_InstancePool_1_Initialize_System_Int32_" data-uid="Kinstrife.Entities.InstancePool`1.Initialize(System.Int32)">Initialize(Int32)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected void Initialize(int initialPoolSize)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
       <tr>
         <th>Type</th>
+        <th>Name</th>
         <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Vector3</span></td>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">initialPoolSize</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
-  
-  
-  <h4 id="Kinstrife_Rigging_RetargetingAsset_BoneMap_rotError" data-uid="Kinstrife.Rigging.RetargetingAsset.BoneMap.rotError">rotError</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Quaternion rotError</code></pre>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <span class="xref">System.IDisposable</span>
   </div>
-  <h5 class="fieldValue">Field Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">Quaternion</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <h4 id="Kinstrife_Rigging_RetargetingAsset_BoneMap_sourceName" data-uid="Kinstrife.Rigging.RetargetingAsset.BoneMap.sourceName">sourceName</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public string sourceName</code></pre>
-  </div>
-  <h5 class="fieldValue">Field Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.String</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <h4 id="Kinstrife_Rigging_RetargetingAsset_BoneMap_targetName" data-uid="Kinstrife.Rigging.RetargetingAsset.BoneMap.targetName">targetName</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public string targetName</code></pre>
-  </div>
-  <h5 class="fieldValue">Field Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.String</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
 </article>
           </div>
           

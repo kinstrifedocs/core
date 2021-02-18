@@ -5,10 +5,10 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Class BaseComponentSystem
+    <title>Class PooledSystem&lt;TInstanceType, TPoolType&gt;
    | Kinstrife </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Class BaseComponentSystem
+    <meta name="title" content="Class PooledSystem&lt;TInstanceType, TPoolType&gt;
    | Kinstrife ">
     <meta name="generator" content="docfx 2.56.6.0">
     
@@ -68,35 +68,72 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="Kinstrife.Entities.BaseComponentSystem">
+            <article class="content wrap" id="_content" data-uid="Kinstrife.Entities.PooledSystem`2">
   
   
-  <h1 id="Kinstrife_Entities_BaseComponentSystem" data-uid="Kinstrife.Entities.BaseComponentSystem" class="text-break">Class BaseComponentSystem
+  <h1 id="Kinstrife_Entities_PooledSystem_2" data-uid="Kinstrife.Entities.PooledSystem`2" class="text-break">Class PooledSystem&lt;TInstanceType, TPoolType&gt;
   </h1>
   <div class="markdown level0 summary"></div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><span class="xref">BaseComponentSystem</span></div>
-      <div class="level2"><a class="xref" href="Kinstrife.Entities.PooledSystem-2.html">PooledSystem&lt;TInstanceType, TPoolType&gt;</a></div>
+    <div class="level1"><a class="xref" href="Kinstrife.Entities.BaseComponentSystem.html">BaseComponentSystem</a></div>
+    <div class="level2"><span class="xref">PooledSystem&lt;TInstanceType, TPoolType&gt;</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="Kinstrife.Entities.BaseComponentSystem.html#Kinstrife_Entities_BaseComponentSystem_EndSimulationEntityCommandBufferSystem">BaseComponentSystem.EndSimulationEntityCommandBufferSystem</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.Entities.BaseComponentSystem.html#Kinstrife_Entities_BaseComponentSystem_OnCreate">BaseComponentSystem.OnCreate()</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.Entities.BaseComponentSystem.html#Kinstrife_Entities_BaseComponentSystem_AddComponents__1_EntityQuery_NativeArray___0__">BaseComponentSystem.AddComponents&lt;T&gt;(EntityQuery, NativeArray&lt;T&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.Entities.BaseComponentSystem.html#Kinstrife_Entities_BaseComponentSystem_Count__1">BaseComponentSystem.Count&lt;T&gt;()</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.Entities.BaseComponentSystem.html#Kinstrife_Entities_BaseComponentSystem_print_System_Object_Object_">BaseComponentSystem.print(Object, Object)</a>
+    </div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Kinstrife.Entities.html">Kinstrife.Entities</a></h6>
   <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
-  <h5 id="Kinstrife_Entities_BaseComponentSystem_syntax">Syntax</h5>
+  <h5 id="Kinstrife_Entities_PooledSystem_2_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public abstract class BaseComponentSystem : ComponentSystem</code></pre>
+    <pre><code class="lang-csharp hljs">public abstract class PooledSystem&lt;TInstanceType, TPoolType&gt; : BaseComponentSystem where TInstanceType : IDisposable where TPoolType : InstancePool&lt;TInstanceType&gt;</code></pre>
   </div>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">TInstanceType</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="parametername">TPoolType</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   <h3 id="fields">Fields
   </h3>
   
   
-  <h4 id="Kinstrife_Entities_BaseComponentSystem_EndSimulationEntityCommandBufferSystem" data-uid="Kinstrife.Entities.BaseComponentSystem.EndSimulationEntityCommandBufferSystem">EndSimulationEntityCommandBufferSystem</h4>
+  <h4 id="Kinstrife_Entities_PooledSystem_2_pool" data-uid="Kinstrife.Entities.PooledSystem`2.pool">pool</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected EndSimulationEntityCommandBufferSystem EndSimulationEntityCommandBufferSystem</code></pre>
+    <pre><code class="lang-csharp hljs">protected InstancePool&lt;TInstanceType&gt; pool</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -108,7 +145,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">EndSimulationEntityCommandBufferSystem</span></td>
+        <td><a class="xref" href="Kinstrife.Entities.InstancePool-1.html">InstancePool</a>&lt;TInstanceType&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -117,14 +154,13 @@
   </h3>
   
   
-  <a id="Kinstrife_Entities_BaseComponentSystem_AddComponents_" data-uid="Kinstrife.Entities.BaseComponentSystem.AddComponents*"></a>
-  <h4 id="Kinstrife_Entities_BaseComponentSystem_AddComponents__1_EntityQuery_NativeArray___0__" data-uid="Kinstrife.Entities.BaseComponentSystem.AddComponents``1(EntityQuery,NativeArray{``0})">AddComponents&lt;T&gt;(EntityQuery, NativeArray&lt;T&gt;)</h4>
+  <a id="Kinstrife_Entities_PooledSystem_2_CreatePool_" data-uid="Kinstrife.Entities.PooledSystem`2.CreatePool*"></a>
+  <h4 id="Kinstrife_Entities_PooledSystem_2_CreatePool_System_Int32_Scene_System_Boolean_" data-uid="Kinstrife.Entities.PooledSystem`2.CreatePool(System.Int32,Scene,System.Boolean)">CreatePool(Int32, Scene, Boolean)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void AddComponents&lt;T&gt;(EntityQuery entityQuery, NativeArray&lt;T&gt; componentDataArray)
-    where T : struct, IComponentData</code></pre>
+    <pre><code class="lang-csharp hljs">protected abstract TPoolType CreatePool(int initialPoolSize, Scene scene, bool canExpand)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -137,42 +173,46 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">EntityQuery</span></td>
-        <td><span class="parametername">entityQuery</span></td>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">initialPoolSize</span></td>
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">NativeArray</span>&lt;T&gt;</td>
-        <td><span class="parametername">componentDataArray</span></td>
+        <td><span class="xref">Scene</span></td>
+        <td><span class="parametername">scene</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">canExpand</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
-  <h5 class="typeParameters">Type Parameters</h5>
+  <h5 class="returns">Returns</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
       <tr>
-        <th>Name</th>
+        <th>Type</th>
         <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
-        <td><span class="parametername">T</span></td>
+        <td><span class="xref">TPoolType</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   
   
-  <a id="Kinstrife_Entities_BaseComponentSystem_Count_" data-uid="Kinstrife.Entities.BaseComponentSystem.Count*"></a>
-  <h4 id="Kinstrife_Entities_BaseComponentSystem_Count__1" data-uid="Kinstrife.Entities.BaseComponentSystem.Count``1">Count&lt;T&gt;()</h4>
+  <a id="Kinstrife_Entities_PooledSystem_2_DispenseInstance_" data-uid="Kinstrife.Entities.PooledSystem`2.DispenseInstance*"></a>
+  <h4 id="Kinstrife_Entities_PooledSystem_2_DispenseInstance" data-uid="Kinstrife.Entities.PooledSystem`2.DispenseInstance">DispenseInstance()</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public int Count&lt;T&gt;()
-    where T : struct, IComponentData</code></pre>
+    <pre><code class="lang-csharp hljs">protected virtual TInstanceType DispenseInstance()</code></pre>
   </div>
   <h5 class="returns">Returns</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -184,45 +224,30 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Int32</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="typeParameters">Type Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="parametername">T</span></td>
+        <td><span class="xref">TInstanceType</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   
   
-  <a id="Kinstrife_Entities_BaseComponentSystem_OnCreate_" data-uid="Kinstrife.Entities.BaseComponentSystem.OnCreate*"></a>
-  <h4 id="Kinstrife_Entities_BaseComponentSystem_OnCreate" data-uid="Kinstrife.Entities.BaseComponentSystem.OnCreate">OnCreate()</h4>
+  <a id="Kinstrife_Entities_PooledSystem_2_DoUpdate_" data-uid="Kinstrife.Entities.PooledSystem`2.DoUpdate*"></a>
+  <h4 id="Kinstrife_Entities_PooledSystem_2_DoUpdate" data-uid="Kinstrife.Entities.PooledSystem`2.DoUpdate">DoUpdate()</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected override void OnCreate()</code></pre>
+    <pre><code class="lang-csharp hljs">protected abstract void DoUpdate()</code></pre>
   </div>
   
   
-  <a id="Kinstrife_Entities_BaseComponentSystem_print_" data-uid="Kinstrife.Entities.BaseComponentSystem.print*"></a>
-  <h4 id="Kinstrife_Entities_BaseComponentSystem_print_System_Object_Object_" data-uid="Kinstrife.Entities.BaseComponentSystem.print(System.Object,Object)">print(Object, Object)</h4>
+  <a id="Kinstrife_Entities_PooledSystem_2_Inject_" data-uid="Kinstrife.Entities.PooledSystem`2.Inject*"></a>
+  <h4 id="Kinstrife_Entities_PooledSystem_2_Inject_Scene_" data-uid="Kinstrife.Entities.PooledSystem`2.Inject(Scene)">Inject(Scene)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static void print(object message, Object context = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public void Inject(Scene scene)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -235,13 +260,45 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Object</span></td>
-        <td><span class="parametername">message</span></td>
+        <td><span class="xref">Scene</span></td>
+        <td><span class="parametername">scene</span></td>
         <td></td>
       </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Kinstrife_Entities_PooledSystem_2_OnUpdate_" data-uid="Kinstrife.Entities.PooledSystem`2.OnUpdate*"></a>
+  <h4 id="Kinstrife_Entities_PooledSystem_2_OnUpdate" data-uid="Kinstrife.Entities.PooledSystem`2.OnUpdate">OnUpdate()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override void OnUpdate()</code></pre>
+  </div>
+  
+  
+  <a id="Kinstrife_Entities_PooledSystem_2_ReleaseInstance_" data-uid="Kinstrife.Entities.PooledSystem`2.ReleaseInstance*"></a>
+  <h4 id="Kinstrife_Entities_PooledSystem_2_ReleaseInstance__0_" data-uid="Kinstrife.Entities.PooledSystem`2.ReleaseInstance(`0)">ReleaseInstance(TInstanceType)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void ReleaseInstance(TInstanceType instance)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
       <tr>
-        <td><span class="xref">Object</span></td>
-        <td><span class="parametername">context</span></td>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">TInstanceType</span></td>
+        <td><span class="parametername">instance</span></td>
         <td></td>
       </tr>
     </tbody>
