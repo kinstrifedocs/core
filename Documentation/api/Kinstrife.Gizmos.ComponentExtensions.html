@@ -5,10 +5,10 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Class SpatialHandle
+    <title>Class ComponentExtensions
    | Kinstrife </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Class SpatialHandle
+    <meta name="title" content="Class ComponentExtensions
    | Kinstrife ">
     <meta name="generator" content="docfx 2.56.7.0">
     
@@ -68,69 +68,134 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="Kinstrife.SpatialHandles.SpatialHandle">
+            <article class="content wrap" id="_content" data-uid="Kinstrife.Gizmos.ComponentExtensions">
   
   
-  <h1 id="Kinstrife_SpatialHandles_SpatialHandle" data-uid="Kinstrife.SpatialHandles.SpatialHandle" class="text-break">Class SpatialHandle
+  <h1 id="Kinstrife_Gizmos_ComponentExtensions" data-uid="Kinstrife.Gizmos.ComponentExtensions" class="text-break">Class ComponentExtensions
   </h1>
   <div class="markdown level0 summary"></div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><span class="xref">SpatialHandle</span></div>
-      <div class="level2"><a class="xref" href="Kinstrife.SpatialHandles.Line.html">Line</a></div>
-      <div class="level2"><a class="xref" href="Kinstrife.SpatialHandles.Point.html">Point</a></div>
-      <div class="level2"><a class="xref" href="Kinstrife.SpatialHandles.Volume.html">Volume</a></div>
+    <div class="level1"><span class="xref">ComponentExtensions</span></div>
   </div>
-  <h6><strong>Namespace</strong>: <a class="xref" href="Kinstrife.SpatialHandles.html">Kinstrife.SpatialHandles</a></h6>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Kinstrife.Gizmos.html">Kinstrife.Gizmos</a></h6>
   <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
-  <h5 id="Kinstrife_SpatialHandles_SpatialHandle_syntax">Syntax</h5>
+  <h5 id="Kinstrife_Gizmos_ComponentExtensions_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public abstract class SpatialHandle : MonoBehaviour</code></pre>
+    <pre><code class="lang-csharp hljs">public static class ComponentExtensions</code></pre>
   </div>
   <h3 id="methods">Methods
   </h3>
   
   
-  <a id="Kinstrife_SpatialHandles_SpatialHandle_CacheReferences_" data-uid="Kinstrife.SpatialHandles.SpatialHandle.CacheReferences*"></a>
-  <h4 id="Kinstrife_SpatialHandles_SpatialHandle_CacheReferences" data-uid="Kinstrife.SpatialHandles.SpatialHandle.CacheReferences">CacheReferences()</h4>
+  <a id="Kinstrife_Gizmos_ComponentExtensions_GetEnabled_" data-uid="Kinstrife.Gizmos.ComponentExtensions.GetEnabled*"></a>
+  <h4 id="Kinstrife_Gizmos_ComponentExtensions_GetEnabled_Component_" data-uid="Kinstrife.Gizmos.ComponentExtensions.GetEnabled(Component)">GetEnabled(Component)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected virtual void CacheReferences()</code></pre>
+    <pre><code class="lang-csharp hljs">public static Func&lt;bool&gt; GetEnabled(this Component component)</code></pre>
   </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Component</span></td>
+        <td><span class="parametername">component</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Func</span>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   
   
-  <a id="Kinstrife_SpatialHandles_SpatialHandle_OnDestroy_" data-uid="Kinstrife.SpatialHandles.SpatialHandle.OnDestroy*"></a>
-  <h4 id="Kinstrife_SpatialHandles_SpatialHandle_OnDestroy" data-uid="Kinstrife.SpatialHandles.SpatialHandle.OnDestroy">OnDestroy()</h4>
+  <a id="Kinstrife_Gizmos_ComponentExtensions_SetEnabled_" data-uid="Kinstrife.Gizmos.ComponentExtensions.SetEnabled*"></a>
+  <h4 id="Kinstrife_Gizmos_ComponentExtensions_SetEnabled_Component_" data-uid="Kinstrife.Gizmos.ComponentExtensions.SetEnabled(Component)">SetEnabled(Component)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected virtual void OnDestroy()</code></pre>
+    <pre><code class="lang-csharp hljs">public static Action&lt;bool&gt; SetEnabled(this Component component)</code></pre>
   </div>
-  
-  
-  <a id="Kinstrife_SpatialHandles_SpatialHandle_OnEnable_" data-uid="Kinstrife.SpatialHandles.SpatialHandle.OnEnable*"></a>
-  <h4 id="Kinstrife_SpatialHandles_SpatialHandle_OnEnable" data-uid="Kinstrife.SpatialHandles.SpatialHandle.OnEnable">OnEnable()</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected virtual void OnEnable()</code></pre>
-  </div>
-  
-  
-  <a id="Kinstrife_SpatialHandles_SpatialHandle_Rebuild_" data-uid="Kinstrife.SpatialHandles.SpatialHandle.Rebuild*"></a>
-  <h4 id="Kinstrife_SpatialHandles_SpatialHandle_Rebuild" data-uid="Kinstrife.SpatialHandles.SpatialHandle.Rebuild">Rebuild()</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual void Rebuild()</code></pre>
-  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Component</span></td>
+        <td><span class="parametername">component</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Action</span>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
 </article>
           </div>
           
