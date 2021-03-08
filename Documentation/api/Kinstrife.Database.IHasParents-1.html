@@ -5,10 +5,10 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Class CampaignSystemRef&lt;T&gt;
+    <title>Interface IHasParents&lt;TKeyType&gt;
    | Kinstrife </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Class CampaignSystemRef&lt;T&gt;
+    <meta name="title" content="Interface IHasParents&lt;TKeyType&gt;
    | Kinstrife ">
     <meta name="generator" content="docfx 2.56.7.0">
     
@@ -68,42 +68,18 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="Kinstrife.Core.Campaign.CampaignSystemRef`1">
+            <article class="content wrap" id="_content" data-uid="Kinstrife.Database.IHasParents`1">
   
   
-  <h1 id="Kinstrife_Core_Campaign_CampaignSystemRef_1" data-uid="Kinstrife.Core.Campaign.CampaignSystemRef`1" class="text-break">Class CampaignSystemRef&lt;T&gt;
+  <h1 id="Kinstrife_Database_IHasParents_1" data-uid="Kinstrife.Database.IHasParents`1" class="text-break">Interface IHasParents&lt;TKeyType&gt;
   </h1>
   <div class="markdown level0 summary"></div>
   <div class="markdown level0 conceptual"></div>
-  <div class="inheritance">
-    <h5>Inheritance</h5>
-    <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><a class="xref" href="Kinstrife.Identifier.IdentifiableObject.html">IdentifiableObject</a></div>
-    <div class="level2"><span class="xref">CampaignSystemRef&lt;T&gt;</span></div>
-  </div>
-  <div classs="implements">
-    <h5>Implements</h5>
-    <div><a class="xref" href="Kinstrife.Identifier.IIdentifiable.html">IIdentifiable</a></div>
-    <div><span class="xref">IHasGuid</span></div>
-    <div><a class="xref" href="Kinstrife.Core.Campaign.ICampaignSystemRef.html">ICampaignSystemRef</a></div>
-  </div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
-    <div>
-      <a class="xref" href="Kinstrife.Identifier.IdentifiableObject.html#Kinstrife_Identifier_IdentifiableObject_id">IdentifiableObject.id</a>
-    </div>
-    <div>
-      <a class="xref" href="Kinstrife.Identifier.IdentifiableObject.html#Kinstrife_Identifier_IdentifiableObject_Guid">IdentifiableObject.Guid</a>
-    </div>
-    <div>
-      <a class="xref" href="Kinstrife.Identifier.IdentifiableObject.html#Kinstrife_Identifier_IdentifiableObject_CreateNewGuid">IdentifiableObject.CreateNewGuid()</a>
-    </div>
-  </div>
-  <h6><strong>Namespace</strong>: <a class="xref" href="Kinstrife.Core.Campaign.html">Kinstrife.Core.Campaign</a></h6>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Kinstrife.Database.html">Kinstrife.Database</a></h6>
   <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
-  <h5 id="Kinstrife_Core_Campaign_CampaignSystemRef_1_syntax">Syntax</h5>
+  <h5 id="Kinstrife_Database_IHasParents_1_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public abstract class CampaignSystemRef&lt;T&gt; : IdentifiableObject, IIdentifiable, IHasGuid, ICampaignSystemRef where T : CampaignSystemBase</code></pre>
+    <pre><code class="lang-csharp hljs">public interface IHasParents&lt;TKeyType&gt;</code></pre>
   </div>
   <h5 class="typeParameters">Type Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -115,50 +91,24 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="parametername">T</span></td>
+        <td><span class="parametername">TKeyType</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
-  <h3 id="properties">Properties
+  <h3 id="methods">Methods
   </h3>
   
   
-  <a id="Kinstrife_Core_Campaign_CampaignSystemRef_1_CreateByDefault_" data-uid="Kinstrife.Core.Campaign.CampaignSystemRef`1.CreateByDefault*"></a>
-  <h4 id="Kinstrife_Core_Campaign_CampaignSystemRef_1_CreateByDefault" data-uid="Kinstrife.Core.Campaign.CampaignSystemRef`1.CreateByDefault">CreateByDefault</h4>
-  <div class="markdown level1 summary"><p>Should system be created by default or only when specified in <a class="xref" href="Kinstrife.Core.Campaign.CampaignDefinition.html">CampaignDefinition</a></p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public bool CreateByDefault { get; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Boolean</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="Kinstrife_Core_Campaign_CampaignSystemRef_1_SystemType_" data-uid="Kinstrife.Core.Campaign.CampaignSystemRef`1.SystemType*"></a>
-  <h4 id="Kinstrife_Core_Campaign_CampaignSystemRef_1_SystemType" data-uid="Kinstrife.Core.Campaign.CampaignSystemRef`1.SystemType">SystemType</h4>
+  <a id="Kinstrife_Database_IHasParents_1_GetParentKeys_" data-uid="Kinstrife.Database.IHasParents`1.GetParentKeys*"></a>
+  <h4 id="Kinstrife_Database_IHasParents_1_GetParentKeys" data-uid="Kinstrife.Database.IHasParents`1.GetParentKeys">GetParentKeys()</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Type SystemType { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">IEnumerable&lt;TKeyType&gt; GetParentKeys()</code></pre>
   </div>
-  <h5 class="propertyValue">Property Value</h5>
+  <h5 class="returns">Returns</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
       <tr>
@@ -168,21 +118,11 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Type</span></td>
+        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;TKeyType&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
-  <h3 id="implements">Implements</h3>
-  <div>
-      <a class="xref" href="Kinstrife.Identifier.IIdentifiable.html">IIdentifiable</a>
-  </div>
-  <div>
-      <span class="xref">IHasGuid</span>
-  </div>
-  <div>
-      <a class="xref" href="Kinstrife.Core.Campaign.ICampaignSystemRef.html">ICampaignSystemRef</a>
-  </div>
 </article>
           </div>
           
