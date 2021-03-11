@@ -5,10 +5,10 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Class ContentDatabase
+    <title>Class AssetLabel
    | Kinstrife </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Class ContentDatabase
+    <meta name="title" content="Class AssetLabel
    | Kinstrife ">
     <meta name="generator" content="docfx 2.56.7.0">
     
@@ -68,34 +68,42 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="Kinstrife.ContentDatabase.ContentDatabase">
+            <article class="content wrap" id="_content" data-uid="Kinstrife.ContentDatabase.AssetLabel">
   
   
-  <h1 id="Kinstrife_ContentDatabase_ContentDatabase" data-uid="Kinstrife.ContentDatabase.ContentDatabase" class="text-break">Class ContentDatabase
+  <h1 id="Kinstrife_ContentDatabase_AssetLabel" data-uid="Kinstrife.ContentDatabase.AssetLabel" class="text-break">Class AssetLabel
   </h1>
   <div class="markdown level0 summary"></div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><span class="xref">ContentDatabase</span></div>
+    <div class="level1"><a class="xref" href="Kinstrife.ContentDatabase.AssetMetaObject.html">AssetMetaObject</a></div>
+    <div class="level2"><span class="xref">AssetLabel</span></div>
+  </div>
+  <div classs="implements">
+    <h5>Implements</h5>
+    <div><a class="xref" href="Kinstrife.Identifier.IIdentifiable.html">IIdentifiable</a></div>
+    <div><a class="xref" href="Kinstrife.Database.IHasKey-1.html">IHasKey</a>&lt;<a class="xref" href="Kinstrife.ContentDatabase.AssetCategory.html">AssetCategory</a>&gt;</div>
+    <div><a class="xref" href="Kinstrife.Database.IHasManyKeys-1.html">IHasManyKeys</a>&lt;<a class="xref" href="Kinstrife.ContentDatabase.AssetCategory.html">AssetCategory</a>&gt;</div>
+    <div><a class="xref" href="Kinstrife.Database.IHasIcon.html">IHasIcon</a></div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Kinstrife.ContentDatabase.html">Kinstrife.ContentDatabase</a></h6>
   <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
-  <h5 id="Kinstrife_ContentDatabase_ContentDatabase_syntax">Syntax</h5>
+  <h5 id="Kinstrife_ContentDatabase_AssetLabel_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class ContentDatabase : MonoBehaviour</code></pre>
+    <pre><code class="lang-csharp hljs">public class AssetLabel : AssetMetaObject, IIdentifiable, IHasKey&lt;AssetCategory&gt;, IHasManyKeys&lt;AssetCategory&gt;, IHasIcon</code></pre>
   </div>
   <h3 id="fields">Fields
   </h3>
   
   
-  <h4 id="Kinstrife_ContentDatabase_ContentDatabase_accessor" data-uid="Kinstrife.ContentDatabase.ContentDatabase.accessor">accessor</h4>
+  <h4 id="Kinstrife_ContentDatabase_AssetLabel_icon" data-uid="Kinstrife.ContentDatabase.AssetLabel.icon">icon</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public ManyToManyDatabaseAccessor&lt;AssetCategory, UnityEngine.Object&gt; accessor</code></pre>
+    <pre><code class="lang-csharp hljs">public Texture icon</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -107,21 +115,49 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="Kinstrife.Database.ManyToManyDatabaseAccessor-2.html">ManyToManyDatabaseAccessor</a>&lt;<a class="xref" href="Kinstrife.ContentDatabase.AssetCategory.html">AssetCategory</a>, <span class="xref">UnityEngine.Object</span>&gt;</td>
+        <td><span class="xref">Texture</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="properties">Properties
+  </h3>
+  
+  
+  <a id="Kinstrife_ContentDatabase_AssetLabel_Categories_" data-uid="Kinstrife.ContentDatabase.AssetLabel.Categories*"></a>
+  <h4 id="Kinstrife_ContentDatabase_AssetLabel_Categories" data-uid="Kinstrife.ContentDatabase.AssetLabel.Categories">Categories</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public AssetCategory[] Categories { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Kinstrife.ContentDatabase.AssetCategory.html">AssetCategory</a>[]</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   
   
-  <h4 id="Kinstrife_ContentDatabase_ContentDatabase_dataLoader" data-uid="Kinstrife.ContentDatabase.ContentDatabase.dataLoader">dataLoader</h4>
+  <a id="Kinstrife_ContentDatabase_AssetLabel_Guid_" data-uid="Kinstrife.ContentDatabase.AssetLabel.Guid*"></a>
+  <h4 id="Kinstrife_ContentDatabase_AssetLabel_Guid" data-uid="Kinstrife.ContentDatabase.AssetLabel.Guid">Guid</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public DataLoaderBase&lt;AssetCategory, Object&gt; dataLoader</code></pre>
+    <pre><code class="lang-csharp hljs">public Guid Guid { get; }</code></pre>
   </div>
-  <h5 class="fieldValue">Field Value</h5>
+  <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
       <tr>
@@ -131,21 +167,22 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="Kinstrife.Database.DataLoaderBase-2.html">DataLoaderBase</a>&lt;<a class="xref" href="Kinstrife.ContentDatabase.AssetCategory.html">AssetCategory</a>, <span class="xref">Object</span>&gt;</td>
+        <td><span class="xref">System.Guid</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   
   
-  <h4 id="Kinstrife_ContentDatabase_ContentDatabase_genericDatabase" data-uid="Kinstrife.ContentDatabase.ContentDatabase.genericDatabase">genericDatabase</h4>
+  <a id="Kinstrife_ContentDatabase_AssetLabel_Icon_" data-uid="Kinstrife.ContentDatabase.AssetLabel.Icon*"></a>
+  <h4 id="Kinstrife_ContentDatabase_AssetLabel_Icon" data-uid="Kinstrife.ContentDatabase.AssetLabel.Icon">Icon</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public GenericDatabase&lt;AssetCategory, Object&gt; genericDatabase</code></pre>
+    <pre><code class="lang-csharp hljs">public Texture Icon { get; set; }</code></pre>
   </div>
-  <h5 class="fieldValue">Field Value</h5>
+  <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
       <tr>
@@ -155,21 +192,22 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="Kinstrife.Database.GenericDatabase-2.html">GenericDatabase</a>&lt;<a class="xref" href="Kinstrife.ContentDatabase.AssetCategory.html">AssetCategory</a>, <span class="xref">Object</span>&gt;</td>
+        <td><span class="xref">Texture</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   
   
-  <h4 id="Kinstrife_ContentDatabase_ContentDatabase_LabeledContentTag" data-uid="Kinstrife.ContentDatabase.ContentDatabase.LabeledContentTag">LabeledContentTag</h4>
+  <a id="Kinstrife_ContentDatabase_AssetLabel_Key_" data-uid="Kinstrife.ContentDatabase.AssetLabel.Key*"></a>
+  <h4 id="Kinstrife_ContentDatabase_AssetLabel_Key" data-uid="Kinstrife.ContentDatabase.AssetLabel.Key">Key</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static string LabeledContentTag</code></pre>
+    <pre><code class="lang-csharp hljs">public AssetCategory Key { get; }</code></pre>
   </div>
-  <h5 class="fieldValue">Field Value</h5>
+  <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
       <tr>
@@ -179,21 +217,22 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><a class="xref" href="Kinstrife.ContentDatabase.AssetCategory.html">AssetCategory</a></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   
   
-  <h4 id="Kinstrife_ContentDatabase_ContentDatabase_ResourcesFolderPath" data-uid="Kinstrife.ContentDatabase.ContentDatabase.ResourcesFolderPath">ResourcesFolderPath</h4>
+  <a id="Kinstrife_ContentDatabase_AssetLabel_Keys_" data-uid="Kinstrife.ContentDatabase.AssetLabel.Keys*"></a>
+  <h4 id="Kinstrife_ContentDatabase_AssetLabel_Keys" data-uid="Kinstrife.ContentDatabase.AssetLabel.Keys">Keys</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static string ResourcesFolderPath</code></pre>
+    <pre><code class="lang-csharp hljs">public IReadOnlyCollection&lt;AssetCategory&gt; Keys { get; }</code></pre>
   </div>
-  <h5 class="fieldValue">Field Value</h5>
+  <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
       <tr>
@@ -203,31 +242,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <h4 id="Kinstrife_ContentDatabase_ContentDatabase_testResources" data-uid="Kinstrife.ContentDatabase.ContentDatabase.testResources">testResources</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Object[] testResources</code></pre>
-  </div>
-  <h5 class="fieldValue">Field Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">Object</span>[]</td>
+        <td><span class="xref">System.Collections.Generic.IReadOnlyCollection</span>&lt;<a class="xref" href="Kinstrife.ContentDatabase.AssetCategory.html">AssetCategory</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -236,55 +251,26 @@
   </h3>
   
   
-  <a id="Kinstrife_ContentDatabase_ContentDatabase_FilterEntry_" data-uid="Kinstrife.ContentDatabase.ContentDatabase.FilterEntry*"></a>
-  <h4 id="Kinstrife_ContentDatabase_ContentDatabase_FilterEntry_Object_" data-uid="Kinstrife.ContentDatabase.ContentDatabase.FilterEntry(Object)">FilterEntry(Object)</h4>
+  <a id="Kinstrife_ContentDatabase_AssetLabel_ResetGuid_" data-uid="Kinstrife.ContentDatabase.AssetLabel.ResetGuid*"></a>
+  <h4 id="Kinstrife_ContentDatabase_AssetLabel_ResetGuid" data-uid="Kinstrife.ContentDatabase.AssetLabel.ResetGuid">ResetGuid()</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public bool FilterEntry(Object entry)</code></pre>
+    <pre><code class="lang-csharp hljs">public void ResetGuid()</code></pre>
   </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">Object</span></td>
-        <td><span class="parametername">entry</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Boolean</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="Kinstrife_ContentDatabase_ContentDatabase_TryInjectData_" data-uid="Kinstrife.ContentDatabase.ContentDatabase.TryInjectData*"></a>
-  <h4 id="Kinstrife_ContentDatabase_ContentDatabase_TryInjectData" data-uid="Kinstrife.ContentDatabase.ContentDatabase.TryInjectData">TryInjectData()</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void TryInjectData()</code></pre>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <a class="xref" href="Kinstrife.Identifier.IIdentifiable.html">IIdentifiable</a>
+  </div>
+  <div>
+      <a class="xref" href="Kinstrife.Database.IHasKey-1.html">IHasKey&lt;TKeyType&gt;</a>
+  </div>
+  <div>
+      <a class="xref" href="Kinstrife.Database.IHasManyKeys-1.html">IHasManyKeys&lt;TKeyType&gt;</a>
+  </div>
+  <div>
+      <a class="xref" href="Kinstrife.Database.IHasIcon.html">IHasIcon</a>
   </div>
 </article>
           </div>

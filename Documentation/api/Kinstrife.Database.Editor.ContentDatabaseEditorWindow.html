@@ -81,6 +81,10 @@
     <div class="level1"><a class="xref" href="Kinstrife.Database.Editor.DatabaseEditorWindow-2.html">DatabaseEditorWindow</a>&lt;<span class="xref">AssetCategory</span>, <span class="xref">UnityEngine.Object</span>&gt;</div>
     <div class="level2"><span class="xref">ContentDatabaseEditorWindow</span></div>
   </div>
+  <div classs="implements">
+    <h5>Implements</h5>
+    <div><span class="xref">OdinMenuEditorWindow</span></div>
+  </div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
     <div>
@@ -94,6 +98,12 @@
     </div>
     <div>
       <a class="xref" href="Kinstrife.Database.Editor.DatabaseEditorWindow-2.html#Kinstrife_Database_Editor_DatabaseEditorWindow_2_LabeledContentTag">DatabaseEditorWindow&lt;AssetCategory, UnityEngine.Object&gt;.LabeledContentTag</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.Database.Editor.DatabaseEditorWindow-2.html#Kinstrife_Database_Editor_DatabaseEditorWindow_2_KeyTypeAsObject">DatabaseEditorWindow&lt;AssetCategory, UnityEngine.Object&gt;.KeyTypeAsObject</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.Database.Editor.DatabaseEditorWindow-2.html#Kinstrife_Database_Editor_DatabaseEditorWindow_2_HighlightedKeyPathEditorPrefs">DatabaseEditorWindow&lt;AssetCategory, UnityEngine.Object&gt;.HighlightedKeyPathEditorPrefs</a>
     </div>
     <div>
       <a class="xref" href="Kinstrife.Database.Editor.DatabaseEditorWindow-2.html#Kinstrife_Database_Editor_DatabaseEditorWindow_2_OpenAndSelectTarget_System_Object_">DatabaseEditorWindow&lt;AssetCategory, UnityEngine.Object&gt;.OpenAndSelectTarget(Object)</a>
@@ -111,29 +121,17 @@
       <a class="xref" href="Kinstrife.Database.Editor.DatabaseEditorWindow-2.html#Kinstrife_Database_Editor_DatabaseEditorWindow_2_OnEndDrawEditors">DatabaseEditorWindow&lt;AssetCategory, UnityEngine.Object&gt;.OnEndDrawEditors()</a>
     </div>
     <div>
-      <a class="xref" href="Kinstrife.Database.Editor.DatabaseEditorWindow-2.html#Kinstrife_Database_Editor_DatabaseEditorWindow_2_DrawMenu">DatabaseEditorWindow&lt;AssetCategory, UnityEngine.Object&gt;.DrawMenu()</a>
-    </div>
-    <div>
       <a class="xref" href="Kinstrife.Database.Editor.DatabaseEditorWindow-2.html#Kinstrife_Database_Editor_DatabaseEditorWindow_2_BuildMenuTree">DatabaseEditorWindow&lt;AssetCategory, UnityEngine.Object&gt;.BuildMenuTree()</a>
     </div>
     <div>
-      <a class="xref" href="Kinstrife.Database.Editor.DatabaseEditorWindow-2.html#Kinstrife_Database_Editor_DatabaseEditorWindow_2_GetTarget">DatabaseEditorWindow&lt;AssetCategory, UnityEngine.Object&gt;.GetTarget()</a>
-    </div>
-    <div>
-      <a class="xref" href="Kinstrife.Database.Editor.DatabaseEditorWindow-2.html#Kinstrife_Database_Editor_DatabaseEditorWindow_2_GetStatusIcon">DatabaseEditorWindow&lt;AssetCategory, UnityEngine.Object&gt;.GetStatusIcon()</a>
-    </div>
-    <div>
-      <a class="xref" href="Kinstrife.Database.Editor.DatabaseEditorWindow-2.html#Kinstrife_Database_Editor_DatabaseEditorWindow_2_GetIconForEntry__1_">DatabaseEditorWindow&lt;AssetCategory, UnityEngine.Object&gt;.GetIconForEntry(UnityEngine.Object)</a>
-    </div>
-    <div>
-      <a class="xref" href="Kinstrife.Database.Editor.DatabaseEditorWindow-2.html#Kinstrife_Database_Editor_DatabaseEditorWindow_2_GetIconForObject_Object_">DatabaseEditorWindow&lt;AssetCategory, UnityEngine.Object&gt;.GetIconForObject(Object)</a>
+      <a class="xref" href="Kinstrife.Database.Editor.DatabaseEditorWindow-2.html#Kinstrife_Database_Editor_DatabaseEditorWindow_2_DrawMenu">DatabaseEditorWindow&lt;AssetCategory, UnityEngine.Object&gt;.DrawMenu()</a>
     </div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Kinstrife.Database.Editor.html">Kinstrife.Database.Editor</a></h6>
   <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
   <h5 id="Kinstrife_Database_Editor_ContentDatabaseEditorWindow_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class ContentDatabaseEditorWindow : DatabaseEditorWindow&lt;AssetCategory, UnityEngine.Object&gt;</code></pre>
+    <pre><code class="lang-csharp hljs">public class ContentDatabaseEditorWindow : DatabaseEditorWindow&lt;AssetCategory, UnityEngine.Object&gt;, OdinMenuEditorWindow</code></pre>
   </div>
   <h3 id="properties">Properties
   </h3>
@@ -164,6 +162,33 @@
   </table>
   <h5 class="overrides">Overrides</h5>
   <div><span class="xref">Kinstrife.Database.Editor.DatabaseEditorWindow&lt;AssetCategory, UnityEngine.Object&gt;.HasSearchbar</span></div>
+  
+  
+  <a id="Kinstrife_Database_Editor_ContentDatabaseEditorWindow_KeyTypeAsObject_" data-uid="Kinstrife.Database.Editor.ContentDatabaseEditorWindow.KeyTypeAsObject*"></a>
+  <h4 id="Kinstrife_Database_Editor_ContentDatabaseEditorWindow_KeyTypeAsObject" data-uid="Kinstrife.Database.Editor.ContentDatabaseEditorWindow.KeyTypeAsObject">KeyTypeAsObject</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override Type KeyTypeAsObject { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Type</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">Kinstrife.Database.Editor.DatabaseEditorWindow&lt;AssetCategory, UnityEngine.Object&gt;.KeyTypeAsObject</span></div>
   
   
   <a id="Kinstrife_Database_Editor_ContentDatabaseEditorWindow_LabeledContentTag_" data-uid="Kinstrife.Database.Editor.ContentDatabaseEditorWindow.LabeledContentTag*"></a>
@@ -245,6 +270,10 @@
   </table>
   <h5 class="overrides">Overrides</h5>
   <div><span class="xref">Kinstrife.Database.Editor.DatabaseEditorWindow&lt;AssetCategory, UnityEngine.Object&gt;.SupportsMultiSelect</span></div>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <span class="xref">OdinMenuEditorWindow</span>
+  </div>
 </article>
           </div>
           
