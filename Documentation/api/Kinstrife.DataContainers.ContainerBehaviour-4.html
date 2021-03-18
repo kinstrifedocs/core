@@ -1,0 +1,655 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class ContainerBehaviour&lt;TAsset, TId, TInstanceData, TSourceObject&gt;
+   | Kinstrife </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class ContainerBehaviour&lt;TAsset, TId, TInstanceData, TSourceObject&gt;
+   | Kinstrife ">
+    <meta name="generator" content="docfx 2.56.7.0">
+    
+    <link rel="shortcut icon" href="../../favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet"> 
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../index.html">
+                <img id="logo" class="svg" src="../../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Kinstrife.DataContainers.ContainerBehaviour`4">
+  
+  
+  <h1 id="Kinstrife_DataContainers_ContainerBehaviour_4" data-uid="Kinstrife.DataContainers.ContainerBehaviour`4" class="text-break">Class ContainerBehaviour&lt;TAsset, TId, TInstanceData, TSourceObject&gt;
+  </h1>
+  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><a class="xref" href="Kinstrife.DataContainers.ContainerBehaviour.html">ContainerBehaviour</a></div>
+    <div class="level2"><a class="xref" href="Kinstrife.DataContainers.ContainerBehaviour-2.html">ContainerBehaviour</a>&lt;TAsset, TId&gt;</div>
+    <div class="level3"><span class="xref">ContainerBehaviour&lt;TAsset, TId, TInstanceData, TSourceObject&gt;</span></div>
+      <div class="level4"><a class="xref" href="Kinstrife.DataContainers.TransformsContainer-3.html">TransformsContainer&lt;TDataAsset, TId, TInstanceData&gt;</a></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="Kinstrife.DataContainers.ContainerBehaviour-2.html#Kinstrife_DataContainers_ContainerBehaviour_2_Asset">ContainerBehaviour&lt;TAsset, TId&gt;.Asset</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.DataContainers.ContainerBehaviour-2.html#Kinstrife_DataContainers_ContainerBehaviour_2_BakeToAsset">ContainerBehaviour&lt;TAsset, TId&gt;.BakeToAsset()</a>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Kinstrife.DataContainers.html">Kinstrife.DataContainers</a></h6>
+  <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
+  <h5 id="Kinstrife_DataContainers_ContainerBehaviour_4_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public abstract class ContainerBehaviour&lt;TAsset, TId, TInstanceData, TSourceObject&gt; : ContainerBehaviour&lt;TAsset, TId&gt; where TAsset : ScriptableObjectContainer&lt;TId&gt; where TId : ScriptableObject, DataProxy&lt;TSourceObject&gt;</code></pre>
+  </div>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">TAsset</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="parametername">TId</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="parametername">TInstanceData</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="parametername">TSourceObject</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="fields">Fields
+  </h3>
+  
+  
+  <h4 id="Kinstrife_DataContainers_ContainerBehaviour_4_mapping" data-uid="Kinstrife.DataContainers.ContainerBehaviour`4.mapping">mapping</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ContainerBehaviour&lt;TAsset, TId, TInstanceData, TSourceObject&gt;.MappingDictionary mapping</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Kinstrife.DataContainers.ContainerBehaviour-4.MappingDictionary.html">ContainerBehaviour.MappingDictionary</a>&lt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="properties">Properties
+  </h3>
+  
+  
+  <a id="Kinstrife_DataContainers_ContainerBehaviour_4_HasValues_" data-uid="Kinstrife.DataContainers.ContainerBehaviour`4.HasValues*"></a>
+  <h4 id="Kinstrife_DataContainers_ContainerBehaviour_4_HasValues" data-uid="Kinstrife.DataContainers.ContainerBehaviour`4.HasValues">HasValues</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool HasValues { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Kinstrife_DataContainers_ContainerBehaviour_4_values_" data-uid="Kinstrife.DataContainers.ContainerBehaviour`4.values*"></a>
+  <h4 id="Kinstrife_DataContainers_ContainerBehaviour_4_values" data-uid="Kinstrife.DataContainers.ContainerBehaviour`4.values">values</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IEnumerable&lt;TInstanceData&gt; values { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;TInstanceData&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  
+  
+  <a id="Kinstrife_DataContainers_ContainerBehaviour_4_CacheReferences_" data-uid="Kinstrife.DataContainers.ContainerBehaviour`4.CacheReferences*"></a>
+  <h4 id="Kinstrife_DataContainers_ContainerBehaviour_4_CacheReferences" data-uid="Kinstrife.DataContainers.ContainerBehaviour`4.CacheReferences">CacheReferences()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected abstract void CacheReferences()</code></pre>
+  </div>
+  
+  
+  <a id="Kinstrife_DataContainers_ContainerBehaviour_4_Clear_" data-uid="Kinstrife.DataContainers.ContainerBehaviour`4.Clear*"></a>
+  <h4 id="Kinstrife_DataContainers_ContainerBehaviour_4_Clear" data-uid="Kinstrife.DataContainers.ContainerBehaviour`4.Clear">Clear()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Clear()</code></pre>
+  </div>
+  
+  
+  <a id="Kinstrife_DataContainers_ContainerBehaviour_4_DoPostProcess_" data-uid="Kinstrife.DataContainers.ContainerBehaviour`4.DoPostProcess*"></a>
+  <h4 id="Kinstrife_DataContainers_ContainerBehaviour_4_DoPostProcess" data-uid="Kinstrife.DataContainers.ContainerBehaviour`4.DoPostProcess">DoPostProcess()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void DoPostProcess()</code></pre>
+  </div>
+  
+  
+  <a id="Kinstrife_DataContainers_ContainerBehaviour_4_GetAssociatedObject_" data-uid="Kinstrife.DataContainers.ContainerBehaviour`4.GetAssociatedObject*"></a>
+  <h4 id="Kinstrife_DataContainers_ContainerBehaviour_4_GetAssociatedObject__2_" data-uid="Kinstrife.DataContainers.ContainerBehaviour`4.GetAssociatedObject(`2)">GetAssociatedObject(TInstanceData)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected abstract Object GetAssociatedObject(TInstanceData instance)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">TInstanceData</span></td>
+        <td><span class="parametername">instance</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Object</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Kinstrife_DataContainers_ContainerBehaviour_4_GetKey_" data-uid="Kinstrife.DataContainers.ContainerBehaviour`4.GetKey*"></a>
+  <h4 id="Kinstrife_DataContainers_ContainerBehaviour_4_GetKey__2_" data-uid="Kinstrife.DataContainers.ContainerBehaviour`4.GetKey(`2)">GetKey(TInstanceData)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected abstract string GetKey(TInstanceData instance)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">TInstanceData</span></td>
+        <td><span class="parametername">instance</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Kinstrife_DataContainers_ContainerBehaviour_4_GetOrCreateInstance_" data-uid="Kinstrife.DataContainers.ContainerBehaviour`4.GetOrCreateInstance*"></a>
+  <h4 id="Kinstrife_DataContainers_ContainerBehaviour_4_GetOrCreateInstance__3_" data-uid="Kinstrife.DataContainers.ContainerBehaviour`4.GetOrCreateInstance(`3)">GetOrCreateInstance(TSourceObject)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected abstract TInstanceData GetOrCreateInstance(TSourceObject sourceOject)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">TSourceObject</span></td>
+        <td><span class="parametername">sourceOject</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">TInstanceData</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Kinstrife_DataContainers_ContainerBehaviour_4_GetSourceObjects_" data-uid="Kinstrife.DataContainers.ContainerBehaviour`4.GetSourceObjects*"></a>
+  <h4 id="Kinstrife_DataContainers_ContainerBehaviour_4_GetSourceObjects" data-uid="Kinstrife.DataContainers.ContainerBehaviour`4.GetSourceObjects">GetSourceObjects()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public abstract IEnumerable&lt;TSourceObject&gt; GetSourceObjects()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;TSourceObject&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Kinstrife_DataContainers_ContainerBehaviour_4_OnClearInstance_" data-uid="Kinstrife.DataContainers.ContainerBehaviour`4.OnClearInstance*"></a>
+  <h4 id="Kinstrife_DataContainers_ContainerBehaviour_4_OnClearInstance__2_" data-uid="Kinstrife.DataContainers.ContainerBehaviour`4.OnClearInstance(`2)">OnClearInstance(TInstanceData)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected abstract void OnClearInstance(TInstanceData instanceData)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">TInstanceData</span></td>
+        <td><span class="parametername">instanceData</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Kinstrife_DataContainers_ContainerBehaviour_4_Process_" data-uid="Kinstrife.DataContainers.ContainerBehaviour`4.Process*"></a>
+  <h4 id="Kinstrife_DataContainers_ContainerBehaviour_4_Process" data-uid="Kinstrife.DataContainers.ContainerBehaviour`4.Process">Process()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void Process()</code></pre>
+  </div>
+  
+  
+  <a id="Kinstrife_DataContainers_ContainerBehaviour_4_TryAddValue_" data-uid="Kinstrife.DataContainers.ContainerBehaviour`4.TryAddValue*"></a>
+  <h4 id="Kinstrife_DataContainers_ContainerBehaviour_4_TryAddValue__2_System_Boolean_" data-uid="Kinstrife.DataContainers.ContainerBehaviour`4.TryAddValue(`2,System.Boolean)">TryAddValue(TInstanceData, Boolean)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual bool TryAddValue(TInstanceData instanceData, bool logError = false)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">TInstanceData</span></td>
+        <td><span class="parametername">instanceData</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">logError</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Kinstrife_DataContainers_ContainerBehaviour_4_TryGetValue_" data-uid="Kinstrife.DataContainers.ContainerBehaviour`4.TryGetValue*"></a>
+  <h4 id="Kinstrife_DataContainers_ContainerBehaviour_4_TryGetValue_System_String_System_Boolean_System_Boolean_" data-uid="Kinstrife.DataContainers.ContainerBehaviour`4.TryGetValue(System.String,System.Boolean,System.Boolean)">TryGetValue(String, Boolean, Boolean)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual TInstanceData TryGetValue(string name, bool tryRetarget = true, bool logNotFound = false)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">name</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">tryRetarget</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">logNotFound</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">TInstanceData</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Kinstrife_DataContainers_ContainerBehaviour_4_TryRemove_" data-uid="Kinstrife.DataContainers.ContainerBehaviour`4.TryRemove*"></a>
+  <h4 id="Kinstrife_DataContainers_ContainerBehaviour_4_TryRemove__2_System_Boolean_" data-uid="Kinstrife.DataContainers.ContainerBehaviour`4.TryRemove(`2,System.Boolean)">TryRemove(TInstanceData, Boolean)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual bool TryRemove(TInstanceData instanceData, bool logError = false)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">TInstanceData</span></td>
+        <td><span class="parametername">instanceData</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">logError</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Kinstrife_DataContainers_ContainerBehaviour_4_TryRemove_" data-uid="Kinstrife.DataContainers.ContainerBehaviour`4.TryRemove*"></a>
+  <h4 id="Kinstrife_DataContainers_ContainerBehaviour_4_TryRemove_System_String_System_Boolean_" data-uid="Kinstrife.DataContainers.ContainerBehaviour`4.TryRemove(System.String,System.Boolean)">TryRemove(String, Boolean)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual bool TryRemove(string key, bool logError = false)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">key</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">logError</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+  </body>
+</html>
