@@ -78,24 +78,13 @@
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><a class="xref" href="Kinstrife.Animation.PlayableAssetBase.html">PlayableAssetBase</a></div>
-    <div class="level2"><span class="xref">AnimationPlayableAsset</span></div>
-  </div>
-  <div classs="implements">
-    <h5>Implements</h5>
-    <div><a class="xref" href="Kinstrife.Animation.IPlayableData.html">IPlayableData</a></div>
-  </div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
-    <div>
-      <a class="xref" href="Kinstrife.Animation.PlayableAssetBase.html#Kinstrife_Animation_PlayableAssetBase_CreatePlayable_PlayableGraph_GameObject_">PlayableAssetBase.CreatePlayable(PlayableGraph, GameObject)</a>
-    </div>
+    <div class="level1"><span class="xref">AnimationPlayableAsset</span></div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Kinstrife.Animation.html">Kinstrife.Animation</a></h6>
   <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
   <h5 id="Kinstrife_Animation_AnimationPlayableAsset_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class AnimationPlayableAsset : PlayableAssetBase, IPlayableData</code></pre>
+    <pre><code class="lang-csharp hljs">public class AnimationPlayableAsset : UnityEngine.Timeline.AnimationPlayableAsset</code></pre>
   </div>
   <h3 id="fields">Fields
   </h3>
@@ -143,30 +132,6 @@
     <tbody>
       <tr>
         <td><span class="xref">System.Boolean</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <h4 id="Kinstrife_Animation_AnimationPlayableAsset_Clip" data-uid="Kinstrife.Animation.AnimationPlayableAsset.Clip">Clip</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public ClipState Clip</code></pre>
-  </div>
-  <h5 class="fieldValue">Field Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">ClipState</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -291,10 +256,55 @@
       </tr>
     </tbody>
   </table>
-  <h3 id="implements">Implements</h3>
-  <div>
-      <a class="xref" href="Kinstrife.Animation.IPlayableData.html">IPlayableData</a>
+  <h3 id="methods">Methods
+  </h3>
+  
+  
+  <a id="Kinstrife_Animation_AnimationPlayableAsset_CreatePlayable_" data-uid="Kinstrife.Animation.AnimationPlayableAsset.CreatePlayable*"></a>
+  <h4 id="Kinstrife_Animation_AnimationPlayableAsset_CreatePlayable_PlayableGraph_GameObject_" data-uid="Kinstrife.Animation.AnimationPlayableAsset.CreatePlayable(PlayableGraph,GameObject)">CreatePlayable(PlayableGraph, GameObject)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override Playable CreatePlayable(PlayableGraph graph, GameObject owner)</code></pre>
   </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">PlayableGraph</span></td>
+        <td><span class="parametername">graph</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">GameObject</span></td>
+        <td><span class="parametername">owner</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Playable</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
 </article>
           </div>
           
