@@ -5,10 +5,10 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Interface ITimedAnimationJob
+    <title>Class ContainerBehaviour&lt;TAsset, TKey, TId&gt;
    | Kinstrife </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Interface ITimedAnimationJob
+    <meta name="title" content="Class ContainerBehaviour&lt;TAsset, TKey, TId&gt;
    | Kinstrife ">
     <meta name="generator" content="docfx 2.56.7.0">
     
@@ -68,30 +68,60 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="Kinstrife.Animation.ITimedAnimationJob">
+            <article class="content wrap" id="_content" data-uid="Kinstrife.DataContainers.ContainerBehaviour`3">
   
   
-  <h1 id="Kinstrife_Animation_ITimedAnimationJob" data-uid="Kinstrife.Animation.ITimedAnimationJob" class="text-break">Interface ITimedAnimationJob
+  <h1 id="Kinstrife_DataContainers_ContainerBehaviour_3" data-uid="Kinstrife.DataContainers.ContainerBehaviour`3" class="text-break">Class ContainerBehaviour&lt;TAsset, TKey, TId&gt;
   </h1>
   <div class="markdown level0 summary"></div>
   <div class="markdown level0 conceptual"></div>
-  <h6><strong>Namespace</strong>: <a class="xref" href="Kinstrife.Animation.html">Kinstrife.Animation</a></h6>
-  <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
-  <h5 id="Kinstrife_Animation_ITimedAnimationJob_syntax">Syntax</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public interface ITimedAnimationJob : IAnimationJob</code></pre>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><a class="xref" href="Kinstrife.DataContainers.ContainerBehaviour.html">ContainerBehaviour</a></div>
+    <div class="level2"><span class="xref">ContainerBehaviour&lt;TAsset, TKey, TId&gt;</span></div>
+      <div class="level3"><a class="xref" href="Kinstrife.DataContainers.ContainerBehaviour-5.html">ContainerBehaviour&lt;TAsset, TKey, TId, TInstanceData, TSourceObject&gt;</a></div>
   </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Kinstrife.DataContainers.html">Kinstrife.DataContainers</a></h6>
+  <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
+  <h5 id="Kinstrife_DataContainers_ContainerBehaviour_3_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public abstract class ContainerBehaviour&lt;TAsset, TKey, TId&gt; : ContainerBehaviour where TAsset : ScriptableObjectContainer&lt;TKey, TId&gt; where TId : ScriptableObject</code></pre>
+  </div>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">TAsset</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="parametername">TKey</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="parametername">TId</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   <h3 id="properties">Properties
   </h3>
   
   
-  <a id="Kinstrife_Animation_ITimedAnimationJob_jobDuration_" data-uid="Kinstrife.Animation.ITimedAnimationJob.jobDuration*"></a>
-  <h4 id="Kinstrife_Animation_ITimedAnimationJob_jobDuration" data-uid="Kinstrife.Animation.ITimedAnimationJob.jobDuration">jobDuration</h4>
+  <a id="Kinstrife_DataContainers_ContainerBehaviour_3_Asset_" data-uid="Kinstrife.DataContainers.ContainerBehaviour`3.Asset*"></a>
+  <h4 id="Kinstrife_DataContainers_ContainerBehaviour_3_Asset" data-uid="Kinstrife.DataContainers.ContainerBehaviour`3.Asset">Asset</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">PropertySceneHandle jobDuration { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public TAsset Asset { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -103,11 +133,23 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">PropertySceneHandle</span></td>
+        <td><span class="xref">TAsset</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
+  <h3 id="methods">Methods
+  </h3>
+  
+  
+  <a id="Kinstrife_DataContainers_ContainerBehaviour_3_BakeToAsset_" data-uid="Kinstrife.DataContainers.ContainerBehaviour`3.BakeToAsset*"></a>
+  <h4 id="Kinstrife_DataContainers_ContainerBehaviour_3_BakeToAsset" data-uid="Kinstrife.DataContainers.ContainerBehaviour`3.BakeToAsset">BakeToAsset()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected abstract void BakeToAsset()</code></pre>
+  </div>
 </article>
           </div>
           

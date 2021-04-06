@@ -5,10 +5,10 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Interface ITimedAnimationJob
+    <title>Class FilterAnimation.State
    | Kinstrife </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Interface ITimedAnimationJob
+    <meta name="title" content="Class FilterAnimation.State
    | Kinstrife ">
     <meta name="generator" content="docfx 2.56.7.0">
     
@@ -68,46 +68,127 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="Kinstrife.Animation.ITimedAnimationJob">
+            <article class="content wrap" id="_content" data-uid="Kinstrife.Animation.FilterAnimation.State">
   
   
-  <h1 id="Kinstrife_Animation_ITimedAnimationJob" data-uid="Kinstrife.Animation.ITimedAnimationJob" class="text-break">Interface ITimedAnimationJob
+  <h1 id="Kinstrife_Animation_FilterAnimation_State" data-uid="Kinstrife.Animation.FilterAnimation.State" class="text-break">Class FilterAnimation.State
   </h1>
   <div class="markdown level0 summary"></div>
   <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">FilterAnimation.State</span></div>
+  </div>
+  <div classs="implements">
+    <h5>Implements</h5>
+    <div><span class="xref">IDisposable</span></div>
+  </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Kinstrife.Animation.html">Kinstrife.Animation</a></h6>
   <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
-  <h5 id="Kinstrife_Animation_ITimedAnimationJob_syntax">Syntax</h5>
+  <h5 id="Kinstrife_Animation_FilterAnimation_State_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public interface ITimedAnimationJob : IAnimationJob</code></pre>
+    <pre><code class="lang-csharp hljs">public class State : AnimancerJob&lt;PostProcessAnimationJob&gt;, IDisposable</code></pre>
   </div>
-  <h3 id="properties">Properties
+  <h3 id="constructors">Constructors
   </h3>
   
   
-  <a id="Kinstrife_Animation_ITimedAnimationJob_jobDuration_" data-uid="Kinstrife.Animation.ITimedAnimationJob.jobDuration*"></a>
-  <h4 id="Kinstrife_Animation_ITimedAnimationJob_jobDuration" data-uid="Kinstrife.Animation.ITimedAnimationJob.jobDuration">jobDuration</h4>
+  <a id="Kinstrife_Animation_FilterAnimation_State__ctor_" data-uid="Kinstrife.Animation.FilterAnimation.State.#ctor*"></a>
+  <h4 id="Kinstrife_Animation_FilterAnimation_State__ctor_Kinstrife_Animation_FilterAnimation_" data-uid="Kinstrife.Animation.FilterAnimation.State.#ctor(Kinstrife.Animation.FilterAnimation)">State(FilterAnimation)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">PropertySceneHandle jobDuration { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public State(FilterAnimation component)</code></pre>
   </div>
-  <h5 class="propertyValue">Property Value</h5>
+  <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
       <tr>
         <th>Type</th>
+        <th>Name</th>
         <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">PropertySceneHandle</span></td>
+        <td><a class="xref" href="Kinstrife.Animation.FilterAnimation.html">FilterAnimation</a></td>
+        <td><span class="parametername">component</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
+  <h3 id="methods">Methods
+  </h3>
+  
+  
+  <a id="Kinstrife_Animation_FilterAnimation_State_Dispose_" data-uid="Kinstrife.Animation.FilterAnimation.State.Dispose*"></a>
+  <h4 id="Kinstrife_Animation_FilterAnimation_State_Dispose" data-uid="Kinstrife.Animation.FilterAnimation.State.Dispose">Dispose()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Dispose()</code></pre>
+  </div>
+  
+  
+  <a id="Kinstrife_Animation_FilterAnimation_State_SetHalflife_" data-uid="Kinstrife.Animation.FilterAnimation.State.SetHalflife*"></a>
+  <h4 id="Kinstrife_Animation_FilterAnimation_State_SetHalflife_System_Single_" data-uid="Kinstrife.Animation.FilterAnimation.State.SetHalflife(System.Single)">SetHalflife(Single)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetHalflife(float value)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><span class="parametername">value</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Kinstrife_Animation_FilterAnimation_State_SetInertia_" data-uid="Kinstrife.Animation.FilterAnimation.State.SetInertia*"></a>
+  <h4 id="Kinstrife_Animation_FilterAnimation_State_SetInertia_System_Single_" data-uid="Kinstrife.Animation.FilterAnimation.State.SetInertia(System.Single)">SetInertia(Single)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetInertia(float value)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><span class="parametername">value</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <span class="xref">IDisposable</span>
+  </div>
 </article>
           </div>
           

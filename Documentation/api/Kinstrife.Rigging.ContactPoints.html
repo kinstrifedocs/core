@@ -5,10 +5,10 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Interface ITimedAnimationJob
+    <title>Class ContactPoints
    | Kinstrife </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Interface ITimedAnimationJob
+    <meta name="title" content="Class ContactPoints
    | Kinstrife ">
     <meta name="generator" content="docfx 2.56.7.0">
     
@@ -68,32 +68,105 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="Kinstrife.Animation.ITimedAnimationJob">
+            <article class="content wrap" id="_content" data-uid="Kinstrife.Rigging.ContactPoints">
   
   
-  <h1 id="Kinstrife_Animation_ITimedAnimationJob" data-uid="Kinstrife.Animation.ITimedAnimationJob" class="text-break">Interface ITimedAnimationJob
+  <h1 id="Kinstrife_Rigging_ContactPoints" data-uid="Kinstrife.Rigging.ContactPoints" class="text-break">Class ContactPoints
   </h1>
   <div class="markdown level0 summary"></div>
   <div class="markdown level0 conceptual"></div>
-  <h6><strong>Namespace</strong>: <a class="xref" href="Kinstrife.Animation.html">Kinstrife.Animation</a></h6>
-  <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
-  <h5 id="Kinstrife_Animation_ITimedAnimationJob_syntax">Syntax</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public interface ITimedAnimationJob : IAnimationJob</code></pre>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><a class="xref" href="Kinstrife.Rigging.RigEffectors.html">RigEffectors</a></div>
+    <div class="level2"><span class="xref">ContactPoints</span></div>
   </div>
-  <h3 id="properties">Properties
+  <div classs="implements">
+    <h5>Implements</h5>
+    <div><span class="xref">IRigEffectorHolder</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="Kinstrife.Rigging.RigEffectors.html#Kinstrife_Rigging_RigEffectors_onAddRigBuilder">RigEffectors.onAddRigBuilder</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.Rigging.RigEffectors.html#Kinstrife_Rigging_RigEffectors_onRemoveRigBuilder">RigEffectors.onRemoveRigBuilder</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.Rigging.RigEffectors.html#Kinstrife_Rigging_RigEffectors_OnEnable">RigEffectors.OnEnable()</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.Rigging.RigEffectors.html#Kinstrife_Rigging_RigEffectors_OnDisable">RigEffectors.OnDisable()</a>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Kinstrife.Rigging.html">Kinstrife.Rigging</a></h6>
+  <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
+  <h5 id="Kinstrife_Rigging_ContactPoints_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class ContactPoints : RigEffectors, IRigEffectorHolder</code></pre>
+  </div>
+  <h3 id="methods">Methods
   </h3>
   
   
-  <a id="Kinstrife_Animation_ITimedAnimationJob_jobDuration_" data-uid="Kinstrife.Animation.ITimedAnimationJob.jobDuration*"></a>
-  <h4 id="Kinstrife_Animation_ITimedAnimationJob_jobDuration" data-uid="Kinstrife.Animation.ITimedAnimationJob.jobDuration">jobDuration</h4>
+  <a id="Kinstrife_Rigging_ContactPoints_AddContactPoint_" data-uid="Kinstrife.Rigging.ContactPoints.AddContactPoint*"></a>
+  <h4 id="Kinstrife_Rigging_ContactPoints_AddContactPoint_Kinstrife_Rigging_ContactPoint_" data-uid="Kinstrife.Rigging.ContactPoints.AddContactPoint(Kinstrife.Rigging.ContactPoint)">AddContactPoint(ContactPoint)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">PropertySceneHandle jobDuration { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public void AddContactPoint(ContactPoint contactPoint)</code></pre>
   </div>
-  <h5 class="propertyValue">Property Value</h5>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Kinstrife.Rigging.ContactPoint.html">ContactPoint</a></td>
+        <td><span class="parametername">contactPoint</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Kinstrife_Rigging_ContactPoints_RebuildAll_" data-uid="Kinstrife.Rigging.ContactPoints.RebuildAll*"></a>
+  <h4 id="Kinstrife_Rigging_ContactPoints_RebuildAll" data-uid="Kinstrife.Rigging.ContactPoints.RebuildAll">RebuildAll()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void RebuildAll()</code></pre>
+  </div>
+  
+  
+  <a id="Kinstrife_Rigging_ContactPoints_RefreshStyles_" data-uid="Kinstrife.Rigging.ContactPoints.RefreshStyles*"></a>
+  <h4 id="Kinstrife_Rigging_ContactPoints_RefreshStyles" data-uid="Kinstrife.Rigging.ContactPoints.RefreshStyles">RefreshStyles()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void RefreshStyles()</code></pre>
+  </div>
+  <h3 id="events">Events
+  </h3>
+  
+  
+  <h4 id="Kinstrife_Rigging_ContactPoints_RebuildAllContactPoints" data-uid="Kinstrife.Rigging.ContactPoints.RebuildAllContactPoints">RebuildAllContactPoints</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static event Action RebuildAllContactPoints</code></pre>
+  </div>
+  <h5 class="eventType">Event Type</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
       <tr>
@@ -103,11 +176,15 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">PropertySceneHandle</span></td>
+        <td><span class="xref">System.Action</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <span class="xref">IRigEffectorHolder</span>
+  </div>
 </article>
           </div>
           

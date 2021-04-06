@@ -5,10 +5,10 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Class AnimationComponent
+    <title>Class ScriptableObjectContainer&lt;TKey, TValue&gt;
    | Kinstrife </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Class AnimationComponent
+    <meta name="title" content="Class ScriptableObjectContainer&lt;TKey, TValue&gt;
    | Kinstrife ">
     <meta name="generator" content="docfx 2.56.7.0">
     
@@ -68,67 +68,61 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="Kinstrife.Animation.AnimationComponent">
+            <article class="content wrap" id="_content" data-uid="Kinstrife.DataContainers.ScriptableObjectContainer`2">
   
   
-  <h1 id="Kinstrife_Animation_AnimationComponent" data-uid="Kinstrife.Animation.AnimationComponent" class="text-break">Class AnimationComponent
+  <h1 id="Kinstrife_DataContainers_ScriptableObjectContainer_2" data-uid="Kinstrife.DataContainers.ScriptableObjectContainer`2" class="text-break">Class ScriptableObjectContainer&lt;TKey, TValue&gt;
   </h1>
   <div class="markdown level0 summary"></div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><span class="xref">AnimationComponent</span></div>
-      <div class="level2"><a class="xref" href="Kinstrife.Animation.AnimationPlayer-1.html">AnimationPlayer&lt;T&gt;</a></div>
-      <div class="level2"><a class="xref" href="Kinstrife.Animation.FilterAnimation.html">FilterAnimation</a></div>
-      <div class="level2"><a class="xref" href="Kinstrife.Animation.Human.FeetController.html">FeetController</a></div>
-      <div class="level2"><a class="xref" href="Kinstrife.Animation.TargetMatching.html">TargetMatching</a></div>
-      <div class="level2"><a class="xref" href="Kinstrife.Rigging.FBBipedIKComponent.html">FBBipedIKComponent</a></div>
+    <div class="level1"><a class="xref" href="Kinstrife.DataContainers.ScriptableObjectContainer.html">ScriptableObjectContainer</a></div>
+    <div class="level2"><span class="xref">ScriptableObjectContainer&lt;TKey, TValue&gt;</span></div>
+      <div class="level3"><a class="xref" href="Kinstrife.DataContainers.TransformDefinitionAsset-2.html">TransformDefinitionAsset&lt;TKey, TId&gt;</a></div>
   </div>
-  <div classs="implements">
-    <h5>Implements</h5>
-    <div><a class="xref" href="Kinstrife.Animation.IAnimationPlayer.html">IAnimationPlayer</a></div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="Kinstrife.DataContainers.ScriptableObjectContainer.html#Kinstrife_DataContainers_ScriptableObjectContainer_showSubAssets">ScriptableObjectContainer.showSubAssets</a>
+    </div>
   </div>
-  <h6><strong>Namespace</strong>: <a class="xref" href="Kinstrife.Animation.html">Kinstrife.Animation</a></h6>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Kinstrife.DataContainers.html">Kinstrife.DataContainers</a></h6>
   <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
-  <h5 id="Kinstrife_Animation_AnimationComponent_syntax">Syntax</h5>
+  <h5 id="Kinstrife_DataContainers_ScriptableObjectContainer_2_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public abstract class AnimationComponent : MonoBehaviour, IAnimationPlayer</code></pre>
+    <pre><code class="lang-csharp hljs">public abstract class ScriptableObjectContainer&lt;TKey, TValue&gt; : ScriptableObjectContainer where TValue : ScriptableObject</code></pre>
   </div>
-  <h3 id="fields">Fields
-  </h3>
-  
-  
-  <h4 id="Kinstrife_Animation_AnimationComponent_animancer" data-uid="Kinstrife.Animation.AnimationComponent.animancer">animancer</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected AnimancerComponent animancer</code></pre>
-  </div>
-  <h5 class="fieldValue">Field Value</h5>
+  <h5 class="typeParameters">Type Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
       <tr>
-        <th>Type</th>
+        <th>Name</th>
         <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">AnimancerComponent</span></td>
+        <td><span class="parametername">TKey</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="parametername">TValue</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
+  <h3 id="fields">Fields
+  </h3>
   
   
-  <h4 id="Kinstrife_Animation_AnimationComponent_director" data-uid="Kinstrife.Animation.AnimationComponent.director">director</h4>
+  <h4 id="Kinstrife_DataContainers_ScriptableObjectContainer_2_storage" data-uid="Kinstrife.DataContainers.ScriptableObjectContainer`2.storage">storage</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected AnimationDirector director</code></pre>
+    <pre><code class="lang-csharp hljs">protected ScriptableObjectContainer&lt;TKey, TValue&gt;.Mapping storage</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -140,7 +134,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="Kinstrife.Animation.AnimationDirector.html">AnimationDirector</a></td>
+        <td><a class="xref" href="Kinstrife.DataContainers.ScriptableObjectContainer-2.Mapping.html">ScriptableObjectContainer.Mapping</a>&lt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -149,13 +143,13 @@
   </h3>
   
   
-  <a id="Kinstrife_Animation_AnimationComponent_animator_" data-uid="Kinstrife.Animation.AnimationComponent.animator*"></a>
-  <h4 id="Kinstrife_Animation_AnimationComponent_animator" data-uid="Kinstrife.Animation.AnimationComponent.animator">animator</h4>
+  <a id="Kinstrife_DataContainers_ScriptableObjectContainer_2_Storage_" data-uid="Kinstrife.DataContainers.ScriptableObjectContainer`2.Storage*"></a>
+  <h4 id="Kinstrife_DataContainers_ScriptableObjectContainer_2_Storage" data-uid="Kinstrife.DataContainers.ScriptableObjectContainer`2.Storage">Storage</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Animator animator { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public IReadOnlyDictionary&lt;TKey, TValue&gt; Storage { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -167,7 +161,32 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Animator</span></td>
+        <td><span class="xref">System.Collections.Generic.IReadOnlyDictionary</span>&lt;TKey, TValue&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Kinstrife_DataContainers_ScriptableObjectContainer_2_Values_" data-uid="Kinstrife.DataContainers.ScriptableObjectContainer`2.Values*"></a>
+  <h4 id="Kinstrife_DataContainers_ScriptableObjectContainer_2_Values" data-uid="Kinstrife.DataContainers.ScriptableObjectContainer`2.Values">Values</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ICollection&lt;TValue&gt; Values { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.ICollection</span>&lt;TValue&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -176,58 +195,13 @@
   </h3>
   
   
-  <a id="Kinstrife_Animation_AnimationComponent_CastLayer_" data-uid="Kinstrife.Animation.AnimationComponent.CastLayer*"></a>
-  <h4 id="Kinstrife_Animation_AnimationComponent_CastLayer__2" data-uid="Kinstrife.Animation.AnimationComponent.CastLayer``2">CastLayer&lt;TAnimLayer, TPlayableData&gt;()</h4>
+  <a id="Kinstrife_DataContainers_ScriptableObjectContainer_2_GetNameForAsset_" data-uid="Kinstrife.DataContainers.ScriptableObjectContainer`2.GetNameForAsset*"></a>
+  <h4 id="Kinstrife_DataContainers_ScriptableObjectContainer_2_GetNameForAsset__0__1_" data-uid="Kinstrife.DataContainers.ScriptableObjectContainer`2.GetNameForAsset(`0,`1)">GetNameForAsset(TKey, TValue)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public TAnimLayer CastLayer&lt;TAnimLayer, TPlayableData&gt;()
-    where TAnimLayer : IAnimationPlayer&lt;TPlayableData&gt;</code></pre>
-  </div>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">TAnimLayer</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="typeParameters">Type Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="parametername">TAnimLayer</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><span class="parametername">TPlayableData</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="Kinstrife_Animation_AnimationComponent_GetClosestComponent_" data-uid="Kinstrife.Animation.AnimationComponent.GetClosestComponent*"></a>
-  <h4 id="Kinstrife_Animation_AnimationComponent_GetClosestComponent__1_Transform_Transform_" data-uid="Kinstrife.Animation.AnimationComponent.GetClosestComponent``1(Transform,Transform)">GetClosestComponent&lt;T&gt;(Transform, Transform)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static T GetClosestComponent&lt;T&gt;(Transform transform, Transform root = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public abstract string GetNameForAsset(TKey key, TValue subAsset)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -240,13 +214,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Transform</span></td>
-        <td><span class="parametername">transform</span></td>
+        <td><span class="xref">TKey</span></td>
+        <td><span class="parametername">key</span></td>
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">Transform</span></td>
-        <td><span class="parametername">root</span></td>
+        <td><span class="xref">TValue</span></td>
+        <td><span class="parametername">subAsset</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -261,35 +235,20 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">T</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="typeParameters">Type Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="parametername">T</span></td>
+        <td><span class="xref">System.String</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   
   
-  <a id="Kinstrife_Animation_AnimationComponent_InitializeInGraph_" data-uid="Kinstrife.Animation.AnimationComponent.InitializeInGraph*"></a>
-  <h4 id="Kinstrife_Animation_AnimationComponent_InitializeInGraph_PlayableGraph_AnimancerComponent_" data-uid="Kinstrife.Animation.AnimationComponent.InitializeInGraph(PlayableGraph,AnimancerComponent)">InitializeInGraph(PlayableGraph, AnimancerComponent)</h4>
+  <a id="Kinstrife_DataContainers_ScriptableObjectContainer_2_RemoveElement_" data-uid="Kinstrife.DataContainers.ScriptableObjectContainer`2.RemoveElement*"></a>
+  <h4 id="Kinstrife_DataContainers_ScriptableObjectContainer_2_RemoveElement__1_" data-uid="Kinstrife.DataContainers.ScriptableObjectContainer`2.RemoveElement(`1)">RemoveElement(TValue)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public abstract void InitializeInGraph(PlayableGraph graph, AnimancerComponent animancer)</code></pre>
+    <pre><code class="lang-csharp hljs">public void RemoveElement(TValue el)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -302,26 +261,21 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">PlayableGraph</span></td>
-        <td><span class="parametername">graph</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><span class="xref">AnimancerComponent</span></td>
-        <td><span class="parametername">animancer</span></td>
+        <td><span class="xref">TValue</span></td>
+        <td><span class="parametername">el</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   
   
-  <a id="Kinstrife_Animation_AnimationComponent_InjectDependencies_" data-uid="Kinstrife.Animation.AnimationComponent.InjectDependencies*"></a>
-  <h4 id="Kinstrife_Animation_AnimationComponent_InjectDependencies_Kinstrife_Animation_AnimationDirector_AnimancerComponent_" data-uid="Kinstrife.Animation.AnimationComponent.InjectDependencies(Kinstrife.Animation.AnimationDirector,AnimancerComponent)">InjectDependencies(AnimationDirector, AnimancerComponent)</h4>
+  <a id="Kinstrife_DataContainers_ScriptableObjectContainer_2_TryAddSubAsset_" data-uid="Kinstrife.DataContainers.ScriptableObjectContainer`2.TryAddSubAsset*"></a>
+  <h4 id="Kinstrife_DataContainers_ScriptableObjectContainer_2_TryAddSubAsset__0__1__System_Boolean_" data-uid="Kinstrife.DataContainers.ScriptableObjectContainer`2.TryAddSubAsset(`0,`1@,System.Boolean)">TryAddSubAsset(TKey, out TValue, Boolean)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void InjectDependencies(AnimationDirector director, AnimancerComponent animancer)</code></pre>
+    <pre><code class="lang-csharp hljs">public bool TryAddSubAsset(TKey key, out TValue result, bool reImportAndRefresh = true)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -334,36 +288,46 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="Kinstrife.Animation.AnimationDirector.html">AnimationDirector</a></td>
-        <td><span class="parametername">director</span></td>
+        <td><span class="xref">TKey</span></td>
+        <td><span class="parametername">key</span></td>
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">AnimancerComponent</span></td>
-        <td><span class="parametername">animancer</span></td>
+        <td><span class="xref">TValue</span></td>
+        <td><span class="parametername">result</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">reImportAndRefresh</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   
   
-  <a id="Kinstrife_Animation_AnimationComponent_OnEnable_" data-uid="Kinstrife.Animation.AnimationComponent.OnEnable*"></a>
-  <h4 id="Kinstrife_Animation_AnimationComponent_OnEnable" data-uid="Kinstrife.Animation.AnimationComponent.OnEnable">OnEnable()</h4>
+  <a id="Kinstrife_DataContainers_ScriptableObjectContainer_2_TryGetSubAsset_" data-uid="Kinstrife.DataContainers.ScriptableObjectContainer`2.TryGetSubAsset*"></a>
+  <h4 id="Kinstrife_DataContainers_ScriptableObjectContainer_2_TryGetSubAsset__0__1__System_Boolean_" data-uid="Kinstrife.DataContainers.ScriptableObjectContainer`2.TryGetSubAsset(`0,`1@,System.Boolean)">TryGetSubAsset(TKey, out TValue, Boolean)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected virtual void OnEnable()</code></pre>
-  </div>
-  
-  
-  <a id="Kinstrife_Animation_AnimationComponent_RegisterAsAnimationModuleOfTypes_" data-uid="Kinstrife.Animation.AnimationComponent.RegisterAsAnimationModuleOfTypes*"></a>
-  <h4 id="Kinstrife_Animation_AnimationComponent_RegisterAsAnimationModuleOfTypes_Kinstrife_Animation_AnimationDirector_" data-uid="Kinstrife.Animation.AnimationComponent.RegisterAsAnimationModuleOfTypes(Kinstrife.Animation.AnimationDirector)">RegisterAsAnimationModuleOfTypes(AnimationDirector)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public abstract void RegisterAsAnimationModuleOfTypes(AnimationDirector animationDirector)</code></pre>
+    <pre><code class="lang-csharp hljs">public bool TryGetSubAsset(TKey key, out TValue boneAsset, bool log = true)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -376,16 +340,37 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="Kinstrife.Animation.AnimationDirector.html">AnimationDirector</a></td>
-        <td><span class="parametername">animationDirector</span></td>
+        <td><span class="xref">TKey</span></td>
+        <td><span class="parametername">key</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">TValue</span></td>
+        <td><span class="parametername">boneAsset</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">log</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
-  <h3 id="implements">Implements</h3>
-  <div>
-      <a class="xref" href="Kinstrife.Animation.IAnimationPlayer.html">IAnimationPlayer</a>
-  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
 </article>
           </div>
           

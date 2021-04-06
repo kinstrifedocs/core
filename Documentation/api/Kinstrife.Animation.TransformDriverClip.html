@@ -5,10 +5,10 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Class GizmoCharacterExample
+    <title>Class TransformDriverClip
    | Kinstrife </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Class GizmoCharacterExample
+    <meta name="title" content="Class TransformDriverClip
    | Kinstrife ">
     <meta name="generator" content="docfx 2.56.7.0">
     
@@ -68,45 +68,38 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="Drawing.Examples.GizmoCharacterExample">
+            <article class="content wrap" id="_content" data-uid="Kinstrife.Animation.TransformDriverClip">
   
   
-  <h1 id="Drawing_Examples_GizmoCharacterExample" data-uid="Drawing.Examples.GizmoCharacterExample" class="text-break">Class GizmoCharacterExample
+  <h1 id="Kinstrife_Animation_TransformDriverClip" data-uid="Kinstrife.Animation.TransformDriverClip" class="text-break">Class TransformDriverClip
   </h1>
   <div class="markdown level0 summary"></div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><a class="xref" href="Drawing.MonoBehaviourGizmos.html">MonoBehaviourGizmos</a></div>
-    <div class="level2"><span class="xref">GizmoCharacterExample</span></div>
+    <div class="level1"><span class="xref">TransformDriverClip</span></div>
   </div>
   <div classs="implements">
     <h5>Implements</h5>
-    <div><a class="xref" href="Drawing.IDrawGizmos.html">IDrawGizmos</a></div>
+    <div><span class="xref">ITimelineClipAsset</span></div>
   </div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
-    <div>
-      <a class="xref" href="Drawing.MonoBehaviourGizmos.html#Drawing_MonoBehaviourGizmos_DrawGizmosSelected">MonoBehaviourGizmos.DrawGizmosSelected()</a>
-    </div>
-  </div>
-  <h6><strong>Namespace</strong>: <a class="xref" href="Drawing.Examples.html">Drawing.Examples</a></h6>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Kinstrife.Animation.html">Kinstrife.Animation</a></h6>
   <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
-  <h5 id="Drawing_Examples_GizmoCharacterExample_syntax">Syntax</h5>
+  <h5 id="Kinstrife_Animation_TransformDriverClip_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class GizmoCharacterExample : MonoBehaviourGizmos, IDrawGizmos</code></pre>
+    <pre><code class="lang-csharp hljs">public class TransformDriverClip : PlayableAsset, ITimelineClipAsset</code></pre>
   </div>
   <h3 id="fields">Fields
   </h3>
   
   
-  <h4 id="Drawing_Examples_GizmoCharacterExample_futurePathPlotSteps" data-uid="Drawing.Examples.GizmoCharacterExample.futurePathPlotSteps">futurePathPlotSteps</h4>
+  <h4 id="Kinstrife_Animation_TransformDriverClip_endLocation" data-uid="Kinstrife.Animation.TransformDriverClip.endLocation">endLocation</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public int futurePathPlotSteps</code></pre>
+    <pre><code class="lang-csharp hljs">public ExposedReference&lt;Transform&gt; endLocation</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -118,19 +111,19 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Int32</span></td>
+        <td><span class="xref">ExposedReference</span>&lt;<span class="xref">Transform</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   
   
-  <h4 id="Drawing_Examples_GizmoCharacterExample_gizmoColor" data-uid="Drawing.Examples.GizmoCharacterExample.gizmoColor">gizmoColor</h4>
+  <h4 id="Kinstrife_Animation_TransformDriverClip_startLocation" data-uid="Kinstrife.Animation.TransformDriverClip.startLocation">startLocation</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Color gizmoColor</code></pre>
+    <pre><code class="lang-csharp hljs">public ExposedReference&lt;Transform&gt; startLocation</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -142,19 +135,19 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Color</span></td>
+        <td><span class="xref">ExposedReference</span>&lt;<span class="xref">Transform</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   
   
-  <h4 id="Drawing_Examples_GizmoCharacterExample_gizmoColor2" data-uid="Drawing.Examples.GizmoCharacterExample.gizmoColor2">gizmoColor2</h4>
+  <h4 id="Kinstrife_Animation_TransformDriverClip_template" data-uid="Kinstrife.Animation.TransformDriverClip.template">template</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Color gizmoColor2</code></pre>
+    <pre><code class="lang-csharp hljs">public TransformDriverBehaviour template</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -166,21 +159,24 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Color</span></td>
+        <td><a class="xref" href="Kinstrife.Animation.TransformDriverBehaviour.html">TransformDriverBehaviour</a></td>
         <td></td>
       </tr>
     </tbody>
   </table>
+  <h3 id="properties">Properties
+  </h3>
   
   
-  <h4 id="Drawing_Examples_GizmoCharacterExample_movementNoiseScale" data-uid="Drawing.Examples.GizmoCharacterExample.movementNoiseScale">movementNoiseScale</h4>
+  <a id="Kinstrife_Animation_TransformDriverClip_clipCaps_" data-uid="Kinstrife.Animation.TransformDriverClip.clipCaps*"></a>
+  <h4 id="Kinstrife_Animation_TransformDriverClip_clipCaps" data-uid="Kinstrife.Animation.TransformDriverClip.clipCaps">clipCaps</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public float movementNoiseScale</code></pre>
+    <pre><code class="lang-csharp hljs">public ClipCaps clipCaps { get; }</code></pre>
   </div>
-  <h5 class="fieldValue">Field Value</h5>
+  <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
       <tr>
@@ -190,103 +186,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Single</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <h4 id="Drawing_Examples_GizmoCharacterExample_plotEveryNSteps" data-uid="Drawing.Examples.GizmoCharacterExample.plotEveryNSteps">plotEveryNSteps</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public int plotEveryNSteps</code></pre>
-  </div>
-  <h5 class="fieldValue">Field Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Int32</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <h4 id="Drawing_Examples_GizmoCharacterExample_plotStartStep" data-uid="Drawing.Examples.GizmoCharacterExample.plotStartStep">plotStartStep</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public int plotStartStep</code></pre>
-  </div>
-  <h5 class="fieldValue">Field Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Int32</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <h4 id="Drawing_Examples_GizmoCharacterExample_pointTo" data-uid="Drawing.Examples.GizmoCharacterExample.pointTo">pointTo</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Transform pointTo</code></pre>
-  </div>
-  <h5 class="fieldValue">Field Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">Transform</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <h4 id="Drawing_Examples_GizmoCharacterExample_startPointAttractionStrength" data-uid="Drawing.Examples.GizmoCharacterExample.startPointAttractionStrength">startPointAttractionStrength</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public float startPointAttractionStrength</code></pre>
-  </div>
-  <h5 class="fieldValue">Field Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Single</span></td>
+        <td><span class="xref">ClipCaps</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -295,19 +195,54 @@
   </h3>
   
   
-  <a id="Drawing_Examples_GizmoCharacterExample_DrawGizmos_" data-uid="Drawing.Examples.GizmoCharacterExample.DrawGizmos*"></a>
-  <h4 id="Drawing_Examples_GizmoCharacterExample_DrawGizmos" data-uid="Drawing.Examples.GizmoCharacterExample.DrawGizmos">DrawGizmos()</h4>
+  <a id="Kinstrife_Animation_TransformDriverClip_CreatePlayable_" data-uid="Kinstrife.Animation.TransformDriverClip.CreatePlayable*"></a>
+  <h4 id="Kinstrife_Animation_TransformDriverClip_CreatePlayable_PlayableGraph_GameObject_" data-uid="Kinstrife.Animation.TransformDriverClip.CreatePlayable(PlayableGraph,GameObject)">CreatePlayable(PlayableGraph, GameObject)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public override void DrawGizmos()</code></pre>
+    <pre><code class="lang-csharp hljs">public override Playable CreatePlayable(PlayableGraph graph, GameObject owner)</code></pre>
   </div>
-  <h5 class="overrides">Overrides</h5>
-  <div><a class="xref" href="Drawing.MonoBehaviourGizmos.html#Drawing_MonoBehaviourGizmos_DrawGizmos">MonoBehaviourGizmos.DrawGizmos()</a></div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">PlayableGraph</span></td>
+        <td><span class="parametername">graph</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">GameObject</span></td>
+        <td><span class="parametername">owner</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Playable</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   <h3 id="implements">Implements</h3>
   <div>
-      <a class="xref" href="Drawing.IDrawGizmos.html">IDrawGizmos</a>
+      <span class="xref">ITimelineClipAsset</span>
   </div>
 </article>
           </div>
