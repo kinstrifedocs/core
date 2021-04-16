@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class FeetController
    | Kinstrife ">
-    <meta name="generator" content="docfx 2.56.7.0">
+    <meta name="generator" content="docfx 2.57.2.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
@@ -83,6 +83,7 @@
   </div>
   <div classs="implements">
     <h5>Implements</h5>
+    <div><a class="xref" href="Kinstrife.Animation.IAnimationModule.html">IAnimationModule</a></div>
     <div><a class="xref" href="Kinstrife.Animation.IAnimationPlayer-1.html">IAnimationPlayer</a>&lt;<a class="xref" href="Kinstrife.Animation.Human.FeetPlayableSettings.html">FeetPlayableSettings</a>&gt;</div>
     <div><a class="xref" href="Kinstrife.Animation.IAnimationPlayer.html">IAnimationPlayer</a></div>
   </div>
@@ -101,7 +102,7 @@
       <a class="xref" href="Kinstrife.Animation.AnimationComponent.html#Kinstrife_Animation_AnimationComponent_CastLayer__2">AnimationComponent.CastLayer&lt;TAnimLayer, TPlayableData&gt;()</a>
     </div>
     <div>
-      <a class="xref" href="Kinstrife.Animation.AnimationComponent.html#Kinstrife_Animation_AnimationComponent_InjectDependencies_Kinstrife_Animation_AnimationDirector_AnimancerComponent_">AnimationComponent.InjectDependencies(AnimationDirector, AnimancerComponent)</a>
+      <a class="xref" href="Kinstrife.Animation.AnimationComponent.html#Kinstrife_Animation_AnimationComponent_InjectDependencies_Kinstrife_Animation_AnimationDirector_">AnimationComponent.InjectDependencies(AnimationDirector)</a>
     </div>
     <div>
       <a class="xref" href="Kinstrife.Animation.AnimationComponent.html#Kinstrife_Animation_AnimationComponent_OnEnable">AnimationComponent.OnEnable()</a>
@@ -114,10 +115,35 @@
   <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
   <h5 id="Kinstrife_Animation_Human_FeetController_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class FeetController : AnimationComponent, IAnimationPlayer&lt;FeetPlayableSettings&gt;, IAnimationPlayer</code></pre>
+    <pre><code class="lang-csharp hljs">public class FeetController : AnimationComponent, IAnimationModule, IAnimationPlayer&lt;FeetPlayableSettings&gt;, IAnimationPlayer</code></pre>
   </div>
   <h3 id="properties">Properties
   </h3>
+  
+  
+  <a id="Kinstrife_Animation_Human_FeetController_AnimationModuleDataTypes_" data-uid="Kinstrife.Animation.Human.FeetController.AnimationModuleDataTypes*"></a>
+  <h4 id="Kinstrife_Animation_Human_FeetController_AnimationModuleDataTypes" data-uid="Kinstrife.Animation.Human.FeetController.AnimationModuleDataTypes">AnimationModuleDataTypes</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ICollection&lt;Type&gt; AnimationModuleDataTypes { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.ICollection</span>&lt;<span class="xref">Type</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   
   
   <a id="Kinstrife_Animation_Human_FeetController_applyFootIK_" data-uid="Kinstrife.Animation.Human.FeetController.applyFootIK*"></a>
@@ -198,12 +224,12 @@
   
   
   <a id="Kinstrife_Animation_Human_FeetController_InitializeInGraph_" data-uid="Kinstrife.Animation.Human.FeetController.InitializeInGraph*"></a>
-  <h4 id="Kinstrife_Animation_Human_FeetController_InitializeInGraph_PlayableGraph_AnimancerComponent_" data-uid="Kinstrife.Animation.Human.FeetController.InitializeInGraph(PlayableGraph,AnimancerComponent)">InitializeInGraph(PlayableGraph, AnimancerComponent)</h4>
+  <h4 id="Kinstrife_Animation_Human_FeetController_InitializeInGraph_PlayableGraph_" data-uid="Kinstrife.Animation.Human.FeetController.InitializeInGraph(PlayableGraph)">InitializeInGraph(PlayableGraph)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public override void InitializeInGraph(PlayableGraph graph, AnimancerComponent animancer)</code></pre>
+    <pre><code class="lang-csharp hljs">public override void InitializeInGraph(PlayableGraph graph)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -220,15 +246,10 @@
         <td><span class="parametername">graph</span></td>
         <td></td>
       </tr>
-      <tr>
-        <td><span class="xref">AnimancerComponent</span></td>
-        <td><span class="parametername">animancer</span></td>
-        <td></td>
-      </tr>
     </tbody>
   </table>
   <h5 class="overrides">Overrides</h5>
-  <div><a class="xref" href="Kinstrife.Animation.AnimationComponent.html#Kinstrife_Animation_AnimationComponent_InitializeInGraph_PlayableGraph_AnimancerComponent_">AnimationComponent.InitializeInGraph(PlayableGraph, AnimancerComponent)</a></div>
+  <div><a class="xref" href="Kinstrife.Animation.AnimationComponent.html#Kinstrife_Animation_AnimationComponent_InitializeInGraph_PlayableGraph_">AnimationComponent.InitializeInGraph(PlayableGraph)</a></div>
   
   
   <a id="Kinstrife_Animation_Human_FeetController_IsPlaying_" data-uid="Kinstrife.Animation.Human.FeetController.IsPlaying*"></a>
@@ -315,35 +336,6 @@
   </table>
   
   
-  <a id="Kinstrife_Animation_Human_FeetController_RegisterAsAnimationModuleOfTypes_" data-uid="Kinstrife.Animation.Human.FeetController.RegisterAsAnimationModuleOfTypes*"></a>
-  <h4 id="Kinstrife_Animation_Human_FeetController_RegisterAsAnimationModuleOfTypes_Kinstrife_Animation_AnimationDirector_" data-uid="Kinstrife.Animation.Human.FeetController.RegisterAsAnimationModuleOfTypes(Kinstrife.Animation.AnimationDirector)">RegisterAsAnimationModuleOfTypes(AnimationDirector)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public override void RegisterAsAnimationModuleOfTypes(AnimationDirector animationDirector)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Kinstrife.Animation.AnimationDirector.html">AnimationDirector</a></td>
-        <td><span class="parametername">animationDirector</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="overrides">Overrides</h5>
-  <div><a class="xref" href="Kinstrife.Animation.AnimationComponent.html#Kinstrife_Animation_AnimationComponent_RegisterAsAnimationModuleOfTypes_Kinstrife_Animation_AnimationDirector_">AnimationComponent.RegisterAsAnimationModuleOfTypes(AnimationDirector)</a></div>
-  
-  
   <a id="Kinstrife_Animation_Human_FeetController_SetApplyFootIK_" data-uid="Kinstrife.Animation.Human.FeetController.SetApplyFootIK*"></a>
   <h4 id="Kinstrife_Animation_Human_FeetController_SetApplyFootIK_System_Boolean_" data-uid="Kinstrife.Animation.Human.FeetController.SetApplyFootIK(System.Boolean)">SetApplyFootIK(Boolean)</h4>
   <div class="markdown level1 summary"></div>
@@ -412,6 +404,9 @@
     </tbody>
   </table>
   <h3 id="implements">Implements</h3>
+  <div>
+      <a class="xref" href="Kinstrife.Animation.IAnimationModule.html">IAnimationModule</a>
+  </div>
   <div>
       <a class="xref" href="Kinstrife.Animation.IAnimationPlayer-1.html">IAnimationPlayer&lt;TPlayableData&gt;</a>
   </div>

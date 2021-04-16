@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Namespace Kinstrife.Entities.Procedures
    | Kinstrife ">
-    <meta name="generator" content="docfx 2.56.7.0">
+    <meta name="generator" content="docfx 2.57.2.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
@@ -113,6 +113,8 @@
       <section></section>
       <h4><a class="xref" href="Kinstrife.Entities.Procedures.PlayableAdapterComponent.Instruction.html">PlayableAdapterComponent.Instruction</a></h4>
       <section></section>
+      <h4><a class="xref" href="Kinstrife.Entities.Procedures.ProcedureBehaviour.html">ProcedureBehaviour</a></h4>
+      <section></section>
       <h4><a class="xref" href="Kinstrife.Entities.Procedures.ProcedureEventsSystem.html">ProcedureEventsSystem</a></h4>
       <section></section>
       <h4><a class="xref" href="Kinstrife.Entities.Procedures.ProcedureInputSystemGroup.html">ProcedureInputSystemGroup</a></h4>
@@ -139,7 +141,7 @@ Contains Operations (Start/Stop) for different phases (Request-&gt;Try/Force), I
 </section>
       <h4><a class="xref" href="Kinstrife.Entities.Procedures.StatusEventsBroadcaster.html">StatusEventsBroadcaster</a></h4>
       <section></section>
-      <h4><a class="xref" href="Kinstrife.Entities.Procedures.StatusEventsBroadcaster.StatusEventsContainer.html">StatusEventsBroadcaster.StatusEventsContainer</a></h4>
+      <h4><a class="xref" href="Kinstrife.Entities.Procedures.StatusEventsBroadcaster.SubStateStatusEventsContainer.html">StatusEventsBroadcaster.SubStateStatusEventsContainer</a></h4>
       <section><p>Container for a state that has any managed listeners. Can be procedure or sub states</p>
 </section>
       <h4><a class="xref" href="Kinstrife.Entities.Procedures.StatusEventsInstruction.html">StatusEventsInstruction</a></h4>
@@ -159,7 +161,7 @@ Contains Operations (Start/Stop) for different phases (Request-&gt;Try/Force), I
       <section><p>Generic Change Filter</p>
 </section>
       <h4><a class="xref" href="Kinstrife.Entities.Procedures.ConstraintDependencyElement.html">ConstraintDependencyElement</a></h4>
-      <section><p>References constraints on other entities</p>
+      <section><p>References constraints offloaded to other entities (to avoid fragmenting archetypes)</p>
 </section>
       <h4><a class="xref" href="Kinstrife.Entities.Procedures.ConstraintOwner.html">ConstraintOwner</a></h4>
       <section></section>
@@ -188,6 +190,8 @@ Contains Operations (Start/Stop) for different phases (Request-&gt;Try/Force), I
 </section>
       <h4><a class="xref" href="Kinstrife.Entities.Procedures.Procedure.html">Procedure</a></h4>
       <section></section>
+      <h4><a class="xref" href="Kinstrife.Entities.Procedures.ProcedureBehaviour.MyTestBuffer.html">ProcedureBehaviour.MyTestBuffer</a></h4>
+      <section></section>
       <h4><a class="xref" href="Kinstrife.Entities.Procedures.ProcedureInputStream.html">ProcedureInputStream</a></h4>
       <section><p>Component that holds action input parameters
 Analogous to Animator parameters</p>
@@ -212,13 +216,9 @@ Analogous to Animator parameters</p>
 </section>
       <h4><a class="xref" href="Kinstrife.Entities.Procedures.IConvertibleToInstructions-1.html">IConvertibleToInstructions&lt;TInstructionType&gt;</a></h4>
       <section></section>
-      <h4><a class="xref" href="Kinstrife.Entities.Procedures.IConvertibleToSettingsBlob-1.html">IConvertibleToSettingsBlob&lt;TSettingsBlobType&gt;</a></h4>
-      <section></section>
       <h4><a class="xref" href="Kinstrife.Entities.Procedures.IEventsDataSource.html">IEventsDataSource</a></h4>
       <section><p>Is a data source from which event listeners are created</p>
 </section>
-      <h4><a class="xref" href="Kinstrife.Entities.Procedures.IHasSettingsBlobAssetReference-1.html">IHasSettingsBlobAssetReference&lt;TSettingsBlobType&gt;</a></h4>
-      <section></section>
       <h4><a class="xref" href="Kinstrife.Entities.Procedures.IHasStatusFlags.html">IHasStatusFlags</a></h4>
       <section></section>
       <h4><a class="xref" href="Kinstrife.Entities.Procedures.IInstruction.html">IInstruction</a></h4>
@@ -228,11 +228,9 @@ Analogous to Animator parameters</p>
 </section>
       <h4><a class="xref" href="Kinstrife.Entities.Procedures.IRegisterListener.html">IRegisterListener</a></h4>
       <section></section>
-      <h4><a class="xref" href="Kinstrife.Entities.Procedures.ISettingsBlob.html">ISettingsBlob</a></h4>
-      <section></section>
-      <h4><a class="xref" href="Kinstrife.Entities.Procedures.ISettingsBlob-1.html">ISettingsBlob&lt;TInstructionType&gt;</a></h4>
-      <section></section>
       <h4><a class="xref" href="Kinstrife.Entities.Procedures.IStatusFlagEventsListener.html">IStatusFlagEventsListener</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Kinstrife.Entities.Procedures.ISteppable.html">ISteppable</a></h4>
       <section></section>
     <h3 id="enums">Enums
   </h3>
@@ -245,6 +243,11 @@ Analogous to Animator parameters</p>
       <section></section>
       <h4><a class="xref" href="Kinstrife.Entities.Procedures.Operation.html">Operation</a></h4>
       <section></section>
+      <h4><a class="xref" href="Kinstrife.Entities.Procedures.ProcedureBehaviour.SyncMode.html">ProcedureBehaviour.SyncMode</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Kinstrife.Entities.Procedures.RequestPriority.html">RequestPriority</a></h4>
+      <section><p>Used to prioritize requests for when multiple concurrent consumers attempt to use/occupy a resource.</p>
+</section>
       <h4><a class="xref" href="Kinstrife.Entities.Procedures.StatusFlag.html">StatusFlag</a></h4>
       <section></section>
       <h4><a class="xref" href="Kinstrife.Entities.Procedures.SubStateId.html">SubStateId</a></h4>
@@ -256,7 +259,7 @@ Analogous to Animator parameters</p>
       <section></section>
     <h3 id="delegates">Delegates
   </h3>
-      <h4><a class="xref" href="Kinstrife.Entities.Procedures.StatusEventsBroadcaster.StatusEventsContainer.StatusEvent.html">StatusEventsBroadcaster.StatusEventsContainer.StatusEvent</a></h4>
+      <h4><a class="xref" href="Kinstrife.Entities.Procedures.StatusEventsBroadcaster.SubStateStatusEventsContainer.StatusEvent.html">StatusEventsBroadcaster.SubStateStatusEventsContainer.StatusEvent</a></h4>
       <section></section>
 </article>
           </div>

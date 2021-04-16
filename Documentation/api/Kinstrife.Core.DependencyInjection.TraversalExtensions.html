@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class TraversalExtensions
    | Kinstrife ">
-    <meta name="generator" content="docfx 2.56.7.0">
+    <meta name="generator" content="docfx 2.57.2.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
@@ -120,8 +120,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static void GetComponentsRecursive&lt;TFind, TStopAt&gt;(this Transform root, Transform transform, List&lt;TFind&gt; results, bool includeSelf, bool stopAtContext = true, bool includeDisabled = false)
-    where TFind : UnityEngine.Object</code></pre>
+    <pre><code class="lang-csharp hljs">public static void GetComponentsRecursive&lt;TFind, TStopAt&gt;(this Transform root, Transform transform, List&lt;TFind&gt; results, bool includeSelf, bool stopAtContext = true, bool includeDisabled = false)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -141,6 +140,72 @@
       <tr>
         <td><span class="xref">Transform</span></td>
         <td><span class="parametername">transform</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.List</span>&lt;TFind&gt;</td>
+        <td><span class="parametername">results</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">includeSelf</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">stopAtContext</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">includeDisabled</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">TFind</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="parametername">TStopAt</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Kinstrife_Core_DependencyInjection_TraversalExtensions_GetComponentsStopAt_" data-uid="Kinstrife.Core.DependencyInjection.TraversalExtensions.GetComponentsStopAt*"></a>
+  <h4 id="Kinstrife_Core_DependencyInjection_TraversalExtensions_GetComponentsStopAt__2_Transform_System_Collections_Generic_List___0___System_Boolean_System_Boolean_System_Boolean_" data-uid="Kinstrife.Core.DependencyInjection.TraversalExtensions.GetComponentsStopAt``2(Transform,System.Collections.Generic.List{``0}@,System.Boolean,System.Boolean,System.Boolean)">GetComponentsStopAt&lt;TFind, TStopAt&gt;(Transform, out List&lt;TFind&gt;, Boolean, Boolean, Boolean)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void GetComponentsStopAt&lt;TFind, TStopAt&gt;(this Transform root, out List&lt;TFind&gt; results, bool includeSelf, bool stopAtContext = true, bool includeDisabled = false)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Transform</span></td>
+        <td><span class="parametername">root</span></td>
         <td></td>
       </tr>
       <tr>

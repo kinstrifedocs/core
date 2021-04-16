@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class FBBipedIKComponent
    | Kinstrife ">
-    <meta name="generator" content="docfx 2.56.7.0">
+    <meta name="generator" content="docfx 2.57.2.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
@@ -85,6 +85,8 @@
     <h5>Implements</h5>
     <div><a class="xref" href="Kinstrife.Animation.IAnimationPlayer.html">IAnimationPlayer</a></div>
     <div><span class="xref">IAnimationWindowPreview</span></div>
+    <div><a class="xref" href="Kinstrife.Core.DependencyInjection.ICacheReferences.html">ICacheReferences</a></div>
+    <div><a class="xref" href="Kinstrife.Core.DependencyInjection.IDependent.html">IDependent</a></div>
   </div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
@@ -101,7 +103,7 @@
       <a class="xref" href="Kinstrife.Animation.AnimationComponent.html#Kinstrife_Animation_AnimationComponent_CastLayer__2">AnimationComponent.CastLayer&lt;TAnimLayer, TPlayableData&gt;()</a>
     </div>
     <div>
-      <a class="xref" href="Kinstrife.Animation.AnimationComponent.html#Kinstrife_Animation_AnimationComponent_InjectDependencies_Kinstrife_Animation_AnimationDirector_AnimancerComponent_">AnimationComponent.InjectDependencies(AnimationDirector, AnimancerComponent)</a>
+      <a class="xref" href="Kinstrife.Animation.AnimationComponent.html#Kinstrife_Animation_AnimationComponent_InjectDependencies_Kinstrife_Animation_AnimationDirector_">AnimationComponent.InjectDependencies(AnimationDirector)</a>
     </div>
     <div>
       <a class="xref" href="Kinstrife.Animation.AnimationComponent.html#Kinstrife_Animation_AnimationComponent_OnEnable">AnimationComponent.OnEnable()</a>
@@ -114,7 +116,7 @@
   <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
   <h5 id="Kinstrife_Rigging_FBBipedIKComponent_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class FBBipedIKComponent : AnimationComponent, IAnimationPlayer, IAnimationWindowPreview</code></pre>
+    <pre><code class="lang-csharp hljs">public class FBBipedIKComponent : AnimationComponent, IAnimationPlayer, IAnimationWindowPreview, ICacheReferences, IDependent</code></pre>
   </div>
   <h3 id="fields">Fields
   </h3>
@@ -823,13 +825,23 @@
   </table>
   
   
-  <a id="Kinstrife_Rigging_FBBipedIKComponent_HasEffectorHandle_" data-uid="Kinstrife.Rigging.FBBipedIKComponent.HasEffectorHandle*"></a>
-  <h4 id="Kinstrife_Rigging_FBBipedIKComponent_HasEffectorHandle_Kinstrife_Rigging_EffectorTag_" data-uid="Kinstrife.Rigging.FBBipedIKComponent.HasEffectorHandle(Kinstrife.Rigging.EffectorTag)">HasEffectorHandle(EffectorTag)</h4>
+  <a id="Kinstrife_Rigging_FBBipedIKComponent_CacheReferences_" data-uid="Kinstrife.Rigging.FBBipedIKComponent.CacheReferences*"></a>
+  <h4 id="Kinstrife_Rigging_FBBipedIKComponent_CacheReferences" data-uid="Kinstrife.Rigging.FBBipedIKComponent.CacheReferences">CacheReferences()</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public EffectorHandle HasEffectorHandle(EffectorTag effector)</code></pre>
+    <pre><code class="lang-csharp hljs">public void CacheReferences()</code></pre>
+  </div>
+  
+  
+  <a id="Kinstrife_Rigging_FBBipedIKComponent_GetEffectorHandle_" data-uid="Kinstrife.Rigging.FBBipedIKComponent.GetEffectorHandle*"></a>
+  <h4 id="Kinstrife_Rigging_FBBipedIKComponent_GetEffectorHandle_Kinstrife_Rigging_EffectorTag_" data-uid="Kinstrife.Rigging.FBBipedIKComponent.GetEffectorHandle(Kinstrife.Rigging.EffectorTag)">GetEffectorHandle(EffectorTag)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public EffectorHandle GetEffectorHandle(EffectorTag effector)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -866,12 +878,12 @@
   
   
   <a id="Kinstrife_Rigging_FBBipedIKComponent_InitializeInGraph_" data-uid="Kinstrife.Rigging.FBBipedIKComponent.InitializeInGraph*"></a>
-  <h4 id="Kinstrife_Rigging_FBBipedIKComponent_InitializeInGraph_PlayableGraph_AnimancerComponent_" data-uid="Kinstrife.Rigging.FBBipedIKComponent.InitializeInGraph(PlayableGraph,AnimancerComponent)">InitializeInGraph(PlayableGraph, AnimancerComponent)</h4>
+  <h4 id="Kinstrife_Rigging_FBBipedIKComponent_InitializeInGraph_PlayableGraph_" data-uid="Kinstrife.Rigging.FBBipedIKComponent.InitializeInGraph(PlayableGraph)">InitializeInGraph(PlayableGraph)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public override void InitializeInGraph(PlayableGraph graph, AnimancerComponent animancer)</code></pre>
+    <pre><code class="lang-csharp hljs">public override void InitializeInGraph(PlayableGraph graph)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -888,15 +900,10 @@
         <td><span class="parametername">graph</span></td>
         <td></td>
       </tr>
-      <tr>
-        <td><span class="xref">AnimancerComponent</span></td>
-        <td><span class="parametername">animancer</span></td>
-        <td></td>
-      </tr>
     </tbody>
   </table>
   <h5 class="overrides">Overrides</h5>
-  <div><a class="xref" href="Kinstrife.Animation.AnimationComponent.html#Kinstrife_Animation_AnimationComponent_InitializeInGraph_PlayableGraph_AnimancerComponent_">AnimationComponent.InitializeInGraph(PlayableGraph, AnimancerComponent)</a></div>
+  <div><a class="xref" href="Kinstrife.Animation.AnimationComponent.html#Kinstrife_Animation_AnimationComponent_InitializeInGraph_PlayableGraph_">AnimationComponent.InitializeInGraph(PlayableGraph)</a></div>
   
   
   <a id="Kinstrife_Rigging_FBBipedIKComponent_RefreshComputedVariables_" data-uid="Kinstrife.Rigging.FBBipedIKComponent.RefreshComputedVariables*"></a>
@@ -907,35 +914,6 @@
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public void RefreshComputedVariables()</code></pre>
   </div>
-  
-  
-  <a id="Kinstrife_Rigging_FBBipedIKComponent_RegisterAsAnimationModuleOfTypes_" data-uid="Kinstrife.Rigging.FBBipedIKComponent.RegisterAsAnimationModuleOfTypes*"></a>
-  <h4 id="Kinstrife_Rigging_FBBipedIKComponent_RegisterAsAnimationModuleOfTypes_Kinstrife_Animation_AnimationDirector_" data-uid="Kinstrife.Rigging.FBBipedIKComponent.RegisterAsAnimationModuleOfTypes(Kinstrife.Animation.AnimationDirector)">RegisterAsAnimationModuleOfTypes(AnimationDirector)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public override void RegisterAsAnimationModuleOfTypes(AnimationDirector animationDirector)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Kinstrife.Animation.AnimationDirector.html">AnimationDirector</a></td>
-        <td><span class="parametername">animationDirector</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="overrides">Overrides</h5>
-  <div><a class="xref" href="Kinstrife.Animation.AnimationComponent.html#Kinstrife_Animation_AnimationComponent_RegisterAsAnimationModuleOfTypes_Kinstrife_Animation_AnimationDirector_">AnimationComponent.RegisterAsAnimationModuleOfTypes(AnimationDirector)</a></div>
   
   
   <a id="Kinstrife_Rigging_FBBipedIKComponent_StartPreview_" data-uid="Kinstrife.Rigging.FBBipedIKComponent.StartPreview*"></a>
@@ -997,6 +975,12 @@
   </div>
   <div>
       <span class="xref">IAnimationWindowPreview</span>
+  </div>
+  <div>
+      <a class="xref" href="Kinstrife.Core.DependencyInjection.ICacheReferences.html">ICacheReferences</a>
+  </div>
+  <div>
+      <a class="xref" href="Kinstrife.Core.DependencyInjection.IDependent.html">IDependent</a>
   </div>
 </article>
           </div>

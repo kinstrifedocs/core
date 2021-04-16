@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class ProcedureGraphConversion
    | Kinstrife ">
-    <meta name="generator" content="docfx 2.56.7.0">
+    <meta name="generator" content="docfx 2.57.2.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
@@ -139,6 +139,48 @@
   </h3>
   
   
+  <a id="Kinstrife_Blueprints_ProcedureGraphConversion_ConvertBlackboard_" data-uid="Kinstrife.Blueprints.ProcedureGraphConversion.ConvertBlackboard*"></a>
+  <h4 id="Kinstrife_Blueprints_ProcedureGraphConversion_ConvertBlackboard_EntityManager__Kinstrife_Blueprints_ProcedureGraphAsset_Kinstrife_GraphTools_BaseNode_Entity_" data-uid="Kinstrife.Blueprints.ProcedureGraphConversion.ConvertBlackboard(EntityManager@,Kinstrife.Blueprints.ProcedureGraphAsset,Kinstrife.GraphTools.BaseNode,Entity)">ConvertBlackboard(ref EntityManager, ProcedureGraphAsset, BaseNode, Entity)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void ConvertBlackboard(ref EntityManager entityManager, ProcedureGraphAsset graphAsset, BaseNode node, Entity e)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">EntityManager</span></td>
+        <td><span class="parametername">entityManager</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Kinstrife.Blueprints.ProcedureGraphAsset.html">ProcedureGraphAsset</a></td>
+        <td><span class="parametername">graphAsset</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Kinstrife.GraphTools.BaseNode.html">BaseNode</a></td>
+        <td><span class="parametername">node</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">Entity</span></td>
+        <td><span class="parametername">e</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
   <a id="Kinstrife_Blueprints_ProcedureGraphConversion_ConvertGraphAsset_" data-uid="Kinstrife.Blueprints.ProcedureGraphConversion.ConvertGraphAsset*"></a>
   <h4 id="Kinstrife_Blueprints_ProcedureGraphConversion_ConvertGraphAsset_EntityManager__Entity_Kinstrife_Blueprints_ProcedureGraphAsset_" data-uid="Kinstrife.Blueprints.ProcedureGraphConversion.ConvertGraphAsset(EntityManager@,Entity,Kinstrife.Blueprints.ProcedureGraphAsset)">ConvertGraphAsset(ref EntityManager, Entity, ProcedureGraphAsset)</h4>
   <div class="markdown level1 summary"></div>
@@ -241,6 +283,58 @@
   </table>
   
   
+  <a id="Kinstrife_Blueprints_ProcedureGraphConversion_GetOrCreateSharedBlackboard_" data-uid="Kinstrife.Blueprints.ProcedureGraphConversion.GetOrCreateSharedBlackboard*"></a>
+  <h4 id="Kinstrife_Blueprints_ProcedureGraphConversion_GetOrCreateSharedBlackboard_EntityManager__Entity_Entity__" data-uid="Kinstrife.Blueprints.ProcedureGraphConversion.GetOrCreateSharedBlackboard(EntityManager@,Entity,Entity@)">GetOrCreateSharedBlackboard(ref EntityManager, Entity, out Entity)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static BlackboardComponent GetOrCreateSharedBlackboard(ref EntityManager entityManager, Entity e, out Entity blackboardEntity)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">EntityManager</span></td>
+        <td><span class="parametername">entityManager</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">Entity</span></td>
+        <td><span class="parametername">e</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">Entity</span></td>
+        <td><span class="parametername">blackboardEntity</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Kinstrife.Entities.Blackboard.BlackboardComponent.html">BlackboardComponent</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
   <a id="Kinstrife_Blueprints_ProcedureGraphConversion_InputNodesToInstructions_" data-uid="Kinstrife.Blueprints.ProcedureGraphConversion.InputNodesToInstructions*"></a>
   <h4 id="Kinstrife_Blueprints_ProcedureGraphConversion_InputNodesToInstructions_EntityManager__Kinstrife_Blueprints_ProcedureGraphAsset_Kinstrife_GraphTools_BaseNode_Entity_Kinstrife_Entities_Procedures_SubStateId_" data-uid="Kinstrife.Blueprints.ProcedureGraphConversion.InputNodesToInstructions(EntityManager@,Kinstrife.Blueprints.ProcedureGraphAsset,Kinstrife.GraphTools.BaseNode,Entity,Kinstrife.Entities.Procedures.SubStateId)">InputNodesToInstructions(ref EntityManager, ProcedureGraphAsset, BaseNode, Entity, SubStateId)</h4>
   <div class="markdown level1 summary"></div>
@@ -329,6 +423,120 @@
       <tr>
         <td><a class="xref" href="Kinstrife.Entities.Procedures.SubStateId.html">SubStateId</a></td>
         <td><span class="parametername">state</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Kinstrife_Blueprints_ProcedureGraphConversion_ProcessGraphExposeParameter_" data-uid="Kinstrife.Blueprints.ProcedureGraphConversion.ProcessGraphExposeParameter*"></a>
+  <h4 id="Kinstrife_Blueprints_ProcedureGraphConversion_ProcessGraphExposeParameter__1_EntityManager__Entity_Kinstrife_Blueprints_ProcedureGraphAsset_" data-uid="Kinstrife.Blueprints.ProcedureGraphConversion.ProcessGraphExposeParameter``1(EntityManager@,Entity,Kinstrife.Blueprints.ProcedureGraphAsset)">ProcessGraphExposeParameter&lt;TBufferType&gt;(ref EntityManager, Entity, ProcedureGraphAsset)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void ProcessGraphExposeParameter&lt;TBufferType&gt;(ref EntityManager entityManager, Entity e, ProcedureGraphAsset graphAsset)
+    where TBufferType : struct, IExposedParameterBufferElement</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">EntityManager</span></td>
+        <td><span class="parametername">entityManager</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">Entity</span></td>
+        <td><span class="parametername">e</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Kinstrife.Blueprints.ProcedureGraphAsset.html">ProcedureGraphAsset</a></td>
+        <td><span class="parametername">graphAsset</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">TBufferType</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Kinstrife_Blueprints_ProcedureGraphConversion_ProcessParameterType_" data-uid="Kinstrife.Blueprints.ProcedureGraphConversion.ProcessParameterType*"></a>
+  <h4 id="Kinstrife_Blueprints_ProcedureGraphConversion_ProcessParameterType__3_EntityManager__Entity_Kinstrife_Entities_Blackboard_BlackboardComponent_" data-uid="Kinstrife.Blueprints.ProcedureGraphConversion.ProcessParameterType``3(EntityManager@,Entity,Kinstrife.Entities.Blackboard.BlackboardComponent)">ProcessParameterType&lt;TValueType, TBufferType, TParameterWrapperType&gt;(ref EntityManager, Entity, BlackboardComponent)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void ProcessParameterType&lt;TValueType, TBufferType, TParameterWrapperType&gt;(ref EntityManager entityManager, Entity e, BlackboardComponent blackboard)
+    where TValueType : struct where TBufferType : struct, IExposedParameterBufferElement, IHasValue&lt;TValueType&gt; where TParameterWrapperType : ExposedParameter&lt;TValueType, TBufferType&gt;, new()</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">EntityManager</span></td>
+        <td><span class="parametername">entityManager</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">Entity</span></td>
+        <td><span class="parametername">e</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Kinstrife.Entities.Blackboard.BlackboardComponent.html">BlackboardComponent</a></td>
+        <td><span class="parametername">blackboard</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">TValueType</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="parametername">TBufferType</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="parametername">TParameterWrapperType</span></td>
         <td></td>
       </tr>
     </tbody>

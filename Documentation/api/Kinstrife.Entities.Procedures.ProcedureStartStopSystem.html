@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class ProcedureStartStopSystem
    | Kinstrife ">
-    <meta name="generator" content="docfx 2.56.7.0">
+    <meta name="generator" content="docfx 2.57.2.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
@@ -381,6 +381,48 @@ When accessing this <code>Procedure</code> component through <see cref="!:Compon
   
   
   <a id="Kinstrife_Entities_Procedures_ProcedureStartStopSystem_RequestStart_" data-uid="Kinstrife.Entities.Procedures.ProcedureStartStopSystem.RequestStart*"></a>
+  <h4 id="Kinstrife_Entities_Procedures_ProcedureStartStopSystem_RequestStart_Entity_" data-uid="Kinstrife.Entities.Procedures.ProcedureStartStopSystem.RequestStart(Entity)">RequestStart(Entity)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool RequestStart(Entity procedureEntity)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Entity</span></td>
+        <td><span class="parametername">procedureEntity</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Kinstrife_Entities_Procedures_ProcedureStartStopSystem_RequestStart_" data-uid="Kinstrife.Entities.Procedures.ProcedureStartStopSystem.RequestStart*"></a>
   <h4 id="Kinstrife_Entities_Procedures_ProcedureStartStopSystem_RequestStart_Entity_System_Int32_" data-uid="Kinstrife.Entities.Procedures.ProcedureStartStopSystem.RequestStart(Entity,System.Int32)">RequestStart(Entity, Int32)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
@@ -477,6 +519,48 @@ When accessing this <code>Procedure</code> component through <see cref="!:Compon
   <h5 id="Kinstrife_Entities_Procedures_ProcedureStartStopSystem_RequestStart_Entity__ComponentDataFromEntity_Kinstrife_Entities_Procedures_ProcedureInputStream____remarks">Remarks</h5>
   <div class="markdown level1 remarks"><p>This causes all <code>Activation</code> constraints to be evaluated in the next phase.</p>
 </div>
+  
+  
+  <a id="Kinstrife_Entities_Procedures_ProcedureStartStopSystem_RequestStop_" data-uid="Kinstrife.Entities.Procedures.ProcedureStartStopSystem.RequestStop*"></a>
+  <h4 id="Kinstrife_Entities_Procedures_ProcedureStartStopSystem_RequestStop_Entity_" data-uid="Kinstrife.Entities.Procedures.ProcedureStartStopSystem.RequestStop(Entity)">RequestStop(Entity)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool RequestStop(Entity procedureEntity)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Entity</span></td>
+        <td><span class="parametername">procedureEntity</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   
   
   <a id="Kinstrife_Entities_Procedures_ProcedureStartStopSystem_RequestStop_" data-uid="Kinstrife.Entities.Procedures.ProcedureStartStopSystem.RequestStop*"></a>
@@ -791,6 +875,53 @@ When accessing this <code>Procedure</code> component through <see cref="!:Compon
   <h5 id="Kinstrife_Entities_Procedures_ProcedureStartStopSystem_TryStart_Entity__ComponentDataFromEntity_Kinstrife_Entities_Procedures_Procedure___Kinstrife_Entities_Procedures_ConstraintsEvaluation__System_Boolean__remarks">Remarks</h5>
   <div class="markdown level1 remarks"><p>Will try to validate there are no unsatisfied <code>Activation</code> constraints by default, but will not re-evaluate them. Use<a class="xref" href="Kinstrife.Entities.Procedures.ProcedureStartStopSystem.html#Kinstrife_Entities_Procedures_ProcedureStartStopSystem_RequestStart_Entity__ComponentDataFromEntity_Kinstrife_Entities_Procedures_ProcedureInputStream___">RequestStart(Entity, ref ComponentDataFromEntity&lt;ProcedureInputStream&gt;)</a> to not skip the re-evaluation step.</p>
 </div>
+  
+  
+  <a id="Kinstrife_Entities_Procedures_ProcedureStartStopSystem_TryStop_" data-uid="Kinstrife.Entities.Procedures.ProcedureStartStopSystem.TryStop*"></a>
+  <h4 id="Kinstrife_Entities_Procedures_ProcedureStartStopSystem_TryStop_Entity_System_Boolean_" data-uid="Kinstrife.Entities.Procedures.ProcedureStartStopSystem.TryStop(Entity,System.Boolean)">TryStop(Entity, Boolean)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool TryStop(Entity procedureEntity, bool validateConstraints = true)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Entity</span></td>
+        <td><span class="parametername">procedureEntity</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">validateConstraints</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   
   
   <a id="Kinstrife_Entities_Procedures_ProcedureStartStopSystem_TryStop_" data-uid="Kinstrife.Entities.Procedures.ProcedureStartStopSystem.TryStop*"></a>
