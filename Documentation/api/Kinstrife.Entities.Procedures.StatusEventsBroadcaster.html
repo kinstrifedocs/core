@@ -108,6 +108,31 @@
   </h3>
   
   
+  <a id="Kinstrife_Entities_Procedures_StatusEventsBroadcaster_Events_" data-uid="Kinstrife.Entities.Procedures.StatusEventsBroadcaster.Events*"></a>
+  <h4 id="Kinstrife_Entities_Procedures_StatusEventsBroadcaster_Events" data-uid="Kinstrife.Entities.Procedures.StatusEventsBroadcaster.Events">Events</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public StatusEventsBroadcaster.ProcedureStatusEvents Events { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Kinstrife.Entities.Procedures.StatusEventsBroadcaster.ProcedureStatusEvents.html">StatusEventsBroadcaster.ProcedureStatusEvents</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
   <a id="Kinstrife_Entities_Procedures_StatusEventsBroadcaster_Item_" data-uid="Kinstrife.Entities.Procedures.StatusEventsBroadcaster.Item*"></a>
   <h4 id="Kinstrife_Entities_Procedures_StatusEventsBroadcaster_Item_Kinstrife_Entities_Procedures_SubStateId_" data-uid="Kinstrife.Entities.Procedures.StatusEventsBroadcaster.Item(Kinstrife.Entities.Procedures.SubStateId)">Item[SubStateId]</h4>
   <div class="markdown level1 summary"><p>Access (write or read) field or property on an instance (<code data-dev-comment-type="paramref" class="paramref">target</code>) of this <a class="xref" href="Kinstrife.Entities.Procedures.StatusEventsBroadcaster.html">StatusEventsBroadcaster</a>'s type</p>
@@ -115,7 +140,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public StatusEventsBroadcaster.SubStateStatusEventsContainer this[SubStateId target] { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public StatusEventsBroadcaster.StateMachineStatusEvents this[SubStateId target] { get; set; }</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -145,7 +170,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="Kinstrife.Entities.Procedures.StatusEventsBroadcaster.SubStateStatusEventsContainer.html">StatusEventsBroadcaster.SubStateStatusEventsContainer</a></td>
+        <td><a class="xref" href="Kinstrife.Entities.Procedures.StatusEventsBroadcaster.StateMachineStatusEvents.html">StatusEventsBroadcaster.StateMachineStatusEvents</a></td>
         <td><p>Value of member when reading</p>
 </td>
       </tr>
@@ -275,13 +300,13 @@
   
   
   <a id="Kinstrife_Entities_Procedures_StatusEventsBroadcaster_RegisterGlobalListener_" data-uid="Kinstrife.Entities.Procedures.StatusEventsBroadcaster.RegisterGlobalListener*"></a>
-  <h4 id="Kinstrife_Entities_Procedures_StatusEventsBroadcaster_RegisterGlobalListener_Kinstrife_Entities_Procedures_IStatusFlagEventsListener_Kinstrife_Entities_Procedures_StatusFlag_" data-uid="Kinstrife.Entities.Procedures.StatusEventsBroadcaster.RegisterGlobalListener(Kinstrife.Entities.Procedures.IStatusFlagEventsListener,Kinstrife.Entities.Procedures.StatusFlag)">RegisterGlobalListener(IStatusFlagEventsListener, StatusFlag)</h4>
+  <h4 id="Kinstrife_Entities_Procedures_StatusEventsBroadcaster_RegisterGlobalListener_Kinstrife_Entities_Procedures_IProcedureEventsListener_Kinstrife_Entities_Procedures_StatusFlag_" data-uid="Kinstrife.Entities.Procedures.StatusEventsBroadcaster.RegisterGlobalListener(Kinstrife.Entities.Procedures.IProcedureEventsListener,Kinstrife.Entities.Procedures.StatusFlag)">RegisterGlobalListener(IProcedureEventsListener, StatusFlag)</h4>
   <div class="markdown level1 summary"><p>Registers listener to the procedure globally (base node)</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void RegisterGlobalListener(IStatusFlagEventsListener listener, StatusFlag statusFlags)</code></pre>
+    <pre><code class="lang-csharp hljs">public void RegisterGlobalListener(IProcedureEventsListener listener, StatusFlag statusFlags)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -294,7 +319,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="Kinstrife.Entities.Procedures.IStatusFlagEventsListener.html">IStatusFlagEventsListener</a></td>
+        <td><a class="xref" href="Kinstrife.Entities.Procedures.IProcedureEventsListener.html">IProcedureEventsListener</a></td>
         <td><span class="parametername">listener</span></td>
         <td></td>
       </tr>
@@ -308,13 +333,13 @@
   
   
   <a id="Kinstrife_Entities_Procedures_StatusEventsBroadcaster_RegisterListener_" data-uid="Kinstrife.Entities.Procedures.StatusEventsBroadcaster.RegisterListener*"></a>
-  <h4 id="Kinstrife_Entities_Procedures_StatusEventsBroadcaster_RegisterListener_Kinstrife_Entities_Procedures_SubStateId_Kinstrife_Entities_Procedures_IStatusFlagEventsListener_Kinstrife_Entities_Procedures_StatusFlag_" data-uid="Kinstrife.Entities.Procedures.StatusEventsBroadcaster.RegisterListener(Kinstrife.Entities.Procedures.SubStateId,Kinstrife.Entities.Procedures.IStatusFlagEventsListener,Kinstrife.Entities.Procedures.StatusFlag)">RegisterListener(SubStateId, IStatusFlagEventsListener, StatusFlag)</h4>
+  <h4 id="Kinstrife_Entities_Procedures_StatusEventsBroadcaster_RegisterListener_Kinstrife_Entities_Procedures_SubStateId_Kinstrife_Entities_Procedures_IStateMachineEventsListener_Kinstrife_Entities_Procedures_StatusFlag_" data-uid="Kinstrife.Entities.Procedures.StatusEventsBroadcaster.RegisterListener(Kinstrife.Entities.Procedures.SubStateId,Kinstrife.Entities.Procedures.IStateMachineEventsListener,Kinstrife.Entities.Procedures.StatusFlag)">RegisterListener(SubStateId, IStateMachineEventsListener, StatusFlag)</h4>
   <div class="markdown level1 summary"><p>Registers listener to a state</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void RegisterListener(SubStateId subStateId, IStatusFlagEventsListener listener, StatusFlag statusFlags)</code></pre>
+    <pre><code class="lang-csharp hljs">public void RegisterListener(SubStateId subStateId, IStateMachineEventsListener listener, StatusFlag statusFlags)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -332,7 +357,7 @@
         <td></td>
       </tr>
       <tr>
-        <td><a class="xref" href="Kinstrife.Entities.Procedures.IStatusFlagEventsListener.html">IStatusFlagEventsListener</a></td>
+        <td><a class="xref" href="Kinstrife.Entities.Procedures.IStateMachineEventsListener.html">IStateMachineEventsListener</a></td>
         <td><span class="parametername">listener</span></td>
         <td></td>
       </tr>
@@ -346,12 +371,44 @@
   
   
   <a id="Kinstrife_Entities_Procedures_StatusEventsBroadcaster_UnregisterListener_" data-uid="Kinstrife.Entities.Procedures.StatusEventsBroadcaster.UnregisterListener*"></a>
-  <h4 id="Kinstrife_Entities_Procedures_StatusEventsBroadcaster_UnregisterListener_Kinstrife_Entities_Procedures_SubStateId_Kinstrife_Entities_Procedures_IStatusFlagEventsListener_Kinstrife_Entities_Procedures_StatusFlag_" data-uid="Kinstrife.Entities.Procedures.StatusEventsBroadcaster.UnregisterListener(Kinstrife.Entities.Procedures.SubStateId,Kinstrife.Entities.Procedures.IStatusFlagEventsListener,Kinstrife.Entities.Procedures.StatusFlag)">UnregisterListener(SubStateId, IStatusFlagEventsListener, StatusFlag)</h4>
+  <h4 id="Kinstrife_Entities_Procedures_StatusEventsBroadcaster_UnregisterListener_Kinstrife_Entities_Procedures_IProcedureEventsListener_Kinstrife_Entities_Procedures_StatusFlag_" data-uid="Kinstrife.Entities.Procedures.StatusEventsBroadcaster.UnregisterListener(Kinstrife.Entities.Procedures.IProcedureEventsListener,Kinstrife.Entities.Procedures.StatusFlag)">UnregisterListener(IProcedureEventsListener, StatusFlag)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void UnregisterListener(SubStateId subStateId, IStatusFlagEventsListener listener, StatusFlag statusFlags)</code></pre>
+    <pre><code class="lang-csharp hljs">public void UnregisterListener(IProcedureEventsListener listener, StatusFlag statusFlags)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Kinstrife.Entities.Procedures.IProcedureEventsListener.html">IProcedureEventsListener</a></td>
+        <td><span class="parametername">listener</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Kinstrife.Entities.Procedures.StatusFlag.html">StatusFlag</a></td>
+        <td><span class="parametername">statusFlags</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Kinstrife_Entities_Procedures_StatusEventsBroadcaster_UnregisterListener_" data-uid="Kinstrife.Entities.Procedures.StatusEventsBroadcaster.UnregisterListener*"></a>
+  <h4 id="Kinstrife_Entities_Procedures_StatusEventsBroadcaster_UnregisterListener_Kinstrife_Entities_Procedures_SubStateId_Kinstrife_Entities_Procedures_IStateMachineEventsListener_Kinstrife_Entities_Procedures_StatusFlag_" data-uid="Kinstrife.Entities.Procedures.StatusEventsBroadcaster.UnregisterListener(Kinstrife.Entities.Procedures.SubStateId,Kinstrife.Entities.Procedures.IStateMachineEventsListener,Kinstrife.Entities.Procedures.StatusFlag)">UnregisterListener(SubStateId, IStateMachineEventsListener, StatusFlag)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void UnregisterListener(SubStateId subStateId, IStateMachineEventsListener listener, StatusFlag statusFlags)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -369,7 +426,7 @@
         <td></td>
       </tr>
       <tr>
-        <td><a class="xref" href="Kinstrife.Entities.Procedures.IStatusFlagEventsListener.html">IStatusFlagEventsListener</a></td>
+        <td><a class="xref" href="Kinstrife.Entities.Procedures.IStateMachineEventsListener.html">IStateMachineEventsListener</a></td>
         <td><span class="parametername">listener</span></td>
         <td></td>
       </tr>

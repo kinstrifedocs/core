@@ -133,6 +133,9 @@
       <a class="xref" href="Kinstrife.Core.Camera.CameraControllerBase.html#Kinstrife_Core_Camera_CameraControllerBase_SetInputState_Kinstrife_Core_Camera_CameraInputState__">CameraControllerBase.SetInputState(CameraInputState)</a>
     </div>
     <div>
+      <a class="xref" href="Kinstrife.Core.Camera.CameraControllerBase.html#Kinstrife_Core_Camera_CameraControllerBase_Tick_System_Single_">CameraControllerBase.Tick(Single)</a>
+    </div>
+    <div>
       <a class="xref" href="Kinstrife.Core.Camera.CameraControllerBase.html#Kinstrife_Core_Camera_CameraControllerBase_SetTargetRotation_System_Double_">CameraControllerBase.SetTargetRotation(Double)</a>
     </div>
     <div>
@@ -148,187 +151,17 @@
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public class FirstPersonCameraController : CameraControllerBase, ITickable</code></pre>
   </div>
-  <h3 id="fields">Fields
-  </h3>
-  
-  
-  <h4 id="Kinstrife_Core_Camera_FirstPersonCameraController_baseRotationSensitivity" data-uid="Kinstrife.Core.Camera.FirstPersonCameraController.baseRotationSensitivity">baseRotationSensitivity</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public float baseRotationSensitivity</code></pre>
-  </div>
-  <h5 class="fieldValue">Field Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Single</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <h4 id="Kinstrife_Core_Camera_FirstPersonCameraController_noSmooth" data-uid="Kinstrife.Core.Camera.FirstPersonCameraController.noSmooth">noSmooth</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public bool noSmooth</code></pre>
-  </div>
-  <h5 class="fieldValue">Field Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Boolean</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <h4 id="Kinstrife_Core_Camera_FirstPersonCameraController_rotationSmooth" data-uid="Kinstrife.Core.Camera.FirstPersonCameraController.rotationSmooth">rotationSmooth</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public float rotationSmooth</code></pre>
-  </div>
-  <h5 class="fieldValue">Field Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Single</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <h4 id="Kinstrife_Core_Camera_FirstPersonCameraController_useWorldPosition" data-uid="Kinstrife.Core.Camera.FirstPersonCameraController.useWorldPosition">useWorldPosition</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public bool useWorldPosition</code></pre>
-  </div>
-  <h5 class="fieldValue">Field Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Boolean</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <h4 id="Kinstrife_Core_Camera_FirstPersonCameraController_yMaxLimit" data-uid="Kinstrife.Core.Camera.FirstPersonCameraController.yMaxLimit">yMaxLimit</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public float yMaxLimit</code></pre>
-  </div>
-  <h5 class="fieldValue">Field Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Single</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <h4 id="Kinstrife_Core_Camera_FirstPersonCameraController_yMinLimit" data-uid="Kinstrife.Core.Camera.FirstPersonCameraController.yMinLimit">yMinLimit</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public float yMinLimit</code></pre>
-  </div>
-  <h5 class="fieldValue">Field Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Single</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <h4 id="Kinstrife_Core_Camera_FirstPersonCameraController_YSensitivity" data-uid="Kinstrife.Core.Camera.FirstPersonCameraController.YSensitivity">YSensitivity</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public float YSensitivity</code></pre>
-  </div>
-  <h5 class="fieldValue">Field Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Single</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
   <h3 id="properties">Properties
   </h3>
   
   
-  <a id="Kinstrife_Core_Camera_FirstPersonCameraController_X_" data-uid="Kinstrife.Core.Camera.FirstPersonCameraController.X*"></a>
-  <h4 id="Kinstrife_Core_Camera_FirstPersonCameraController_X" data-uid="Kinstrife.Core.Camera.FirstPersonCameraController.X">X</h4>
+  <a id="Kinstrife_Core_Camera_FirstPersonCameraController_cinemachineCamera_" data-uid="Kinstrife.Core.Camera.FirstPersonCameraController.cinemachineCamera*"></a>
+  <h4 id="Kinstrife_Core_Camera_FirstPersonCameraController_cinemachineCamera" data-uid="Kinstrife.Core.Camera.FirstPersonCameraController.cinemachineCamera">cinemachineCamera</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public float X { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public CinemachineVirtualCamera cinemachineCamera { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -340,20 +173,20 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Single</span></td>
+        <td><span class="xref">CinemachineVirtualCamera</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   
   
-  <a id="Kinstrife_Core_Camera_FirstPersonCameraController_Y_" data-uid="Kinstrife.Core.Camera.FirstPersonCameraController.Y*"></a>
-  <h4 id="Kinstrife_Core_Camera_FirstPersonCameraController_Y" data-uid="Kinstrife.Core.Camera.FirstPersonCameraController.Y">Y</h4>
+  <a id="Kinstrife_Core_Camera_FirstPersonCameraController_pov_" data-uid="Kinstrife.Core.Camera.FirstPersonCameraController.pov*"></a>
+  <h4 id="Kinstrife_Core_Camera_FirstPersonCameraController_pov" data-uid="Kinstrife.Core.Camera.FirstPersonCameraController.pov">pov</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public float Y { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public CinemachinePOV pov { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -365,7 +198,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Single</span></td>
+        <td><span class="xref">CinemachinePOV</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -374,13 +207,13 @@
   </h3>
   
   
-  <a id="Kinstrife_Core_Camera_FirstPersonCameraController_Tick_" data-uid="Kinstrife.Core.Camera.FirstPersonCameraController.Tick*"></a>
-  <h4 id="Kinstrife_Core_Camera_FirstPersonCameraController_Tick_System_Single_" data-uid="Kinstrife.Core.Camera.FirstPersonCameraController.Tick(System.Single)">Tick(Single)</h4>
+  <a id="Kinstrife_Core_Camera_FirstPersonCameraController_SynchronizeOnActivate_" data-uid="Kinstrife.Core.Camera.FirstPersonCameraController.SynchronizeOnActivate*"></a>
+  <h4 id="Kinstrife_Core_Camera_FirstPersonCameraController_SynchronizeOnActivate_Kinstrife_Core_Camera_CameraRig_" data-uid="Kinstrife.Core.Camera.FirstPersonCameraController.SynchronizeOnActivate(Kinstrife.Core.Camera.CameraRig)">SynchronizeOnActivate(CameraRig)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public override void Tick(float deltaTime)</code></pre>
+    <pre><code class="lang-csharp hljs">public override void SynchronizeOnActivate(CameraRig rig)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -393,56 +226,14 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Single</span></td>
-        <td><span class="parametername">deltaTime</span></td>
+        <td><a class="xref" href="Kinstrife.Core.Camera.CameraRig.html">CameraRig</a></td>
+        <td><span class="parametername">rig</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <h5 class="overrides">Overrides</h5>
-  <div><a class="xref" href="Kinstrife.Core.Camera.CameraControllerBase.html#Kinstrife_Core_Camera_CameraControllerBase_Tick_System_Single_">CameraControllerBase.Tick(Single)</a></div>
-  
-  
-  <a id="Kinstrife_Core_Camera_FirstPersonCameraController_UpdateCamera_" data-uid="Kinstrife.Core.Camera.FirstPersonCameraController.UpdateCamera*"></a>
-  <h4 id="Kinstrife_Core_Camera_FirstPersonCameraController_UpdateCamera_Vector2_System_Single_System_Single_System_Single_" data-uid="Kinstrife.Core.Camera.FirstPersonCameraController.UpdateCamera(Vector2,System.Single,System.Single,System.Single)">UpdateCamera(Vector2, Single, Single, Single)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void UpdateCamera(Vector2 input, float sensitivity, float acceleration, float deltaTime)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">Vector2</span></td>
-        <td><span class="parametername">input</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><span class="xref">System.Single</span></td>
-        <td><span class="parametername">sensitivity</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><span class="xref">System.Single</span></td>
-        <td><span class="parametername">acceleration</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><span class="xref">System.Single</span></td>
-        <td><span class="parametername">deltaTime</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
+  <div><a class="xref" href="Kinstrife.Core.Camera.CameraControllerBase.html#Kinstrife_Core_Camera_CameraControllerBase_SynchronizeOnActivate_Kinstrife_Core_Camera_CameraRig_">CameraControllerBase.SynchronizeOnActivate(CameraRig)</a></div>
   <h3 id="implements">Implements</h3>
   <div>
       <a class="xref" href="Kinstrife.Core.DependencyInjection.ITickable.html">ITickable</a>

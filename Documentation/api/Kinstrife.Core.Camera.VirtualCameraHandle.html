@@ -91,8 +91,59 @@
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public class VirtualCameraHandle : MonoBehaviour, Unity.Entities.IComponentData, IDisposable</code></pre>
   </div>
+  <h3 id="fields">Fields
+  </h3>
+  
+  
+  <h4 id="Kinstrife_Core_Camera_VirtualCameraHandle_Initialized" data-uid="Kinstrife.Core.Camera.VirtualCameraHandle.Initialized">Initialized</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool Initialized</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   <h3 id="properties">Properties
   </h3>
+  
+  
+  <a id="Kinstrife_Core_Camera_VirtualCameraHandle_ActiveCamera_" data-uid="Kinstrife.Core.Camera.VirtualCameraHandle.ActiveCamera*"></a>
+  <h4 id="Kinstrife_Core_Camera_VirtualCameraHandle_ActiveCamera" data-uid="Kinstrife.Core.Camera.VirtualCameraHandle.ActiveCamera">ActiveCamera</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public CinemachineVirtualCameraBase ActiveCamera { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">CinemachineVirtualCameraBase</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   
   
   <a id="Kinstrife_Core_Camera_VirtualCameraHandle_ActivePriority_" data-uid="Kinstrife.Core.Camera.VirtualCameraHandle.ActivePriority*"></a>
@@ -114,6 +165,31 @@
     <tbody>
       <tr>
         <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Kinstrife_Core_Camera_VirtualCameraHandle_ActiveSubCamera_" data-uid="Kinstrife.Core.Camera.VirtualCameraHandle.ActiveSubCamera*"></a>
+  <h4 id="Kinstrife_Core_Camera_VirtualCameraHandle_ActiveSubCamera" data-uid="Kinstrife.Core.Camera.VirtualCameraHandle.ActiveSubCamera">ActiveSubCamera</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public CinemachineVirtualCameraBase ActiveSubCamera { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">CinemachineVirtualCameraBase</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -292,6 +368,33 @@
   </div>
   
   
+  <a id="Kinstrife_Core_Camera_VirtualCameraHandle_DisableSubCamera_" data-uid="Kinstrife.Core.Camera.VirtualCameraHandle.DisableSubCamera*"></a>
+  <h4 id="Kinstrife_Core_Camera_VirtualCameraHandle_DisableSubCamera_Kinstrife_Core_Camera_CameraState_" data-uid="Kinstrife.Core.Camera.VirtualCameraHandle.DisableSubCamera(Kinstrife.Core.Camera.CameraState)">DisableSubCamera(CameraState)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void DisableSubCamera(CameraState key = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Kinstrife.Core.Camera.CameraState.html">CameraState</a></td>
+        <td><span class="parametername">key</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
   <a id="Kinstrife_Core_Camera_VirtualCameraHandle_Dispose_" data-uid="Kinstrife.Core.Camera.VirtualCameraHandle.Dispose*"></a>
   <h4 id="Kinstrife_Core_Camera_VirtualCameraHandle_Dispose" data-uid="Kinstrife.Core.Camera.VirtualCameraHandle.Dispose">Dispose()</h4>
   <div class="markdown level1 summary"></div>
@@ -300,6 +403,149 @@
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public void Dispose()</code></pre>
   </div>
+  
+  
+  <a id="Kinstrife_Core_Camera_VirtualCameraHandle_EnableSubCamera_" data-uid="Kinstrife.Core.Camera.VirtualCameraHandle.EnableSubCamera*"></a>
+  <h4 id="Kinstrife_Core_Camera_VirtualCameraHandle_EnableSubCamera_Kinstrife_Core_Camera_CameraState_" data-uid="Kinstrife.Core.Camera.VirtualCameraHandle.EnableSubCamera(Kinstrife.Core.Camera.CameraState)">EnableSubCamera(CameraState)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void EnableSubCamera(CameraState key = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Kinstrife.Core.Camera.CameraState.html">CameraState</a></td>
+        <td><span class="parametername">key</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Kinstrife_Core_Camera_VirtualCameraHandle_HasSubCamera_" data-uid="Kinstrife.Core.Camera.VirtualCameraHandle.HasSubCamera*"></a>
+  <h4 id="Kinstrife_Core_Camera_VirtualCameraHandle_HasSubCamera_Kinstrife_Core_Camera_CameraState_" data-uid="Kinstrife.Core.Camera.VirtualCameraHandle.HasSubCamera(Kinstrife.Core.Camera.CameraState)">HasSubCamera(CameraState)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool HasSubCamera(CameraState key)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Kinstrife.Core.Camera.CameraState.html">CameraState</a></td>
+        <td><span class="parametername">key</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Kinstrife_Core_Camera_VirtualCameraHandle_InitializeFromRig_" data-uid="Kinstrife.Core.Camera.VirtualCameraHandle.InitializeFromRig*"></a>
+  <h4 id="Kinstrife_Core_Camera_VirtualCameraHandle_InitializeFromRig_Kinstrife_Core_Camera_CameraRig_" data-uid="Kinstrife.Core.Camera.VirtualCameraHandle.InitializeFromRig(Kinstrife.Core.Camera.CameraRig)">InitializeFromRig(CameraRig)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void InitializeFromRig(CameraRig rig)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Kinstrife.Core.Camera.CameraRig.html">CameraRig</a></td>
+        <td><span class="parametername">rig</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Kinstrife_Core_Camera_VirtualCameraHandle_TryGetSubCamera_" data-uid="Kinstrife.Core.Camera.VirtualCameraHandle.TryGetSubCamera*"></a>
+  <h4 id="Kinstrife_Core_Camera_VirtualCameraHandle_TryGetSubCamera_Kinstrife_Core_Camera_CameraState_CinemachineVirtualCameraBase__" data-uid="Kinstrife.Core.Camera.VirtualCameraHandle.TryGetSubCamera(Kinstrife.Core.Camera.CameraState,CinemachineVirtualCameraBase@)">TryGetSubCamera(CameraState, out CinemachineVirtualCameraBase)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool TryGetSubCamera(CameraState key, out CinemachineVirtualCameraBase subCamera)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Kinstrife.Core.Camera.CameraState.html">CameraState</a></td>
+        <td><span class="parametername">key</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">CinemachineVirtualCameraBase</span></td>
+        <td><span class="parametername">subCamera</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   <h3 id="implements">Implements</h3>
   <div>
       <span class="xref">Unity.Entities.IComponentData</span>

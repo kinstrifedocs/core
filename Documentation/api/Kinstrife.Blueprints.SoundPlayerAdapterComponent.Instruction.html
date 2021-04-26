@@ -83,7 +83,9 @@
   </div>
   <div classs="implements">
     <h5>Implements</h5>
-    <div><a class="xref" href="Kinstrife.Entities.Procedures.IStatusFlagEventsListener.html">IStatusFlagEventsListener</a></div>
+    <div><a class="xref" href="Kinstrife.Entities.Procedures.IProcedureEventsListener.html">IProcedureEventsListener</a></div>
+    <div><a class="xref" href="Kinstrife.Entities.Procedures.IStateMachineEventsListener.html">IStateMachineEventsListener</a></div>
+    <div><a class="xref" href="Kinstrife.Entities.Procedures.IEventsListener.html">IEventsListener</a></div>
     <div><a class="xref" href="Kinstrife.Entities.Procedures.IActivateDeactivate.html">IActivateDeactivate</a></div>
     <div><a class="xref" href="Kinstrife.Entities.Procedures.IRegisterAtBroadcaster.html">IRegisterAtBroadcaster</a></div>
   </div>
@@ -114,37 +116,46 @@
       <a class="xref" href="Kinstrife.Entities.Procedures.StatusEventsInstruction.html#Kinstrife_Entities_Procedures_StatusEventsInstruction_Init">StatusEventsInstruction.Init()</a>
     </div>
     <div>
-      <a class="xref" href="Kinstrife.Entities.Procedures.StatusEventsInstruction.html#Kinstrife_Entities_Procedures_StatusEventsInstruction_CheckActive_Entity__Kinstrife_Entities_Procedures_SubStateId__">StatusEventsInstruction.CheckActive(Entity, SubStateId)</a>
+      <a class="xref" href="Kinstrife.Entities.Procedures.StatusEventsInstruction.html#Kinstrife_Entities_Procedures_StatusEventsInstruction_UpdateIsActive_Entity__System_Boolean__">StatusEventsInstruction.UpdateIsActive(Entity, Boolean)</a>
     </div>
     <div>
-      <a class="xref" href="Kinstrife.Entities.Procedures.StatusEventsInstruction.html#Kinstrife_Entities_Procedures_StatusEventsInstruction_OnActivate_Entity__Entity__">StatusEventsInstruction.OnActivate(Entity, Entity)</a>
+      <a class="xref" href="Kinstrife.Entities.Procedures.StatusEventsInstruction.html#Kinstrife_Entities_Procedures_StatusEventsInstruction_OnActivate_ProcedureCallback_Entity__Entity__Kinstrife_Entities_Procedures_Procedure__">StatusEventsInstruction.OnActivate_ProcedureCallback(Entity, Entity, Procedure)</a>
     </div>
     <div>
-      <a class="xref" href="Kinstrife.Entities.Procedures.StatusEventsInstruction.html#Kinstrife_Entities_Procedures_StatusEventsInstruction_OnDeactivate_Entity__Entity__">StatusEventsInstruction.OnDeactivate(Entity, Entity)</a>
+      <a class="xref" href="Kinstrife.Entities.Procedures.StatusEventsInstruction.html#Kinstrife_Entities_Procedures_StatusEventsInstruction_OnDeactivate_ProcedureCallback_Entity__Entity__Kinstrife_Entities_Procedures_Procedure__">StatusEventsInstruction.OnDeactivate_ProcedureCallback(Entity, Entity, Procedure)</a>
     </div>
     <div>
-      <a class="xref" href="Kinstrife.Entities.Procedures.StatusEventsInstruction.html#Kinstrife_Entities_Procedures_StatusEventsInstruction_TryActivate_Entity__Entity__Kinstrife_Entities_Procedures_IHasStatusFlags__Kinstrife_Entities_Procedures_SubStateId__">StatusEventsInstruction.TryActivate(Entity, Entity, IHasStatusFlags, SubStateId)</a>
+      <a class="xref" href="Kinstrife.Entities.Procedures.StatusEventsInstruction.html#Kinstrife_Entities_Procedures_StatusEventsInstruction_OnStart_Entity__Entity__Kinstrife_Entities_Procedures_Procedure__">StatusEventsInstruction.OnStart(Entity, Entity, Procedure)</a>
     </div>
     <div>
-      <a class="xref" href="Kinstrife.Entities.Procedures.StatusEventsInstruction.html#Kinstrife_Entities_Procedures_StatusEventsInstruction_TryDeactivate_Entity__Entity__Kinstrife_Entities_Procedures_IHasStatusFlags__Kinstrife_Entities_Procedures_SubStateId__">StatusEventsInstruction.TryDeactivate(Entity, Entity, IHasStatusFlags, SubStateId)</a>
+      <a class="xref" href="Kinstrife.Entities.Procedures.StatusEventsInstruction.html#Kinstrife_Entities_Procedures_StatusEventsInstruction_OnTerminate_Entity__Entity__Kinstrife_Entities_Procedures_Procedure__">StatusEventsInstruction.OnTerminate(Entity, Entity, Procedure)</a>
     </div>
     <div>
-      <a class="xref" href="Kinstrife.Entities.Procedures.StatusEventsInstruction.html#Kinstrife_Entities_Procedures_StatusEventsInstruction_OnStart_Entity__Entity__System_Boolean_Kinstrife_Entities_Procedures_IHasStatusFlags__Kinstrife_Entities_Procedures_SubStateId__">StatusEventsInstruction.OnStart(Entity, Entity, Boolean, IHasStatusFlags, SubStateId)</a>
+      <a class="xref" href="Kinstrife.Entities.Procedures.StatusEventsInstruction.html#Kinstrife_Entities_Procedures_StatusEventsInstruction_OnUpdate_Entity__Entity__Kinstrife_Entities_Procedures_Procedure__">StatusEventsInstruction.OnUpdate(Entity, Entity, Procedure)</a>
     </div>
     <div>
-      <a class="xref" href="Kinstrife.Entities.Procedures.StatusEventsInstruction.html#Kinstrife_Entities_Procedures_StatusEventsInstruction_OnTerminate_Entity__Entity__System_Boolean_Kinstrife_Entities_Procedures_IHasStatusFlags__Kinstrife_Entities_Procedures_SubStateId__">StatusEventsInstruction.OnTerminate(Entity, Entity, Boolean, IHasStatusFlags, SubStateId)</a>
+      <a class="xref" href="Kinstrife.Entities.Procedures.StatusEventsInstruction.html#Kinstrife_Entities_Procedures_StatusEventsInstruction_WillStart_Entity__Entity__Kinstrife_Entities_Procedures_Procedure__">StatusEventsInstruction.WillStart(Entity, Entity, Procedure)</a>
     </div>
     <div>
-      <a class="xref" href="Kinstrife.Entities.Procedures.StatusEventsInstruction.html#Kinstrife_Entities_Procedures_StatusEventsInstruction_OnUpdate_Entity__Entity__System_Boolean_Kinstrife_Entities_Procedures_IHasStatusFlags__Kinstrife_Entities_Procedures_SubStateId__">StatusEventsInstruction.OnUpdate(Entity, Entity, Boolean, IHasStatusFlags, SubStateId)</a>
-    </div>
-    <div>
-      <a class="xref" href="Kinstrife.Entities.Procedures.StatusEventsInstruction.html#Kinstrife_Entities_Procedures_StatusEventsInstruction_WillStart_Entity__Entity__System_Boolean_Kinstrife_Entities_Procedures_IHasStatusFlags__Kinstrife_Entities_Procedures_SubStateId__">StatusEventsInstruction.WillStart(Entity, Entity, Boolean, IHasStatusFlags, SubStateId)</a>
-    </div>
-    <div>
-      <a class="xref" href="Kinstrife.Entities.Procedures.StatusEventsInstruction.html#Kinstrife_Entities_Procedures_StatusEventsInstruction_WillTerminate_Entity__Entity__System_Boolean_Kinstrife_Entities_Procedures_IHasStatusFlags__Kinstrife_Entities_Procedures_SubStateId__">StatusEventsInstruction.WillTerminate(Entity, Entity, Boolean, IHasStatusFlags, SubStateId)</a>
+      <a class="xref" href="Kinstrife.Entities.Procedures.StatusEventsInstruction.html#Kinstrife_Entities_Procedures_StatusEventsInstruction_WillTerminate_Entity__Entity__Kinstrife_Entities_Procedures_Procedure__">StatusEventsInstruction.WillTerminate(Entity, Entity, Procedure)</a>
     </div>
     <div>
       <a class="xref" href="Kinstrife.Entities.Procedures.StatusEventsInstruction.html#Kinstrife_Entities_Procedures_StatusEventsInstruction_RegisterAtBroadcaster_Kinstrife_Entities_Procedures_StatusEventsBroadcaster_">StatusEventsInstruction.RegisterAtBroadcaster(StatusEventsBroadcaster)</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.Entities.Procedures.StatusEventsInstruction.html#Kinstrife_Entities_Procedures_StatusEventsInstruction_OnActivate_SubStateCallback_Entity__Entity__Kinstrife_Entities_Procedures_Procedure__Kinstrife_Entities_Procedures_StateMachine__Kinstrife_Entities_Procedures_SubState__">StatusEventsInstruction.OnActivate_SubStateCallback(Entity, Entity, Procedure, StateMachine, SubState)</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.Entities.Procedures.StatusEventsInstruction.html#Kinstrife_Entities_Procedures_StatusEventsInstruction_OnDeactivate_SubStateCallback_Entity__Entity__Kinstrife_Entities_Procedures_Procedure__Kinstrife_Entities_Procedures_StateMachine__Kinstrife_Entities_Procedures_SubState__">StatusEventsInstruction.OnDeactivate_SubStateCallback(Entity, Entity, Procedure, StateMachine, SubState)</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.Entities.Procedures.StatusEventsInstruction.html#Kinstrife_Entities_Procedures_StatusEventsInstruction_StateOnStart_Entity__Entity__Kinstrife_Entities_Procedures_Procedure__Kinstrife_Entities_Procedures_StateMachine__Kinstrife_Entities_Procedures_SubState__">StatusEventsInstruction.StateOnStart(Entity, Entity, Procedure, StateMachine, SubState)</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.Entities.Procedures.StatusEventsInstruction.html#Kinstrife_Entities_Procedures_StatusEventsInstruction_StateOnUpdate_Entity__Entity__Kinstrife_Entities_Procedures_Procedure__Kinstrife_Entities_Procedures_StateMachine__Kinstrife_Entities_Procedures_SubState__">StatusEventsInstruction.StateOnUpdate(Entity, Entity, Procedure, StateMachine, SubState)</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.Entities.Procedures.StatusEventsInstruction.html#Kinstrife_Entities_Procedures_StatusEventsInstruction_StateWillTerminate_Entity__Entity__Kinstrife_Entities_Procedures_Procedure__Kinstrife_Entities_Procedures_StateMachine__Kinstrife_Entities_Procedures_SubState__">StatusEventsInstruction.StateWillTerminate(Entity, Entity, Procedure, StateMachine, SubState)</a>
     </div>
     <div>
       <span class="xref">System.Object.ToString()</span>
@@ -172,7 +183,7 @@
   <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
   <h5 id="Kinstrife_Blueprints_SoundPlayerAdapterComponent_Instruction_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class Instruction : StatusEventsInstruction, IStatusFlagEventsListener, IActivateDeactivate, IRegisterAtBroadcaster</code></pre>
+    <pre><code class="lang-csharp hljs">public class Instruction : StatusEventsInstruction, IProcedureEventsListener, IStateMachineEventsListener, IEventsListener, IActivateDeactivate, IRegisterAtBroadcaster</code></pre>
   </div>
   <h3 id="fields">Fields
   </h3>
@@ -202,7 +213,13 @@
   </table>
   <h3 id="implements">Implements</h3>
   <div>
-      <a class="xref" href="Kinstrife.Entities.Procedures.IStatusFlagEventsListener.html">IStatusFlagEventsListener</a>
+      <a class="xref" href="Kinstrife.Entities.Procedures.IProcedureEventsListener.html">IProcedureEventsListener</a>
+  </div>
+  <div>
+      <a class="xref" href="Kinstrife.Entities.Procedures.IStateMachineEventsListener.html">IStateMachineEventsListener</a>
+  </div>
+  <div>
+      <a class="xref" href="Kinstrife.Entities.Procedures.IEventsListener.html">IEventsListener</a>
   </div>
   <div>
       <a class="xref" href="Kinstrife.Entities.Procedures.IActivateDeactivate.html">IActivateDeactivate</a>

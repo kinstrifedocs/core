@@ -89,16 +89,16 @@
       <a class="xref" href="Kinstrife.DataContainers.TransformDefinitionAsset-2.html#Kinstrife_DataContainers_TransformDefinitionAsset_2_NamePrefix">TransformDefinitionAsset&lt;EffectorTag, EffectorId&gt;.NamePrefix</a>
     </div>
     <div>
-      <a class="xref" href="Kinstrife.DataContainers.TransformDefinitionAsset-2.html#Kinstrife_DataContainers_TransformDefinitionAsset_2_GetKey_Kinstrife_DataContainers_TransformRef_">TransformDefinitionAsset&lt;EffectorTag, EffectorId&gt;.GetKey(TransformRef)</a>
+      <a class="xref" href="Kinstrife.DataContainers.TransformDefinitionAsset-2.html#Kinstrife_DataContainers_TransformDefinitionAsset_2_GetKey_Kinstrife_DataContainers_ITransformRef_">TransformDefinitionAsset&lt;EffectorTag, EffectorId&gt;.GetKey(ITransformRef)</a>
     </div>
     <div>
       <a class="xref" href="Kinstrife.DataContainers.TransformDefinitionAsset-2.html#Kinstrife_DataContainers_TransformDefinitionAsset_2_TryGetAssetFromTransform_Transform__1__">TransformDefinitionAsset&lt;EffectorTag, EffectorId&gt;.TryGetAssetFromTransform(Transform, EffectorId)</a>
     </div>
     <div>
-      <a class="xref" href="Kinstrife.DataContainers.TransformDefinitionAsset-2.html#Kinstrife_DataContainers_TransformDefinitionAsset_2_TryGetAssetFromTransformRef_Kinstrife_DataContainers_TransformRef__1__">TransformDefinitionAsset&lt;EffectorTag, EffectorId&gt;.TryGetAssetFromTransformRef(TransformRef, EffectorId)</a>
+      <a class="xref" href="Kinstrife.DataContainers.TransformDefinitionAsset-2.html#Kinstrife_DataContainers_TransformDefinitionAsset_2_TryGetAssetFromTransformRef_Kinstrife_DataContainers_ITransformRef__1__">TransformDefinitionAsset&lt;EffectorTag, EffectorId&gt;.TryGetAssetFromTransformRef(ITransformRef, EffectorId)</a>
     </div>
     <div>
-      <a class="xref" href="Kinstrife.DataContainers.TransformDefinitionAsset-2.html#Kinstrife_DataContainers_TransformDefinitionAsset_2_Bake_System_Collections_Generic_IEnumerable_Kinstrife_DataContainers_TransformRef__">TransformDefinitionAsset&lt;EffectorTag, EffectorId&gt;.Bake(IEnumerable&lt;TransformRef&gt;)</a>
+      <a class="xref" href="Kinstrife.DataContainers.TransformDefinitionAsset-2.html#Kinstrife_DataContainers_TransformDefinitionAsset_2_Bake_System_Collections_Generic_IEnumerable_Kinstrife_DataContainers_ITransformRef__">TransformDefinitionAsset&lt;EffectorTag, EffectorId&gt;.Bake(IEnumerable&lt;ITransformRef&gt;)</a>
     </div>
     <div>
       <a class="xref" href="Kinstrife.DataContainers.ScriptableObjectContainer-2.html#Kinstrife_DataContainers_ScriptableObjectContainer_2_storage">ScriptableObjectContainer&lt;EffectorTag, EffectorId&gt;.storage</a>
@@ -163,12 +163,12 @@
   
   
   <a id="Kinstrife_Rigging_EffectorsDefinition_GetKey_" data-uid="Kinstrife.Rigging.EffectorsDefinition.GetKey*"></a>
-  <h4 id="Kinstrife_Rigging_EffectorsDefinition_GetKey_Kinstrife_DataContainers_TransformRef_" data-uid="Kinstrife.Rigging.EffectorsDefinition.GetKey(Kinstrife.DataContainers.TransformRef)">GetKey(TransformRef)</h4>
+  <h4 id="Kinstrife_Rigging_EffectorsDefinition_GetKey_Kinstrife_DataContainers_ITransformRef_" data-uid="Kinstrife.Rigging.EffectorsDefinition.GetKey(Kinstrife.DataContainers.ITransformRef)">GetKey(ITransformRef)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected override EffectorTag GetKey(TransformRef transform)</code></pre>
+    <pre><code class="lang-csharp hljs">protected override EffectorTag GetKey(ITransformRef transformRef)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -181,8 +181,8 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="Kinstrife.DataContainers.TransformRef.html">TransformRef</a></td>
-        <td><span class="parametername">transform</span></td>
+        <td><a class="xref" href="Kinstrife.DataContainers.ITransformRef.html">ITransformRef</a></td>
+        <td><span class="parametername">transformRef</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -203,7 +203,7 @@
     </tbody>
   </table>
   <h5 class="overrides">Overrides</h5>
-  <div><span class="xref">Kinstrife.DataContainers.TransformDefinitionAsset&lt;Kinstrife.Rigging.EffectorTag, Kinstrife.Rigging.EffectorId&gt;.GetKey(Kinstrife.DataContainers.TransformRef)</span></div>
+  <div><span class="xref">Kinstrife.DataContainers.TransformDefinitionAsset&lt;Kinstrife.Rigging.EffectorTag, Kinstrife.Rigging.EffectorId&gt;.GetKey(Kinstrife.DataContainers.ITransformRef)</span></div>
   
   
   <a id="Kinstrife_Rigging_EffectorsDefinition_GetNameForAsset_" data-uid="Kinstrife.Rigging.EffectorsDefinition.GetNameForAsset*"></a>
@@ -305,12 +305,12 @@
   
   
   <a id="Kinstrife_Rigging_EffectorsDefinition_TryGetAssetFromTransformRef_" data-uid="Kinstrife.Rigging.EffectorsDefinition.TryGetAssetFromTransformRef*"></a>
-  <h4 id="Kinstrife_Rigging_EffectorsDefinition_TryGetAssetFromTransformRef_Kinstrife_DataContainers_TransformRef_Kinstrife_Rigging_EffectorId__" data-uid="Kinstrife.Rigging.EffectorsDefinition.TryGetAssetFromTransformRef(Kinstrife.DataContainers.TransformRef,Kinstrife.Rigging.EffectorId@)">TryGetAssetFromTransformRef(TransformRef, out EffectorId)</h4>
+  <h4 id="Kinstrife_Rigging_EffectorsDefinition_TryGetAssetFromTransformRef_Kinstrife_DataContainers_ITransformRef_Kinstrife_Rigging_EffectorId__" data-uid="Kinstrife.Rigging.EffectorsDefinition.TryGetAssetFromTransformRef(Kinstrife.DataContainers.ITransformRef,Kinstrife.Rigging.EffectorId@)">TryGetAssetFromTransformRef(ITransformRef, out EffectorId)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public override bool TryGetAssetFromTransformRef(TransformRef input, out EffectorId asset)</code></pre>
+    <pre><code class="lang-csharp hljs">public override bool TryGetAssetFromTransformRef(ITransformRef input, out EffectorId asset)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -323,7 +323,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="Kinstrife.DataContainers.TransformRef.html">TransformRef</a></td>
+        <td><a class="xref" href="Kinstrife.DataContainers.ITransformRef.html">ITransformRef</a></td>
         <td><span class="parametername">input</span></td>
         <td></td>
       </tr>
@@ -350,7 +350,7 @@
     </tbody>
   </table>
   <h5 class="overrides">Overrides</h5>
-  <div><span class="xref">Kinstrife.DataContainers.TransformDefinitionAsset&lt;Kinstrife.Rigging.EffectorTag, Kinstrife.Rigging.EffectorId&gt;.TryGetAssetFromTransformRef(Kinstrife.DataContainers.TransformRef, Kinstrife.Rigging.EffectorId)</span></div>
+  <div><span class="xref">Kinstrife.DataContainers.TransformDefinitionAsset&lt;Kinstrife.Rigging.EffectorTag, Kinstrife.Rigging.EffectorId&gt;.TryGetAssetFromTransformRef(Kinstrife.DataContainers.ITransformRef, Kinstrife.Rigging.EffectorId)</span></div>
 </article>
           </div>
           

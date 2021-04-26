@@ -85,7 +85,9 @@
     <h5>Implements</h5>
     <div><a class="xref" href="Kinstrife.Entities.IConvertible.html">IConvertible</a></div>
     <div><span class="xref">IConvertGameObjectToEntity</span></div>
-    <div><a class="xref" href="Kinstrife.Entities.Procedures.IStatusFlagEventsListener.html">IStatusFlagEventsListener</a></div>
+    <div><a class="xref" href="Kinstrife.Entities.Procedures.IProcedureEventsListener.html">IProcedureEventsListener</a></div>
+    <div><a class="xref" href="Kinstrife.Entities.Procedures.IStateMachineEventsListener.html">IStateMachineEventsListener</a></div>
+    <div><a class="xref" href="Kinstrife.Entities.Procedures.IEventsListener.html">IEventsListener</a></div>
   </div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
@@ -115,7 +117,7 @@
   <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
   <h5 id="Kinstrife_Entities_Procedures_ProcedureBehaviour_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class ProcedureBehaviour : SubEntityAuthoring, IConvertible, IConvertGameObjectToEntity, IStatusFlagEventsListener</code></pre>
+    <pre><code class="lang-csharp hljs">public class ProcedureBehaviour : SubEntityAuthoring, IConvertible, IConvertGameObjectToEntity, IProcedureEventsListener, IStateMachineEventsListener, IEventsListener</code></pre>
   </div>
   <h3 id="fields">Fields
   </h3>
@@ -345,26 +347,6 @@ public BlackboardComponent blackboard</code></pre>
   <div><a class="xref" href="Kinstrife.Entities.Atomics.SubEntityAuthoring.html#Kinstrife_Entities_Atomics_SubEntityAuthoring_InitRuntimeComponents_EntityManager__Entity_">SubEntityAuthoring.InitRuntimeComponents(ref EntityManager, Entity)</a></div>
   
   
-  <a id="Kinstrife_Entities_Procedures_ProcedureBehaviour_OnActivateProcedure_" data-uid="Kinstrife.Entities.Procedures.ProcedureBehaviour.OnActivateProcedure*"></a>
-  <h4 id="Kinstrife_Entities_Procedures_ProcedureBehaviour_OnActivateProcedure" data-uid="Kinstrife.Entities.Procedures.ProcedureBehaviour.OnActivateProcedure">OnActivateProcedure()</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual void OnActivateProcedure()</code></pre>
-  </div>
-  
-  
-  <a id="Kinstrife_Entities_Procedures_ProcedureBehaviour_OnDeactivateProcedure_" data-uid="Kinstrife.Entities.Procedures.ProcedureBehaviour.OnDeactivateProcedure*"></a>
-  <h4 id="Kinstrife_Entities_Procedures_ProcedureBehaviour_OnDeactivateProcedure" data-uid="Kinstrife.Entities.Procedures.ProcedureBehaviour.OnDeactivateProcedure">OnDeactivateProcedure()</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual void OnDeactivateProcedure()</code></pre>
-  </div>
-  
-  
   <a id="Kinstrife_Entities_Procedures_ProcedureBehaviour_OnDisable_" data-uid="Kinstrife.Entities.Procedures.ProcedureBehaviour.OnDisable*"></a>
   <h4 id="Kinstrife_Entities_Procedures_ProcedureBehaviour_OnDisable" data-uid="Kinstrife.Entities.Procedures.ProcedureBehaviour.OnDisable">OnDisable()</h4>
   <div class="markdown level1 summary"></div>
@@ -385,13 +367,67 @@ public BlackboardComponent blackboard</code></pre>
   </div>
   
   
-  <a id="Kinstrife_Entities_Procedures_ProcedureBehaviour_OnStart_" data-uid="Kinstrife.Entities.Procedures.ProcedureBehaviour.OnStart*"></a>
-  <h4 id="Kinstrife_Entities_Procedures_ProcedureBehaviour_OnStart_Entity__Entity__System_Boolean_Kinstrife_Entities_Procedures_IHasStatusFlags__Kinstrife_Entities_Procedures_SubStateId__" data-uid="Kinstrife.Entities.Procedures.ProcedureBehaviour.OnStart(Entity@,Entity@,System.Boolean,Kinstrife.Entities.Procedures.IHasStatusFlags@,Kinstrife.Entities.Procedures.SubStateId@)">OnStart(Entity, Entity, Boolean, IHasStatusFlags, SubStateId)</h4>
+  <a id="Kinstrife_Entities_Procedures_ProcedureBehaviour_OnProcedureStart_" data-uid="Kinstrife.Entities.Procedures.ProcedureBehaviour.OnProcedureStart*"></a>
+  <h4 id="Kinstrife_Entities_Procedures_ProcedureBehaviour_OnProcedureStart_Kinstrife_Entities_Procedures_Procedure__" data-uid="Kinstrife.Entities.Procedures.ProcedureBehaviour.OnProcedureStart(Kinstrife.Entities.Procedures.Procedure@)">OnProcedureStart(ref Procedure)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void OnStart(in Entity e, in Entity owner, bool nodeActive, in IHasStatusFlags context, in SubStateId state)</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual void OnProcedureStart(ref Procedure procedure)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Kinstrife.Entities.Procedures.Procedure.html">Procedure</a></td>
+        <td><span class="parametername">procedure</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Kinstrife_Entities_Procedures_ProcedureBehaviour_OnProcedureStop_" data-uid="Kinstrife.Entities.Procedures.ProcedureBehaviour.OnProcedureStop*"></a>
+  <h4 id="Kinstrife_Entities_Procedures_ProcedureBehaviour_OnProcedureStop_Kinstrife_Entities_Procedures_Procedure__" data-uid="Kinstrife.Entities.Procedures.ProcedureBehaviour.OnProcedureStop(Kinstrife.Entities.Procedures.Procedure@)">OnProcedureStop(ref Procedure)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void OnProcedureStop(ref Procedure procedure)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Kinstrife.Entities.Procedures.Procedure.html">Procedure</a></td>
+        <td><span class="parametername">procedure</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Kinstrife_Entities_Procedures_ProcedureBehaviour_OnStart_" data-uid="Kinstrife.Entities.Procedures.ProcedureBehaviour.OnStart*"></a>
+  <h4 id="Kinstrife_Entities_Procedures_ProcedureBehaviour_OnStart_Entity__Entity__Kinstrife_Entities_Procedures_Procedure__" data-uid="Kinstrife.Entities.Procedures.ProcedureBehaviour.OnStart(Entity@,Entity@,Kinstrife.Entities.Procedures.Procedure@)">OnStart(Entity, Entity, ref Procedure)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void OnStart(in Entity e, in Entity owner, ref Procedure procedure)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -414,18 +450,82 @@ public BlackboardComponent blackboard</code></pre>
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">System.Boolean</span></td>
-        <td><span class="parametername">nodeActive</span></td>
+        <td><a class="xref" href="Kinstrife.Entities.Procedures.Procedure.html">Procedure</a></td>
+        <td><span class="parametername">procedure</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Kinstrife_Entities_Procedures_ProcedureBehaviour_OnStateStart_" data-uid="Kinstrife.Entities.Procedures.ProcedureBehaviour.OnStateStart*"></a>
+  <h4 id="Kinstrife_Entities_Procedures_ProcedureBehaviour_OnStateStart_Kinstrife_Entities_Procedures_Procedure__Kinstrife_Entities_Procedures_StateMachine__Kinstrife_Entities_Procedures_SubState__" data-uid="Kinstrife.Entities.Procedures.ProcedureBehaviour.OnStateStart(Kinstrife.Entities.Procedures.Procedure@,Kinstrife.Entities.Procedures.StateMachine@,Kinstrife.Entities.Procedures.SubState@)">OnStateStart(ref Procedure, ref StateMachine, ref SubState)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void OnStateStart(ref Procedure procedure, ref StateMachine stateMachine, ref SubState subState)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Kinstrife.Entities.Procedures.Procedure.html">Procedure</a></td>
+        <td><span class="parametername">procedure</span></td>
         <td></td>
       </tr>
       <tr>
-        <td><a class="xref" href="Kinstrife.Entities.Procedures.IHasStatusFlags.html">IHasStatusFlags</a></td>
-        <td><span class="parametername">context</span></td>
+        <td><a class="xref" href="Kinstrife.Entities.Procedures.StateMachine.html">StateMachine</a></td>
+        <td><span class="parametername">stateMachine</span></td>
         <td></td>
       </tr>
       <tr>
-        <td><a class="xref" href="Kinstrife.Entities.Procedures.SubStateId.html">SubStateId</a></td>
-        <td><span class="parametername">state</span></td>
+        <td><a class="xref" href="Kinstrife.Entities.Procedures.SubState.html">SubState</a></td>
+        <td><span class="parametername">subState</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Kinstrife_Entities_Procedures_ProcedureBehaviour_OnStateStop_" data-uid="Kinstrife.Entities.Procedures.ProcedureBehaviour.OnStateStop*"></a>
+  <h4 id="Kinstrife_Entities_Procedures_ProcedureBehaviour_OnStateStop_Kinstrife_Entities_Procedures_Procedure__Kinstrife_Entities_Procedures_StateMachine__Kinstrife_Entities_Procedures_SubState__" data-uid="Kinstrife.Entities.Procedures.ProcedureBehaviour.OnStateStop(Kinstrife.Entities.Procedures.Procedure@,Kinstrife.Entities.Procedures.StateMachine@,Kinstrife.Entities.Procedures.SubState@)">OnStateStop(ref Procedure, ref StateMachine, ref SubState)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void OnStateStop(ref Procedure procedure, ref StateMachine stateMachine, ref SubState subState)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Kinstrife.Entities.Procedures.Procedure.html">Procedure</a></td>
+        <td><span class="parametername">procedure</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Kinstrife.Entities.Procedures.StateMachine.html">StateMachine</a></td>
+        <td><span class="parametername">stateMachine</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Kinstrife.Entities.Procedures.SubState.html">SubState</a></td>
+        <td><span class="parametername">subState</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -433,12 +533,12 @@ public BlackboardComponent blackboard</code></pre>
   
   
   <a id="Kinstrife_Entities_Procedures_ProcedureBehaviour_OnTerminate_" data-uid="Kinstrife.Entities.Procedures.ProcedureBehaviour.OnTerminate*"></a>
-  <h4 id="Kinstrife_Entities_Procedures_ProcedureBehaviour_OnTerminate_Entity__Entity__System_Boolean_Kinstrife_Entities_Procedures_IHasStatusFlags__Kinstrife_Entities_Procedures_SubStateId__" data-uid="Kinstrife.Entities.Procedures.ProcedureBehaviour.OnTerminate(Entity@,Entity@,System.Boolean,Kinstrife.Entities.Procedures.IHasStatusFlags@,Kinstrife.Entities.Procedures.SubStateId@)">OnTerminate(Entity, Entity, Boolean, IHasStatusFlags, SubStateId)</h4>
+  <h4 id="Kinstrife_Entities_Procedures_ProcedureBehaviour_OnTerminate_Entity__Entity__Kinstrife_Entities_Procedures_Procedure__" data-uid="Kinstrife.Entities.Procedures.ProcedureBehaviour.OnTerminate(Entity@,Entity@,Kinstrife.Entities.Procedures.Procedure@)">OnTerminate(Entity, Entity, ref Procedure)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void OnTerminate(in Entity e, in Entity owner, bool nodeActive, in IHasStatusFlags context, in SubStateId state)</code></pre>
+    <pre><code class="lang-csharp hljs">public void OnTerminate(in Entity e, in Entity owner, ref Procedure procedure)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -461,18 +561,8 @@ public BlackboardComponent blackboard</code></pre>
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">System.Boolean</span></td>
-        <td><span class="parametername">nodeActive</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="Kinstrife.Entities.Procedures.IHasStatusFlags.html">IHasStatusFlags</a></td>
-        <td><span class="parametername">context</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="Kinstrife.Entities.Procedures.SubStateId.html">SubStateId</a></td>
-        <td><span class="parametername">state</span></td>
+        <td><a class="xref" href="Kinstrife.Entities.Procedures.Procedure.html">Procedure</a></td>
+        <td><span class="parametername">procedure</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -480,12 +570,12 @@ public BlackboardComponent blackboard</code></pre>
   
   
   <a id="Kinstrife_Entities_Procedures_ProcedureBehaviour_OnUpdate_" data-uid="Kinstrife.Entities.Procedures.ProcedureBehaviour.OnUpdate*"></a>
-  <h4 id="Kinstrife_Entities_Procedures_ProcedureBehaviour_OnUpdate_Entity__Entity__System_Boolean_Kinstrife_Entities_Procedures_IHasStatusFlags__Kinstrife_Entities_Procedures_SubStateId__" data-uid="Kinstrife.Entities.Procedures.ProcedureBehaviour.OnUpdate(Entity@,Entity@,System.Boolean,Kinstrife.Entities.Procedures.IHasStatusFlags@,Kinstrife.Entities.Procedures.SubStateId@)">OnUpdate(Entity, Entity, Boolean, IHasStatusFlags, SubStateId)</h4>
+  <h4 id="Kinstrife_Entities_Procedures_ProcedureBehaviour_OnUpdate_Entity__Entity__Kinstrife_Entities_Procedures_Procedure__" data-uid="Kinstrife.Entities.Procedures.ProcedureBehaviour.OnUpdate(Entity@,Entity@,Kinstrife.Entities.Procedures.Procedure@)">OnUpdate(Entity, Entity, ref Procedure)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void OnUpdate(in Entity e, in Entity owner, bool nodeActive, in IHasStatusFlags context, in SubStateId state)</code></pre>
+    <pre><code class="lang-csharp hljs">public void OnUpdate(in Entity e, in Entity owner, ref Procedure procedure)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -508,18 +598,8 @@ public BlackboardComponent blackboard</code></pre>
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">System.Boolean</span></td>
-        <td><span class="parametername">nodeActive</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="Kinstrife.Entities.Procedures.IHasStatusFlags.html">IHasStatusFlags</a></td>
-        <td><span class="parametername">context</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="Kinstrife.Entities.Procedures.SubStateId.html">SubStateId</a></td>
-        <td><span class="parametername">state</span></td>
+        <td><a class="xref" href="Kinstrife.Entities.Procedures.Procedure.html">Procedure</a></td>
+        <td><span class="parametername">procedure</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -536,24 +616,165 @@ public BlackboardComponent blackboard</code></pre>
   </div>
   
   
-  <a id="Kinstrife_Entities_Procedures_ProcedureBehaviour_StartProcedure_" data-uid="Kinstrife.Entities.Procedures.ProcedureBehaviour.StartProcedure*"></a>
-  <h4 id="Kinstrife_Entities_Procedures_ProcedureBehaviour_StartProcedure" data-uid="Kinstrife.Entities.Procedures.ProcedureBehaviour.StartProcedure">StartProcedure()</h4>
+  <a id="Kinstrife_Entities_Procedures_ProcedureBehaviour_RequestStartProcedure_" data-uid="Kinstrife.Entities.Procedures.ProcedureBehaviour.RequestStartProcedure*"></a>
+  <h4 id="Kinstrife_Entities_Procedures_ProcedureBehaviour_RequestStartProcedure" data-uid="Kinstrife.Entities.Procedures.ProcedureBehaviour.RequestStartProcedure">RequestStartProcedure()</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void StartProcedure()</code></pre>
+    <pre><code class="lang-csharp hljs">public void RequestStartProcedure()</code></pre>
   </div>
   
   
-  <a id="Kinstrife_Entities_Procedures_ProcedureBehaviour_StopProcedure_" data-uid="Kinstrife.Entities.Procedures.ProcedureBehaviour.StopProcedure*"></a>
-  <h4 id="Kinstrife_Entities_Procedures_ProcedureBehaviour_StopProcedure" data-uid="Kinstrife.Entities.Procedures.ProcedureBehaviour.StopProcedure">StopProcedure()</h4>
+  <a id="Kinstrife_Entities_Procedures_ProcedureBehaviour_RequestStopProcedure_" data-uid="Kinstrife.Entities.Procedures.ProcedureBehaviour.RequestStopProcedure*"></a>
+  <h4 id="Kinstrife_Entities_Procedures_ProcedureBehaviour_RequestStopProcedure" data-uid="Kinstrife.Entities.Procedures.ProcedureBehaviour.RequestStopProcedure">RequestStopProcedure()</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void StopProcedure()</code></pre>
+    <pre><code class="lang-csharp hljs">public void RequestStopProcedure()</code></pre>
   </div>
+  
+  
+  <a id="Kinstrife_Entities_Procedures_ProcedureBehaviour_StateOnStart_" data-uid="Kinstrife.Entities.Procedures.ProcedureBehaviour.StateOnStart*"></a>
+  <h4 id="Kinstrife_Entities_Procedures_ProcedureBehaviour_StateOnStart_Entity__Entity__Kinstrife_Entities_Procedures_Procedure__Kinstrife_Entities_Procedures_StateMachine__Kinstrife_Entities_Procedures_SubState__" data-uid="Kinstrife.Entities.Procedures.ProcedureBehaviour.StateOnStart(Entity@,Entity@,Kinstrife.Entities.Procedures.Procedure@,Kinstrife.Entities.Procedures.StateMachine@,Kinstrife.Entities.Procedures.SubState@)">StateOnStart(Entity, Entity, ref Procedure, ref StateMachine, ref SubState)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void StateOnStart(in Entity e, in Entity owner, ref Procedure procedure, ref StateMachine stateMachine, ref SubState subState)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Entity</span></td>
+        <td><span class="parametername">e</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">Entity</span></td>
+        <td><span class="parametername">owner</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Kinstrife.Entities.Procedures.Procedure.html">Procedure</a></td>
+        <td><span class="parametername">procedure</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Kinstrife.Entities.Procedures.StateMachine.html">StateMachine</a></td>
+        <td><span class="parametername">stateMachine</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Kinstrife.Entities.Procedures.SubState.html">SubState</a></td>
+        <td><span class="parametername">subState</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Kinstrife_Entities_Procedures_ProcedureBehaviour_StateOnUpdate_" data-uid="Kinstrife.Entities.Procedures.ProcedureBehaviour.StateOnUpdate*"></a>
+  <h4 id="Kinstrife_Entities_Procedures_ProcedureBehaviour_StateOnUpdate_Entity__Entity__Kinstrife_Entities_Procedures_Procedure__Kinstrife_Entities_Procedures_StateMachine__Kinstrife_Entities_Procedures_SubState__" data-uid="Kinstrife.Entities.Procedures.ProcedureBehaviour.StateOnUpdate(Entity@,Entity@,Kinstrife.Entities.Procedures.Procedure@,Kinstrife.Entities.Procedures.StateMachine@,Kinstrife.Entities.Procedures.SubState@)">StateOnUpdate(Entity, Entity, ref Procedure, ref StateMachine, ref SubState)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void StateOnUpdate(in Entity e, in Entity owner, ref Procedure procedure, ref StateMachine stateMachine, ref SubState subState)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Entity</span></td>
+        <td><span class="parametername">e</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">Entity</span></td>
+        <td><span class="parametername">owner</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Kinstrife.Entities.Procedures.Procedure.html">Procedure</a></td>
+        <td><span class="parametername">procedure</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Kinstrife.Entities.Procedures.StateMachine.html">StateMachine</a></td>
+        <td><span class="parametername">stateMachine</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Kinstrife.Entities.Procedures.SubState.html">SubState</a></td>
+        <td><span class="parametername">subState</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Kinstrife_Entities_Procedures_ProcedureBehaviour_StateWillTerminate_" data-uid="Kinstrife.Entities.Procedures.ProcedureBehaviour.StateWillTerminate*"></a>
+  <h4 id="Kinstrife_Entities_Procedures_ProcedureBehaviour_StateWillTerminate_Entity__Entity__Kinstrife_Entities_Procedures_Procedure__Kinstrife_Entities_Procedures_StateMachine__Kinstrife_Entities_Procedures_SubState__" data-uid="Kinstrife.Entities.Procedures.ProcedureBehaviour.StateWillTerminate(Entity@,Entity@,Kinstrife.Entities.Procedures.Procedure@,Kinstrife.Entities.Procedures.StateMachine@,Kinstrife.Entities.Procedures.SubState@)">StateWillTerminate(Entity, Entity, ref Procedure, ref StateMachine, ref SubState)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void StateWillTerminate(in Entity e, in Entity owner, ref Procedure procedure, ref StateMachine stateMachine, ref SubState subState)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Entity</span></td>
+        <td><span class="parametername">e</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">Entity</span></td>
+        <td><span class="parametername">owner</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Kinstrife.Entities.Procedures.Procedure.html">Procedure</a></td>
+        <td><span class="parametername">procedure</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Kinstrife.Entities.Procedures.StateMachine.html">StateMachine</a></td>
+        <td><span class="parametername">stateMachine</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Kinstrife.Entities.Procedures.SubState.html">SubState</a></td>
+        <td><span class="parametername">subState</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   
   
   <a id="Kinstrife_Entities_Procedures_ProcedureBehaviour_ToggleBuffer_" data-uid="Kinstrife.Entities.Procedures.ProcedureBehaviour.ToggleBuffer*"></a>
@@ -604,59 +825,12 @@ public BlackboardComponent blackboard</code></pre>
   
   
   <a id="Kinstrife_Entities_Procedures_ProcedureBehaviour_WillStart_" data-uid="Kinstrife.Entities.Procedures.ProcedureBehaviour.WillStart*"></a>
-  <h4 id="Kinstrife_Entities_Procedures_ProcedureBehaviour_WillStart_Entity__Entity__System_Boolean_Kinstrife_Entities_Procedures_IHasStatusFlags__Kinstrife_Entities_Procedures_SubStateId__" data-uid="Kinstrife.Entities.Procedures.ProcedureBehaviour.WillStart(Entity@,Entity@,System.Boolean,Kinstrife.Entities.Procedures.IHasStatusFlags@,Kinstrife.Entities.Procedures.SubStateId@)">WillStart(Entity, Entity, Boolean, IHasStatusFlags, SubStateId)</h4>
+  <h4 id="Kinstrife_Entities_Procedures_ProcedureBehaviour_WillStart_Entity__Entity__Kinstrife_Entities_Procedures_Procedure__" data-uid="Kinstrife.Entities.Procedures.ProcedureBehaviour.WillStart(Entity@,Entity@,Kinstrife.Entities.Procedures.Procedure@)">WillStart(Entity, Entity, ref Procedure)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void WillStart(in Entity subEntity, in Entity root, bool nodeActive, in IHasStatusFlags context, in SubStateId state)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">Entity</span></td>
-        <td><span class="parametername">subEntity</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><span class="xref">Entity</span></td>
-        <td><span class="parametername">root</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><span class="xref">System.Boolean</span></td>
-        <td><span class="parametername">nodeActive</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="Kinstrife.Entities.Procedures.IHasStatusFlags.html">IHasStatusFlags</a></td>
-        <td><span class="parametername">context</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="Kinstrife.Entities.Procedures.SubStateId.html">SubStateId</a></td>
-        <td><span class="parametername">state</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="Kinstrife_Entities_Procedures_ProcedureBehaviour_WillTerminate_" data-uid="Kinstrife.Entities.Procedures.ProcedureBehaviour.WillTerminate*"></a>
-  <h4 id="Kinstrife_Entities_Procedures_ProcedureBehaviour_WillTerminate_Entity__Entity__System_Boolean_Kinstrife_Entities_Procedures_IHasStatusFlags__Kinstrife_Entities_Procedures_SubStateId__" data-uid="Kinstrife.Entities.Procedures.ProcedureBehaviour.WillTerminate(Entity@,Entity@,System.Boolean,Kinstrife.Entities.Procedures.IHasStatusFlags@,Kinstrife.Entities.Procedures.SubStateId@)">WillTerminate(Entity, Entity, Boolean, IHasStatusFlags, SubStateId)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void WillTerminate(in Entity e, in Entity owner, bool nodeActive, in IHasStatusFlags context, in SubStateId state)</code></pre>
+    <pre><code class="lang-csharp hljs">public void WillStart(in Entity e, in Entity owner, ref Procedure procedure)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -679,18 +853,95 @@ public BlackboardComponent blackboard</code></pre>
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">System.Boolean</span></td>
-        <td><span class="parametername">nodeActive</span></td>
+        <td><a class="xref" href="Kinstrife.Entities.Procedures.Procedure.html">Procedure</a></td>
+        <td><span class="parametername">procedure</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Kinstrife_Entities_Procedures_ProcedureBehaviour_WillTerminate_" data-uid="Kinstrife.Entities.Procedures.ProcedureBehaviour.WillTerminate*"></a>
+  <h4 id="Kinstrife_Entities_Procedures_ProcedureBehaviour_WillTerminate_Entity__Entity__Kinstrife_Entities_Procedures_Procedure__" data-uid="Kinstrife.Entities.Procedures.ProcedureBehaviour.WillTerminate(Entity@,Entity@,Kinstrife.Entities.Procedures.Procedure@)">WillTerminate(Entity, Entity, ref Procedure)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void WillTerminate(in Entity e, in Entity owner, ref Procedure procedure)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Entity</span></td>
+        <td><span class="parametername">e</span></td>
         <td></td>
       </tr>
       <tr>
-        <td><a class="xref" href="Kinstrife.Entities.Procedures.IHasStatusFlags.html">IHasStatusFlags</a></td>
-        <td><span class="parametername">context</span></td>
+        <td><span class="xref">Entity</span></td>
+        <td><span class="parametername">owner</span></td>
         <td></td>
       </tr>
       <tr>
-        <td><a class="xref" href="Kinstrife.Entities.Procedures.SubStateId.html">SubStateId</a></td>
-        <td><span class="parametername">state</span></td>
+        <td><a class="xref" href="Kinstrife.Entities.Procedures.Procedure.html">Procedure</a></td>
+        <td><span class="parametername">procedure</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="events">Events
+  </h3>
+  
+  
+  <h4 id="Kinstrife_Entities_Procedures_ProcedureBehaviour_onProcedureStart" data-uid="Kinstrife.Entities.Procedures.ProcedureBehaviour.onProcedureStart">onProcedureStart</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public event Action onProcedureStart</code></pre>
+  </div>
+  <h5 class="eventType">Event Type</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Action</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="Kinstrife_Entities_Procedures_ProcedureBehaviour_onProcedureStop" data-uid="Kinstrife.Entities.Procedures.ProcedureBehaviour.onProcedureStop">onProcedureStop</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public event Action onProcedureStop</code></pre>
+  </div>
+  <h5 class="eventType">Event Type</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Action</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -703,7 +954,13 @@ public BlackboardComponent blackboard</code></pre>
       <span class="xref">IConvertGameObjectToEntity</span>
   </div>
   <div>
-      <a class="xref" href="Kinstrife.Entities.Procedures.IStatusFlagEventsListener.html">IStatusFlagEventsListener</a>
+      <a class="xref" href="Kinstrife.Entities.Procedures.IProcedureEventsListener.html">IProcedureEventsListener</a>
+  </div>
+  <div>
+      <a class="xref" href="Kinstrife.Entities.Procedures.IStateMachineEventsListener.html">IStateMachineEventsListener</a>
+  </div>
+  <div>
+      <a class="xref" href="Kinstrife.Entities.Procedures.IEventsListener.html">IEventsListener</a>
   </div>
 </article>
           </div>

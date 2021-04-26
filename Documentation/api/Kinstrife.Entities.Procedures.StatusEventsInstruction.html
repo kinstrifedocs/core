@@ -86,7 +86,9 @@
   </div>
   <div classs="implements">
     <h5>Implements</h5>
-    <div><a class="xref" href="Kinstrife.Entities.Procedures.IStatusFlagEventsListener.html">IStatusFlagEventsListener</a></div>
+    <div><a class="xref" href="Kinstrife.Entities.Procedures.IProcedureEventsListener.html">IProcedureEventsListener</a></div>
+    <div><a class="xref" href="Kinstrife.Entities.Procedures.IStateMachineEventsListener.html">IStateMachineEventsListener</a></div>
+    <div><a class="xref" href="Kinstrife.Entities.Procedures.IEventsListener.html">IEventsListener</a></div>
     <div><a class="xref" href="Kinstrife.Entities.Procedures.IActivateDeactivate.html">IActivateDeactivate</a></div>
     <div><a class="xref" href="Kinstrife.Entities.Procedures.IRegisterAtBroadcaster.html">IRegisterAtBroadcaster</a></div>
   </div>
@@ -119,7 +121,7 @@
   <h5 id="Kinstrife_Entities_Procedures_StatusEventsInstruction_syntax">Syntax</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">[Serializable]
-public class StatusEventsInstruction : IStatusFlagEventsListener, IActivateDeactivate, IRegisterAtBroadcaster</code></pre>
+public class StatusEventsInstruction : IProcedureEventsListener, IStateMachineEventsListener, IEventsListener, IActivateDeactivate, IRegisterAtBroadcaster</code></pre>
   </div>
   <h3 id="fields">Fields
   </h3>
@@ -252,53 +254,6 @@ public class StatusEventsInstruction : IStatusFlagEventsListener, IActivateDeact
   </h3>
   
   
-  <a id="Kinstrife_Entities_Procedures_StatusEventsInstruction_CheckActive_" data-uid="Kinstrife.Entities.Procedures.StatusEventsInstruction.CheckActive*"></a>
-  <h4 id="Kinstrife_Entities_Procedures_StatusEventsInstruction_CheckActive_Entity__Kinstrife_Entities_Procedures_SubStateId__" data-uid="Kinstrife.Entities.Procedures.StatusEventsInstruction.CheckActive(Entity@,Kinstrife.Entities.Procedures.SubStateId@)">CheckActive(Entity, SubStateId)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual bool CheckActive(in Entity e, in SubStateId state)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">Entity</span></td>
-        <td><span class="parametername">e</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="Kinstrife.Entities.Procedures.SubStateId.html">SubStateId</a></td>
-        <td><span class="parametername">state</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Boolean</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
   <a id="Kinstrife_Entities_Procedures_StatusEventsInstruction_Init_" data-uid="Kinstrife.Entities.Procedures.StatusEventsInstruction.Init*"></a>
   <h4 id="Kinstrife_Entities_Procedures_StatusEventsInstruction_Init" data-uid="Kinstrife.Entities.Procedures.StatusEventsInstruction.Init">Init()</h4>
   <div class="markdown level1 summary"></div>
@@ -309,13 +264,14 @@ public class StatusEventsInstruction : IStatusFlagEventsListener, IActivateDeact
   </div>
   
   
-  <a id="Kinstrife_Entities_Procedures_StatusEventsInstruction_OnActivate_" data-uid="Kinstrife.Entities.Procedures.StatusEventsInstruction.OnActivate*"></a>
-  <h4 id="Kinstrife_Entities_Procedures_StatusEventsInstruction_OnActivate_Entity__Entity__" data-uid="Kinstrife.Entities.Procedures.StatusEventsInstruction.OnActivate(Entity@,Entity@)">OnActivate(Entity, Entity)</h4>
-  <div class="markdown level1 summary"></div>
+  <a id="Kinstrife_Entities_Procedures_StatusEventsInstruction_OnActivate_ProcedureCallback_" data-uid="Kinstrife.Entities.Procedures.StatusEventsInstruction.OnActivate_ProcedureCallback*"></a>
+  <h4 id="Kinstrife_Entities_Procedures_StatusEventsInstruction_OnActivate_ProcedureCallback_Entity__Entity__Kinstrife_Entities_Procedures_Procedure__" data-uid="Kinstrife.Entities.Procedures.StatusEventsInstruction.OnActivate_ProcedureCallback(Entity@,Entity@,Kinstrife.Entities.Procedures.Procedure@)">OnActivate_ProcedureCallback(Entity, Entity, ref Procedure)</h4>
+  <div class="markdown level1 summary"><p>Activating this instruction through (an edge with) the procedure</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual void OnActivate(in Entity e, in Entity owner)</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual void OnActivate_ProcedureCallback(in Entity e, in Entity owner, ref Procedure procedure)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -335,19 +291,25 @@ public class StatusEventsInstruction : IStatusFlagEventsListener, IActivateDeact
       <tr>
         <td><span class="xref">Entity</span></td>
         <td><span class="parametername">owner</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Kinstrife.Entities.Procedures.Procedure.html">Procedure</a></td>
+        <td><span class="parametername">procedure</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   
   
-  <a id="Kinstrife_Entities_Procedures_StatusEventsInstruction_OnDeactivate_" data-uid="Kinstrife.Entities.Procedures.StatusEventsInstruction.OnDeactivate*"></a>
-  <h4 id="Kinstrife_Entities_Procedures_StatusEventsInstruction_OnDeactivate_Entity__Entity__" data-uid="Kinstrife.Entities.Procedures.StatusEventsInstruction.OnDeactivate(Entity@,Entity@)">OnDeactivate(Entity, Entity)</h4>
-  <div class="markdown level1 summary"></div>
+  <a id="Kinstrife_Entities_Procedures_StatusEventsInstruction_OnActivate_SubStateCallback_" data-uid="Kinstrife.Entities.Procedures.StatusEventsInstruction.OnActivate_SubStateCallback*"></a>
+  <h4 id="Kinstrife_Entities_Procedures_StatusEventsInstruction_OnActivate_SubStateCallback_Entity__Entity__Kinstrife_Entities_Procedures_Procedure__Kinstrife_Entities_Procedures_StateMachine__Kinstrife_Entities_Procedures_SubState__" data-uid="Kinstrife.Entities.Procedures.StatusEventsInstruction.OnActivate_SubStateCallback(Entity@,Entity@,Kinstrife.Entities.Procedures.Procedure@,Kinstrife.Entities.Procedures.StateMachine@,Kinstrife.Entities.Procedures.SubState@)">OnActivate_SubStateCallback(Entity, Entity, ref Procedure, ref StateMachine, ref SubState)</h4>
+  <div class="markdown level1 summary"><p>Gets called when this instruction is activated through (an edge with) a sub state</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual void OnDeactivate(in Entity e, in Entity owner)</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual void OnActivate_SubStateCallback(in Entity e, in Entity owner, ref Procedure procedure, ref StateMachine stateMachine, ref SubState subState)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -367,6 +329,107 @@ public class StatusEventsInstruction : IStatusFlagEventsListener, IActivateDeact
       <tr>
         <td><span class="xref">Entity</span></td>
         <td><span class="parametername">owner</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Kinstrife.Entities.Procedures.Procedure.html">Procedure</a></td>
+        <td><span class="parametername">procedure</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Kinstrife.Entities.Procedures.StateMachine.html">StateMachine</a></td>
+        <td><span class="parametername">stateMachine</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Kinstrife.Entities.Procedures.SubState.html">SubState</a></td>
+        <td><span class="parametername">subState</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Kinstrife_Entities_Procedures_StatusEventsInstruction_OnDeactivate_ProcedureCallback_" data-uid="Kinstrife.Entities.Procedures.StatusEventsInstruction.OnDeactivate_ProcedureCallback*"></a>
+  <h4 id="Kinstrife_Entities_Procedures_StatusEventsInstruction_OnDeactivate_ProcedureCallback_Entity__Entity__Kinstrife_Entities_Procedures_Procedure__" data-uid="Kinstrife.Entities.Procedures.StatusEventsInstruction.OnDeactivate_ProcedureCallback(Entity@,Entity@,Kinstrife.Entities.Procedures.Procedure@)">OnDeactivate_ProcedureCallback(Entity, Entity, ref Procedure)</h4>
+  <div class="markdown level1 summary"><p>Deactivating this instruction through (an edge with) the procedure</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void OnDeactivate_ProcedureCallback(in Entity e, in Entity owner, ref Procedure procedure)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Entity</span></td>
+        <td><span class="parametername">e</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">Entity</span></td>
+        <td><span class="parametername">owner</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Kinstrife.Entities.Procedures.Procedure.html">Procedure</a></td>
+        <td><span class="parametername">procedure</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Kinstrife_Entities_Procedures_StatusEventsInstruction_OnDeactivate_SubStateCallback_" data-uid="Kinstrife.Entities.Procedures.StatusEventsInstruction.OnDeactivate_SubStateCallback*"></a>
+  <h4 id="Kinstrife_Entities_Procedures_StatusEventsInstruction_OnDeactivate_SubStateCallback_Entity__Entity__Kinstrife_Entities_Procedures_Procedure__Kinstrife_Entities_Procedures_StateMachine__Kinstrife_Entities_Procedures_SubState__" data-uid="Kinstrife.Entities.Procedures.StatusEventsInstruction.OnDeactivate_SubStateCallback(Entity@,Entity@,Kinstrife.Entities.Procedures.Procedure@,Kinstrife.Entities.Procedures.StateMachine@,Kinstrife.Entities.Procedures.SubState@)">OnDeactivate_SubStateCallback(Entity, Entity, ref Procedure, ref StateMachine, ref SubState)</h4>
+  <div class="markdown level1 summary"><p>Gets called when this instruction is deactivated through (an edge with) a sub state</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void OnDeactivate_SubStateCallback(in Entity e, in Entity owner, ref Procedure procedure, ref StateMachine stateMachine, ref SubState subState)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Entity</span></td>
+        <td><span class="parametername">e</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">Entity</span></td>
+        <td><span class="parametername">owner</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Kinstrife.Entities.Procedures.Procedure.html">Procedure</a></td>
+        <td><span class="parametername">procedure</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Kinstrife.Entities.Procedures.StateMachine.html">StateMachine</a></td>
+        <td><span class="parametername">stateMachine</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Kinstrife.Entities.Procedures.SubState.html">SubState</a></td>
+        <td><span class="parametername">subState</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -374,12 +437,12 @@ public class StatusEventsInstruction : IStatusFlagEventsListener, IActivateDeact
   
   
   <a id="Kinstrife_Entities_Procedures_StatusEventsInstruction_OnStart_" data-uid="Kinstrife.Entities.Procedures.StatusEventsInstruction.OnStart*"></a>
-  <h4 id="Kinstrife_Entities_Procedures_StatusEventsInstruction_OnStart_Entity__Entity__System_Boolean_Kinstrife_Entities_Procedures_IHasStatusFlags__Kinstrife_Entities_Procedures_SubStateId__" data-uid="Kinstrife.Entities.Procedures.StatusEventsInstruction.OnStart(Entity@,Entity@,System.Boolean,Kinstrife.Entities.Procedures.IHasStatusFlags@,Kinstrife.Entities.Procedures.SubStateId@)">OnStart(Entity, Entity, Boolean, IHasStatusFlags, SubStateId)</h4>
+  <h4 id="Kinstrife_Entities_Procedures_StatusEventsInstruction_OnStart_Entity__Entity__Kinstrife_Entities_Procedures_Procedure__" data-uid="Kinstrife.Entities.Procedures.StatusEventsInstruction.OnStart(Entity@,Entity@,Kinstrife.Entities.Procedures.Procedure@)">OnStart(Entity, Entity, ref Procedure)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void OnStart(in Entity e, in Entity owner, bool nodeActive, in IHasStatusFlags context, in SubStateId state)</code></pre>
+    <pre><code class="lang-csharp hljs">public void OnStart(in Entity e, in Entity owner, ref Procedure procedure)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -402,18 +465,8 @@ public class StatusEventsInstruction : IStatusFlagEventsListener, IActivateDeact
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">System.Boolean</span></td>
-        <td><span class="parametername">nodeActive</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="Kinstrife.Entities.Procedures.IHasStatusFlags.html">IHasStatusFlags</a></td>
-        <td><span class="parametername">context</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="Kinstrife.Entities.Procedures.SubStateId.html">SubStateId</a></td>
-        <td><span class="parametername">state</span></td>
+        <td><a class="xref" href="Kinstrife.Entities.Procedures.Procedure.html">Procedure</a></td>
+        <td><span class="parametername">procedure</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -421,12 +474,12 @@ public class StatusEventsInstruction : IStatusFlagEventsListener, IActivateDeact
   
   
   <a id="Kinstrife_Entities_Procedures_StatusEventsInstruction_OnTerminate_" data-uid="Kinstrife.Entities.Procedures.StatusEventsInstruction.OnTerminate*"></a>
-  <h4 id="Kinstrife_Entities_Procedures_StatusEventsInstruction_OnTerminate_Entity__Entity__System_Boolean_Kinstrife_Entities_Procedures_IHasStatusFlags__Kinstrife_Entities_Procedures_SubStateId__" data-uid="Kinstrife.Entities.Procedures.StatusEventsInstruction.OnTerminate(Entity@,Entity@,System.Boolean,Kinstrife.Entities.Procedures.IHasStatusFlags@,Kinstrife.Entities.Procedures.SubStateId@)">OnTerminate(Entity, Entity, Boolean, IHasStatusFlags, SubStateId)</h4>
+  <h4 id="Kinstrife_Entities_Procedures_StatusEventsInstruction_OnTerminate_Entity__Entity__Kinstrife_Entities_Procedures_Procedure__" data-uid="Kinstrife.Entities.Procedures.StatusEventsInstruction.OnTerminate(Entity@,Entity@,Kinstrife.Entities.Procedures.Procedure@)">OnTerminate(Entity, Entity, ref Procedure)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void OnTerminate(in Entity e, in Entity owner, bool nodeActive, in IHasStatusFlags context, in SubStateId state)</code></pre>
+    <pre><code class="lang-csharp hljs">public void OnTerminate(in Entity e, in Entity owner, ref Procedure procedure)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -449,18 +502,8 @@ public class StatusEventsInstruction : IStatusFlagEventsListener, IActivateDeact
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">System.Boolean</span></td>
-        <td><span class="parametername">nodeActive</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="Kinstrife.Entities.Procedures.IHasStatusFlags.html">IHasStatusFlags</a></td>
-        <td><span class="parametername">context</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="Kinstrife.Entities.Procedures.SubStateId.html">SubStateId</a></td>
-        <td><span class="parametername">state</span></td>
+        <td><a class="xref" href="Kinstrife.Entities.Procedures.Procedure.html">Procedure</a></td>
+        <td><span class="parametername">procedure</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -468,12 +511,12 @@ public class StatusEventsInstruction : IStatusFlagEventsListener, IActivateDeact
   
   
   <a id="Kinstrife_Entities_Procedures_StatusEventsInstruction_OnUpdate_" data-uid="Kinstrife.Entities.Procedures.StatusEventsInstruction.OnUpdate*"></a>
-  <h4 id="Kinstrife_Entities_Procedures_StatusEventsInstruction_OnUpdate_Entity__Entity__System_Boolean_Kinstrife_Entities_Procedures_IHasStatusFlags__Kinstrife_Entities_Procedures_SubStateId__" data-uid="Kinstrife.Entities.Procedures.StatusEventsInstruction.OnUpdate(Entity@,Entity@,System.Boolean,Kinstrife.Entities.Procedures.IHasStatusFlags@,Kinstrife.Entities.Procedures.SubStateId@)">OnUpdate(Entity, Entity, Boolean, IHasStatusFlags, SubStateId)</h4>
+  <h4 id="Kinstrife_Entities_Procedures_StatusEventsInstruction_OnUpdate_Entity__Entity__Kinstrife_Entities_Procedures_Procedure__" data-uid="Kinstrife.Entities.Procedures.StatusEventsInstruction.OnUpdate(Entity@,Entity@,Kinstrife.Entities.Procedures.Procedure@)">OnUpdate(Entity, Entity, ref Procedure)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void OnUpdate(in Entity e, in Entity owner, bool nodeActive, in IHasStatusFlags context, in SubStateId state)</code></pre>
+    <pre><code class="lang-csharp hljs">public void OnUpdate(in Entity e, in Entity owner, ref Procedure procedure)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -496,18 +539,8 @@ public class StatusEventsInstruction : IStatusFlagEventsListener, IActivateDeact
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">System.Boolean</span></td>
-        <td><span class="parametername">nodeActive</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="Kinstrife.Entities.Procedures.IHasStatusFlags.html">IHasStatusFlags</a></td>
-        <td><span class="parametername">context</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="Kinstrife.Entities.Procedures.SubStateId.html">SubStateId</a></td>
-        <td><span class="parametername">state</span></td>
+        <td><a class="xref" href="Kinstrife.Entities.Procedures.Procedure.html">Procedure</a></td>
+        <td><span class="parametername">procedure</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -541,13 +574,13 @@ public class StatusEventsInstruction : IStatusFlagEventsListener, IActivateDeact
   </table>
   
   
-  <a id="Kinstrife_Entities_Procedures_StatusEventsInstruction_TryActivate_" data-uid="Kinstrife.Entities.Procedures.StatusEventsInstruction.TryActivate*"></a>
-  <h4 id="Kinstrife_Entities_Procedures_StatusEventsInstruction_TryActivate_Entity__Entity__Kinstrife_Entities_Procedures_IHasStatusFlags__Kinstrife_Entities_Procedures_SubStateId__" data-uid="Kinstrife.Entities.Procedures.StatusEventsInstruction.TryActivate(Entity@,Entity@,Kinstrife.Entities.Procedures.IHasStatusFlags@,Kinstrife.Entities.Procedures.SubStateId@)">TryActivate(Entity, Entity, IHasStatusFlags, SubStateId)</h4>
+  <a id="Kinstrife_Entities_Procedures_StatusEventsInstruction_StateOnStart_" data-uid="Kinstrife.Entities.Procedures.StatusEventsInstruction.StateOnStart*"></a>
+  <h4 id="Kinstrife_Entities_Procedures_StatusEventsInstruction_StateOnStart_Entity__Entity__Kinstrife_Entities_Procedures_Procedure__Kinstrife_Entities_Procedures_StateMachine__Kinstrife_Entities_Procedures_SubState__" data-uid="Kinstrife.Entities.Procedures.StatusEventsInstruction.StateOnStart(Entity@,Entity@,Kinstrife.Entities.Procedures.Procedure@,Kinstrife.Entities.Procedures.StateMachine@,Kinstrife.Entities.Procedures.SubState@)">StateOnStart(Entity, Entity, ref Procedure, ref StateMachine, ref SubState)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual void TryActivate(in Entity e, in Entity owner, in IHasStatusFlags context, in SubStateId state)</code></pre>
+    <pre><code class="lang-csharp hljs">public void StateOnStart(in Entity e, in Entity owner, ref Procedure procedure, ref StateMachine stateMachine, ref SubState subState)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -570,26 +603,31 @@ public class StatusEventsInstruction : IStatusFlagEventsListener, IActivateDeact
         <td></td>
       </tr>
       <tr>
-        <td><a class="xref" href="Kinstrife.Entities.Procedures.IHasStatusFlags.html">IHasStatusFlags</a></td>
-        <td><span class="parametername">context</span></td>
+        <td><a class="xref" href="Kinstrife.Entities.Procedures.Procedure.html">Procedure</a></td>
+        <td><span class="parametername">procedure</span></td>
         <td></td>
       </tr>
       <tr>
-        <td><a class="xref" href="Kinstrife.Entities.Procedures.SubStateId.html">SubStateId</a></td>
-        <td><span class="parametername">state</span></td>
+        <td><a class="xref" href="Kinstrife.Entities.Procedures.StateMachine.html">StateMachine</a></td>
+        <td><span class="parametername">stateMachine</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Kinstrife.Entities.Procedures.SubState.html">SubState</a></td>
+        <td><span class="parametername">subState</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   
   
-  <a id="Kinstrife_Entities_Procedures_StatusEventsInstruction_TryDeactivate_" data-uid="Kinstrife.Entities.Procedures.StatusEventsInstruction.TryDeactivate*"></a>
-  <h4 id="Kinstrife_Entities_Procedures_StatusEventsInstruction_TryDeactivate_Entity__Entity__Kinstrife_Entities_Procedures_IHasStatusFlags__Kinstrife_Entities_Procedures_SubStateId__" data-uid="Kinstrife.Entities.Procedures.StatusEventsInstruction.TryDeactivate(Entity@,Entity@,Kinstrife.Entities.Procedures.IHasStatusFlags@,Kinstrife.Entities.Procedures.SubStateId@)">TryDeactivate(Entity, Entity, IHasStatusFlags, SubStateId)</h4>
+  <a id="Kinstrife_Entities_Procedures_StatusEventsInstruction_StateOnUpdate_" data-uid="Kinstrife.Entities.Procedures.StatusEventsInstruction.StateOnUpdate*"></a>
+  <h4 id="Kinstrife_Entities_Procedures_StatusEventsInstruction_StateOnUpdate_Entity__Entity__Kinstrife_Entities_Procedures_Procedure__Kinstrife_Entities_Procedures_StateMachine__Kinstrife_Entities_Procedures_SubState__" data-uid="Kinstrife.Entities.Procedures.StatusEventsInstruction.StateOnUpdate(Entity@,Entity@,Kinstrife.Entities.Procedures.Procedure@,Kinstrife.Entities.Procedures.StateMachine@,Kinstrife.Entities.Procedures.SubState@)">StateOnUpdate(Entity, Entity, ref Procedure, ref StateMachine, ref SubState)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual void TryDeactivate(in Entity e, in Entity owner, in IHasStatusFlags context, in SubStateId state)</code></pre>
+    <pre><code class="lang-csharp hljs">public void StateOnUpdate(in Entity e, in Entity owner, ref Procedure procedure, ref StateMachine stateMachine, ref SubState subState)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -612,13 +650,98 @@ public class StatusEventsInstruction : IStatusFlagEventsListener, IActivateDeact
         <td></td>
       </tr>
       <tr>
-        <td><a class="xref" href="Kinstrife.Entities.Procedures.IHasStatusFlags.html">IHasStatusFlags</a></td>
-        <td><span class="parametername">context</span></td>
+        <td><a class="xref" href="Kinstrife.Entities.Procedures.Procedure.html">Procedure</a></td>
+        <td><span class="parametername">procedure</span></td>
         <td></td>
       </tr>
       <tr>
-        <td><a class="xref" href="Kinstrife.Entities.Procedures.SubStateId.html">SubStateId</a></td>
-        <td><span class="parametername">state</span></td>
+        <td><a class="xref" href="Kinstrife.Entities.Procedures.StateMachine.html">StateMachine</a></td>
+        <td><span class="parametername">stateMachine</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Kinstrife.Entities.Procedures.SubState.html">SubState</a></td>
+        <td><span class="parametername">subState</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Kinstrife_Entities_Procedures_StatusEventsInstruction_StateWillTerminate_" data-uid="Kinstrife.Entities.Procedures.StatusEventsInstruction.StateWillTerminate*"></a>
+  <h4 id="Kinstrife_Entities_Procedures_StatusEventsInstruction_StateWillTerminate_Entity__Entity__Kinstrife_Entities_Procedures_Procedure__Kinstrife_Entities_Procedures_StateMachine__Kinstrife_Entities_Procedures_SubState__" data-uid="Kinstrife.Entities.Procedures.StatusEventsInstruction.StateWillTerminate(Entity@,Entity@,Kinstrife.Entities.Procedures.Procedure@,Kinstrife.Entities.Procedures.StateMachine@,Kinstrife.Entities.Procedures.SubState@)">StateWillTerminate(Entity, Entity, ref Procedure, ref StateMachine, ref SubState)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void StateWillTerminate(in Entity e, in Entity owner, ref Procedure procedure, ref StateMachine stateMachine, ref SubState subState)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Entity</span></td>
+        <td><span class="parametername">e</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">Entity</span></td>
+        <td><span class="parametername">owner</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Kinstrife.Entities.Procedures.Procedure.html">Procedure</a></td>
+        <td><span class="parametername">procedure</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Kinstrife.Entities.Procedures.StateMachine.html">StateMachine</a></td>
+        <td><span class="parametername">stateMachine</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Kinstrife.Entities.Procedures.SubState.html">SubState</a></td>
+        <td><span class="parametername">subState</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Kinstrife_Entities_Procedures_StatusEventsInstruction_UpdateIsActive_" data-uid="Kinstrife.Entities.Procedures.StatusEventsInstruction.UpdateIsActive*"></a>
+  <h4 id="Kinstrife_Entities_Procedures_StatusEventsInstruction_UpdateIsActive_Entity__System_Boolean__" data-uid="Kinstrife.Entities.Procedures.StatusEventsInstruction.UpdateIsActive(Entity@,System.Boolean@)">UpdateIsActive(Entity, ref Boolean)</h4>
+  <div class="markdown level1 summary"><p>Use this to add custom logic to update the the &quot;IsActive&quot;</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void UpdateIsActive(in Entity e, ref bool isActive)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Entity</span></td>
+        <td><span class="parametername">e</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">isActive</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -626,12 +749,12 @@ public class StatusEventsInstruction : IStatusFlagEventsListener, IActivateDeact
   
   
   <a id="Kinstrife_Entities_Procedures_StatusEventsInstruction_WillStart_" data-uid="Kinstrife.Entities.Procedures.StatusEventsInstruction.WillStart*"></a>
-  <h4 id="Kinstrife_Entities_Procedures_StatusEventsInstruction_WillStart_Entity__Entity__System_Boolean_Kinstrife_Entities_Procedures_IHasStatusFlags__Kinstrife_Entities_Procedures_SubStateId__" data-uid="Kinstrife.Entities.Procedures.StatusEventsInstruction.WillStart(Entity@,Entity@,System.Boolean,Kinstrife.Entities.Procedures.IHasStatusFlags@,Kinstrife.Entities.Procedures.SubStateId@)">WillStart(Entity, Entity, Boolean, IHasStatusFlags, SubStateId)</h4>
+  <h4 id="Kinstrife_Entities_Procedures_StatusEventsInstruction_WillStart_Entity__Entity__Kinstrife_Entities_Procedures_Procedure__" data-uid="Kinstrife.Entities.Procedures.StatusEventsInstruction.WillStart(Entity@,Entity@,Kinstrife.Entities.Procedures.Procedure@)">WillStart(Entity, Entity, ref Procedure)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void WillStart(in Entity e, in Entity owner, bool nodeActive, in IHasStatusFlags context, in SubStateId state)</code></pre>
+    <pre><code class="lang-csharp hljs">public void WillStart(in Entity e, in Entity owner, ref Procedure procedure)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -654,18 +777,8 @@ public class StatusEventsInstruction : IStatusFlagEventsListener, IActivateDeact
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">System.Boolean</span></td>
-        <td><span class="parametername">nodeActive</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="Kinstrife.Entities.Procedures.IHasStatusFlags.html">IHasStatusFlags</a></td>
-        <td><span class="parametername">context</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="Kinstrife.Entities.Procedures.SubStateId.html">SubStateId</a></td>
-        <td><span class="parametername">state</span></td>
+        <td><a class="xref" href="Kinstrife.Entities.Procedures.Procedure.html">Procedure</a></td>
+        <td><span class="parametername">procedure</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -673,12 +786,12 @@ public class StatusEventsInstruction : IStatusFlagEventsListener, IActivateDeact
   
   
   <a id="Kinstrife_Entities_Procedures_StatusEventsInstruction_WillTerminate_" data-uid="Kinstrife.Entities.Procedures.StatusEventsInstruction.WillTerminate*"></a>
-  <h4 id="Kinstrife_Entities_Procedures_StatusEventsInstruction_WillTerminate_Entity__Entity__System_Boolean_Kinstrife_Entities_Procedures_IHasStatusFlags__Kinstrife_Entities_Procedures_SubStateId__" data-uid="Kinstrife.Entities.Procedures.StatusEventsInstruction.WillTerminate(Entity@,Entity@,System.Boolean,Kinstrife.Entities.Procedures.IHasStatusFlags@,Kinstrife.Entities.Procedures.SubStateId@)">WillTerminate(Entity, Entity, Boolean, IHasStatusFlags, SubStateId)</h4>
+  <h4 id="Kinstrife_Entities_Procedures_StatusEventsInstruction_WillTerminate_Entity__Entity__Kinstrife_Entities_Procedures_Procedure__" data-uid="Kinstrife.Entities.Procedures.StatusEventsInstruction.WillTerminate(Entity@,Entity@,Kinstrife.Entities.Procedures.Procedure@)">WillTerminate(Entity, Entity, ref Procedure)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void WillTerminate(in Entity e, in Entity owner, bool nodeActive, in IHasStatusFlags context, in SubStateId state)</code></pre>
+    <pre><code class="lang-csharp hljs">public void WillTerminate(in Entity e, in Entity owner, ref Procedure procedure)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -701,18 +814,8 @@ public class StatusEventsInstruction : IStatusFlagEventsListener, IActivateDeact
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">System.Boolean</span></td>
-        <td><span class="parametername">nodeActive</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="Kinstrife.Entities.Procedures.IHasStatusFlags.html">IHasStatusFlags</a></td>
-        <td><span class="parametername">context</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="Kinstrife.Entities.Procedures.SubStateId.html">SubStateId</a></td>
-        <td><span class="parametername">state</span></td>
+        <td><a class="xref" href="Kinstrife.Entities.Procedures.Procedure.html">Procedure</a></td>
+        <td><span class="parametername">procedure</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -769,7 +872,13 @@ public class StatusEventsInstruction : IStatusFlagEventsListener, IActivateDeact
   </table>
   <h3 id="implements">Implements</h3>
   <div>
-      <a class="xref" href="Kinstrife.Entities.Procedures.IStatusFlagEventsListener.html">IStatusFlagEventsListener</a>
+      <a class="xref" href="Kinstrife.Entities.Procedures.IProcedureEventsListener.html">IProcedureEventsListener</a>
+  </div>
+  <div>
+      <a class="xref" href="Kinstrife.Entities.Procedures.IStateMachineEventsListener.html">IStateMachineEventsListener</a>
+  </div>
+  <div>
+      <a class="xref" href="Kinstrife.Entities.Procedures.IEventsListener.html">IEventsListener</a>
   </div>
   <div>
       <a class="xref" href="Kinstrife.Entities.Procedures.IActivateDeactivate.html">IActivateDeactivate</a>

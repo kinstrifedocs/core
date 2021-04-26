@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class StatusEventsBroadcaster.StatusEventsContainer
    | Kinstrife ">
-    <meta name="generator" content="docfx 2.56.7.0">
+    <meta name="generator" content="docfx 2.57.2.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
@@ -80,10 +80,8 @@
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
     <div class="level1"><span class="xref">StatusEventsBroadcaster.StatusEventsContainer</span></div>
-  </div>
-  <div classs="implements">
-    <h5>Implements</h5>
-    <div><a class="xref" href="Kinstrife.Entities.Procedures.IRegisterListener.html">IRegisterListener</a></div>
+      <div class="level2"><a class="xref" href="Kinstrife.Entities.Procedures.StatusEventsBroadcaster.ProcedureStatusEvents.html">StatusEventsBroadcaster.ProcedureStatusEvents</a></div>
+      <div class="level2"><a class="xref" href="Kinstrife.Entities.Procedures.StatusEventsBroadcaster.StateMachineStatusEvents.html">StatusEventsBroadcaster.StateMachineStatusEvents</a></div>
   </div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
@@ -113,18 +111,18 @@
   <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
   <h5 id="Kinstrife_Entities_Procedures_StatusEventsBroadcaster_StatusEventsContainer_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class StatusEventsContainer : IRegisterListener</code></pre>
+    <pre><code class="lang-csharp hljs">public abstract class StatusEventsContainer</code></pre>
   </div>
   <h3 id="fields">Fields
   </h3>
   
   
-  <h4 id="Kinstrife_Entities_Procedures_StatusEventsBroadcaster_StatusEventsContainer_OnStart" data-uid="Kinstrife.Entities.Procedures.StatusEventsBroadcaster.StatusEventsContainer.OnStart">OnStart</h4>
+  <h4 id="Kinstrife_Entities_Procedures_StatusEventsBroadcaster_StatusEventsContainer_hasListeners" data-uid="Kinstrife.Entities.Procedures.StatusEventsBroadcaster.StatusEventsContainer.hasListeners">hasListeners</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public StatusEventsBroadcaster.StatusEventsContainer.StatusEvent OnStart</code></pre>
+    <pre><code class="lang-csharp hljs">protected bool hasListeners</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -136,103 +134,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="Kinstrife.Entities.Procedures.StatusEventsBroadcaster.StatusEventsContainer.StatusEvent.html">StatusEventsBroadcaster.StatusEventsContainer.StatusEvent</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <h4 id="Kinstrife_Entities_Procedures_StatusEventsBroadcaster_StatusEventsContainer_OnTerminate" data-uid="Kinstrife.Entities.Procedures.StatusEventsBroadcaster.StatusEventsContainer.OnTerminate">OnTerminate</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public StatusEventsBroadcaster.StatusEventsContainer.StatusEvent OnTerminate</code></pre>
-  </div>
-  <h5 class="fieldValue">Field Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Kinstrife.Entities.Procedures.StatusEventsBroadcaster.StatusEventsContainer.StatusEvent.html">StatusEventsBroadcaster.StatusEventsContainer.StatusEvent</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <h4 id="Kinstrife_Entities_Procedures_StatusEventsBroadcaster_StatusEventsContainer_OnUpdate" data-uid="Kinstrife.Entities.Procedures.StatusEventsBroadcaster.StatusEventsContainer.OnUpdate">OnUpdate</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public StatusEventsBroadcaster.StatusEventsContainer.StatusEvent OnUpdate</code></pre>
-  </div>
-  <h5 class="fieldValue">Field Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Kinstrife.Entities.Procedures.StatusEventsBroadcaster.StatusEventsContainer.StatusEvent.html">StatusEventsBroadcaster.StatusEventsContainer.StatusEvent</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <h4 id="Kinstrife_Entities_Procedures_StatusEventsBroadcaster_StatusEventsContainer_WillStart" data-uid="Kinstrife.Entities.Procedures.StatusEventsBroadcaster.StatusEventsContainer.WillStart">WillStart</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public StatusEventsBroadcaster.StatusEventsContainer.StatusEvent WillStart</code></pre>
-  </div>
-  <h5 class="fieldValue">Field Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Kinstrife.Entities.Procedures.StatusEventsBroadcaster.StatusEventsContainer.StatusEvent.html">StatusEventsBroadcaster.StatusEventsContainer.StatusEvent</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <h4 id="Kinstrife_Entities_Procedures_StatusEventsBroadcaster_StatusEventsContainer_WillTerminate" data-uid="Kinstrife.Entities.Procedures.StatusEventsBroadcaster.StatusEventsContainer.WillTerminate">WillTerminate</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public StatusEventsBroadcaster.StatusEventsContainer.StatusEvent WillTerminate</code></pre>
-  </div>
-  <h5 class="fieldValue">Field Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Kinstrife.Entities.Procedures.StatusEventsBroadcaster.StatusEventsContainer.StatusEvent.html">StatusEventsBroadcaster.StatusEventsContainer.StatusEvent</a></td>
+        <td><span class="xref">System.Boolean</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -264,44 +166,6 @@
       </tr>
     </tbody>
   </table>
-  <h3 id="methods">Methods
-  </h3>
-  
-  
-  <a id="Kinstrife_Entities_Procedures_StatusEventsBroadcaster_StatusEventsContainer_RegisterListener_" data-uid="Kinstrife.Entities.Procedures.StatusEventsBroadcaster.StatusEventsContainer.RegisterListener*"></a>
-  <h4 id="Kinstrife_Entities_Procedures_StatusEventsBroadcaster_StatusEventsContainer_RegisterListener_Kinstrife_Entities_Procedures_IStatusFlagEventsListener_Kinstrife_Entities_Procedures_StatusFlag_" data-uid="Kinstrife.Entities.Procedures.StatusEventsBroadcaster.StatusEventsContainer.RegisterListener(Kinstrife.Entities.Procedures.IStatusFlagEventsListener,Kinstrife.Entities.Procedures.StatusFlag)">RegisterListener(IStatusFlagEventsListener, StatusFlag)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void RegisterListener(IStatusFlagEventsListener listener, StatusFlag statusHooks)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Kinstrife.Entities.Procedures.IStatusFlagEventsListener.html">IStatusFlagEventsListener</a></td>
-        <td><span class="parametername">listener</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="Kinstrife.Entities.Procedures.StatusFlag.html">StatusFlag</a></td>
-        <td><span class="parametername">statusHooks</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h3 id="implements">Implements</h3>
-  <div>
-      <a class="xref" href="Kinstrife.Entities.Procedures.IRegisterListener.html">IRegisterListener</a>
-  </div>
 </article>
           </div>
           

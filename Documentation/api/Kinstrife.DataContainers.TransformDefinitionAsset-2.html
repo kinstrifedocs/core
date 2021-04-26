@@ -115,7 +115,7 @@
   <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
   <h5 id="Kinstrife_DataContainers_TransformDefinitionAsset_2_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public abstract class TransformDefinitionAsset&lt;TKey, TId&gt; : ScriptableObjectContainer&lt;TKey, TId&gt; where TId : TransformId</code></pre>
+    <pre><code class="lang-csharp hljs">public abstract class TransformDefinitionAsset&lt;TKey, TId&gt; : ScriptableObjectContainer&lt;TKey, TId&gt; where TId : ScriptableObject, ITransformId</code></pre>
   </div>
   <h5 class="typeParameters">Type Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -168,12 +168,12 @@
   
   
   <a id="Kinstrife_DataContainers_TransformDefinitionAsset_2_Bake_" data-uid="Kinstrife.DataContainers.TransformDefinitionAsset`2.Bake*"></a>
-  <h4 id="Kinstrife_DataContainers_TransformDefinitionAsset_2_Bake_System_Collections_Generic_IEnumerable_Kinstrife_DataContainers_TransformRef__" data-uid="Kinstrife.DataContainers.TransformDefinitionAsset`2.Bake(System.Collections.Generic.IEnumerable{Kinstrife.DataContainers.TransformRef})">Bake(IEnumerable&lt;TransformRef&gt;)</h4>
+  <h4 id="Kinstrife_DataContainers_TransformDefinitionAsset_2_Bake_System_Collections_Generic_IEnumerable_Kinstrife_DataContainers_ITransformRef__" data-uid="Kinstrife.DataContainers.TransformDefinitionAsset`2.Bake(System.Collections.Generic.IEnumerable{Kinstrife.DataContainers.ITransformRef})">Bake(IEnumerable&lt;ITransformRef&gt;)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual void Bake(IEnumerable&lt;TransformRef&gt; values)</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual void Bake(IEnumerable&lt;ITransformRef&gt; values)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -186,7 +186,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="Kinstrife.DataContainers.TransformRef.html">TransformRef</a>&gt;</td>
+        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="Kinstrife.DataContainers.ITransformRef.html">ITransformRef</a>&gt;</td>
         <td><span class="parametername">values</span></td>
         <td></td>
       </tr>
@@ -195,12 +195,12 @@
   
   
   <a id="Kinstrife_DataContainers_TransformDefinitionAsset_2_GetKey_" data-uid="Kinstrife.DataContainers.TransformDefinitionAsset`2.GetKey*"></a>
-  <h4 id="Kinstrife_DataContainers_TransformDefinitionAsset_2_GetKey_Kinstrife_DataContainers_TransformRef_" data-uid="Kinstrife.DataContainers.TransformDefinitionAsset`2.GetKey(Kinstrife.DataContainers.TransformRef)">GetKey(TransformRef)</h4>
+  <h4 id="Kinstrife_DataContainers_TransformDefinitionAsset_2_GetKey_Kinstrife_DataContainers_ITransformRef_" data-uid="Kinstrife.DataContainers.TransformDefinitionAsset`2.GetKey(Kinstrife.DataContainers.ITransformRef)">GetKey(ITransformRef)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected abstract TKey GetKey(TransformRef transform)</code></pre>
+    <pre><code class="lang-csharp hljs">protected abstract TKey GetKey(ITransformRef transform)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -213,7 +213,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="Kinstrife.DataContainers.TransformRef.html">TransformRef</a></td>
+        <td><a class="xref" href="Kinstrife.DataContainers.ITransformRef.html">ITransformRef</a></td>
         <td><span class="parametername">transform</span></td>
         <td></td>
       </tr>
@@ -284,12 +284,12 @@
   
   
   <a id="Kinstrife_DataContainers_TransformDefinitionAsset_2_TryGetAssetFromTransformRef_" data-uid="Kinstrife.DataContainers.TransformDefinitionAsset`2.TryGetAssetFromTransformRef*"></a>
-  <h4 id="Kinstrife_DataContainers_TransformDefinitionAsset_2_TryGetAssetFromTransformRef_Kinstrife_DataContainers_TransformRef__1__" data-uid="Kinstrife.DataContainers.TransformDefinitionAsset`2.TryGetAssetFromTransformRef(Kinstrife.DataContainers.TransformRef,`1@)">TryGetAssetFromTransformRef(TransformRef, out TId)</h4>
+  <h4 id="Kinstrife_DataContainers_TransformDefinitionAsset_2_TryGetAssetFromTransformRef_Kinstrife_DataContainers_ITransformRef__1__" data-uid="Kinstrife.DataContainers.TransformDefinitionAsset`2.TryGetAssetFromTransformRef(Kinstrife.DataContainers.ITransformRef,`1@)">TryGetAssetFromTransformRef(ITransformRef, out TId)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public abstract bool TryGetAssetFromTransformRef(TransformRef input, out TId asset)</code></pre>
+    <pre><code class="lang-csharp hljs">public abstract bool TryGetAssetFromTransformRef(ITransformRef input, out TId asset)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -302,7 +302,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="Kinstrife.DataContainers.TransformRef.html">TransformRef</a></td>
+        <td><a class="xref" href="Kinstrife.DataContainers.ITransformRef.html">ITransformRef</a></td>
         <td><span class="parametername">input</span></td>
         <td></td>
       </tr>

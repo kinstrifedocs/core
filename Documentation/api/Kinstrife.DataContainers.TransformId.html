@@ -79,31 +79,30 @@
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
     <div class="level1"><span class="xref">TransformId</span></div>
-      <div class="level2"><a class="xref" href="Kinstrife.Rigging.BoneId.html">BoneId</a></div>
-      <div class="level2"><a class="xref" href="Kinstrife.Rigging.EffectorId.html">EffectorId</a></div>
   </div>
   <div classs="implements">
     <h5>Implements</h5>
+    <div><a class="xref" href="Kinstrife.DataContainers.ITransformId.html">ITransformId</a></div>
     <div><span class="xref">IEquatable</span>&lt;<span class="xref">System.String</span>&gt;</div>
-    <div><span class="xref">IEquatable</span>&lt;<a class="xref" href="Kinstrife.DataContainers.TransformInfo.html">TransformInfo</a>&gt;</div>
-    <div><a class="xref" href="Kinstrife.DataContainers.DataProxy-1.html">DataProxy</a>&lt;<span class="xref">Transform</span>&gt;</div>
+    <div><span class="xref">IEquatable</span>&lt;<a class="xref" href="Kinstrife.DataContainers.ITransformInfo.html">ITransformInfo</a>&gt;</div>
+    <div><a class="xref" href="Kinstrife.DataContainers.IDataProxy-1.html">IDataProxy</a>&lt;<span class="xref">Transform</span>&gt;</div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Kinstrife.DataContainers.html">Kinstrife.DataContainers</a></h6>
   <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
   <h5 id="Kinstrife_DataContainers_TransformId_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public abstract class TransformId : ScriptableObject, IEquatable&lt;string&gt;, IEquatable&lt;TransformInfo&gt;, DataProxy&lt;Transform&gt;</code></pre>
+    <pre><code class="lang-csharp hljs">public abstract class TransformId : ScriptableObject, ITransformId, IEquatable&lt;string&gt;, IEquatable&lt;ITransformInfo&gt;, IDataProxy&lt;Transform&gt;</code></pre>
   </div>
   <h3 id="fields">Fields
   </h3>
   
   
-  <h4 id="Kinstrife_DataContainers_TransformId_Parent" data-uid="Kinstrife.DataContainers.TransformId.Parent">Parent</h4>
+  <h4 id="Kinstrife_DataContainers_TransformId_parent" data-uid="Kinstrife.DataContainers.TransformId.parent">parent</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public TransformId Parent</code></pre>
+    <pre><code class="lang-csharp hljs">public TransformId parent</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -144,17 +143,44 @@
       </tr>
     </tbody>
   </table>
+  <h3 id="properties">Properties
+  </h3>
+  
+  
+  <a id="Kinstrife_DataContainers_TransformId_TransformInfo_" data-uid="Kinstrife.DataContainers.TransformId.TransformInfo*"></a>
+  <h4 id="Kinstrife_DataContainers_TransformId_TransformInfo" data-uid="Kinstrife.DataContainers.TransformId.TransformInfo">TransformInfo</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ITransformInfo TransformInfo { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Kinstrife.DataContainers.ITransformInfo.html">ITransformInfo</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   <h3 id="methods">Methods
   </h3>
   
   
   <a id="Kinstrife_DataContainers_TransformId_Equals_" data-uid="Kinstrife.DataContainers.TransformId.Equals*"></a>
-  <h4 id="Kinstrife_DataContainers_TransformId_Equals_Kinstrife_DataContainers_TransformInfo_" data-uid="Kinstrife.DataContainers.TransformId.Equals(Kinstrife.DataContainers.TransformInfo)">Equals(TransformInfo)</h4>
+  <h4 id="Kinstrife_DataContainers_TransformId_Equals_Kinstrife_DataContainers_ITransformInfo_" data-uid="Kinstrife.DataContainers.TransformId.Equals(Kinstrife.DataContainers.ITransformInfo)">Equals(ITransformInfo)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public bool Equals(TransformInfo other)</code></pre>
+    <pre><code class="lang-csharp hljs">public bool Equals(ITransformInfo other)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -167,7 +193,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="Kinstrife.DataContainers.TransformInfo.html">TransformInfo</a></td>
+        <td><a class="xref" href="Kinstrife.DataContainers.ITransformInfo.html">ITransformInfo</a></td>
         <td><span class="parametername">other</span></td>
         <td></td>
       </tr>
@@ -230,15 +256,45 @@
       </tr>
     </tbody>
   </table>
+  <h3 id="eii">Explicit Interface Implementations
+  </h3>
+  
+  
+  <a id="Kinstrife_DataContainers_TransformId_Kinstrife_DataContainers_ITransformId_Parent_" data-uid="Kinstrife.DataContainers.TransformId.Kinstrife#DataContainers#ITransformId#Parent*"></a>
+  <h4 id="Kinstrife_DataContainers_TransformId_Kinstrife_DataContainers_ITransformId_Parent" data-uid="Kinstrife.DataContainers.TransformId.Kinstrife#DataContainers#ITransformId#Parent">ITransformId.Parent</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">ITransformId ITransformId.Parent { get; set; }</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Kinstrife.DataContainers.ITransformId.html">ITransformId</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   <h3 id="implements">Implements</h3>
   <div>
-      <span class="xref">IEquatable&lt;&gt;</span>
+      <a class="xref" href="Kinstrife.DataContainers.ITransformId.html">ITransformId</a>
   </div>
   <div>
       <span class="xref">IEquatable&lt;&gt;</span>
   </div>
   <div>
-      <a class="xref" href="Kinstrife.DataContainers.DataProxy-1.html">DataProxy&lt;TObjectType&gt;</a>
+      <span class="xref">IEquatable&lt;&gt;</span>
+  </div>
+  <div>
+      <a class="xref" href="Kinstrife.DataContainers.IDataProxy-1.html">IDataProxy&lt;TObjectType&gt;</a>
   </div>
 </article>
           </div>

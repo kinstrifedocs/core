@@ -83,7 +83,9 @@
   </div>
   <div classs="implements">
     <h5>Implements</h5>
-    <div><a class="xref" href="Kinstrife.Entities.Procedures.IStatusFlagEventsListener.html">IStatusFlagEventsListener</a></div>
+    <div><a class="xref" href="Kinstrife.Entities.Procedures.IProcedureEventsListener.html">IProcedureEventsListener</a></div>
+    <div><a class="xref" href="Kinstrife.Entities.Procedures.IStateMachineEventsListener.html">IStateMachineEventsListener</a></div>
+    <div><a class="xref" href="Kinstrife.Entities.Procedures.IEventsListener.html">IEventsListener</a></div>
     <div><a class="xref" href="Kinstrife.Entities.Procedures.IActivateDeactivate.html">IActivateDeactivate</a></div>
     <div><a class="xref" href="Kinstrife.Entities.Procedures.IRegisterAtBroadcaster.html">IRegisterAtBroadcaster</a></div>
   </div>
@@ -114,31 +116,34 @@
       <a class="xref" href="Kinstrife.Entities.Procedures.StatusEventsInstruction.html#Kinstrife_Entities_Procedures_StatusEventsInstruction_Init">StatusEventsInstruction.Init()</a>
     </div>
     <div>
-      <a class="xref" href="Kinstrife.Entities.Procedures.StatusEventsInstruction.html#Kinstrife_Entities_Procedures_StatusEventsInstruction_CheckActive_Entity__Kinstrife_Entities_Procedures_SubStateId__">StatusEventsInstruction.CheckActive(Entity, SubStateId)</a>
+      <a class="xref" href="Kinstrife.Entities.Procedures.StatusEventsInstruction.html#Kinstrife_Entities_Procedures_StatusEventsInstruction_UpdateIsActive_Entity__System_Boolean__">StatusEventsInstruction.UpdateIsActive(Entity, Boolean)</a>
     </div>
     <div>
-      <a class="xref" href="Kinstrife.Entities.Procedures.StatusEventsInstruction.html#Kinstrife_Entities_Procedures_StatusEventsInstruction_TryActivate_Entity__Entity__Kinstrife_Entities_Procedures_IHasStatusFlags__Kinstrife_Entities_Procedures_SubStateId__">StatusEventsInstruction.TryActivate(Entity, Entity, IHasStatusFlags, SubStateId)</a>
+      <a class="xref" href="Kinstrife.Entities.Procedures.StatusEventsInstruction.html#Kinstrife_Entities_Procedures_StatusEventsInstruction_OnStart_Entity__Entity__Kinstrife_Entities_Procedures_Procedure__">StatusEventsInstruction.OnStart(Entity, Entity, Procedure)</a>
     </div>
     <div>
-      <a class="xref" href="Kinstrife.Entities.Procedures.StatusEventsInstruction.html#Kinstrife_Entities_Procedures_StatusEventsInstruction_TryDeactivate_Entity__Entity__Kinstrife_Entities_Procedures_IHasStatusFlags__Kinstrife_Entities_Procedures_SubStateId__">StatusEventsInstruction.TryDeactivate(Entity, Entity, IHasStatusFlags, SubStateId)</a>
+      <a class="xref" href="Kinstrife.Entities.Procedures.StatusEventsInstruction.html#Kinstrife_Entities_Procedures_StatusEventsInstruction_OnTerminate_Entity__Entity__Kinstrife_Entities_Procedures_Procedure__">StatusEventsInstruction.OnTerminate(Entity, Entity, Procedure)</a>
     </div>
     <div>
-      <a class="xref" href="Kinstrife.Entities.Procedures.StatusEventsInstruction.html#Kinstrife_Entities_Procedures_StatusEventsInstruction_OnStart_Entity__Entity__System_Boolean_Kinstrife_Entities_Procedures_IHasStatusFlags__Kinstrife_Entities_Procedures_SubStateId__">StatusEventsInstruction.OnStart(Entity, Entity, Boolean, IHasStatusFlags, SubStateId)</a>
+      <a class="xref" href="Kinstrife.Entities.Procedures.StatusEventsInstruction.html#Kinstrife_Entities_Procedures_StatusEventsInstruction_OnUpdate_Entity__Entity__Kinstrife_Entities_Procedures_Procedure__">StatusEventsInstruction.OnUpdate(Entity, Entity, Procedure)</a>
     </div>
     <div>
-      <a class="xref" href="Kinstrife.Entities.Procedures.StatusEventsInstruction.html#Kinstrife_Entities_Procedures_StatusEventsInstruction_OnTerminate_Entity__Entity__System_Boolean_Kinstrife_Entities_Procedures_IHasStatusFlags__Kinstrife_Entities_Procedures_SubStateId__">StatusEventsInstruction.OnTerminate(Entity, Entity, Boolean, IHasStatusFlags, SubStateId)</a>
+      <a class="xref" href="Kinstrife.Entities.Procedures.StatusEventsInstruction.html#Kinstrife_Entities_Procedures_StatusEventsInstruction_WillStart_Entity__Entity__Kinstrife_Entities_Procedures_Procedure__">StatusEventsInstruction.WillStart(Entity, Entity, Procedure)</a>
     </div>
     <div>
-      <a class="xref" href="Kinstrife.Entities.Procedures.StatusEventsInstruction.html#Kinstrife_Entities_Procedures_StatusEventsInstruction_OnUpdate_Entity__Entity__System_Boolean_Kinstrife_Entities_Procedures_IHasStatusFlags__Kinstrife_Entities_Procedures_SubStateId__">StatusEventsInstruction.OnUpdate(Entity, Entity, Boolean, IHasStatusFlags, SubStateId)</a>
-    </div>
-    <div>
-      <a class="xref" href="Kinstrife.Entities.Procedures.StatusEventsInstruction.html#Kinstrife_Entities_Procedures_StatusEventsInstruction_WillStart_Entity__Entity__System_Boolean_Kinstrife_Entities_Procedures_IHasStatusFlags__Kinstrife_Entities_Procedures_SubStateId__">StatusEventsInstruction.WillStart(Entity, Entity, Boolean, IHasStatusFlags, SubStateId)</a>
-    </div>
-    <div>
-      <a class="xref" href="Kinstrife.Entities.Procedures.StatusEventsInstruction.html#Kinstrife_Entities_Procedures_StatusEventsInstruction_WillTerminate_Entity__Entity__System_Boolean_Kinstrife_Entities_Procedures_IHasStatusFlags__Kinstrife_Entities_Procedures_SubStateId__">StatusEventsInstruction.WillTerminate(Entity, Entity, Boolean, IHasStatusFlags, SubStateId)</a>
+      <a class="xref" href="Kinstrife.Entities.Procedures.StatusEventsInstruction.html#Kinstrife_Entities_Procedures_StatusEventsInstruction_WillTerminate_Entity__Entity__Kinstrife_Entities_Procedures_Procedure__">StatusEventsInstruction.WillTerminate(Entity, Entity, Procedure)</a>
     </div>
     <div>
       <a class="xref" href="Kinstrife.Entities.Procedures.StatusEventsInstruction.html#Kinstrife_Entities_Procedures_StatusEventsInstruction_RegisterAtBroadcaster_Kinstrife_Entities_Procedures_StatusEventsBroadcaster_">StatusEventsInstruction.RegisterAtBroadcaster(StatusEventsBroadcaster)</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.Entities.Procedures.StatusEventsInstruction.html#Kinstrife_Entities_Procedures_StatusEventsInstruction_StateOnStart_Entity__Entity__Kinstrife_Entities_Procedures_Procedure__Kinstrife_Entities_Procedures_StateMachine__Kinstrife_Entities_Procedures_SubState__">StatusEventsInstruction.StateOnStart(Entity, Entity, Procedure, StateMachine, SubState)</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.Entities.Procedures.StatusEventsInstruction.html#Kinstrife_Entities_Procedures_StatusEventsInstruction_StateOnUpdate_Entity__Entity__Kinstrife_Entities_Procedures_Procedure__Kinstrife_Entities_Procedures_StateMachine__Kinstrife_Entities_Procedures_SubState__">StatusEventsInstruction.StateOnUpdate(Entity, Entity, Procedure, StateMachine, SubState)</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.Entities.Procedures.StatusEventsInstruction.html#Kinstrife_Entities_Procedures_StatusEventsInstruction_StateWillTerminate_Entity__Entity__Kinstrife_Entities_Procedures_Procedure__Kinstrife_Entities_Procedures_StateMachine__Kinstrife_Entities_Procedures_SubState__">StatusEventsInstruction.StateWillTerminate(Entity, Entity, Procedure, StateMachine, SubState)</a>
     </div>
     <div>
       <span class="xref">System.Object.ToString()</span>
@@ -167,7 +172,7 @@
   <h5 id="Kinstrife_Entities_Procedures_PlayableAdapterComponent_Instruction_syntax">Syntax</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">[Serializable]
-public class Instruction : StatusEventsInstruction, IStatusFlagEventsListener, IActivateDeactivate, IRegisterAtBroadcaster</code></pre>
+public class Instruction : StatusEventsInstruction, IProcedureEventsListener, IStateMachineEventsListener, IEventsListener, IActivateDeactivate, IRegisterAtBroadcaster</code></pre>
   </div>
   <h3 id="fields">Fields
   </h3>
@@ -250,13 +255,13 @@ public class Instruction : StatusEventsInstruction, IStatusFlagEventsListener, I
   </table>
   
   
-  <a id="Kinstrife_Entities_Procedures_PlayableAdapterComponent_Instruction_OnActivate_" data-uid="Kinstrife.Entities.Procedures.PlayableAdapterComponent.Instruction.OnActivate*"></a>
-  <h4 id="Kinstrife_Entities_Procedures_PlayableAdapterComponent_Instruction_OnActivate_Entity__Entity__" data-uid="Kinstrife.Entities.Procedures.PlayableAdapterComponent.Instruction.OnActivate(Entity@,Entity@)">OnActivate(Entity, Entity)</h4>
+  <a id="Kinstrife_Entities_Procedures_PlayableAdapterComponent_Instruction_OnActivate_ProcedureCallback_" data-uid="Kinstrife.Entities.Procedures.PlayableAdapterComponent.Instruction.OnActivate_ProcedureCallback*"></a>
+  <h4 id="Kinstrife_Entities_Procedures_PlayableAdapterComponent_Instruction_OnActivate_ProcedureCallback_Entity__Entity__Kinstrife_Entities_Procedures_Procedure__" data-uid="Kinstrife.Entities.Procedures.PlayableAdapterComponent.Instruction.OnActivate_ProcedureCallback(Entity@,Entity@,Kinstrife.Entities.Procedures.Procedure@)">OnActivate_ProcedureCallback(Entity, Entity, ref Procedure)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public override void OnActivate(in Entity e, in Entity owner)</code></pre>
+    <pre><code class="lang-csharp hljs">public override void OnActivate_ProcedureCallback(in Entity e, in Entity owner, ref Procedure procedure)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -278,19 +283,24 @@ public class Instruction : StatusEventsInstruction, IStatusFlagEventsListener, I
         <td><span class="parametername">owner</span></td>
         <td></td>
       </tr>
+      <tr>
+        <td><a class="xref" href="Kinstrife.Entities.Procedures.Procedure.html">Procedure</a></td>
+        <td><span class="parametername">procedure</span></td>
+        <td></td>
+      </tr>
     </tbody>
   </table>
   <h5 class="overrides">Overrides</h5>
-  <div><a class="xref" href="Kinstrife.Entities.Procedures.StatusEventsInstruction.html#Kinstrife_Entities_Procedures_StatusEventsInstruction_OnActivate_Entity__Entity__">StatusEventsInstruction.OnActivate(Entity, Entity)</a></div>
+  <div><a class="xref" href="Kinstrife.Entities.Procedures.StatusEventsInstruction.html#Kinstrife_Entities_Procedures_StatusEventsInstruction_OnActivate_ProcedureCallback_Entity__Entity__Kinstrife_Entities_Procedures_Procedure__">StatusEventsInstruction.OnActivate_ProcedureCallback(Entity, Entity, ref Procedure)</a></div>
   
   
-  <a id="Kinstrife_Entities_Procedures_PlayableAdapterComponent_Instruction_OnDeactivate_" data-uid="Kinstrife.Entities.Procedures.PlayableAdapterComponent.Instruction.OnDeactivate*"></a>
-  <h4 id="Kinstrife_Entities_Procedures_PlayableAdapterComponent_Instruction_OnDeactivate_Entity__Entity__" data-uid="Kinstrife.Entities.Procedures.PlayableAdapterComponent.Instruction.OnDeactivate(Entity@,Entity@)">OnDeactivate(Entity, Entity)</h4>
+  <a id="Kinstrife_Entities_Procedures_PlayableAdapterComponent_Instruction_OnActivate_SubStateCallback_" data-uid="Kinstrife.Entities.Procedures.PlayableAdapterComponent.Instruction.OnActivate_SubStateCallback*"></a>
+  <h4 id="Kinstrife_Entities_Procedures_PlayableAdapterComponent_Instruction_OnActivate_SubStateCallback_Entity__Entity__Kinstrife_Entities_Procedures_Procedure__Kinstrife_Entities_Procedures_StateMachine__Kinstrife_Entities_Procedures_SubState__" data-uid="Kinstrife.Entities.Procedures.PlayableAdapterComponent.Instruction.OnActivate_SubStateCallback(Entity@,Entity@,Kinstrife.Entities.Procedures.Procedure@,Kinstrife.Entities.Procedures.StateMachine@,Kinstrife.Entities.Procedures.SubState@)">OnActivate_SubStateCallback(Entity, Entity, ref Procedure, ref StateMachine, ref SubState)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public override void OnDeactivate(in Entity e, in Entity owner)</code></pre>
+    <pre><code class="lang-csharp hljs">public override void OnActivate_SubStateCallback(in Entity e, in Entity owner, ref Procedure procedure, ref StateMachine stateMachine, ref SubState subState)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -312,33 +322,254 @@ public class Instruction : StatusEventsInstruction, IStatusFlagEventsListener, I
         <td><span class="parametername">owner</span></td>
         <td></td>
       </tr>
+      <tr>
+        <td><a class="xref" href="Kinstrife.Entities.Procedures.Procedure.html">Procedure</a></td>
+        <td><span class="parametername">procedure</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Kinstrife.Entities.Procedures.StateMachine.html">StateMachine</a></td>
+        <td><span class="parametername">stateMachine</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Kinstrife.Entities.Procedures.SubState.html">SubState</a></td>
+        <td><span class="parametername">subState</span></td>
+        <td></td>
+      </tr>
     </tbody>
   </table>
   <h5 class="overrides">Overrides</h5>
-  <div><a class="xref" href="Kinstrife.Entities.Procedures.StatusEventsInstruction.html#Kinstrife_Entities_Procedures_StatusEventsInstruction_OnDeactivate_Entity__Entity__">StatusEventsInstruction.OnDeactivate(Entity, Entity)</a></div>
+  <div><a class="xref" href="Kinstrife.Entities.Procedures.StatusEventsInstruction.html#Kinstrife_Entities_Procedures_StatusEventsInstruction_OnActivate_SubStateCallback_Entity__Entity__Kinstrife_Entities_Procedures_Procedure__Kinstrife_Entities_Procedures_StateMachine__Kinstrife_Entities_Procedures_SubState__">StatusEventsInstruction.OnActivate_SubStateCallback(Entity, Entity, ref Procedure, ref StateMachine, ref SubState)</a></div>
+  
+  
+  <a id="Kinstrife_Entities_Procedures_PlayableAdapterComponent_Instruction_OnDeactivate_ProcedureCallback_" data-uid="Kinstrife.Entities.Procedures.PlayableAdapterComponent.Instruction.OnDeactivate_ProcedureCallback*"></a>
+  <h4 id="Kinstrife_Entities_Procedures_PlayableAdapterComponent_Instruction_OnDeactivate_ProcedureCallback_Entity__Entity__Kinstrife_Entities_Procedures_Procedure__" data-uid="Kinstrife.Entities.Procedures.PlayableAdapterComponent.Instruction.OnDeactivate_ProcedureCallback(Entity@,Entity@,Kinstrife.Entities.Procedures.Procedure@)">OnDeactivate_ProcedureCallback(Entity, Entity, ref Procedure)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override void OnDeactivate_ProcedureCallback(in Entity e, in Entity owner, ref Procedure procedure)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Entity</span></td>
+        <td><span class="parametername">e</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">Entity</span></td>
+        <td><span class="parametername">owner</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Kinstrife.Entities.Procedures.Procedure.html">Procedure</a></td>
+        <td><span class="parametername">procedure</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Kinstrife.Entities.Procedures.StatusEventsInstruction.html#Kinstrife_Entities_Procedures_StatusEventsInstruction_OnDeactivate_ProcedureCallback_Entity__Entity__Kinstrife_Entities_Procedures_Procedure__">StatusEventsInstruction.OnDeactivate_ProcedureCallback(Entity, Entity, ref Procedure)</a></div>
+  
+  
+  <a id="Kinstrife_Entities_Procedures_PlayableAdapterComponent_Instruction_OnDeactivate_SubStateCallback_" data-uid="Kinstrife.Entities.Procedures.PlayableAdapterComponent.Instruction.OnDeactivate_SubStateCallback*"></a>
+  <h4 id="Kinstrife_Entities_Procedures_PlayableAdapterComponent_Instruction_OnDeactivate_SubStateCallback_Entity__Entity__Kinstrife_Entities_Procedures_Procedure__Kinstrife_Entities_Procedures_StateMachine__Kinstrife_Entities_Procedures_SubState__" data-uid="Kinstrife.Entities.Procedures.PlayableAdapterComponent.Instruction.OnDeactivate_SubStateCallback(Entity@,Entity@,Kinstrife.Entities.Procedures.Procedure@,Kinstrife.Entities.Procedures.StateMachine@,Kinstrife.Entities.Procedures.SubState@)">OnDeactivate_SubStateCallback(Entity, Entity, ref Procedure, ref StateMachine, ref SubState)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override void OnDeactivate_SubStateCallback(in Entity e, in Entity owner, ref Procedure procedure, ref StateMachine stateMachine, ref SubState subState)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Entity</span></td>
+        <td><span class="parametername">e</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">Entity</span></td>
+        <td><span class="parametername">owner</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Kinstrife.Entities.Procedures.Procedure.html">Procedure</a></td>
+        <td><span class="parametername">procedure</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Kinstrife.Entities.Procedures.StateMachine.html">StateMachine</a></td>
+        <td><span class="parametername">stateMachine</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Kinstrife.Entities.Procedures.SubState.html">SubState</a></td>
+        <td><span class="parametername">subState</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Kinstrife.Entities.Procedures.StatusEventsInstruction.html#Kinstrife_Entities_Procedures_StatusEventsInstruction_OnDeactivate_SubStateCallback_Entity__Entity__Kinstrife_Entities_Procedures_Procedure__Kinstrife_Entities_Procedures_StateMachine__Kinstrife_Entities_Procedures_SubState__">StatusEventsInstruction.OnDeactivate_SubStateCallback(Entity, Entity, ref Procedure, ref StateMachine, ref SubState)</a></div>
   
   
   <a id="Kinstrife_Entities_Procedures_PlayableAdapterComponent_Instruction_Play_" data-uid="Kinstrife.Entities.Procedures.PlayableAdapterComponent.Instruction.Play*"></a>
-  <h4 id="Kinstrife_Entities_Procedures_PlayableAdapterComponent_Instruction_Play" data-uid="Kinstrife.Entities.Procedures.PlayableAdapterComponent.Instruction.Play">Play()</h4>
-  <div class="markdown level1 summary"></div>
+  <h4 id="Kinstrife_Entities_Procedures_PlayableAdapterComponent_Instruction_Play_Kinstrife_Entities_Procedures_Procedure__" data-uid="Kinstrife.Entities.Procedures.PlayableAdapterComponent.Instruction.Play(Kinstrife.Entities.Procedures.Procedure@)">Play(ref Procedure)</h4>
+  <div class="markdown level1 summary"><p>Callback when playable instruction gets played through Procedure</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected virtual void Play()</code></pre>
+    <pre><code class="lang-csharp hljs">protected virtual void Play(ref Procedure procedure)</code></pre>
   </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Kinstrife.Entities.Procedures.Procedure.html">Procedure</a></td>
+        <td><span class="parametername">procedure</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Kinstrife_Entities_Procedures_PlayableAdapterComponent_Instruction_Play_" data-uid="Kinstrife.Entities.Procedures.PlayableAdapterComponent.Instruction.Play*"></a>
+  <h4 id="Kinstrife_Entities_Procedures_PlayableAdapterComponent_Instruction_Play_Kinstrife_Entities_Procedures_Procedure__Kinstrife_Entities_Procedures_StateMachine__Kinstrife_Entities_Procedures_SubState__" data-uid="Kinstrife.Entities.Procedures.PlayableAdapterComponent.Instruction.Play(Kinstrife.Entities.Procedures.Procedure@,Kinstrife.Entities.Procedures.StateMachine@,Kinstrife.Entities.Procedures.SubState@)">Play(ref Procedure, ref StateMachine, ref SubState)</h4>
+  <div class="markdown level1 summary"><p>Callback when playable instruction gets activated through SubState</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void Play(ref Procedure procedure, ref StateMachine stateMachine, ref SubState subState)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Kinstrife.Entities.Procedures.Procedure.html">Procedure</a></td>
+        <td><span class="parametername">procedure</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Kinstrife.Entities.Procedures.StateMachine.html">StateMachine</a></td>
+        <td><span class="parametername">stateMachine</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Kinstrife.Entities.Procedures.SubState.html">SubState</a></td>
+        <td><span class="parametername">subState</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   
   
   <a id="Kinstrife_Entities_Procedures_PlayableAdapterComponent_Instruction_Stop_" data-uid="Kinstrife.Entities.Procedures.PlayableAdapterComponent.Instruction.Stop*"></a>
-  <h4 id="Kinstrife_Entities_Procedures_PlayableAdapterComponent_Instruction_Stop" data-uid="Kinstrife.Entities.Procedures.PlayableAdapterComponent.Instruction.Stop">Stop()</h4>
-  <div class="markdown level1 summary"></div>
+  <h4 id="Kinstrife_Entities_Procedures_PlayableAdapterComponent_Instruction_Stop_Kinstrife_Entities_Procedures_Procedure__" data-uid="Kinstrife.Entities.Procedures.PlayableAdapterComponent.Instruction.Stop(Kinstrife.Entities.Procedures.Procedure@)">Stop(ref Procedure)</h4>
+  <div class="markdown level1 summary"><p>Callback when playable instruction gets stopped through Procedure</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected virtual void Stop()</code></pre>
+    <pre><code class="lang-csharp hljs">protected virtual void Stop(ref Procedure procedure)</code></pre>
   </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Kinstrife.Entities.Procedures.Procedure.html">Procedure</a></td>
+        <td><span class="parametername">procedure</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Kinstrife_Entities_Procedures_PlayableAdapterComponent_Instruction_Stop_" data-uid="Kinstrife.Entities.Procedures.PlayableAdapterComponent.Instruction.Stop*"></a>
+  <h4 id="Kinstrife_Entities_Procedures_PlayableAdapterComponent_Instruction_Stop_Kinstrife_Entities_Procedures_Procedure__Kinstrife_Entities_Procedures_StateMachine__Kinstrife_Entities_Procedures_SubState__" data-uid="Kinstrife.Entities.Procedures.PlayableAdapterComponent.Instruction.Stop(Kinstrife.Entities.Procedures.Procedure@,Kinstrife.Entities.Procedures.StateMachine@,Kinstrife.Entities.Procedures.SubState@)">Stop(ref Procedure, ref StateMachine, ref SubState)</h4>
+  <div class="markdown level1 summary"><p>Callback when playable instruction gets stopped through SubState</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void Stop(ref Procedure procedure, ref StateMachine stateMachine, ref SubState subState)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Kinstrife.Entities.Procedures.Procedure.html">Procedure</a></td>
+        <td><span class="parametername">procedure</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Kinstrife.Entities.Procedures.StateMachine.html">StateMachine</a></td>
+        <td><span class="parametername">stateMachine</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Kinstrife.Entities.Procedures.SubState.html">SubState</a></td>
+        <td><span class="parametername">subState</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   <h3 id="implements">Implements</h3>
   <div>
-      <a class="xref" href="Kinstrife.Entities.Procedures.IStatusFlagEventsListener.html">IStatusFlagEventsListener</a>
+      <a class="xref" href="Kinstrife.Entities.Procedures.IProcedureEventsListener.html">IProcedureEventsListener</a>
+  </div>
+  <div>
+      <a class="xref" href="Kinstrife.Entities.Procedures.IStateMachineEventsListener.html">IStateMachineEventsListener</a>
+  </div>
+  <div>
+      <a class="xref" href="Kinstrife.Entities.Procedures.IEventsListener.html">IEventsListener</a>
   </div>
   <div>
       <a class="xref" href="Kinstrife.Entities.Procedures.IActivateDeactivate.html">IActivateDeactivate</a>
