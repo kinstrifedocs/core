@@ -1,0 +1,492 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class InteractionProcedureBehaviour
+   | Kinstrife </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class InteractionProcedureBehaviour
+   | Kinstrife ">
+    <meta name="generator" content="docfx 2.57.2.0">
+    
+    <link rel="shortcut icon" href="../../favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet"> 
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../index.html">
+                <img id="logo" class="svg" src="../../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Kinstrife.Interaction.InteractionProcedureBehaviour">
+  
+  
+  <h1 id="Kinstrife_Interaction_InteractionProcedureBehaviour" data-uid="Kinstrife.Interaction.InteractionProcedureBehaviour" class="text-break">Class InteractionProcedureBehaviour
+  </h1>
+  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><a class="xref" href="Kinstrife.Entities.Atomics.SubEntityAuthoring.html">SubEntityAuthoring</a></div>
+    <div class="level2"><a class="xref" href="Kinstrife.Entities.Procedures.ProcedureBehaviour.html">ProcedureBehaviour</a></div>
+    <div class="level3"><span class="xref">InteractionProcedureBehaviour</span></div>
+  </div>
+  <div classs="implements">
+    <h5>Implements</h5>
+    <div><a class="xref" href="Kinstrife.Entities.IConvertible.html">IConvertible</a></div>
+    <div><span class="xref">IConvertGameObjectToEntity</span></div>
+    <div><a class="xref" href="Kinstrife.Entities.Procedures.IProcedureEventsListener.html">IProcedureEventsListener</a></div>
+    <div><a class="xref" href="Kinstrife.Entities.Procedures.IStateMachineEventsListener.html">IStateMachineEventsListener</a></div>
+    <div><a class="xref" href="Kinstrife.Entities.Procedures.IEventsListener.html">IEventsListener</a></div>
+    <div><a class="xref" href="Kinstrife.Core.DependencyInjection.ICacheReferences.html">ICacheReferences</a></div>
+    <div><a class="xref" href="Kinstrife.Core.DependencyInjection.IDependent.html">IDependent</a></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="Kinstrife.Entities.Procedures.ProcedureBehaviour.html#Kinstrife_Entities_Procedures_ProcedureBehaviour_syncMode">ProcedureBehaviour.syncMode</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.Entities.Procedures.ProcedureBehaviour.html#Kinstrife_Entities_Procedures_ProcedureBehaviour_graph">ProcedureBehaviour.graph</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.Entities.Procedures.ProcedureBehaviour.html#Kinstrife_Entities_Procedures_ProcedureBehaviour_enableOnStart">ProcedureBehaviour.enableOnStart</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.Entities.Procedures.ProcedureBehaviour.html#Kinstrife_Entities_Procedures_ProcedureBehaviour_subStateIndex">ProcedureBehaviour.subStateIndex</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.Entities.Procedures.ProcedureBehaviour.html#Kinstrife_Entities_Procedures_ProcedureBehaviour_currentStateId">ProcedureBehaviour.currentStateId</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.Entities.Procedures.ProcedureBehaviour.html#Kinstrife_Entities_Procedures_ProcedureBehaviour_IsState_ScriptableObject_">ProcedureBehaviour.IsState(ScriptableObject)</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.Entities.Procedures.ProcedureBehaviour.html#Kinstrife_Entities_Procedures_ProcedureBehaviour_procedureSystem">ProcedureBehaviour.procedureSystem</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.Entities.Procedures.ProcedureBehaviour.html#Kinstrife_Entities_Procedures_ProcedureBehaviour_blackboard">ProcedureBehaviour.blackboard</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.Entities.Procedures.ProcedureBehaviour.html#Kinstrife_Entities_Procedures_ProcedureBehaviour_onProcedureStart">ProcedureBehaviour.onProcedureStart</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.Entities.Procedures.ProcedureBehaviour.html#Kinstrife_Entities_Procedures_ProcedureBehaviour_onProcedureStop">ProcedureBehaviour.onProcedureStop</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.Entities.Procedures.ProcedureBehaviour.html#Kinstrife_Entities_Procedures_ProcedureBehaviour_isStateful">ProcedureBehaviour.isStateful</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.Entities.Procedures.ProcedureBehaviour.html#Kinstrife_Entities_Procedures_ProcedureBehaviour_hasBlackboard">ProcedureBehaviour.hasBlackboard</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.Entities.Procedures.ProcedureBehaviour.html#Kinstrife_Entities_Procedures_ProcedureBehaviour_ConvertibleData">ProcedureBehaviour.ConvertibleData</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.Entities.Procedures.ProcedureBehaviour.html#Kinstrife_Entities_Procedures_ProcedureBehaviour_InitRuntimeComponents_EntityManager__Entity_">ProcedureBehaviour.InitRuntimeComponents(EntityManager, Entity)</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.Entities.Procedures.ProcedureBehaviour.html#Kinstrife_Entities_Procedures_ProcedureBehaviour_InitBlackboardParameterValues">ProcedureBehaviour.InitBlackboardParameterValues()</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.Entities.Procedures.ProcedureBehaviour.html#Kinstrife_Entities_Procedures_ProcedureBehaviour_StateOnStart_Entity__Entity__Kinstrife_Entities_Procedures_Procedure__Kinstrife_Entities_Procedures_StateMachine__Kinstrife_Entities_Procedures_SubState__">ProcedureBehaviour.StateOnStart(Entity, Entity, Procedure, StateMachine, SubState)</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.Entities.Procedures.ProcedureBehaviour.html#Kinstrife_Entities_Procedures_ProcedureBehaviour_StateOnUpdate_Entity__Entity__Kinstrife_Entities_Procedures_Procedure__Kinstrife_Entities_Procedures_StateMachine__Kinstrife_Entities_Procedures_SubState__">ProcedureBehaviour.StateOnUpdate(Entity, Entity, Procedure, StateMachine, SubState)</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.Entities.Procedures.ProcedureBehaviour.html#Kinstrife_Entities_Procedures_ProcedureBehaviour_StateWillTerminate_Entity__Entity__Kinstrife_Entities_Procedures_Procedure__Kinstrife_Entities_Procedures_StateMachine__Kinstrife_Entities_Procedures_SubState__">ProcedureBehaviour.StateWillTerminate(Entity, Entity, Procedure, StateMachine, SubState)</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.Entities.Procedures.ProcedureBehaviour.html#Kinstrife_Entities_Procedures_ProcedureBehaviour_WillStart_Entity__Entity__Kinstrife_Entities_Procedures_Procedure__">ProcedureBehaviour.WillStart(Entity, Entity, Procedure)</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.Entities.Procedures.ProcedureBehaviour.html#Kinstrife_Entities_Procedures_ProcedureBehaviour_OnStart_Entity__Entity__Kinstrife_Entities_Procedures_Procedure__">ProcedureBehaviour.OnStart(Entity, Entity, Procedure)</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.Entities.Procedures.ProcedureBehaviour.html#Kinstrife_Entities_Procedures_ProcedureBehaviour_WillTerminate_Entity__Entity__Kinstrife_Entities_Procedures_Procedure__">ProcedureBehaviour.WillTerminate(Entity, Entity, Procedure)</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.Entities.Procedures.ProcedureBehaviour.html#Kinstrife_Entities_Procedures_ProcedureBehaviour_OnTerminate_Entity__Entity__Kinstrife_Entities_Procedures_Procedure__">ProcedureBehaviour.OnTerminate(Entity, Entity, Procedure)</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.Entities.Procedures.ProcedureBehaviour.html#Kinstrife_Entities_Procedures_ProcedureBehaviour_OnUpdate_Entity__Entity__Kinstrife_Entities_Procedures_Procedure__">ProcedureBehaviour.OnUpdate(Entity, Entity, Procedure)</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.Entities.Procedures.ProcedureBehaviour.html#Kinstrife_Entities_Procedures_ProcedureBehaviour_OnNewState_ScriptableObject_">ProcedureBehaviour.OnNewState(ScriptableObject)</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.Entities.Procedures.ProcedureBehaviour.html#Kinstrife_Entities_Procedures_ProcedureBehaviour_OnProcedureStop_Kinstrife_Entities_Procedures_Procedure__">ProcedureBehaviour.OnProcedureStop(Procedure)</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.Entities.Procedures.ProcedureBehaviour.html#Kinstrife_Entities_Procedures_ProcedureBehaviour_OnStateStart_Kinstrife_Entities_Procedures_Procedure__Kinstrife_Entities_Procedures_StateMachine__Kinstrife_Entities_Procedures_SubState__">ProcedureBehaviour.OnStateStart(Procedure, StateMachine, SubState)</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.Entities.Procedures.ProcedureBehaviour.html#Kinstrife_Entities_Procedures_ProcedureBehaviour_OnStateStop_Kinstrife_Entities_Procedures_Procedure__Kinstrife_Entities_Procedures_StateMachine__Kinstrife_Entities_Procedures_SubState__">ProcedureBehaviour.OnStateStop(Procedure, StateMachine, SubState)</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.Entities.Procedures.ProcedureBehaviour.html#Kinstrife_Entities_Procedures_ProcedureBehaviour_RequestStartProcedure">ProcedureBehaviour.RequestStartProcedure()</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.Entities.Procedures.ProcedureBehaviour.html#Kinstrife_Entities_Procedures_ProcedureBehaviour_RequestStopProcedure">ProcedureBehaviour.RequestStopProcedure()</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.Entities.Procedures.ProcedureBehaviour.html#Kinstrife_Entities_Procedures_ProcedureBehaviour_TransitionToState_Kinstrife_Entities_Procedures_SubStateId_">ProcedureBehaviour.TransitionToState(SubStateId)</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.Entities.Atomics.SubEntityAuthoring.html#Kinstrife_Entities_Atomics_SubEntityAuthoring_convertibleData">SubEntityAuthoring.convertibleData</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.Entities.Atomics.SubEntityAuthoring.html#Kinstrife_Entities_Atomics_SubEntityAuthoring_hasConvertibleData">SubEntityAuthoring.hasConvertibleData</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.Entities.Atomics.SubEntityAuthoring.html#Kinstrife_Entities_Atomics_SubEntityAuthoring_isPrefab">SubEntityAuthoring.isPrefab</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.Entities.Atomics.SubEntityAuthoring.html#Kinstrife_Entities_Atomics_SubEntityAuthoring_isConverted">SubEntityAuthoring.isConverted</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.Entities.Atomics.SubEntityAuthoring.html#Kinstrife_Entities_Atomics_SubEntityAuthoring_contextEntity">SubEntityAuthoring.contextEntity</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.Entities.Atomics.SubEntityAuthoring.html#Kinstrife_Entities_Atomics_SubEntityAuthoring_ContextEntity">SubEntityAuthoring.ContextEntity</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.Entities.Atomics.SubEntityAuthoring.html#Kinstrife_Entities_Atomics_SubEntityAuthoring_Convert_Entity_EntityManager_GameObjectConversionSystem_">SubEntityAuthoring.Convert(Entity, EntityManager, GameObjectConversionSystem)</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.Entities.Atomics.SubEntityAuthoring.html#Kinstrife_Entities_Atomics_SubEntityAuthoring_FilterData_ScriptableObject_">SubEntityAuthoring.FilterData(ScriptableObject)</a>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Kinstrife.Interaction.html">Kinstrife.Interaction</a></h6>
+  <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
+  <h5 id="Kinstrife_Interaction_InteractionProcedureBehaviour_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class InteractionProcedureBehaviour : ProcedureBehaviour, IConvertible, IConvertGameObjectToEntity, IProcedureEventsListener, IStateMachineEventsListener, IEventsListener, ICacheReferences, IDependent</code></pre>
+  </div>
+  <h3 id="methods">Methods
+  </h3>
+  
+  
+  <a id="Kinstrife_Interaction_InteractionProcedureBehaviour_CacheReferences_" data-uid="Kinstrife.Interaction.InteractionProcedureBehaviour.CacheReferences*"></a>
+  <h4 id="Kinstrife_Interaction_InteractionProcedureBehaviour_CacheReferences" data-uid="Kinstrife.Interaction.InteractionProcedureBehaviour.CacheReferences">CacheReferences()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override void CacheReferences()</code></pre>
+  </div>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Kinstrife.Entities.Procedures.ProcedureBehaviour.html#Kinstrife_Entities_Procedures_ProcedureBehaviour_CacheReferences">ProcedureBehaviour.CacheReferences()</a></div>
+  
+  
+  <a id="Kinstrife_Interaction_InteractionProcedureBehaviour_IsInRangeOfObject_" data-uid="Kinstrife.Interaction.InteractionProcedureBehaviour.IsInRangeOfObject*"></a>
+  <h4 id="Kinstrife_Interaction_InteractionProcedureBehaviour_IsInRangeOfObject__1" data-uid="Kinstrife.Interaction.InteractionProcedureBehaviour.IsInRangeOfObject``1">IsInRangeOfObject&lt;T&gt;()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void IsInRangeOfObject&lt;T&gt;()</code></pre>
+  </div>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Kinstrife_Interaction_InteractionProcedureBehaviour_OnDisable_" data-uid="Kinstrife.Interaction.InteractionProcedureBehaviour.OnDisable*"></a>
+  <h4 id="Kinstrife_Interaction_InteractionProcedureBehaviour_OnDisable" data-uid="Kinstrife.Interaction.InteractionProcedureBehaviour.OnDisable">OnDisable()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override void OnDisable()</code></pre>
+  </div>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Kinstrife.Entities.Procedures.ProcedureBehaviour.html#Kinstrife_Entities_Procedures_ProcedureBehaviour_OnDisable">ProcedureBehaviour.OnDisable()</a></div>
+  
+  
+  <a id="Kinstrife_Interaction_InteractionProcedureBehaviour_OnEnable_" data-uid="Kinstrife.Interaction.InteractionProcedureBehaviour.OnEnable*"></a>
+  <h4 id="Kinstrife_Interaction_InteractionProcedureBehaviour_OnEnable" data-uid="Kinstrife.Interaction.InteractionProcedureBehaviour.OnEnable">OnEnable()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override void OnEnable()</code></pre>
+  </div>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Kinstrife.Entities.Procedures.ProcedureBehaviour.html#Kinstrife_Entities_Procedures_ProcedureBehaviour_OnEnable">ProcedureBehaviour.OnEnable()</a></div>
+  
+  
+  <a id="Kinstrife_Interaction_InteractionProcedureBehaviour_OnProcedureStart_" data-uid="Kinstrife.Interaction.InteractionProcedureBehaviour.OnProcedureStart*"></a>
+  <h4 id="Kinstrife_Interaction_InteractionProcedureBehaviour_OnProcedureStart_Kinstrife_Entities_Procedures_Procedure__" data-uid="Kinstrife.Interaction.InteractionProcedureBehaviour.OnProcedureStart(Kinstrife.Entities.Procedures.Procedure@)">OnProcedureStart(ref Procedure)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override void OnProcedureStart(ref Procedure procedure)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Kinstrife.Entities.Procedures.Procedure.html">Procedure</a></td>
+        <td><span class="parametername">procedure</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Kinstrife.Entities.Procedures.ProcedureBehaviour.html#Kinstrife_Entities_Procedures_ProcedureBehaviour_OnProcedureStart_Kinstrife_Entities_Procedures_Procedure__">ProcedureBehaviour.OnProcedureStart(ref Procedure)</a></div>
+  
+  
+  <a id="Kinstrife_Interaction_InteractionProcedureBehaviour_TryFindObject_" data-uid="Kinstrife.Interaction.InteractionProcedureBehaviour.TryFindObject*"></a>
+  <h4 id="Kinstrife_Interaction_InteractionProcedureBehaviour_TryFindObject__1___0__Collider__" data-uid="Kinstrife.Interaction.InteractionProcedureBehaviour.TryFindObject``1(``0@,Collider@)">TryFindObject&lt;T&gt;(out T, out Collider)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool TryFindObject&lt;T&gt;(out T result, out Collider key)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">T</span></td>
+        <td><span class="parametername">result</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">Collider</span></td>
+        <td><span class="parametername">key</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Kinstrife_Interaction_InteractionProcedureBehaviour_TryGetComponentOfType_" data-uid="Kinstrife.Interaction.InteractionProcedureBehaviour.TryGetComponentOfType*"></a>
+  <h4 id="Kinstrife_Interaction_InteractionProcedureBehaviour_TryGetComponentOfType__1_Collider___0__" data-uid="Kinstrife.Interaction.InteractionProcedureBehaviour.TryGetComponentOfType``1(Collider,``0@)">TryGetComponentOfType&lt;T&gt;(Collider, out T)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool TryGetComponentOfType&lt;T&gt;(Collider collider, out T result)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Collider</span></td>
+        <td><span class="parametername">collider</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">T</span></td>
+        <td><span class="parametername">result</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <a class="xref" href="Kinstrife.Entities.IConvertible.html">IConvertible</a>
+  </div>
+  <div>
+      <span class="xref">IConvertGameObjectToEntity</span>
+  </div>
+  <div>
+      <a class="xref" href="Kinstrife.Entities.Procedures.IProcedureEventsListener.html">IProcedureEventsListener</a>
+  </div>
+  <div>
+      <a class="xref" href="Kinstrife.Entities.Procedures.IStateMachineEventsListener.html">IStateMachineEventsListener</a>
+  </div>
+  <div>
+      <a class="xref" href="Kinstrife.Entities.Procedures.IEventsListener.html">IEventsListener</a>
+  </div>
+  <div>
+      <a class="xref" href="Kinstrife.Core.DependencyInjection.ICacheReferences.html">ICacheReferences</a>
+  </div>
+  <div>
+      <a class="xref" href="Kinstrife.Core.DependencyInjection.IDependent.html">IDependent</a>
+  </div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+  </body>
+</html>

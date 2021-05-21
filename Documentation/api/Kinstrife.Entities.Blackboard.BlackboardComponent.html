@@ -138,56 +138,33 @@
       </tr>
     </tbody>
   </table>
-  <h3 id="methods">Methods
-  </h3>
   
   
-  <a id="Kinstrife_Entities_Blackboard_BlackboardComponent_AddParameter_" data-uid="Kinstrife.Entities.Blackboard.BlackboardComponent.AddParameter*"></a>
-  <h4 id="Kinstrife_Entities_Blackboard_BlackboardComponent_AddParameter__1_System_Int32___0_" data-uid="Kinstrife.Entities.Blackboard.BlackboardComponent.AddParameter``1(System.Int32,``0)">AddParameter&lt;T&gt;(Int32, T)</h4>
+  <a id="Kinstrife_Entities_Blackboard_BlackboardComponent_TypeSortedParameters_" data-uid="Kinstrife.Entities.Blackboard.BlackboardComponent.TypeSortedParameters*"></a>
+  <h4 id="Kinstrife_Entities_Blackboard_BlackboardComponent_TypeSortedParameters" data-uid="Kinstrife.Entities.Blackboard.BlackboardComponent.TypeSortedParameters">TypeSortedParameters</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void AddParameter&lt;T&gt;(int nativeKey, T param)
-    where T : ExposedParameterBase</code></pre>
+    <pre><code class="lang-csharp hljs">public IReadOnlyDictionary&lt;Type, List&lt;ExposedParameterBase&gt;&gt; TypeSortedParameters { get; }</code></pre>
   </div>
-  <h5 class="parameters">Parameters</h5>
+  <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
       <tr>
         <th>Type</th>
-        <th>Name</th>
         <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Int32</span></td>
-        <td><span class="parametername">nativeKey</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><span class="xref">T</span></td>
-        <td><span class="parametername">param</span></td>
+        <td><span class="xref">System.Collections.Generic.IReadOnlyDictionary</span>&lt;<span class="xref">Type</span>, <span class="xref">System.Collections.Generic.List</span>&lt;<a class="xref" href="Kinstrife.Entities.Blackboard.ExposedParameterBase.html">ExposedParameterBase</a>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
-  <h5 class="typeParameters">Type Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="parametername">T</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
+  <h3 id="methods">Methods
+  </h3>
   
   
   <a id="Kinstrife_Entities_Blackboard_BlackboardComponent_Clone_" data-uid="Kinstrife.Entities.Blackboard.BlackboardComponent.Clone*"></a>
@@ -378,6 +355,69 @@
   
   
   <a id="Kinstrife_Entities_Blackboard_BlackboardComponent_TryAddParameter_" data-uid="Kinstrife.Entities.Blackboard.BlackboardComponent.TryAddParameter*"></a>
+  <h4 id="Kinstrife_Entities_Blackboard_BlackboardComponent_TryAddParameter__1_System_Int32___0_" data-uid="Kinstrife.Entities.Blackboard.BlackboardComponent.TryAddParameter``1(System.Int32,``0)">TryAddParameter&lt;T&gt;(Int32, T)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool TryAddParameter&lt;T&gt;(int nativeKey, T param)
+    where T : ExposedParameterBase</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">nativeKey</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">T</span></td>
+        <td><span class="parametername">param</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Kinstrife_Entities_Blackboard_BlackboardComponent_TryAddParameter_" data-uid="Kinstrife.Entities.Blackboard.BlackboardComponent.TryAddParameter*"></a>
   <h4 id="Kinstrife_Entities_Blackboard_BlackboardComponent_TryAddParameter__1_System_String___0_" data-uid="Kinstrife.Entities.Blackboard.BlackboardComponent.TryAddParameter``1(System.String,``0)">TryAddParameter&lt;T&gt;(String, T)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
@@ -440,13 +480,76 @@
   </table>
   
   
-  <a id="Kinstrife_Entities_Blackboard_BlackboardComponent_TryGetValue_" data-uid="Kinstrife.Entities.Blackboard.BlackboardComponent.TryGetValue*"></a>
-  <h4 id="Kinstrife_Entities_Blackboard_BlackboardComponent_TryGetValue__1_System_String___0__" data-uid="Kinstrife.Entities.Blackboard.BlackboardComponent.TryGetValue``1(System.String,``0@)">TryGetValue&lt;T&gt;(String, out T)</h4>
+  <a id="Kinstrife_Entities_Blackboard_BlackboardComponent_TryGetParameter_" data-uid="Kinstrife.Entities.Blackboard.BlackboardComponent.TryGetParameter*"></a>
+  <h4 id="Kinstrife_Entities_Blackboard_BlackboardComponent_TryGetParameter__1_System_Int32___0__" data-uid="Kinstrife.Entities.Blackboard.BlackboardComponent.TryGetParameter``1(System.Int32,``0@)">TryGetParameter&lt;T&gt;(Int32, out T)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public bool TryGetValue&lt;T&gt;(string key, out T value)
+    <pre><code class="lang-csharp hljs">public bool TryGetParameter&lt;T&gt;(int nativeIdentifier, out T param)
+    where T : ExposedParameterBase</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">nativeIdentifier</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">T</span></td>
+        <td><span class="parametername">param</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Kinstrife_Entities_Blackboard_BlackboardComponent_TryGetParameter_" data-uid="Kinstrife.Entities.Blackboard.BlackboardComponent.TryGetParameter*"></a>
+  <h4 id="Kinstrife_Entities_Blackboard_BlackboardComponent_TryGetParameter__1_System_String___0__" data-uid="Kinstrife.Entities.Blackboard.BlackboardComponent.TryGetParameter``1(System.String,``0@)">TryGetParameter&lt;T&gt;(String, out T)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool TryGetParameter&lt;T&gt;(string key, out T parameter)
     where T : ExposedParameterBase</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -466,6 +569,351 @@
       </tr>
       <tr>
         <td><span class="xref">T</span></td>
+        <td><span class="parametername">parameter</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Kinstrife_Entities_Blackboard_BlackboardComponent_TrySetBool_" data-uid="Kinstrife.Entities.Blackboard.BlackboardComponent.TrySetBool*"></a>
+  <h4 id="Kinstrife_Entities_Blackboard_BlackboardComponent_TrySetBool_System_Int32_System_Boolean_" data-uid="Kinstrife.Entities.Blackboard.BlackboardComponent.TrySetBool(System.Int32,System.Boolean)">TrySetBool(Int32, Boolean)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool TrySetBool(int nativeKey, bool value)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">nativeKey</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">value</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Kinstrife_Entities_Blackboard_BlackboardComponent_TrySetBool_" data-uid="Kinstrife.Entities.Blackboard.BlackboardComponent.TrySetBool*"></a>
+  <h4 id="Kinstrife_Entities_Blackboard_BlackboardComponent_TrySetBool_System_String_System_Boolean_" data-uid="Kinstrife.Entities.Blackboard.BlackboardComponent.TrySetBool(System.String,System.Boolean)">TrySetBool(String, Boolean)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool TrySetBool(string key, bool value)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">key</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">value</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Kinstrife_Entities_Blackboard_BlackboardComponent_TrySetFloat_" data-uid="Kinstrife.Entities.Blackboard.BlackboardComponent.TrySetFloat*"></a>
+  <h4 id="Kinstrife_Entities_Blackboard_BlackboardComponent_TrySetFloat_System_Int32_System_Single_" data-uid="Kinstrife.Entities.Blackboard.BlackboardComponent.TrySetFloat(System.Int32,System.Single)">TrySetFloat(Int32, Single)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool TrySetFloat(int nativeKey, float value)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">nativeKey</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><span class="parametername">value</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Kinstrife_Entities_Blackboard_BlackboardComponent_TrySetFloat_" data-uid="Kinstrife.Entities.Blackboard.BlackboardComponent.TrySetFloat*"></a>
+  <h4 id="Kinstrife_Entities_Blackboard_BlackboardComponent_TrySetFloat_System_String_System_Single_" data-uid="Kinstrife.Entities.Blackboard.BlackboardComponent.TrySetFloat(System.String,System.Single)">TrySetFloat(String, Single)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool TrySetFloat(string key, float value)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">key</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><span class="parametername">value</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Kinstrife_Entities_Blackboard_BlackboardComponent_TrySetFloat3_" data-uid="Kinstrife.Entities.Blackboard.BlackboardComponent.TrySetFloat3*"></a>
+  <h4 id="Kinstrife_Entities_Blackboard_BlackboardComponent_TrySetFloat3_System_Int32_float3_" data-uid="Kinstrife.Entities.Blackboard.BlackboardComponent.TrySetFloat3(System.Int32,float3)">TrySetFloat3(Int32, float3)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool TrySetFloat3(int nativeKey, float3 value)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">nativeKey</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">float3</span></td>
+        <td><span class="parametername">value</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Kinstrife_Entities_Blackboard_BlackboardComponent_TrySetFloat3_" data-uid="Kinstrife.Entities.Blackboard.BlackboardComponent.TrySetFloat3*"></a>
+  <h4 id="Kinstrife_Entities_Blackboard_BlackboardComponent_TrySetFloat3_System_String_float3_" data-uid="Kinstrife.Entities.Blackboard.BlackboardComponent.TrySetFloat3(System.String,float3)">TrySetFloat3(String, float3)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool TrySetFloat3(string key, float3 value)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">key</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">float3</span></td>
+        <td><span class="parametername">value</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Kinstrife_Entities_Blackboard_BlackboardComponent_TrySetParameterValue_" data-uid="Kinstrife.Entities.Blackboard.BlackboardComponent.TrySetParameterValue*"></a>
+  <h4 id="Kinstrife_Entities_Blackboard_BlackboardComponent_TrySetParameterValue__2_System_Int32___1_" data-uid="Kinstrife.Entities.Blackboard.BlackboardComponent.TrySetParameterValue``2(System.Int32,``1)">TrySetParameterValue&lt;T, U&gt;(Int32, U)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool TrySetParameterValue&lt;T, U&gt;(int nativeKey, U value)
+    where T : ExposedParameter&lt;U&gt;</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">nativeKey</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">U</span></td>
         <td><span class="parametername">value</span></td>
         <td></td>
       </tr>
@@ -497,6 +945,77 @@
     <tbody>
       <tr>
         <td><span class="parametername">T</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="parametername">U</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Kinstrife_Entities_Blackboard_BlackboardComponent_TrySetParameterValue_" data-uid="Kinstrife.Entities.Blackboard.BlackboardComponent.TrySetParameterValue*"></a>
+  <h4 id="Kinstrife_Entities_Blackboard_BlackboardComponent_TrySetParameterValue__2_System_String___1_" data-uid="Kinstrife.Entities.Blackboard.BlackboardComponent.TrySetParameterValue``2(System.String,``1)">TrySetParameterValue&lt;T, U&gt;(String, U)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool TrySetParameterValue&lt;T, U&gt;(string key, U value)
+    where T : ExposedParameter&lt;U&gt;</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">key</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">U</span></td>
+        <td><span class="parametername">value</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="parametername">U</span></td>
         <td></td>
       </tr>
     </tbody>

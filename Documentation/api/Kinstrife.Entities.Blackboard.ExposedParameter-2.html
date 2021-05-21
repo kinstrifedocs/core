@@ -95,6 +95,9 @@
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
     <div>
+      <a class="xref" href="Kinstrife.Entities.Blackboard.ExposedParameterBase.html#Kinstrife_Entities_Blackboard_ExposedParameterBase_NativeIdentifier">ExposedParameterBase.NativeIdentifier</a>
+    </div>
+    <div>
       <span class="xref">System.Object.ToString()</span>
     </div>
     <div>
@@ -142,17 +145,71 @@ public abstract class ExposedParameter&lt;TValue, TBufferElement&gt; : ExposedPa
       </tr>
     </tbody>
   </table>
+  <h3 id="properties">Properties
+  </h3>
+  
+  
+  <a id="Kinstrife_Entities_Blackboard_ExposedParameter_2_CachedValue_" data-uid="Kinstrife.Entities.Blackboard.ExposedParameter`2.CachedValue*"></a>
+  <h4 id="Kinstrife_Entities_Blackboard_ExposedParameter_2_CachedValue" data-uid="Kinstrife.Entities.Blackboard.ExposedParameter`2.CachedValue">CachedValue</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override TValue CachedValue { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">TValue</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">Kinstrife.Entities.Blackboard.ExposedParameter&lt;TValue&gt;.CachedValue</span></div>
+  
+  
+  <a id="Kinstrife_Entities_Blackboard_ExposedParameter_2_IsValid_" data-uid="Kinstrife.Entities.Blackboard.ExposedParameter`2.IsValid*"></a>
+  <h4 id="Kinstrife_Entities_Blackboard_ExposedParameter_2_IsValid" data-uid="Kinstrife.Entities.Blackboard.ExposedParameter`2.IsValid">IsValid</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsValid { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   <h3 id="methods">Methods
   </h3>
   
   
   <a id="Kinstrife_Entities_Blackboard_ExposedParameter_2_Create_" data-uid="Kinstrife.Entities.Blackboard.ExposedParameter`2.Create*"></a>
-  <h4 id="Kinstrife_Entities_Blackboard_ExposedParameter_2_Create__1__1__" data-uid="Kinstrife.Entities.Blackboard.ExposedParameter`2.Create``1(`1@)">Create&lt;T&gt;(ref TBufferElement)</h4>
+  <h4 id="Kinstrife_Entities_Blackboard_ExposedParameter_2_Create__1__1__System_Int32_" data-uid="Kinstrife.Entities.Blackboard.ExposedParameter`2.Create``1(`1@,System.Int32)">Create&lt;T&gt;(ref TBufferElement, Int32)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static T Create&lt;T&gt;(ref TBufferElement el)
+    <pre><code class="lang-csharp hljs">public static T Create&lt;T&gt;(ref TBufferElement el, int nativeIdentifier)
     where T : ExposedParameter&lt;TValue, TBufferElement&gt;, new()</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -168,6 +225,11 @@ public abstract class ExposedParameter&lt;TValue, TBufferElement&gt; : ExposedPa
       <tr>
         <td><span class="xref">TBufferElement</span></td>
         <td><span class="parametername">el</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">nativeIdentifier</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -210,7 +272,34 @@ public abstract class ExposedParameter&lt;TValue, TBufferElement&gt; : ExposedPa
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public TValue GetValue()</code></pre>
+    <pre><code class="lang-csharp hljs">public override TValue GetValue()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">TValue</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">Kinstrife.Entities.Blackboard.ExposedParameter&lt;TValue&gt;.GetValue()</span></div>
+  
+  
+  <a id="Kinstrife_Entities_Blackboard_ExposedParameter_2_GetValueSafe_" data-uid="Kinstrife.Entities.Blackboard.ExposedParameter`2.GetValueSafe*"></a>
+  <h4 id="Kinstrife_Entities_Blackboard_ExposedParameter_2_GetValueSafe" data-uid="Kinstrife.Entities.Blackboard.ExposedParameter`2.GetValueSafe">GetValueSafe()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TValue GetValueSafe()</code></pre>
   </div>
   <h5 class="returns">Returns</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -235,7 +324,36 @@ public abstract class ExposedParameter&lt;TValue, TBufferElement&gt; : ExposedPa
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void SetValue(TValue input)</code></pre>
+    <pre><code class="lang-csharp hljs">public override void SetValue(TValue input)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">TValue</span></td>
+        <td><span class="parametername">input</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">Kinstrife.Entities.Blackboard.ExposedParameter&lt;TValue&gt;.SetValue(TValue)</span></div>
+  
+  
+  <a id="Kinstrife_Entities_Blackboard_ExposedParameter_2_SetValueSafe_" data-uid="Kinstrife.Entities.Blackboard.ExposedParameter`2.SetValueSafe*"></a>
+  <h4 id="Kinstrife_Entities_Blackboard_ExposedParameter_2_SetValueSafe__0_" data-uid="Kinstrife.Entities.Blackboard.ExposedParameter`2.SetValueSafe(`0)">SetValueSafe(TValue)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetValueSafe(TValue input)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">

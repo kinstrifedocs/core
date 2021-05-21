@@ -105,6 +105,9 @@
       <a class="xref" href="Kinstrife.Blueprints.StateflowNode.html#Kinstrife_Blueprints_StateflowNode_Name">StateflowNode.Name</a>
     </div>
     <div>
+      <a class="xref" href="Kinstrife.GraphTools.BaseNode.html#Kinstrife_GraphTools_BaseNode_IsInitialized">BaseNode.IsInitialized</a>
+    </div>
+    <div>
       <a class="xref" href="Kinstrife.GraphTools.BaseNode.html#Kinstrife_GraphTools_BaseNode_GetInputNodes_System_String_">BaseNode.GetInputNodes(String)</a>
     </div>
     <div>
@@ -130,6 +133,18 @@
     </div>
     <div>
       <a class="xref" href="Kinstrife.GraphTools.BaseNode.html#Kinstrife_GraphTools_BaseNode_ConnectedOutputNode__1">BaseNode.ConnectedOutputNode&lt;T&gt;()</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.GraphTools.BaseNode.html#Kinstrife_GraphTools_BaseNode_ConnectedOutputNode__1_System_String_">BaseNode.ConnectedOutputNode&lt;T&gt;(String)</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.GraphTools.BaseNode.html#Kinstrife_GraphTools_BaseNode_Enable">BaseNode.Enable()</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.GraphTools.BaseNode.html#Kinstrife_GraphTools_BaseNode_Disable">BaseNode.Disable()</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.GraphTools.BaseNode.html#Kinstrife_GraphTools_BaseNode_OnAfterChangeEdges_SerializableEdge_">BaseNode.OnAfterChangeEdges(SerializableEdge)</a>
     </div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Kinstrife.Blueprints.html">Kinstrife.Blueprints</a></h6>
@@ -287,6 +302,30 @@ public class StateNode : StateflowNode, IHasNameProperty, IConvertibleToBufferEl
   </table>
   
   
+  <h4 id="Kinstrife_Blueprints_StateNode_subGraph" data-uid="Kinstrife.Blueprints.StateNode.subGraph">subGraph</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ProcedureGraphAsset subGraph</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Kinstrife.Blueprints.ProcedureGraphAsset.html">ProcedureGraphAsset</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
   <h4 id="Kinstrife_Blueprints_StateNode_to" data-uid="Kinstrife.Blueprints.StateNode.to">to</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
@@ -329,6 +368,30 @@ public class StateNode : StateflowNode, IHasNameProperty, IConvertibleToBufferEl
     <tbody>
       <tr>
         <td><a class="xref" href="Kinstrife.Entities.Procedures.TransitionMode.html">TransitionMode</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="Kinstrife_Blueprints_StateNode_TransitionParameter" data-uid="Kinstrife.Blueprints.StateNode.TransitionParameter">TransitionParameter</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool TransitionParameter</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -456,6 +519,48 @@ public class StateNode : StateflowNode, IHasNameProperty, IConvertibleToBufferEl
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">protected override void Process()</code></pre>
   </div>
+  
+  
+  <a id="Kinstrife_Blueprints_StateNode_TryGetDurationFromProvider_" data-uid="Kinstrife.Blueprints.StateNode.TryGetDurationFromProvider*"></a>
+  <h4 id="Kinstrife_Blueprints_StateNode_TryGetDurationFromProvider_System_Single__" data-uid="Kinstrife.Blueprints.StateNode.TryGetDurationFromProvider(System.Single@)">TryGetDurationFromProvider(out Single)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool TryGetDurationFromProvider(out float duration)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><span class="parametername">duration</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   <h3 id="eii">Explicit Interface Implementations
   </h3>
   

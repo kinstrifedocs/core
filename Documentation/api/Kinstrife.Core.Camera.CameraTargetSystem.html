@@ -120,30 +120,6 @@
   </table>
   
   
-  <h4 id="Kinstrife_Core_Camera_CameraTargetSystem_IsBlending" data-uid="Kinstrife.Core.Camera.CameraTargetSystem.IsBlending">IsBlending</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static bool IsBlending</code></pre>
-  </div>
-  <h5 class="fieldValue">Field Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Boolean</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
   <h4 id="Kinstrife_Core_Camera_CameraTargetSystem_lookAtStartTransition" data-uid="Kinstrife.Core.Camera.CameraTargetSystem.lookAtStartTransition">lookAtStartTransition</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
@@ -268,16 +244,6 @@
   </table>
   <h3 id="methods">Methods
   </h3>
-  
-  
-  <a id="Kinstrife_Core_Camera_CameraTargetSystem_ClearTargetBindings_" data-uid="Kinstrife.Core.Camera.CameraTargetSystem.ClearTargetBindings*"></a>
-  <h4 id="Kinstrife_Core_Camera_CameraTargetSystem_ClearTargetBindings" data-uid="Kinstrife.Core.Camera.CameraTargetSystem.ClearTargetBindings">ClearTargetBindings()</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void ClearTargetBindings()</code></pre>
-  </div>
   
   
   <a id="Kinstrife_Core_Camera_CameraTargetSystem_DepthOfField_" data-uid="Kinstrife.Core.Camera.CameraTargetSystem.DepthOfField*"></a>
@@ -500,12 +466,12 @@
   
   
   <a id="Kinstrife_Core_Camera_CameraTargetSystem_ThirdPersonCam_" data-uid="Kinstrife.Core.Camera.CameraTargetSystem.ThirdPersonCam*"></a>
-  <h4 id="Kinstrife_Core_Camera_CameraTargetSystem_ThirdPersonCam_System_Single_float3_float3_" data-uid="Kinstrife.Core.Camera.CameraTargetSystem.ThirdPersonCam(System.Single,float3,float3)">ThirdPersonCam(Single, float3, float3)</h4>
+  <h4 id="Kinstrife_Core_Camera_CameraTargetSystem_ThirdPersonCam_System_Single_System_Boolean_float3_float3_" data-uid="Kinstrife.Core.Camera.CameraTargetSystem.ThirdPersonCam(System.Single,System.Boolean,float3,float3)">ThirdPersonCam(Single, Boolean, float3, float3)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void ThirdPersonCam(float deltaTime, float3 look, float3 follow)</code></pre>
+    <pre><code class="lang-csharp hljs">public void ThirdPersonCam(float deltaTime, bool transitioning, float3 look, float3 follow)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -520,6 +486,11 @@
       <tr>
         <td><span class="xref">System.Single</span></td>
         <td><span class="parametername">deltaTime</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">transitioning</span></td>
         <td></td>
       </tr>
       <tr>

@@ -104,6 +104,9 @@
       <a class="xref" href="Kinstrife.Blueprints.StateflowNode.html#Kinstrife_Blueprints_StateflowNode_Name">StateflowNode.Name</a>
     </div>
     <div>
+      <a class="xref" href="Kinstrife.GraphTools.BaseNode.html#Kinstrife_GraphTools_BaseNode_IsInitialized">BaseNode.IsInitialized</a>
+    </div>
+    <div>
       <a class="xref" href="Kinstrife.GraphTools.BaseNode.html#Kinstrife_GraphTools_BaseNode_GetInputNodes_System_String_">BaseNode.GetInputNodes(String)</a>
     </div>
     <div>
@@ -130,24 +133,33 @@
     <div>
       <a class="xref" href="Kinstrife.GraphTools.BaseNode.html#Kinstrife_GraphTools_BaseNode_ConnectedOutputNode__1">BaseNode.ConnectedOutputNode&lt;T&gt;()</a>
     </div>
+    <div>
+      <a class="xref" href="Kinstrife.GraphTools.BaseNode.html#Kinstrife_GraphTools_BaseNode_ConnectedOutputNode__1_System_String_">BaseNode.ConnectedOutputNode&lt;T&gt;(String)</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.GraphTools.BaseNode.html#Kinstrife_GraphTools_BaseNode_Disable">BaseNode.Disable()</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.GraphTools.BaseNode.html#Kinstrife_GraphTools_BaseNode_OnAfterChangeEdges_SerializableEdge_">BaseNode.OnAfterChangeEdges(SerializableEdge)</a>
+    </div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Kinstrife.Blueprints.html">Kinstrife.Blueprints</a></h6>
   <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
   <h5 id="Kinstrife_Blueprints_ExitNode_syntax">Syntax</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">[Serializable]
-public abstract class ExitNode : StateflowNode, IHasNameProperty</code></pre>
+public class ExitNode : StateflowNode, IHasNameProperty</code></pre>
   </div>
   <h3 id="fields">Fields
   </h3>
   
   
-  <h4 id="Kinstrife_Blueprints_ExitNode_From" data-uid="Kinstrife.Blueprints.ExitNode.From">From</h4>
+  <h4 id="Kinstrife_Blueprints_ExitNode_from" data-uid="Kinstrife.Blueprints.ExitNode.from">from</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public StateNode From</code></pre>
+    <pre><code class="lang-csharp hljs">public StateNode from</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -164,6 +176,57 @@ public abstract class ExitNode : StateflowNode, IHasNameProperty</code></pre>
       </tr>
     </tbody>
   </table>
+  <h3 id="properties">Properties
+  </h3>
+  
+  
+  <a id="Kinstrife_Blueprints_ExitNode_deletable_" data-uid="Kinstrife.Blueprints.ExitNode.deletable*"></a>
+  <h4 id="Kinstrife_Blueprints_ExitNode_deletable" data-uid="Kinstrife.Blueprints.ExitNode.deletable">deletable</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override bool deletable { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  
+  
+  <a id="Kinstrife_Blueprints_ExitNode_Enable_" data-uid="Kinstrife.Blueprints.ExitNode.Enable*"></a>
+  <h4 id="Kinstrife_Blueprints_ExitNode_Enable" data-uid="Kinstrife.Blueprints.ExitNode.Enable">Enable()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override void Enable()</code></pre>
+  </div>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Kinstrife.GraphTools.BaseNode.html#Kinstrife_GraphTools_BaseNode_Enable">BaseNode.Enable()</a></div>
+  
+  
+  <a id="Kinstrife_Blueprints_ExitNode_OnNodeCreated_" data-uid="Kinstrife.Blueprints.ExitNode.OnNodeCreated*"></a>
+  <h4 id="Kinstrife_Blueprints_ExitNode_OnNodeCreated" data-uid="Kinstrife.Blueprints.ExitNode.OnNodeCreated">OnNodeCreated()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override void OnNodeCreated()</code></pre>
+  </div>
   <h3 id="implements">Implements</h3>
   <div>
       <a class="xref" href="Kinstrife.Entities.Properties.IHasNameProperty.html">IHasNameProperty</a>

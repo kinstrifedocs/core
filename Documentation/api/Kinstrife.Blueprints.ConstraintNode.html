@@ -83,17 +83,19 @@
     <div class="level3"><span class="xref">ConstraintNode</span></div>
       <div class="level4"><a class="xref" href="Kinstrife.Blueprints.DistanceConstraintNode.html">DistanceConstraintNode</a></div>
       <div class="level4"><a class="xref" href="Kinstrife.Blueprints.DurationConstraintNode.html">DurationConstraintNode</a></div>
-      <div class="level4"><a class="xref" href="Kinstrife.Blueprints.ResourceConstraintNode.html">ResourceConstraintNode</a></div>
+      <div class="level4"><a class="xref" href="Kinstrife.ProcedureGraph.ConditionNode.html">ConditionNode</a></div>
   </div>
   <div classs="implements">
     <h5>Implements</h5>
-    <div><a class="xref" href="Kinstrife.Entities.ICustomSubEntityLinkRelation.html">ICustomSubEntityLinkRelation</a></div>
     <div><a class="xref" href="Kinstrife.Entities.IConvertible.html">IConvertible</a></div>
     <div><a class="xref" href="Kinstrife.Entities.Properties.IHasNameProperty.html">IHasNameProperty</a></div>
     <div><a class="xref" href="Kinstrife.Entities.Procedures.IConnectedToStates.html">IConnectedToStates</a></div>
   </div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="Kinstrife.GraphTools.BaseNode.html#Kinstrife_GraphTools_BaseNode_IsInitialized">BaseNode.IsInitialized</a>
+    </div>
     <div>
       <a class="xref" href="Kinstrife.GraphTools.BaseNode.html#Kinstrife_GraphTools_BaseNode_GetInputNodes_System_String_">BaseNode.GetInputNodes(String)</a>
     </div>
@@ -121,12 +123,24 @@
     <div>
       <a class="xref" href="Kinstrife.GraphTools.BaseNode.html#Kinstrife_GraphTools_BaseNode_ConnectedOutputNode__1">BaseNode.ConnectedOutputNode&lt;T&gt;()</a>
     </div>
+    <div>
+      <a class="xref" href="Kinstrife.GraphTools.BaseNode.html#Kinstrife_GraphTools_BaseNode_ConnectedOutputNode__1_System_String_">BaseNode.ConnectedOutputNode&lt;T&gt;(String)</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.GraphTools.BaseNode.html#Kinstrife_GraphTools_BaseNode_Enable">BaseNode.Enable()</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.GraphTools.BaseNode.html#Kinstrife_GraphTools_BaseNode_Disable">BaseNode.Disable()</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.GraphTools.BaseNode.html#Kinstrife_GraphTools_BaseNode_OnAfterChangeEdges_SerializableEdge_">BaseNode.OnAfterChangeEdges(SerializableEdge)</a>
+    </div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Kinstrife.Blueprints.html">Kinstrife.Blueprints</a></h6>
   <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
   <h5 id="Kinstrife_Blueprints_ConstraintNode_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public abstract class ConstraintNode : InputNode, ICustomSubEntityLinkRelation, IConvertible, IHasNameProperty, IConnectedToStates</code></pre>
+    <pre><code class="lang-csharp hljs">public abstract class ConstraintNode : InputNode, IConvertible, IHasNameProperty, IConnectedToStates</code></pre>
   </div>
   <h3 id="fields">Fields
   </h3>
@@ -201,31 +215,6 @@
     <tbody>
       <tr>
         <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="Kinstrife.Entities.Procedures.SubStateId.html">SubStateId</a>&gt;</td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="Kinstrife_Blueprints_ConstraintNode_GetLinkElementData_" data-uid="Kinstrife.Blueprints.ConstraintNode.GetLinkElementData*"></a>
-  <h4 id="Kinstrife_Blueprints_ConstraintNode_GetLinkElementData" data-uid="Kinstrife.Blueprints.ConstraintNode.GetLinkElementData">GetLinkElementData</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public ISubEntityLinkElement GetLinkElementData { get; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Kinstrife.Entities.ISubEntityLinkElement.html">ISubEntityLinkElement</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -389,9 +378,6 @@
     </tbody>
   </table>
   <h3 id="implements">Implements</h3>
-  <div>
-      <a class="xref" href="Kinstrife.Entities.ICustomSubEntityLinkRelation.html">ICustomSubEntityLinkRelation</a>
-  </div>
   <div>
       <a class="xref" href="Kinstrife.Entities.IConvertible.html">IConvertible</a>
   </div>

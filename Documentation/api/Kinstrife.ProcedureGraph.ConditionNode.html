@@ -1,0 +1,428 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class ConditionNode
+   | Kinstrife </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class ConditionNode
+   | Kinstrife ">
+    <meta name="generator" content="docfx 2.57.2.0">
+    
+    <link rel="shortcut icon" href="../../favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet"> 
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../index.html">
+                <img id="logo" class="svg" src="../../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Kinstrife.ProcedureGraph.ConditionNode">
+  
+  
+  <h1 id="Kinstrife_ProcedureGraph_ConditionNode" data-uid="Kinstrife.ProcedureGraph.ConditionNode" class="text-break">Class ConditionNode
+  </h1>
+  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><a class="xref" href="Kinstrife.GraphTools.BaseNode.html">BaseNode</a></div>
+    <div class="level2"><a class="xref" href="Kinstrife.Blueprints.InputNode.html">InputNode</a></div>
+    <div class="level3"><a class="xref" href="Kinstrife.Blueprints.ConstraintNode.html">ConstraintNode</a></div>
+    <div class="level4"><span class="xref">ConditionNode</span></div>
+  </div>
+  <div classs="implements">
+    <h5>Implements</h5>
+    <div><a class="xref" href="Kinstrife.Entities.Properties.IHasNameProperty.html">IHasNameProperty</a></div>
+    <div><a class="xref" href="Kinstrife.Entities.Procedures.IConnectedToStates.html">IConnectedToStates</a></div>
+    <div><a class="xref" href="Kinstrife.Entities.IConvertibleToBufferElement-1.html">IConvertibleToBufferElement</a>&lt;<a class="xref" href="Kinstrife.ProcedureGraph.ConditionElement.html">ConditionElement</a>&gt;</div>
+    <div><a class="xref" href="Kinstrife.Entities.IConvertibleToBufferElement.html">IConvertibleToBufferElement</a></div>
+    <div><a class="xref" href="Kinstrife.Entities.IConvertible.html">IConvertible</a></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="Kinstrife.Blueprints.ConstraintNode.html#Kinstrife_Blueprints_ConstraintNode_dependent">ConstraintNode.dependent</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.Blueprints.ConstraintNode.html#Kinstrife_Blueprints_ConstraintNode_ConstrainedOperations">ConstraintNode.ConstrainedOperations</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.Blueprints.ConstraintNode.html#Kinstrife_Blueprints_ConstraintNode_Name">ConstraintNode.Name</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.Blueprints.ConstraintNode.html#Kinstrife_Blueprints_ConstraintNode_GetOwnerComponentData">ConstraintNode.GetOwnerComponentData</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.Blueprints.ConstraintNode.html#Kinstrife_Blueprints_ConstraintNode_ConnectedStateIds">ConstraintNode.ConnectedStateIds</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.Blueprints.ConstraintNode.html#Kinstrife_Blueprints_ConstraintNode_InitCustomEntityRelation_EntityManager_Entity_Entity_">ConstraintNode.InitCustomEntityRelation(EntityManager, Entity, Entity)</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.Blueprints.ConstraintNode.html#Kinstrife_Blueprints_ConstraintNode_CreateCompactInstructionsBlob_EntityManager__Kinstrife_Blueprints_ProcedureGraphAsset_Entity__">ConstraintNode.CreateCompactInstructionsBlob(EntityManager, ProcedureGraphAsset, Entity)</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.GraphTools.BaseNode.html#Kinstrife_GraphTools_BaseNode_IsInitialized">BaseNode.IsInitialized</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.GraphTools.BaseNode.html#Kinstrife_GraphTools_BaseNode_GetInputNodes_System_String_">BaseNode.GetInputNodes(String)</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.GraphTools.BaseNode.html#Kinstrife_GraphTools_BaseNode_GetOutputNodes_System_String_">BaseNode.GetOutputNodes(String)</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.GraphTools.BaseNode.html#Kinstrife_GraphTools_BaseNode_ConnectedInputNodes__1">BaseNode.ConnectedInputNodes&lt;T&gt;()</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.GraphTools.BaseNode.html#Kinstrife_GraphTools_BaseNode_ConnectedOutputNodes__1">BaseNode.ConnectedOutputNodes&lt;T&gt;()</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.GraphTools.BaseNode.html#Kinstrife_GraphTools_BaseNode_HasInputConnection_System_String_">BaseNode.HasInputConnection(String)</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.GraphTools.BaseNode.html#Kinstrife_GraphTools_BaseNode_HasInputConnectionOfType__1">BaseNode.HasInputConnectionOfType&lt;T&gt;()</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.GraphTools.BaseNode.html#Kinstrife_GraphTools_BaseNode_HasOutputConnectionOfType__1">BaseNode.HasOutputConnectionOfType&lt;T&gt;()</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.GraphTools.BaseNode.html#Kinstrife_GraphTools_BaseNode_ConnectedInputNode__1">BaseNode.ConnectedInputNode&lt;T&gt;()</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.GraphTools.BaseNode.html#Kinstrife_GraphTools_BaseNode_ConnectedOutputNode__1">BaseNode.ConnectedOutputNode&lt;T&gt;()</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.GraphTools.BaseNode.html#Kinstrife_GraphTools_BaseNode_ConnectedOutputNode__1_System_String_">BaseNode.ConnectedOutputNode&lt;T&gt;(String)</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.GraphTools.BaseNode.html#Kinstrife_GraphTools_BaseNode_Enable">BaseNode.Enable()</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.GraphTools.BaseNode.html#Kinstrife_GraphTools_BaseNode_Disable">BaseNode.Disable()</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.GraphTools.BaseNode.html#Kinstrife_GraphTools_BaseNode_OnAfterChangeEdges_SerializableEdge_">BaseNode.OnAfterChangeEdges(SerializableEdge)</a>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Kinstrife.ProcedureGraph.html">Kinstrife.ProcedureGraph</a></h6>
+  <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
+  <h5 id="Kinstrife_ProcedureGraph_ConditionNode_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class ConditionNode : ConstraintNode, IHasNameProperty, IConnectedToStates, IConvertibleToBufferElement&lt;ConditionElement&gt;, IConvertibleToBufferElement, IConvertible</code></pre>
+  </div>
+  <h3 id="fields">Fields
+  </h3>
+  
+  
+  <h4 id="Kinstrife_ProcedureGraph_ConditionNode_BoolParameter" data-uid="Kinstrife.ProcedureGraph.ConditionNode.BoolParameter">BoolParameter</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool BoolParameter</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="Kinstrife_ProcedureGraph_ConditionNode_OnFail" data-uid="Kinstrife.ProcedureGraph.ConditionNode.OnFail">OnFail</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public StateflowNode OnFail</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Kinstrife.Blueprints.StateflowNode.html">StateflowNode</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="Kinstrife_ProcedureGraph_ConditionNode_OnFailFireForget" data-uid="Kinstrife.ProcedureGraph.ConditionNode.OnFailFireForget">OnFailFireForget</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ProcedureGraphAsset OnFailFireForget</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Kinstrife.Blueprints.ProcedureGraphAsset.html">ProcedureGraphAsset</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="Kinstrife_ProcedureGraph_ConditionNode_OnSucceed" data-uid="Kinstrife.ProcedureGraph.ConditionNode.OnSucceed">OnSucceed</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public StateflowNode OnSucceed</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Kinstrife.Blueprints.StateflowNode.html">StateflowNode</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="Kinstrife_ProcedureGraph_ConditionNode_OnSucceedFireForget" data-uid="Kinstrife.ProcedureGraph.ConditionNode.OnSucceedFireForget">OnSucceedFireForget</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ProcedureGraphAsset OnSucceedFireForget</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Kinstrife.Blueprints.ProcedureGraphAsset.html">ProcedureGraphAsset</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="properties">Properties
+  </h3>
+  
+  
+  <a id="Kinstrife_ProcedureGraph_ConditionNode_ConvertibleBufferElement_" data-uid="Kinstrife.ProcedureGraph.ConditionNode.ConvertibleBufferElement*"></a>
+  <h4 id="Kinstrife_ProcedureGraph_ConditionNode_ConvertibleBufferElement" data-uid="Kinstrife.ProcedureGraph.ConditionNode.ConvertibleBufferElement">ConvertibleBufferElement</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IBufferElementData ConvertibleBufferElement { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">IBufferElementData</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Kinstrife_ProcedureGraph_ConditionNode_GetConvertibleBufferElement_" data-uid="Kinstrife.ProcedureGraph.ConditionNode.GetConvertibleBufferElement*"></a>
+  <h4 id="Kinstrife_ProcedureGraph_ConditionNode_GetConvertibleBufferElement" data-uid="Kinstrife.ProcedureGraph.ConditionNode.GetConvertibleBufferElement">GetConvertibleBufferElement</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ConditionElement GetConvertibleBufferElement { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Kinstrife.ProcedureGraph.ConditionElement.html">ConditionElement</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  
+  
+  <a id="Kinstrife_ProcedureGraph_ConditionNode_InitRuntimeComponents_" data-uid="Kinstrife.ProcedureGraph.ConditionNode.InitRuntimeComponents*"></a>
+  <h4 id="Kinstrife_ProcedureGraph_ConditionNode_InitRuntimeComponents_EntityManager__Entity_" data-uid="Kinstrife.ProcedureGraph.ConditionNode.InitRuntimeComponents(EntityManager@,Entity)">InitRuntimeComponents(ref EntityManager, Entity)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override void InitRuntimeComponents(ref EntityManager entityManager, Entity e)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">EntityManager</span></td>
+        <td><span class="parametername">entityManager</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">Entity</span></td>
+        <td><span class="parametername">e</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Kinstrife.Blueprints.ConstraintNode.html#Kinstrife_Blueprints_ConstraintNode_InitRuntimeComponents_EntityManager__Entity_">ConstraintNode.InitRuntimeComponents(ref EntityManager, Entity)</a></div>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <a class="xref" href="Kinstrife.Entities.Properties.IHasNameProperty.html">IHasNameProperty</a>
+  </div>
+  <div>
+      <a class="xref" href="Kinstrife.Entities.Procedures.IConnectedToStates.html">IConnectedToStates</a>
+  </div>
+  <div>
+      <a class="xref" href="Kinstrife.Entities.IConvertibleToBufferElement-1.html">IConvertibleToBufferElement&lt;T&gt;</a>
+  </div>
+  <div>
+      <a class="xref" href="Kinstrife.Entities.IConvertibleToBufferElement.html">IConvertibleToBufferElement</a>
+  </div>
+  <div>
+      <a class="xref" href="Kinstrife.Entities.IConvertible.html">IConvertible</a>
+  </div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+  </body>
+</html>
