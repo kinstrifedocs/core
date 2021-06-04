@@ -84,6 +84,7 @@
   <div classs="implements">
     <h5>Implements</h5>
     <div><a class="xref" href="Kinstrife.Animation.IAnimationPlayer.html">IAnimationPlayer</a></div>
+    <div><a class="xref" href="Kinstrife.Core.DependencyInjection.ICacheReferences.html">ICacheReferences</a></div>
     <div><a class="xref" href="Kinstrife.Animation.ICreatePlayableFromTrack-1.html">ICreatePlayableFromTrack</a>&lt;<a class="xref" href="Kinstrife.Animation.TargetMatchingTrack.html">TargetMatchingTrack</a>&gt;</div>
     <div><span class="xref">IAnimationWindowPreview</span></div>
     <div><a class="xref" href="Kinstrife.Core.DependencyInjection.IInitializable.html">IInitializable</a></div>
@@ -112,12 +113,15 @@
     <div>
       <a class="xref" href="Kinstrife.Animation.AnimationComponent.html#Kinstrife_Animation_AnimationComponent_GetClosestComponent__1_Transform_Transform_">AnimationComponent.GetClosestComponent&lt;T&gt;(Transform, Transform)</a>
     </div>
+    <div>
+      <a class="xref" href="Kinstrife.Animation.AnimationComponent.html#Kinstrife_Animation_AnimationComponent_CacheReferences">AnimationComponent.CacheReferences()</a>
+    </div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Kinstrife.Animation.html">Kinstrife.Animation</a></h6>
   <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
   <h5 id="Kinstrife_Animation_TargetMatching_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class TargetMatching : AnimationComponent, IAnimationPlayer, ICreatePlayableFromTrack&lt;TargetMatchingTrack&gt;, IAnimationWindowPreview, IInitializable, IDependent</code></pre>
+    <pre><code class="lang-csharp hljs">public class TargetMatching : AnimationComponent, IAnimationPlayer, ICacheReferences, ICreatePlayableFromTrack&lt;TargetMatchingTrack&gt;, IAnimationWindowPreview, IInitializable, IDependent</code></pre>
   </div>
   <h3 id="fields">Fields
   </h3>
@@ -638,6 +642,9 @@
   <h3 id="implements">Implements</h3>
   <div>
       <a class="xref" href="Kinstrife.Animation.IAnimationPlayer.html">IAnimationPlayer</a>
+  </div>
+  <div>
+      <a class="xref" href="Kinstrife.Core.DependencyInjection.ICacheReferences.html">ICacheReferences</a>
   </div>
   <div>
       <a class="xref" href="Kinstrife.Animation.ICreatePlayableFromTrack-1.html">ICreatePlayableFromTrack&lt;T&gt;</a>
