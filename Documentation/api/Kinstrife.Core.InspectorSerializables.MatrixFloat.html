@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class MatrixFloat
    | Kinstrife ">
-    <meta name="generator" content="docfx 2.57.2.0">
+    <meta name="generator" content="docfx 2.58.0.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
@@ -84,6 +84,8 @@
   <div classs="implements">
     <h5>Implements</h5>
     <div><a class="xref" href="Kinstrife.Core.InspectorSerializables.IReadonlyMatrix-1.html">IReadonlyMatrix</a>&lt;<span class="xref">System.Single</span>&gt;</div>
+    <div><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<span class="xref">System.Single</span>&gt;</div>
+    <div><span class="xref">System.Collections.IEnumerable</span></div>
   </div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
@@ -147,7 +149,7 @@
   <h5 id="Kinstrife_Core_InspectorSerializables_MatrixFloat_syntax">Syntax</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">[Serializable]
-public class MatrixFloat : SerializableMatrix&lt;float&gt;, IReadonlyMatrix&lt;float&gt;</code></pre>
+public class MatrixFloat : SerializableMatrix&lt;float&gt;, IReadonlyMatrix&lt;float&gt;, IEnumerable&lt;float&gt;, IEnumerable</code></pre>
   </div>
   <h3 id="constructors">Constructors
   </h3>
@@ -355,9 +357,67 @@ public class MatrixFloat : SerializableMatrix&lt;float&gt;, IReadonlyMatrix&lt;f
       </tr>
     </tbody>
   </table>
+  <h3 id="eii">Explicit Interface Implementations
+  </h3>
+  
+  
+  <a id="Kinstrife_Core_InspectorSerializables_MatrixFloat_System_Collections_Generic_IEnumerable_System_Single__GetEnumerator_" data-uid="Kinstrife.Core.InspectorSerializables.MatrixFloat.System#Collections#Generic#IEnumerable{System#Single}#GetEnumerator*"></a>
+  <h4 id="Kinstrife_Core_InspectorSerializables_MatrixFloat_System_Collections_Generic_IEnumerable_System_Single__GetEnumerator" data-uid="Kinstrife.Core.InspectorSerializables.MatrixFloat.System#Collections#Generic#IEnumerable{System#Single}#GetEnumerator">IEnumerable&lt;Single&gt;.GetEnumerator()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IEnumerator&lt;float&gt; IEnumerable&lt;float&gt;.GetEnumerator()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IEnumerator</span>&lt;<span class="xref">System.Single</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Kinstrife_Core_InspectorSerializables_MatrixFloat_System_Collections_IEnumerable_GetEnumerator_" data-uid="Kinstrife.Core.InspectorSerializables.MatrixFloat.System#Collections#IEnumerable#GetEnumerator*"></a>
+  <h4 id="Kinstrife_Core_InspectorSerializables_MatrixFloat_System_Collections_IEnumerable_GetEnumerator" data-uid="Kinstrife.Core.InspectorSerializables.MatrixFloat.System#Collections#IEnumerable#GetEnumerator">IEnumerable.GetEnumerator()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IEnumerator IEnumerable.GetEnumerator()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.IEnumerator</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   <h3 id="implements">Implements</h3>
   <div>
       <a class="xref" href="Kinstrife.Core.InspectorSerializables.IReadonlyMatrix-1.html">IReadonlyMatrix&lt;T&gt;</a>
+  </div>
+  <div>
+      <span class="xref">System.Collections.Generic.IEnumerable&lt;T&gt;</span>
+  </div>
+  <div>
+      <span class="xref">System.Collections.IEnumerable</span>
   </div>
 </article>
           </div>

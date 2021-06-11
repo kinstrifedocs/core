@@ -8,7 +8,7 @@
     <title>Messaging Concepts | Kinstrife </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Messaging Concepts | Kinstrife ">
-    <meta name="generator" content="docfx 2.57.2.0">
+    <meta name="generator" content="docfx 2.58.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -84,6 +84,20 @@ TODO: Some more info</p>
 <p>TODO: Takes care of the routing, abstracts for the ‘handles’ (subscribers &amp; publishers, servers &amp; clients) what goes on behind the scenes –&gt; the transport</p>
 <h2 id="transport">Transport</h2>
 <p>TODO: Depending on channel &amp; service settings, there can be different transport implementations. The endpoints don’t need to know about this. This allows users to conveniently ‘ignore’ e. g. multi-threaded or networked scenarios for large portions of code because the transmitting is entirely taken care of behind the scenes. The API for the end points does not change.</p>
+<h1 id="usage-examples">Usage Examples</h1>
+<h2 id="pub-sub-messaging-1">Pub-Sub messaging</h2>
+<p><strong>Step 1:</strong> Create a channel to publish and subscribe on, for example:</p>
+<pre><code class="lang-csharp">using Messaging;
+using Kinstrife.Data.Dynamic;
+
+public sealed class WeatherChannelHandle : IChannelHandle
+{
+	public static ChannelDescriptor channel = new ChannelDescriptor(typeof(Weather), &quot;Broadcasting weather data.&quot;, messagesToCache: 2);
+
+	public ChannelDescriptor Descriptor =&gt; channel;
+}
+</code></pre>
+<p><strong>Step 2:</strong> Create a publisher. It's usually easiest to simply inherit from the <code>PublisherBehaviour</code> with the specific message type.</p>
 </article>
           </div>
           

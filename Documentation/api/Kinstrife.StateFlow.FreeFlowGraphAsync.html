@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class FreeFlowGraphAsync
    | Kinstrife ">
-    <meta name="generator" content="docfx 2.57.2.0">
+    <meta name="generator" content="docfx 2.58.0.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
@@ -240,7 +240,7 @@ public class FreeFlowGraphAsync : FreeFlowGraph, IStateMachineAsync, IStateMachi
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected UniTask&lt;bool&gt; TransitionAsync(FlowNode nextNode, int durationMs)</code></pre>
+    <pre><code class="lang-csharp hljs">protected async UniTask&lt;bool&gt; TransitionAsync(FlowNode nextNode, int durationMs)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -331,7 +331,7 @@ public class FreeFlowGraphAsync : FreeFlowGraph, IStateMachineAsync, IStateMachi
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public UniTask&lt;bool&gt; TryTransitionAsync(IFlowState target, bool overrideTransition = false, int durationMs = -1)</code></pre>
+    <pre><code class="lang-csharp hljs">public async UniTask&lt;bool&gt; TryTransitionAsync(IFlowState target, bool overrideTransition = false, int durationMs = -1)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
