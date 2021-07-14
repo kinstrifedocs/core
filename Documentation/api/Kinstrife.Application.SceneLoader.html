@@ -81,35 +81,11 @@
     <div class="level0"><span class="xref">System.Object</span></div>
     <div class="level1"><span class="xref">SceneLoader</span></div>
   </div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
-    <div>
-      <span class="xref">System.Object.ToString()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetHashCode()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetType()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
-    </div>
-  </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Kinstrife.Application.html">Kinstrife.Application</a></h6>
   <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
   <h5 id="Kinstrife_Application_SceneLoader_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class SceneLoader</code></pre>
+    <pre><code class="lang-csharp hljs">public class SceneLoader : IProgress&lt;float&gt;</code></pre>
   </div>
   <h3 id="fields">Fields
   </h3>
@@ -216,13 +192,13 @@
   </h3>
   
   
-  <a id="Kinstrife_Application_SceneLoader_LoadScenesAddressable_" data-uid="Kinstrife.Application.SceneLoader.LoadScenesAddressable*"></a>
-  <h4 id="Kinstrife_Application_SceneLoader_LoadScenesAddressable_Kinstrife_Application_SceneReference___Scene___" data-uid="Kinstrife.Application.SceneLoader.LoadScenesAddressable(Kinstrife.Application.SceneReference[],Scene[])">LoadScenesAddressable(SceneReference[], Scene[])</h4>
+  <a id="Kinstrife_Application_SceneLoader_AsyncLoadUnloadScenes_" data-uid="Kinstrife.Application.SceneLoader.AsyncLoadUnloadScenes*"></a>
+  <h4 id="Kinstrife_Application_SceneLoader_AsyncLoadUnloadScenes_System_Collections_Generic_IList_Kinstrife_Application_SceneReference__System_Collections_Generic_IList_Scene__Kinstrife_Application_ApplicationFlow_SceneLoadingType_" data-uid="Kinstrife.Application.SceneLoader.AsyncLoadUnloadScenes(System.Collections.Generic.IList{Kinstrife.Application.SceneReference},System.Collections.Generic.IList{Scene},Kinstrife.Application.ApplicationFlow.SceneLoadingType)">AsyncLoadUnloadScenes(IList&lt;SceneReference&gt;, IList&lt;Scene&gt;, ApplicationFlow.SceneLoadingType)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public IEnumerator LoadScenesAddressable(SceneReference[] scenesToLoad, Scene[] scenesToUnload)</code></pre>
+    <pre><code class="lang-csharp hljs">public async UniTask AsyncLoadUnloadScenes(IList&lt;SceneReference&gt; scenesToLoad, IList&lt;Scene&gt; scenesToUnload, ApplicationFlow.SceneLoadingType sceneLoadingType)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -235,13 +211,18 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="Kinstrife.Application.SceneReference.html">SceneReference</a>[]</td>
+        <td><span class="xref">System.Collections.Generic.IList</span>&lt;<a class="xref" href="Kinstrife.Application.SceneReference.html">SceneReference</a>&gt;</td>
         <td><span class="parametername">scenesToLoad</span></td>
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">Scene</span>[]</td>
+        <td><span class="xref">System.Collections.Generic.IList</span>&lt;<span class="xref">Scene</span>&gt;</td>
         <td><span class="parametername">scenesToUnload</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Kinstrife.Application.ApplicationFlow.SceneLoadingType.html">ApplicationFlow.SceneLoadingType</a></td>
+        <td><span class="parametername">sceneLoadingType</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -256,7 +237,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.IEnumerator</span></td>
+        <td><span class="xref">UniTask</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -304,6 +285,33 @@
     <tbody>
       <tr>
         <td><span class="xref">System.Collections.IEnumerator</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Kinstrife_Application_SceneLoader_Report_" data-uid="Kinstrife.Application.SceneLoader.Report*"></a>
+  <h4 id="Kinstrife_Application_SceneLoader_Report_System_Single_" data-uid="Kinstrife.Application.SceneLoader.Report(System.Single)">Report(Single)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Report(float value)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><span class="parametername">value</span></td>
         <td></td>
       </tr>
     </tbody>

@@ -78,23 +78,250 @@
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><span class="xref">Driver</span></div>
-      <div class="level2"><a class="xref" href="Kinstrife.Animation.Driver-3.html">Driver&lt;TKey, TObject, TValue&gt;</a></div>
-      <div class="level2"><a class="xref" href="Kinstrife.Animation.TransformDriver.html">TransformDriver</a></div>
+    <div class="level1"><a class="xref" href="Kinstrife.Animation.DriverBase.html">DriverBase</a></div>
+    <div class="level2"><span class="xref">Driver</span></div>
+      <div class="level3"><a class="xref" href="Kinstrife.Animation.Driver-3.html">Driver&lt;TKey, TObject, TValue&gt;</a></div>
   </div>
   <div classs="implements">
     <h5>Implements</h5>
-    <div><span class="xref">MonoBehaviour</span></div>
+    <div><span class="xref">ICacheReferences</span></div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Kinstrife.Animation.html">Kinstrife.Animation</a></h6>
   <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
   <h5 id="Kinstrife_Animation_Driver_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public abstract class Driver : MonoBehaviour, MonoBehaviour</code></pre>
+    <pre><code class="lang-csharp hljs">public abstract class Driver : DriverBase, ICacheReferences</code></pre>
+  </div>
+  <h3 id="fields">Fields
+  </h3>
+  
+  
+  <h4 id="Kinstrife_Animation_Driver_inputValueDriver" data-uid="Kinstrife.Animation.Driver.inputValueDriver">inputValueDriver</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public InputValueDriverBase inputValueDriver</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Kinstrife.Animation.InputValueDriverBase.html">InputValueDriverBase</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="Kinstrife_Animation_Driver_lastValue" data-uid="Kinstrife.Animation.Driver.lastValue">lastValue</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected float lastValue</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="Kinstrife_Animation_Driver_outputDrivers" data-uid="Kinstrife.Animation.Driver.outputDrivers">outputDrivers</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public OutputDriverBase[] outputDrivers</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Kinstrife.Animation.OutputDriverBase.html">OutputDriverBase</a>[]</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="Kinstrife_Animation_Driver_targetValue" data-uid="Kinstrife.Animation.Driver.targetValue">targetValue</h4>
+  <div class="markdown level1 summary"><p>Normalized target value between 0 and 1.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected float targetValue</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="Kinstrife_Animation_Driver_valueModifiers" data-uid="Kinstrife.Animation.Driver.valueModifiers">valueModifiers</h4>
+  <div class="markdown level1 summary"><p>Output value modifiers transform the base value and are stepped each frame, and can be used by outputs</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public OutputValueModifier[] valueModifiers</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Kinstrife.Animation.OutputValueModifier.html">OutputValueModifier</a>[]</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="properties">Properties
+  </h3>
+  
+  
+  <a id="Kinstrife_Animation_Driver_TargetValue_" data-uid="Kinstrife.Animation.Driver.TargetValue*"></a>
+  <h4 id="Kinstrife_Animation_Driver_TargetValue" data-uid="Kinstrife.Animation.Driver.TargetValue">TargetValue</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual float TargetValue { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  
+  
+  <a id="Kinstrife_Animation_Driver_CacheReferences_" data-uid="Kinstrife.Animation.Driver.CacheReferences*"></a>
+  <h4 id="Kinstrife_Animation_Driver_CacheReferences" data-uid="Kinstrife.Animation.Driver.CacheReferences">CacheReferences()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void CacheReferences()</code></pre>
+  </div>
+  
+  
+  <a id="Kinstrife_Animation_Driver_InternalSetValue_" data-uid="Kinstrife.Animation.Driver.InternalSetValue*"></a>
+  <h4 id="Kinstrife_Animation_Driver_InternalSetValue_System_Single_" data-uid="Kinstrife.Animation.Driver.InternalSetValue(System.Single)">InternalSetValue(Single)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void InternalSetValue(float value)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><span class="parametername">value</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Kinstrife_Animation_Driver_SetValue_" data-uid="Kinstrife.Animation.Driver.SetValue*"></a>
+  <h4 id="Kinstrife_Animation_Driver_SetValue_System_Single_" data-uid="Kinstrife.Animation.Driver.SetValue(System.Single)">SetValue(Single)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void SetValue(float value)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><span class="parametername">value</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Kinstrife_Animation_Driver_Update_" data-uid="Kinstrife.Animation.Driver.Update*"></a>
+  <h4 id="Kinstrife_Animation_Driver_Update" data-uid="Kinstrife.Animation.Driver.Update">Update()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Update()</code></pre>
   </div>
   <h3 id="implements">Implements</h3>
   <div>
-      <span class="xref">MonoBehaviour</span>
+      <span class="xref">ICacheReferences</span>
   </div>
 </article>
           </div>
