@@ -76,7 +76,7 @@
   <div class="markdown level0 summary"><p>Handles application flow / flow of control in a single module. Should abstract away anything from application flow so that other
 scripts in a module do not depend on it, i. e. requesting a change of GameMode, changing the timescale (including pausing/unpausing)
 etc. should all be done here.
-This is essentially an in-scene representation of <a class="xref" href="Kinstrife.Application.Module.html#Kinstrife_Application_Module_ModuleDefinition">ModuleDefinition</a>.
+This is essentially an in-scene representation of <a class="xref" href="Kinstrife.Application.ModuleDefinition.html">ModuleDefinition</a>.
 TODO: Might need some sort of callback when loading starts but the module persists
 e. g. for the actor module, where unneeded actors for the next mode/scene can be cleared</p>
 </div>
@@ -89,13 +89,14 @@ e. g. for the actor module, where unneeded actors for the next mode/scene can be
   </div>
   <div classs="implements">
     <h5>Implements</h5>
-    <div><span class="xref">IInjectable</span></div>
+    <div><a class="xref" href="Kinstrife.Core.DependencyInjection.IInjectable.html">IInjectable</a></div>
+    <div><a class="xref" href="Kinstrife.Core.DependencyInjection.IDependent.html">IDependent</a></div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Kinstrife.Application.html">Kinstrife.Application</a></h6>
   <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
   <h5 id="Kinstrife_Application_Module_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public abstract class Module : MonoBehaviour, IInjectable</code></pre>
+    <pre><code class="lang-csharp hljs">public abstract class Module : MonoBehaviour, IInjectable, IDependent</code></pre>
   </div>
   <h3 id="fields">Fields
   </h3>
@@ -142,7 +143,7 @@ e. g. for the actor module, where unneeded actors for the next mode/scene can be
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">InjectableSource</span></td>
+        <td><a class="xref" href="Kinstrife.Core.DependencyInjection.InjectableSource.html">InjectableSource</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -200,14 +201,13 @@ e. g. for the actor module, where unneeded actors for the next mode/scene can be
   </table>
   
   
-  <a id="Kinstrife_Application_Module_ModuleDefinition_" data-uid="Kinstrife.Application.Module.ModuleDefinition*"></a>
-  <h4 id="Kinstrife_Application_Module_ModuleDefinition" data-uid="Kinstrife.Application.Module.ModuleDefinition">ModuleDefinition</h4>
-  <div class="markdown level1 summary"><p>Module static data</p>
-</div>
+  <a id="Kinstrife_Application_Module_ModuleRef_" data-uid="Kinstrife.Application.Module.ModuleRef*"></a>
+  <h4 id="Kinstrife_Application_Module_ModuleRef" data-uid="Kinstrife.Application.Module.ModuleRef">ModuleRef</h4>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public ModuleDefinition ModuleDefinition { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public AssetReferenceT&lt;ModuleDefinition&gt; ModuleRef { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -219,7 +219,7 @@ e. g. for the actor module, where unneeded actors for the next mode/scene can be
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="Kinstrife.Application.ModuleDefinition.html">ModuleDefinition</a></td>
+        <td><span class="xref">AssetReferenceT</span>&lt;<a class="xref" href="Kinstrife.Application.ModuleDefinition.html">ModuleDefinition</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -296,7 +296,7 @@ up in its proper order to avoid setup dependency issues.</p>
   
   
   <a id="Kinstrife_Application_Module_RegisterChildContext_" data-uid="Kinstrife.Application.Module.RegisterChildContext*"></a>
-  <h4 id="Kinstrife_Application_Module_RegisterChildContext_DIInitializer_" data-uid="Kinstrife.Application.Module.RegisterChildContext(DIInitializer)">RegisterChildContext(DIInitializer)</h4>
+  <h4 id="Kinstrife_Application_Module_RegisterChildContext_Kinstrife_Core_DependencyInjection_DIInitializer_" data-uid="Kinstrife.Application.Module.RegisterChildContext(Kinstrife.Core.DependencyInjection.DIInitializer)">RegisterChildContext(DIInitializer)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -314,7 +314,7 @@ up in its proper order to avoid setup dependency issues.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">DIInitializer</span></td>
+        <td><a class="xref" href="Kinstrife.Core.DependencyInjection.DIInitializer.html">DIInitializer</a></td>
         <td><span class="parametername">childContext</span></td>
         <td></td>
       </tr>
@@ -415,7 +415,7 @@ up in its proper order to avoid setup dependency issues.</p>
   
   
   <a id="Kinstrife_Application_Module_SetParentContext_" data-uid="Kinstrife.Application.Module.SetParentContext*"></a>
-  <h4 id="Kinstrife_Application_Module_SetParentContext_Context_" data-uid="Kinstrife.Application.Module.SetParentContext(Context)">SetParentContext(Context)</h4>
+  <h4 id="Kinstrife_Application_Module_SetParentContext_Kinstrife_Core_DependencyInjection_Context_" data-uid="Kinstrife.Application.Module.SetParentContext(Kinstrife.Core.DependencyInjection.Context)">SetParentContext(Context)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -433,7 +433,7 @@ up in its proper order to avoid setup dependency issues.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Context</span></td>
+        <td><a class="xref" href="Kinstrife.Core.DependencyInjection.Context.html">Context</a></td>
         <td><span class="parametername">context</span></td>
         <td></td>
       </tr>
@@ -577,7 +577,10 @@ up in its proper order to avoid setup dependency issues.</p>
   </table>
   <h3 id="implements">Implements</h3>
   <div>
-      <span class="xref">IInjectable</span>
+      <a class="xref" href="Kinstrife.Core.DependencyInjection.IInjectable.html">IInjectable</a>
+  </div>
+  <div>
+      <a class="xref" href="Kinstrife.Core.DependencyInjection.IDependent.html">IDependent</a>
   </div>
 </article>
           </div>

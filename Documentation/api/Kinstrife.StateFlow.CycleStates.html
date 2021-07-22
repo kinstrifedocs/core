@@ -78,141 +78,39 @@
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><span class="xref">CycleStates</span></div>
+    <div class="level1"><a class="xref" href="Kinstrife.StateFlow.CycleStatesBase-1.html">CycleStatesBase</a>&lt;<a class="xref" href="Kinstrife.StateFlow.StateID.html">StateID</a>&gt;</div>
+    <div class="level2"><span class="xref">CycleStates</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="Kinstrife.StateFlow.CycleStatesBase-1.html#Kinstrife_StateFlow_CycleStatesBase_1_States">CycleStatesBase&lt;StateID&gt;.States</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.StateFlow.CycleStatesBase-1.html#Kinstrife_StateFlow_CycleStatesBase_1_Current">CycleStatesBase&lt;StateID&gt;.Current</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.StateFlow.CycleStatesBase-1.html#Kinstrife_StateFlow_CycleStatesBase_1_onNewState">CycleStatesBase&lt;StateID&gt;.onNewState</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.StateFlow.CycleStatesBase-1.html#Kinstrife_StateFlow_CycleStatesBase_1_Next">CycleStatesBase&lt;StateID&gt;.Next()</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.StateFlow.CycleStatesBase-1.html#Kinstrife_StateFlow_CycleStatesBase_1_Previous">CycleStatesBase&lt;StateID&gt;.Previous()</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.StateFlow.CycleStatesBase-1.html#Kinstrife_StateFlow_CycleStatesBase_1_SetState__0_">CycleStatesBase&lt;StateID&gt;.SetState(StateID)</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.StateFlow.CycleStatesBase-1.html#Kinstrife_StateFlow_CycleStatesBase_1_Equals__0__0_">CycleStatesBase&lt;StateID&gt;.Equals(StateID, StateID)</a>
+    </div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Kinstrife.StateFlow.html">Kinstrife.StateFlow</a></h6>
   <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
   <h5 id="Kinstrife_StateFlow_CycleStates_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class CycleStates : MonoBehaviour</code></pre>
+    <pre><code class="lang-csharp hljs">public class CycleStates : CycleStatesBase&lt;StateID&gt;</code></pre>
   </div>
-  <h3 id="fields">Fields
-  </h3>
-  
-  
-  <h4 id="Kinstrife_StateFlow_CycleStates_onNewState" data-uid="Kinstrife.StateFlow.CycleStates.onNewState">onNewState</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public StateEvent onNewState</code></pre>
-  </div>
-  <h5 class="fieldValue">Field Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Kinstrife.StateFlow.StateEvent.html">StateEvent</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h3 id="properties">Properties
-  </h3>
-  
-  
-  <a id="Kinstrife_StateFlow_CycleStates_Current_" data-uid="Kinstrife.StateFlow.CycleStates.Current*"></a>
-  <h4 id="Kinstrife_StateFlow_CycleStates_Current" data-uid="Kinstrife.StateFlow.CycleStates.Current">Current</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public StateID Current { get; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Kinstrife.StateFlow.StateID.html">StateID</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="Kinstrife_StateFlow_CycleStates_States_" data-uid="Kinstrife.StateFlow.CycleStates.States*"></a>
-  <h4 id="Kinstrife_StateFlow_CycleStates_States" data-uid="Kinstrife.StateFlow.CycleStates.States">States</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public List&lt;StateID&gt; States { get; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Collections.Generic.List</span>&lt;<a class="xref" href="Kinstrife.StateFlow.StateID.html">StateID</a>&gt;</td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h3 id="methods">Methods
-  </h3>
-  
-  
-  <a id="Kinstrife_StateFlow_CycleStates_Next_" data-uid="Kinstrife.StateFlow.CycleStates.Next*"></a>
-  <h4 id="Kinstrife_StateFlow_CycleStates_Next" data-uid="Kinstrife.StateFlow.CycleStates.Next">Next()</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void Next()</code></pre>
-  </div>
-  
-  
-  <a id="Kinstrife_StateFlow_CycleStates_Previous_" data-uid="Kinstrife.StateFlow.CycleStates.Previous*"></a>
-  <h4 id="Kinstrife_StateFlow_CycleStates_Previous" data-uid="Kinstrife.StateFlow.CycleStates.Previous">Previous()</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void Previous()</code></pre>
-  </div>
-  
-  
-  <a id="Kinstrife_StateFlow_CycleStates_SetState_" data-uid="Kinstrife.StateFlow.CycleStates.SetState*"></a>
-  <h4 id="Kinstrife_StateFlow_CycleStates_SetState_Kinstrife_StateFlow_StateID_" data-uid="Kinstrife.StateFlow.CycleStates.SetState(Kinstrife.StateFlow.StateID)">SetState(StateID)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void SetState(StateID state)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Kinstrife.StateFlow.StateID.html">StateID</a></td>
-        <td><span class="parametername">state</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
 </article>
           </div>
           

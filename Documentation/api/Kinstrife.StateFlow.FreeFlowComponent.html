@@ -95,7 +95,7 @@
       <a class="xref" href="Kinstrife.StateFlow.FlowGraphBehaviour-1.html#Kinstrife_StateFlow_FlowGraphBehaviour_1_creationMode">FlowGraphBehaviour&lt;FreeFlowGraph&gt;.creationMode</a>
     </div>
     <div>
-      <a class="xref" href="Kinstrife.StateFlow.FlowGraphBehaviour-1.html#Kinstrife_StateFlow_FlowGraphBehaviour_1_graph">FlowGraphBehaviour&lt;FreeFlowGraph&gt;.graph</a>
+      <a class="xref" href="Kinstrife.StateFlow.FlowGraphBehaviour-1.html#Kinstrife_StateFlow_FlowGraphBehaviour_1_graphInstance">FlowGraphBehaviour&lt;FreeFlowGraph&gt;.graphInstance</a>
     </div>
     <div>
       <a class="xref" href="Kinstrife.StateFlow.FlowGraphBehaviour-1.html#Kinstrife_StateFlow_FlowGraphBehaviour_1_Graph">FlowGraphBehaviour&lt;FreeFlowGraph&gt;.Graph</a>
@@ -156,13 +156,13 @@
   </h3>
   
   
-  <a id="Kinstrife_StateFlow_FreeFlowComponent_Initialize_" data-uid="Kinstrife.StateFlow.FreeFlowComponent.Initialize*"></a>
-  <h4 id="Kinstrife_StateFlow_FreeFlowComponent_Initialize_System_Boolean_Kinstrife_StateFlow_IFlowState_" data-uid="Kinstrife.StateFlow.FreeFlowComponent.Initialize(System.Boolean,Kinstrife.StateFlow.IFlowState)">Initialize(Boolean, IFlowState)</h4>
+  <a id="Kinstrife_StateFlow_FreeFlowComponent_AsyncInitialize_" data-uid="Kinstrife.StateFlow.FreeFlowComponent.AsyncInitialize*"></a>
+  <h4 id="Kinstrife_StateFlow_FreeFlowComponent_AsyncInitialize_System_Boolean_" data-uid="Kinstrife.StateFlow.FreeFlowComponent.AsyncInitialize(System.Boolean)">AsyncInitialize(Boolean)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public override void Initialize(bool forceReinitialization = false, IFlowState startState = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public override async UniTask AsyncInitialize(bool forceReinitialization = false)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -179,15 +179,25 @@
         <td><span class="parametername">forceReinitialization</span></td>
         <td></td>
       </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
       <tr>
-        <td><a class="xref" href="Kinstrife.StateFlow.IFlowState.html">IFlowState</a></td>
-        <td><span class="parametername">startState</span></td>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">UniTask</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <h5 class="overrides">Overrides</h5>
-  <div><span class="xref">Kinstrife.StateFlow.FlowGraphBehaviour&lt;Kinstrife.StateFlow.FreeFlowGraph&gt;.Initialize(System.Boolean, Kinstrife.StateFlow.IFlowState)</span></div>
+  <div><span class="xref">Kinstrife.StateFlow.FlowGraphBehaviour&lt;Kinstrife.StateFlow.FreeFlowGraph&gt;.AsyncInitialize(System.Boolean)</span></div>
   
   
   <a id="Kinstrife_StateFlow_FreeFlowComponent_Inject_" data-uid="Kinstrife.StateFlow.FreeFlowComponent.Inject*"></a>

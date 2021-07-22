@@ -84,9 +84,20 @@
   <div classs="implements">
     <h5>Implements</h5>
     <div><a class="xref" href="Kinstrife.Core.DependencyInjection.ITickable.html">ITickable</a></div>
+    <div><a class="xref" href="Kinstrife.Core.DependencyInjection.IInitializable.html">IInitializable</a></div>
+    <div><a class="xref" href="Kinstrife.Core.DependencyInjection.IDependent.html">IDependent</a></div>
   </div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="Kinstrife.Core.Camera.CameraControllerBase.html#Kinstrife_Core_Camera_CameraControllerBase_camHandle">CameraControllerBase.camHandle</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.Core.Camera.CameraControllerBase.html#Kinstrife_Core_Camera_CameraControllerBase_Initialized">CameraControllerBase.Initialized</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.Core.Camera.CameraControllerBase.html#Kinstrife_Core_Camera_CameraControllerBase_Initialize">CameraControllerBase.Initialize()</a>
+    </div>
     <div>
       <a class="xref" href="Kinstrife.Core.Camera.CameraControllerBase.html#Kinstrife_Core_Camera_CameraControllerBase_bounds">CameraControllerBase.bounds</a>
     </div>
@@ -127,12 +138,6 @@
       <a class="xref" href="Kinstrife.Core.Camera.CameraControllerBase.html#Kinstrife_Core_Camera_CameraControllerBase_GetInputTranslationDirection">CameraControllerBase.GetInputTranslationDirection()</a>
     </div>
     <div>
-      <a class="xref" href="Kinstrife.Core.Camera.CameraControllerBase.html#Kinstrife_Core_Camera_CameraControllerBase_inputState">CameraControllerBase.inputState</a>
-    </div>
-    <div>
-      <a class="xref" href="Kinstrife.Core.Camera.CameraControllerBase.html#Kinstrife_Core_Camera_CameraControllerBase_SetInputState_Kinstrife_Core_Camera_CameraInputState__">CameraControllerBase.SetInputState(CameraInputState)</a>
-    </div>
-    <div>
       <a class="xref" href="Kinstrife.Core.Camera.CameraControllerBase.html#Kinstrife_Core_Camera_CameraControllerBase_Tick_System_Single_">CameraControllerBase.Tick(Single)</a>
     </div>
     <div>
@@ -149,7 +154,7 @@
   <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
   <h5 id="Kinstrife_Core_Camera_FirstPersonCameraController_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class FirstPersonCameraController : CameraControllerBase, ITickable</code></pre>
+    <pre><code class="lang-csharp hljs">public class FirstPersonCameraController : CameraControllerBase, ITickable, IInitializable, IDependent</code></pre>
   </div>
   <h3 id="properties">Properties
   </h3>
@@ -263,6 +268,35 @@
   <div><a class="xref" href="Kinstrife.Core.Camera.CameraControllerBase.html#Kinstrife_Core_Camera_CameraControllerBase_SetActiveCamera_CinemachineVirtualCameraBase_">CameraControllerBase.SetActiveCamera(CinemachineVirtualCameraBase)</a></div>
   
   
+  <a id="Kinstrife_Core_Camera_FirstPersonCameraController_SetInputState_" data-uid="Kinstrife.Core.Camera.FirstPersonCameraController.SetInputState*"></a>
+  <h4 id="Kinstrife_Core_Camera_FirstPersonCameraController_SetInputState_Kinstrife_Core_Camera_CameraInputState__" data-uid="Kinstrife.Core.Camera.FirstPersonCameraController.SetInputState(Kinstrife.Core.Camera.CameraInputState@)">SetInputState(in CameraInputState)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override void SetInputState(in CameraInputState inputState)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Kinstrife.Core.Camera.CameraInputState.html">CameraInputState</a></td>
+        <td><span class="parametername">inputState</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Kinstrife.Core.Camera.CameraControllerBase.html#Kinstrife_Core_Camera_CameraControllerBase_SetInputState_Kinstrife_Core_Camera_CameraInputState__">CameraControllerBase.SetInputState(in CameraInputState)</a></div>
+  
+  
   <a id="Kinstrife_Core_Camera_FirstPersonCameraController_SynchronizeOnActivate_" data-uid="Kinstrife.Core.Camera.FirstPersonCameraController.SynchronizeOnActivate*"></a>
   <h4 id="Kinstrife_Core_Camera_FirstPersonCameraController_SynchronizeOnActivate_Kinstrife_Core_Camera_CameraRig_Kinstrife_Core_Camera_VirtualCameraHandle_" data-uid="Kinstrife.Core.Camera.FirstPersonCameraController.SynchronizeOnActivate(Kinstrife.Core.Camera.CameraRig,Kinstrife.Core.Camera.VirtualCameraHandle)">SynchronizeOnActivate(CameraRig, VirtualCameraHandle)</h4>
   <div class="markdown level1 summary"></div>
@@ -298,6 +332,12 @@
   <h3 id="implements">Implements</h3>
   <div>
       <a class="xref" href="Kinstrife.Core.DependencyInjection.ITickable.html">ITickable</a>
+  </div>
+  <div>
+      <a class="xref" href="Kinstrife.Core.DependencyInjection.IInitializable.html">IInitializable</a>
+  </div>
+  <div>
+      <a class="xref" href="Kinstrife.Core.DependencyInjection.IDependent.html">IDependent</a>
   </div>
 </article>
           </div>

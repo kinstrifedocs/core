@@ -147,13 +147,13 @@ TODO: Loading asset locator file.</p>
   </h3>
   
   
-  <a id="Kinstrife_Database_DataLoader_Load_" data-uid="Kinstrife.Database.DataLoader.Load*"></a>
-  <h4 id="Kinstrife_Database_DataLoader_Load_System_String_System_Boolean_" data-uid="Kinstrife.Database.DataLoader.Load(System.String,System.Boolean)">Load(String, Boolean)</h4>
+  <a id="Kinstrife_Database_DataLoader_AsyncLoad_" data-uid="Kinstrife.Database.DataLoader.AsyncLoad*"></a>
+  <h4 id="Kinstrife_Database_DataLoader_AsyncLoad_AssetLabelReference_System_Boolean_" data-uid="Kinstrife.Database.DataLoader.AsyncLoad(AssetLabelReference,System.Boolean)">AsyncLoad(AssetLabelReference, Boolean)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void Load(string resourcesPath, bool overrideExisting)</code></pre>
+    <pre><code class="lang-csharp hljs">public async UniTask AsyncLoad(AssetLabelReference label, bool overrideExisting)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -166,13 +166,28 @@ TODO: Loading asset locator file.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
-        <td><span class="parametername">resourcesPath</span></td>
+        <td><span class="xref">AssetLabelReference</span></td>
+        <td><span class="parametername">label</span></td>
         <td></td>
       </tr>
       <tr>
         <td><span class="xref">System.Boolean</span></td>
         <td><span class="parametername">overrideExisting</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">UniTask</span></td>
         <td></td>
       </tr>
     </tbody>

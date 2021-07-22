@@ -98,12 +98,12 @@ The only reason why this is currently a MonoBehaviour is because it requires Sta
   </h3>
   
   
-  <h4 id="Kinstrife_Application_ApplicationFlow_LoadingEnded" data-uid="Kinstrife.Application.ApplicationFlow.LoadingEnded">LoadingEnded</h4>
+  <h4 id="Kinstrife_Application_ApplicationFlow_loadingTask" data-uid="Kinstrife.Application.ApplicationFlow.loadingTask">loadingTask</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Action LoadingEnded</code></pre>
+    <pre><code class="lang-csharp hljs">public UniTask loadingTask</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -115,134 +115,13 @@ The only reason why this is currently a MonoBehaviour is because it requires Sta
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Action</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <h4 id="Kinstrife_Application_ApplicationFlow_LoadingStarted" data-uid="Kinstrife.Application.ApplicationFlow.LoadingStarted">LoadingStarted</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Action LoadingStarted</code></pre>
-  </div>
-  <h5 class="fieldValue">Field Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Action</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <h4 id="Kinstrife_Application_ApplicationFlow_OnLocationReady" data-uid="Kinstrife.Application.ApplicationFlow.OnLocationReady">OnLocationReady</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Action&lt;LocationHandle&gt; OnLocationReady</code></pre>
-  </div>
-  <h5 class="fieldValue">Field Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Action</span>&lt;<a class="xref" href="Kinstrife.Application.LocationHandle.html">LocationHandle</a>&gt;</td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <h4 id="Kinstrife_Application_ApplicationFlow_PauseModeChange" data-uid="Kinstrife.Application.ApplicationFlow.PauseModeChange">PauseModeChange</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Action&lt;bool&gt; PauseModeChange</code></pre>
-  </div>
-  <h5 class="fieldValue">Field Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Action</span>&lt;<span class="xref">System.Boolean</span>&gt;</td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <h4 id="Kinstrife_Application_ApplicationFlow_PrimaryModuleChanged" data-uid="Kinstrife.Application.ApplicationFlow.PrimaryModuleChanged">PrimaryModuleChanged</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Action&lt;Module&gt; PrimaryModuleChanged</code></pre>
-  </div>
-  <h5 class="fieldValue">Field Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Action</span>&lt;<a class="xref" href="Kinstrife.Application.Module.html">Module</a>&gt;</td>
+        <td><span class="xref">UniTask</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <h3 id="properties">Properties
   </h3>
-  
-  
-  <a id="Kinstrife_Application_ApplicationFlow_ActiveModule_" data-uid="Kinstrife.Application.ApplicationFlow.ActiveModule*"></a>
-  <h4 id="Kinstrife_Application_ApplicationFlow_ActiveModule" data-uid="Kinstrife.Application.ApplicationFlow.ActiveModule">ActiveModule</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Module ActiveModule { get; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Kinstrife.Application.Module.html">Module</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
   
   
   <a id="Kinstrife_Application_ApplicationFlow_CurrentLocation_" data-uid="Kinstrife.Application.ApplicationFlow.CurrentLocation*"></a>
@@ -418,6 +297,56 @@ The only reason why this is currently a MonoBehaviour is because it requires Sta
       </tr>
     </tbody>
   </table>
+  
+  
+  <a id="Kinstrife_Application_ApplicationFlow_PrimaryModule_" data-uid="Kinstrife.Application.ApplicationFlow.PrimaryModule*"></a>
+  <h4 id="Kinstrife_Application_ApplicationFlow_PrimaryModule" data-uid="Kinstrife.Application.ApplicationFlow.PrimaryModule">PrimaryModule</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Module PrimaryModule { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Kinstrife.Application.Module.html">Module</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Kinstrife_Application_ApplicationFlow_PrimaryModuleDefinition_" data-uid="Kinstrife.Application.ApplicationFlow.PrimaryModuleDefinition*"></a>
+  <h4 id="Kinstrife_Application_ApplicationFlow_PrimaryModuleDefinition" data-uid="Kinstrife.Application.ApplicationFlow.PrimaryModuleDefinition">PrimaryModuleDefinition</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ModuleDefinition PrimaryModuleDefinition { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Kinstrife.Application.ModuleDefinition.html">ModuleDefinition</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   <h3 id="methods">Methods
   </h3>
   
@@ -487,12 +416,12 @@ The only reason why this is currently a MonoBehaviour is because it requires Sta
   
   
   <a id="Kinstrife_Application_ApplicationFlow_RegisterModule_" data-uid="Kinstrife.Application.ApplicationFlow.RegisterModule*"></a>
-  <h4 id="Kinstrife_Application_ApplicationFlow_RegisterModule_Kinstrife_Application_Module_Kinstrife_Application_ModuleDefinition_" data-uid="Kinstrife.Application.ApplicationFlow.RegisterModule(Kinstrife.Application.Module,Kinstrife.Application.ModuleDefinition)">RegisterModule(Module, ModuleDefinition)</h4>
+  <h4 id="Kinstrife_Application_ApplicationFlow_RegisterModule_Kinstrife_Application_Module_" data-uid="Kinstrife.Application.ApplicationFlow.RegisterModule(Kinstrife.Application.Module)">RegisterModule(Module)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void RegisterModule(Module module, ModuleDefinition definition)</code></pre>
+    <pre><code class="lang-csharp hljs">public void RegisterModule(Module module)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -507,11 +436,6 @@ The only reason why this is currently a MonoBehaviour is because it requires Sta
       <tr>
         <td><a class="xref" href="Kinstrife.Application.Module.html">Module</a></td>
         <td><span class="parametername">module</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="Kinstrife.Application.ModuleDefinition.html">ModuleDefinition</a></td>
-        <td><span class="parametername">definition</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -660,13 +584,56 @@ The only reason why this is currently a MonoBehaviour is because it requires Sta
   
   
   <a id="Kinstrife_Application_ApplicationFlow_TrySwitchPrimaryModule_" data-uid="Kinstrife.Application.ApplicationFlow.TrySwitchPrimaryModule*"></a>
-  <h4 id="Kinstrife_Application_ApplicationFlow_TrySwitchPrimaryModule_Kinstrife_Application_ModuleDefinition_" data-uid="Kinstrife.Application.ApplicationFlow.TrySwitchPrimaryModule(Kinstrife.Application.ModuleDefinition)">TrySwitchPrimaryModule(ModuleDefinition)</h4>
+  <h4 id="Kinstrife_Application_ApplicationFlow_TrySwitchPrimaryModule_AssetReferenceT_Kinstrife_Application_ModuleDefinition__" data-uid="Kinstrife.Application.ApplicationFlow.TrySwitchPrimaryModule(AssetReferenceT{Kinstrife.Application.ModuleDefinition})">TrySwitchPrimaryModule(AssetReferenceT&lt;ModuleDefinition&gt;)</h4>
   <div class="markdown level1 summary"><p>Try switching the primary module.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public bool TrySwitchPrimaryModule(ModuleDefinition targetModuleDefinition)</code></pre>
+    <pre><code class="lang-csharp hljs">public async UniTask&lt;bool&gt; TrySwitchPrimaryModule(AssetReferenceT&lt;ModuleDefinition&gt; moduleDefinitionRef)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">AssetReferenceT</span>&lt;<a class="xref" href="Kinstrife.Application.ModuleDefinition.html">ModuleDefinition</a>&gt;</td>
+        <td><span class="parametername">moduleDefinitionRef</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">UniTask</span>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+        <td><p>True upon success (could faill if module cannot be primary)</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Kinstrife_Application_ApplicationFlow_TrySwitchPrimaryModule_" data-uid="Kinstrife.Application.ApplicationFlow.TrySwitchPrimaryModule*"></a>
+  <h4 id="Kinstrife_Application_ApplicationFlow_TrySwitchPrimaryModule_Kinstrife_Application_ModuleDefinition_" data-uid="Kinstrife.Application.ApplicationFlow.TrySwitchPrimaryModule(Kinstrife.Application.ModuleDefinition)">TrySwitchPrimaryModule(ModuleDefinition)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public async UniTask&lt;bool&gt; TrySwitchPrimaryModule(ModuleDefinition targetModuleDefinition)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -681,8 +648,7 @@ The only reason why this is currently a MonoBehaviour is because it requires Sta
       <tr>
         <td><a class="xref" href="Kinstrife.Application.ModuleDefinition.html">ModuleDefinition</a></td>
         <td><span class="parametername">targetModuleDefinition</span></td>
-        <td><p>Module to be primary. May also be null.</p>
-</td>
+        <td></td>
       </tr>
     </tbody>
   </table>
@@ -696,9 +662,130 @@ The only reason why this is currently a MonoBehaviour is because it requires Sta
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Boolean</span></td>
-        <td><p>True upon success (could faill if module cannot be primary)</p>
-</td>
+        <td><span class="xref">UniTask</span>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="events">Events
+  </h3>
+  
+  
+  <h4 id="Kinstrife_Application_ApplicationFlow_LoadingEnded" data-uid="Kinstrife.Application.ApplicationFlow.LoadingEnded">LoadingEnded</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public event Action LoadingEnded</code></pre>
+  </div>
+  <h5 class="eventType">Event Type</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Action</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="Kinstrife_Application_ApplicationFlow_LoadingStarted" data-uid="Kinstrife.Application.ApplicationFlow.LoadingStarted">LoadingStarted</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public event Action LoadingStarted</code></pre>
+  </div>
+  <h5 class="eventType">Event Type</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Action</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="Kinstrife_Application_ApplicationFlow_OnLocationReady" data-uid="Kinstrife.Application.ApplicationFlow.OnLocationReady">OnLocationReady</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public event Action&lt;LocationHandle&gt; OnLocationReady</code></pre>
+  </div>
+  <h5 class="eventType">Event Type</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Action</span>&lt;<a class="xref" href="Kinstrife.Application.LocationHandle.html">LocationHandle</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="Kinstrife_Application_ApplicationFlow_PauseModeChange" data-uid="Kinstrife.Application.ApplicationFlow.PauseModeChange">PauseModeChange</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public event Action&lt;bool&gt; PauseModeChange</code></pre>
+  </div>
+  <h5 class="eventType">Event Type</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Action</span>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="Kinstrife_Application_ApplicationFlow_PrimaryModuleChanged" data-uid="Kinstrife.Application.ApplicationFlow.PrimaryModuleChanged">PrimaryModuleChanged</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public event Action&lt;Module&gt; PrimaryModuleChanged</code></pre>
+  </div>
+  <h5 class="eventType">Event Type</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Action</span>&lt;<a class="xref" href="Kinstrife.Application.Module.html">Module</a>&gt;</td>
+        <td></td>
       </tr>
     </tbody>
   </table>

@@ -80,8 +80,7 @@
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
     <div class="level1"><span class="xref">ClientBehaviour&lt;TResponse, TPayload&gt;</span></div>
-      <div class="level2"><a class="xref" href="Kinstrife.Core.Camera.CameraStateClient.html">CameraStateClient</a></div>
-      <div class="level2"><a class="xref" href="Kinstrife.Core.Input.InputFocusClient.html">InputFocusClient</a></div>
+      <div class="level2"><a class="xref" href="Kinstrife.Messaging.AddressableClient-2.html">AddressableClient&lt;TResponse, TPayload&gt;</a></div>
   </div>
   <div classs="implements">
     <h5>Implements</h5>
@@ -128,7 +127,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected IServiceClient&lt;TResponse, TPayload&gt; client</code></pre>
+    <pre><code class="lang-csharp hljs">protected IServiceClient&lt;TResponse, Request&lt;TPayload&gt;&gt; client</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -140,7 +139,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="Kinstrife.Messaging.IServiceClient-2.html">IServiceClient</a>&lt;TResponse, TPayload&gt;</td>
+        <td><a class="xref" href="Kinstrife.Messaging.IServiceClient-2.html">IServiceClient</a>&lt;TResponse, <a class="xref" href="Kinstrife.Messaging.Request-1.html">Request</a>&lt;TPayload&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -189,6 +188,30 @@
     <tbody>
       <tr>
         <td><a class="xref" href="Kinstrife.Messaging.ClientBehaviour-2.ClientEvent.html">ClientBehaviour.ClientEvent</a>&lt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="Kinstrife_Messaging_ClientBehaviour_2_priority" data-uid="Kinstrife.Messaging.ClientBehaviour`2.priority">priority</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int priority</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -308,12 +331,12 @@
   
   
   <a id="Kinstrife_Messaging_ClientBehaviour_2_Inject_" data-uid="Kinstrife.Messaging.ClientBehaviour`2.Inject*"></a>
-  <h4 id="Kinstrife_Messaging_ClientBehaviour_2_Inject_Kinstrife_Messaging_IServiceClient__0__1__" data-uid="Kinstrife.Messaging.ClientBehaviour`2.Inject(Kinstrife.Messaging.IServiceClient{`0,`1})">Inject(IServiceClient&lt;TResponse, TPayload&gt;)</h4>
+  <h4 id="Kinstrife_Messaging_ClientBehaviour_2_Inject_Kinstrife_Messaging_IServiceClient__0_Kinstrife_Messaging_Request__1___" data-uid="Kinstrife.Messaging.ClientBehaviour`2.Inject(Kinstrife.Messaging.IServiceClient{`0,Kinstrife.Messaging.Request{`1}})">Inject(IServiceClient&lt;TResponse, Request&lt;TPayload&gt;&gt;)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void Inject(IServiceClient&lt;TResponse, TPayload&gt; client)</code></pre>
+    <pre><code class="lang-csharp hljs">public void Inject(IServiceClient&lt;TResponse, Request&lt;TPayload&gt;&gt; client)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -326,7 +349,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="Kinstrife.Messaging.IServiceClient-2.html">IServiceClient</a>&lt;TResponse, TPayload&gt;</td>
+        <td><a class="xref" href="Kinstrife.Messaging.IServiceClient-2.html">IServiceClient</a>&lt;TResponse, <a class="xref" href="Kinstrife.Messaging.Request-1.html">Request</a>&lt;TPayload&gt;&gt;</td>
         <td><span class="parametername">client</span></td>
         <td></td>
       </tr>
@@ -382,7 +405,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void PostRequest()</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual void PostRequest()</code></pre>
   </div>
   
   
@@ -392,7 +415,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public async void PostRequest(TPayload payload)</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual async void PostRequest(TPayload payload)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">

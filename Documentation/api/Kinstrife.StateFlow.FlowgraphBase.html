@@ -194,12 +194,36 @@ public abstract class FlowGraphBase : IStateMachine</code></pre>
   </table>
   
   
+  <h4 id="Kinstrife_StateFlow_FlowGraphBase_graphRef" data-uid="Kinstrife.StateFlow.FlowGraphBase.graphRef">graphRef</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected AssetReferenceT&lt;FlowGraph&gt; graphRef</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">AssetReferenceT</span>&lt;<a class="xref" href="Kinstrife.StateFlow.FlowGraph.html">FlowGraph</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
   <h4 id="Kinstrife_StateFlow_FlowGraphBase_owner" data-uid="Kinstrife.StateFlow.FlowGraphBase.owner">owner</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public UnityEngine.Object owner</code></pre>
+    <pre><code class="lang-csharp hljs">public Object owner</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -237,6 +261,30 @@ public abstract class FlowGraphBase : IStateMachine</code></pre>
     <tbody>
       <tr>
         <td><a class="xref" href="Kinstrife.StateFlow.FlowNode.html">FlowNode</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="Kinstrife_StateFlow_FlowGraphBase_startingState" data-uid="Kinstrife.StateFlow.FlowGraphBase.startingState">startingState</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected AssetReferenceT&lt;StateID&gt; startingState</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">AssetReferenceT</span>&lt;<a class="xref" href="Kinstrife.StateFlow.StateID.html">StateID</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -387,6 +435,31 @@ public abstract class FlowGraphBase : IStateMachine</code></pre>
     <tbody>
       <tr>
         <td><a class="xref" href="Kinstrife.StateFlow.FlowGraph.html">FlowGraph</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Kinstrife_StateFlow_FlowGraphBase_GraphReference_" data-uid="Kinstrife.StateFlow.FlowGraphBase.GraphReference*"></a>
+  <h4 id="Kinstrife_StateFlow_FlowGraphBase_GraphReference" data-uid="Kinstrife.StateFlow.FlowGraphBase.GraphReference">GraphReference</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public AssetReferenceT&lt;FlowGraph&gt; GraphReference { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">AssetReferenceT</span>&lt;<a class="xref" href="Kinstrife.StateFlow.FlowGraph.html">FlowGraph</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -596,6 +669,48 @@ public abstract class FlowGraphBase : IStateMachine</code></pre>
   </h3>
   
   
+  <a id="Kinstrife_StateFlow_FlowGraphBase_AsyncInitialize_" data-uid="Kinstrife.StateFlow.FlowGraphBase.AsyncInitialize*"></a>
+  <h4 id="Kinstrife_StateFlow_FlowGraphBase_AsyncInitialize_System_Boolean_" data-uid="Kinstrife.StateFlow.FlowGraphBase.AsyncInitialize(System.Boolean)">AsyncInitialize(Boolean)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public async UniTask AsyncInitialize(bool forceInitialization = false)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">forceInitialization</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">UniTask</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
   <a id="Kinstrife_StateFlow_FlowGraphBase_CanTransition_" data-uid="Kinstrife.StateFlow.FlowGraphBase.CanTransition*"></a>
   <h4 id="Kinstrife_StateFlow_FlowGraphBase_CanTransition_Kinstrife_StateFlow_IFlowState_" data-uid="Kinstrife.StateFlow.FlowGraphBase.CanTransition(Kinstrife.StateFlow.IFlowState)">CanTransition(IFlowState)</h4>
   <div class="markdown level1 summary"></div>
@@ -632,38 +747,6 @@ public abstract class FlowGraphBase : IStateMachine</code></pre>
     <tbody>
       <tr>
         <td><span class="xref">System.Boolean</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="Kinstrife_StateFlow_FlowGraphBase_Initialize_" data-uid="Kinstrife.StateFlow.FlowGraphBase.Initialize*"></a>
-  <h4 id="Kinstrife_StateFlow_FlowGraphBase_Initialize_System_Boolean_Kinstrife_StateFlow_IFlowState_" data-uid="Kinstrife.StateFlow.FlowGraphBase.Initialize(System.Boolean,Kinstrife.StateFlow.IFlowState)">Initialize(Boolean, IFlowState)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public abstract void Initialize(bool forceInitialization = false, IFlowState startState = null)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Boolean</span></td>
-        <td><span class="parametername">forceInitialization</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="Kinstrife.StateFlow.IFlowState.html">IFlowState</a></td>
-        <td><span class="parametername">startState</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -716,6 +799,38 @@ public abstract class FlowGraphBase : IStateMachine</code></pre>
     <tbody>
       <tr>
         <td><span class="xref">System.Collections.Generic.ICollection</span>&lt;<a class="xref" href="Kinstrife.StateFlow.IFlowState.html">IFlowState</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Kinstrife_StateFlow_FlowGraphBase_PostInitialize_" data-uid="Kinstrife.StateFlow.FlowGraphBase.PostInitialize*"></a>
+  <h4 id="Kinstrife_StateFlow_FlowGraphBase_PostInitialize_System_Boolean_Kinstrife_StateFlow_IFlowState_" data-uid="Kinstrife.StateFlow.FlowGraphBase.PostInitialize(System.Boolean,Kinstrife.StateFlow.IFlowState)">PostInitialize(Boolean, IFlowState)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected abstract void PostInitialize(bool forceInitialization = false, IFlowState startState = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">forceInitialization</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Kinstrife.StateFlow.IFlowState.html">IFlowState</a></td>
+        <td><span class="parametername">startState</span></td>
         <td></td>
       </tr>
     </tbody>

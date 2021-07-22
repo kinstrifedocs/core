@@ -79,8 +79,9 @@
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
     <div class="level1"><a class="xref" href="Kinstrife.Messaging.ClientBehaviour-2.html">ClientBehaviour</a>&lt;<span class="xref">System.Boolean</span>, <a class="xref" href="Kinstrife.Core.Camera.CameraState.html">CameraState</a>&gt;</div>
-    <div class="level2"><span class="xref">CameraStateClient</span></div>
-      <div class="level3"><a class="xref" href="Kinstrife.Core.Camera.DefaultCameraState.html">DefaultCameraState</a></div>
+    <div class="level2"><a class="xref" href="Kinstrife.Messaging.AddressableClient-2.html">AddressableClient</a>&lt;<span class="xref">System.Boolean</span>, <a class="xref" href="Kinstrife.Core.Camera.CameraState.html">CameraState</a>&gt;</div>
+    <div class="level3"><span class="xref">CameraStateClient</span></div>
+      <div class="level4"><a class="xref" href="Kinstrife.Core.Camera.DefaultCameraState.html">DefaultCameraState</a></div>
   </div>
   <div classs="implements">
     <h5>Implements</h5>
@@ -91,13 +92,19 @@
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
     <div>
+      <a class="xref" href="Kinstrife.Messaging.AddressableClient-2.html#Kinstrife_Messaging_AddressableClient_2_payloadOnStart">AddressableClient&lt;Boolean, CameraState&gt;.payloadOnStart</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.Messaging.AddressableClient-2.html#Kinstrife_Messaging_AddressableClient_2_PostRequest">AddressableClient&lt;Boolean, CameraState&gt;.PostRequest()</a>
+    </div>
+    <div>
       <a class="xref" href="Kinstrife.Messaging.ClientBehaviour-2.html#Kinstrife_Messaging_ClientBehaviour_2_client">ClientBehaviour&lt;Boolean, CameraState&gt;.client</a>
     </div>
     <div>
       <a class="xref" href="Kinstrife.Messaging.ClientBehaviour-2.html#Kinstrife_Messaging_ClientBehaviour_2_serviceDescriptor">ClientBehaviour&lt;Boolean, CameraState&gt;.serviceDescriptor</a>
     </div>
     <div>
-      <a class="xref" href="Kinstrife.Messaging.ClientBehaviour-2.html#Kinstrife_Messaging_ClientBehaviour_2_Inject_Kinstrife_Messaging_IServiceClient__0__1__">ClientBehaviour&lt;Boolean, CameraState&gt;.Inject(IServiceClient&lt;Boolean, CameraState&gt;)</a>
+      <a class="xref" href="Kinstrife.Messaging.ClientBehaviour-2.html#Kinstrife_Messaging_ClientBehaviour_2_Inject_Kinstrife_Messaging_IServiceClient__0_Kinstrife_Messaging_Request__1___">ClientBehaviour&lt;Boolean, CameraState&gt;.Inject(IServiceClient&lt;Boolean, Request&lt;CameraState&gt;&gt;)</a>
     </div>
     <div>
       <a class="xref" href="Kinstrife.Messaging.ClientBehaviour-2.html#Kinstrife_Messaging_ClientBehaviour_2_requestPayload">ClientBehaviour&lt;Boolean, CameraState&gt;.requestPayload</a>
@@ -107,6 +114,9 @@
     </div>
     <div>
       <a class="xref" href="Kinstrife.Messaging.ClientBehaviour-2.html#Kinstrife_Messaging_ClientBehaviour_2_lastMessage">ClientBehaviour&lt;Boolean, CameraState&gt;.lastMessage</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.Messaging.ClientBehaviour-2.html#Kinstrife_Messaging_ClientBehaviour_2_priority">ClientBehaviour&lt;Boolean, CameraState&gt;.priority</a>
     </div>
     <div>
       <a class="xref" href="Kinstrife.Messaging.ClientBehaviour-2.html#Kinstrife_Messaging_ClientBehaviour_2_Initialized">ClientBehaviour&lt;Boolean, CameraState&gt;.Initialized</a>
@@ -121,9 +131,6 @@
       <a class="xref" href="Kinstrife.Messaging.ClientBehaviour-2.html#Kinstrife_Messaging_ClientBehaviour_2_PostRequest__1_">ClientBehaviour&lt;Boolean, CameraState&gt;.PostRequest(CameraState)</a>
     </div>
     <div>
-      <a class="xref" href="Kinstrife.Messaging.ClientBehaviour-2.html#Kinstrife_Messaging_ClientBehaviour_2_PostRequest">ClientBehaviour&lt;Boolean, CameraState&gt;.PostRequest()</a>
-    </div>
-    <div>
       <a class="xref" href="Kinstrife.Messaging.ClientBehaviour-2.html#Kinstrife_Messaging_ClientBehaviour_2_onReceiveResponse">ClientBehaviour&lt;Boolean, CameraState&gt;.onReceiveResponse</a>
     </div>
   </div>
@@ -131,7 +138,7 @@
   <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
   <h5 id="Kinstrife_Core_Camera_CameraStateClient_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class CameraStateClient : ClientBehaviour&lt;bool, CameraState&gt;, IInjectable, IInitializable, IDependent</code></pre>
+    <pre><code class="lang-csharp hljs">public class CameraStateClient : AddressableClient&lt;bool, CameraState&gt;, IInjectable, IInitializable, IDependent</code></pre>
   </div>
   <h3 id="constructors">Constructors
   </h3>
@@ -145,35 +152,6 @@
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public CameraStateClient()</code></pre>
   </div>
-  <h3 id="methods">Methods
-  </h3>
-  
-  
-  <a id="Kinstrife_Core_Camera_CameraStateClient_PostRequest_" data-uid="Kinstrife.Core.Camera.CameraStateClient.PostRequest*"></a>
-  <h4 id="Kinstrife_Core_Camera_CameraStateClient_PostRequest_Kinstrife_StateFlow_IFlowState_" data-uid="Kinstrife.Core.Camera.CameraStateClient.PostRequest(Kinstrife.StateFlow.IFlowState)">PostRequest(IFlowState)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void PostRequest(IFlowState payload)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Kinstrife.StateFlow.IFlowState.html">IFlowState</a></td>
-        <td><span class="parametername">payload</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
   <h3 id="implements">Implements</h3>
   <div>
       <a class="xref" href="Kinstrife.Core.DependencyInjection.IInjectable.html">IInjectable</a>

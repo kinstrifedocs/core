@@ -139,12 +139,12 @@
   </table>
   
   
-  <h4 id="Kinstrife_StateFlow_FlowGraphBehaviour_1_graph" data-uid="Kinstrife.StateFlow.FlowGraphBehaviour`1.graph">graph</h4>
+  <h4 id="Kinstrife_StateFlow_FlowGraphBehaviour_1_graphInstance" data-uid="Kinstrife.StateFlow.FlowGraphBehaviour`1.graphInstance">graphInstance</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected T graph</code></pre>
+    <pre><code class="lang-csharp hljs">protected T graphInstance</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -393,6 +393,48 @@
   </h3>
   
   
+  <a id="Kinstrife_StateFlow_FlowGraphBehaviour_1_AsyncInitialize_" data-uid="Kinstrife.StateFlow.FlowGraphBehaviour`1.AsyncInitialize*"></a>
+  <h4 id="Kinstrife_StateFlow_FlowGraphBehaviour_1_AsyncInitialize_System_Boolean_" data-uid="Kinstrife.StateFlow.FlowGraphBehaviour`1.AsyncInitialize(System.Boolean)">AsyncInitialize(Boolean)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public abstract UniTask AsyncInitialize(bool forceReinitialization = false)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">forceReinitialization</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">UniTask</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
   <a id="Kinstrife_StateFlow_FlowGraphBehaviour_1_CanTransition_" data-uid="Kinstrife.StateFlow.FlowGraphBehaviour`1.CanTransition*"></a>
   <h4 id="Kinstrife_StateFlow_FlowGraphBehaviour_1_CanTransition_Kinstrife_StateFlow_IFlowState_" data-uid="Kinstrife.StateFlow.FlowGraphBehaviour`1.CanTransition(Kinstrife.StateFlow.IFlowState)">CanTransition(IFlowState)</h4>
   <div class="markdown level1 summary"></div>
@@ -443,38 +485,6 @@
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public void Initialize()</code></pre>
   </div>
-  
-  
-  <a id="Kinstrife_StateFlow_FlowGraphBehaviour_1_Initialize_" data-uid="Kinstrife.StateFlow.FlowGraphBehaviour`1.Initialize*"></a>
-  <h4 id="Kinstrife_StateFlow_FlowGraphBehaviour_1_Initialize_System_Boolean_Kinstrife_StateFlow_IFlowState_" data-uid="Kinstrife.StateFlow.FlowGraphBehaviour`1.Initialize(System.Boolean,Kinstrife.StateFlow.IFlowState)">Initialize(Boolean, IFlowState)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public abstract void Initialize(bool forceReinitialization = false, IFlowState startState = null)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Boolean</span></td>
-        <td><span class="parametername">forceReinitialization</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="Kinstrife.StateFlow.IFlowState.html">IFlowState</a></td>
-        <td><span class="parametername">startState</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
   
   
   <a id="Kinstrife_StateFlow_FlowGraphBehaviour_1_Inject_" data-uid="Kinstrife.StateFlow.FlowGraphBehaviour`1.Inject*"></a>

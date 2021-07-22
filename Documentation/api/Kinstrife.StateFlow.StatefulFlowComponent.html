@@ -84,9 +84,9 @@
   </div>
   <div classs="implements">
     <h5>Implements</h5>
+    <div><a class="xref" href="Kinstrife.Core.DependencyInjection.IInitializable.html">IInitializable</a></div>
     <div><a class="xref" href="Kinstrife.StateFlow.IStateMachine.html">IStateMachine</a></div>
     <div><a class="xref" href="Kinstrife.Core.DependencyInjection.IInjectable.html">IInjectable</a></div>
-    <div><a class="xref" href="Kinstrife.Core.DependencyInjection.IInitializable.html">IInitializable</a></div>
     <div><a class="xref" href="Kinstrife.Core.DependencyInjection.IDependent.html">IDependent</a></div>
   </div>
   <div class="inheritedMembers">
@@ -95,7 +95,7 @@
       <a class="xref" href="Kinstrife.StateFlow.FlowGraphBehaviour-1.html#Kinstrife_StateFlow_FlowGraphBehaviour_1_creationMode">FlowGraphBehaviour&lt;StatefulFlowgraph&gt;.creationMode</a>
     </div>
     <div>
-      <a class="xref" href="Kinstrife.StateFlow.FlowGraphBehaviour-1.html#Kinstrife_StateFlow_FlowGraphBehaviour_1_graph">FlowGraphBehaviour&lt;StatefulFlowgraph&gt;.graph</a>
+      <a class="xref" href="Kinstrife.StateFlow.FlowGraphBehaviour-1.html#Kinstrife_StateFlow_FlowGraphBehaviour_1_graphInstance">FlowGraphBehaviour&lt;StatefulFlowgraph&gt;.graphInstance</a>
     </div>
     <div>
       <a class="xref" href="Kinstrife.StateFlow.FlowGraphBehaviour-1.html#Kinstrife_StateFlow_FlowGraphBehaviour_1_Graph">FlowGraphBehaviour&lt;StatefulFlowgraph&gt;.Graph</a>
@@ -150,19 +150,19 @@
   <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
   <h5 id="Kinstrife_StateFlow_StatefulFlowComponent_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class StatefulFlowComponent : FlowGraphBehaviour&lt;StatefulFlowgraph&gt;, IStateMachine, IInjectable, IInitializable, IDependent</code></pre>
+    <pre><code class="lang-csharp hljs">public class StatefulFlowComponent : FlowGraphBehaviour&lt;StatefulFlowgraph&gt;, IInitializable, IStateMachine, IInjectable, IDependent</code></pre>
   </div>
   <h3 id="methods">Methods
   </h3>
   
   
-  <a id="Kinstrife_StateFlow_StatefulFlowComponent_Initialize_" data-uid="Kinstrife.StateFlow.StatefulFlowComponent.Initialize*"></a>
-  <h4 id="Kinstrife_StateFlow_StatefulFlowComponent_Initialize_System_Boolean_Kinstrife_StateFlow_IFlowState_" data-uid="Kinstrife.StateFlow.StatefulFlowComponent.Initialize(System.Boolean,Kinstrife.StateFlow.IFlowState)">Initialize(Boolean, IFlowState)</h4>
+  <a id="Kinstrife_StateFlow_StatefulFlowComponent_AsyncInitialize_" data-uid="Kinstrife.StateFlow.StatefulFlowComponent.AsyncInitialize*"></a>
+  <h4 id="Kinstrife_StateFlow_StatefulFlowComponent_AsyncInitialize_System_Boolean_" data-uid="Kinstrife.StateFlow.StatefulFlowComponent.AsyncInitialize(System.Boolean)">AsyncInitialize(Boolean)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public override void Initialize(bool forceReinitialization = false, IFlowState startState = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public override async UniTask AsyncInitialize(bool forceReinitialization = false)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -179,15 +179,25 @@
         <td><span class="parametername">forceReinitialization</span></td>
         <td></td>
       </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
       <tr>
-        <td><a class="xref" href="Kinstrife.StateFlow.IFlowState.html">IFlowState</a></td>
-        <td><span class="parametername">startState</span></td>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">UniTask</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <h5 class="overrides">Overrides</h5>
-  <div><span class="xref">Kinstrife.StateFlow.FlowGraphBehaviour&lt;Kinstrife.StateFlow.StatefulFlowgraph&gt;.Initialize(System.Boolean, Kinstrife.StateFlow.IFlowState)</span></div>
+  <div><span class="xref">Kinstrife.StateFlow.FlowGraphBehaviour&lt;Kinstrife.StateFlow.StatefulFlowgraph&gt;.AsyncInitialize(System.Boolean)</span></div>
   
   
   <a id="Kinstrife_StateFlow_StatefulFlowComponent_Inject_" data-uid="Kinstrife.StateFlow.StatefulFlowComponent.Inject*"></a>
@@ -263,13 +273,13 @@
   <div><span class="xref">Kinstrife.StateFlow.FlowGraphBehaviour&lt;Kinstrife.StateFlow.StatefulFlowgraph&gt;.ValidateGraph(Kinstrife.StateFlow.StatefulFlowgraph)</span></div>
   <h3 id="implements">Implements</h3>
   <div>
+      <a class="xref" href="Kinstrife.Core.DependencyInjection.IInitializable.html">IInitializable</a>
+  </div>
+  <div>
       <a class="xref" href="Kinstrife.StateFlow.IStateMachine.html">IStateMachine</a>
   </div>
   <div>
       <a class="xref" href="Kinstrife.Core.DependencyInjection.IInjectable.html">IInjectable</a>
-  </div>
-  <div>
-      <a class="xref" href="Kinstrife.Core.DependencyInjection.IInitializable.html">IInitializable</a>
   </div>
   <div>
       <a class="xref" href="Kinstrife.Core.DependencyInjection.IDependent.html">IDependent</a>
