@@ -5,10 +5,10 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Class ThirdPersonCameraController
+    <title>Class ThirdPersonCameraControllerAlt
    | Kinstrife </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Class ThirdPersonCameraController
+    <meta name="title" content="Class ThirdPersonCameraControllerAlt
    | Kinstrife ">
     <meta name="generator" content="docfx 2.58.0.0">
     
@@ -68,10 +68,10 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="Kinstrife.Core.Camera.ThirdPersonCameraController">
+            <article class="content wrap" id="_content" data-uid="Kinstrife.Core.Camera.ThirdPersonCameraControllerAlt">
   
   
-  <h1 id="Kinstrife_Core_Camera_ThirdPersonCameraController" data-uid="Kinstrife.Core.Camera.ThirdPersonCameraController" class="text-break">Class ThirdPersonCameraController
+  <h1 id="Kinstrife_Core_Camera_ThirdPersonCameraControllerAlt" data-uid="Kinstrife.Core.Camera.ThirdPersonCameraControllerAlt" class="text-break">Class ThirdPersonCameraControllerAlt
   </h1>
   <div class="markdown level0 summary"></div>
   <div class="markdown level0 conceptual"></div>
@@ -79,7 +79,7 @@
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
     <div class="level1"><a class="xref" href="Kinstrife.Core.Camera.CameraControllerBase.html">CameraControllerBase</a></div>
-    <div class="level2"><span class="xref">ThirdPersonCameraController</span></div>
+    <div class="level2"><span class="xref">ThirdPersonCameraControllerAlt</span></div>
   </div>
   <div classs="implements">
     <h5>Implements</h5>
@@ -126,7 +126,7 @@
       <a class="xref" href="Kinstrife.Core.Camera.CameraControllerBase.html#Kinstrife_Core_Camera_CameraControllerBase_GetInputTranslationDirection">CameraControllerBase.GetInputTranslationDirection()</a>
     </div>
     <div>
-      <a class="xref" href="Kinstrife.Core.Camera.CameraControllerBase.html#Kinstrife_Core_Camera_CameraControllerBase_Tick_System_Single_">CameraControllerBase.Tick(Single)</a>
+      <a class="xref" href="Kinstrife.Core.Camera.CameraControllerBase.html#Kinstrife_Core_Camera_CameraControllerBase_SetInputState_Kinstrife_Core_Camera_CameraInputState__">CameraControllerBase.SetInputState(CameraInputState)</a>
     </div>
     <div>
       <a class="xref" href="Kinstrife.Core.Camera.CameraControllerBase.html#Kinstrife_Core_Camera_CameraControllerBase_SetTargetRotation_System_Double_">CameraControllerBase.SetTargetRotation(Double)</a>
@@ -140,21 +140,21 @@
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Kinstrife.Core.Camera.html">Kinstrife.Core.Camera</a></h6>
   <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
-  <h5 id="Kinstrife_Core_Camera_ThirdPersonCameraController_syntax">Syntax</h5>
+  <h5 id="Kinstrife_Core_Camera_ThirdPersonCameraControllerAlt_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class ThirdPersonCameraController : CameraControllerBase, ITickable, IInitializable, IDependent</code></pre>
+    <pre><code class="lang-csharp hljs">public class ThirdPersonCameraControllerAlt : CameraControllerBase, ITickable, IInitializable, IDependent</code></pre>
   </div>
   <h3 id="properties">Properties
   </h3>
   
   
-  <a id="Kinstrife_Core_Camera_ThirdPersonCameraController_freeLookCam_" data-uid="Kinstrife.Core.Camera.ThirdPersonCameraController.freeLookCam*"></a>
-  <h4 id="Kinstrife_Core_Camera_ThirdPersonCameraController_freeLookCam" data-uid="Kinstrife.Core.Camera.ThirdPersonCameraController.freeLookCam">freeLookCam</h4>
+  <a id="Kinstrife_Core_Camera_ThirdPersonCameraControllerAlt_freeLookCam_" data-uid="Kinstrife.Core.Camera.ThirdPersonCameraControllerAlt.freeLookCam*"></a>
+  <h4 id="Kinstrife_Core_Camera_ThirdPersonCameraControllerAlt_freeLookCam" data-uid="Kinstrife.Core.Camera.ThirdPersonCameraControllerAlt.freeLookCam">freeLookCam</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public CinemachineFreeLook freeLookCam { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public CinemachineVirtualCamera freeLookCam { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -166,7 +166,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">CinemachineFreeLook</span></td>
+        <td><span class="xref">CinemachineVirtualCamera</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -175,8 +175,8 @@
   </h3>
   
   
-  <a id="Kinstrife_Core_Camera_ThirdPersonCameraController_GetWorldLookXY_" data-uid="Kinstrife.Core.Camera.ThirdPersonCameraController.GetWorldLookXY*"></a>
-  <h4 id="Kinstrife_Core_Camera_ThirdPersonCameraController_GetWorldLookXY" data-uid="Kinstrife.Core.Camera.ThirdPersonCameraController.GetWorldLookXY">GetWorldLookXY()</h4>
+  <a id="Kinstrife_Core_Camera_ThirdPersonCameraControllerAlt_GetWorldLookXY_" data-uid="Kinstrife.Core.Camera.ThirdPersonCameraControllerAlt.GetWorldLookXY*"></a>
+  <h4 id="Kinstrife_Core_Camera_ThirdPersonCameraControllerAlt_GetWorldLookXY" data-uid="Kinstrife.Core.Camera.ThirdPersonCameraControllerAlt.GetWorldLookXY">GetWorldLookXY()</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -202,8 +202,8 @@
   <div><a class="xref" href="Kinstrife.Core.Camera.CameraControllerBase.html#Kinstrife_Core_Camera_CameraControllerBase_GetWorldLookXY">CameraControllerBase.GetWorldLookXY()</a></div>
   
   
-  <a id="Kinstrife_Core_Camera_ThirdPersonCameraController_Initialize_" data-uid="Kinstrife.Core.Camera.ThirdPersonCameraController.Initialize*"></a>
-  <h4 id="Kinstrife_Core_Camera_ThirdPersonCameraController_Initialize" data-uid="Kinstrife.Core.Camera.ThirdPersonCameraController.Initialize">Initialize()</h4>
+  <a id="Kinstrife_Core_Camera_ThirdPersonCameraControllerAlt_Initialize_" data-uid="Kinstrife.Core.Camera.ThirdPersonCameraControllerAlt.Initialize*"></a>
+  <h4 id="Kinstrife_Core_Camera_ThirdPersonCameraControllerAlt_Initialize" data-uid="Kinstrife.Core.Camera.ThirdPersonCameraControllerAlt.Initialize">Initialize()</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -214,8 +214,8 @@
   <div><a class="xref" href="Kinstrife.Core.Camera.CameraControllerBase.html#Kinstrife_Core_Camera_CameraControllerBase_Initialize">CameraControllerBase.Initialize()</a></div>
   
   
-  <a id="Kinstrife_Core_Camera_ThirdPersonCameraController_SetActiveCamera_" data-uid="Kinstrife.Core.Camera.ThirdPersonCameraController.SetActiveCamera*"></a>
-  <h4 id="Kinstrife_Core_Camera_ThirdPersonCameraController_SetActiveCamera_CinemachineVirtualCameraBase_" data-uid="Kinstrife.Core.Camera.ThirdPersonCameraController.SetActiveCamera(CinemachineVirtualCameraBase)">SetActiveCamera(CinemachineVirtualCameraBase)</h4>
+  <a id="Kinstrife_Core_Camera_ThirdPersonCameraControllerAlt_SetActiveCamera_" data-uid="Kinstrife.Core.Camera.ThirdPersonCameraControllerAlt.SetActiveCamera*"></a>
+  <h4 id="Kinstrife_Core_Camera_ThirdPersonCameraControllerAlt_SetActiveCamera_CinemachineVirtualCameraBase_" data-uid="Kinstrife.Core.Camera.ThirdPersonCameraControllerAlt.SetActiveCamera(CinemachineVirtualCameraBase)">SetActiveCamera(CinemachineVirtualCameraBase)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -243,37 +243,8 @@
   <div><a class="xref" href="Kinstrife.Core.Camera.CameraControllerBase.html#Kinstrife_Core_Camera_CameraControllerBase_SetActiveCamera_CinemachineVirtualCameraBase_">CameraControllerBase.SetActiveCamera(CinemachineVirtualCameraBase)</a></div>
   
   
-  <a id="Kinstrife_Core_Camera_ThirdPersonCameraController_SetInputState_" data-uid="Kinstrife.Core.Camera.ThirdPersonCameraController.SetInputState*"></a>
-  <h4 id="Kinstrife_Core_Camera_ThirdPersonCameraController_SetInputState_Kinstrife_Core_Camera_CameraInputState__" data-uid="Kinstrife.Core.Camera.ThirdPersonCameraController.SetInputState(Kinstrife.Core.Camera.CameraInputState@)">SetInputState(in CameraInputState)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public override void SetInputState(in CameraInputState inputState)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Kinstrife.Core.Camera.CameraInputState.html">CameraInputState</a></td>
-        <td><span class="parametername">inputState</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="overrides">Overrides</h5>
-  <div><a class="xref" href="Kinstrife.Core.Camera.CameraControllerBase.html#Kinstrife_Core_Camera_CameraControllerBase_SetInputState_Kinstrife_Core_Camera_CameraInputState__">CameraControllerBase.SetInputState(in CameraInputState)</a></div>
-  
-  
-  <a id="Kinstrife_Core_Camera_ThirdPersonCameraController_SynchronizeOnActivate_" data-uid="Kinstrife.Core.Camera.ThirdPersonCameraController.SynchronizeOnActivate*"></a>
-  <h4 id="Kinstrife_Core_Camera_ThirdPersonCameraController_SynchronizeOnActivate_Kinstrife_Core_Camera_CameraRig_Kinstrife_Core_Camera_VirtualCameraHandle_" data-uid="Kinstrife.Core.Camera.ThirdPersonCameraController.SynchronizeOnActivate(Kinstrife.Core.Camera.CameraRig,Kinstrife.Core.Camera.VirtualCameraHandle)">SynchronizeOnActivate(CameraRig, VirtualCameraHandle)</h4>
+  <a id="Kinstrife_Core_Camera_ThirdPersonCameraControllerAlt_SynchronizeOnActivate_" data-uid="Kinstrife.Core.Camera.ThirdPersonCameraControllerAlt.SynchronizeOnActivate*"></a>
+  <h4 id="Kinstrife_Core_Camera_ThirdPersonCameraControllerAlt_SynchronizeOnActivate_Kinstrife_Core_Camera_CameraRig_Kinstrife_Core_Camera_VirtualCameraHandle_" data-uid="Kinstrife.Core.Camera.ThirdPersonCameraControllerAlt.SynchronizeOnActivate(Kinstrife.Core.Camera.CameraRig,Kinstrife.Core.Camera.VirtualCameraHandle)">SynchronizeOnActivate(CameraRig, VirtualCameraHandle)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -304,6 +275,35 @@
   </table>
   <h5 class="overrides">Overrides</h5>
   <div><a class="xref" href="Kinstrife.Core.Camera.CameraControllerBase.html#Kinstrife_Core_Camera_CameraControllerBase_SynchronizeOnActivate_Kinstrife_Core_Camera_CameraRig_Kinstrife_Core_Camera_VirtualCameraHandle_">CameraControllerBase.SynchronizeOnActivate(CameraRig, VirtualCameraHandle)</a></div>
+  
+  
+  <a id="Kinstrife_Core_Camera_ThirdPersonCameraControllerAlt_Tick_" data-uid="Kinstrife.Core.Camera.ThirdPersonCameraControllerAlt.Tick*"></a>
+  <h4 id="Kinstrife_Core_Camera_ThirdPersonCameraControllerAlt_Tick_System_Single_" data-uid="Kinstrife.Core.Camera.ThirdPersonCameraControllerAlt.Tick(System.Single)">Tick(Single)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override void Tick(float deltaTime)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><span class="parametername">deltaTime</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Kinstrife.Core.Camera.CameraControllerBase.html#Kinstrife_Core_Camera_CameraControllerBase_Tick_System_Single_">CameraControllerBase.Tick(Single)</a></div>
   <h3 id="implements">Implements</h3>
   <div>
       <a class="xref" href="Kinstrife.Core.DependencyInjection.ITickable.html">ITickable</a>

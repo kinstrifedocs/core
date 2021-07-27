@@ -82,6 +82,7 @@
       <div class="level2"><a class="xref" href="Kinstrife.Core.Camera.FirstPersonCameraController.html">FirstPersonCameraController</a></div>
       <div class="level2"><a class="xref" href="Kinstrife.Core.Camera.FreeflyCameraController.html">FreeflyCameraController</a></div>
       <div class="level2"><a class="xref" href="Kinstrife.Core.Camera.ThirdPersonCameraController.html">ThirdPersonCameraController</a></div>
+      <div class="level2"><a class="xref" href="Kinstrife.Core.Camera.ThirdPersonCameraControllerAlt.html">ThirdPersonCameraControllerAlt</a></div>
   </div>
   <div classs="implements">
     <h5>Implements</h5>
@@ -171,30 +172,6 @@
   </table>
   
   
-  <h4 id="Kinstrife_Core_Camera_CameraControllerBase_clampPitch" data-uid="Kinstrife.Core.Camera.CameraControllerBase.clampPitch">clampPitch</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public const float clampPitch = 90F</code></pre>
-  </div>
-  <h5 class="fieldValue">Field Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Single</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
   <h4 id="Kinstrife_Core_Camera_CameraControllerBase_invertY" data-uid="Kinstrife.Core.Camera.CameraControllerBase.invertY">invertY</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
@@ -213,78 +190,6 @@
     <tbody>
       <tr>
         <td><span class="xref">System.Boolean</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <h4 id="Kinstrife_Core_Camera_CameraControllerBase_maxY" data-uid="Kinstrife.Core.Camera.CameraControllerBase.maxY">maxY</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public const float maxY = 250F</code></pre>
-  </div>
-  <h5 class="fieldValue">Field Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Single</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <h4 id="Kinstrife_Core_Camera_CameraControllerBase_minMaxXZ" data-uid="Kinstrife.Core.Camera.CameraControllerBase.minMaxXZ">minMaxXZ</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public const float minMaxXZ = 250F</code></pre>
-  </div>
-  <h5 class="fieldValue">Field Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Single</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <h4 id="Kinstrife_Core_Camera_CameraControllerBase_minY" data-uid="Kinstrife.Core.Camera.CameraControllerBase.minY">minY</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public const float minY = 0.2F</code></pre>
-  </div>
-  <h5 class="fieldValue">Field Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Single</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -357,6 +262,30 @@
     <tbody>
       <tr>
         <td><span class="xref">System.Single</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="Kinstrife_Core_Camera_CameraControllerBase_updateTransform" data-uid="Kinstrife.Core.Camera.CameraControllerBase.updateTransform">updateTransform</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool updateTransform</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -498,7 +427,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void Initialize()</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual void Initialize()</code></pre>
   </div>
   
   

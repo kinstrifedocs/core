@@ -84,6 +84,7 @@
   <div classs="implements">
     <h5>Implements</h5>
     <div><a class="xref" href="Kinstrife.Identifier.IIdentifiable.html">IIdentifiable</a></div>
+    <div><span class="xref">System.IEquatable</span>&lt;<a class="xref" href="Kinstrife.Identifier.IdentifiableObject.html">IdentifiableObject</a>&gt;</div>
     <div><a class="xref" href="Kinstrife.Core.Campaign.ICampaignSystemRef.html">ICampaignSystemRef</a></div>
   </div>
   <div class="inheritedMembers">
@@ -92,17 +93,26 @@
       <a class="xref" href="Kinstrife.Identifier.IdentifiableObject.html#Kinstrife_Identifier_IdentifiableObject_id">IdentifiableObject.id</a>
     </div>
     <div>
+      <a class="xref" href="Kinstrife.Identifier.IdentifiableObject.html#Kinstrife_Identifier_IdentifiableObject_Id">IdentifiableObject.Id</a>
+    </div>
+    <div>
       <a class="xref" href="Kinstrife.Identifier.IdentifiableObject.html#Kinstrife_Identifier_IdentifiableObject_Guid">IdentifiableObject.Guid</a>
     </div>
     <div>
       <a class="xref" href="Kinstrife.Identifier.IdentifiableObject.html#Kinstrife_Identifier_IdentifiableObject_CreateNewGuid">IdentifiableObject.CreateNewGuid()</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.Identifier.IdentifiableObject.html#Kinstrife_Identifier_IdentifiableObject_GetHashCode">IdentifiableObject.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.Identifier.IdentifiableObject.html#Kinstrife_Identifier_IdentifiableObject_Equals_Kinstrife_Identifier_IdentifiableObject_">IdentifiableObject.Equals(IdentifiableObject)</a>
     </div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Kinstrife.Core.Campaign.html">Kinstrife.Core.Campaign</a></h6>
   <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
   <h5 id="Kinstrife_Core_Campaign_CampaignSystemRef_1_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public abstract class CampaignSystemRef&lt;T&gt; : IdentifiableObject, IIdentifiable, ICampaignSystemRef where T : CampaignSystemBase</code></pre>
+    <pre><code class="lang-csharp hljs">public abstract class CampaignSystemRef&lt;T&gt; : IdentifiableObject, IIdentifiable, IEquatable&lt;IdentifiableObject&gt;, ICampaignSystemRef where T : CampaignSystemBase</code></pre>
   </div>
   <h5 class="typeParameters">Type Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -175,6 +185,9 @@
   <h3 id="implements">Implements</h3>
   <div>
       <a class="xref" href="Kinstrife.Identifier.IIdentifiable.html">IIdentifiable</a>
+  </div>
+  <div>
+      <span class="xref">System.IEquatable&lt;T&gt;</span>
   </div>
   <div>
       <a class="xref" href="Kinstrife.Core.Campaign.ICampaignSystemRef.html">ICampaignSystemRef</a>
