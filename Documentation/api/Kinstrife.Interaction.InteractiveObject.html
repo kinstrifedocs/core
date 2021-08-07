@@ -84,12 +84,13 @@
     <h5>Implements</h5>
     <div><a class="xref" href="Kinstrife.Core.DependencyInjection.IInitializable.html">IInitializable</a></div>
     <div><a class="xref" href="Kinstrife.Core.DependencyInjection.IDependent.html">IDependent</a></div>
+    <div><a class="xref" href="Kinstrife.Interaction.IInteractiveObject.html">IInteractiveObject</a></div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Kinstrife.Interaction.html">Kinstrife.Interaction</a></h6>
   <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
   <h5 id="Kinstrife_Interaction_InteractiveObject_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class InteractiveObject : MonoBehaviour, IInitializable, IDependent</code></pre>
+    <pre><code class="lang-csharp hljs">public class InteractiveObject : MonoBehaviour, IInitializable, IDependent, IInteractiveObject</code></pre>
   </div>
   <h3 id="fields">Fields
   </h3>
@@ -420,13 +421,30 @@
   
   
   <a id="Kinstrife_Interaction_InteractiveObject_AddOutline_" data-uid="Kinstrife.Interaction.InteractiveObject.AddOutline*"></a>
-  <h4 id="Kinstrife_Interaction_InteractiveObject_AddOutline" data-uid="Kinstrife.Interaction.InteractiveObject.AddOutline">AddOutline()</h4>
+  <h4 id="Kinstrife_Interaction_InteractiveObject_AddOutline_System_Boolean_" data-uid="Kinstrife.Interaction.InteractiveObject.AddOutline(System.Boolean)">AddOutline(Boolean)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void AddOutline()</code></pre>
+    <pre><code class="lang-csharp hljs">public void AddOutline(bool refreshRenderers = false)</code></pre>
   </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">refreshRenderers</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   
   
   <a id="Kinstrife_Interaction_InteractiveObject_CancelInteraction_" data-uid="Kinstrife.Interaction.InteractiveObject.CancelInteraction*"></a>
@@ -504,6 +522,16 @@
   </div>
   
   
+  <a id="Kinstrife_Interaction_InteractiveObject_RefreshRenderers_" data-uid="Kinstrife.Interaction.InteractiveObject.RefreshRenderers*"></a>
+  <h4 id="Kinstrife_Interaction_InteractiveObject_RefreshRenderers" data-uid="Kinstrife.Interaction.InteractiveObject.RefreshRenderers">RefreshRenderers()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void RefreshRenderers()</code></pre>
+  </div>
+  
+  
   <a id="Kinstrife_Interaction_InteractiveObject_SetActive_" data-uid="Kinstrife.Interaction.InteractiveObject.SetActive*"></a>
   <h4 id="Kinstrife_Interaction_InteractiveObject_SetActive_System_Boolean_" data-uid="Kinstrife.Interaction.InteractiveObject.SetActive(System.Boolean)">SetActive(Boolean)</h4>
   <div class="markdown level1 summary"></div>
@@ -545,6 +573,9 @@
   </div>
   <div>
       <a class="xref" href="Kinstrife.Core.DependencyInjection.IDependent.html">IDependent</a>
+  </div>
+  <div>
+      <a class="xref" href="Kinstrife.Interaction.IInteractiveObject.html">IInteractiveObject</a>
   </div>
 </article>
           </div>

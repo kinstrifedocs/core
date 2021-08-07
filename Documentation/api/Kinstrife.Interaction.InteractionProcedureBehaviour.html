@@ -119,6 +119,9 @@
       <a class="xref" href="Kinstrife.Entities.Procedures.ProcedureBehaviour.html#Kinstrife_Entities_Procedures_ProcedureBehaviour_blackboard">ProcedureBehaviour.blackboard</a>
     </div>
     <div>
+      <a class="xref" href="Kinstrife.Entities.Procedures.ProcedureBehaviour.html#Kinstrife_Entities_Procedures_ProcedureBehaviour_onBeforeProcedureStart">ProcedureBehaviour.onBeforeProcedureStart</a>
+    </div>
+    <div>
       <a class="xref" href="Kinstrife.Entities.Procedures.ProcedureBehaviour.html#Kinstrife_Entities_Procedures_ProcedureBehaviour_onProcedureStart">ProcedureBehaviour.onProcedureStart</a>
     </div>
     <div>
@@ -141,6 +144,12 @@
     </div>
     <div>
       <a class="xref" href="Kinstrife.Entities.Procedures.ProcedureBehaviour.html#Kinstrife_Entities_Procedures_ProcedureBehaviour_InitBlackboardParameterValues">ProcedureBehaviour.InitBlackboardParameterValues()</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.Entities.Procedures.ProcedureBehaviour.html#Kinstrife_Entities_Procedures_ProcedureBehaviour_OnEnable">ProcedureBehaviour.OnEnable()</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.Entities.Procedures.ProcedureBehaviour.html#Kinstrife_Entities_Procedures_ProcedureBehaviour_OnDisable">ProcedureBehaviour.OnDisable()</a>
     </div>
     <div>
       <a class="xref" href="Kinstrife.Entities.Procedures.ProcedureBehaviour.html#Kinstrife_Entities_Procedures_ProcedureBehaviour_StateOnStart_Entity__Entity__Kinstrife_Entities_Procedures_Procedure__Kinstrife_Entities_Procedures_StateMachine__Kinstrife_Entities_Procedures_SubState__">ProcedureBehaviour.StateOnStart(Entity, Entity, Procedure, StateMachine, SubState)</a>
@@ -170,6 +179,9 @@
       <a class="xref" href="Kinstrife.Entities.Procedures.ProcedureBehaviour.html#Kinstrife_Entities_Procedures_ProcedureBehaviour_OnNewState_ScriptableObject_">ProcedureBehaviour.OnNewState(ScriptableObject)</a>
     </div>
     <div>
+      <a class="xref" href="Kinstrife.Entities.Procedures.ProcedureBehaviour.html#Kinstrife_Entities_Procedures_ProcedureBehaviour_OnBeforeProcedureStart_Kinstrife_Entities_Procedures_Procedure__">ProcedureBehaviour.OnBeforeProcedureStart(Procedure)</a>
+    </div>
+    <div>
       <a class="xref" href="Kinstrife.Entities.Procedures.ProcedureBehaviour.html#Kinstrife_Entities_Procedures_ProcedureBehaviour_OnProcedureStop_Kinstrife_Entities_Procedures_Procedure__">ProcedureBehaviour.OnProcedureStop(Procedure)</a>
     </div>
     <div>
@@ -179,10 +191,10 @@
       <a class="xref" href="Kinstrife.Entities.Procedures.ProcedureBehaviour.html#Kinstrife_Entities_Procedures_ProcedureBehaviour_OnStateStop_Kinstrife_Entities_Procedures_Procedure__Kinstrife_Entities_Procedures_StateMachine__Kinstrife_Entities_Procedures_SubState__">ProcedureBehaviour.OnStateStop(Procedure, StateMachine, SubState)</a>
     </div>
     <div>
-      <a class="xref" href="Kinstrife.Entities.Procedures.ProcedureBehaviour.html#Kinstrife_Entities_Procedures_ProcedureBehaviour_RequestStartProcedure">ProcedureBehaviour.RequestStartProcedure()</a>
+      <a class="xref" href="Kinstrife.Entities.Procedures.ProcedureBehaviour.html#Kinstrife_Entities_Procedures_ProcedureBehaviour_RequestStartProcedure_System_Single_">ProcedureBehaviour.RequestStartProcedure(Single)</a>
     </div>
     <div>
-      <a class="xref" href="Kinstrife.Entities.Procedures.ProcedureBehaviour.html#Kinstrife_Entities_Procedures_ProcedureBehaviour_RequestStopProcedure">ProcedureBehaviour.RequestStopProcedure()</a>
+      <a class="xref" href="Kinstrife.Entities.Procedures.ProcedureBehaviour.html#Kinstrife_Entities_Procedures_ProcedureBehaviour_RequestStopProcedure_System_Single_">ProcedureBehaviour.RequestStopProcedure(Single)</a>
     </div>
     <div>
       <a class="xref" href="Kinstrife.Entities.Procedures.ProcedureBehaviour.html#Kinstrife_Entities_Procedures_ProcedureBehaviour_TransitionToState_Kinstrife_Entities_Procedures_SubStateId_">ProcedureBehaviour.TransitionToState(SubStateId)</a>
@@ -218,6 +230,58 @@
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public class InteractionProcedureBehaviour : ProcedureBehaviour, IConvertible, IConvertGameObjectToEntity, IProcedureEventsListener, IStateMachineEventsListener, IEventsListener, ICacheReferences, IDependent</code></pre>
   </div>
+  <h3 id="properties">Properties
+  </h3>
+  
+  
+  <a id="Kinstrife_Interaction_InteractionProcedureBehaviour_IsInRangeOfObjects_" data-uid="Kinstrife.Interaction.InteractionProcedureBehaviour.IsInRangeOfObjects*"></a>
+  <h4 id="Kinstrife_Interaction_InteractionProcedureBehaviour_IsInRangeOfObjects" data-uid="Kinstrife.Interaction.InteractionProcedureBehaviour.IsInRangeOfObjects">IsInRangeOfObjects</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsInRangeOfObjects { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Kinstrife_Interaction_InteractionProcedureBehaviour_TargetResults_" data-uid="Kinstrife.Interaction.InteractionProcedureBehaviour.TargetResults*"></a>
+  <h4 id="Kinstrife_Interaction_InteractionProcedureBehaviour_TargetResults" data-uid="Kinstrife.Interaction.InteractionProcedureBehaviour.TargetResults">TargetResults</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public InteractionTargetResults TargetResults { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Kinstrife.Core.Interaction.Hax.InteractionTargetResults.html">InteractionTargetResults</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   <h3 id="methods">Methods
   </h3>
   
@@ -293,30 +357,6 @@
   </table>
   
   
-  <a id="Kinstrife_Interaction_InteractionProcedureBehaviour_OnDisable_" data-uid="Kinstrife.Interaction.InteractionProcedureBehaviour.OnDisable*"></a>
-  <h4 id="Kinstrife_Interaction_InteractionProcedureBehaviour_OnDisable" data-uid="Kinstrife.Interaction.InteractionProcedureBehaviour.OnDisable">OnDisable()</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected override void OnDisable()</code></pre>
-  </div>
-  <h5 class="overrides">Overrides</h5>
-  <div><a class="xref" href="Kinstrife.Entities.Procedures.ProcedureBehaviour.html#Kinstrife_Entities_Procedures_ProcedureBehaviour_OnDisable">ProcedureBehaviour.OnDisable()</a></div>
-  
-  
-  <a id="Kinstrife_Interaction_InteractionProcedureBehaviour_OnEnable_" data-uid="Kinstrife.Interaction.InteractionProcedureBehaviour.OnEnable*"></a>
-  <h4 id="Kinstrife_Interaction_InteractionProcedureBehaviour_OnEnable" data-uid="Kinstrife.Interaction.InteractionProcedureBehaviour.OnEnable">OnEnable()</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected override void OnEnable()</code></pre>
-  </div>
-  <h5 class="overrides">Overrides</h5>
-  <div><a class="xref" href="Kinstrife.Entities.Procedures.ProcedureBehaviour.html#Kinstrife_Entities_Procedures_ProcedureBehaviour_OnEnable">ProcedureBehaviour.OnEnable()</a></div>
-  
-  
   <a id="Kinstrife_Interaction_InteractionProcedureBehaviour_OnProcedureStart_" data-uid="Kinstrife.Interaction.InteractionProcedureBehaviour.OnProcedureStart*"></a>
   <h4 id="Kinstrife_Interaction_InteractionProcedureBehaviour_OnProcedureStart_Kinstrife_Entities_Procedures_Procedure__" data-uid="Kinstrife.Interaction.InteractionProcedureBehaviour.OnProcedureStart(Kinstrife.Entities.Procedures.Procedure@)">OnProcedureStart(ref Procedure)</h4>
   <div class="markdown level1 summary"></div>
@@ -344,6 +384,78 @@
   </table>
   <h5 class="overrides">Overrides</h5>
   <div><a class="xref" href="Kinstrife.Entities.Procedures.ProcedureBehaviour.html#Kinstrife_Entities_Procedures_ProcedureBehaviour_OnProcedureStart_Kinstrife_Entities_Procedures_Procedure__">ProcedureBehaviour.OnProcedureStart(ref Procedure)</a></div>
+  
+  
+  <a id="Kinstrife_Interaction_InteractionProcedureBehaviour_TryFindClosestObject_" data-uid="Kinstrife.Interaction.InteractionProcedureBehaviour.TryFindClosestObject*"></a>
+  <h4 id="Kinstrife_Interaction_InteractionProcedureBehaviour_TryFindClosestObject__1___0__Collider__System_Single_Vector3_" data-uid="Kinstrife.Interaction.InteractionProcedureBehaviour.TryFindClosestObject``1(``0@,Collider@,System.Single,Vector3)">TryFindClosestObject&lt;T&gt;(out T, out Collider, Single, Vector3)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool TryFindClosestObject&lt;T&gt;(out T result, out Collider key, float maxDistanceSq, Vector3 fromPosition)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">T</span></td>
+        <td><span class="parametername">result</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">Collider</span></td>
+        <td><span class="parametername">key</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><span class="parametername">maxDistanceSq</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">Vector3</span></td>
+        <td><span class="parametername">fromPosition</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   
   
   <a id="Kinstrife_Interaction_InteractionProcedureBehaviour_TryFindObject_" data-uid="Kinstrife.Interaction.InteractionProcedureBehaviour.TryFindObject*"></a>
@@ -464,6 +576,48 @@
     <tbody>
       <tr>
         <td><span class="parametername">T</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Kinstrife_Interaction_InteractionProcedureBehaviour_TryRemoveObject_" data-uid="Kinstrife.Interaction.InteractionProcedureBehaviour.TryRemoveObject*"></a>
+  <h4 id="Kinstrife_Interaction_InteractionProcedureBehaviour_TryRemoveObject_Collider_" data-uid="Kinstrife.Interaction.InteractionProcedureBehaviour.TryRemoveObject(Collider)">TryRemoveObject(Collider)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool TryRemoveObject(Collider collider)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Collider</span></td>
+        <td><span class="parametername">collider</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
         <td></td>
       </tr>
     </tbody>
