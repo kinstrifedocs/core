@@ -202,6 +202,32 @@ public BlackboardComponent blackboard</code></pre>
   </table>
   
   
+  <h4 id="Kinstrife_Entities_Procedures_ProcedureBehaviour_inStartStopOperationFromEntity" data-uid="Kinstrife.Entities.Procedures.ProcedureBehaviour.inStartStopOperationFromEntity">inStartStopOperationFromEntity</h4>
+  <div class="markdown level1 summary"><p>Flag to prevent recurrent callbacks from occurring between ECS and procedure behaviour.
+Is true if the current callback comes from ECS. False if it's done through the managed route (enabled/SetActive).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected bool inStartStopOperationFromEntity</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
   <h4 id="Kinstrife_Entities_Procedures_ProcedureBehaviour_procedureSystem" data-uid="Kinstrife.Entities.Procedures.ProcedureBehaviour.procedureSystem">procedureSystem</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
@@ -220,6 +246,54 @@ public BlackboardComponent blackboard</code></pre>
     <tbody>
       <tr>
         <td><a class="xref" href="Kinstrife.Entities.Procedures.ProcedureStartStopSystem.html">ProcedureStartStopSystem</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="Kinstrife_Entities_Procedures_ProcedureBehaviour_startStopPrio" data-uid="Kinstrife.Entities.Procedures.ProcedureBehaviour.startStopPrio">startStopPrio</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected RequestPriority startStopPrio</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Kinstrife.Entities.RequestPriority.html">RequestPriority</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="Kinstrife_Entities_Procedures_ProcedureBehaviour_startStopRequestDuration" data-uid="Kinstrife.Entities.Procedures.ProcedureBehaviour.startStopRequestDuration">startStopRequestDuration</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected float startStopRequestDuration</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -832,12 +906,12 @@ public BlackboardComponent blackboard</code></pre>
   
   
   <a id="Kinstrife_Entities_Procedures_ProcedureBehaviour_RequestStopProcedure_" data-uid="Kinstrife.Entities.Procedures.ProcedureBehaviour.RequestStopProcedure*"></a>
-  <h4 id="Kinstrife_Entities_Procedures_ProcedureBehaviour_RequestStopProcedure_System_Single_" data-uid="Kinstrife.Entities.Procedures.ProcedureBehaviour.RequestStopProcedure(System.Single)">RequestStopProcedure(Single)</h4>
+  <h4 id="Kinstrife_Entities_Procedures_ProcedureBehaviour_RequestStopProcedure_System_Single_System_Boolean_" data-uid="Kinstrife.Entities.Procedures.ProcedureBehaviour.RequestStopProcedure(System.Single,System.Boolean)">RequestStopProcedure(Single, Boolean)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public bool RequestStopProcedure(float duration = 0F)</code></pre>
+    <pre><code class="lang-csharp hljs">public bool RequestStopProcedure(float duration = 0F, bool force = false)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -852,6 +926,11 @@ public BlackboardComponent blackboard</code></pre>
       <tr>
         <td><span class="xref">System.Single</span></td>
         <td><span class="parametername">duration</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">force</span></td>
         <td></td>
       </tr>
     </tbody>
