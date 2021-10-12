@@ -79,11 +79,12 @@
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
     <div class="level1"><a class="xref" href="Kinstrife.Animation.AnimationComponent.html">AnimationComponent</a></div>
-    <div class="level2"><span class="xref">AnimationPlayer&lt;T&gt;</span></div>
-      <div class="level3"><a class="xref" href="Kinstrife.Animation.AnimancerTransitionPlayer.html">AnimancerTransitionPlayer</a></div>
-      <div class="level3"><a class="xref" href="Kinstrife.Animation.PlayableAssetPlayer-1.html">PlayableAssetPlayer&lt;T&gt;</a></div>
-      <div class="level3"><a class="xref" href="Kinstrife.Animation.PlayableAssetTransitionPlayer.html">PlayableAssetTransitionPlayer</a></div>
-      <div class="level3"><a class="xref" href="Kinstrife.Animation.PlayAnimationClip.html">PlayAnimationClip</a></div>
+    <div class="level2"><a class="xref" href="Kinstrife.Animation.AnimationPlayer.html">AnimationPlayer</a></div>
+    <div class="level3"><span class="xref">AnimationPlayer&lt;T&gt;</span></div>
+      <div class="level4"><a class="xref" href="Kinstrife.Animation.AnimancerTransitionPlayer-1.html">AnimancerTransitionPlayer&lt;T&gt;</a></div>
+      <div class="level4"><a class="xref" href="Kinstrife.Animation.PlayableAssetPlayer-1.html">PlayableAssetPlayer&lt;T&gt;</a></div>
+      <div class="level4"><a class="xref" href="Kinstrife.Animation.PlayableAssetTransitionPlayer.html">PlayableAssetTransitionPlayer</a></div>
+      <div class="level4"><a class="xref" href="Kinstrife.Animation.PlayAnimationClip.html">PlayAnimationClip</a></div>
   </div>
   <div classs="implements">
     <h5>Implements</h5>
@@ -123,7 +124,7 @@
   <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
   <h5 id="Kinstrife_Animation_AnimationPlayer_1_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public abstract class AnimationPlayer&lt;T&gt; : AnimationComponent, IAnimationPlayer, ICacheReferences, IInitializable, IDependent</code></pre>
+    <pre><code class="lang-csharp hljs">public abstract class AnimationPlayer&lt;T&gt; : AnimationPlayer, IAnimationPlayer, ICacheReferences, IInitializable, IDependent</code></pre>
   </div>
   <h5 class="typeParameters">Type Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -286,6 +287,30 @@
       </tr>
     </tbody>
   </table>
+  
+  
+  <h4 id="Kinstrife_Animation_AnimationPlayer_1_speed" data-uid="Kinstrife.Animation.AnimationPlayer`1.speed">speed</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected float speed</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   <h3 id="properties">Properties
   </h3>
   
@@ -414,8 +439,10 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual void Play()</code></pre>
+    <pre><code class="lang-csharp hljs">public override void Play()</code></pre>
   </div>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Kinstrife.Animation.AnimationPlayer.html#Kinstrife_Animation_AnimationPlayer_Play">AnimationPlayer.Play()</a></div>
   
   
   <a id="Kinstrife_Animation_AnimationPlayer_1_Play_" data-uid="Kinstrife.Animation.AnimationPlayer`1.Play*"></a>

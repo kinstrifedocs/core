@@ -97,30 +97,6 @@
   </h3>
   
   
-  <h4 id="Kinstrife_Entities_Atomics_SubEntityAuthoring_contextEntity" data-uid="Kinstrife.Entities.Atomics.SubEntityAuthoring.contextEntity">contextEntity</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected Entity contextEntity</code></pre>
-  </div>
-  <h5 class="fieldValue">Field Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">Entity</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
   <h4 id="Kinstrife_Entities_Atomics_SubEntityAuthoring_convertibleData" data-uid="Kinstrife.Entities.Atomics.SubEntityAuthoring.convertibleData">convertibleData</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
@@ -139,6 +115,30 @@
     <tbody>
       <tr>
         <td><span class="xref">ScriptableObject</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="Kinstrife_Entities_Atomics_SubEntityAuthoring_subEntity" data-uid="Kinstrife.Entities.Atomics.SubEntityAuthoring.subEntity">subEntity</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected Entity subEntity</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Entity</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -281,7 +281,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual void Convert(Entity entity, EntityManager dstManager, GameObjectConversionSystem conversionSystem)</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual void Convert(Entity rootEntity, EntityManager dstManager, GameObjectConversionSystem conversionSystem)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -295,7 +295,7 @@
     <tbody>
       <tr>
         <td><span class="xref">Entity</span></td>
-        <td><span class="parametername">entity</span></td>
+        <td><span class="parametername">rootEntity</span></td>
         <td></td>
       </tr>
       <tr>
