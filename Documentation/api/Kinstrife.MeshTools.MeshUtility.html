@@ -147,12 +147,12 @@
   
   
   <a id="Kinstrife_MeshTools_MeshUtility_CopySkinnedRenderer_" data-uid="Kinstrife.MeshTools.MeshUtility.CopySkinnedRenderer*"></a>
-  <h4 id="Kinstrife_MeshTools_MeshUtility_CopySkinnedRenderer_SkinnedMeshRenderer_SkinnedMeshRenderer_System_Boolean_Skeleton_Kinstrife_Rigging_RetargetingAsset_" data-uid="Kinstrife.MeshTools.MeshUtility.CopySkinnedRenderer(SkinnedMeshRenderer,SkinnedMeshRenderer,System.Boolean,Skeleton,Kinstrife.Rigging.RetargetingAsset)">CopySkinnedRenderer(SkinnedMeshRenderer, SkinnedMeshRenderer, Boolean, Skeleton, RetargetingAsset)</h4>
+  <h4 id="Kinstrife_MeshTools_MeshUtility_CopySkinnedRenderer_SkinnedMeshRenderer_SkinnedMeshRenderer_Kinstrife_MeshTools_MeshUtility_Options__Kinstrife_Rigging_Skeleton_Kinstrife_Rigging_RetargetingAsset_" data-uid="Kinstrife.MeshTools.MeshUtility.CopySkinnedRenderer(SkinnedMeshRenderer,SkinnedMeshRenderer,Kinstrife.MeshTools.MeshUtility.Options@,Kinstrife.Rigging.Skeleton,Kinstrife.Rigging.RetargetingAsset)">CopySkinnedRenderer(SkinnedMeshRenderer, SkinnedMeshRenderer, in MeshUtility.Options, Skeleton, RetargetingAsset)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static SkinnedMeshRenderer CopySkinnedRenderer(SkinnedMeshRenderer source, SkinnedMeshRenderer reference, bool instantiateNewMesh, Skeleton skeleton = null, RetargetingAsset retargetingAsset = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public static SkinnedMeshRenderer CopySkinnedRenderer(SkinnedMeshRenderer source, SkinnedMeshRenderer reference, in MeshUtility.Options options, Skeleton skeleton = null, RetargetingAsset retargetingAsset = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -175,12 +175,12 @@
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">System.Boolean</span></td>
-        <td><span class="parametername">instantiateNewMesh</span></td>
+        <td><a class="xref" href="Kinstrife.MeshTools.MeshUtility.Options.html">MeshUtility.Options</a></td>
+        <td><span class="parametername">options</span></td>
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">Skeleton</span></td>
+        <td><a class="xref" href="Kinstrife.Rigging.Skeleton.html">Skeleton</a></td>
         <td><span class="parametername">skeleton</span></td>
         <td></td>
       </tr>
@@ -486,7 +486,7 @@
   
   
   <a id="Kinstrife_MeshTools_MeshUtility_GetNewBones_" data-uid="Kinstrife.MeshTools.MeshUtility.GetNewBones*"></a>
-  <h4 id="Kinstrife_MeshTools_MeshUtility_GetNewBones_SkinnedMeshRenderer_Skeleton_Kinstrife_Rigging_RetargetingAsset_" data-uid="Kinstrife.MeshTools.MeshUtility.GetNewBones(SkinnedMeshRenderer,Skeleton,Kinstrife.Rigging.RetargetingAsset)">GetNewBones(SkinnedMeshRenderer, Skeleton, RetargetingAsset)</h4>
+  <h4 id="Kinstrife_MeshTools_MeshUtility_GetNewBones_SkinnedMeshRenderer_Kinstrife_Rigging_Skeleton_Kinstrife_Rigging_RetargetingAsset_" data-uid="Kinstrife.MeshTools.MeshUtility.GetNewBones(SkinnedMeshRenderer,Kinstrife.Rigging.Skeleton,Kinstrife.Rigging.RetargetingAsset)">GetNewBones(SkinnedMeshRenderer, Skeleton, RetargetingAsset)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -509,7 +509,7 @@
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">Skeleton</span></td>
+        <td><a class="xref" href="Kinstrife.Rigging.Skeleton.html">Skeleton</a></td>
         <td><span class="parametername">targetSkeleton</span></td>
         <td></td>
       </tr>
@@ -621,13 +621,13 @@
   </table>
   
   
-  <a id="Kinstrife_MeshTools_MeshUtility_RetargetBindPoses_" data-uid="Kinstrife.MeshTools.MeshUtility.RetargetBindPoses*"></a>
-  <h4 id="Kinstrife_MeshTools_MeshUtility_RetargetBindPoses_Mesh_Kinstrife_Rigging_RetargetingAsset_" data-uid="Kinstrife.MeshTools.MeshUtility.RetargetBindPoses(Mesh,Kinstrife.Rigging.RetargetingAsset)">RetargetBindPoses(Mesh, RetargetingAsset)</h4>
+  <a id="Kinstrife_MeshTools_MeshUtility_MakeUnique_" data-uid="Kinstrife.MeshTools.MeshUtility.MakeUnique*"></a>
+  <h4 id="Kinstrife_MeshTools_MeshUtility_MakeUnique_Mesh_SkinnedMeshRenderer_" data-uid="Kinstrife.MeshTools.MeshUtility.MakeUnique(Mesh,SkinnedMeshRenderer)">MakeUnique(Mesh, SkinnedMeshRenderer)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static Matrix4x4[] RetargetBindPoses(Mesh mesh, RetargetingAsset retargetingAsset)</code></pre>
+    <pre><code class="lang-csharp hljs">public static void MakeUnique(Mesh newMesh, SkinnedMeshRenderer renderer)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -641,12 +641,59 @@
     <tbody>
       <tr>
         <td><span class="xref">Mesh</span></td>
-        <td><span class="parametername">mesh</span></td>
+        <td><span class="parametername">newMesh</span></td>
         <td></td>
       </tr>
       <tr>
-        <td><a class="xref" href="Kinstrife.Rigging.RetargetingAsset.html">RetargetingAsset</a></td>
-        <td><span class="parametername">retargetingAsset</span></td>
+        <td><span class="xref">SkinnedMeshRenderer</span></td>
+        <td><span class="parametername">renderer</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Kinstrife_MeshTools_MeshUtility_RetargetBindPoses_" data-uid="Kinstrife.MeshTools.MeshUtility.RetargetBindPoses*"></a>
+  <h4 id="Kinstrife_MeshTools_MeshUtility_RetargetBindPoses_SkinnedMeshRenderer_SkinnedMeshRenderer_Transform___Transform___Kinstrife_MeshTools_MeshUtility_Options_" data-uid="Kinstrife.MeshTools.MeshUtility.RetargetBindPoses(SkinnedMeshRenderer,SkinnedMeshRenderer,Transform[],Transform[],Kinstrife.MeshTools.MeshUtility.Options)">RetargetBindPoses(SkinnedMeshRenderer, SkinnedMeshRenderer, Transform[], Transform[], MeshUtility.Options)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Matrix4x4[] RetargetBindPoses(SkinnedMeshRenderer srcRenderer, SkinnedMeshRenderer renderer, Transform[] oldBones, Transform[] newBones, MeshUtility.Options options)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">SkinnedMeshRenderer</span></td>
+        <td><span class="parametername">srcRenderer</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">SkinnedMeshRenderer</span></td>
+        <td><span class="parametername">renderer</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">Transform</span>[]</td>
+        <td><span class="parametername">oldBones</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">Transform</span>[]</td>
+        <td><span class="parametername">newBones</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Kinstrife.MeshTools.MeshUtility.Options.html">MeshUtility.Options</a></td>
+        <td><span class="parametername">options</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -662,6 +709,33 @@
     <tbody>
       <tr>
         <td><span class="xref">Matrix4x4</span>[]</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Kinstrife_MeshTools_MeshUtility_UpdateBoundsHax_" data-uid="Kinstrife.MeshTools.MeshUtility.UpdateBoundsHax*"></a>
+  <h4 id="Kinstrife_MeshTools_MeshUtility_UpdateBoundsHax_SkinnedMeshRenderer_" data-uid="Kinstrife.MeshTools.MeshUtility.UpdateBoundsHax(SkinnedMeshRenderer)">UpdateBoundsHax(SkinnedMeshRenderer)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void UpdateBoundsHax(this SkinnedMeshRenderer renderer)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">SkinnedMeshRenderer</span></td>
+        <td><span class="parametername">renderer</span></td>
         <td></td>
       </tr>
     </tbody>

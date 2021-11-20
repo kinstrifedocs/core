@@ -83,7 +83,6 @@
       <div class="level2"><a class="xref" href="Kinstrife.Animation.AnimationPlayer.html">AnimationPlayer</a></div>
       <div class="level2"><a class="xref" href="Kinstrife.Animation.FilterAnimation.html">FilterAnimation</a></div>
       <div class="level2"><a class="xref" href="Kinstrife.Animation.TargetMatching.html">TargetMatching</a></div>
-      <div class="level2"><a class="xref" href="Kinstrife.Rigging.FBBipedIKComponent.html">FBBipedIKComponent</a></div>
   </div>
   <div classs="implements">
     <h5>Implements</h5>
@@ -174,6 +173,60 @@
       </tr>
     </tbody>
   </table>
+  
+  
+  <a id="Kinstrife_Animation_AnimationComponent_isRegisteredFully_" data-uid="Kinstrife.Animation.AnimationComponent.isRegisteredFully*"></a>
+  <h4 id="Kinstrife_Animation_AnimationComponent_isRegisteredFully" data-uid="Kinstrife.Animation.AnimationComponent.isRegisteredFully">isRegisteredFully</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual bool isRegisteredFully { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Kinstrife_Animation_AnimationComponent_orderInGraph_" data-uid="Kinstrife.Animation.AnimationComponent.orderInGraph*"></a>
+  <h4 id="Kinstrife_Animation_AnimationComponent_orderInGraph" data-uid="Kinstrife.Animation.AnimationComponent.orderInGraph">orderInGraph</h4>
+  <div class="markdown level1 summary"><p>The order in which components are initialized (in the PlayableGraph) (lower is at start in the graph, higher numbers are closer to output)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual int orderInGraph { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Kinstrife_Animation_AnimationComponent_orderInGraph_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>For actors: FeetIK = -100, LookIK = -99, FBIKSolve = 50, PhysicsAnimate = 1000</p>
+</div>
   <h3 id="methods">Methods
   </h3>
   
@@ -227,68 +280,6 @@
       </tr>
       <tr>
         <td><span class="parametername">TPlayableData</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="Kinstrife_Animation_AnimationComponent_GetClosestComponent_" data-uid="Kinstrife.Animation.AnimationComponent.GetClosestComponent*"></a>
-  <h4 id="Kinstrife_Animation_AnimationComponent_GetClosestComponent__1_Transform_Transform_" data-uid="Kinstrife.Animation.AnimationComponent.GetClosestComponent``1(Transform,Transform)">GetClosestComponent&lt;T&gt;(Transform, Transform)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static T GetClosestComponent&lt;T&gt;(Transform transform, Transform root = null)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">Transform</span></td>
-        <td><span class="parametername">transform</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><span class="xref">Transform</span></td>
-        <td><span class="parametername">root</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">T</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="typeParameters">Type Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="parametername">T</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -357,6 +348,33 @@
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">protected virtual void OnEnable()</code></pre>
   </div>
+  
+  
+  <a id="Kinstrife_Animation_AnimationComponent_SetSpeed_" data-uid="Kinstrife.Animation.AnimationComponent.SetSpeed*"></a>
+  <h4 id="Kinstrife_Animation_AnimationComponent_SetSpeed_System_Single_" data-uid="Kinstrife.Animation.AnimationComponent.SetSpeed(System.Single)">SetSpeed(Single)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void SetSpeed(float speed)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><span class="parametername">speed</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   <h3 id="implements">Implements</h3>
   <div>
       <a class="xref" href="Kinstrife.Animation.IAnimationPlayer.html">IAnimationPlayer</a>

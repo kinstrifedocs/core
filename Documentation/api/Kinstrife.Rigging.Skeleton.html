@@ -464,6 +464,38 @@ Needs to apply transforms because the Avatar only offsets HumanBones (e.g. no tw
   </div>
   
   
+  <a id="Kinstrife_Rigging_Skeleton_CopyPoseFromSkeleton_" data-uid="Kinstrife.Rigging.Skeleton.CopyPoseFromSkeleton*"></a>
+  <h4 id="Kinstrife_Rigging_Skeleton_CopyPoseFromSkeleton_Kinstrife_Rigging_Skeleton_Kinstrife_Rigging_RetargetingAsset_" data-uid="Kinstrife.Rigging.Skeleton.CopyPoseFromSkeleton(Kinstrife.Rigging.Skeleton,Kinstrife.Rigging.RetargetingAsset)">CopyPoseFromSkeleton(Skeleton, RetargetingAsset)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void CopyPoseFromSkeleton(Skeleton other, RetargetingAsset retargetingAsset = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Kinstrife.Rigging.Skeleton.html">Skeleton</a></td>
+        <td><span class="parametername">other</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Kinstrife.Rigging.RetargetingAsset.html">RetargetingAsset</a></td>
+        <td><span class="parametername">retargetingAsset</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
   <a id="Kinstrife_Rigging_Skeleton_CreateInstanceFromSourceObject_" data-uid="Kinstrife.Rigging.Skeleton.CreateInstanceFromSourceObject*"></a>
   <h4 id="Kinstrife_Rigging_Skeleton_CreateInstanceFromSourceObject_Transform_" data-uid="Kinstrife.Rigging.Skeleton.CreateInstanceFromSourceObject(Transform)">CreateInstanceFromSourceObject(Transform)</h4>
   <div class="markdown level1 summary"></div>
@@ -743,6 +775,53 @@ Needs to apply transforms because the Avatar only offsets HumanBones (e.g. no tw
   <div><span class="xref">Kinstrife.DataContainers.ContainerBehaviour&lt;Kinstrife.Rigging.SkeletonDefinitionAsset, System.String, Kinstrife.Rigging.BoneId, Kinstrife.Rigging.BoneTransform, Transform&gt;.OnClearInstance(Kinstrife.Rigging.BoneTransform)</span></div>
   
   
+  <a id="Kinstrife_Rigging_Skeleton_RotatePoseFromSkeleton_" data-uid="Kinstrife.Rigging.Skeleton.RotatePoseFromSkeleton*"></a>
+  <h4 id="Kinstrife_Rigging_Skeleton_RotatePoseFromSkeleton_Kinstrife_Rigging_Skeleton_System_Boolean_System_Boolean_Kinstrife_Rigging_RetargetingAsset_Transform___" data-uid="Kinstrife.Rigging.Skeleton.RotatePoseFromSkeleton(Kinstrife.Rigging.Skeleton,System.Boolean,System.Boolean,Kinstrife.Rigging.RetargetingAsset,Transform[])">RotatePoseFromSkeleton(Skeleton, Boolean, Boolean, RetargetingAsset, Transform[])</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void RotatePoseFromSkeleton(Skeleton other, bool rotateTowards, bool setPosition, RetargetingAsset retargetingAsset = null, Transform[] excludeChildren = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Kinstrife.Rigging.Skeleton.html">Skeleton</a></td>
+        <td><span class="parametername">other</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">rotateTowards</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">setPosition</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Kinstrife.Rigging.RetargetingAsset.html">RetargetingAsset</a></td>
+        <td><span class="parametername">retargetingAsset</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">Transform</span>[]</td>
+        <td><span class="parametername">excludeChildren</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
   <a id="Kinstrife_Rigging_Skeleton_TryGetBoneTransform_" data-uid="Kinstrife.Rigging.Skeleton.TryGetBoneTransform*"></a>
   <h4 id="Kinstrife_Rigging_Skeleton_TryGetBoneTransform_Kinstrife_Rigging_BoneId_Transform__Kinstrife_Rigging_RetargetingAsset_System_Boolean_" data-uid="Kinstrife.Rigging.Skeleton.TryGetBoneTransform(Kinstrife.Rigging.BoneId,Transform@,Kinstrife.Rigging.RetargetingAsset,System.Boolean)">TryGetBoneTransform(BoneId, out Transform, RetargetingAsset, Boolean)</h4>
   <div class="markdown level1 summary"></div>
@@ -794,6 +873,58 @@ Needs to apply transforms because the Avatar only offsets HumanBones (e.g. no tw
     <tbody>
       <tr>
         <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Kinstrife_Rigging_Skeleton_TryGetBoneTransform_" data-uid="Kinstrife.Rigging.Skeleton.TryGetBoneTransform*"></a>
+  <h4 id="Kinstrife_Rigging_Skeleton_TryGetBoneTransform_System_String_Kinstrife_Rigging_RetargetingAsset_System_Boolean_" data-uid="Kinstrife.Rigging.Skeleton.TryGetBoneTransform(System.String,Kinstrife.Rigging.RetargetingAsset,System.Boolean)">TryGetBoneTransform(String, RetargetingAsset, Boolean)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public BoneTransform TryGetBoneTransform(string boneName, RetargetingAsset retarget, bool logNotFound = false)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">boneName</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Kinstrife.Rigging.RetargetingAsset.html">RetargetingAsset</a></td>
+        <td><span class="parametername">retarget</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">logNotFound</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Kinstrife.Rigging.BoneTransform.html">BoneTransform</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -952,6 +1083,32 @@ Needs to apply transforms because the Avatar only offsets HumanBones (e.g. no tw
     <tbody>
       <tr>
         <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="events">Events
+  </h3>
+  
+  
+  <h4 id="Kinstrife_Rigging_Skeleton_onStructuralChange" data-uid="Kinstrife.Rigging.Skeleton.onStructuralChange">onStructuralChange</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public event Action onStructuralChange</code></pre>
+  </div>
+  <h5 class="eventType">Event Type</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Action</span></td>
         <td></td>
       </tr>
     </tbody>
