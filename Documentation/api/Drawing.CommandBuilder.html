@@ -74,14 +74,14 @@
   <h1 id="Drawing_CommandBuilder" data-uid="Drawing.CommandBuilder" class="text-break">Struct CommandBuilder
   </h1>
   <div class="markdown level0 summary"><p>Builder for drawing commands.
-You can use this to queue many drawing commands. The commands will be queued for rendering when you call the Dipose method.
+You can use this to queue many drawing commands. The commands will be queued for rendering when you call the Dispose method.
 It is recommended that you use the <a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/using-statement">using statement</a> which automatically calls the Dispose method.</p>
 <pre><code>// Create a new CommandBuilder
 using (var draw = DrawingManager.GetBuilder()) {
     // Use the exact same API as the global Draw class
     draw.WireBox(Vector3.zero, Vector3.one);
 }</code></pre>
-<p>Warning: You must call either <see cref="!:Dipose"></see> or <a class="xref" href="Drawing.CommandBuilder.html#Drawing_CommandBuilder_DiscardAndDispose">DiscardAndDispose()</a> when you are done with this object to avoid memory leaks.</p>
+<p>Warning: You must call either <a class="xref" href="Drawing.CommandBuilder.html#Drawing_CommandBuilder_Dispose">Dispose()</a> or <a class="xref" href="Drawing.CommandBuilder.html#Drawing_CommandBuilder_DiscardAndDispose">DiscardAndDispose()</a> when you are done with this object to avoid memory leaks.</p>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div classs="implements">
@@ -211,7 +211,7 @@ See: \reflink{CircleXY(float3,float,float,float)}</p>
   
   <a id="Drawing_CommandBuilder_Arc_" data-uid="Drawing.CommandBuilder.Arc*"></a>
   <h4 id="Drawing_CommandBuilder_Arc_float3_float3_float3_Color_" data-uid="Drawing.CommandBuilder.Arc(float3,float3,float3,Color)">Arc(float3, float3, float3, Color)</h4>
-  <div class="markdown level1 summary"><p>\copydoc Arc(float3,float3,float3)</p>
+  <div class="markdown level1 summary"><p>\copydocref{Arc(float3,float3,float3)}</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -295,7 +295,7 @@ See: <a class="xref" href="Drawing.CommandBuilder.html#Drawing_CommandBuilder_Ar
   
   <a id="Drawing_CommandBuilder_Arrow_" data-uid="Drawing.CommandBuilder.Arrow*"></a>
   <h4 id="Drawing_CommandBuilder_Arrow_float3_float3_Color_" data-uid="Drawing.CommandBuilder.Arrow(float3,float3,Color)">Arrow(float3, float3, Color)</h4>
-  <div class="markdown level1 summary"><p>\copydoc Arrow(float3,float3)</p>
+  <div class="markdown level1 summary"><p>\copydocref{Arrow(float3,float3)}</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -384,7 +384,7 @@ See: <a class="xref" href="Drawing.CommandBuilder.html#Drawing_CommandBuilder_Ar
   
   <a id="Drawing_CommandBuilder_Arrow_" data-uid="Drawing.CommandBuilder.Arrow*"></a>
   <h4 id="Drawing_CommandBuilder_Arrow_float3_float3_float3_System_Single_Color_" data-uid="Drawing.CommandBuilder.Arrow(float3,float3,float3,System.Single,Color)">Arrow(float3, float3, float3, Single, Color)</h4>
-  <div class="markdown level1 summary"><p>\copydoc Arrow(float3,float3,float3,float)</p>
+  <div class="markdown level1 summary"><p>\copydocref{Arrow(float3,float3,float3,float)}</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -484,7 +484,7 @@ See: <a class="xref" href="Drawing.CommandBuilder.html#Drawing_CommandBuilder_Ar
   
   <a id="Drawing_CommandBuilder_Arrowhead_" data-uid="Drawing.CommandBuilder.Arrowhead*"></a>
   <h4 id="Drawing_CommandBuilder_Arrowhead_float3_float3_float3_System_Single_Color_" data-uid="Drawing.CommandBuilder.Arrowhead(float3,float3,float3,System.Single,Color)">Arrowhead(float3, float3, float3, Single, Color)</h4>
-  <div class="markdown level1 summary"><p>\copydoc Arrowhead(float3,float3,float3,float)</p>
+  <div class="markdown level1 summary"><p>\copydocref{Arrowhead(float3,float3,float3,float)}</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -578,7 +578,7 @@ See: <a class="xref" href="Drawing.CommandBuilder.html#Drawing_CommandBuilder_Ar
   
   <a id="Drawing_CommandBuilder_Arrowhead_" data-uid="Drawing.CommandBuilder.Arrowhead*"></a>
   <h4 id="Drawing_CommandBuilder_Arrowhead_float3_float3_System_Single_Color_" data-uid="Drawing.CommandBuilder.Arrowhead(float3,float3,System.Single,Color)">Arrowhead(float3, float3, Single, Color)</h4>
-  <div class="markdown level1 summary"><p>\copydoc Arrowhead(float3,float3,float)</p>
+  <div class="markdown level1 summary"><p>\copydocref{Arrowhead(float3,float3,float)}</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -622,7 +622,7 @@ See: <a class="xref" href="Drawing.CommandBuilder.html#Drawing_CommandBuilder_Ar
   
   <a id="Drawing_CommandBuilder_ArrowheadArc_" data-uid="Drawing.CommandBuilder.ArrowheadArc*"></a>
   <h4 id="Drawing_CommandBuilder_ArrowheadArc_float3_float3_System_Single_Color_" data-uid="Drawing.CommandBuilder.ArrowheadArc(float3,float3,System.Single,Color)">ArrowheadArc(float3, float3, Single, Color)</h4>
-  <div class="markdown level1 summary"><p>\copydoc ArrowheadArc(float3,float3,float,float)</p>
+  <div class="markdown level1 summary"><p>\copydocref{ArrowheadArc(float3,float3,float,float)}</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -717,7 +717,7 @@ See: <a class="xref" href="Drawing.CommandBuilder.html#Drawing_CommandBuilder_Ar
   
   <a id="Drawing_CommandBuilder_ArrowheadArc_" data-uid="Drawing.CommandBuilder.ArrowheadArc*"></a>
   <h4 id="Drawing_CommandBuilder_ArrowheadArc_float3_float3_System_Single_System_Single_Color_" data-uid="Drawing.CommandBuilder.ArrowheadArc(float3,float3,System.Single,System.Single,Color)">ArrowheadArc(float3, float3, Single, Single, Color)</h4>
-  <div class="markdown level1 summary"><p>\copydoc ArrowheadArc(float3,float3,float,float)</p>
+  <div class="markdown level1 summary"><p>\copydocref{ArrowheadArc(float3,float3,float,float)}</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -816,7 +816,7 @@ See: <a class="xref" href="Drawing.CommandBuilder.html#Drawing_CommandBuilder_Ar
   
   <a id="Drawing_CommandBuilder_ArrowRelativeSizeHead_" data-uid="Drawing.CommandBuilder.ArrowRelativeSizeHead*"></a>
   <h4 id="Drawing_CommandBuilder_ArrowRelativeSizeHead_float3_float3_float3_System_Single_Color_" data-uid="Drawing.CommandBuilder.ArrowRelativeSizeHead(float3,float3,float3,System.Single,Color)">ArrowRelativeSizeHead(float3, float3, float3, Single, Color)</h4>
-  <div class="markdown level1 summary"><p>\copydoc ArrowRelativeSizeHead(float3,float3,float3,float)</p>
+  <div class="markdown level1 summary"><p>\copydocref{ArrowRelativeSizeHead(float3,float3,float3,float)}</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -916,7 +916,7 @@ See: <a class="xref" href="Drawing.CommandBuilder.html#Drawing_CommandBuilder_Ar
   
   <a id="Drawing_CommandBuilder_Bezier_" data-uid="Drawing.CommandBuilder.Bezier*"></a>
   <h4 id="Drawing_CommandBuilder_Bezier_float3_float3_float3_float3_Color_" data-uid="Drawing.CommandBuilder.Bezier(float3,float3,float3,float3,Color)">Bezier(float3, float3, float3, float3, Color)</h4>
-  <div class="markdown level1 summary"><p>\copydoc Bezier(float3,float3,float3,float3)</p>
+  <div class="markdown level1 summary"><p>\copydocref{Bezier(float3,float3,float3,float3)}</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -1007,7 +1007,7 @@ See: <a class="xref" href="Drawing.CommandBuilder.html#Drawing_CommandBuilder_Ar
   
   <a id="Drawing_CommandBuilder_CatmullRom_" data-uid="Drawing.CommandBuilder.CatmullRom*"></a>
   <h4 id="Drawing_CommandBuilder_CatmullRom_float3_float3_float3_float3_Color_" data-uid="Drawing.CommandBuilder.CatmullRom(float3,float3,float3,float3,Color)">CatmullRom(float3, float3, float3, float3, Color)</h4>
-  <div class="markdown level1 summary"><p>\copydoc CatmullRom(float3,float3,float3,float3)</p>
+  <div class="markdown level1 summary"><p>\copydocref{CatmullRom(float3,float3,float3,float3)}</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -1090,7 +1090,8 @@ See: <a class="xref" href="Drawing.CommandBuilder.html#Drawing_CommandBuilder_Ca
   
   <a id="Drawing_CommandBuilder_CatmullRom_" data-uid="Drawing.CommandBuilder.CatmullRom*"></a>
   <h4 id="Drawing_CommandBuilder_CatmullRom_System_Collections_Generic_List_Vector3__Color_" data-uid="Drawing.CommandBuilder.CatmullRom(System.Collections.Generic.List{Vector3},Color)">CatmullRom(List&lt;Vector3&gt;, Color)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>\copydocref{CatmullRom(List&lt;Vector3&gt;)}</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1114,7 +1115,8 @@ See: <a class="xref" href="Drawing.CommandBuilder.html#Drawing_CommandBuilder_Ca
       <tr>
         <td><span class="xref">Color</span></td>
         <td><span class="parametername">color</span></td>
-        <td></td>
+        <td><p>Color of the object</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -1162,7 +1164,7 @@ See: <a class="xref" href="Drawing.CommandBuilder.html#Drawing_CommandBuilder_Ca
   
   <a id="Drawing_CommandBuilder_Circle_" data-uid="Drawing.CommandBuilder.Circle*"></a>
   <h4 id="Drawing_CommandBuilder_Circle_float3_float3_System_Single_Color_" data-uid="Drawing.CommandBuilder.Circle(float3,float3,System.Single,Color)">Circle(float3, float3, Single, Color)</h4>
-  <div class="markdown level1 summary"><p>\copydoc Circle(float3,float3,float)</p>
+  <div class="markdown level1 summary"><p>\copydocref{Circle(float3,float3,float)}</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -1205,7 +1207,7 @@ See: <a class="xref" href="Drawing.CommandBuilder.html#Drawing_CommandBuilder_Ca
   
   <a id="Drawing_CommandBuilder_CircleXY_" data-uid="Drawing.CommandBuilder.CircleXY*"></a>
   <h4 id="Drawing_CommandBuilder_CircleXY_float3_System_Single_Color_" data-uid="Drawing.CommandBuilder.CircleXY(float3,System.Single,Color)">CircleXY(float3, Single, Color)</h4>
-  <div class="markdown level1 summary"><p>\copydoc CircleXY(float3,float,float,float)</p>
+  <div class="markdown level1 summary"><p>\copydocref{CircleXY(float3,float,float,float)}</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -1296,7 +1298,7 @@ See: \reflink{Arc(float3,float3,float3)}</p>
   
   <a id="Drawing_CommandBuilder_CircleXY_" data-uid="Drawing.CommandBuilder.CircleXY*"></a>
   <h4 id="Drawing_CommandBuilder_CircleXY_float3_System_Single_System_Single_System_Single_Color_" data-uid="Drawing.CommandBuilder.CircleXY(float3,System.Single,System.Single,System.Single,Color)">CircleXY(float3, Single, Single, Single, Color)</h4>
-  <div class="markdown level1 summary"><p>\copydoc CircleXY(float3,float,float,float)</p>
+  <div class="markdown level1 summary"><p>\copydocref{CircleXY(float3,float,float,float)}</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -1345,7 +1347,7 @@ See: \reflink{Arc(float3,float3,float3)}</p>
   
   <a id="Drawing_CommandBuilder_CircleXZ_" data-uid="Drawing.CommandBuilder.CircleXZ*"></a>
   <h4 id="Drawing_CommandBuilder_CircleXZ_float3_System_Single_Color_" data-uid="Drawing.CommandBuilder.CircleXZ(float3,System.Single,Color)">CircleXZ(float3, Single, Color)</h4>
-  <div class="markdown level1 summary"><p>\copydoc CircleXZ(float3,float,float,float)</p>
+  <div class="markdown level1 summary"><p>\copydocref{CircleXZ(float3,float,float,float)}</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -1436,7 +1438,7 @@ See: \reflink{Arc(float3,float3,float3)}</p>
   
   <a id="Drawing_CommandBuilder_CircleXZ_" data-uid="Drawing.CommandBuilder.CircleXZ*"></a>
   <h4 id="Drawing_CommandBuilder_CircleXZ_float3_System_Single_System_Single_System_Single_Color_" data-uid="Drawing.CommandBuilder.CircleXZ(float3,System.Single,System.Single,System.Single,Color)">CircleXZ(float3, Single, Single, Single, Color)</h4>
-  <div class="markdown level1 summary"><p>\copydoc CircleXZ(float3,float,float,float)</p>
+  <div class="markdown level1 summary"><p>\copydocref{CircleXZ(float3,float,float,float)}</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -1485,7 +1487,7 @@ See: \reflink{Arc(float3,float3,float3)}</p>
   
   <a id="Drawing_CommandBuilder_Cross_" data-uid="Drawing.CommandBuilder.Cross*"></a>
   <h4 id="Drawing_CommandBuilder_Cross_float3_Color_" data-uid="Drawing.CommandBuilder.Cross(float3,Color)">Cross(float3, Color)</h4>
-  <div class="markdown level1 summary"><p>\copydoc Cross(float3,float)</p>
+  <div class="markdown level1 summary"><p>\copydocref{Cross(float3,float)}</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -1552,7 +1554,7 @@ See: \reflink{Arc(float3,float3,float3)}</p>
   
   <a id="Drawing_CommandBuilder_Cross_" data-uid="Drawing.CommandBuilder.Cross*"></a>
   <h4 id="Drawing_CommandBuilder_Cross_float3_System_Single_Color_" data-uid="Drawing.CommandBuilder.Cross(float3,System.Single,Color)">Cross(float3, Single, Color)</h4>
-  <div class="markdown level1 summary"><p>\copydoc Cross(float3,float)</p>
+  <div class="markdown level1 summary"><p>\copydocref{Cross(float3,float)}</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -1590,7 +1592,7 @@ See: \reflink{Arc(float3,float3,float3)}</p>
   
   <a id="Drawing_CommandBuilder_CrossXY_" data-uid="Drawing.CommandBuilder.CrossXY*"></a>
   <h4 id="Drawing_CommandBuilder_CrossXY_float3_Color_" data-uid="Drawing.CommandBuilder.CrossXY(float3,Color)">CrossXY(float3, Color)</h4>
-  <div class="markdown level1 summary"><p>\copydoc CrossXY(float3,float)</p>
+  <div class="markdown level1 summary"><p>\copydocref{CrossXY(float3,float)}</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -1657,7 +1659,7 @@ See: \reflink{Arc(float3,float3,float3)}</p>
   
   <a id="Drawing_CommandBuilder_CrossXY_" data-uid="Drawing.CommandBuilder.CrossXY*"></a>
   <h4 id="Drawing_CommandBuilder_CrossXY_float3_System_Single_Color_" data-uid="Drawing.CommandBuilder.CrossXY(float3,System.Single,Color)">CrossXY(float3, Single, Color)</h4>
-  <div class="markdown level1 summary"><p>\copydoc CrossXY(float3,float)</p>
+  <div class="markdown level1 summary"><p>\copydocref{CrossXY(float3,float)}</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -1695,7 +1697,7 @@ See: \reflink{Arc(float3,float3,float3)}</p>
   
   <a id="Drawing_CommandBuilder_CrossXZ_" data-uid="Drawing.CommandBuilder.CrossXZ*"></a>
   <h4 id="Drawing_CommandBuilder_CrossXZ_float3_Color_" data-uid="Drawing.CommandBuilder.CrossXZ(float3,Color)">CrossXZ(float3, Color)</h4>
-  <div class="markdown level1 summary"><p>\copydoc CrossXZ(float3,float)</p>
+  <div class="markdown level1 summary"><p>\copydocref{CrossXZ(float3,float)}</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -1762,7 +1764,7 @@ See: \reflink{Arc(float3,float3,float3)}</p>
   
   <a id="Drawing_CommandBuilder_CrossXZ_" data-uid="Drawing.CommandBuilder.CrossXZ*"></a>
   <h4 id="Drawing_CommandBuilder_CrossXZ_float3_System_Single_Color_" data-uid="Drawing.CommandBuilder.CrossXZ(float3,System.Single,Color)">CrossXZ(float3, Single, Color)</h4>
-  <div class="markdown level1 summary"><p>\copydoc CrossXZ(float3,float)</p>
+  <div class="markdown level1 summary"><p>\copydocref{CrossXZ(float3,float)}</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -1820,6 +1822,35 @@ memory leaks.</p>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public void Dispose()</code></pre>
   </div>
+  
+  
+  <a id="Drawing_CommandBuilder_DisposeAfter_" data-uid="Drawing.CommandBuilder.DisposeAfter*"></a>
+  <h4 id="Drawing_CommandBuilder_DisposeAfter_JobHandle_" data-uid="Drawing.CommandBuilder.DisposeAfter(JobHandle)">DisposeAfter(JobHandle)</h4>
+  <div class="markdown level1 summary"><p>Disposes this command builder after the given job has completed.</p>
+<p>You will not be able to use this command builder on the main thread anymore.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void DisposeAfter(JobHandle dependency)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">JobHandle</span></td>
+        <td><span class="parametername">dependency</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   
   
   <a id="Drawing_CommandBuilder_EvaluateCubicBezier_" data-uid="Drawing.CommandBuilder.EvaluateCubicBezier*"></a>
@@ -1986,8 +2017,849 @@ See: <a class="xref" href="Drawing.CommandBuilder.html#Drawing_CommandBuilder_Wi
   
   
   <a id="Drawing_CommandBuilder_Label2D_" data-uid="Drawing.CommandBuilder.Label2D*"></a>
+  <h4 id="Drawing_CommandBuilder_Label2D_float3_FixedString128__Color_" data-uid="Drawing.CommandBuilder.Label2D(float3,FixedString128@,Color)">Label2D(float3, ref FixedString128, Color)</h4>
+  <div class="markdown level1 summary"><p>\copydocref{Label2D(float3,FixedString128,float)}</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Label2D(float3 position, ref FixedString128 text, Color color)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">float3</span></td>
+        <td><span class="parametername">position</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">FixedString128</span></td>
+        <td><span class="parametername">text</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">Color</span></td>
+        <td><span class="parametername">color</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Drawing_CommandBuilder_Label2D_" data-uid="Drawing.CommandBuilder.Label2D*"></a>
+  <h4 id="Drawing_CommandBuilder_Label2D_float3_FixedString128__System_Single_" data-uid="Drawing.CommandBuilder.Label2D(float3,FixedString128@,System.Single)">Label2D(float3, ref FixedString128, Single)</h4>
+  <div class="markdown level1 summary"><p>\copydocref{Label2D(float3,FixedString32,float)}</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Label2D(float3 position, ref FixedString128 text, float sizeInPixels = 14F)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">float3</span></td>
+        <td><span class="parametername">position</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">FixedString128</span></td>
+        <td><span class="parametername">text</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><span class="parametername">sizeInPixels</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Drawing_CommandBuilder_Label2D_" data-uid="Drawing.CommandBuilder.Label2D*"></a>
+  <h4 id="Drawing_CommandBuilder_Label2D_float3_FixedString128__System_Single_Color_" data-uid="Drawing.CommandBuilder.Label2D(float3,FixedString128@,System.Single,Color)">Label2D(float3, ref FixedString128, Single, Color)</h4>
+  <div class="markdown level1 summary"><p>\copydocref{Label2D(float3,FixedString128,float)}</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Label2D(float3 position, ref FixedString128 text, float sizeInPixels, Color color)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">float3</span></td>
+        <td><span class="parametername">position</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">FixedString128</span></td>
+        <td><span class="parametername">text</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><span class="parametername">sizeInPixels</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">Color</span></td>
+        <td><span class="parametername">color</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Drawing_CommandBuilder_Label2D_" data-uid="Drawing.CommandBuilder.Label2D*"></a>
+  <h4 id="Drawing_CommandBuilder_Label2D_float3_FixedString128__System_Single_Drawing_LabelAlignment_" data-uid="Drawing.CommandBuilder.Label2D(float3,FixedString128@,System.Single,Drawing.LabelAlignment)">Label2D(float3, ref FixedString128, Single, LabelAlignment)</h4>
+  <div class="markdown level1 summary"><p>\copydocref{Label2D(float3,FixedString32,float,LabelAlignment)}</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Label2D(float3 position, ref FixedString128 text, float sizeInPixels, LabelAlignment alignment)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">float3</span></td>
+        <td><span class="parametername">position</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">FixedString128</span></td>
+        <td><span class="parametername">text</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><span class="parametername">sizeInPixels</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Drawing.LabelAlignment.html">LabelAlignment</a></td>
+        <td><span class="parametername">alignment</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Drawing_CommandBuilder_Label2D_" data-uid="Drawing.CommandBuilder.Label2D*"></a>
+  <h4 id="Drawing_CommandBuilder_Label2D_float3_FixedString128__System_Single_Drawing_LabelAlignment_Color_" data-uid="Drawing.CommandBuilder.Label2D(float3,FixedString128@,System.Single,Drawing.LabelAlignment,Color)">Label2D(float3, ref FixedString128, Single, LabelAlignment, Color)</h4>
+  <div class="markdown level1 summary"><p>\copydocref{Label2D(float3,FixedString128,float,LabelAlignment)}</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Label2D(float3 position, ref FixedString128 text, float sizeInPixels, LabelAlignment alignment, Color color)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">float3</span></td>
+        <td><span class="parametername">position</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">FixedString128</span></td>
+        <td><span class="parametername">text</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><span class="parametername">sizeInPixels</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Drawing.LabelAlignment.html">LabelAlignment</a></td>
+        <td><span class="parametername">alignment</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">Color</span></td>
+        <td><span class="parametername">color</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Drawing_CommandBuilder_Label2D_" data-uid="Drawing.CommandBuilder.Label2D*"></a>
+  <h4 id="Drawing_CommandBuilder_Label2D_float3_FixedString32__Color_" data-uid="Drawing.CommandBuilder.Label2D(float3,FixedString32@,Color)">Label2D(float3, ref FixedString32, Color)</h4>
+  <div class="markdown level1 summary"><p>\copydocref{Label2D(float3,FixedString32,float)}</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Label2D(float3 position, ref FixedString32 text, Color color)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">float3</span></td>
+        <td><span class="parametername">position</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">FixedString32</span></td>
+        <td><span class="parametername">text</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">Color</span></td>
+        <td><span class="parametername">color</span></td>
+        <td><p>Color of the object</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Drawing_CommandBuilder_Label2D_" data-uid="Drawing.CommandBuilder.Label2D*"></a>
+  <h4 id="Drawing_CommandBuilder_Label2D_float3_FixedString32__System_Single_" data-uid="Drawing.CommandBuilder.Label2D(float3,FixedString32@,System.Single)">Label2D(float3, ref FixedString32, Single)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Label2D(float3 position, ref FixedString32 text, float sizeInPixels = 14F)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">float3</span></td>
+        <td><span class="parametername">position</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">FixedString32</span></td>
+        <td><span class="parametername">text</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><span class="parametername">sizeInPixels</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Drawing_CommandBuilder_Label2D_" data-uid="Drawing.CommandBuilder.Label2D*"></a>
+  <h4 id="Drawing_CommandBuilder_Label2D_float3_FixedString32__System_Single_Color_" data-uid="Drawing.CommandBuilder.Label2D(float3,FixedString32@,System.Single,Color)">Label2D(float3, ref FixedString32, Single, Color)</h4>
+  <div class="markdown level1 summary"><p>\copydocref{Label2D(float3,FixedString32,float)}</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Label2D(float3 position, ref FixedString32 text, float sizeInPixels, Color color)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">float3</span></td>
+        <td><span class="parametername">position</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">FixedString32</span></td>
+        <td><span class="parametername">text</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><span class="parametername">sizeInPixels</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">Color</span></td>
+        <td><span class="parametername">color</span></td>
+        <td><p>Color of the object</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Drawing_CommandBuilder_Label2D_" data-uid="Drawing.CommandBuilder.Label2D*"></a>
+  <h4 id="Drawing_CommandBuilder_Label2D_float3_FixedString32__System_Single_Drawing_LabelAlignment_" data-uid="Drawing.CommandBuilder.Label2D(float3,FixedString32@,System.Single,Drawing.LabelAlignment)">Label2D(float3, ref FixedString32, Single, LabelAlignment)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Label2D(float3 position, ref FixedString32 text, float sizeInPixels, LabelAlignment alignment)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">float3</span></td>
+        <td><span class="parametername">position</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">FixedString32</span></td>
+        <td><span class="parametername">text</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><span class="parametername">sizeInPixels</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Drawing.LabelAlignment.html">LabelAlignment</a></td>
+        <td><span class="parametername">alignment</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Drawing_CommandBuilder_Label2D_" data-uid="Drawing.CommandBuilder.Label2D*"></a>
+  <h4 id="Drawing_CommandBuilder_Label2D_float3_FixedString32__System_Single_Drawing_LabelAlignment_Color_" data-uid="Drawing.CommandBuilder.Label2D(float3,FixedString32@,System.Single,Drawing.LabelAlignment,Color)">Label2D(float3, ref FixedString32, Single, LabelAlignment, Color)</h4>
+  <div class="markdown level1 summary"><p>\copydocref{Label2D(float3,FixedString32,float,LabelAlignment)}</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Label2D(float3 position, ref FixedString32 text, float sizeInPixels, LabelAlignment alignment, Color color)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">float3</span></td>
+        <td><span class="parametername">position</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">FixedString32</span></td>
+        <td><span class="parametername">text</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><span class="parametername">sizeInPixels</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Drawing.LabelAlignment.html">LabelAlignment</a></td>
+        <td><span class="parametername">alignment</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">Color</span></td>
+        <td><span class="parametername">color</span></td>
+        <td><p>Color of the object</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Drawing_CommandBuilder_Label2D_" data-uid="Drawing.CommandBuilder.Label2D*"></a>
+  <h4 id="Drawing_CommandBuilder_Label2D_float3_FixedString512__Color_" data-uid="Drawing.CommandBuilder.Label2D(float3,FixedString512@,Color)">Label2D(float3, ref FixedString512, Color)</h4>
+  <div class="markdown level1 summary"><p>\copydocref{Label2D(float3,FixedString512,float)}</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Label2D(float3 position, ref FixedString512 text, Color color)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">float3</span></td>
+        <td><span class="parametername">position</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">FixedString512</span></td>
+        <td><span class="parametername">text</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">Color</span></td>
+        <td><span class="parametername">color</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Drawing_CommandBuilder_Label2D_" data-uid="Drawing.CommandBuilder.Label2D*"></a>
+  <h4 id="Drawing_CommandBuilder_Label2D_float3_FixedString512__System_Single_" data-uid="Drawing.CommandBuilder.Label2D(float3,FixedString512@,System.Single)">Label2D(float3, ref FixedString512, Single)</h4>
+  <div class="markdown level1 summary"><p>\copydocref{Label2D(float3,FixedString32,float)}</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Label2D(float3 position, ref FixedString512 text, float sizeInPixels = 14F)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">float3</span></td>
+        <td><span class="parametername">position</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">FixedString512</span></td>
+        <td><span class="parametername">text</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><span class="parametername">sizeInPixels</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Drawing_CommandBuilder_Label2D_" data-uid="Drawing.CommandBuilder.Label2D*"></a>
+  <h4 id="Drawing_CommandBuilder_Label2D_float3_FixedString512__System_Single_Color_" data-uid="Drawing.CommandBuilder.Label2D(float3,FixedString512@,System.Single,Color)">Label2D(float3, ref FixedString512, Single, Color)</h4>
+  <div class="markdown level1 summary"><p>\copydocref{Label2D(float3,FixedString512,float)}</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Label2D(float3 position, ref FixedString512 text, float sizeInPixels, Color color)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">float3</span></td>
+        <td><span class="parametername">position</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">FixedString512</span></td>
+        <td><span class="parametername">text</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><span class="parametername">sizeInPixels</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">Color</span></td>
+        <td><span class="parametername">color</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Drawing_CommandBuilder_Label2D_" data-uid="Drawing.CommandBuilder.Label2D*"></a>
+  <h4 id="Drawing_CommandBuilder_Label2D_float3_FixedString512__System_Single_Drawing_LabelAlignment_" data-uid="Drawing.CommandBuilder.Label2D(float3,FixedString512@,System.Single,Drawing.LabelAlignment)">Label2D(float3, ref FixedString512, Single, LabelAlignment)</h4>
+  <div class="markdown level1 summary"><p>\copydocref{Label2D(float3,FixedString32,float,LabelAlignment)}</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Label2D(float3 position, ref FixedString512 text, float sizeInPixels, LabelAlignment alignment)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">float3</span></td>
+        <td><span class="parametername">position</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">FixedString512</span></td>
+        <td><span class="parametername">text</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><span class="parametername">sizeInPixels</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Drawing.LabelAlignment.html">LabelAlignment</a></td>
+        <td><span class="parametername">alignment</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Drawing_CommandBuilder_Label2D_" data-uid="Drawing.CommandBuilder.Label2D*"></a>
+  <h4 id="Drawing_CommandBuilder_Label2D_float3_FixedString512__System_Single_Drawing_LabelAlignment_Color_" data-uid="Drawing.CommandBuilder.Label2D(float3,FixedString512@,System.Single,Drawing.LabelAlignment,Color)">Label2D(float3, ref FixedString512, Single, LabelAlignment, Color)</h4>
+  <div class="markdown level1 summary"><p>\copydocref{Label2D(float3,FixedString512,float,LabelAlignment)}</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Label2D(float3 position, ref FixedString512 text, float sizeInPixels, LabelAlignment alignment, Color color)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">float3</span></td>
+        <td><span class="parametername">position</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">FixedString512</span></td>
+        <td><span class="parametername">text</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><span class="parametername">sizeInPixels</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Drawing.LabelAlignment.html">LabelAlignment</a></td>
+        <td><span class="parametername">alignment</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">Color</span></td>
+        <td><span class="parametername">color</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Drawing_CommandBuilder_Label2D_" data-uid="Drawing.CommandBuilder.Label2D*"></a>
+  <h4 id="Drawing_CommandBuilder_Label2D_float3_FixedString64__Color_" data-uid="Drawing.CommandBuilder.Label2D(float3,FixedString64@,Color)">Label2D(float3, ref FixedString64, Color)</h4>
+  <div class="markdown level1 summary"><p>\copydocref{Label2D(float3,FixedString64,float)}</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Label2D(float3 position, ref FixedString64 text, Color color)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">float3</span></td>
+        <td><span class="parametername">position</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">FixedString64</span></td>
+        <td><span class="parametername">text</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">Color</span></td>
+        <td><span class="parametername">color</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Drawing_CommandBuilder_Label2D_" data-uid="Drawing.CommandBuilder.Label2D*"></a>
+  <h4 id="Drawing_CommandBuilder_Label2D_float3_FixedString64__System_Single_" data-uid="Drawing.CommandBuilder.Label2D(float3,FixedString64@,System.Single)">Label2D(float3, ref FixedString64, Single)</h4>
+  <div class="markdown level1 summary"><p>\copydocref{Label2D(float3,FixedString32,float)}</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Label2D(float3 position, ref FixedString64 text, float sizeInPixels = 14F)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">float3</span></td>
+        <td><span class="parametername">position</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">FixedString64</span></td>
+        <td><span class="parametername">text</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><span class="parametername">sizeInPixels</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Drawing_CommandBuilder_Label2D_" data-uid="Drawing.CommandBuilder.Label2D*"></a>
+  <h4 id="Drawing_CommandBuilder_Label2D_float3_FixedString64__System_Single_Color_" data-uid="Drawing.CommandBuilder.Label2D(float3,FixedString64@,System.Single,Color)">Label2D(float3, ref FixedString64, Single, Color)</h4>
+  <div class="markdown level1 summary"><p>\copydocref{Label2D(float3,FixedString64,float)}</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Label2D(float3 position, ref FixedString64 text, float sizeInPixels, Color color)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">float3</span></td>
+        <td><span class="parametername">position</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">FixedString64</span></td>
+        <td><span class="parametername">text</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><span class="parametername">sizeInPixels</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">Color</span></td>
+        <td><span class="parametername">color</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Drawing_CommandBuilder_Label2D_" data-uid="Drawing.CommandBuilder.Label2D*"></a>
+  <h4 id="Drawing_CommandBuilder_Label2D_float3_FixedString64__System_Single_Drawing_LabelAlignment_" data-uid="Drawing.CommandBuilder.Label2D(float3,FixedString64@,System.Single,Drawing.LabelAlignment)">Label2D(float3, ref FixedString64, Single, LabelAlignment)</h4>
+  <div class="markdown level1 summary"><p>\copydocref{Label2D(float3,FixedString32,float,LabelAlignment)}</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Label2D(float3 position, ref FixedString64 text, float sizeInPixels, LabelAlignment alignment)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">float3</span></td>
+        <td><span class="parametername">position</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">FixedString64</span></td>
+        <td><span class="parametername">text</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><span class="parametername">sizeInPixels</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Drawing.LabelAlignment.html">LabelAlignment</a></td>
+        <td><span class="parametername">alignment</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Drawing_CommandBuilder_Label2D_" data-uid="Drawing.CommandBuilder.Label2D*"></a>
+  <h4 id="Drawing_CommandBuilder_Label2D_float3_FixedString64__System_Single_Drawing_LabelAlignment_Color_" data-uid="Drawing.CommandBuilder.Label2D(float3,FixedString64@,System.Single,Drawing.LabelAlignment,Color)">Label2D(float3, ref FixedString64, Single, LabelAlignment, Color)</h4>
+  <div class="markdown level1 summary"><p>\copydocref{Label2D(float3,FixedString64,float,LabelAlignment)}</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Label2D(float3 position, ref FixedString64 text, float sizeInPixels, LabelAlignment alignment, Color color)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">float3</span></td>
+        <td><span class="parametername">position</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">FixedString64</span></td>
+        <td><span class="parametername">text</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><span class="parametername">sizeInPixels</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Drawing.LabelAlignment.html">LabelAlignment</a></td>
+        <td><span class="parametername">alignment</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">Color</span></td>
+        <td><span class="parametername">color</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Drawing_CommandBuilder_Label2D_" data-uid="Drawing.CommandBuilder.Label2D*"></a>
   <h4 id="Drawing_CommandBuilder_Label2D_float3_System_String_Color_" data-uid="Drawing.CommandBuilder.Label2D(float3,System.String,Color)">Label2D(float3, String, Color)</h4>
-  <div class="markdown level1 summary"><p>\copydoc Label2D(float3,string,float)</p>
+  <div class="markdown level1 summary"><p>\copydocref{Label2D(float3,string,float)}</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -2072,7 +2944,7 @@ See: <a class="xref" href="Drawing.CommandBuilder.html#Drawing_CommandBuilder_Wi
   
   <a id="Drawing_CommandBuilder_Label2D_" data-uid="Drawing.CommandBuilder.Label2D*"></a>
   <h4 id="Drawing_CommandBuilder_Label2D_float3_System_String_System_Single_Color_" data-uid="Drawing.CommandBuilder.Label2D(float3,System.String,System.Single,Color)">Label2D(float3, String, Single, Color)</h4>
-  <div class="markdown level1 summary"><p>\copydoc Label2D(float3,string,float)</p>
+  <div class="markdown level1 summary"><p>\copydocref{Label2D(float3,string,float)}</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -2121,6 +2993,7 @@ See: <a class="xref" href="Drawing.CommandBuilder.html#Drawing_CommandBuilder_Wi
 <p>[Open online documentation to see images]</p>
 <p>See: Label2D(float3,string,float)</p>
 <p>Note: Only ASCII is supported since the built-in font texture only includes ASCII. Other characters will be rendered as question marks (?).</p>
+<p>Note: This method cannot be used in burst since managed strings are not suppported in burst. However, you can use the separate Label2D overload which takes a FixedString.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -2167,7 +3040,7 @@ See: <a class="xref" href="Drawing.CommandBuilder.html#Drawing_CommandBuilder_Wi
   
   <a id="Drawing_CommandBuilder_Label2D_" data-uid="Drawing.CommandBuilder.Label2D*"></a>
   <h4 id="Drawing_CommandBuilder_Label2D_float3_System_String_System_Single_Drawing_LabelAlignment_Color_" data-uid="Drawing.CommandBuilder.Label2D(float3,System.String,System.Single,Drawing.LabelAlignment,Color)">Label2D(float3, String, Single, LabelAlignment, Color)</h4>
-  <div class="markdown level1 summary"><p>\copydoc Label2D(float3,string,float,LabelAlignment)</p>
+  <div class="markdown level1 summary"><p>\copydocref{Label2D(float3,string,float,LabelAlignment)}</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -2197,6 +3070,987 @@ See: <a class="xref" href="Drawing.CommandBuilder.html#Drawing_CommandBuilder_Wi
       <tr>
         <td><span class="xref">System.Single</span></td>
         <td><span class="parametername">sizeInPixels</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Drawing.LabelAlignment.html">LabelAlignment</a></td>
+        <td><span class="parametername">alignment</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">Color</span></td>
+        <td><span class="parametername">color</span></td>
+        <td><p>Color of the object</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Drawing_CommandBuilder_Label3D_" data-uid="Drawing.CommandBuilder.Label3D*"></a>
+  <h4 id="Drawing_CommandBuilder_Label3D_float3_quaternion_FixedString128__System_Single_" data-uid="Drawing.CommandBuilder.Label3D(float3,quaternion,FixedString128@,System.Single)">Label3D(float3, quaternion, ref FixedString128, Single)</h4>
+  <div class="markdown level1 summary"><p>\copydocref{Label3D(float3,quaternion,FixedString32,float)}</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Label3D(float3 position, quaternion rotation, ref FixedString128 text, float size)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">float3</span></td>
+        <td><span class="parametername">position</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">quaternion</span></td>
+        <td><span class="parametername">rotation</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">FixedString128</span></td>
+        <td><span class="parametername">text</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><span class="parametername">size</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Drawing_CommandBuilder_Label3D_" data-uid="Drawing.CommandBuilder.Label3D*"></a>
+  <h4 id="Drawing_CommandBuilder_Label3D_float3_quaternion_FixedString128__System_Single_Color_" data-uid="Drawing.CommandBuilder.Label3D(float3,quaternion,FixedString128@,System.Single,Color)">Label3D(float3, quaternion, ref FixedString128, Single, Color)</h4>
+  <div class="markdown level1 summary"><p>\copydocref{Label3D(float3,quaternion,FixedString128,float)}</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Label3D(float3 position, quaternion rotation, ref FixedString128 text, float size, Color color)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">float3</span></td>
+        <td><span class="parametername">position</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">quaternion</span></td>
+        <td><span class="parametername">rotation</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">FixedString128</span></td>
+        <td><span class="parametername">text</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><span class="parametername">size</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">Color</span></td>
+        <td><span class="parametername">color</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Drawing_CommandBuilder_Label3D_" data-uid="Drawing.CommandBuilder.Label3D*"></a>
+  <h4 id="Drawing_CommandBuilder_Label3D_float3_quaternion_FixedString128__System_Single_Drawing_LabelAlignment_" data-uid="Drawing.CommandBuilder.Label3D(float3,quaternion,FixedString128@,System.Single,Drawing.LabelAlignment)">Label3D(float3, quaternion, ref FixedString128, Single, LabelAlignment)</h4>
+  <div class="markdown level1 summary"><p>\copydocref{Label3D(float3,quaternion,FixedString32,float,LabelAlignment)}</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Label3D(float3 position, quaternion rotation, ref FixedString128 text, float size, LabelAlignment alignment)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">float3</span></td>
+        <td><span class="parametername">position</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">quaternion</span></td>
+        <td><span class="parametername">rotation</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">FixedString128</span></td>
+        <td><span class="parametername">text</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><span class="parametername">size</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Drawing.LabelAlignment.html">LabelAlignment</a></td>
+        <td><span class="parametername">alignment</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Drawing_CommandBuilder_Label3D_" data-uid="Drawing.CommandBuilder.Label3D*"></a>
+  <h4 id="Drawing_CommandBuilder_Label3D_float3_quaternion_FixedString128__System_Single_Drawing_LabelAlignment_Color_" data-uid="Drawing.CommandBuilder.Label3D(float3,quaternion,FixedString128@,System.Single,Drawing.LabelAlignment,Color)">Label3D(float3, quaternion, ref FixedString128, Single, LabelAlignment, Color)</h4>
+  <div class="markdown level1 summary"><p>\copydocref{Label3D(float3,quaternion,FixedString128,float,LabelAlignment)}</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Label3D(float3 position, quaternion rotation, ref FixedString128 text, float size, LabelAlignment alignment, Color color)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">float3</span></td>
+        <td><span class="parametername">position</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">quaternion</span></td>
+        <td><span class="parametername">rotation</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">FixedString128</span></td>
+        <td><span class="parametername">text</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><span class="parametername">size</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Drawing.LabelAlignment.html">LabelAlignment</a></td>
+        <td><span class="parametername">alignment</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">Color</span></td>
+        <td><span class="parametername">color</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Drawing_CommandBuilder_Label3D_" data-uid="Drawing.CommandBuilder.Label3D*"></a>
+  <h4 id="Drawing_CommandBuilder_Label3D_float3_quaternion_FixedString32__System_Single_" data-uid="Drawing.CommandBuilder.Label3D(float3,quaternion,FixedString32@,System.Single)">Label3D(float3, quaternion, ref FixedString32, Single)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Label3D(float3 position, quaternion rotation, ref FixedString32 text, float size)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">float3</span></td>
+        <td><span class="parametername">position</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">quaternion</span></td>
+        <td><span class="parametername">rotation</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">FixedString32</span></td>
+        <td><span class="parametername">text</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><span class="parametername">size</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Drawing_CommandBuilder_Label3D_" data-uid="Drawing.CommandBuilder.Label3D*"></a>
+  <h4 id="Drawing_CommandBuilder_Label3D_float3_quaternion_FixedString32__System_Single_Color_" data-uid="Drawing.CommandBuilder.Label3D(float3,quaternion,FixedString32@,System.Single,Color)">Label3D(float3, quaternion, ref FixedString32, Single, Color)</h4>
+  <div class="markdown level1 summary"><p>\copydocref{Label3D(float3,quaternion,FixedString32,float)}</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Label3D(float3 position, quaternion rotation, ref FixedString32 text, float size, Color color)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">float3</span></td>
+        <td><span class="parametername">position</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">quaternion</span></td>
+        <td><span class="parametername">rotation</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">FixedString32</span></td>
+        <td><span class="parametername">text</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><span class="parametername">size</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">Color</span></td>
+        <td><span class="parametername">color</span></td>
+        <td><p>Color of the object</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Drawing_CommandBuilder_Label3D_" data-uid="Drawing.CommandBuilder.Label3D*"></a>
+  <h4 id="Drawing_CommandBuilder_Label3D_float3_quaternion_FixedString32__System_Single_Drawing_LabelAlignment_" data-uid="Drawing.CommandBuilder.Label3D(float3,quaternion,FixedString32@,System.Single,Drawing.LabelAlignment)">Label3D(float3, quaternion, ref FixedString32, Single, LabelAlignment)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Label3D(float3 position, quaternion rotation, ref FixedString32 text, float size, LabelAlignment alignment)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">float3</span></td>
+        <td><span class="parametername">position</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">quaternion</span></td>
+        <td><span class="parametername">rotation</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">FixedString32</span></td>
+        <td><span class="parametername">text</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><span class="parametername">size</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Drawing.LabelAlignment.html">LabelAlignment</a></td>
+        <td><span class="parametername">alignment</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Drawing_CommandBuilder_Label3D_" data-uid="Drawing.CommandBuilder.Label3D*"></a>
+  <h4 id="Drawing_CommandBuilder_Label3D_float3_quaternion_FixedString32__System_Single_Drawing_LabelAlignment_Color_" data-uid="Drawing.CommandBuilder.Label3D(float3,quaternion,FixedString32@,System.Single,Drawing.LabelAlignment,Color)">Label3D(float3, quaternion, ref FixedString32, Single, LabelAlignment, Color)</h4>
+  <div class="markdown level1 summary"><p>\copydocref{Label3D(float3,quaternion,FixedString32,float,LabelAlignment)}</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Label3D(float3 position, quaternion rotation, ref FixedString32 text, float size, LabelAlignment alignment, Color color)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">float3</span></td>
+        <td><span class="parametername">position</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">quaternion</span></td>
+        <td><span class="parametername">rotation</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">FixedString32</span></td>
+        <td><span class="parametername">text</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><span class="parametername">size</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Drawing.LabelAlignment.html">LabelAlignment</a></td>
+        <td><span class="parametername">alignment</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">Color</span></td>
+        <td><span class="parametername">color</span></td>
+        <td><p>Color of the object</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Drawing_CommandBuilder_Label3D_" data-uid="Drawing.CommandBuilder.Label3D*"></a>
+  <h4 id="Drawing_CommandBuilder_Label3D_float3_quaternion_FixedString512__System_Single_" data-uid="Drawing.CommandBuilder.Label3D(float3,quaternion,FixedString512@,System.Single)">Label3D(float3, quaternion, ref FixedString512, Single)</h4>
+  <div class="markdown level1 summary"><p>\copydocref{Label3D(float3,quaternion,FixedString32,float)}</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Label3D(float3 position, quaternion rotation, ref FixedString512 text, float size)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">float3</span></td>
+        <td><span class="parametername">position</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">quaternion</span></td>
+        <td><span class="parametername">rotation</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">FixedString512</span></td>
+        <td><span class="parametername">text</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><span class="parametername">size</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Drawing_CommandBuilder_Label3D_" data-uid="Drawing.CommandBuilder.Label3D*"></a>
+  <h4 id="Drawing_CommandBuilder_Label3D_float3_quaternion_FixedString512__System_Single_Color_" data-uid="Drawing.CommandBuilder.Label3D(float3,quaternion,FixedString512@,System.Single,Color)">Label3D(float3, quaternion, ref FixedString512, Single, Color)</h4>
+  <div class="markdown level1 summary"><p>\copydocref{Label3D(float3,quaternion,FixedString512,float)}</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Label3D(float3 position, quaternion rotation, ref FixedString512 text, float size, Color color)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">float3</span></td>
+        <td><span class="parametername">position</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">quaternion</span></td>
+        <td><span class="parametername">rotation</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">FixedString512</span></td>
+        <td><span class="parametername">text</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><span class="parametername">size</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">Color</span></td>
+        <td><span class="parametername">color</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Drawing_CommandBuilder_Label3D_" data-uid="Drawing.CommandBuilder.Label3D*"></a>
+  <h4 id="Drawing_CommandBuilder_Label3D_float3_quaternion_FixedString512__System_Single_Drawing_LabelAlignment_" data-uid="Drawing.CommandBuilder.Label3D(float3,quaternion,FixedString512@,System.Single,Drawing.LabelAlignment)">Label3D(float3, quaternion, ref FixedString512, Single, LabelAlignment)</h4>
+  <div class="markdown level1 summary"><p>\copydocref{Label3D(float3,quaternion,FixedString32,float,LabelAlignment)}</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Label3D(float3 position, quaternion rotation, ref FixedString512 text, float size, LabelAlignment alignment)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">float3</span></td>
+        <td><span class="parametername">position</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">quaternion</span></td>
+        <td><span class="parametername">rotation</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">FixedString512</span></td>
+        <td><span class="parametername">text</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><span class="parametername">size</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Drawing.LabelAlignment.html">LabelAlignment</a></td>
+        <td><span class="parametername">alignment</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Drawing_CommandBuilder_Label3D_" data-uid="Drawing.CommandBuilder.Label3D*"></a>
+  <h4 id="Drawing_CommandBuilder_Label3D_float3_quaternion_FixedString512__System_Single_Drawing_LabelAlignment_Color_" data-uid="Drawing.CommandBuilder.Label3D(float3,quaternion,FixedString512@,System.Single,Drawing.LabelAlignment,Color)">Label3D(float3, quaternion, ref FixedString512, Single, LabelAlignment, Color)</h4>
+  <div class="markdown level1 summary"><p>\copydocref{Label3D(float3,quaternion,FixedString512,float,LabelAlignment)}</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Label3D(float3 position, quaternion rotation, ref FixedString512 text, float size, LabelAlignment alignment, Color color)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">float3</span></td>
+        <td><span class="parametername">position</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">quaternion</span></td>
+        <td><span class="parametername">rotation</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">FixedString512</span></td>
+        <td><span class="parametername">text</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><span class="parametername">size</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Drawing.LabelAlignment.html">LabelAlignment</a></td>
+        <td><span class="parametername">alignment</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">Color</span></td>
+        <td><span class="parametername">color</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Drawing_CommandBuilder_Label3D_" data-uid="Drawing.CommandBuilder.Label3D*"></a>
+  <h4 id="Drawing_CommandBuilder_Label3D_float3_quaternion_FixedString64__System_Single_" data-uid="Drawing.CommandBuilder.Label3D(float3,quaternion,FixedString64@,System.Single)">Label3D(float3, quaternion, ref FixedString64, Single)</h4>
+  <div class="markdown level1 summary"><p>\copydocref{Label3D(float3,quaternion,FixedString32,float)}</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Label3D(float3 position, quaternion rotation, ref FixedString64 text, float size)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">float3</span></td>
+        <td><span class="parametername">position</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">quaternion</span></td>
+        <td><span class="parametername">rotation</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">FixedString64</span></td>
+        <td><span class="parametername">text</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><span class="parametername">size</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Drawing_CommandBuilder_Label3D_" data-uid="Drawing.CommandBuilder.Label3D*"></a>
+  <h4 id="Drawing_CommandBuilder_Label3D_float3_quaternion_FixedString64__System_Single_Color_" data-uid="Drawing.CommandBuilder.Label3D(float3,quaternion,FixedString64@,System.Single,Color)">Label3D(float3, quaternion, ref FixedString64, Single, Color)</h4>
+  <div class="markdown level1 summary"><p>\copydocref{Label3D(float3,quaternion,FixedString64,float)}</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Label3D(float3 position, quaternion rotation, ref FixedString64 text, float size, Color color)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">float3</span></td>
+        <td><span class="parametername">position</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">quaternion</span></td>
+        <td><span class="parametername">rotation</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">FixedString64</span></td>
+        <td><span class="parametername">text</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><span class="parametername">size</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">Color</span></td>
+        <td><span class="parametername">color</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Drawing_CommandBuilder_Label3D_" data-uid="Drawing.CommandBuilder.Label3D*"></a>
+  <h4 id="Drawing_CommandBuilder_Label3D_float3_quaternion_FixedString64__System_Single_Drawing_LabelAlignment_" data-uid="Drawing.CommandBuilder.Label3D(float3,quaternion,FixedString64@,System.Single,Drawing.LabelAlignment)">Label3D(float3, quaternion, ref FixedString64, Single, LabelAlignment)</h4>
+  <div class="markdown level1 summary"><p>\copydocref{Label3D(float3,quaternion,FixedString32,float,LabelAlignment)}</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Label3D(float3 position, quaternion rotation, ref FixedString64 text, float size, LabelAlignment alignment)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">float3</span></td>
+        <td><span class="parametername">position</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">quaternion</span></td>
+        <td><span class="parametername">rotation</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">FixedString64</span></td>
+        <td><span class="parametername">text</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><span class="parametername">size</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Drawing.LabelAlignment.html">LabelAlignment</a></td>
+        <td><span class="parametername">alignment</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Drawing_CommandBuilder_Label3D_" data-uid="Drawing.CommandBuilder.Label3D*"></a>
+  <h4 id="Drawing_CommandBuilder_Label3D_float3_quaternion_FixedString64__System_Single_Drawing_LabelAlignment_Color_" data-uid="Drawing.CommandBuilder.Label3D(float3,quaternion,FixedString64@,System.Single,Drawing.LabelAlignment,Color)">Label3D(float3, quaternion, ref FixedString64, Single, LabelAlignment, Color)</h4>
+  <div class="markdown level1 summary"><p>\copydocref{Label3D(float3,quaternion,FixedString64,float,LabelAlignment)}</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Label3D(float3 position, quaternion rotation, ref FixedString64 text, float size, LabelAlignment alignment, Color color)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">float3</span></td>
+        <td><span class="parametername">position</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">quaternion</span></td>
+        <td><span class="parametername">rotation</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">FixedString64</span></td>
+        <td><span class="parametername">text</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><span class="parametername">size</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Drawing.LabelAlignment.html">LabelAlignment</a></td>
+        <td><span class="parametername">alignment</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">Color</span></td>
+        <td><span class="parametername">color</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Drawing_CommandBuilder_Label3D_" data-uid="Drawing.CommandBuilder.Label3D*"></a>
+  <h4 id="Drawing_CommandBuilder_Label3D_float3_quaternion_System_String_System_Single_" data-uid="Drawing.CommandBuilder.Label3D(float3,quaternion,System.String,System.Single)">Label3D(float3, quaternion, String, Single)</h4>
+  <div class="markdown level1 summary"><p>Draws a label in 3D space.</p>
+<p>The default alignment is <a class="xref" href="Drawing.LabelAlignment.html#Drawing_LabelAlignment_MiddleLeft">MiddleLeft</a>.</p>
+<pre><code>Draw.Label3D(new float3(0.2f, -1f, 0.2f), Quaternion.Euler(45, -110, -90), &quot;Label&quot;, 1, LabelAlignment.Center, color);</code></pre>
+<p>[Open online documentation to see images]</p>
+<p>See: Label3D(float3,quaternion,string,float,LabelAlignment)</p>
+<p>Note: Only ASCII is supported since the built-in font texture only includes ASCII. Other characters will be rendered as question marks (?).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Label3D(float3 position, quaternion rotation, string text, float size)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">float3</span></td>
+        <td><span class="parametername">position</span></td>
+        <td><p>Position in 3D space.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">quaternion</span></td>
+        <td><span class="parametername">rotation</span></td>
+        <td><p>Rotation in 3D space.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">text</span></td>
+        <td><p>Text to display.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><span class="parametername">size</span></td>
+        <td><p>World size of the text. For large sizes an SDF (signed distance field) font is used and for small sizes a normal font texture is used.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Drawing_CommandBuilder_Label3D_" data-uid="Drawing.CommandBuilder.Label3D*"></a>
+  <h4 id="Drawing_CommandBuilder_Label3D_float3_quaternion_System_String_System_Single_Color_" data-uid="Drawing.CommandBuilder.Label3D(float3,quaternion,System.String,System.Single,Color)">Label3D(float3, quaternion, String, Single, Color)</h4>
+  <div class="markdown level1 summary"><p>\copydocref{Label3D(float3,quaternion,string,float)}</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Label3D(float3 position, quaternion rotation, string text, float size, Color color)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">float3</span></td>
+        <td><span class="parametername">position</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">quaternion</span></td>
+        <td><span class="parametername">rotation</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">text</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><span class="parametername">size</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">Color</span></td>
+        <td><span class="parametername">color</span></td>
+        <td><p>Color of the object</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Drawing_CommandBuilder_Label3D_" data-uid="Drawing.CommandBuilder.Label3D*"></a>
+  <h4 id="Drawing_CommandBuilder_Label3D_float3_quaternion_System_String_System_Single_Drawing_LabelAlignment_" data-uid="Drawing.CommandBuilder.Label3D(float3,quaternion,System.String,System.Single,Drawing.LabelAlignment)">Label3D(float3, quaternion, String, Single, LabelAlignment)</h4>
+  <div class="markdown level1 summary"><p>Draws a label in 3D space.</p>
+<pre><code>Draw.Label3D(new float3(0.2f, -1f, 0.2f), Quaternion.Euler(45, -110, -90), &quot;Label&quot;, 1, LabelAlignment.Center, color);</code></pre>
+<p>[Open online documentation to see images]</p>
+<p>See: Label3D(float3,quaternion,string,float)</p>
+<p>Note: Only ASCII is supported since the built-in font texture only includes ASCII. Other characters will be rendered as question marks (?).</p>
+<p>Note: This method cannot be used in burst since managed strings are not suppported in burst. However, you can use the separate Label3D overload which takes a FixedString.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Label3D(float3 position, quaternion rotation, string text, float size, LabelAlignment alignment)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">float3</span></td>
+        <td><span class="parametername">position</span></td>
+        <td><p>Position in 3D space.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">quaternion</span></td>
+        <td><span class="parametername">rotation</span></td>
+        <td><p>Rotation in 3D space.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">text</span></td>
+        <td><p>Text to display.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><span class="parametername">size</span></td>
+        <td><p>World size of the text. For large sizes an SDF (signed distance field) font is used and for small sizes a normal font texture is used.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Drawing.LabelAlignment.html">LabelAlignment</a></td>
+        <td><span class="parametername">alignment</span></td>
+        <td><p>How to align the text relative to the given position.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Drawing_CommandBuilder_Label3D_" data-uid="Drawing.CommandBuilder.Label3D*"></a>
+  <h4 id="Drawing_CommandBuilder_Label3D_float3_quaternion_System_String_System_Single_Drawing_LabelAlignment_Color_" data-uid="Drawing.CommandBuilder.Label3D(float3,quaternion,System.String,System.Single,Drawing.LabelAlignment,Color)">Label3D(float3, quaternion, String, Single, LabelAlignment, Color)</h4>
+  <div class="markdown level1 summary"><p>\copydocref{Label3D(float3,quaternion,string,float,LabelAlignment)}</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Label3D(float3 position, quaternion rotation, string text, float size, LabelAlignment alignment, Color color)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">float3</span></td>
+        <td><span class="parametername">position</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">quaternion</span></td>
+        <td><span class="parametername">rotation</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">text</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><span class="parametername">size</span></td>
         <td></td>
       </tr>
       <tr>
@@ -2253,7 +4107,7 @@ See: <a class="xref" href="Drawing.CommandBuilder.html#Drawing_CommandBuilder_Wi
   
   <a id="Drawing_CommandBuilder_Line_" data-uid="Drawing.CommandBuilder.Line*"></a>
   <h4 id="Drawing_CommandBuilder_Line_float3_float3_Color_" data-uid="Drawing.CommandBuilder.Line(float3,float3,Color)">Line(float3, float3, Color)</h4>
-  <div class="markdown level1 summary"><p>\copydoc Line(float3,float3)</p>
+  <div class="markdown level1 summary"><p>\copydocref{Line(float3,float3)}</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -2413,7 +4267,7 @@ See: <a class="xref" href="Drawing.CommandBuilder.html#Drawing_CommandBuilder_Wi
   
   <a id="Drawing_CommandBuilder_PlaneWithNormal_" data-uid="Drawing.CommandBuilder.PlaneWithNormal*"></a>
   <h4 id="Drawing_CommandBuilder_PlaneWithNormal_float3_float3_float2_Color_" data-uid="Drawing.CommandBuilder.PlaneWithNormal(float3,float3,float2,Color)">PlaneWithNormal(float3, float3, float2, Color)</h4>
-  <div class="markdown level1 summary"><p>\copydoc PlaneWithNormal(float3,float3,float2)</p>
+  <div class="markdown level1 summary"><p>\copydocref{PlaneWithNormal(float3,float3,float2)}</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -2456,7 +4310,7 @@ See: <a class="xref" href="Drawing.CommandBuilder.html#Drawing_CommandBuilder_Wi
   
   
   <a id="Drawing_CommandBuilder_PlaneWithNormal_" data-uid="Drawing.CommandBuilder.PlaneWithNormal*"></a>
-  <h4 id="Drawing_CommandBuilder_PlaneWithNormal_float3_Quaternion_float2_" data-uid="Drawing.CommandBuilder.PlaneWithNormal(float3,Quaternion,float2)">PlaneWithNormal(float3, Quaternion, float2)</h4>
+  <h4 id="Drawing_CommandBuilder_PlaneWithNormal_float3_quaternion_float2_" data-uid="Drawing.CommandBuilder.PlaneWithNormal(float3,quaternion,float2)">PlaneWithNormal(float3, quaternion, float2)</h4>
   <div class="markdown level1 summary"><p>Draws a plane and a visualization of its normal.</p>
 <pre><code>Draw.PlaneWithNormal(new float3(0, 0, 0), new float3(0, 1, 0), 1.0f, color);</code></pre>
 <p>[Open online documentation to see images]</p>
@@ -2464,7 +4318,7 @@ See: <a class="xref" href="Drawing.CommandBuilder.html#Drawing_CommandBuilder_Wi
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void PlaneWithNormal(float3 center, Quaternion rotation, float2 size)</code></pre>
+    <pre><code class="lang-csharp hljs">public void PlaneWithNormal(float3 center, quaternion rotation, float2 size)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -2483,7 +4337,7 @@ See: <a class="xref" href="Drawing.CommandBuilder.html#Drawing_CommandBuilder_Wi
 </td>
       </tr>
       <tr>
-        <td><span class="xref">Quaternion</span></td>
+        <td><span class="xref">quaternion</span></td>
         <td><span class="parametername">rotation</span></td>
         <td><p>Rotation of the plane. The plane will lie in the XZ plane with respect to the rotation.</p>
 </td>
@@ -2499,13 +4353,13 @@ See: <a class="xref" href="Drawing.CommandBuilder.html#Drawing_CommandBuilder_Wi
   
   
   <a id="Drawing_CommandBuilder_PlaneWithNormal_" data-uid="Drawing.CommandBuilder.PlaneWithNormal*"></a>
-  <h4 id="Drawing_CommandBuilder_PlaneWithNormal_float3_Quaternion_float2_Color_" data-uid="Drawing.CommandBuilder.PlaneWithNormal(float3,Quaternion,float2,Color)">PlaneWithNormal(float3, Quaternion, float2, Color)</h4>
-  <div class="markdown level1 summary"><p>\copydoc PlaneWithNormal(float3,Quaternion,float2)</p>
+  <h4 id="Drawing_CommandBuilder_PlaneWithNormal_float3_quaternion_float2_Color_" data-uid="Drawing.CommandBuilder.PlaneWithNormal(float3,quaternion,float2,Color)">PlaneWithNormal(float3, quaternion, float2, Color)</h4>
+  <div class="markdown level1 summary"><p>\copydocref{PlaneWithNormal(float3,quaternion,float2)}</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void PlaneWithNormal(float3 center, Quaternion rotation, float2 size, Color color)</code></pre>
+    <pre><code class="lang-csharp hljs">public void PlaneWithNormal(float3 center, quaternion rotation, float2 size, Color color)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -2523,7 +4377,7 @@ See: <a class="xref" href="Drawing.CommandBuilder.html#Drawing_CommandBuilder_Wi
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">Quaternion</span></td>
+        <td><span class="xref">quaternion</span></td>
         <td><span class="parametername">rotation</span></td>
         <td></td>
       </tr>
@@ -2544,7 +4398,7 @@ See: <a class="xref" href="Drawing.CommandBuilder.html#Drawing_CommandBuilder_Wi
   
   <a id="Drawing_CommandBuilder_Polyline_" data-uid="Drawing.CommandBuilder.Polyline*"></a>
   <h4 id="Drawing_CommandBuilder_Polyline_float3___Color_" data-uid="Drawing.CommandBuilder.Polyline(float3[],Color)">Polyline(float3[], Color)</h4>
-  <div class="markdown level1 summary"><p>\copydoc Polyline(float3[],bool)</p>
+  <div class="markdown level1 summary"><p>\copydocref{Polyline(float3[],bool)}</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -2616,7 +4470,7 @@ Draw.Polyline(new [] { new Vector3(0, 0, 0), new Vector3(1, 0, 0), new Vector3(1
   
   <a id="Drawing_CommandBuilder_Polyline_" data-uid="Drawing.CommandBuilder.Polyline*"></a>
   <h4 id="Drawing_CommandBuilder_Polyline_float3___System_Boolean_Color_" data-uid="Drawing.CommandBuilder.Polyline(float3[],System.Boolean,Color)">Polyline(float3[], Boolean, Color)</h4>
-  <div class="markdown level1 summary"><p>\copydoc Polyline(float3[],bool)</p>
+  <div class="markdown level1 summary"><p>\copydocref{Polyline(float3[],bool)}</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -2655,7 +4509,8 @@ Draw.Polyline(new [] { new Vector3(0, 0, 0), new Vector3(1, 0, 0), new Vector3(1
   
   <a id="Drawing_CommandBuilder_Polyline_" data-uid="Drawing.CommandBuilder.Polyline*"></a>
   <h4 id="Drawing_CommandBuilder_Polyline_NativeArray_float3__Color_" data-uid="Drawing.CommandBuilder.Polyline(NativeArray{float3},Color)">Polyline(NativeArray&lt;float3&gt;, Color)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>\copydocref{Polyline(NativeArray&lt;float3&gt;,bool)}</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -2679,7 +4534,8 @@ Draw.Polyline(new [] { new Vector3(0, 0, 0), new Vector3(1, 0, 0), new Vector3(1
       <tr>
         <td><span class="xref">Color</span></td>
         <td><span class="parametername">color</span></td>
-        <td></td>
+        <td><p>Color of the object</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -2725,7 +4581,8 @@ Draw.Polyline(new [] { new Vector3(0, 0, 0), new Vector3(1, 0, 0), new Vector3(1
   
   <a id="Drawing_CommandBuilder_Polyline_" data-uid="Drawing.CommandBuilder.Polyline*"></a>
   <h4 id="Drawing_CommandBuilder_Polyline_NativeArray_float3__System_Boolean_Color_" data-uid="Drawing.CommandBuilder.Polyline(NativeArray{float3},System.Boolean,Color)">Polyline(NativeArray&lt;float3&gt;, Boolean, Color)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>\copydocref{Polyline(NativeArray&lt;float3&gt;,bool)}</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -2754,7 +4611,8 @@ Draw.Polyline(new [] { new Vector3(0, 0, 0), new Vector3(1, 0, 0), new Vector3(1
       <tr>
         <td><span class="xref">Color</span></td>
         <td><span class="parametername">color</span></td>
-        <td></td>
+        <td><p>Color of the object</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -2762,7 +4620,8 @@ Draw.Polyline(new [] { new Vector3(0, 0, 0), new Vector3(1, 0, 0), new Vector3(1
   
   <a id="Drawing_CommandBuilder_Polyline_" data-uid="Drawing.CommandBuilder.Polyline*"></a>
   <h4 id="Drawing_CommandBuilder_Polyline_System_Collections_Generic_List_Vector3__Color_" data-uid="Drawing.CommandBuilder.Polyline(System.Collections.Generic.List{Vector3},Color)">Polyline(List&lt;Vector3&gt;, Color)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>\copydocref{Polyline(List&lt;Vector3&gt;,bool)}</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -2786,7 +4645,8 @@ Draw.Polyline(new [] { new Vector3(0, 0, 0), new Vector3(1, 0, 0), new Vector3(1
       <tr>
         <td><span class="xref">Color</span></td>
         <td><span class="parametername">color</span></td>
-        <td></td>
+        <td><p>Color of the object</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -2832,7 +4692,8 @@ Draw.Polyline(new [] { new Vector3(0, 0, 0), new Vector3(1, 0, 0), new Vector3(1
   
   <a id="Drawing_CommandBuilder_Polyline_" data-uid="Drawing.CommandBuilder.Polyline*"></a>
   <h4 id="Drawing_CommandBuilder_Polyline_System_Collections_Generic_List_Vector3__System_Boolean_Color_" data-uid="Drawing.CommandBuilder.Polyline(System.Collections.Generic.List{Vector3},System.Boolean,Color)">Polyline(List&lt;Vector3&gt;, Boolean, Color)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>\copydocref{Polyline(List&lt;Vector3&gt;,bool)}</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -2861,7 +4722,8 @@ Draw.Polyline(new [] { new Vector3(0, 0, 0), new Vector3(1, 0, 0), new Vector3(1
       <tr>
         <td><span class="xref">Color</span></td>
         <td><span class="parametername">color</span></td>
-        <td></td>
+        <td><p>Color of the object</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -2869,7 +4731,7 @@ Draw.Polyline(new [] { new Vector3(0, 0, 0), new Vector3(1, 0, 0), new Vector3(1
   
   <a id="Drawing_CommandBuilder_Polyline_" data-uid="Drawing.CommandBuilder.Polyline*"></a>
   <h4 id="Drawing_CommandBuilder_Polyline_Vector3___Color_" data-uid="Drawing.CommandBuilder.Polyline(Vector3[],Color)">Polyline(Vector3[], Color)</h4>
-  <div class="markdown level1 summary"><p>\copydoc Polyline(Vector3[],bool)</p>
+  <div class="markdown level1 summary"><p>\copydocref{Polyline(Vector3[],bool)}</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -2941,7 +4803,7 @@ Draw.Polyline(new [] { new Vector3(0, 0, 0), new Vector3(1, 0, 0), new Vector3(1
   
   <a id="Drawing_CommandBuilder_Polyline_" data-uid="Drawing.CommandBuilder.Polyline*"></a>
   <h4 id="Drawing_CommandBuilder_Polyline_Vector3___System_Boolean_Color_" data-uid="Drawing.CommandBuilder.Polyline(Vector3[],System.Boolean,Color)">Polyline(Vector3[], Boolean, Color)</h4>
-  <div class="markdown level1 summary"><p>\copydoc Polyline(Vector3[],bool)</p>
+  <div class="markdown level1 summary"><p>\copydocref{Polyline(Vector3[],bool)}</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -3287,7 +5149,7 @@ The ray will end at origin + direction.</p>
   
   <a id="Drawing_CommandBuilder_Ray_" data-uid="Drawing.CommandBuilder.Ray*"></a>
   <h4 id="Drawing_CommandBuilder_Ray_float3_float3_Color_" data-uid="Drawing.CommandBuilder.Ray(float3,float3,Color)">Ray(float3, float3, Color)</h4>
-  <div class="markdown level1 summary"><p>\copydoc Ray(float3,float3)</p>
+  <div class="markdown level1 summary"><p>\copydocref{Ray(float3,float3)}</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -3360,7 +5222,7 @@ The ray will end at origin + direction.</p>
   
   <a id="Drawing_CommandBuilder_Ray_" data-uid="Drawing.CommandBuilder.Ray*"></a>
   <h4 id="Drawing_CommandBuilder_Ray_Ray_System_Single_Color_" data-uid="Drawing.CommandBuilder.Ray(Ray,System.Single,Color)">Ray(Ray, Single, Color)</h4>
-  <div class="markdown level1 summary"><p>\copydoc Ray(Ray,float)</p>
+  <div class="markdown level1 summary"><p>\copydocref{Ray(Ray,float)}</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -3391,6 +5253,101 @@ The ray will end at origin + direction.</p>
         <td><span class="xref">Color</span></td>
         <td><span class="parametername">color</span></td>
         <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Drawing_CommandBuilder_SolidArc_" data-uid="Drawing.CommandBuilder.SolidArc*"></a>
+  <h4 id="Drawing_CommandBuilder_SolidArc_float3_float3_float3_" data-uid="Drawing.CommandBuilder.SolidArc(float3,float3,float3)">SolidArc(float3, float3, float3)</h4>
+  <div class="markdown level1 summary"><p>Draws a solid arc between two points.</p>
+<p>The rendered arc is the shortest arc between the two points.
+The radius of the arc will be equal to the distance between center and start.</p>
+<p>[Open online documentation to see images]</p>
+<pre><code>float a1 = Mathf.PI*0.9f;
+float a2 = Mathf.PI*0.1f;
+var arcStart = new float3(Mathf.Cos(a1), 0, Mathf.Sin(a1));
+var arcEnd = new float3(Mathf.Cos(a2), 0, Mathf.Sin(a2));
+Draw.SolidArc(new float3(0, 0, 0), arcStart, arcEnd, color);</code></pre>
+<p>See: \reflink{SolidCircleXZ(float3,float,float,float)}
+See: \reflink{SolidCircleXY(float3,float,float,float)}</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SolidArc(float3 center, float3 start, float3 end)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">float3</span></td>
+        <td><span class="parametername">center</span></td>
+        <td><p>Center of the imaginary circle that the arc is part of.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">float3</span></td>
+        <td><span class="parametername">start</span></td>
+        <td><p>Starting point of the arc.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">float3</span></td>
+        <td><span class="parametername">end</span></td>
+        <td><p>End point of the arc.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Drawing_CommandBuilder_SolidArc_" data-uid="Drawing.CommandBuilder.SolidArc*"></a>
+  <h4 id="Drawing_CommandBuilder_SolidArc_float3_float3_float3_Color_" data-uid="Drawing.CommandBuilder.SolidArc(float3,float3,float3,Color)">SolidArc(float3, float3, float3, Color)</h4>
+  <div class="markdown level1 summary"><p>\copydocref{SolidArc(float3,float3,float3)}</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SolidArc(float3 center, float3 start, float3 end, Color color)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">float3</span></td>
+        <td><span class="parametername">center</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">float3</span></td>
+        <td><span class="parametername">start</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">float3</span></td>
+        <td><span class="parametername">end</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">Color</span></td>
+        <td><span class="parametername">color</span></td>
+        <td><p>Color of the object</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -3429,7 +5386,7 @@ The ray will end at origin + direction.</p>
   
   <a id="Drawing_CommandBuilder_SolidBox_" data-uid="Drawing.CommandBuilder.SolidBox*"></a>
   <h4 id="Drawing_CommandBuilder_SolidBox_Bounds_Color_" data-uid="Drawing.CommandBuilder.SolidBox(Bounds,Color)">SolidBox(Bounds, Color)</h4>
-  <div class="markdown level1 summary"><p>\copydoc SolidBox(Bounds)</p>
+  <div class="markdown level1 summary"><p>\copydocref{SolidBox(Bounds)}</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -3500,7 +5457,7 @@ The ray will end at origin + direction.</p>
   
   <a id="Drawing_CommandBuilder_SolidBox_" data-uid="Drawing.CommandBuilder.SolidBox*"></a>
   <h4 id="Drawing_CommandBuilder_SolidBox_float3_float3_Color_" data-uid="Drawing.CommandBuilder.SolidBox(float3,float3,Color)">SolidBox(float3, float3, Color)</h4>
-  <div class="markdown level1 summary"><p>\copydoc SolidBox(float3,float3)</p>
+  <div class="markdown level1 summary"><p>\copydocref{SolidBox(float3,float3)}</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -3538,7 +5495,7 @@ The ray will end at origin + direction.</p>
   
   
   <a id="Drawing_CommandBuilder_SolidBox_" data-uid="Drawing.CommandBuilder.SolidBox*"></a>
-  <h4 id="Drawing_CommandBuilder_SolidBox_float3_Quaternion_float3_" data-uid="Drawing.CommandBuilder.SolidBox(float3,Quaternion,float3)">SolidBox(float3, Quaternion, float3)</h4>
+  <h4 id="Drawing_CommandBuilder_SolidBox_float3_quaternion_float3_" data-uid="Drawing.CommandBuilder.SolidBox(float3,quaternion,float3)">SolidBox(float3, quaternion, float3)</h4>
   <div class="markdown level1 summary"><p>Draws a solid box.</p>
 <pre><code>Draw.SolidBox(new float3(0, 0, 0), new float3(1, 1, 1), color);</code></pre>
 <p>[Open online documentation to see images]</p>
@@ -3546,7 +5503,7 @@ The ray will end at origin + direction.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void SolidBox(float3 center, Quaternion rotation, float3 size)</code></pre>
+    <pre><code class="lang-csharp hljs">public void SolidBox(float3 center, quaternion rotation, float3 size)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -3565,7 +5522,7 @@ The ray will end at origin + direction.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">Quaternion</span></td>
+        <td><span class="xref">quaternion</span></td>
         <td><span class="parametername">rotation</span></td>
         <td><p>Rotation of the box</p>
 </td>
@@ -3581,13 +5538,13 @@ The ray will end at origin + direction.</p>
   
   
   <a id="Drawing_CommandBuilder_SolidBox_" data-uid="Drawing.CommandBuilder.SolidBox*"></a>
-  <h4 id="Drawing_CommandBuilder_SolidBox_float3_Quaternion_float3_Color_" data-uid="Drawing.CommandBuilder.SolidBox(float3,Quaternion,float3,Color)">SolidBox(float3, Quaternion, float3, Color)</h4>
-  <div class="markdown level1 summary"><p>\copydoc SolidBox(float3,Quaternion,float3)</p>
+  <h4 id="Drawing_CommandBuilder_SolidBox_float3_quaternion_float3_Color_" data-uid="Drawing.CommandBuilder.SolidBox(float3,quaternion,float3,Color)">SolidBox(float3, quaternion, float3, Color)</h4>
+  <div class="markdown level1 summary"><p>\copydocref{SolidBox(float3,quaternion,float3)}</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void SolidBox(float3 center, Quaternion rotation, float3 size, Color color)</code></pre>
+    <pre><code class="lang-csharp hljs">public void SolidBox(float3 center, quaternion rotation, float3 size, Color color)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -3605,13 +5562,376 @@ The ray will end at origin + direction.</p>
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">Quaternion</span></td>
+        <td><span class="xref">quaternion</span></td>
         <td><span class="parametername">rotation</span></td>
         <td></td>
       </tr>
       <tr>
         <td><span class="xref">float3</span></td>
         <td><span class="parametername">size</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">Color</span></td>
+        <td><span class="parametername">color</span></td>
+        <td><p>Color of the object</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Drawing_CommandBuilder_SolidCircle_" data-uid="Drawing.CommandBuilder.SolidCircle*"></a>
+  <h4 id="Drawing_CommandBuilder_SolidCircle_float3_float3_System_Single_" data-uid="Drawing.CommandBuilder.SolidCircle(float3,float3,System.Single)">SolidCircle(float3, float3, Single)</h4>
+  <div class="markdown level1 summary"><p>Draws a disc.</p>
+<p>[Open online documentation to see images]</p>
+<p>Note: This overload does not allow you to draw an arc. For that purpose use <a class="xref" href="Drawing.CommandBuilder.html#Drawing_CommandBuilder_SolidArc_float3_float3_float3_">SolidArc(float3, float3, float3)</a>, <a class="xref" href="Drawing.CommandBuilder.html#Drawing_CommandBuilder_SolidCircleXY_float3_System_Single_System_Single_System_Single_">SolidCircleXY(float3, Single, Single, Single)</a> or <a class="xref" href="Drawing.CommandBuilder.html#Drawing_CommandBuilder_SolidCircleXZ_float3_System_Single_System_Single_System_Single_">SolidCircleXZ(float3, Single, Single, Single)</a> instead.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SolidCircle(float3 center, float3 normal, float radius)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">float3</span></td>
+        <td><span class="parametername">center</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">float3</span></td>
+        <td><span class="parametername">normal</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><span class="parametername">radius</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Drawing_CommandBuilder_SolidCircle_" data-uid="Drawing.CommandBuilder.SolidCircle*"></a>
+  <h4 id="Drawing_CommandBuilder_SolidCircle_float3_float3_System_Single_Color_" data-uid="Drawing.CommandBuilder.SolidCircle(float3,float3,System.Single,Color)">SolidCircle(float3, float3, Single, Color)</h4>
+  <div class="markdown level1 summary"><p>\copydocref{SolidCircle(float3,float3,float)}</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SolidCircle(float3 center, float3 normal, float radius, Color color)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">float3</span></td>
+        <td><span class="parametername">center</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">float3</span></td>
+        <td><span class="parametername">normal</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><span class="parametername">radius</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">Color</span></td>
+        <td><span class="parametername">color</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Drawing_CommandBuilder_SolidCircleXY_" data-uid="Drawing.CommandBuilder.SolidCircleXY*"></a>
+  <h4 id="Drawing_CommandBuilder_SolidCircleXY_float3_System_Single_Color_" data-uid="Drawing.CommandBuilder.SolidCircleXY(float3,System.Single,Color)">SolidCircleXY(float3, Single, Color)</h4>
+  <div class="markdown level1 summary"><p>\copydocref{SolidCircleXY(float3,float,float,float)}</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SolidCircleXY(float3 center, float radius, Color color)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">float3</span></td>
+        <td><span class="parametername">center</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><span class="parametername">radius</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">Color</span></td>
+        <td><span class="parametername">color</span></td>
+        <td><p>Color of the object</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Drawing_CommandBuilder_SolidCircleXY_" data-uid="Drawing.CommandBuilder.SolidCircleXY*"></a>
+  <h4 id="Drawing_CommandBuilder_SolidCircleXY_float3_System_Single_System_Single_System_Single_" data-uid="Drawing.CommandBuilder.SolidCircleXY(float3,System.Single,System.Single,System.Single)">SolidCircleXY(float3, Single, Single, Single)</h4>
+  <div class="markdown level1 summary"><p>Draws a disc in the XY plane.</p>
+<p>You can draw an arc by supplying the startAngle and endAngle parameters.</p>
+<p>[Open online documentation to see images]</p>
+<p>See: \reflink{SolidCircle(float3,float3,float)}
+See: \reflink{SolidCircleXZ(float3,float,float,float)}
+See: \reflink{SolidArc(float3,float3,float3)}</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SolidCircleXY(float3 center, float radius, float startAngle = 0F, float endAngle = default(float))</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">float3</span></td>
+        <td><span class="parametername">center</span></td>
+        <td><p>Center of the disc or solid arc.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><span class="parametername">radius</span></td>
+        <td><p>Radius of the disc or solid arc.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><span class="parametername">startAngle</span></td>
+        <td><p>Starting angle in radians. 0 corrsponds to the positive X axis.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><span class="parametername">endAngle</span></td>
+        <td><p>End angle in radians.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Drawing_CommandBuilder_SolidCircleXY_" data-uid="Drawing.CommandBuilder.SolidCircleXY*"></a>
+  <h4 id="Drawing_CommandBuilder_SolidCircleXY_float3_System_Single_System_Single_System_Single_Color_" data-uid="Drawing.CommandBuilder.SolidCircleXY(float3,System.Single,System.Single,System.Single,Color)">SolidCircleXY(float3, Single, Single, Single, Color)</h4>
+  <div class="markdown level1 summary"><p>\copydocref{SolidCircleXY(float3,float,float,float)}</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SolidCircleXY(float3 center, float radius, float startAngle, float endAngle, Color color)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">float3</span></td>
+        <td><span class="parametername">center</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><span class="parametername">radius</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><span class="parametername">startAngle</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><span class="parametername">endAngle</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">Color</span></td>
+        <td><span class="parametername">color</span></td>
+        <td><p>Color of the object</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Drawing_CommandBuilder_SolidCircleXZ_" data-uid="Drawing.CommandBuilder.SolidCircleXZ*"></a>
+  <h4 id="Drawing_CommandBuilder_SolidCircleXZ_float3_System_Single_Color_" data-uid="Drawing.CommandBuilder.SolidCircleXZ(float3,System.Single,Color)">SolidCircleXZ(float3, Single, Color)</h4>
+  <div class="markdown level1 summary"><p>\copydocref{SolidCircleXZ(float3,float,float,float)}</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SolidCircleXZ(float3 center, float radius, Color color)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">float3</span></td>
+        <td><span class="parametername">center</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><span class="parametername">radius</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">Color</span></td>
+        <td><span class="parametername">color</span></td>
+        <td><p>Color of the object</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Drawing_CommandBuilder_SolidCircleXZ_" data-uid="Drawing.CommandBuilder.SolidCircleXZ*"></a>
+  <h4 id="Drawing_CommandBuilder_SolidCircleXZ_float3_System_Single_System_Single_System_Single_" data-uid="Drawing.CommandBuilder.SolidCircleXZ(float3,System.Single,System.Single,System.Single)">SolidCircleXZ(float3, Single, Single, Single)</h4>
+  <div class="markdown level1 summary"><p>Draws a disc in the XZ plane.</p>
+<p>You can draw an arc by supplying the startAngle and endAngle parameters.</p>
+<p>[Open online documentation to see images]</p>
+<p>See: \reflink{SolidCircle(float3,float3,float)}
+See: \reflink{SolidCircleXY(float3,float,float,float)}
+See: \reflink{SolidArc(float3,float3,float3)}</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SolidCircleXZ(float3 center, float radius, float startAngle = 0F, float endAngle = default(float))</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">float3</span></td>
+        <td><span class="parametername">center</span></td>
+        <td><p>Center of the disc or solid arc.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><span class="parametername">radius</span></td>
+        <td><p>Radius of the disc or solid arc.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><span class="parametername">startAngle</span></td>
+        <td><p>Starting angle in radians. 0 corrsponds to the positive X axis.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><span class="parametername">endAngle</span></td>
+        <td><p>End angle in radians.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Drawing_CommandBuilder_SolidCircleXZ_" data-uid="Drawing.CommandBuilder.SolidCircleXZ*"></a>
+  <h4 id="Drawing_CommandBuilder_SolidCircleXZ_float3_System_Single_System_Single_System_Single_Color_" data-uid="Drawing.CommandBuilder.SolidCircleXZ(float3,System.Single,System.Single,System.Single,Color)">SolidCircleXZ(float3, Single, Single, Single, Color)</h4>
+  <div class="markdown level1 summary"><p>\copydocref{SolidCircleXZ(float3,float,float,float)}</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SolidCircleXZ(float3 center, float radius, float startAngle, float endAngle, Color color)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">float3</span></td>
+        <td><span class="parametername">center</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><span class="parametername">radius</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><span class="parametername">startAngle</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><span class="parametername">endAngle</span></td>
         <td></td>
       </tr>
       <tr>
@@ -3653,7 +5973,7 @@ The ray will end at origin + direction.</p>
   
   <a id="Drawing_CommandBuilder_SolidMesh_" data-uid="Drawing.CommandBuilder.SolidMesh*"></a>
   <h4 id="Drawing_CommandBuilder_SolidMesh_Mesh_Color_" data-uid="Drawing.CommandBuilder.SolidMesh(Mesh,Color)">SolidMesh(Mesh, Color)</h4>
-  <div class="markdown level1 summary"><p>\copydoc SolidMesh(Mesh)</p>
+  <div class="markdown level1 summary"><p>\copydocref{SolidMesh(Mesh)}</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -3819,7 +6139,7 @@ TODO: Are matrices handled?</p>
   
   <a id="Drawing_CommandBuilder_SolidPlane_" data-uid="Drawing.CommandBuilder.SolidPlane*"></a>
   <h4 id="Drawing_CommandBuilder_SolidPlane_float3_float3_float2_Color_" data-uid="Drawing.CommandBuilder.SolidPlane(float3,float3,float2,Color)">SolidPlane(float3, float3, float2, Color)</h4>
-  <div class="markdown level1 summary"><p>\copydoc SolidPlane(float3,float3,float2)</p>
+  <div class="markdown level1 summary"><p>\copydocref{SolidPlane(float3,float3,float2)}</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -3862,7 +6182,7 @@ TODO: Are matrices handled?</p>
   
   
   <a id="Drawing_CommandBuilder_SolidPlane_" data-uid="Drawing.CommandBuilder.SolidPlane*"></a>
-  <h4 id="Drawing_CommandBuilder_SolidPlane_float3_Quaternion_float2_" data-uid="Drawing.CommandBuilder.SolidPlane(float3,Quaternion,float2)">SolidPlane(float3, Quaternion, float2)</h4>
+  <h4 id="Drawing_CommandBuilder_SolidPlane_float3_quaternion_float2_" data-uid="Drawing.CommandBuilder.SolidPlane(float3,quaternion,float2)">SolidPlane(float3, quaternion, float2)</h4>
   <div class="markdown level1 summary"><p>Draws a solid plane.</p>
 <p>The plane will lie in the XZ plane with respect to the rotation.</p>
 <pre><code>Draw.SolidPlane(new float3(0, 0, 0), new float3(0, 1, 0), 1.0f, color);</code></pre>
@@ -3871,7 +6191,7 @@ TODO: Are matrices handled?</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void SolidPlane(float3 center, Quaternion rotation, float2 size)</code></pre>
+    <pre><code class="lang-csharp hljs">public void SolidPlane(float3 center, quaternion rotation, float2 size)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -3890,7 +6210,7 @@ TODO: Are matrices handled?</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">Quaternion</span></td>
+        <td><span class="xref">quaternion</span></td>
         <td><span class="parametername">rotation</span></td>
         <td></td>
       </tr>
@@ -3905,13 +6225,13 @@ TODO: Are matrices handled?</p>
   
   
   <a id="Drawing_CommandBuilder_SolidPlane_" data-uid="Drawing.CommandBuilder.SolidPlane*"></a>
-  <h4 id="Drawing_CommandBuilder_SolidPlane_float3_Quaternion_float2_Color_" data-uid="Drawing.CommandBuilder.SolidPlane(float3,Quaternion,float2,Color)">SolidPlane(float3, Quaternion, float2, Color)</h4>
-  <div class="markdown level1 summary"><p>\copydoc SolidPlane(float3,Quaternion,float2)</p>
+  <h4 id="Drawing_CommandBuilder_SolidPlane_float3_quaternion_float2_Color_" data-uid="Drawing.CommandBuilder.SolidPlane(float3,quaternion,float2,Color)">SolidPlane(float3, quaternion, float2, Color)</h4>
+  <div class="markdown level1 summary"><p>\copydocref{SolidPlane(float3,quaternion,float2)}</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void SolidPlane(float3 center, Quaternion rotation, float2 size, Color color)</code></pre>
+    <pre><code class="lang-csharp hljs">public void SolidPlane(float3 center, quaternion rotation, float2 size, Color color)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -3929,7 +6249,7 @@ TODO: Are matrices handled?</p>
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">Quaternion</span></td>
+        <td><span class="xref">quaternion</span></td>
         <td><span class="parametername">rotation</span></td>
         <td></td>
       </tr>
@@ -3959,7 +6279,7 @@ This is particularly useful when combined with <a class="xref" href="Drawing.Com
 }</code></pre>
 <p>[Open online documentation to see images]</p>
 <p>See: <a class="xref" href="Drawing.CommandBuilder.html#Drawing_CommandBuilder_WireRectangleXZ_float3_float2_">WireRectangleXZ(float3, float2)</a>
-See: <a class="xref" href="Drawing.CommandBuilder.html#Drawing_CommandBuilder_WireRectangle_float3_Quaternion_float2_">WireRectangle(float3, Quaternion, float2)</a>
+See: <a class="xref" href="Drawing.CommandBuilder.html#Drawing_CommandBuilder_WireRectangle_float3_quaternion_float2_">WireRectangle(float3, quaternion, float2)</a>
 See: <a class="xref" href="Drawing.CommandBuilder.html#Drawing_CommandBuilder_SolidBox_float3_float3_">SolidBox(float3, float3)</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
@@ -3988,7 +6308,7 @@ See: <a class="xref" href="Drawing.CommandBuilder.html#Drawing_CommandBuilder_So
   
   <a id="Drawing_CommandBuilder_SolidRectangle_" data-uid="Drawing.CommandBuilder.SolidRectangle*"></a>
   <h4 id="Drawing_CommandBuilder_SolidRectangle_Rect_Color_" data-uid="Drawing.CommandBuilder.SolidRectangle(Rect,Color)">SolidRectangle(Rect, Color)</h4>
-  <div class="markdown level1 summary"><p>\copydoc SolidRectangle(Rect)</p>
+  <div class="markdown level1 summary"><p>\copydocref{SolidRectangle(Rect)}</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -4008,6 +6328,79 @@ See: <a class="xref" href="Drawing.CommandBuilder.html#Drawing_CommandBuilder_So
       <tr>
         <td><span class="xref">Rect</span></td>
         <td><span class="parametername">rect</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">Color</span></td>
+        <td><span class="parametername">color</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Drawing_CommandBuilder_SphereOutline_" data-uid="Drawing.CommandBuilder.SphereOutline*"></a>
+  <h4 id="Drawing_CommandBuilder_SphereOutline_float3_System_Single_" data-uid="Drawing.CommandBuilder.SphereOutline(float3,System.Single)">SphereOutline(float3, Single)</h4>
+  <div class="markdown level1 summary"><p>Draws a circle outline around a sphere.</p>
+<p>Visually, this is a circle that always faces the camera, and is resized automatically to fit the sphere.</p>
+<p>[Open online documentation to see images]</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SphereOutline(float3 center, float radius)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">float3</span></td>
+        <td><span class="parametername">center</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><span class="parametername">radius</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Drawing_CommandBuilder_SphereOutline_" data-uid="Drawing.CommandBuilder.SphereOutline*"></a>
+  <h4 id="Drawing_CommandBuilder_SphereOutline_float3_System_Single_Color_" data-uid="Drawing.CommandBuilder.SphereOutline(float3,System.Single,Color)">SphereOutline(float3, Single, Color)</h4>
+  <div class="markdown level1 summary"><p>\copydocref{SphereOutline(float3,float)}</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SphereOutline(float3 center, float radius, Color color)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">float3</span></td>
+        <td><span class="parametername">center</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><span class="parametername">radius</span></td>
         <td></td>
       </tr>
       <tr>
@@ -4050,7 +6443,7 @@ See: <a class="xref" href="Drawing.CommandBuilder.html#Drawing_CommandBuilder_So
   
   <a id="Drawing_CommandBuilder_WireBox_" data-uid="Drawing.CommandBuilder.WireBox*"></a>
   <h4 id="Drawing_CommandBuilder_WireBox_Bounds_Color_" data-uid="Drawing.CommandBuilder.WireBox(Bounds,Color)">WireBox(Bounds, Color)</h4>
-  <div class="markdown level1 summary"><p>\copydoc WireBox(Bounds)</p>
+  <div class="markdown level1 summary"><p>\copydocref{WireBox(Bounds)}</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -4119,7 +6512,7 @@ See: <a class="xref" href="Drawing.CommandBuilder.html#Drawing_CommandBuilder_So
   
   <a id="Drawing_CommandBuilder_WireBox_" data-uid="Drawing.CommandBuilder.WireBox*"></a>
   <h4 id="Drawing_CommandBuilder_WireBox_float3_float3_Color_" data-uid="Drawing.CommandBuilder.WireBox(float3,float3,Color)">WireBox(float3, float3, Color)</h4>
-  <div class="markdown level1 summary"><p>\copydoc WireBox(float3,float3)</p>
+  <div class="markdown level1 summary"><p>\copydocref{WireBox(float3,float3)}</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -4157,14 +6550,14 @@ See: <a class="xref" href="Drawing.CommandBuilder.html#Drawing_CommandBuilder_So
   
   
   <a id="Drawing_CommandBuilder_WireBox_" data-uid="Drawing.CommandBuilder.WireBox*"></a>
-  <h4 id="Drawing_CommandBuilder_WireBox_float3_Quaternion_float3_" data-uid="Drawing.CommandBuilder.WireBox(float3,Quaternion,float3)">WireBox(float3, Quaternion, float3)</h4>
+  <h4 id="Drawing_CommandBuilder_WireBox_float3_quaternion_float3_" data-uid="Drawing.CommandBuilder.WireBox(float3,quaternion,float3)">WireBox(float3, quaternion, float3)</h4>
   <div class="markdown level1 summary"><p>Draws the outline of a box.</p>
 <p>[Open online documentation to see images]</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void WireBox(float3 center, Quaternion rotation, float3 size)</code></pre>
+    <pre><code class="lang-csharp hljs">public void WireBox(float3 center, quaternion rotation, float3 size)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -4183,7 +6576,7 @@ See: <a class="xref" href="Drawing.CommandBuilder.html#Drawing_CommandBuilder_So
 </td>
       </tr>
       <tr>
-        <td><span class="xref">Quaternion</span></td>
+        <td><span class="xref">quaternion</span></td>
         <td><span class="parametername">rotation</span></td>
         <td><p>Rotation of the box</p>
 </td>
@@ -4199,13 +6592,13 @@ See: <a class="xref" href="Drawing.CommandBuilder.html#Drawing_CommandBuilder_So
   
   
   <a id="Drawing_CommandBuilder_WireBox_" data-uid="Drawing.CommandBuilder.WireBox*"></a>
-  <h4 id="Drawing_CommandBuilder_WireBox_float3_Quaternion_float3_Color_" data-uid="Drawing.CommandBuilder.WireBox(float3,Quaternion,float3,Color)">WireBox(float3, Quaternion, float3, Color)</h4>
-  <div class="markdown level1 summary"><p>\copydoc WireBox(float3,Quaternion,float3)</p>
+  <h4 id="Drawing_CommandBuilder_WireBox_float3_quaternion_float3_Color_" data-uid="Drawing.CommandBuilder.WireBox(float3,quaternion,float3,Color)">WireBox(float3, quaternion, float3, Color)</h4>
+  <div class="markdown level1 summary"><p>\copydocref{WireBox(float3,quaternion,float3)}</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void WireBox(float3 center, Quaternion rotation, float3 size, Color color)</code></pre>
+    <pre><code class="lang-csharp hljs">public void WireBox(float3 center, quaternion rotation, float3 size, Color color)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -4223,7 +6616,7 @@ See: <a class="xref" href="Drawing.CommandBuilder.html#Drawing_CommandBuilder_So
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">Quaternion</span></td>
+        <td><span class="xref">quaternion</span></td>
         <td><span class="parametername">rotation</span></td>
         <td></td>
       </tr>
@@ -4289,7 +6682,7 @@ Draw.WireCapsule(Vector3.zero, Vector3.one, 0.5f, Color.black);</code></pre>
   
   <a id="Drawing_CommandBuilder_WireCapsule_" data-uid="Drawing.CommandBuilder.WireCapsule*"></a>
   <h4 id="Drawing_CommandBuilder_WireCapsule_float3_float3_System_Single_Color_" data-uid="Drawing.CommandBuilder.WireCapsule(float3,float3,System.Single,Color)">WireCapsule(float3, float3, Single, Color)</h4>
-  <div class="markdown level1 summary"><p>\copydoc WireCapsule(float3,float3,float)</p>
+  <div class="markdown level1 summary"><p>\copydocref{WireCapsule(float3,float3,float)}</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -4383,7 +6776,7 @@ Draw.WireCapsule(Vector3.zero, Vector3.up, 2.0f, 0.5f, Color.black);</code></pre
   
   <a id="Drawing_CommandBuilder_WireCapsule_" data-uid="Drawing.CommandBuilder.WireCapsule*"></a>
   <h4 id="Drawing_CommandBuilder_WireCapsule_float3_float3_System_Single_System_Single_Color_" data-uid="Drawing.CommandBuilder.WireCapsule(float3,float3,System.Single,System.Single,Color)">WireCapsule(float3, float3, Single, Single, Color)</h4>
-  <div class="markdown level1 summary"><p>\copydoc WireCapsule(float3,float3,float,float)</p>
+  <div class="markdown level1 summary"><p>\copydocref{WireCapsule(float3,float3,float,float)}</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -4474,7 +6867,7 @@ Draw.WireCylinder(Vector3.zero, Vector3.one, 0.5f, Color.black);</code></pre>
   
   <a id="Drawing_CommandBuilder_WireCylinder_" data-uid="Drawing.CommandBuilder.WireCylinder*"></a>
   <h4 id="Drawing_CommandBuilder_WireCylinder_float3_float3_System_Single_Color_" data-uid="Drawing.CommandBuilder.WireCylinder(float3,float3,System.Single,Color)">WireCylinder(float3, float3, Single, Color)</h4>
-  <div class="markdown level1 summary"><p>\copydoc WireCylinder(float3,float3,float)</p>
+  <div class="markdown level1 summary"><p>\copydocref{WireCylinder(float3,float3,float)}</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -4565,7 +6958,7 @@ Draw.WireCylinder(Vector3.zero, Vector3.up, 2, 0.5f, Color.black);</code></pre>
   
   <a id="Drawing_CommandBuilder_WireCylinder_" data-uid="Drawing.CommandBuilder.WireCylinder*"></a>
   <h4 id="Drawing_CommandBuilder_WireCylinder_float3_float3_System_Single_System_Single_Color_" data-uid="Drawing.CommandBuilder.WireCylinder(float3,float3,System.Single,System.Single,Color)">WireCylinder(float3, float3, Single, Single, Color)</h4>
-  <div class="markdown level1 summary"><p>\copydoc WireCylinder(float3,float3,float,float)</p>
+  <div class="markdown level1 summary"><p>\copydocref{WireCylinder(float3,float3,float,float)}</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -4612,7 +7005,7 @@ Draw.WireCylinder(Vector3.zero, Vector3.up, 2, 0.5f, Color.black);</code></pre>
   
   
   <a id="Drawing_CommandBuilder_WireGrid_" data-uid="Drawing.CommandBuilder.WireGrid*"></a>
-  <h4 id="Drawing_CommandBuilder_WireGrid_float3_Quaternion_int2_float2_" data-uid="Drawing.CommandBuilder.WireGrid(float3,Quaternion,int2,float2)">WireGrid(float3, Quaternion, int2, float2)</h4>
+  <h4 id="Drawing_CommandBuilder_WireGrid_float3_quaternion_int2_float2_" data-uid="Drawing.CommandBuilder.WireGrid(float3,quaternion,int2,float2)">WireGrid(float3, quaternion, int2, float2)</h4>
   <div class="markdown level1 summary"><p>Draws a grid of lines.</p>
 <pre><code>Draw.WireGrid(Vector3.zero, Quaternion.identity, new int2(3, 3), new float2(1, 1), color);</code></pre>
 <p>[Open online documentation to see images]</p>
@@ -4620,7 +7013,7 @@ Draw.WireCylinder(Vector3.zero, Vector3.up, 2, 0.5f, Color.black);</code></pre>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void WireGrid(float3 center, Quaternion rotation, int2 cells, float2 totalSize)</code></pre>
+    <pre><code class="lang-csharp hljs">public void WireGrid(float3 center, quaternion rotation, int2 cells, float2 totalSize)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -4639,7 +7032,7 @@ Draw.WireCylinder(Vector3.zero, Vector3.up, 2, 0.5f, Color.black);</code></pre>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">Quaternion</span></td>
+        <td><span class="xref">quaternion</span></td>
         <td><span class="parametername">rotation</span></td>
         <td><p>Rotation of the grid. The grid will be aligned to the X and Z axes of the rotation.</p>
 </td>
@@ -4661,13 +7054,13 @@ Draw.WireCylinder(Vector3.zero, Vector3.up, 2, 0.5f, Color.black);</code></pre>
   
   
   <a id="Drawing_CommandBuilder_WireGrid_" data-uid="Drawing.CommandBuilder.WireGrid*"></a>
-  <h4 id="Drawing_CommandBuilder_WireGrid_float3_Quaternion_int2_float2_Color_" data-uid="Drawing.CommandBuilder.WireGrid(float3,Quaternion,int2,float2,Color)">WireGrid(float3, Quaternion, int2, float2, Color)</h4>
-  <div class="markdown level1 summary"><p>\copydoc WireGrid(float3,Quaternion,int2,float2)</p>
+  <h4 id="Drawing_CommandBuilder_WireGrid_float3_quaternion_int2_float2_Color_" data-uid="Drawing.CommandBuilder.WireGrid(float3,quaternion,int2,float2,Color)">WireGrid(float3, quaternion, int2, float2, Color)</h4>
+  <div class="markdown level1 summary"><p>\copydocref{WireGrid(float3,quaternion,int2,float2)}</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void WireGrid(float3 center, Quaternion rotation, int2 cells, float2 totalSize, Color color)</code></pre>
+    <pre><code class="lang-csharp hljs">public void WireGrid(float3 center, quaternion rotation, int2 cells, float2 totalSize, Color color)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -4685,7 +7078,7 @@ Draw.WireCylinder(Vector3.zero, Vector3.up, 2, 0.5f, Color.black);</code></pre>
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">Quaternion</span></td>
+        <td><span class="xref">quaternion</span></td>
         <td><span class="parametername">rotation</span></td>
         <td></td>
       </tr>
@@ -4710,16 +7103,16 @@ Draw.WireCylinder(Vector3.zero, Vector3.up, 2, 0.5f, Color.black);</code></pre>
   
   
   <a id="Drawing_CommandBuilder_WireHexagon_" data-uid="Drawing.CommandBuilder.WireHexagon*"></a>
-  <h4 id="Drawing_CommandBuilder_WireHexagon_float3_Quaternion_System_Single_" data-uid="Drawing.CommandBuilder.WireHexagon(float3,Quaternion,System.Single)">WireHexagon(float3, Quaternion, Single)</h4>
+  <h4 id="Drawing_CommandBuilder_WireHexagon_float3_quaternion_System_Single_" data-uid="Drawing.CommandBuilder.WireHexagon(float3,quaternion,System.Single)">WireHexagon(float3, quaternion, Single)</h4>
   <div class="markdown level1 summary"><p>Draws a hexagon outline.</p>
 <pre><code>Draw.WireHexagon(Vector3.zero, Quaternion.identity, 0.5f, color);</code></pre>
 <p>[Open online documentation to see images]</p>
-<p>Note: This is a convenience wrapper for <a class="xref" href="Drawing.CommandBuilder.html#Drawing_CommandBuilder_WirePolygon_float3_System_Int32_Quaternion_System_Single_">WirePolygon(float3, Int32, Quaternion, Single)</a></p>
+<p>Note: This is a convenience wrapper for <a class="xref" href="Drawing.CommandBuilder.html#Drawing_CommandBuilder_WirePolygon_float3_System_Int32_quaternion_System_Single_">WirePolygon(float3, Int32, quaternion, Single)</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void WireHexagon(float3 center, Quaternion rotation, float radius)</code></pre>
+    <pre><code class="lang-csharp hljs">public void WireHexagon(float3 center, quaternion rotation, float radius)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -4738,7 +7131,7 @@ Draw.WireCylinder(Vector3.zero, Vector3.up, 2, 0.5f, Color.black);</code></pre>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">Quaternion</span></td>
+        <td><span class="xref">quaternion</span></td>
         <td><span class="parametername">rotation</span></td>
         <td><p>Rotation of the polygon. The first vertex will be radius units in front of center as seen from the rotation's point of view.</p>
 </td>
@@ -4754,13 +7147,13 @@ Draw.WireCylinder(Vector3.zero, Vector3.up, 2, 0.5f, Color.black);</code></pre>
   
   
   <a id="Drawing_CommandBuilder_WireHexagon_" data-uid="Drawing.CommandBuilder.WireHexagon*"></a>
-  <h4 id="Drawing_CommandBuilder_WireHexagon_float3_Quaternion_System_Single_Color_" data-uid="Drawing.CommandBuilder.WireHexagon(float3,Quaternion,System.Single,Color)">WireHexagon(float3, Quaternion, Single, Color)</h4>
-  <div class="markdown level1 summary"><p>\copydoc WireHexagon(float3,Quaternion,float)</p>
+  <h4 id="Drawing_CommandBuilder_WireHexagon_float3_quaternion_System_Single_Color_" data-uid="Drawing.CommandBuilder.WireHexagon(float3,quaternion,System.Single,Color)">WireHexagon(float3, quaternion, Single, Color)</h4>
+  <div class="markdown level1 summary"><p>\copydocref{WireHexagon(float3,quaternion,float)}</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void WireHexagon(float3 center, Quaternion rotation, float radius, Color color)</code></pre>
+    <pre><code class="lang-csharp hljs">public void WireHexagon(float3 center, quaternion rotation, float radius, Color color)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -4778,7 +7171,7 @@ Draw.WireCylinder(Vector3.zero, Vector3.up, 2, 0.5f, Color.black);</code></pre>
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">Quaternion</span></td>
+        <td><span class="xref">quaternion</span></td>
         <td><span class="parametername">rotation</span></td>
         <td></td>
       </tr>
@@ -4826,7 +7219,7 @@ Draw.WireCylinder(Vector3.zero, Vector3.up, 2, 0.5f, Color.black);</code></pre>
   
   <a id="Drawing_CommandBuilder_WireMesh_" data-uid="Drawing.CommandBuilder.WireMesh*"></a>
   <h4 id="Drawing_CommandBuilder_WireMesh_Mesh_Color_" data-uid="Drawing.CommandBuilder.WireMesh(Mesh,Color)">WireMesh(Mesh, Color)</h4>
-  <div class="markdown level1 summary"><p>\copydoc WireMesh(Mesh)</p>
+  <div class="markdown level1 summary"><p>\copydocref{WireMesh(Mesh)}</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -4858,16 +7251,16 @@ Draw.WireCylinder(Vector3.zero, Vector3.up, 2, 0.5f, Color.black);</code></pre>
   
   
   <a id="Drawing_CommandBuilder_WirePentagon_" data-uid="Drawing.CommandBuilder.WirePentagon*"></a>
-  <h4 id="Drawing_CommandBuilder_WirePentagon_float3_Quaternion_System_Single_" data-uid="Drawing.CommandBuilder.WirePentagon(float3,Quaternion,System.Single)">WirePentagon(float3, Quaternion, Single)</h4>
+  <h4 id="Drawing_CommandBuilder_WirePentagon_float3_quaternion_System_Single_" data-uid="Drawing.CommandBuilder.WirePentagon(float3,quaternion,System.Single)">WirePentagon(float3, quaternion, Single)</h4>
   <div class="markdown level1 summary"><p>Draws a pentagon outline.</p>
 <pre><code>Draw.WirePentagon(Vector3.zero, Quaternion.identity, 0.5f, color);</code></pre>
 <p>[Open online documentation to see images]</p>
-<p>Note: This is a convenience wrapper for <a class="xref" href="Drawing.CommandBuilder.html#Drawing_CommandBuilder_WirePolygon_float3_System_Int32_Quaternion_System_Single_">WirePolygon(float3, Int32, Quaternion, Single)</a></p>
+<p>Note: This is a convenience wrapper for <a class="xref" href="Drawing.CommandBuilder.html#Drawing_CommandBuilder_WirePolygon_float3_System_Int32_quaternion_System_Single_">WirePolygon(float3, Int32, quaternion, Single)</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void WirePentagon(float3 center, Quaternion rotation, float radius)</code></pre>
+    <pre><code class="lang-csharp hljs">public void WirePentagon(float3 center, quaternion rotation, float radius)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -4886,7 +7279,7 @@ Draw.WireCylinder(Vector3.zero, Vector3.up, 2, 0.5f, Color.black);</code></pre>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">Quaternion</span></td>
+        <td><span class="xref">quaternion</span></td>
         <td><span class="parametername">rotation</span></td>
         <td><p>Rotation of the polygon. The first vertex will be radius units in front of center as seen from the rotation's point of view.</p>
 </td>
@@ -4902,13 +7295,13 @@ Draw.WireCylinder(Vector3.zero, Vector3.up, 2, 0.5f, Color.black);</code></pre>
   
   
   <a id="Drawing_CommandBuilder_WirePentagon_" data-uid="Drawing.CommandBuilder.WirePentagon*"></a>
-  <h4 id="Drawing_CommandBuilder_WirePentagon_float3_Quaternion_System_Single_Color_" data-uid="Drawing.CommandBuilder.WirePentagon(float3,Quaternion,System.Single,Color)">WirePentagon(float3, Quaternion, Single, Color)</h4>
-  <div class="markdown level1 summary"><p>\copydoc WirePentagon(float3,Quaternion,float)</p>
+  <h4 id="Drawing_CommandBuilder_WirePentagon_float3_quaternion_System_Single_Color_" data-uid="Drawing.CommandBuilder.WirePentagon(float3,quaternion,System.Single,Color)">WirePentagon(float3, quaternion, Single, Color)</h4>
+  <div class="markdown level1 summary"><p>\copydocref{WirePentagon(float3,quaternion,float)}</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void WirePentagon(float3 center, Quaternion rotation, float radius, Color color)</code></pre>
+    <pre><code class="lang-csharp hljs">public void WirePentagon(float3 center, quaternion rotation, float radius, Color color)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -4926,7 +7319,7 @@ Draw.WireCylinder(Vector3.zero, Vector3.up, 2, 0.5f, Color.black);</code></pre>
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">Quaternion</span></td>
+        <td><span class="xref">quaternion</span></td>
         <td><span class="parametername">rotation</span></td>
         <td></td>
       </tr>
@@ -4990,7 +7383,7 @@ Draw.WireCylinder(Vector3.zero, Vector3.up, 2, 0.5f, Color.black);</code></pre>
   
   <a id="Drawing_CommandBuilder_WirePlane_" data-uid="Drawing.CommandBuilder.WirePlane*"></a>
   <h4 id="Drawing_CommandBuilder_WirePlane_float3_float3_float2_Color_" data-uid="Drawing.CommandBuilder.WirePlane(float3,float3,float2,Color)">WirePlane(float3, float3, float2, Color)</h4>
-  <div class="markdown level1 summary"><p>\copydoc WirePlane(float3,float3,float2)</p>
+  <div class="markdown level1 summary"><p>\copydocref{WirePlane(float3,float3,float2)}</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -5033,16 +7426,16 @@ Draw.WireCylinder(Vector3.zero, Vector3.up, 2, 0.5f, Color.black);</code></pre>
   
   
   <a id="Drawing_CommandBuilder_WirePlane_" data-uid="Drawing.CommandBuilder.WirePlane*"></a>
-  <h4 id="Drawing_CommandBuilder_WirePlane_float3_Quaternion_float2_" data-uid="Drawing.CommandBuilder.WirePlane(float3,Quaternion,float2)">WirePlane(float3, Quaternion, float2)</h4>
+  <h4 id="Drawing_CommandBuilder_WirePlane_float3_quaternion_float2_" data-uid="Drawing.CommandBuilder.WirePlane(float3,quaternion,float2)">WirePlane(float3, quaternion, float2)</h4>
   <div class="markdown level1 summary"><p>Draws a wire plane.</p>
-<p>This is identical to \reflink{WireRectangle(float3,Quaternion,float2)}, but it is included for consistency.</p>
+<p>This is identical to \reflink{WireRectangle(float3,quaternion,float2)}, but it is included for consistency.</p>
 <pre><code>Draw.WirePlane(new float3(0, 0, 0), new float3(0, 1, 0), 1.0f, color);</code></pre>
 <p>[Open online documentation to see images]</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void WirePlane(float3 center, Quaternion rotation, float2 size)</code></pre>
+    <pre><code class="lang-csharp hljs">public void WirePlane(float3 center, quaternion rotation, float2 size)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -5061,7 +7454,7 @@ Draw.WireCylinder(Vector3.zero, Vector3.up, 2, 0.5f, Color.black);</code></pre>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">Quaternion</span></td>
+        <td><span class="xref">quaternion</span></td>
         <td><span class="parametername">rotation</span></td>
         <td><p>Rotation of the plane. The plane will lie in the XZ plane with respect to the rotation.</p>
 </td>
@@ -5077,13 +7470,13 @@ Draw.WireCylinder(Vector3.zero, Vector3.up, 2, 0.5f, Color.black);</code></pre>
   
   
   <a id="Drawing_CommandBuilder_WirePlane_" data-uid="Drawing.CommandBuilder.WirePlane*"></a>
-  <h4 id="Drawing_CommandBuilder_WirePlane_float3_Quaternion_float2_Color_" data-uid="Drawing.CommandBuilder.WirePlane(float3,Quaternion,float2,Color)">WirePlane(float3, Quaternion, float2, Color)</h4>
-  <div class="markdown level1 summary"><p>\copydoc WirePlane(float3,Quaternion,float2)</p>
+  <h4 id="Drawing_CommandBuilder_WirePlane_float3_quaternion_float2_Color_" data-uid="Drawing.CommandBuilder.WirePlane(float3,quaternion,float2,Color)">WirePlane(float3, quaternion, float2, Color)</h4>
+  <div class="markdown level1 summary"><p>\copydocref{WirePlane(float3,quaternion,float2)}</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void WirePlane(float3 center, Quaternion rotation, float2 size, Color color)</code></pre>
+    <pre><code class="lang-csharp hljs">public void WirePlane(float3 center, quaternion rotation, float2 size, Color color)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -5101,7 +7494,7 @@ Draw.WireCylinder(Vector3.zero, Vector3.up, 2, 0.5f, Color.black);</code></pre>
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">Quaternion</span></td>
+        <td><span class="xref">quaternion</span></td>
         <td><span class="parametername">rotation</span></td>
         <td></td>
       </tr>
@@ -5121,7 +7514,7 @@ Draw.WireCylinder(Vector3.zero, Vector3.up, 2, 0.5f, Color.black);</code></pre>
   
   
   <a id="Drawing_CommandBuilder_WirePolygon_" data-uid="Drawing.CommandBuilder.WirePolygon*"></a>
-  <h4 id="Drawing_CommandBuilder_WirePolygon_float3_System_Int32_Quaternion_System_Single_" data-uid="Drawing.CommandBuilder.WirePolygon(float3,System.Int32,Quaternion,System.Single)">WirePolygon(float3, Int32, Quaternion, Single)</h4>
+  <h4 id="Drawing_CommandBuilder_WirePolygon_float3_System_Int32_quaternion_System_Single_" data-uid="Drawing.CommandBuilder.WirePolygon(float3,System.Int32,quaternion,System.Single)">WirePolygon(float3, Int32, quaternion, Single)</h4>
   <div class="markdown level1 summary"><p>Draws a regular polygon outline.</p>
 <pre><code>Draw.WirePolygon(new Vector3(-0.5f, 0, +0.5f), 3, Quaternion.identity, 0.4f, color);
 Draw.WirePolygon(new Vector3(+0.5f, 0, +0.5f), 4, Quaternion.identity, 0.4f, color);
@@ -5129,13 +7522,13 @@ Draw.WirePolygon(new Vector3(-0.5f, 0, -0.5f), 5, Quaternion.identity, 0.4f, col
 Draw.WirePolygon(new Vector3(+0.5f, 0, -0.5f), 6, Quaternion.identity, 0.4f, color);</code></pre>
 <p>[Open online documentation to see images]</p>
 <p>See: <a class="xref" href="Drawing.CommandBuilder.html#Drawing_CommandBuilder_WireTriangle_float3_float3_float3_">WireTriangle(float3, float3, float3)</a>
-See: <a class="xref" href="Drawing.CommandBuilder.html#Drawing_CommandBuilder_WirePentagon_float3_Quaternion_System_Single_">WirePentagon(float3, Quaternion, Single)</a>
-See: <a class="xref" href="Drawing.CommandBuilder.html#Drawing_CommandBuilder_WireHexagon_float3_Quaternion_System_Single_">WireHexagon(float3, Quaternion, Single)</a></p>
+See: <a class="xref" href="Drawing.CommandBuilder.html#Drawing_CommandBuilder_WirePentagon_float3_quaternion_System_Single_">WirePentagon(float3, quaternion, Single)</a>
+See: <a class="xref" href="Drawing.CommandBuilder.html#Drawing_CommandBuilder_WireHexagon_float3_quaternion_System_Single_">WireHexagon(float3, quaternion, Single)</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void WirePolygon(float3 center, int vertices, Quaternion rotation, float radius)</code></pre>
+    <pre><code class="lang-csharp hljs">public void WirePolygon(float3 center, int vertices, quaternion rotation, float radius)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -5160,7 +7553,7 @@ See: <a class="xref" href="Drawing.CommandBuilder.html#Drawing_CommandBuilder_Wi
 </td>
       </tr>
       <tr>
-        <td><span class="xref">Quaternion</span></td>
+        <td><span class="xref">quaternion</span></td>
         <td><span class="parametername">rotation</span></td>
         <td><p>Rotation of the polygon. The first vertex will be radius units in front of center as seen from the rotation's point of view.</p>
 </td>
@@ -5176,13 +7569,13 @@ See: <a class="xref" href="Drawing.CommandBuilder.html#Drawing_CommandBuilder_Wi
   
   
   <a id="Drawing_CommandBuilder_WirePolygon_" data-uid="Drawing.CommandBuilder.WirePolygon*"></a>
-  <h4 id="Drawing_CommandBuilder_WirePolygon_float3_System_Int32_Quaternion_System_Single_Color_" data-uid="Drawing.CommandBuilder.WirePolygon(float3,System.Int32,Quaternion,System.Single,Color)">WirePolygon(float3, Int32, Quaternion, Single, Color)</h4>
-  <div class="markdown level1 summary"><p>\copydoc WirePolygon(float3,int,Quaternion,float)</p>
+  <h4 id="Drawing_CommandBuilder_WirePolygon_float3_System_Int32_quaternion_System_Single_Color_" data-uid="Drawing.CommandBuilder.WirePolygon(float3,System.Int32,quaternion,System.Single,Color)">WirePolygon(float3, Int32, quaternion, Single, Color)</h4>
+  <div class="markdown level1 summary"><p>\copydocref{WirePolygon(float3,int,quaternion,float)}</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void WirePolygon(float3 center, int vertices, Quaternion rotation, float radius, Color color)</code></pre>
+    <pre><code class="lang-csharp hljs">public void WirePolygon(float3 center, int vertices, quaternion rotation, float radius, Color color)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -5205,7 +7598,7 @@ See: <a class="xref" href="Drawing.CommandBuilder.html#Drawing_CommandBuilder_Wi
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">Quaternion</span></td>
+        <td><span class="xref">quaternion</span></td>
         <td><span class="parametername">rotation</span></td>
         <td></td>
       </tr>
@@ -5225,18 +7618,18 @@ See: <a class="xref" href="Drawing.CommandBuilder.html#Drawing_CommandBuilder_Wi
   
   
   <a id="Drawing_CommandBuilder_WireRectangle_" data-uid="Drawing.CommandBuilder.WireRectangle*"></a>
-  <h4 id="Drawing_CommandBuilder_WireRectangle_float3_Quaternion_float2_" data-uid="Drawing.CommandBuilder.WireRectangle(float3,Quaternion,float2)">WireRectangle(float3, Quaternion, float2)</h4>
+  <h4 id="Drawing_CommandBuilder_WireRectangle_float3_quaternion_float2_" data-uid="Drawing.CommandBuilder.WireRectangle(float3,quaternion,float2)">WireRectangle(float3, quaternion, float2)</h4>
   <div class="markdown level1 summary"><p>Draws a rectangle outline.
 The rectangle will be oriented along the rotation's X and Z axes.</p>
 <pre><code>Draw.WireRectangle(new Vector3(0f, 0, 0), Quaternion.identity, new Vector2(1, 1), Color.black);</code></pre>
 <p>[Open online documentation to see images]</p>
-<p>This is identical to \reflink{WirePlane(float3,Quaternion,float2)}, but this name is added for consistency.</p>
-<p>See: <a class="xref" href="Drawing.CommandBuilder.html#Drawing_CommandBuilder_WirePolygon_float3_System_Int32_Quaternion_System_Single_">WirePolygon(float3, Int32, Quaternion, Single)</a></p>
+<p>This is identical to \reflink{WirePlane(float3,quaternion,float2)}, but this name is added for consistency.</p>
+<p>See: <a class="xref" href="Drawing.CommandBuilder.html#Drawing_CommandBuilder_WirePolygon_float3_System_Int32_quaternion_System_Single_">WirePolygon(float3, Int32, quaternion, Single)</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void WireRectangle(float3 center, Quaternion rotation, float2 size)</code></pre>
+    <pre><code class="lang-csharp hljs">public void WireRectangle(float3 center, quaternion rotation, float2 size)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -5254,7 +7647,7 @@ The rectangle will be oriented along the rotation's X and Z axes.</p>
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">Quaternion</span></td>
+        <td><span class="xref">quaternion</span></td>
         <td><span class="parametername">rotation</span></td>
         <td></td>
       </tr>
@@ -5268,13 +7661,13 @@ The rectangle will be oriented along the rotation's X and Z axes.</p>
   
   
   <a id="Drawing_CommandBuilder_WireRectangle_" data-uid="Drawing.CommandBuilder.WireRectangle*"></a>
-  <h4 id="Drawing_CommandBuilder_WireRectangle_float3_Quaternion_float2_Color_" data-uid="Drawing.CommandBuilder.WireRectangle(float3,Quaternion,float2,Color)">WireRectangle(float3, Quaternion, float2, Color)</h4>
-  <div class="markdown level1 summary"><p>\copydoc WireRectangle(float3,Quaternion,float2)</p>
+  <h4 id="Drawing_CommandBuilder_WireRectangle_float3_quaternion_float2_Color_" data-uid="Drawing.CommandBuilder.WireRectangle(float3,quaternion,float2,Color)">WireRectangle(float3, quaternion, float2, Color)</h4>
+  <div class="markdown level1 summary"><p>\copydocref{WireRectangle(float3,quaternion,float2)}</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void WireRectangle(float3 center, Quaternion rotation, float2 size, Color color)</code></pre>
+    <pre><code class="lang-csharp hljs">public void WireRectangle(float3 center, quaternion rotation, float2 size, Color color)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -5292,7 +7685,7 @@ The rectangle will be oriented along the rotation's X and Z axes.</p>
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">Quaternion</span></td>
+        <td><span class="xref">quaternion</span></td>
         <td><span class="parametername">rotation</span></td>
         <td></td>
       </tr>
@@ -5320,8 +7713,8 @@ This is particularly useful when combined with <a class="xref" href="Drawing.Com
 }</code></pre>
 <p>[Open online documentation to see images]</p>
 <p>See: <a class="xref" href="Drawing.CommandBuilder.html#Drawing_CommandBuilder_WireRectangleXZ_float3_float2_">WireRectangleXZ(float3, float2)</a>
-See: <a class="xref" href="Drawing.CommandBuilder.html#Drawing_CommandBuilder_WireRectangle_float3_Quaternion_float2_">WireRectangle(float3, Quaternion, float2)</a>
-See: <a class="xref" href="Drawing.CommandBuilder.html#Drawing_CommandBuilder_WirePolygon_float3_System_Int32_Quaternion_System_Single_">WirePolygon(float3, Int32, Quaternion, Single)</a></p>
+See: <a class="xref" href="Drawing.CommandBuilder.html#Drawing_CommandBuilder_WireRectangle_float3_quaternion_float2_">WireRectangle(float3, quaternion, float2)</a>
+See: <a class="xref" href="Drawing.CommandBuilder.html#Drawing_CommandBuilder_WirePolygon_float3_System_Int32_quaternion_System_Single_">WirePolygon(float3, Int32, quaternion, Single)</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -5349,7 +7742,7 @@ See: <a class="xref" href="Drawing.CommandBuilder.html#Drawing_CommandBuilder_Wi
   
   <a id="Drawing_CommandBuilder_WireRectangle_" data-uid="Drawing.CommandBuilder.WireRectangle*"></a>
   <h4 id="Drawing_CommandBuilder_WireRectangle_Rect_Color_" data-uid="Drawing.CommandBuilder.WireRectangle(Rect,Color)">WireRectangle(Rect, Color)</h4>
-  <div class="markdown level1 summary"><p>\copydoc WireRectangle(Rect)</p>
+  <div class="markdown level1 summary"><p>\copydocref{WireRectangle(Rect)}</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -5386,7 +7779,7 @@ See: <a class="xref" href="Drawing.CommandBuilder.html#Drawing_CommandBuilder_Wi
 The rectangle will be aligned to the X and Z axes.</p>
 <pre><code>Draw.WireRectangleXZ(new Vector3(0f, 0, 0), new Vector2(1, 1), Color.black);</code></pre>
 <p>[Open online documentation to see images]</p>
-<p>See: <a class="xref" href="Drawing.CommandBuilder.html#Drawing_CommandBuilder_WirePolygon_float3_System_Int32_Quaternion_System_Single_">WirePolygon(float3, Int32, Quaternion, Single)</a></p>
+<p>See: <a class="xref" href="Drawing.CommandBuilder.html#Drawing_CommandBuilder_WirePolygon_float3_System_Int32_quaternion_System_Single_">WirePolygon(float3, Int32, quaternion, Single)</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -5419,7 +7812,7 @@ The rectangle will be aligned to the X and Z axes.</p>
   
   <a id="Drawing_CommandBuilder_WireRectangleXZ_" data-uid="Drawing.CommandBuilder.WireRectangleXZ*"></a>
   <h4 id="Drawing_CommandBuilder_WireRectangleXZ_float3_float2_Color_" data-uid="Drawing.CommandBuilder.WireRectangleXZ(float3,float2,Color)">WireRectangleXZ(float3, float2, Color)</h4>
-  <div class="markdown level1 summary"><p>\copydoc WireRectangleXZ(float3,float2)</p>
+  <div class="markdown level1 summary"><p>\copydocref{WireRectangleXZ(float3,float2)}</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -5494,7 +7887,7 @@ Draw.WireSphere(Vector3.zero, 0.5f, Color.black);</code></pre>
   
   <a id="Drawing_CommandBuilder_WireSphere_" data-uid="Drawing.CommandBuilder.WireSphere*"></a>
   <h4 id="Drawing_CommandBuilder_WireSphere_float3_System_Single_Color_" data-uid="Drawing.CommandBuilder.WireSphere(float3,System.Single,Color)">WireSphere(float3, Single, Color)</h4>
-  <div class="markdown level1 summary"><p>\copydoc WireSphere(float3,float)</p>
+  <div class="markdown level1 summary"><p>\copydocref{WireSphere(float3,float)}</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -5535,8 +7928,8 @@ Draw.WireSphere(Vector3.zero, 0.5f, Color.black);</code></pre>
   <div class="markdown level1 summary"><p>Draws a triangle outline.</p>
 <pre><code>Draw.WireTriangle(new Vector3(-0.5f, 0, 0), new Vector3(0, 1, 0), new Vector3(0.5f, 0, 0), Color.black);</code></pre>
 <p>[Open online documentation to see images]</p>
-<p>See: \reflink{WirePlane(float3,Quaternion,float2)}
-See: <a class="xref" href="Drawing.CommandBuilder.html#Drawing_CommandBuilder_WirePolygon_float3_System_Int32_Quaternion_System_Single_">WirePolygon(float3, Int32, Quaternion, Single)</a></p>
+<p>See: \reflink{WirePlane(float3,quaternion,float2)}
+See: <a class="xref" href="Drawing.CommandBuilder.html#Drawing_CommandBuilder_WirePolygon_float3_System_Int32_quaternion_System_Single_">WirePolygon(float3, Int32, quaternion, Single)</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -5577,7 +7970,7 @@ See: <a class="xref" href="Drawing.CommandBuilder.html#Drawing_CommandBuilder_Wi
   
   <a id="Drawing_CommandBuilder_WireTriangle_" data-uid="Drawing.CommandBuilder.WireTriangle*"></a>
   <h4 id="Drawing_CommandBuilder_WireTriangle_float3_float3_float3_Color_" data-uid="Drawing.CommandBuilder.WireTriangle(float3,float3,float3,Color)">WireTriangle(float3, float3, float3, Color)</h4>
-  <div class="markdown level1 summary"><p>\copydoc WireTriangle(float3,float3,float3)</p>
+  <div class="markdown level1 summary"><p>\copydocref{WireTriangle(float3,float3,float3)}</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -5620,17 +8013,17 @@ See: <a class="xref" href="Drawing.CommandBuilder.html#Drawing_CommandBuilder_Wi
   
   
   <a id="Drawing_CommandBuilder_WireTriangle_" data-uid="Drawing.CommandBuilder.WireTriangle*"></a>
-  <h4 id="Drawing_CommandBuilder_WireTriangle_float3_Quaternion_System_Single_" data-uid="Drawing.CommandBuilder.WireTriangle(float3,Quaternion,System.Single)">WireTriangle(float3, Quaternion, Single)</h4>
+  <h4 id="Drawing_CommandBuilder_WireTriangle_float3_quaternion_System_Single_" data-uid="Drawing.CommandBuilder.WireTriangle(float3,quaternion,System.Single)">WireTriangle(float3, quaternion, Single)</h4>
   <div class="markdown level1 summary"><p>Draws a triangle outline.</p>
 <pre><code>Draw.WireTriangle(Vector3.zero, Quaternion.identity, 0.5f, color);</code></pre>
 <p>[Open online documentation to see images]</p>
-<p>Note: This is a convenience wrapper for <a class="xref" href="Drawing.CommandBuilder.html#Drawing_CommandBuilder_WirePolygon_float3_System_Int32_Quaternion_System_Single_">WirePolygon(float3, Int32, Quaternion, Single)</a></p>
+<p>Note: This is a convenience wrapper for <a class="xref" href="Drawing.CommandBuilder.html#Drawing_CommandBuilder_WirePolygon_float3_System_Int32_quaternion_System_Single_">WirePolygon(float3, Int32, quaternion, Single)</a></p>
 <p>See: <a class="xref" href="Drawing.CommandBuilder.html#Drawing_CommandBuilder_WireTriangle_float3_float3_float3_">WireTriangle(float3, float3, float3)</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void WireTriangle(float3 center, Quaternion rotation, float radius)</code></pre>
+    <pre><code class="lang-csharp hljs">public void WireTriangle(float3 center, quaternion rotation, float radius)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -5649,7 +8042,7 @@ See: <a class="xref" href="Drawing.CommandBuilder.html#Drawing_CommandBuilder_Wi
 </td>
       </tr>
       <tr>
-        <td><span class="xref">Quaternion</span></td>
+        <td><span class="xref">quaternion</span></td>
         <td><span class="parametername">rotation</span></td>
         <td><p>Rotation of the triangle. The first vertex will be radius units in front of center as seen from the rotation's point of view.</p>
 </td>
@@ -5665,13 +8058,13 @@ See: <a class="xref" href="Drawing.CommandBuilder.html#Drawing_CommandBuilder_Wi
   
   
   <a id="Drawing_CommandBuilder_WireTriangle_" data-uid="Drawing.CommandBuilder.WireTriangle*"></a>
-  <h4 id="Drawing_CommandBuilder_WireTriangle_float3_Quaternion_System_Single_Color_" data-uid="Drawing.CommandBuilder.WireTriangle(float3,Quaternion,System.Single,Color)">WireTriangle(float3, Quaternion, Single, Color)</h4>
-  <div class="markdown level1 summary"><p>\copydoc WireTriangle(float3,Quaternion,float)</p>
+  <h4 id="Drawing_CommandBuilder_WireTriangle_float3_quaternion_System_Single_Color_" data-uid="Drawing.CommandBuilder.WireTriangle(float3,quaternion,System.Single,Color)">WireTriangle(float3, quaternion, Single, Color)</h4>
+  <div class="markdown level1 summary"><p>\copydocref{WireTriangle(float3,quaternion,float)}</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void WireTriangle(float3 center, Quaternion rotation, float radius, Color color)</code></pre>
+    <pre><code class="lang-csharp hljs">public void WireTriangle(float3 center, quaternion rotation, float radius, Color color)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -5689,7 +8082,7 @@ See: <a class="xref" href="Drawing.CommandBuilder.html#Drawing_CommandBuilder_Wi
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">Quaternion</span></td>
+        <td><span class="xref">quaternion</span></td>
         <td><span class="parametername">rotation</span></td>
         <td></td>
       </tr>

@@ -73,7 +73,22 @@
   
   <h1 id="Drawing_RedrawScope" data-uid="Drawing.RedrawScope" class="text-break">Struct RedrawScope
   </h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><p>Used to cache drawing data over multiple frames.
+This is useful as a performance optimization when you are drawing the same thing over multiple consecutive frames.</p>
+<pre><code>private RedrawScope redrawScope;
+
+void Start () {
+    redrawScope = DrawingManager.GetRedrawScope();
+    using (var builder = DrawingManager.GetBuilder(redrawScope)) {
+        builder.WireSphere(Vector3.zero, 1.0f, Color.red);
+    }
+}
+
+void Update () {
+    redrawScope.Draw();
+}</code></pre>
+<p>See: \reflink{DrawingManager.GetRedrawScope}</p>
+</div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
