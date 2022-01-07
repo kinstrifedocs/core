@@ -137,14 +137,14 @@ See: getstarted (view in online documentation for working links)</p>
   </h3>
       <h4><a class="xref" href="Drawing.CommandBuilder.html">CommandBuilder</a></h4>
       <section><p>Builder for drawing commands.
-You can use this to queue many drawing commands. The commands will be queued for rendering when you call the Dispose method.
+You can use this to queue many drawing commands. The commands will be queued for rendering when you call the Dipose method.
 It is recommended that you use the <a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/using-statement">using statement</a> which automatically calls the Dispose method.</p>
 <pre><code>// Create a new CommandBuilder
 using (var draw = DrawingManager.GetBuilder()) {
     // Use the exact same API as the global Draw class
     draw.WireBox(Vector3.zero, Vector3.one);
 }</code></pre>
-<p>Warning: You must call either <a class="xref" href="Drawing.CommandBuilder.html#Drawing_CommandBuilder_Dispose">Dispose()</a> or <a class="xref" href="Drawing.CommandBuilder.html#Drawing_CommandBuilder_DiscardAndDispose">DiscardAndDispose()</a> when you are done with this object to avoid memory leaks.</p>
+<p>Warning: You must call either <see cref="!:Dipose"></see> or <a class="xref" href="Drawing.CommandBuilder.html#Drawing_CommandBuilder_DiscardAndDispose">DiscardAndDispose()</a> when you are done with this object to avoid memory leaks.</p>
 </section>
       <h4><a class="xref" href="Drawing.CommandBuilder.ScopeColor.html">CommandBuilder.ScopeColor</a></h4>
       <section></section>
@@ -164,22 +164,7 @@ Used for optimization in standalone builds.</p>
       <h4><a class="xref" href="Drawing.LabelAlignment.html">LabelAlignment</a></h4>
       <section></section>
       <h4><a class="xref" href="Drawing.RedrawScope.html">RedrawScope</a></h4>
-      <section><p>Used to cache drawing data over multiple frames.
-This is useful as a performance optimization when you are drawing the same thing over multiple consecutive frames.</p>
-<pre><code>private RedrawScope redrawScope;
-
-void Start () {
-    redrawScope = DrawingManager.GetRedrawScope();
-    using (var builder = DrawingManager.GetBuilder(redrawScope)) {
-        builder.WireSphere(Vector3.zero, 1.0f, Color.red);
-    }
-}
-
-void Update () {
-    redrawScope.Draw();
-}</code></pre>
-<p>See: \reflink{DrawingManager.GetRedrawScope}</p>
-</section>
+      <section></section>
     <h3 id="interfaces">Interfaces
   </h3>
       <h4><a class="xref" href="Drawing.IDrawGizmos.html">IDrawGizmos</a></h4>
