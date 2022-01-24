@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class SceneToolsManager
    | Kinstrife ">
-    <meta name="generator" content="docfx 2.58.9.0">
+    <meta name="generator" content="docfx 2.59.0.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
@@ -110,35 +110,60 @@
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static class SceneToolsManager</code></pre>
   </div>
-  <h3 id="methods">Methods
+  <h3 id="properties">Properties
   </h3>
   
   
-  <a id="Kinstrife_SpatialHandles_SceneToolsManager_DoForEach_" data-uid="Kinstrife.SpatialHandles.SceneToolsManager.DoForEach*"></a>
-  <h4 id="Kinstrife_SpatialHandles_SceneToolsManager_DoForEach_System_Action_Kinstrife_SpatialHandles_SpatialHandle__" data-uid="Kinstrife.SpatialHandles.SceneToolsManager.DoForEach(System.Action{Kinstrife.SpatialHandles.SpatialHandle})">DoForEach(Action&lt;SpatialHandle&gt;)</h4>
+  <a id="Kinstrife_SpatialHandles_SceneToolsManager_All_" data-uid="Kinstrife.SpatialHandles.SceneToolsManager.All*"></a>
+  <h4 id="Kinstrife_SpatialHandles_SceneToolsManager_All" data-uid="Kinstrife.SpatialHandles.SceneToolsManager.All">All</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static void DoForEach(Action&lt;SpatialHandle&gt; action)</code></pre>
+    <pre><code class="lang-csharp hljs">public static IReadOnlyList&lt;SpatialHandle&gt; All { get; }</code></pre>
   </div>
-  <h5 class="parameters">Parameters</h5>
+  <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
       <tr>
         <th>Type</th>
-        <th>Name</th>
         <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Action</span>&lt;<a class="xref" href="Kinstrife.SpatialHandles.SpatialHandle.html">SpatialHandle</a>&gt;</td>
-        <td><span class="parametername">action</span></td>
+        <td><span class="xref">System.Collections.Generic.IReadOnlyList</span>&lt;<a class="xref" href="Kinstrife.SpatialHandles.SpatialHandle.html">SpatialHandle</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
+  
+  
+  <a id="Kinstrife_SpatialHandles_SceneToolsManager_Manager_" data-uid="Kinstrife.SpatialHandles.SceneToolsManager.Manager*"></a>
+  <h4 id="Kinstrife_SpatialHandles_SceneToolsManager_Manager" data-uid="Kinstrife.SpatialHandles.SceneToolsManager.Manager">Manager</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static SpatialHandleManager Manager { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">SpatialHandleManager</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
   
   
   <a id="Kinstrife_SpatialHandles_SceneToolsManager_GetObjectsDerivedFromType_" data-uid="Kinstrife.SpatialHandles.SceneToolsManager.GetObjectsDerivedFromType*"></a>
@@ -147,7 +172,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static IList&lt;SpatialHandle&gt; GetObjectsDerivedFromType&lt;TComponentType&gt;()
+    <pre><code class="lang-csharp hljs">public static IEnumerable&lt;SpatialHandle&gt; GetObjectsDerivedFromType&lt;TComponentType&gt;()
     where TComponentType : SpatialHandle</code></pre>
   </div>
   <h5 class="returns">Returns</h5>
@@ -160,7 +185,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Generic.IList</span>&lt;<a class="xref" href="Kinstrife.SpatialHandles.SpatialHandle.html">SpatialHandle</a>&gt;</td>
+        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="Kinstrife.SpatialHandles.SpatialHandle.html">SpatialHandle</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -188,7 +213,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static IList&lt;SpatialHandle&gt; GetObjectsOfType&lt;TComponentType&gt;()
+    <pre><code class="lang-csharp hljs">public static IReadOnlyList&lt;SpatialHandle&gt; GetObjectsOfType&lt;TComponentType&gt;()
     where TComponentType : SpatialHandle</code></pre>
   </div>
   <h5 class="returns">Returns</h5>
@@ -201,7 +226,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Generic.IList</span>&lt;<a class="xref" href="Kinstrife.SpatialHandles.SpatialHandle.html">SpatialHandle</a>&gt;</td>
+        <td><span class="xref">System.Collections.Generic.IReadOnlyList</span>&lt;<a class="xref" href="Kinstrife.SpatialHandles.SpatialHandle.html">SpatialHandle</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -229,7 +254,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static IList&lt;TComponentType&gt; GetObjectsOfTypeWithCast&lt;TComponentType&gt;()
+    <pre><code class="lang-csharp hljs">public static IReadOnlyList&lt;TComponentType&gt; GetObjectsOfTypeWithCast&lt;TComponentType&gt;()
     where TComponentType : SpatialHandle</code></pre>
   </div>
   <h5 class="returns">Returns</h5>
@@ -242,7 +267,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Generic.IList</span>&lt;TComponentType&gt;</td>
+        <td><span class="xref">System.Collections.Generic.IReadOnlyList</span>&lt;TComponentType&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -262,16 +287,6 @@
       </tr>
     </tbody>
   </table>
-  
-  
-  <a id="Kinstrife_SpatialHandles_SceneToolsManager_Rebuild_" data-uid="Kinstrife.SpatialHandles.SceneToolsManager.Rebuild*"></a>
-  <h4 id="Kinstrife_SpatialHandles_SceneToolsManager_Rebuild" data-uid="Kinstrife.SpatialHandles.SceneToolsManager.Rebuild">Rebuild()</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static void Rebuild()</code></pre>
-  </div>
   
   
   <a id="Kinstrife_SpatialHandles_SceneToolsManager_RegisterSceneHandle_" data-uid="Kinstrife.SpatialHandles.SceneToolsManager.RegisterSceneHandle*"></a>
@@ -301,49 +316,6 @@
   </table>
   
   
-  <a id="Kinstrife_SpatialHandles_SceneToolsManager_RegisterSceneObject_" data-uid="Kinstrife.SpatialHandles.SceneToolsManager.RegisterSceneObject*"></a>
-  <h4 id="Kinstrife_SpatialHandles_SceneToolsManager_RegisterSceneObject__1_Kinstrife_SpatialHandles_SpatialHandle_" data-uid="Kinstrife.SpatialHandles.SceneToolsManager.RegisterSceneObject``1(Kinstrife.SpatialHandles.SpatialHandle)">RegisterSceneObject&lt;TComponentType&gt;(SpatialHandle)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static void RegisterSceneObject&lt;TComponentType&gt;(SpatialHandle sceneObject)
-    where TComponentType : SpatialHandle, IRegisterAtSceneToolsManager</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Kinstrife.SpatialHandles.SpatialHandle.html">SpatialHandle</a></td>
-        <td><span class="parametername">sceneObject</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="typeParameters">Type Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="parametername">TComponentType</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
   <a id="Kinstrife_SpatialHandles_SceneToolsManager_UnRegisterSceneHandle_" data-uid="Kinstrife.SpatialHandles.SceneToolsManager.UnRegisterSceneHandle*"></a>
   <h4 id="Kinstrife_SpatialHandles_SceneToolsManager_UnRegisterSceneHandle_Kinstrife_SpatialHandles_SpatialHandle_" data-uid="Kinstrife.SpatialHandles.SceneToolsManager.UnRegisterSceneHandle(Kinstrife.SpatialHandles.SpatialHandle)">UnRegisterSceneHandle(SpatialHandle)</h4>
   <div class="markdown level1 summary"></div>
@@ -365,49 +337,6 @@
       <tr>
         <td><a class="xref" href="Kinstrife.SpatialHandles.SpatialHandle.html">SpatialHandle</a></td>
         <td><span class="parametername">sceneObject</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="Kinstrife_SpatialHandles_SceneToolsManager_UnRegisterSceneObject_" data-uid="Kinstrife.SpatialHandles.SceneToolsManager.UnRegisterSceneObject*"></a>
-  <h4 id="Kinstrife_SpatialHandles_SceneToolsManager_UnRegisterSceneObject__1_Kinstrife_SpatialHandles_SpatialHandle_" data-uid="Kinstrife.SpatialHandles.SceneToolsManager.UnRegisterSceneObject``1(Kinstrife.SpatialHandles.SpatialHandle)">UnRegisterSceneObject&lt;TComponentType&gt;(SpatialHandle)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static void UnRegisterSceneObject&lt;TComponentType&gt;(SpatialHandle sceneObject)
-    where TComponentType : SpatialHandle, IRegisterAtSceneToolsManager</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Kinstrife.SpatialHandles.SpatialHandle.html">SpatialHandle</a></td>
-        <td><span class="parametername">sceneObject</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="typeParameters">Type Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="parametername">TComponentType</span></td>
         <td></td>
       </tr>
     </tbody>

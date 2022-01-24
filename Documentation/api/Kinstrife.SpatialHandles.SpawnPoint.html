@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class SpawnPoint
    | Kinstrife ">
-    <meta name="generator" content="docfx 2.58.9.0">
+    <meta name="generator" content="docfx 2.59.0.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
@@ -85,7 +85,6 @@
   <div classs="implements">
     <h5>Implements</h5>
     <div><a class="xref" href="Kinstrife.Gizmos.ICustomGizmo.html">ICustomGizmo</a></div>
-    <div><a class="xref" href="Kinstrife.SpatialHandles.IRegisterAtSceneToolsManager.html">IRegisterAtSceneToolsManager</a></div>
   </div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
@@ -112,6 +111,12 @@
     </div>
     <div>
       <a class="xref" href="Kinstrife.SpatialHandles.Point.html#Kinstrife_SpatialHandles_Point_shouldSnap">Point.shouldSnap</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.SpatialHandles.Point.html#Kinstrife_SpatialHandles_Point_Capacity">Point.Capacity</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.SpatialHandles.Point.html#Kinstrife_SpatialHandles_Point_GetCapacityStatus">Point.GetCapacityStatus()</a>
     </div>
     <div>
       <a class="xref" href="Kinstrife.SpatialHandles.Point.html#Kinstrife_SpatialHandles_Point_overrideDrawing">Point.overrideDrawing</a>
@@ -162,18 +167,59 @@
       <a class="xref" href="Kinstrife.SpatialHandles.Point.html#Kinstrife_SpatialHandles_Point_OnDestroy">Point.OnDestroy()</a>
     </div>
     <div>
+      <a class="xref" href="Kinstrife.SpatialHandles.SpatialHandle.html#Kinstrife_SpatialHandles_SpatialHandle_FreeCapacity">SpatialHandle.FreeCapacity</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.SpatialHandles.SpatialHandle.html#Kinstrife_SpatialHandles_SpatialHandle_CapacityStatus">SpatialHandle.CapacityStatus</a>
+    </div>
+    <div>
       <a class="xref" href="Kinstrife.SpatialHandles.SpatialHandle.html#Kinstrife_SpatialHandles_SpatialHandle_Rebuild">SpatialHandle.Rebuild()</a>
     </div>
     <div>
       <a class="xref" href="Kinstrife.SpatialHandles.SpatialHandle.html#Kinstrife_SpatialHandles_SpatialHandle_OnEnable">SpatialHandle.OnEnable()</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.SpatialHandles.SpatialHandle.html#Kinstrife_SpatialHandles_SpatialHandle_GetPosition">SpatialHandle.GetPosition()</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.SpatialHandles.SpatialHandle.html#Kinstrife_SpatialHandles_SpatialHandle_GetRotation">SpatialHandle.GetRotation()</a>
     </div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Kinstrife.SpatialHandles.html">Kinstrife.SpatialHandles</a></h6>
   <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
   <h5 id="Kinstrife_SpatialHandles_SpawnPoint_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class SpawnPoint : Point, ICustomGizmo, IRegisterAtSceneToolsManager</code></pre>
+    <pre><code class="lang-csharp hljs">public class SpawnPoint : Point, ICustomGizmo</code></pre>
   </div>
+  <h3 id="properties">Properties
+  </h3>
+  
+  
+  <a id="Kinstrife_SpatialHandles_SpawnPoint_Prio_" data-uid="Kinstrife.SpatialHandles.SpawnPoint.Prio*"></a>
+  <h4 id="Kinstrife_SpatialHandles_SpawnPoint_Prio" data-uid="Kinstrife.SpatialHandles.SpawnPoint.Prio">Prio</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override int Prio { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Kinstrife.SpatialHandles.Point.html#Kinstrife_SpatialHandles_Point_Prio">Point.Prio</a></div>
   <h3 id="methods">Methods
   </h3>
   
@@ -184,7 +230,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected override void CacheReferences()</code></pre>
+    <pre><code class="lang-csharp hljs">public override void CacheReferences()</code></pre>
   </div>
   <h5 class="overrides">Overrides</h5>
   <div><a class="xref" href="Kinstrife.SpatialHandles.SpatialHandle.html#Kinstrife_SpatialHandles_SpatialHandle_CacheReferences">SpatialHandle.CacheReferences()</a></div>
@@ -248,9 +294,6 @@
   <h3 id="implements">Implements</h3>
   <div>
       <a class="xref" href="Kinstrife.Gizmos.ICustomGizmo.html">ICustomGizmo</a>
-  </div>
-  <div>
-      <a class="xref" href="Kinstrife.SpatialHandles.IRegisterAtSceneToolsManager.html">IRegisterAtSceneToolsManager</a>
   </div>
 </article>
           </div>

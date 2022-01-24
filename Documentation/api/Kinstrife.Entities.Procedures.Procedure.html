@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Struct Procedure
    | Kinstrife ">
-    <meta name="generator" content="docfx 2.58.9.0">
+    <meta name="generator" content="docfx 2.59.0.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
@@ -105,7 +105,7 @@
   <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
   <h5 id="Kinstrife_Entities_Procedures_Procedure_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public struct Procedure : IComponentData, IHasStatusFlags</code></pre>
+    <pre><code class="lang-csharp hljs">public struct Procedure : IHasStatusFlags</code></pre>
   </div>
   <h3 id="fields">Fields
   </h3>
@@ -136,12 +136,13 @@
   </table>
   
   
-  <h4 id="Kinstrife_Entities_Procedures_Procedure_IsActive" data-uid="Kinstrife.Entities.Procedures.Procedure.IsActive">IsActive</h4>
-  <div class="markdown level1 summary"></div>
+  <h4 id="Kinstrife_Entities_Procedures_Procedure_TimeActive" data-uid="Kinstrife.Entities.Procedures.Procedure.TimeActive">TimeActive</h4>
+  <div class="markdown level1 summary"><p>The time this procedure is active</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public bool IsActive</code></pre>
+    <pre><code class="lang-csharp hljs">public float TimeActive</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -153,20 +154,19 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="xref">System.Single</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   
   
-  <h4 id="Kinstrife_Entities_Procedures_Procedure_TimeActive" data-uid="Kinstrife.Entities.Procedures.Procedure.TimeActive">TimeActive</h4>
-  <div class="markdown level1 summary"><p>The time this procedure is active</p>
-</div>
+  <h4 id="Kinstrife_Entities_Procedures_Procedure_Weight" data-uid="Kinstrife.Entities.Procedures.Procedure.Weight">Weight</h4>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public float TimeActive</code></pre>
+    <pre><code class="lang-csharp hljs">public float Weight</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -221,6 +221,31 @@
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public readonly bool DidDeActivate { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Kinstrife_Entities_Procedures_Procedure_IsActive_" data-uid="Kinstrife.Entities.Procedures.Procedure.IsActive*"></a>
+  <h4 id="Kinstrife_Entities_Procedures_Procedure_IsActive" data-uid="Kinstrife.Entities.Procedures.Procedure.IsActive">IsActive</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public readonly bool IsActive { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">

@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class Point
    | Kinstrife ">
-    <meta name="generator" content="docfx 2.58.9.0">
+    <meta name="generator" content="docfx 2.59.0.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
@@ -88,10 +88,15 @@
   <div classs="implements">
     <h5>Implements</h5>
     <div><a class="xref" href="Kinstrife.Gizmos.ICustomGizmo.html">ICustomGizmo</a></div>
-    <div><a class="xref" href="Kinstrife.SpatialHandles.IRegisterAtSceneToolsManager.html">IRegisterAtSceneToolsManager</a></div>
   </div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="Kinstrife.SpatialHandles.SpatialHandle.html#Kinstrife_SpatialHandles_SpatialHandle_FreeCapacity">SpatialHandle.FreeCapacity</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.SpatialHandles.SpatialHandle.html#Kinstrife_SpatialHandles_SpatialHandle_CapacityStatus">SpatialHandle.CapacityStatus</a>
+    </div>
     <div>
       <a class="xref" href="Kinstrife.SpatialHandles.SpatialHandle.html#Kinstrife_SpatialHandles_SpatialHandle_Rebuild">SpatialHandle.Rebuild()</a>
     </div>
@@ -101,12 +106,18 @@
     <div>
       <a class="xref" href="Kinstrife.SpatialHandles.SpatialHandle.html#Kinstrife_SpatialHandles_SpatialHandle_OnEnable">SpatialHandle.OnEnable()</a>
     </div>
+    <div>
+      <a class="xref" href="Kinstrife.SpatialHandles.SpatialHandle.html#Kinstrife_SpatialHandles_SpatialHandle_GetPosition">SpatialHandle.GetPosition()</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.SpatialHandles.SpatialHandle.html#Kinstrife_SpatialHandles_SpatialHandle_GetRotation">SpatialHandle.GetRotation()</a>
+    </div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Kinstrife.SpatialHandles.html">Kinstrife.SpatialHandles</a></h6>
   <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
   <h5 id="Kinstrife_SpatialHandles_Point_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class Point : SpatialHandle, ICustomGizmo, IRegisterAtSceneToolsManager</code></pre>
+    <pre><code class="lang-csharp hljs">public class Point : SpatialHandle, ICustomGizmo</code></pre>
   </div>
   <h3 id="fields">Fields
   </h3>
@@ -354,6 +365,33 @@
   </h3>
   
   
+  <a id="Kinstrife_SpatialHandles_Point_Capacity_" data-uid="Kinstrife.SpatialHandles.Point.Capacity*"></a>
+  <h4 id="Kinstrife_SpatialHandles_Point_Capacity" data-uid="Kinstrife.SpatialHandles.Point.Capacity">Capacity</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override int Capacity { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Kinstrife.SpatialHandles.SpatialHandle.html#Kinstrife_SpatialHandles_SpatialHandle_Capacity">SpatialHandle.Capacity</a></div>
+  
+  
   <a id="Kinstrife_SpatialHandles_Point_overrideDrawing_" data-uid="Kinstrife.SpatialHandles.Point.overrideDrawing*"></a>
   <h4 id="Kinstrife_SpatialHandles_Point_overrideDrawing" data-uid="Kinstrife.SpatialHandles.Point.overrideDrawing">overrideDrawing</h4>
   <div class="markdown level1 summary"></div>
@@ -377,6 +415,33 @@
       </tr>
     </tbody>
   </table>
+  
+  
+  <a id="Kinstrife_SpatialHandles_Point_Prio_" data-uid="Kinstrife.SpatialHandles.Point.Prio*"></a>
+  <h4 id="Kinstrife_SpatialHandles_Point_Prio" data-uid="Kinstrife.SpatialHandles.Point.Prio">Prio</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override int Prio { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Kinstrife.SpatialHandles.SpatialHandle.html#Kinstrife_SpatialHandles_SpatialHandle_Prio">SpatialHandle.Prio</a></div>
   
   
   <a id="Kinstrife_SpatialHandles_Point_shouldGround_" data-uid="Kinstrife.SpatialHandles.Point.shouldGround*"></a>
@@ -481,6 +546,33 @@
       </tr>
     </tbody>
   </table>
+  
+  
+  <a id="Kinstrife_SpatialHandles_Point_GetCapacityStatus_" data-uid="Kinstrife.SpatialHandles.Point.GetCapacityStatus*"></a>
+  <h4 id="Kinstrife_SpatialHandles_Point_GetCapacityStatus" data-uid="Kinstrife.SpatialHandles.Point.GetCapacityStatus">GetCapacityStatus()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override CapacityStatus GetCapacityStatus()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Kinstrife.SpatialHandles.CapacityStatus.html">CapacityStatus</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Kinstrife.SpatialHandles.SpatialHandle.html#Kinstrife_SpatialHandles_SpatialHandle_GetCapacityStatus">SpatialHandle.GetCapacityStatus()</a></div>
   
   
   <a id="Kinstrife_SpatialHandles_Point_GetSnapTarget_" data-uid="Kinstrife.SpatialHandles.Point.GetSnapTarget*"></a>
@@ -696,9 +788,6 @@
   <h3 id="implements">Implements</h3>
   <div>
       <a class="xref" href="Kinstrife.Gizmos.ICustomGizmo.html">ICustomGizmo</a>
-  </div>
-  <div>
-      <a class="xref" href="Kinstrife.SpatialHandles.IRegisterAtSceneToolsManager.html">IRegisterAtSceneToolsManager</a>
   </div>
 </article>
           </div>
