@@ -85,9 +85,9 @@
   </div>
   <div classs="implements">
     <h5>Implements</h5>
-    <div><a class="xref" href="Kinstrife.Core.DependencyInjection.IInjectable.html">IInjectable</a></div>
     <div><a class="xref" href="Kinstrife.Core.DependencyInjection.IInstall-1.html">IInstall</a>&lt;<a class="xref" href="Kinstrife.UI.UIModule.html">UIModule</a>&gt;</div>
     <div><a class="xref" href="Kinstrife.Core.DependencyInjection.IInstall.html">IInstall</a></div>
+    <div><a class="xref" href="Kinstrife.Core.DependencyInjection.IInjectable.html">IInjectable</a></div>
     <div><a class="xref" href="Kinstrife.Core.DependencyInjection.IDependent.html">IDependent</a></div>
   </div>
   <div class="inheritedMembers">
@@ -102,16 +102,22 @@
       <a class="xref" href="Kinstrife.UI.UIModule.html#Kinstrife_UI_UIModule_PrimaryInitialization_Kinstrife_Application_ModuleDefinition_">UIModule.PrimaryInitialization(ModuleDefinition)</a>
     </div>
     <div>
+      <a class="xref" href="Kinstrife.UI.UIModule.html#Kinstrife_UI_UIModule_OnEnable">UIModule.OnEnable()</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.UI.UIModule.html#Kinstrife_UI_UIModule_OnDestroy">UIModule.OnDestroy()</a>
+    </div>
+    <div>
       <a class="xref" href="Kinstrife.Application.PrimaryModule.html#Kinstrife_Application_PrimaryModule_Inject">PrimaryModule.Inject()</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.Application.PrimaryModule.html#Kinstrife_Application_PrimaryModule_PreloadAssets_Kinstrife_Application_ModuleDefinition_">PrimaryModule.PreloadAssets(ModuleDefinition)</a>
     </div>
     <div>
       <a class="xref" href="Kinstrife.Application.PrimaryModule.html#Kinstrife_Application_PrimaryModule_SecondaryInitialization_Kinstrife_Application_ModuleDefinition_">PrimaryModule.SecondaryInitialization(ModuleDefinition)</a>
     </div>
     <div>
       <a class="xref" href="Kinstrife.Application.PrimaryModule.html#Kinstrife_Application_PrimaryModule_Terminate">PrimaryModule.Terminate()</a>
-    </div>
-    <div>
-      <a class="xref" href="Kinstrife.Application.PrimaryModule.html#Kinstrife_Application_PrimaryModule_OnDestroy">PrimaryModule.OnDestroy()</a>
     </div>
     <div>
       <a class="xref" href="Kinstrife.Application.Module.html#Kinstrife_Application_Module_ModuleRef">Module.ModuleRef</a>
@@ -129,10 +135,16 @@
       <a class="xref" href="Kinstrife.Application.Module.html#Kinstrife_Application_Module_IsPrimary">Module.IsPrimary</a>
     </div>
     <div>
+      <a class="xref" href="Kinstrife.Application.Module.html#Kinstrife_Application_Module_IsDirector">Module.IsDirector</a>
+    </div>
+    <div>
       <a class="xref" href="Kinstrife.Application.Module.html#Kinstrife_Application_Module_OnPauseChanged">Module.OnPauseChanged</a>
     </div>
     <div>
       <a class="xref" href="Kinstrife.Application.Module.html#Kinstrife_Application_Module_OnPrimaryChanged">Module.OnPrimaryChanged</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.Application.Module.html#Kinstrife_Application_Module_OnDirectorChanged">Module.OnDirectorChanged</a>
     </div>
     <div>
       <a class="xref" href="Kinstrife.Application.Module.html#Kinstrife_Application_Module_RunInstallation">Module.RunInstallation()</a>
@@ -151,6 +163,12 @@
     </div>
     <div>
       <a class="xref" href="Kinstrife.Application.Module.html#Kinstrife_Application_Module_SetPause_System_Boolean_">Module.SetPause(Boolean)</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.Application.Module.html#Kinstrife_Application_Module_TryMakePrimary">Module.TryMakePrimary()</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.Application.Module.html#Kinstrife_Application_Module_IsInitialized">Module.IsInitialized</a>
     </div>
     <div>
       <a class="xref" href="Kinstrife.Application.Module.html#Kinstrife_Application_Module_TrySwitchGameMode_Kinstrife_Application_GameMode_Kinstrife_Application_Location_System_Boolean_">Module.TrySwitchGameMode(GameMode, Location, Boolean)</a>
@@ -172,17 +190,17 @@
   <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
   <h5 id="Kinstrife_UI_MainMenuModule_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class MainMenuModule : UIModule, IInjectable, IInstall&lt;UIModule&gt;, IInstall, IDependent</code></pre>
+    <pre><code class="lang-csharp hljs">public class MainMenuModule : UIModule, IInstall&lt;UIModule&gt;, IInstall, IInjectable, IDependent</code></pre>
   </div>
   <h3 id="implements">Implements</h3>
-  <div>
-      <a class="xref" href="Kinstrife.Core.DependencyInjection.IInjectable.html">IInjectable</a>
-  </div>
   <div>
       <a class="xref" href="Kinstrife.Core.DependencyInjection.IInstall-1.html">IInstall&lt;T&gt;</a>
   </div>
   <div>
       <a class="xref" href="Kinstrife.Core.DependencyInjection.IInstall.html">IInstall</a>
+  </div>
+  <div>
+      <a class="xref" href="Kinstrife.Core.DependencyInjection.IInjectable.html">IInjectable</a>
   </div>
   <div>
       <a class="xref" href="Kinstrife.Core.DependencyInjection.IDependent.html">IDependent</a>

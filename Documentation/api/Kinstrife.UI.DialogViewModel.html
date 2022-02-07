@@ -78,30 +78,115 @@
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><span class="xref">DialogViewModel</span></div>
-      <div class="level2"><a class="xref" href="Kinstrife.UI.ConfirmationDialog.html">ConfirmationDialog</a></div>
+    <div class="level1"><a class="xref" href="Kinstrife.UI.ViewModelComponent.html">ViewModelComponent</a></div>
+    <div class="level2"><a class="xref" href="Kinstrife.UI.ServiceViewModelComponent.html">ServiceViewModelComponent</a></div>
+    <div class="level3"><span class="xref">DialogViewModel</span></div>
   </div>
   <div classs="implements">
     <h5>Implements</h5>
     <div><span class="xref">IModel</span></div>
+    <div><span class="xref">IInjectable</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="Kinstrife.UI.ViewModelComponent.html#Kinstrife_UI_ViewModelComponent_Render">ViewModelComponent.Render</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.UI.ViewModelComponent.html#Kinstrife_UI_ViewModelComponent_onModelChange">ViewModelComponent.onModelChange</a>
+    </div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Kinstrife.UI.html">Kinstrife.UI</a></h6>
   <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
   <h5 id="Kinstrife_UI_DialogViewModel_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class DialogViewModel : MonoBehaviour</code></pre>
+    <pre><code class="lang-csharp hljs">public class DialogViewModel : ServiceViewModelComponent</code></pre>
   </div>
-  <h3 id="properties">Properties
+  <h3 id="fields">Fields
   </h3>
   
   
-  <a id="Kinstrife_UI_DialogViewModel_isShowing_" data-uid="Kinstrife.UI.DialogViewModel.isShowing*"></a>
-  <h4 id="Kinstrife_UI_DialogViewModel_isShowing" data-uid="Kinstrife.UI.DialogViewModel.isShowing">isShowing</h4>
+  <h4 id="Kinstrife_UI_DialogViewModel_closeAction" data-uid="Kinstrife.UI.DialogViewModel.closeAction">closeAction</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public bool isShowing { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public BindableObject closeAction</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">BindableObject</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="Kinstrife_UI_DialogViewModel_closeButtonText" data-uid="Kinstrife.UI.DialogViewModel.closeButtonText">closeButtonText</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string closeButtonText</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="Kinstrife_UI_DialogViewModel_model" data-uid="Kinstrife.UI.DialogViewModel.model">model</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public List&lt;BindableObject&gt; model</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.List</span>&lt;<span class="xref">BindableObject</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="properties">Properties
+  </h3>
+  
+  
+  <a id="Kinstrife_UI_DialogViewModel_HasChoice_" data-uid="Kinstrife.UI.DialogViewModel.HasChoice*"></a>
+  <h4 id="Kinstrife_UI_DialogViewModel_HasChoice" data-uid="Kinstrife.UI.DialogViewModel.HasChoice">HasChoice</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool HasChoice { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -120,13 +205,63 @@
   </table>
   
   
-  <a id="Kinstrife_UI_DialogViewModel_Message_" data-uid="Kinstrife.UI.DialogViewModel.Message*"></a>
-  <h4 id="Kinstrife_UI_DialogViewModel_Message" data-uid="Kinstrife.UI.DialogViewModel.Message">Message</h4>
+  <a id="Kinstrife_UI_DialogViewModel_Initialized_" data-uid="Kinstrife.UI.DialogViewModel.Initialized*"></a>
+  <h4 id="Kinstrife_UI_DialogViewModel_Initialized" data-uid="Kinstrife.UI.DialogViewModel.Initialized">Initialized</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public string Message { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public bool Initialized { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Kinstrife_UI_DialogViewModel_isCloseRequested_" data-uid="Kinstrife.UI.DialogViewModel.isCloseRequested*"></a>
+  <h4 id="Kinstrife_UI_DialogViewModel_isCloseRequested" data-uid="Kinstrife.UI.DialogViewModel.isCloseRequested">isCloseRequested</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool isCloseRequested { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Kinstrife_UI_DialogViewModel_message_" data-uid="Kinstrife.UI.DialogViewModel.message*"></a>
+  <h4 id="Kinstrife_UI_DialogViewModel_message" data-uid="Kinstrife.UI.DialogViewModel.message">message</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string message { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -145,13 +280,13 @@
   </table>
   
   
-  <a id="Kinstrife_UI_DialogViewModel_onClose_" data-uid="Kinstrife.UI.DialogViewModel.onClose*"></a>
-  <h4 id="Kinstrife_UI_DialogViewModel_onClose" data-uid="Kinstrife.UI.DialogViewModel.onClose">onClose</h4>
+  <a id="Kinstrife_UI_DialogViewModel_ShowCloseButton_" data-uid="Kinstrife.UI.DialogViewModel.ShowCloseButton*"></a>
+  <h4 id="Kinstrife_UI_DialogViewModel_ShowCloseButton" data-uid="Kinstrife.UI.DialogViewModel.ShowCloseButton">ShowCloseButton</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Action onClose { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public bool ShowCloseButton { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -163,20 +298,20 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Action</span></td>
+        <td><span class="xref">System.Boolean</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   
   
-  <a id="Kinstrife_UI_DialogViewModel_Title_" data-uid="Kinstrife.UI.DialogViewModel.Title*"></a>
-  <h4 id="Kinstrife_UI_DialogViewModel_Title" data-uid="Kinstrife.UI.DialogViewModel.Title">Title</h4>
+  <a id="Kinstrife_UI_DialogViewModel_title_" data-uid="Kinstrife.UI.DialogViewModel.title*"></a>
+  <h4 id="Kinstrife_UI_DialogViewModel_title" data-uid="Kinstrife.UI.DialogViewModel.title">title</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public string Title { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public string title { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -197,13 +332,13 @@
   </h3>
   
   
-  <a id="Kinstrife_UI_DialogViewModel_Close_" data-uid="Kinstrife.UI.DialogViewModel.Close*"></a>
-  <h4 id="Kinstrife_UI_DialogViewModel_Close" data-uid="Kinstrife.UI.DialogViewModel.Close">Close()</h4>
+  <a id="Kinstrife_UI_DialogViewModel_CloseModal_" data-uid="Kinstrife.UI.DialogViewModel.CloseModal*"></a>
+  <h4 id="Kinstrife_UI_DialogViewModel_CloseModal" data-uid="Kinstrife.UI.DialogViewModel.CloseModal">CloseModal()</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void Close()</code></pre>
+    <pre><code class="lang-csharp hljs">public void CloseModal()</code></pre>
   </div>
   
   
@@ -213,7 +348,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual void Initialize(VisualElement container, Plate plate)</code></pre>
+    <pre><code class="lang-csharp hljs">public override void Initialize(VisualElement container, Plate plate)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -237,25 +372,17 @@
       </tr>
     </tbody>
   </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Kinstrife.UI.ViewModelComponent.html#Kinstrife_UI_ViewModelComponent_Initialize_VisualElement_Plate_">ViewModelComponent.Initialize(VisualElement, Plate)</a></div>
   
   
-  <a id="Kinstrife_UI_DialogViewModel_Show_" data-uid="Kinstrife.UI.DialogViewModel.Show*"></a>
-  <h4 id="Kinstrife_UI_DialogViewModel_Show" data-uid="Kinstrife.UI.DialogViewModel.Show">Show()</h4>
+  <a id="Kinstrife_UI_DialogViewModel_Inject_" data-uid="Kinstrife.UI.DialogViewModel.Inject*"></a>
+  <h4 id="Kinstrife_UI_DialogViewModel_Inject_Kinstrife_UI_UIInteraction_" data-uid="Kinstrife.UI.DialogViewModel.Inject(Kinstrife.UI.UIInteraction)">Inject(UIInteraction)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void Show()</code></pre>
-  </div>
-  
-  
-  <a id="Kinstrife_UI_DialogViewModel_Show_" data-uid="Kinstrife.UI.DialogViewModel.Show*"></a>
-  <h4 id="Kinstrife_UI_DialogViewModel_Show_CancellationToken_" data-uid="Kinstrife.UI.DialogViewModel.Show(CancellationToken)">Show(CancellationToken)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public async UniTask Show(CancellationToken token)</code></pre>
+    <pre><code class="lang-csharp hljs">public void Inject(UIInteraction interaction)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -268,30 +395,124 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">CancellationToken</span></td>
-        <td><span class="parametername">token</span></td>
+        <td><a class="xref" href="Kinstrife.UI.UIInteraction.html">UIInteraction</a></td>
+        <td><span class="parametername">interaction</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
-  <h5 class="returns">Returns</h5>
+  
+  
+  <a id="Kinstrife_UI_DialogViewModel_RequestClose_" data-uid="Kinstrife.UI.DialogViewModel.RequestClose*"></a>
+  <h4 id="Kinstrife_UI_DialogViewModel_RequestClose" data-uid="Kinstrife.UI.DialogViewModel.RequestClose">RequestClose()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void RequestClose()</code></pre>
+  </div>
+  
+  
+  <a id="Kinstrife_UI_DialogViewModel_SetChoices_" data-uid="Kinstrife.UI.DialogViewModel.SetChoices*"></a>
+  <h4 id="Kinstrife_UI_DialogViewModel_SetChoices_System_Collections_Generic_List_Kinstrife_UI_DialogViewModel_Option__" data-uid="Kinstrife.UI.DialogViewModel.SetChoices(System.Collections.Generic.List{Kinstrife.UI.DialogViewModel.Option})">SetChoices(List&lt;DialogViewModel.Option&gt;)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetChoices(List&lt;DialogViewModel.Option&gt; interactions = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
       <tr>
         <th>Type</th>
+        <th>Name</th>
         <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">UniTask</span></td>
+        <td><span class="xref">System.Collections.Generic.List</span>&lt;<a class="xref" href="Kinstrife.UI.DialogViewModel.Option.html">DialogViewModel.Option</a>&gt;</td>
+        <td><span class="parametername">interactions</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
+  
+  
+  <a id="Kinstrife_UI_DialogViewModel_SetCloseButtonText_" data-uid="Kinstrife.UI.DialogViewModel.SetCloseButtonText*"></a>
+  <h4 id="Kinstrife_UI_DialogViewModel_SetCloseButtonText_System_String_" data-uid="Kinstrife.UI.DialogViewModel.SetCloseButtonText(System.String)">SetCloseButtonText(String)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetCloseButtonText(string text)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">text</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Kinstrife_UI_DialogViewModel_SetMessage_" data-uid="Kinstrife.UI.DialogViewModel.SetMessage*"></a>
+  <h4 id="Kinstrife_UI_DialogViewModel_SetMessage_System_String_System_String_" data-uid="Kinstrife.UI.DialogViewModel.SetMessage(System.String,System.String)">SetMessage(String, String)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetMessage(string title, string body)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">title</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">body</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Kinstrife_UI_DialogViewModel_ShowDialog_" data-uid="Kinstrife.UI.DialogViewModel.ShowDialog*"></a>
+  <h4 id="Kinstrife_UI_DialogViewModel_ShowDialog" data-uid="Kinstrife.UI.DialogViewModel.ShowDialog">ShowDialog()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void ShowDialog()</code></pre>
+  </div>
   <h3 id="implements">Implements</h3>
   <div>
       <span class="xref">IModel</span>
+  </div>
+  <div>
+      <span class="xref">IInjectable</span>
   </div>
 </article>
           </div>

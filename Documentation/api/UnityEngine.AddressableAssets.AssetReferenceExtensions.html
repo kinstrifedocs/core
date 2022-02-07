@@ -220,12 +220,12 @@
   
   
   <a id="UnityEngine_AddressableAssets_AssetReferenceExtensions_Get_" data-uid="UnityEngine.AddressableAssets.AssetReferenceExtensions.Get*"></a>
-  <h4 id="UnityEngine_AddressableAssets_AssetReferenceExtensions_Get__1_AssetReference_System_Boolean_" data-uid="UnityEngine.AddressableAssets.AssetReferenceExtensions.Get``1(AssetReference,System.Boolean)">Get&lt;T&gt;(AssetReference, Boolean)</h4>
+  <h4 id="UnityEngine_AddressableAssets_AssetReferenceExtensions_Get__1_AssetReference_" data-uid="UnityEngine.AddressableAssets.AssetReferenceExtensions.Get``1(AssetReference)">Get&lt;T&gt;(AssetReference)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static T Get&lt;T&gt;(this AssetReference assetRef, bool synchronous)
+    <pre><code class="lang-csharp hljs">public static T Get&lt;T&gt;(this AssetReference assetRef)
     where T : Object</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -241,11 +241,6 @@
       <tr>
         <td><span class="xref">AssetReference</span></td>
         <td><span class="parametername">assetRef</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><span class="xref">System.Boolean</span></td>
-        <td><span class="parametername">synchronous</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -319,6 +314,64 @@
     <tbody>
       <tr>
         <td><span class="xref">T</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="UnityEngine_AddressableAssets_AssetReferenceExtensions_GetAsync_" data-uid="UnityEngine.AddressableAssets.AssetReferenceExtensions.GetAsync*"></a>
+  <h4 id="UnityEngine_AddressableAssets_AssetReferenceExtensions_GetAsync__1_AssetReference_" data-uid="UnityEngine.AddressableAssets.AssetReferenceExtensions.GetAsync``1(AssetReference)">GetAsync&lt;T&gt;(AssetReference)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static async UniTask&lt;T&gt; GetAsync&lt;T&gt;(this AssetReference assetRef)
+    where T : Object</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">AssetReference</span></td>
+        <td><span class="parametername">assetRef</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">UniTask</span>&lt;T&gt;</td>
         <td></td>
       </tr>
     </tbody>

@@ -160,7 +160,8 @@ public class ConditionalProcessorAsync : BaseGraphProcessor</code></pre>
   
   
   <h4 id="Kinstrife_GraphTools_ConditionalProcessorAsync_currentlyEvaluatingNode" data-uid="Kinstrife.GraphTools.ConditionalProcessorAsync.currentlyEvaluatingNode">currentlyEvaluatingNode</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The node that is currently being evaluated</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -184,7 +185,8 @@ public class ConditionalProcessorAsync : BaseGraphProcessor</code></pre>
   
   
   <h4 id="Kinstrife_GraphTools_ConditionalProcessorAsync_currentlyProcessingNode" data-uid="Kinstrife.GraphTools.ConditionalProcessorAsync.currentlyProcessingNode">currentlyProcessingNode</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The node that is currently being processed</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -249,6 +251,30 @@ public class ConditionalProcessorAsync : BaseGraphProcessor</code></pre>
     <tbody>
       <tr>
         <td><span class="xref">System.Collections.Generic.List</span>&lt;<span class="xref">ExposedParameter</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="Kinstrife_GraphTools_ConditionalProcessorAsync_isStopped" data-uid="Kinstrife.GraphTools.ConditionalProcessorAsync.isStopped">isStopped</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool isStopped</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -578,6 +604,54 @@ public class ConditionalProcessorAsync : BaseGraphProcessor</code></pre>
   </div>
   <h3 id="events">Events
   </h3>
+  
+  
+  <h4 id="Kinstrife_GraphTools_ConditionalProcessorAsync_onCanceled" data-uid="Kinstrife.GraphTools.ConditionalProcessorAsync.onCanceled">onCanceled</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public event Action onCanceled</code></pre>
+  </div>
+  <h5 class="eventType">Event Type</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Kinstrife.Action.html">Kinstrife.Action</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="Kinstrife_GraphTools_ConditionalProcessorAsync_onCompleted" data-uid="Kinstrife.GraphTools.ConditionalProcessorAsync.onCompleted">onCompleted</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public event Action onCompleted</code></pre>
+  </div>
+  <h5 class="eventType">Event Type</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Kinstrife.Action.html">Kinstrife.Action</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   
   
   <h4 id="Kinstrife_GraphTools_ConditionalProcessorAsync_onEvaluateNode" data-uid="Kinstrife.GraphTools.ConditionalProcessorAsync.onEvaluateNode">onEvaluateNode</h4>

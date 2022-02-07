@@ -87,7 +87,7 @@
     <div><a class="xref" href="Kinstrife.Core.DependencyInjection.IInjectable.html">IInjectable</a></div>
     <div><a class="xref" href="Kinstrife.Core.DependencyInjection.IDependent.html">IDependent</a></div>
     <div><span class="xref">IStateInterpreter</span></div>
-    <div><span class="xref">IInitializable</span></div>
+    <div><span class="xref">IGrapheneInitializable</span></div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Kinstrife.Settings.html">Kinstrife.Settings</a></h6>
   <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
@@ -116,32 +116,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">AssetRef</span>&lt;<a class="xref" href="Kinstrife.Settings.SettingsData.html">SettingsData</a>&gt;</td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <h4 id="Kinstrife_Settings_SettingsViewModel_originalCached" data-uid="Kinstrife.Settings.SettingsViewModel.originalCached">originalCached</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[NonSerialized]
-public SettingsData originalCached</code></pre>
-  </div>
-  <h5 class="fieldValue">Field Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Kinstrife.Settings.SettingsData.html">SettingsData</a></td>
+        <td><span class="xref">AssetRef</span>&lt;<span class="xref">SettingsData</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -153,7 +128,8 @@ public SettingsData originalCached</code></pre>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public SettingsData viewModelCopy</code></pre>
+    <pre><code class="lang-csharp hljs">[NonSerialized]
+public SettingsData viewModelCopy</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -165,7 +141,7 @@ public SettingsData originalCached</code></pre>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="Kinstrife.Settings.SettingsData.html">SettingsData</a></td>
+        <td><span class="xref">SettingsData</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -379,12 +355,12 @@ public SettingsData originalCached</code></pre>
   
   
   <a id="Kinstrife_Settings_SettingsViewModel_Inject_" data-uid="Kinstrife.Settings.SettingsViewModel.Inject*"></a>
-  <h4 id="Kinstrife_Settings_SettingsViewModel_Inject_Kinstrife_Settings_SettingsManager_" data-uid="Kinstrife.Settings.SettingsViewModel.Inject(Kinstrife.Settings.SettingsManager)">Inject(SettingsManager)</h4>
+  <h4 id="Kinstrife_Settings_SettingsViewModel_Inject_Kinstrife_Settings_SettingsManager_UIInteraction_" data-uid="Kinstrife.Settings.SettingsViewModel.Inject(Kinstrife.Settings.SettingsManager,UIInteraction)">Inject(SettingsManager, UIInteraction)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void Inject(SettingsManager settingsManager)</code></pre>
+    <pre><code class="lang-csharp hljs">public async void Inject(SettingsManager settingsManager, UIInteraction interaction)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -399,6 +375,11 @@ public SettingsData originalCached</code></pre>
       <tr>
         <td><a class="xref" href="Kinstrife.Settings.SettingsManager.html">SettingsManager</a></td>
         <td><span class="parametername">settingsManager</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">UIInteraction</span></td>
+        <td><span class="parametername">interaction</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -430,7 +411,7 @@ public SettingsData originalCached</code></pre>
       <span class="xref">IStateInterpreter</span>
   </div>
   <div>
-      <span class="xref">IInitializable</span>
+      <span class="xref">IGrapheneInitializable</span>
   </div>
 </article>
           </div>

@@ -1,0 +1,478 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class UIServiceModule
+   | Kinstrife </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class UIServiceModule
+   | Kinstrife ">
+    <meta name="generator" content="docfx 2.59.0.0">
+    
+    <link rel="shortcut icon" href="../../favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet"> 
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../index.html">
+                <img id="logo" class="svg" src="../../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Kinstrife.UI.UIServiceModule">
+  
+  
+  <h1 id="Kinstrife_UI_UIServiceModule" data-uid="Kinstrife.UI.UIServiceModule" class="text-break">Class UIServiceModule
+  </h1>
+  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><a class="xref" href="Kinstrife.Application.Module.html">Module</a></div>
+    <div class="level2"><a class="xref" href="Kinstrife.Application.PrimaryModule.html">PrimaryModule</a></div>
+    <div class="level3"><a class="xref" href="Kinstrife.UI.UIModule.html">UIModule</a></div>
+    <div class="level4"><span class="xref">UIServiceModule</span></div>
+  </div>
+  <div classs="implements">
+    <h5>Implements</h5>
+    <div><a class="xref" href="Kinstrife.Core.DependencyInjection.IInstall-1.html">IInstall</a>&lt;<a class="xref" href="Kinstrife.UI.UIModule.html">UIModule</a>&gt;</div>
+    <div><a class="xref" href="Kinstrife.Core.DependencyInjection.IInstall.html">IInstall</a></div>
+    <div><a class="xref" href="Kinstrife.Core.DependencyInjection.IInjectable.html">IInjectable</a></div>
+    <div><a class="xref" href="Kinstrife.Core.DependencyInjection.IDependent.html">IDependent</a></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="Kinstrife.UI.UIModule.html#Kinstrife_UI_UIModule_Graphene">UIModule.Graphene</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.UI.UIModule.html#Kinstrife_UI_UIModule_Inject_Graphene_Graphene_">UIModule.Inject(Graphene.Graphene)</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.UI.UIModule.html#Kinstrife_UI_UIModule_PrimaryInitialization_Kinstrife_Application_ModuleDefinition_">UIModule.PrimaryInitialization(ModuleDefinition)</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.UI.UIModule.html#Kinstrife_UI_UIModule_OnDestroy">UIModule.OnDestroy()</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.Application.PrimaryModule.html#Kinstrife_Application_PrimaryModule_Inject">PrimaryModule.Inject()</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.Application.PrimaryModule.html#Kinstrife_Application_PrimaryModule_PreloadAssets_Kinstrife_Application_ModuleDefinition_">PrimaryModule.PreloadAssets(ModuleDefinition)</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.Application.PrimaryModule.html#Kinstrife_Application_PrimaryModule_SecondaryInitialization_Kinstrife_Application_ModuleDefinition_">PrimaryModule.SecondaryInitialization(ModuleDefinition)</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.Application.PrimaryModule.html#Kinstrife_Application_PrimaryModule_Terminate">PrimaryModule.Terminate()</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.Application.Module.html#Kinstrife_Application_Module_ModuleRef">Module.ModuleRef</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.Application.Module.html#Kinstrife_Application_Module_source">Module.source</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.Application.Module.html#Kinstrife_Application_Module_timeController">Module.timeController</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.Application.Module.html#Kinstrife_Application_Module_applicationFlow">Module.applicationFlow</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.Application.Module.html#Kinstrife_Application_Module_IsPrimary">Module.IsPrimary</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.Application.Module.html#Kinstrife_Application_Module_IsDirector">Module.IsDirector</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.Application.Module.html#Kinstrife_Application_Module_OnPauseChanged">Module.OnPauseChanged</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.Application.Module.html#Kinstrife_Application_Module_OnPrimaryChanged">Module.OnPrimaryChanged</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.Application.Module.html#Kinstrife_Application_Module_OnDirectorChanged">Module.OnDirectorChanged</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.Application.Module.html#Kinstrife_Application_Module_RunInstallation">Module.RunInstallation()</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.Application.Module.html#Kinstrife_Application_Module_Start">Module.Start()</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.Application.Module.html#Kinstrife_Application_Module_RequestTogglePause">Module.RequestTogglePause()</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.Application.Module.html#Kinstrife_Application_Module_RequestPause">Module.RequestPause()</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.Application.Module.html#Kinstrife_Application_Module_RequestUnPause">Module.RequestUnPause()</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.Application.Module.html#Kinstrife_Application_Module_SetPause_System_Boolean_">Module.SetPause(Boolean)</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.Application.Module.html#Kinstrife_Application_Module_TryMakePrimary">Module.TryMakePrimary()</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.Application.Module.html#Kinstrife_Application_Module_IsInitialized">Module.IsInitialized</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.Application.Module.html#Kinstrife_Application_Module_TrySwitchGameMode_Kinstrife_Application_GameMode_Kinstrife_Application_Location_System_Boolean_">Module.TrySwitchGameMode(GameMode, Location, Boolean)</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.Application.Module.html#Kinstrife_Application_Module_ReloadMode">Module.ReloadMode()</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.Application.Module.html#Kinstrife_Application_Module_InstallContext">Module.InstallContext()</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.Application.Module.html#Kinstrife_Application_Module_RegisterChildContext_Kinstrife_Core_DependencyInjection_DIInitializer_">Module.RegisterChildContext(DIInitializer)</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.Application.Module.html#Kinstrife_Application_Module_SetParentContext_Kinstrife_Core_DependencyInjection_Context_">Module.SetParentContext(Context)</a>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Kinstrife.UI.html">Kinstrife.UI</a></h6>
+  <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
+  <h5 id="Kinstrife_UI_UIServiceModule_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class UIServiceModule : UIModule, IInstall&lt;UIModule&gt;, IInstall, IInjectable, IDependent</code></pre>
+  </div>
+  <h3 id="fields">Fields
+  </h3>
+  
+  
+  <h4 id="Kinstrife_UI_UIServiceModule_confirmationDialogPlate" data-uid="Kinstrife.UI.UIServiceModule.confirmationDialogPlate">confirmationDialogPlate</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Plate confirmationDialogPlate</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Plate</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="Kinstrife_UI_UIServiceModule_confirmationDialogViewModel" data-uid="Kinstrife.UI.UIServiceModule.confirmationDialogViewModel">confirmationDialogViewModel</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public DialogViewModel confirmationDialogViewModel</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Kinstrife.UI.DialogViewModel.html">DialogViewModel</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="properties">Properties
+  </h3>
+  
+  
+  <a id="Kinstrife_UI_UIServiceModule_Instance_" data-uid="Kinstrife.UI.UIServiceModule.Instance*"></a>
+  <h4 id="Kinstrife_UI_UIServiceModule_Instance" data-uid="Kinstrife.UI.UIServiceModule.Instance">Instance</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static UIServiceModule Instance { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Kinstrife.UI.UIServiceModule.html">UIServiceModule</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  
+  
+  <a id="Kinstrife_UI_UIServiceModule_Awake_" data-uid="Kinstrife.UI.UIServiceModule.Awake*"></a>
+  <h4 id="Kinstrife_UI_UIServiceModule_Awake" data-uid="Kinstrife.UI.UIServiceModule.Awake">Awake()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void Awake()</code></pre>
+  </div>
+  
+  
+  <a id="Kinstrife_UI_UIServiceModule_HideDialog_" data-uid="Kinstrife.UI.UIServiceModule.HideDialog*"></a>
+  <h4 id="Kinstrife_UI_UIServiceModule_HideDialog" data-uid="Kinstrife.UI.UIServiceModule.HideDialog">HideDialog()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void HideDialog()</code></pre>
+  </div>
+  
+  
+  <a id="Kinstrife_UI_UIServiceModule_OnEnable_" data-uid="Kinstrife.UI.UIServiceModule.OnEnable*"></a>
+  <h4 id="Kinstrife_UI_UIServiceModule_OnEnable" data-uid="Kinstrife.UI.UIServiceModule.OnEnable">OnEnable()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override void OnEnable()</code></pre>
+  </div>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Kinstrife.UI.UIModule.html#Kinstrife_UI_UIModule_OnEnable">UIModule.OnEnable()</a></div>
+  
+  
+  <a id="Kinstrife_UI_UIServiceModule_SetChoices_" data-uid="Kinstrife.UI.UIServiceModule.SetChoices*"></a>
+  <h4 id="Kinstrife_UI_UIServiceModule_SetChoices_System_Collections_Generic_List_Kinstrife_UI_DialogViewModel_Option__" data-uid="Kinstrife.UI.UIServiceModule.SetChoices(System.Collections.Generic.List{Kinstrife.UI.DialogViewModel.Option})">SetChoices(List&lt;DialogViewModel.Option&gt;)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetChoices(List&lt;DialogViewModel.Option&gt; options)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.List</span>&lt;<a class="xref" href="Kinstrife.UI.DialogViewModel.Option.html">DialogViewModel.Option</a>&gt;</td>
+        <td><span class="parametername">options</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Kinstrife_UI_UIServiceModule_ShowDialog_" data-uid="Kinstrife.UI.UIServiceModule.ShowDialog*"></a>
+  <h4 id="Kinstrife_UI_UIServiceModule_ShowDialog_System_String_System_String_System_String_Kinstrife_Action_" data-uid="Kinstrife.UI.UIServiceModule.ShowDialog(System.String,System.String,System.String,Kinstrife.Action)">ShowDialog(String, String, String, Action)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void ShowDialog(string message, string body, string buttonName, Action onClosedCallback = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">message</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">body</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">buttonName</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Kinstrife.Action.html">Kinstrife.Action</a></td>
+        <td><span class="parametername">onClosedCallback</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Kinstrife_UI_UIServiceModule_TryShowDialog_" data-uid="Kinstrife.UI.UIServiceModule.TryShowDialog*"></a>
+  <h4 id="Kinstrife_UI_UIServiceModule_TryShowDialog_System_String_System_String_System_String_Kinstrife_Action_" data-uid="Kinstrife.UI.UIServiceModule.TryShowDialog(System.String,System.String,System.String,Kinstrife.Action)">TryShowDialog(String, String, String, Action)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public async UniTask&lt;int&gt; TryShowDialog(string message, string body, string buttonName, Action onClosedCallback = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">message</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">body</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">buttonName</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Kinstrife.Action.html">Kinstrife.Action</a></td>
+        <td><span class="parametername">onClosedCallback</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">UniTask</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <a class="xref" href="Kinstrife.Core.DependencyInjection.IInstall-1.html">IInstall&lt;T&gt;</a>
+  </div>
+  <div>
+      <a class="xref" href="Kinstrife.Core.DependencyInjection.IInstall.html">IInstall</a>
+  </div>
+  <div>
+      <a class="xref" href="Kinstrife.Core.DependencyInjection.IInjectable.html">IInjectable</a>
+  </div>
+  <div>
+      <a class="xref" href="Kinstrife.Core.DependencyInjection.IDependent.html">IDependent</a>
+  </div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+  </body>
+</html>

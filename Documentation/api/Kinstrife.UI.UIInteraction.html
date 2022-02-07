@@ -91,17 +91,115 @@
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public class UIInteraction : MonoBehaviour, IInjectable, IDependent</code></pre>
   </div>
-  <h3 id="methods">Methods
+  <h3 id="fields">Fields
   </h3>
   
   
-  <a id="Kinstrife_UI_UIInteraction_Inject_" data-uid="Kinstrife.UI.UIInteraction.Inject*"></a>
-  <h4 id="Kinstrife_UI_UIInteraction_Inject_Kinstrife_UI_SoundSystem_Kinstrife_UI_Config_UIInteractionConfig_" data-uid="Kinstrife.UI.UIInteraction.Inject(Kinstrife.UI.SoundSystem,Kinstrife.UI.Config.UIInteractionConfig)">Inject(SoundSystem, UIInteractionConfig)</h4>
+  <h4 id="Kinstrife_UI_UIInteraction_OnClick" data-uid="Kinstrife.UI.UIInteraction.OnClick">OnClick</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void Inject(SoundSystem soundSystem, UIInteractionConfig config)</code></pre>
+    <pre><code class="lang-csharp hljs">public UnityEvent OnClick</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">UnityEvent</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="Kinstrife_UI_UIInteraction_OnClickRTPC" data-uid="Kinstrife.UI.UIInteraction.OnClickRTPC">OnClickRTPC</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public AK.Wwise.RTPC OnClickRTPC</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">AK.Wwise.RTPC</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="Kinstrife_UI_UIInteraction_playingId" data-uid="Kinstrife.UI.UIInteraction.playingId">playingId</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public uint playingId</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.UInt32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="Kinstrife_UI_UIInteraction_sizeSwitch" data-uid="Kinstrife.UI.UIInteraction.sizeSwitch">sizeSwitch</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public AK.Wwise.Switch sizeSwitch</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">AK.Wwise.Switch</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  
+  
+  <a id="Kinstrife_UI_UIInteraction_ButtonClickSound_" data-uid="Kinstrife.UI.UIInteraction.ButtonClickSound*"></a>
+  <h4 id="Kinstrife_UI_UIInteraction_ButtonClickSound_VisualElement_" data-uid="Kinstrife.UI.UIInteraction.ButtonClickSound(VisualElement)">ButtonClickSound(VisualElement)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void ButtonClickSound(VisualElement el)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -114,13 +212,187 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="Kinstrife.UI.SoundSystem.html">SoundSystem</a></td>
-        <td><span class="parametername">soundSystem</span></td>
+        <td><span class="xref">VisualElement</span></td>
+        <td><span class="parametername">el</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Kinstrife_UI_UIInteraction_ClickSound_" data-uid="Kinstrife.UI.UIInteraction.ClickSound*"></a>
+  <h4 id="Kinstrife_UI_UIInteraction_ClickSound_VisualElement_AK_Wwise_Event_" data-uid="Kinstrife.UI.UIInteraction.ClickSound(VisualElement,AK.Wwise.Event)">ClickSound(VisualElement, AK.Wwise.Event)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void ClickSound(VisualElement el, AK.Wwise.Event data)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">VisualElement</span></td>
+        <td><span class="parametername">el</span></td>
         <td></td>
       </tr>
       <tr>
-        <td><a class="xref" href="Kinstrife.UI.Config.UIInteractionConfig.html">UIInteractionConfig</a></td>
+        <td><span class="xref">AK.Wwise.Event</span></td>
+        <td><span class="parametername">data</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Kinstrife_UI_UIInteraction_Inject_" data-uid="Kinstrife.UI.UIInteraction.Inject*"></a>
+  <h4 id="Kinstrife_UI_UIInteraction_Inject_Graphene_Graphene_Kinstrife_UI_UIInteractionConfig_" data-uid="Kinstrife.UI.UIInteraction.Inject(Graphene.Graphene,Kinstrife.UI.UIInteractionConfig)">Inject(Graphene.Graphene, UIInteractionConfig)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Inject(Graphene.Graphene graphene, UIInteractionConfig config)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Graphene.Graphene</span></td>
+        <td><span class="parametername">graphene</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Kinstrife.UI.UIInteractionConfig.html">UIInteractionConfig</a></td>
         <td><span class="parametername">config</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Kinstrife_UI_UIInteraction_ItemHoverSound_" data-uid="Kinstrife.UI.UIInteraction.ItemHoverSound*"></a>
+  <h4 id="Kinstrife_UI_UIInteraction_ItemHoverSound_VisualElement_" data-uid="Kinstrife.UI.UIInteraction.ItemHoverSound(VisualElement)">ItemHoverSound(VisualElement)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void ItemHoverSound(VisualElement el)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">VisualElement</span></td>
+        <td><span class="parametername">el</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Kinstrife_UI_UIInteraction_PlayCancelSound_" data-uid="Kinstrife.UI.UIInteraction.PlayCancelSound*"></a>
+  <h4 id="Kinstrife_UI_UIInteraction_PlayCancelSound" data-uid="Kinstrife.UI.UIInteraction.PlayCancelSound">PlayCancelSound()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void PlayCancelSound()</code></pre>
+  </div>
+  
+  
+  <a id="Kinstrife_UI_UIInteraction_PlayHideWindowSound_" data-uid="Kinstrife.UI.UIInteraction.PlayHideWindowSound*"></a>
+  <h4 id="Kinstrife_UI_UIInteraction_PlayHideWindowSound" data-uid="Kinstrife.UI.UIInteraction.PlayHideWindowSound">PlayHideWindowSound()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void PlayHideWindowSound()</code></pre>
+  </div>
+  
+  
+  <a id="Kinstrife_UI_UIInteraction_PlayShowWindowSound_" data-uid="Kinstrife.UI.UIInteraction.PlayShowWindowSound*"></a>
+  <h4 id="Kinstrife_UI_UIInteraction_PlayShowWindowSound" data-uid="Kinstrife.UI.UIInteraction.PlayShowWindowSound">PlayShowWindowSound()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void PlayShowWindowSound()</code></pre>
+  </div>
+  
+  
+  <a id="Kinstrife_UI_UIInteraction_PlaySubmitSound_" data-uid="Kinstrife.UI.UIInteraction.PlaySubmitSound*"></a>
+  <h4 id="Kinstrife_UI_UIInteraction_PlaySubmitSound" data-uid="Kinstrife.UI.UIInteraction.PlaySubmitSound">PlaySubmitSound()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void PlaySubmitSound()</code></pre>
+  </div>
+  
+  
+  <a id="Kinstrife_UI_UIInteraction_RegisterAudioEvent_" data-uid="Kinstrife.UI.UIInteraction.RegisterAudioEvent*"></a>
+  <h4 id="Kinstrife_UI_UIInteraction_RegisterAudioEvent__1_VisualElement_AK_Wwise_Event_" data-uid="Kinstrife.UI.UIInteraction.RegisterAudioEvent``1(VisualElement,AK.Wwise.Event)">RegisterAudioEvent&lt;T&gt;(VisualElement, AK.Wwise.Event)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void RegisterAudioEvent&lt;T&gt;(VisualElement el, AK.Wwise.Event data)
+    where T : PointerEventBase&lt;T&gt;, new()</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">VisualElement</span></td>
+        <td><span class="parametername">el</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">AK.Wwise.Event</span></td>
+        <td><span class="parametername">data</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T</span></td>
         <td></td>
       </tr>
     </tbody>

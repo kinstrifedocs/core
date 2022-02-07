@@ -176,6 +176,56 @@ e. g. for the actor module, where unneeded actors for the next mode/scene can be
   </h3>
   
   
+  <a id="Kinstrife_Application_Module_IsDirector_" data-uid="Kinstrife.Application.Module.IsDirector*"></a>
+  <h4 id="Kinstrife_Application_Module_IsDirector" data-uid="Kinstrife.Application.Module.IsDirector">IsDirector</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsDirector { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Kinstrife_Application_Module_IsInitialized_" data-uid="Kinstrife.Application.Module.IsInitialized*"></a>
+  <h4 id="Kinstrife_Application_Module_IsInitialized" data-uid="Kinstrife.Application.Module.IsInitialized">IsInitialized</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsInitialized { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
   <a id="Kinstrife_Application_Module_IsPrimary_" data-uid="Kinstrife.Application.Module.IsPrimary*"></a>
   <h4 id="Kinstrife_Application_Module_IsPrimary" data-uid="Kinstrife.Application.Module.IsPrimary">IsPrimary</h4>
   <div class="markdown level1 summary"></div>
@@ -248,14 +298,66 @@ e. g. for the actor module, where unneeded actors for the next mode/scene can be
   </div>
   
   
-  <a id="Kinstrife_Application_Module_PrimaryInitialization_" data-uid="Kinstrife.Application.Module.PrimaryInitialization*"></a>
-  <h4 id="Kinstrife_Application_Module_PrimaryInitialization_Kinstrife_Application_ModuleDefinition_" data-uid="Kinstrife.Application.Module.PrimaryInitialization(Kinstrife.Application.ModuleDefinition)">PrimaryInitialization(ModuleDefinition)</h4>
+  <a id="Kinstrife_Application_Module_OnEnable_" data-uid="Kinstrife.Application.Module.OnEnable*"></a>
+  <h4 id="Kinstrife_Application_Module_OnEnable" data-uid="Kinstrife.Application.Module.OnEnable">OnEnable()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void OnEnable()</code></pre>
+  </div>
+  
+  
+  <a id="Kinstrife_Application_Module_PreloadAssets_" data-uid="Kinstrife.Application.Module.PreloadAssets*"></a>
+  <h4 id="Kinstrife_Application_Module_PreloadAssets_Kinstrife_Application_ModuleDefinition_" data-uid="Kinstrife.Application.Module.PreloadAssets(Kinstrife.Application.ModuleDefinition)">PreloadAssets(ModuleDefinition)</h4>
   <div class="markdown level1 summary"><p>Call all code that is necessary to make the module function as expected
 Make sure to utilize time-slicing to split expensive operations
 over multiple frames to maintain interactivity.
 Delegates may be handy, but use them with care to ensure everything is set
 up in its proper order to avoid setup dependency issues.</p>
 </div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public abstract UniTask PreloadAssets(ModuleDefinition nextPrimaryModule)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Kinstrife.Application.ModuleDefinition.html">ModuleDefinition</a></td>
+        <td><span class="parametername">nextPrimaryModule</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">UniTask</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Kinstrife_Application_Module_PrimaryInitialization_" data-uid="Kinstrife.Application.Module.PrimaryInitialization*"></a>
+  <h4 id="Kinstrife_Application_Module_PrimaryInitialization_Kinstrife_Application_ModuleDefinition_" data-uid="Kinstrife.Application.Module.PrimaryInitialization(Kinstrife.Application.ModuleDefinition)">PrimaryInitialization(ModuleDefinition)</h4>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -488,6 +590,31 @@ up in its proper order to avoid setup dependency issues.</p>
   </div>
   
   
+  <a id="Kinstrife_Application_Module_TryMakePrimary_" data-uid="Kinstrife.Application.Module.TryMakePrimary*"></a>
+  <h4 id="Kinstrife_Application_Module_TryMakePrimary" data-uid="Kinstrife.Application.Module.TryMakePrimary">TryMakePrimary()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public async UniTask&lt;bool&gt; TryMakePrimary()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">UniTask</span>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
   <a id="Kinstrife_Application_Module_TrySwitchGameMode_" data-uid="Kinstrife.Application.Module.TrySwitchGameMode*"></a>
   <h4 id="Kinstrife_Application_Module_TrySwitchGameMode_Kinstrife_Application_GameMode_Kinstrife_Application_Location_System_Boolean_" data-uid="Kinstrife.Application.Module.TrySwitchGameMode(Kinstrife.Application.GameMode,Kinstrife.Application.Location,System.Boolean)">TrySwitchGameMode(GameMode, Location, Boolean)</h4>
   <div class="markdown level1 summary"></div>
@@ -525,6 +652,31 @@ up in its proper order to avoid setup dependency issues.</p>
   </table>
   <h3 id="events">Events
   </h3>
+  
+  
+  <h4 id="Kinstrife_Application_Module_OnDirectorChanged" data-uid="Kinstrife.Application.Module.OnDirectorChanged">OnDirectorChanged</h4>
+  <div class="markdown level1 summary"><p>Fires when module was either made primary (true) or non-primary (false)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public event Action&lt;bool&gt; OnDirectorChanged</code></pre>
+  </div>
+  <h5 class="eventType">Event Type</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Action</span>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   
   
   <h4 id="Kinstrife_Application_Module_OnPauseChanged" data-uid="Kinstrife.Application.Module.OnPauseChanged">OnPauseChanged</h4>

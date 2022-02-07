@@ -82,6 +82,7 @@
   </div>
   <div classs="implements">
     <h5>Implements</h5>
+    <div><a class="xref" href="Kinstrife.Core.DependencyInjection.IInjectable.html">IInjectable</a></div>
     <div><span class="xref">IDisposable</span></div>
     <div><a class="xref" href="Kinstrife.Core.DependencyInjection.IInstall-1.html">IInstall</a>&lt;<a class="xref" href="Kinstrife.GraphTools.GraphRunner.html">GraphRunner</a>&gt;</div>
     <div><a class="xref" href="Kinstrife.Core.DependencyInjection.IInstall.html">IInstall</a></div>
@@ -91,34 +92,10 @@
   <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
   <h5 id="Kinstrife_GraphTools_GraphRunner_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class GraphRunner : MonoBehaviour, IInstall&lt;GraphRunner&gt;, IInstall, IDependent</code></pre>
+    <pre><code class="lang-csharp hljs">public class GraphRunner : MonoBehaviour, IInjectable, IInstall&lt;GraphRunner&gt;, IInstall, IDependent</code></pre>
   </div>
   <h3 id="fields">Fields
   </h3>
-  
-  
-  <h4 id="Kinstrife_GraphTools_GraphRunner_floatParamter" data-uid="Kinstrife.GraphTools.GraphRunner.floatParamter">floatParamter</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public FloatParameter floatParamter</code></pre>
-  </div>
-  <h5 class="fieldValue">Field Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">FloatParameter</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
   
   
   <h4 id="Kinstrife_GraphTools_GraphRunner_graph" data-uid="Kinstrife.GraphTools.GraphRunner.graph">graph</h4>
@@ -145,30 +122,6 @@
   </table>
   
   
-  <h4 id="Kinstrife_GraphTools_GraphRunner_intparam" data-uid="Kinstrife.GraphTools.GraphRunner.intparam">intparam</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public IntParameter intparam</code></pre>
-  </div>
-  <h5 class="fieldValue">Field Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">IntParameter</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
   <h4 id="Kinstrife_GraphTools_GraphRunner_isSingleton" data-uid="Kinstrife.GraphTools.GraphRunner.isSingleton">isSingleton</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
@@ -187,6 +140,54 @@
     <tbody>
       <tr>
         <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="Kinstrife_GraphTools_GraphRunner_onCanceled" data-uid="Kinstrife.GraphTools.GraphRunner.onCanceled">onCanceled</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public UnityEvent onCanceled</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">UnityEvent</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="Kinstrife_GraphTools_GraphRunner_onCompleted" data-uid="Kinstrife.GraphTools.GraphRunner.onCompleted">onCompleted</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public UnityEvent onCompleted</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">UnityEvent</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -332,6 +333,33 @@
   </table>
   
   
+  <a id="Kinstrife_GraphTools_GraphRunner_Inject_" data-uid="Kinstrife.GraphTools.GraphRunner.Inject*"></a>
+  <h4 id="Kinstrife_GraphTools_GraphRunner_Inject_Kinstrife_Core_DependencyInjection_Context_" data-uid="Kinstrife.GraphTools.GraphRunner.Inject(Kinstrife.Core.DependencyInjection.Context)">Inject(Context)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Inject(Context context)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Kinstrife.Core.DependencyInjection.Context.html">Context</a></td>
+        <td><span class="parametername">context</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
   <a id="Kinstrife_GraphTools_GraphRunner_OnEnable_" data-uid="Kinstrife.GraphTools.GraphRunner.OnEnable*"></a>
   <h4 id="Kinstrife_GraphTools_GraphRunner_OnEnable" data-uid="Kinstrife.GraphTools.GraphRunner.OnEnable">OnEnable()</h4>
   <div class="markdown level1 summary"></div>
@@ -434,7 +462,20 @@
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public void Step()</code></pre>
   </div>
+  
+  
+  <a id="Kinstrife_GraphTools_GraphRunner_Stop_" data-uid="Kinstrife.GraphTools.GraphRunner.Stop*"></a>
+  <h4 id="Kinstrife_GraphTools_GraphRunner_Stop" data-uid="Kinstrife.GraphTools.GraphRunner.Stop">Stop()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Stop()</code></pre>
+  </div>
   <h3 id="implements">Implements</h3>
+  <div>
+      <a class="xref" href="Kinstrife.Core.DependencyInjection.IInjectable.html">IInjectable</a>
+  </div>
   <div>
       <span class="xref">IDisposable</span>
   </div>

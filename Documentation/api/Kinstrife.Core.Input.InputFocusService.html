@@ -86,8 +86,10 @@
     <h5>Implements</h5>
     <div><a class="xref" href="Kinstrife.Core.DependencyInjection.IInjectable.html">IInjectable</a></div>
     <div><a class="xref" href="Kinstrife.Core.DependencyInjection.IInitializable.html">IInitializable</a></div>
-    <div><a class="xref" href="Kinstrife.Core.DependencyInjection.IDependent.html">IDependent</a></div>
     <div><a class="xref" href="Kinstrife.Core.Input.IInputHandler.html">IInputHandler</a></div>
+    <div><a class="xref" href="Kinstrife.Core.DependencyInjection.IInstall-1.html">IInstall</a>&lt;<a class="xref" href="Kinstrife.Core.Input.InputFocusService.html">InputFocusService</a>&gt;</div>
+    <div><a class="xref" href="Kinstrife.Core.DependencyInjection.IInstall.html">IInstall</a></div>
+    <div><a class="xref" href="Kinstrife.Core.DependencyInjection.IDependent.html">IDependent</a></div>
   </div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
@@ -117,7 +119,7 @@
   <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
   <h5 id="Kinstrife_Core_Input_InputFocusService_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class InputFocusService : ServiceBehaviour&lt;bool, InputFocusState&gt;, IInjectable, IInitializable, IDependent, IInputHandler</code></pre>
+    <pre><code class="lang-csharp hljs">public class InputFocusService : ServiceBehaviour&lt;bool, InputFocusState&gt;, IInjectable, IInitializable, IInputHandler, IInstall&lt;InputFocusService&gt;, IInstall, IDependent</code></pre>
   </div>
   <h3 id="constructors">Constructors
   </h3>
@@ -252,31 +254,6 @@
     <tbody>
       <tr>
         <td><a class="xref" href="Kinstrife.Core.Input.InputFocusState.html">InputFocusState</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="Kinstrife_Core_Input_InputFocusService_FlowGraph_" data-uid="Kinstrife.Core.Input.InputFocusService.FlowGraph*"></a>
-  <h4 id="Kinstrife_Core_Input_InputFocusService_FlowGraph" data-uid="Kinstrife.Core.Input.InputFocusService.FlowGraph">FlowGraph</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public FreeFlowGraphAsync FlowGraph { get; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Kinstrife.StateFlow.FreeFlowGraphAsync.html">FreeFlowGraphAsync</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -470,33 +447,6 @@
   </div>
   <h5 class="overrides">Overrides</h5>
   <div><span class="xref">Kinstrife.Messaging.ServiceBehaviour&lt;System.Boolean, Kinstrife.Core.Input.InputFocusState&gt;.OnDestroy()</span></div>
-  
-  
-  <a id="Kinstrife_Core_Input_InputFocusService_OnEnteringState_" data-uid="Kinstrife.Core.Input.InputFocusService.OnEnteringState*"></a>
-  <h4 id="Kinstrife_Core_Input_InputFocusService_OnEnteringState_Kinstrife_StateFlow_IFlowState_" data-uid="Kinstrife.Core.Input.InputFocusService.OnEnteringState(Kinstrife.StateFlow.IFlowState)">OnEnteringState(IFlowState)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected void OnEnteringState(IFlowState state)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Kinstrife.StateFlow.IFlowState.html">IFlowState</a></td>
-        <td><span class="parametername">state</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
   <h3 id="implements">Implements</h3>
   <div>
       <a class="xref" href="Kinstrife.Core.DependencyInjection.IInjectable.html">IInjectable</a>
@@ -505,10 +455,16 @@
       <a class="xref" href="Kinstrife.Core.DependencyInjection.IInitializable.html">IInitializable</a>
   </div>
   <div>
-      <a class="xref" href="Kinstrife.Core.DependencyInjection.IDependent.html">IDependent</a>
+      <a class="xref" href="Kinstrife.Core.Input.IInputHandler.html">IInputHandler</a>
   </div>
   <div>
-      <a class="xref" href="Kinstrife.Core.Input.IInputHandler.html">IInputHandler</a>
+      <a class="xref" href="Kinstrife.Core.DependencyInjection.IInstall-1.html">IInstall&lt;T&gt;</a>
+  </div>
+  <div>
+      <a class="xref" href="Kinstrife.Core.DependencyInjection.IInstall.html">IInstall</a>
+  </div>
+  <div>
+      <a class="xref" href="Kinstrife.Core.DependencyInjection.IDependent.html">IDependent</a>
   </div>
 </article>
           </div>
