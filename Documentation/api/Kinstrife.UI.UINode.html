@@ -78,13 +78,17 @@
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><a class="xref" href="Kinstrife.UI.StatefulNode.html">StatefulNode</a></div>
-    <div class="level2"><a class="xref" href="Kinstrife.UI.StatefulNode-1.html">StatefulNode</a>&lt;<span class="xref">System.String</span>&gt;</div>
-    <div class="level3"><span class="xref">UINode</span></div>
-      <div class="level4"><a class="xref" href="Kinstrife.UI.UIStateNode.html">UIStateNode</a></div>
+    <div class="level1"><a class="xref" href="Kinstrife.GraphTools.BaseNode.html">BaseNode</a></div>
+    <div class="level2"><a class="xref" href="Kinstrife.GraphTools.ConditionalNode.html">ConditionalNode</a></div>
+    <div class="level3"><a class="xref" href="Kinstrife.GraphTools.LinearConditionalNode.html">LinearConditionalNode</a></div>
+    <div class="level4"><a class="xref" href="Kinstrife.UI.StatefulNode.html">StatefulNode</a></div>
+    <div class="level5"><a class="xref" href="Kinstrife.UI.StatefulNode-1.html">StatefulNode</a>&lt;<span class="xref">System.String</span>&gt;</div>
+    <div class="level6"><span class="xref">UINode</span></div>
+      <div class="level7"><a class="xref" href="Kinstrife.UI.UIStateNode.html">UIStateNode</a></div>
   </div>
   <div classs="implements">
     <h5>Implements</h5>
+    <div><a class="xref" href="Kinstrife.GraphTools.IConditionalNode.html">IConditionalNode</a></div>
     <div><a class="xref" href="Kinstrife.Core.DependencyInjection.IInjectable.html">IInjectable</a></div>
     <div><a class="xref" href="Kinstrife.Core.DependencyInjection.IDependent.html">IDependent</a></div>
   </div>
@@ -93,12 +97,87 @@
     <div>
       <a class="xref" href="Kinstrife.UI.StatefulNode-1.html#Kinstrife_UI_StatefulNode_1_stateId">StatefulNode&lt;String&gt;.stateId</a>
     </div>
+    <div>
+      <a class="xref" href="Kinstrife.GraphTools.LinearConditionalNode.html#Kinstrife_GraphTools_LinearConditionalNode_executes">LinearConditionalNode.executes</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.GraphTools.LinearConditionalNode.html#Kinstrife_GraphTools_LinearConditionalNode_GetExecutedNode">LinearConditionalNode.GetExecutedNode()</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.GraphTools.ConditionalNode.html#Kinstrife_GraphTools_ConditionalNode_executed">ConditionalNode.executed</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.GraphTools.ConditionalNode.html#Kinstrife_GraphTools_ConditionalNode_GetNodeFields">ConditionalNode.GetNodeFields()</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.GraphTools.BaseNode.html#Kinstrife_GraphTools_BaseNode_IsInitialized">BaseNode.IsInitialized</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.GraphTools.BaseNode.html#Kinstrife_GraphTools_BaseNode_GetInputNodes_System_String_">BaseNode.GetInputNodes(String)</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.GraphTools.BaseNode.html#Kinstrife_GraphTools_BaseNode_GetOutputNodes_System_String_">BaseNode.GetOutputNodes(String)</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.GraphTools.BaseNode.html#Kinstrife_GraphTools_BaseNode_HasOutput">BaseNode.HasOutput()</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.GraphTools.BaseNode.html#Kinstrife_GraphTools_BaseNode_ConnectedInputNodes__1">BaseNode.ConnectedInputNodes&lt;T&gt;()</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.GraphTools.BaseNode.html#Kinstrife_GraphTools_BaseNode_ConnectedInputNodes__1_System_String_">BaseNode.ConnectedInputNodes&lt;T&gt;(String)</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.GraphTools.BaseNode.html#Kinstrife_GraphTools_BaseNode_ConnectedOutputNodes__1">BaseNode.ConnectedOutputNodes&lt;T&gt;()</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.GraphTools.BaseNode.html#Kinstrife_GraphTools_BaseNode_ConnectedOutputNodes__1_System_String_">BaseNode.ConnectedOutputNodes&lt;T&gt;(String)</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.GraphTools.BaseNode.html#Kinstrife_GraphTools_BaseNode_HasInputConnection_System_String_">BaseNode.HasInputConnection(String)</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.GraphTools.BaseNode.html#Kinstrife_GraphTools_BaseNode_HasInputConnectionOfType__1">BaseNode.HasInputConnectionOfType&lt;T&gt;()</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.GraphTools.BaseNode.html#Kinstrife_GraphTools_BaseNode_HasOutputConnectionOfType__1">BaseNode.HasOutputConnectionOfType&lt;T&gt;()</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.GraphTools.BaseNode.html#Kinstrife_GraphTools_BaseNode_ConnectedInputNode__1">BaseNode.ConnectedInputNode&lt;T&gt;()</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.GraphTools.BaseNode.html#Kinstrife_GraphTools_BaseNode_ConnectedOutputNode__1">BaseNode.ConnectedOutputNode&lt;T&gt;()</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.GraphTools.BaseNode.html#Kinstrife_GraphTools_BaseNode_ConnectedOutputNode__1_System_String_">BaseNode.ConnectedOutputNode&lt;T&gt;(String)</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.GraphTools.BaseNode.html#Kinstrife_GraphTools_BaseNode_Enable">BaseNode.Enable()</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.GraphTools.BaseNode.html#Kinstrife_GraphTools_BaseNode_Disable">BaseNode.Disable()</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.GraphTools.BaseNode.html#Kinstrife_GraphTools_BaseNode_OnAfterChangeEdges_SerializableEdge_">BaseNode.OnAfterChangeEdges(SerializableEdge)</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.GraphTools.BaseNode.html#Kinstrife_GraphTools_BaseNode_Process_Kinstrife_GraphTools_GraphRunner_">BaseNode.Process(GraphRunner)</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.GraphTools.BaseNode.html#Kinstrife_GraphTools_BaseNode_OnProcess_Kinstrife_GraphTools_GraphRunner_">BaseNode.OnProcess(GraphRunner)</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.GraphTools.BaseNode.html#Kinstrife_GraphTools_BaseNode_ProcessAsync_Kinstrife_GraphTools_GraphRunner_CancellationToken_">BaseNode.ProcessAsync(GraphRunner, CancellationToken)</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.GraphTools.BaseNode.html#Kinstrife_GraphTools_BaseNode_OnProcessAsync_Kinstrife_GraphTools_GraphRunner_CancellationToken_">BaseNode.OnProcessAsync(GraphRunner, CancellationToken)</a>
+    </div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Kinstrife.UI.html">Kinstrife.UI</a></h6>
   <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
   <h5 id="Kinstrife_UI_UINode_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public abstract class UINode : StatefulNode&lt;string&gt;, IInjectable, IDependent</code></pre>
+    <pre><code class="lang-csharp hljs">public abstract class UINode : StatefulNode&lt;string&gt;, IConditionalNode, IInjectable, IDependent</code></pre>
   </div>
   <h3 id="fields">Fields
   </h3>
@@ -156,6 +235,9 @@
     </tbody>
   </table>
   <h3 id="implements">Implements</h3>
+  <div>
+      <a class="xref" href="Kinstrife.GraphTools.IConditionalNode.html">IConditionalNode</a>
+  </div>
   <div>
       <a class="xref" href="Kinstrife.Core.DependencyInjection.IInjectable.html">IInjectable</a>
   </div>

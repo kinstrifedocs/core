@@ -78,20 +78,83 @@
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><span class="xref">ChoiceNode</span></div>
+    <div class="level1"><a class="xref" href="Kinstrife.GraphTools.BaseNode.html">BaseNode</a></div>
+    <div class="level2"><a class="xref" href="Kinstrife.GraphTools.ConditionalNode.html">ConditionalNode</a></div>
+    <div class="level3"><span class="xref">ChoiceNode</span></div>
   </div>
   <div classs="implements">
     <h5>Implements</h5>
+    <div><a class="xref" href="Kinstrife.GraphTools.IConditionalNode.html">IConditionalNode</a></div>
     <div><a class="xref" href="Kinstrife.GraphTools.IProcessAsyncNode.html">IProcessAsyncNode</a></div>
     <div><a class="xref" href="Kinstrife.Core.DependencyInjection.IInjectable.html">IInjectable</a></div>
     <div><a class="xref" href="Kinstrife.Core.DependencyInjection.IDependent.html">IDependent</a></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="Kinstrife.GraphTools.ConditionalNode.html#Kinstrife_GraphTools_ConditionalNode_executed">ConditionalNode.executed</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.GraphTools.ConditionalNode.html#Kinstrife_GraphTools_ConditionalNode_GetNodeFields">ConditionalNode.GetNodeFields()</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.GraphTools.BaseNode.html#Kinstrife_GraphTools_BaseNode_IsInitialized">BaseNode.IsInitialized</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.GraphTools.BaseNode.html#Kinstrife_GraphTools_BaseNode_GetInputNodes_System_String_">BaseNode.GetInputNodes(String)</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.GraphTools.BaseNode.html#Kinstrife_GraphTools_BaseNode_GetOutputNodes_System_String_">BaseNode.GetOutputNodes(String)</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.GraphTools.BaseNode.html#Kinstrife_GraphTools_BaseNode_HasOutput">BaseNode.HasOutput()</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.GraphTools.BaseNode.html#Kinstrife_GraphTools_BaseNode_ConnectedInputNodes__1">BaseNode.ConnectedInputNodes&lt;T&gt;()</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.GraphTools.BaseNode.html#Kinstrife_GraphTools_BaseNode_ConnectedInputNodes__1_System_String_">BaseNode.ConnectedInputNodes&lt;T&gt;(String)</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.GraphTools.BaseNode.html#Kinstrife_GraphTools_BaseNode_ConnectedOutputNodes__1">BaseNode.ConnectedOutputNodes&lt;T&gt;()</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.GraphTools.BaseNode.html#Kinstrife_GraphTools_BaseNode_ConnectedOutputNodes__1_System_String_">BaseNode.ConnectedOutputNodes&lt;T&gt;(String)</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.GraphTools.BaseNode.html#Kinstrife_GraphTools_BaseNode_HasInputConnection_System_String_">BaseNode.HasInputConnection(String)</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.GraphTools.BaseNode.html#Kinstrife_GraphTools_BaseNode_HasInputConnectionOfType__1">BaseNode.HasInputConnectionOfType&lt;T&gt;()</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.GraphTools.BaseNode.html#Kinstrife_GraphTools_BaseNode_HasOutputConnectionOfType__1">BaseNode.HasOutputConnectionOfType&lt;T&gt;()</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.GraphTools.BaseNode.html#Kinstrife_GraphTools_BaseNode_ConnectedInputNode__1">BaseNode.ConnectedInputNode&lt;T&gt;()</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.GraphTools.BaseNode.html#Kinstrife_GraphTools_BaseNode_ConnectedOutputNode__1">BaseNode.ConnectedOutputNode&lt;T&gt;()</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.GraphTools.BaseNode.html#Kinstrife_GraphTools_BaseNode_ConnectedOutputNode__1_System_String_">BaseNode.ConnectedOutputNode&lt;T&gt;(String)</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.GraphTools.BaseNode.html#Kinstrife_GraphTools_BaseNode_Disable">BaseNode.Disable()</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.GraphTools.BaseNode.html#Kinstrife_GraphTools_BaseNode_OnProcess_Kinstrife_GraphTools_GraphRunner_">BaseNode.OnProcess(GraphRunner)</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.GraphTools.BaseNode.html#Kinstrife_GraphTools_BaseNode_OnProcessAsync_Kinstrife_GraphTools_GraphRunner_CancellationToken_">BaseNode.OnProcessAsync(GraphRunner, CancellationToken)</a>
+    </div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Kinstrife.UI.Graph.html">Kinstrife.UI.Graph</a></h6>
   <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
   <h5 id="Kinstrife_UI_Graph_ChoiceNode_syntax">Syntax</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">[Serializable]
-public class ChoiceNode : ConditionalNode, IProcessAsyncNode, IInjectable, IDependent</code></pre>
+public class ChoiceNode : ConditionalNode, IConditionalNode, IProcessAsyncNode, IInjectable, IDependent</code></pre>
   </div>
   <h3 id="fields">Fields
   </h3>
@@ -138,7 +201,7 @@ public class ChoiceNode : ConditionalNode, IProcessAsyncNode, IInjectable, IDepe
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Generic.List</span>&lt;<span class="xref">ConditionalLink</span>&gt;</td>
+        <td><span class="xref">System.Collections.Generic.List</span>&lt;<a class="xref" href="Kinstrife.GraphTools.ConditionalLink.html">ConditionalLink</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -316,6 +379,8 @@ public class ChoiceNode : ConditionalNode, IProcessAsyncNode, IInjectable, IDepe
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">protected override void Enable()</code></pre>
   </div>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Kinstrife.GraphTools.BaseNode.html#Kinstrife_GraphTools_BaseNode_Enable">BaseNode.Enable()</a></div>
   
   
   <a id="Kinstrife_UI_Graph_ChoiceNode_GetExecutedNode_" data-uid="Kinstrife.UI.Graph.ChoiceNode.GetExecutedNode*"></a>
@@ -336,11 +401,13 @@ public class ChoiceNode : ConditionalNode, IProcessAsyncNode, IInjectable, IDepe
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">ConditionalNode</span></td>
+        <td><a class="xref" href="Kinstrife.GraphTools.ConditionalNode.html">ConditionalNode</a></td>
         <td></td>
       </tr>
     </tbody>
   </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Kinstrife.GraphTools.ConditionalNode.html#Kinstrife_GraphTools_ConditionalNode_GetExecutedNode">ConditionalNode.GetExecutedNode()</a></div>
   
   
   <a id="Kinstrife_UI_Graph_ChoiceNode_InitializePorts_" data-uid="Kinstrife.UI.Graph.ChoiceNode.InitializePorts*"></a>
@@ -405,6 +472,8 @@ public class ChoiceNode : ConditionalNode, IProcessAsyncNode, IInjectable, IDepe
       </tr>
     </tbody>
   </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Kinstrife.GraphTools.BaseNode.html#Kinstrife_GraphTools_BaseNode_OnAfterChangeEdges_SerializableEdge_">BaseNode.OnAfterChangeEdges(SerializableEdge)</a></div>
   
   
   <a id="Kinstrife_UI_Graph_ChoiceNode_OnCancelProcess_" data-uid="Kinstrife.UI.Graph.ChoiceNode.OnCancelProcess*"></a>
@@ -462,6 +531,8 @@ public class ChoiceNode : ConditionalNode, IProcessAsyncNode, IInjectable, IDepe
       </tr>
     </tbody>
   </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Kinstrife.GraphTools.BaseNode.html#Kinstrife_GraphTools_BaseNode_Process_Kinstrife_GraphTools_GraphRunner_">BaseNode.Process(GraphRunner)</a></div>
   
   
   <a id="Kinstrife_UI_Graph_ChoiceNode_ProcessAsync_" data-uid="Kinstrife.UI.Graph.ChoiceNode.ProcessAsync*"></a>
@@ -509,7 +580,12 @@ public class ChoiceNode : ConditionalNode, IProcessAsyncNode, IInjectable, IDepe
       </tr>
     </tbody>
   </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Kinstrife.GraphTools.BaseNode.html#Kinstrife_GraphTools_BaseNode_ProcessAsync_Kinstrife_GraphTools_GraphRunner_CancellationToken_">BaseNode.ProcessAsync(GraphRunner, CancellationToken)</a></div>
   <h3 id="implements">Implements</h3>
+  <div>
+      <a class="xref" href="Kinstrife.GraphTools.IConditionalNode.html">IConditionalNode</a>
+  </div>
   <div>
       <a class="xref" href="Kinstrife.GraphTools.IProcessAsyncNode.html">IProcessAsyncNode</a>
   </div>
