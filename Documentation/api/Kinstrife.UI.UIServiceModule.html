@@ -102,6 +102,9 @@
       <a class="xref" href="Kinstrife.UI.UIModule.html#Kinstrife_UI_UIModule_PrimaryInitialization_Kinstrife_Application_ModuleDefinition_">UIModule.PrimaryInitialization(ModuleDefinition)</a>
     </div>
     <div>
+      <a class="xref" href="Kinstrife.UI.UIModule.html#Kinstrife_UI_UIModule_OnEnable">UIModule.OnEnable()</a>
+    </div>
+    <div>
       <a class="xref" href="Kinstrife.UI.UIModule.html#Kinstrife_UI_UIModule_OnDestroy">UIModule.OnDestroy()</a>
     </div>
     <div>
@@ -135,6 +138,9 @@
       <a class="xref" href="Kinstrife.Application.Module.html#Kinstrife_Application_Module_IsDirector">Module.IsDirector</a>
     </div>
     <div>
+      <a class="xref" href="Kinstrife.Application.Module.html#Kinstrife_Application_Module_Priority">Module.Priority</a>
+    </div>
+    <div>
       <a class="xref" href="Kinstrife.Application.Module.html#Kinstrife_Application_Module_OnPauseChanged">Module.OnPauseChanged</a>
     </div>
     <div>
@@ -163,6 +169,9 @@
     </div>
     <div>
       <a class="xref" href="Kinstrife.Application.Module.html#Kinstrife_Application_Module_TryMakePrimary">Module.TryMakePrimary()</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.Application.Module.html#Kinstrife_Application_Module_TryReleasePrimary">Module.TryReleasePrimary()</a>
     </div>
     <div>
       <a class="xref" href="Kinstrife.Application.Module.html#Kinstrife_Application_Module_IsInitialized">Module.IsInitialized</a>
@@ -288,144 +297,6 @@
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public void HideDialog()</code></pre>
   </div>
-  
-  
-  <a id="Kinstrife_UI_UIServiceModule_OnEnable_" data-uid="Kinstrife.UI.UIServiceModule.OnEnable*"></a>
-  <h4 id="Kinstrife_UI_UIServiceModule_OnEnable" data-uid="Kinstrife.UI.UIServiceModule.OnEnable">OnEnable()</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected override void OnEnable()</code></pre>
-  </div>
-  <h5 class="overrides">Overrides</h5>
-  <div><a class="xref" href="Kinstrife.UI.UIModule.html#Kinstrife_UI_UIModule_OnEnable">UIModule.OnEnable()</a></div>
-  
-  
-  <a id="Kinstrife_UI_UIServiceModule_SetChoices_" data-uid="Kinstrife.UI.UIServiceModule.SetChoices*"></a>
-  <h4 id="Kinstrife_UI_UIServiceModule_SetChoices_System_Collections_Generic_List_Kinstrife_UI_DialogViewModel_Option__" data-uid="Kinstrife.UI.UIServiceModule.SetChoices(System.Collections.Generic.List{Kinstrife.UI.DialogViewModel.Option})">SetChoices(List&lt;DialogViewModel.Option&gt;)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void SetChoices(List&lt;DialogViewModel.Option&gt; options)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Collections.Generic.List</span>&lt;<a class="xref" href="Kinstrife.UI.DialogViewModel.Option.html">DialogViewModel.Option</a>&gt;</td>
-        <td><span class="parametername">options</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="Kinstrife_UI_UIServiceModule_ShowDialog_" data-uid="Kinstrife.UI.UIServiceModule.ShowDialog*"></a>
-  <h4 id="Kinstrife_UI_UIServiceModule_ShowDialog_System_String_System_String_System_String_Kinstrife_Action_" data-uid="Kinstrife.UI.UIServiceModule.ShowDialog(System.String,System.String,System.String,Kinstrife.Action)">ShowDialog(String, String, String, Action)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void ShowDialog(string message, string body, string buttonName, Action onClosedCallback = null)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.String</span></td>
-        <td><span class="parametername">message</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><span class="xref">System.String</span></td>
-        <td><span class="parametername">body</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><span class="xref">System.String</span></td>
-        <td><span class="parametername">buttonName</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="Kinstrife.Action.html">Kinstrife.Action</a></td>
-        <td><span class="parametername">onClosedCallback</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="Kinstrife_UI_UIServiceModule_TryShowDialog_" data-uid="Kinstrife.UI.UIServiceModule.TryShowDialog*"></a>
-  <h4 id="Kinstrife_UI_UIServiceModule_TryShowDialog_System_String_System_String_System_String_Kinstrife_Action_" data-uid="Kinstrife.UI.UIServiceModule.TryShowDialog(System.String,System.String,System.String,Kinstrife.Action)">TryShowDialog(String, String, String, Action)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public async UniTask&lt;int&gt; TryShowDialog(string message, string body, string buttonName, Action onClosedCallback = null)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.String</span></td>
-        <td><span class="parametername">message</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><span class="xref">System.String</span></td>
-        <td><span class="parametername">body</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><span class="xref">System.String</span></td>
-        <td><span class="parametername">buttonName</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="Kinstrife.Action.html">Kinstrife.Action</a></td>
-        <td><span class="parametername">onClosedCallback</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">UniTask</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
   <h3 id="implements">Implements</h3>
   <div>
       <a class="xref" href="Kinstrife.Core.DependencyInjection.IInstall-1.html">IInstall&lt;T&gt;</a>

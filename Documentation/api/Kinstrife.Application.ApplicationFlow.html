@@ -87,6 +87,7 @@ The only reason why this is currently a MonoBehaviour is because it requires Sta
     <h5>Implements</h5>
     <div><a class="xref" href="Kinstrife.Core.DependencyInjection.IInjectable.html">IInjectable</a></div>
     <div><a class="xref" href="Kinstrife.Core.DependencyInjection.IDependent.html">IDependent</a></div>
+    <div><span class="xref">MonoBehaviour</span></div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Kinstrife.Application.html">Kinstrife.Application</a></h6>
   <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
@@ -483,6 +484,48 @@ The only reason why this is currently a MonoBehaviour is because it requires Sta
   </table>
   
   
+  <a id="Kinstrife_Application_ApplicationFlow_PrimaryModuleRequested_" data-uid="Kinstrife.Application.ApplicationFlow.PrimaryModuleRequested*"></a>
+  <h4 id="Kinstrife_Application_ApplicationFlow_PrimaryModuleRequested_Kinstrife_Application_ModuleDefinition_" data-uid="Kinstrife.Application.ApplicationFlow.PrimaryModuleRequested(Kinstrife.Application.ModuleDefinition)">PrimaryModuleRequested(ModuleDefinition)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool PrimaryModuleRequested(ModuleDefinition module)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Kinstrife.Application.ModuleDefinition.html">ModuleDefinition</a></td>
+        <td><span class="parametername">module</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
   <a id="Kinstrife_Application_ApplicationFlow_RegisterLocation_" data-uid="Kinstrife.Application.ApplicationFlow.RegisterLocation*"></a>
   <h4 id="Kinstrife_Application_ApplicationFlow_RegisterLocation_Kinstrife_Application_LocationHandle_Kinstrife_Application_Location_" data-uid="Kinstrife.Application.ApplicationFlow.RegisterLocation(Kinstrife.Application.LocationHandle,Kinstrife.Application.Location)">RegisterLocation(LocationHandle, Location)</h4>
   <div class="markdown level1 summary"></div>
@@ -578,6 +621,90 @@ The only reason why this is currently a MonoBehaviour is because it requires Sta
       <tr>
         <td><span class="xref">System.Boolean</span></td>
         <td><span class="parametername">immediate</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Kinstrife_Application_ApplicationFlow_TryReleasePrimaryModule_" data-uid="Kinstrife.Application.ApplicationFlow.TryReleasePrimaryModule*"></a>
+  <h4 id="Kinstrife_Application_ApplicationFlow_TryReleasePrimaryModule_AssetReferenceT_Kinstrife_Application_ModuleDefinition__" data-uid="Kinstrife.Application.ApplicationFlow.TryReleasePrimaryModule(AssetReferenceT{Kinstrife.Application.ModuleDefinition})">TryReleasePrimaryModule(AssetReferenceT&lt;ModuleDefinition&gt;)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public async UniTask&lt;bool&gt; TryReleasePrimaryModule(AssetReferenceT&lt;ModuleDefinition&gt; moduleDefinitionRef)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">AssetReferenceT</span>&lt;<a class="xref" href="Kinstrife.Application.ModuleDefinition.html">ModuleDefinition</a>&gt;</td>
+        <td><span class="parametername">moduleDefinitionRef</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">UniTask</span>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Kinstrife_Application_ApplicationFlow_TryReleasePrimaryModule_" data-uid="Kinstrife.Application.ApplicationFlow.TryReleasePrimaryModule*"></a>
+  <h4 id="Kinstrife_Application_ApplicationFlow_TryReleasePrimaryModule_Kinstrife_Application_ModuleDefinition_" data-uid="Kinstrife.Application.ApplicationFlow.TryReleasePrimaryModule(Kinstrife.Application.ModuleDefinition)">TryReleasePrimaryModule(ModuleDefinition)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool TryReleasePrimaryModule(ModuleDefinition moduleDefinition)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Kinstrife.Application.ModuleDefinition.html">ModuleDefinition</a></td>
+        <td><span class="parametername">moduleDefinition</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -812,7 +939,49 @@ The only reason why this is currently a MonoBehaviour is because it requires Sta
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public async UniTask&lt;bool&gt; TrySwitchPrimaryModule(ModuleDefinition targetModuleDefinition)</code></pre>
+    <pre><code class="lang-csharp hljs">public bool TrySwitchPrimaryModule(ModuleDefinition targetModuleDefinition)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Kinstrife.Application.ModuleDefinition.html">ModuleDefinition</a></td>
+        <td><span class="parametername">targetModuleDefinition</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Kinstrife_Application_ApplicationFlow_TrySwitchPrimaryModule2_" data-uid="Kinstrife.Application.ApplicationFlow.TrySwitchPrimaryModule2*"></a>
+  <h4 id="Kinstrife_Application_ApplicationFlow_TrySwitchPrimaryModule2_Kinstrife_Application_ModuleDefinition_" data-uid="Kinstrife.Application.ApplicationFlow.TrySwitchPrimaryModule2(Kinstrife.Application.ModuleDefinition)">TrySwitchPrimaryModule2(ModuleDefinition)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public async UniTask&lt;bool&gt; TrySwitchPrimaryModule2(ModuleDefinition targetModuleDefinition)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -842,6 +1011,33 @@ The only reason why this is currently a MonoBehaviour is because it requires Sta
     <tbody>
       <tr>
         <td><span class="xref">UniTask</span>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Kinstrife_Application_ApplicationFlow_UnregisterModule_" data-uid="Kinstrife.Application.ApplicationFlow.UnregisterModule*"></a>
+  <h4 id="Kinstrife_Application_ApplicationFlow_UnregisterModule_Kinstrife_Application_Module_" data-uid="Kinstrife.Application.ApplicationFlow.UnregisterModule(Kinstrife.Application.Module)">UnregisterModule(Module)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void UnregisterModule(Module module)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Kinstrife.Application.Module.html">Module</a></td>
+        <td><span class="parametername">module</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -998,6 +1194,9 @@ The only reason why this is currently a MonoBehaviour is because it requires Sta
   </div>
   <div>
       <a class="xref" href="Kinstrife.Core.DependencyInjection.IDependent.html">IDependent</a>
+  </div>
+  <div>
+      <span class="xref">MonoBehaviour</span>
   </div>
 </article>
           </div>
