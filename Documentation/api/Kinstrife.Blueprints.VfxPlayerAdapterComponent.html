@@ -119,43 +119,17 @@
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public class VfxPlayerAdapterComponent : OutputAdapterComponent&lt;VfxPlayerAdapterComponent.Instruction&gt;, IInjectable, IDependent</code></pre>
   </div>
-  <h3 id="fields">Fields
-  </h3>
-  
-  
-  <h4 id="Kinstrife_Blueprints_VfxPlayerAdapterComponent_VfxSystem" data-uid="Kinstrife.Blueprints.VfxPlayerAdapterComponent.VfxSystem">VfxSystem</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public VfxSystem VfxSystem</code></pre>
-  </div>
-  <h5 class="fieldValue">Field Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Kinstrife.Vfx.VfxSystem.html">VfxSystem</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
   <h3 id="methods">Methods
   </h3>
   
   
   <a id="Kinstrife_Blueprints_VfxPlayerAdapterComponent_Inject_" data-uid="Kinstrife.Blueprints.VfxPlayerAdapterComponent.Inject*"></a>
-  <h4 id="Kinstrife_Blueprints_VfxPlayerAdapterComponent_Inject_Kinstrife_Vfx_VfxSystem_Entity_Entity_" data-uid="Kinstrife.Blueprints.VfxPlayerAdapterComponent.Inject(Kinstrife.Vfx.VfxSystem,Entity,Entity)">Inject(VfxSystem, Entity, Entity)</h4>
+  <h4 id="Kinstrife_Blueprints_VfxPlayerAdapterComponent_Inject_Entity_Entity_" data-uid="Kinstrife.Blueprints.VfxPlayerAdapterComponent.Inject(Entity,Entity)">Inject(Entity, Entity)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void Inject(VfxSystem VfxSystem, Entity owner, Entity self)</code></pre>
+    <pre><code class="lang-csharp hljs">public void Inject(Entity owner, Entity self)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -167,11 +141,6 @@
       </tr>
     </thead>
     <tbody>
-      <tr>
-        <td><a class="xref" href="Kinstrife.Vfx.VfxSystem.html">VfxSystem</a></td>
-        <td><span class="parametername">VfxSystem</span></td>
-        <td></td>
-      </tr>
       <tr>
         <td><span class="xref">Entity</span></td>
         <td><span class="parametername">owner</span></td>
@@ -242,75 +211,6 @@
   </table>
   <h5 class="overrides">Overrides</h5>
   <div><span class="xref">Kinstrife.Entities.Procedures.OutputAdapterComponent&lt;Kinstrife.Blueprints.VfxPlayerAdapterComponent.Instruction&gt;.Instruction_onDeactivate(Kinstrife.Entities.Procedures.StatusEventsInstruction)</span></div>
-  
-  
-  <a id="Kinstrife_Blueprints_VfxPlayerAdapterComponent_Play_" data-uid="Kinstrife.Blueprints.VfxPlayerAdapterComponent.Play*"></a>
-  <h4 id="Kinstrife_Blueprints_VfxPlayerAdapterComponent_Play_Kinstrife_Vfx_VfxAsset_Entity_Entity_" data-uid="Kinstrife.Blueprints.VfxPlayerAdapterComponent.Play(Kinstrife.Vfx.VfxAsset,Entity,Entity)">Play(VfxAsset, Entity, Entity)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void Play(VfxAsset vfxAsset, Entity Id, Entity owner)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Kinstrife.Vfx.VfxAsset.html">VfxAsset</a></td>
-        <td><span class="parametername">vfxAsset</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><span class="xref">Entity</span></td>
-        <td><span class="parametername">Id</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><span class="xref">Entity</span></td>
-        <td><span class="parametername">owner</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="Kinstrife_Blueprints_VfxPlayerAdapterComponent_Stop_" data-uid="Kinstrife.Blueprints.VfxPlayerAdapterComponent.Stop*"></a>
-  <h4 id="Kinstrife_Blueprints_VfxPlayerAdapterComponent_Stop_Kinstrife_Vfx_VfxAsset_Entity__" data-uid="Kinstrife.Blueprints.VfxPlayerAdapterComponent.Stop(Kinstrife.Vfx.VfxAsset,Entity@)">Stop(VfxAsset, in Entity)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void Stop(VfxAsset vfxAsset, in Entity e)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Kinstrife.Vfx.VfxAsset.html">VfxAsset</a></td>
-        <td><span class="parametername">vfxAsset</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><span class="xref">Entity</span></td>
-        <td><span class="parametername">e</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
   <h3 id="implements">Implements</h3>
   <div>
       <span class="xref">IDisposable</span>

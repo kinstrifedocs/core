@@ -1,0 +1,671 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class BranchingConditionalNode
+   | Kinstrife </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class BranchingConditionalNode
+   | Kinstrife ">
+    <meta name="generator" content="docfx 2.59.0.0">
+    
+    <link rel="shortcut icon" href="../../favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet"> 
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../index.html">
+                <img id="logo" class="svg" src="../../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Kinstrife.GraphTools.BranchingConditionalNode">
+  
+  
+  <h1 id="Kinstrife_GraphTools_BranchingConditionalNode" data-uid="Kinstrife.GraphTools.BranchingConditionalNode" class="text-break">Class BranchingConditionalNode
+  </h1>
+  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><a class="xref" href="Kinstrife.GraphTools.BaseNode.html">BaseNode</a></div>
+    <div class="level2"><a class="xref" href="Kinstrife.GraphTools.ConditionalNode.html">ConditionalNode</a></div>
+    <div class="level3"><span class="xref">BranchingConditionalNode</span></div>
+  </div>
+  <div classs="implements">
+    <h5>Implements</h5>
+    <div><a class="xref" href="Kinstrife.GraphTools.IConditionalNode.html">IConditionalNode</a></div>
+    <div><a class="xref" href="Kinstrife.GraphTools.IProcessAsyncNode.html">IProcessAsyncNode</a></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="Kinstrife.GraphTools.ConditionalNode.html#Kinstrife_GraphTools_ConditionalNode_executed">ConditionalNode.executed</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.GraphTools.ConditionalNode.html#Kinstrife_GraphTools_ConditionalNode_GetNodeFields">ConditionalNode.GetNodeFields()</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.GraphTools.BaseNode.html#Kinstrife_GraphTools_BaseNode_IsInitialized">BaseNode.IsInitialized</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.GraphTools.BaseNode.html#Kinstrife_GraphTools_BaseNode_GetInputNodes_System_String_">BaseNode.GetInputNodes(String)</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.GraphTools.BaseNode.html#Kinstrife_GraphTools_BaseNode_GetOutputNodes_System_String_">BaseNode.GetOutputNodes(String)</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.GraphTools.BaseNode.html#Kinstrife_GraphTools_BaseNode_HasOutput">BaseNode.HasOutput()</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.GraphTools.BaseNode.html#Kinstrife_GraphTools_BaseNode_ConnectedInputNodes__1">BaseNode.ConnectedInputNodes&lt;T&gt;()</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.GraphTools.BaseNode.html#Kinstrife_GraphTools_BaseNode_ConnectedInputNodes__1_System_String_">BaseNode.ConnectedInputNodes&lt;T&gt;(String)</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.GraphTools.BaseNode.html#Kinstrife_GraphTools_BaseNode_ConnectedOutputNodes__1">BaseNode.ConnectedOutputNodes&lt;T&gt;()</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.GraphTools.BaseNode.html#Kinstrife_GraphTools_BaseNode_ConnectedOutputNodes__1_System_String_">BaseNode.ConnectedOutputNodes&lt;T&gt;(String)</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.GraphTools.BaseNode.html#Kinstrife_GraphTools_BaseNode_HasInputConnection_System_String_">BaseNode.HasInputConnection(String)</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.GraphTools.BaseNode.html#Kinstrife_GraphTools_BaseNode_HasInputConnectionOfType__1">BaseNode.HasInputConnectionOfType&lt;T&gt;()</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.GraphTools.BaseNode.html#Kinstrife_GraphTools_BaseNode_HasOutputConnectionOfType__1">BaseNode.HasOutputConnectionOfType&lt;T&gt;()</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.GraphTools.BaseNode.html#Kinstrife_GraphTools_BaseNode_ConnectedInputNode__1">BaseNode.ConnectedInputNode&lt;T&gt;()</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.GraphTools.BaseNode.html#Kinstrife_GraphTools_BaseNode_ConnectedOutputNode__1">BaseNode.ConnectedOutputNode&lt;T&gt;()</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.GraphTools.BaseNode.html#Kinstrife_GraphTools_BaseNode_ConnectedOutputNode__1_System_String_">BaseNode.ConnectedOutputNode&lt;T&gt;(String)</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.GraphTools.BaseNode.html#Kinstrife_GraphTools_BaseNode_Disable">BaseNode.Disable()</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.GraphTools.BaseNode.html#Kinstrife_GraphTools_BaseNode_Process_Kinstrife_GraphTools_GraphRunner_">BaseNode.Process(GraphRunner)</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.GraphTools.BaseNode.html#Kinstrife_GraphTools_BaseNode_OnProcess_Kinstrife_GraphTools_GraphRunner_">BaseNode.OnProcess(GraphRunner)</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.GraphTools.BaseNode.html#Kinstrife_GraphTools_BaseNode_OnProcessAsync_Kinstrife_GraphTools_GraphRunner_CancellationToken_">BaseNode.OnProcessAsync(GraphRunner, CancellationToken)</a>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Kinstrife.GraphTools.html">Kinstrife.GraphTools</a></h6>
+  <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
+  <h5 id="Kinstrife_GraphTools_BranchingConditionalNode_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public abstract class BranchingConditionalNode : ConditionalNode, IConditionalNode, IProcessAsyncNode</code></pre>
+  </div>
+  <h3 id="fields">Fields
+  </h3>
+  
+  
+  <h4 id="Kinstrife_GraphTools_BranchingConditionalNode_Branches" data-uid="Kinstrife.GraphTools.BranchingConditionalNode.Branches">Branches</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ConditionalLink[] Branches</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Kinstrife.GraphTools.ConditionalLink.html">ConditionalLink</a>[]</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="Kinstrife_GraphTools_BranchingConditionalNode_ChosenBranchIdentifier" data-uid="Kinstrife.GraphTools.BranchingConditionalNode.ChosenBranchIdentifier">ChosenBranchIdentifier</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string ChosenBranchIdentifier</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="Kinstrife_GraphTools_BranchingConditionalNode_ChosenBranchIndex" data-uid="Kinstrife.GraphTools.BranchingConditionalNode.ChosenBranchIndex">ChosenBranchIndex</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int ChosenBranchIndex</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="properties">Properties
+  </h3>
+  
+  
+  <a id="Kinstrife_GraphTools_BranchingConditionalNode_DidChoseBranch_" data-uid="Kinstrife.GraphTools.BranchingConditionalNode.DidChoseBranch*"></a>
+  <h4 id="Kinstrife_GraphTools_BranchingConditionalNode_DidChoseBranch" data-uid="Kinstrife.GraphTools.BranchingConditionalNode.DidChoseBranch">DidChoseBranch</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool DidChoseBranch { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Kinstrife_GraphTools_BranchingConditionalNode_inProgress_" data-uid="Kinstrife.GraphTools.BranchingConditionalNode.inProgress*"></a>
+  <h4 id="Kinstrife_GraphTools_BranchingConditionalNode_inProgress" data-uid="Kinstrife.GraphTools.BranchingConditionalNode.inProgress">inProgress</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool inProgress { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  
+  
+  <a id="Kinstrife_GraphTools_BranchingConditionalNode_BranchDataDirty_" data-uid="Kinstrife.GraphTools.BranchingConditionalNode.BranchDataDirty*"></a>
+  <h4 id="Kinstrife_GraphTools_BranchingConditionalNode_BranchDataDirty" data-uid="Kinstrife.GraphTools.BranchingConditionalNode.BranchDataDirty">BranchDataDirty()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected void BranchDataDirty()</code></pre>
+  </div>
+  
+  
+  <a id="Kinstrife_GraphTools_BranchingConditionalNode_ClearPorts_" data-uid="Kinstrife.GraphTools.BranchingConditionalNode.ClearPorts*"></a>
+  <h4 id="Kinstrife_GraphTools_BranchingConditionalNode_ClearPorts" data-uid="Kinstrife.GraphTools.BranchingConditionalNode.ClearPorts">ClearPorts()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected void ClearPorts()</code></pre>
+  </div>
+  
+  
+  <a id="Kinstrife_GraphTools_BranchingConditionalNode_Enable_" data-uid="Kinstrife.GraphTools.BranchingConditionalNode.Enable*"></a>
+  <h4 id="Kinstrife_GraphTools_BranchingConditionalNode_Enable" data-uid="Kinstrife.GraphTools.BranchingConditionalNode.Enable">Enable()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override void Enable()</code></pre>
+  </div>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Kinstrife.GraphTools.BaseNode.html#Kinstrife_GraphTools_BaseNode_Enable">BaseNode.Enable()</a></div>
+  
+  
+  <a id="Kinstrife_GraphTools_BranchingConditionalNode_GetBranchPortSource_" data-uid="Kinstrife.GraphTools.BranchingConditionalNode.GetBranchPortSource*"></a>
+  <h4 id="Kinstrife_GraphTools_BranchingConditionalNode_GetBranchPortSource" data-uid="Kinstrife.GraphTools.BranchingConditionalNode.GetBranchPortSource">GetBranchPortSource()</h4>
+  <div class="markdown level1 summary"><p>The source data from which branche ports are generated</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected abstract IEnumerable&lt;IBranchPortSource&gt; GetBranchPortSource()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="Kinstrife.GraphTools.IBranchPortSource.html">IBranchPortSource</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Kinstrife_GraphTools_BranchingConditionalNode_GetExecutedNode_" data-uid="Kinstrife.GraphTools.BranchingConditionalNode.GetExecutedNode*"></a>
+  <h4 id="Kinstrife_GraphTools_BranchingConditionalNode_GetExecutedNode" data-uid="Kinstrife.GraphTools.BranchingConditionalNode.GetExecutedNode">GetExecutedNode()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override ConditionalNode GetExecutedNode()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Kinstrife.GraphTools.ConditionalNode.html">ConditionalNode</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Kinstrife.GraphTools.ConditionalNode.html#Kinstrife_GraphTools_ConditionalNode_GetExecutedNode">ConditionalNode.GetExecutedNode()</a></div>
+  
+  
+  <a id="Kinstrife_GraphTools_BranchingConditionalNode_GetPortsForOutputs_" data-uid="Kinstrife.GraphTools.BranchingConditionalNode.GetPortsForOutputs*"></a>
+  <h4 id="Kinstrife_GraphTools_BranchingConditionalNode_GetPortsForOutputs_System_Collections_Generic_List_SerializableEdge__" data-uid="Kinstrife.GraphTools.BranchingConditionalNode.GetPortsForOutputs(System.Collections.Generic.List{SerializableEdge})">GetPortsForOutputs(List&lt;SerializableEdge&gt;)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected IEnumerable&lt;PortData&gt; GetPortsForOutputs(List&lt;SerializableEdge&gt; edges)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.List</span>&lt;<span class="xref">SerializableEdge</span>&gt;</td>
+        <td><span class="parametername">edges</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<span class="xref">PortData</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Kinstrife_GraphTools_BranchingConditionalNode_InitializePorts_" data-uid="Kinstrife.GraphTools.BranchingConditionalNode.InitializePorts*"></a>
+  <h4 id="Kinstrife_GraphTools_BranchingConditionalNode_InitializePorts" data-uid="Kinstrife.GraphTools.BranchingConditionalNode.InitializePorts">InitializePorts()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override void InitializePorts()</code></pre>
+  </div>
+  
+  
+  <a id="Kinstrife_GraphTools_BranchingConditionalNode_OnAfterChangeEdges_" data-uid="Kinstrife.GraphTools.BranchingConditionalNode.OnAfterChangeEdges*"></a>
+  <h4 id="Kinstrife_GraphTools_BranchingConditionalNode_OnAfterChangeEdges_SerializableEdge_" data-uid="Kinstrife.GraphTools.BranchingConditionalNode.OnAfterChangeEdges(SerializableEdge)">OnAfterChangeEdges(SerializableEdge)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override void OnAfterChangeEdges(SerializableEdge edge)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">SerializableEdge</span></td>
+        <td><span class="parametername">edge</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Kinstrife.GraphTools.BaseNode.html#Kinstrife_GraphTools_BaseNode_OnAfterChangeEdges_SerializableEdge_">BaseNode.OnAfterChangeEdges(SerializableEdge)</a></div>
+  
+  
+  <a id="Kinstrife_GraphTools_BranchingConditionalNode_OnCancelProcess_" data-uid="Kinstrife.GraphTools.BranchingConditionalNode.OnCancelProcess*"></a>
+  <h4 id="Kinstrife_GraphTools_BranchingConditionalNode_OnCancelProcess" data-uid="Kinstrife.GraphTools.BranchingConditionalNode.OnCancelProcess">OnCancelProcess()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void OnCancelProcess()</code></pre>
+  </div>
+  
+  
+  <a id="Kinstrife_GraphTools_BranchingConditionalNode_ProcessAsync_" data-uid="Kinstrife.GraphTools.BranchingConditionalNode.ProcessAsync*"></a>
+  <h4 id="Kinstrife_GraphTools_BranchingConditionalNode_ProcessAsync_Kinstrife_GraphTools_GraphRunner_CancellationToken_" data-uid="Kinstrife.GraphTools.BranchingConditionalNode.ProcessAsync(Kinstrife.GraphTools.GraphRunner,CancellationToken)">ProcessAsync(GraphRunner, CancellationToken)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override async UniTask ProcessAsync(GraphRunner runner, CancellationToken token)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Kinstrife.GraphTools.GraphRunner.html">GraphRunner</a></td>
+        <td><span class="parametername">runner</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">CancellationToken</span></td>
+        <td><span class="parametername">token</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">UniTask</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Kinstrife.GraphTools.BaseNode.html#Kinstrife_GraphTools_BaseNode_ProcessAsync_Kinstrife_GraphTools_GraphRunner_CancellationToken_">BaseNode.ProcessAsync(GraphRunner, CancellationToken)</a></div>
+  
+  
+  <a id="Kinstrife_GraphTools_BranchingConditionalNode_PushOutputs_" data-uid="Kinstrife.GraphTools.BranchingConditionalNode.PushOutputs*"></a>
+  <h4 id="Kinstrife_GraphTools_BranchingConditionalNode_PushOutputs_System_Collections_Generic_List_SerializableEdge__" data-uid="Kinstrife.GraphTools.BranchingConditionalNode.PushOutputs(System.Collections.Generic.List{SerializableEdge})">PushOutputs(List&lt;SerializableEdge&gt;)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected void PushOutputs(List&lt;SerializableEdge&gt; connectedEdges)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.List</span>&lt;<span class="xref">SerializableEdge</span>&gt;</td>
+        <td><span class="parametername">connectedEdges</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Kinstrife_GraphTools_BranchingConditionalNode_TryAddPort_" data-uid="Kinstrife.GraphTools.BranchingConditionalNode.TryAddPort*"></a>
+  <h4 id="Kinstrife_GraphTools_BranchingConditionalNode_TryAddPort_System_String_System_String_" data-uid="Kinstrife.GraphTools.BranchingConditionalNode.TryAddPort(System.String,System.String)">TryAddPort(String, String)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected bool TryAddPort(string id, string name)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">id</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">name</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Kinstrife_GraphTools_BranchingConditionalNode_TryRemovePort_" data-uid="Kinstrife.GraphTools.BranchingConditionalNode.TryRemovePort*"></a>
+  <h4 id="Kinstrife_GraphTools_BranchingConditionalNode_TryRemovePort_System_String_" data-uid="Kinstrife.GraphTools.BranchingConditionalNode.TryRemovePort(System.String)">TryRemovePort(String)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected bool TryRemovePort(string id)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">id</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <a class="xref" href="Kinstrife.GraphTools.IConditionalNode.html">IConditionalNode</a>
+  </div>
+  <div>
+      <a class="xref" href="Kinstrife.GraphTools.IProcessAsyncNode.html">IProcessAsyncNode</a>
+  </div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+  </body>
+</html>

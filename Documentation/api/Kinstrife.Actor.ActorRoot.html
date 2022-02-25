@@ -84,41 +84,19 @@
   </div>
   <div classs="implements">
     <h5>Implements</h5>
-    <div><span class="xref">ICacheReferences</span></div>
-    <div><span class="xref">IInstall</span>&lt;<a class="xref" href="Kinstrife.Actor.ActorRoot.html">ActorRoot</a>&gt;</div>
+    <div><a class="xref" href="Kinstrife.Core.DependencyInjection.ICacheReferences.html">ICacheReferences</a></div>
+    <div><a class="xref" href="Kinstrife.Core.DependencyInjection.IInstall-1.html">IInstall</a>&lt;<a class="xref" href="Kinstrife.Actor.ActorRoot.html">ActorRoot</a>&gt;</div>
+    <div><a class="xref" href="Kinstrife.Core.DependencyInjection.IInstall.html">IInstall</a></div>
+    <div><a class="xref" href="Kinstrife.Core.DependencyInjection.IDependent.html">IDependent</a></div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Kinstrife.Actor.html">Kinstrife.Actor</a></h6>
   <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
   <h5 id="Kinstrife_Actor_ActorRoot_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class ActorRoot : MonoBehaviour</code></pre>
+    <pre><code class="lang-csharp hljs">public class ActorRoot : MonoBehaviour, ICacheReferences, IInstall&lt;ActorRoot&gt;, IInstall, IDependent</code></pre>
   </div>
   <h3 id="fields">Fields
   </h3>
-  
-  
-  <h4 id="Kinstrife_Actor_ActorRoot_animation" data-uid="Kinstrife.Actor.ActorRoot.animation">animation</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public AnimationDirector animation</code></pre>
-  </div>
-  <h5 class="fieldValue">Field Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">AnimationDirector</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
   
   
   <h4 id="Kinstrife_Actor_ActorRoot_Context" data-uid="Kinstrife.Actor.ActorRoot.Context">Context</h4>
@@ -138,31 +116,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Context</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <h4 id="Kinstrife_Actor_ActorRoot_ikRig" data-uid="Kinstrife.Actor.ActorRoot.ikRig">ikRig</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public IIKRig ikRig</code></pre>
-  </div>
-  <h5 class="fieldValue">Field Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Kinstrife.Actor.IIKRig.html">IIKRig</a></td>
+        <td><a class="xref" href="Kinstrife.Core.DependencyInjection.Context.html">Context</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -186,79 +140,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">DIInitializer</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <h4 id="Kinstrife_Actor_ActorRoot_physicsRig" data-uid="Kinstrife.Actor.ActorRoot.physicsRig">physicsRig</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public IPhysicsRig physicsRig</code></pre>
-  </div>
-  <h5 class="fieldValue">Field Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Kinstrife.Actor.IPhysicsRig.html">IPhysicsRig</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <h4 id="Kinstrife_Actor_ActorRoot_rig" data-uid="Kinstrife.Actor.ActorRoot.rig">rig</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public IKRig rig</code></pre>
-  </div>
-  <h5 class="fieldValue">Field Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">IKRig</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <h4 id="Kinstrife_Actor_ActorRoot_skeleton" data-uid="Kinstrife.Actor.ActorRoot.skeleton">skeleton</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Skeleton skeleton</code></pre>
-  </div>
-  <h5 class="fieldValue">Field Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">Skeleton</span></td>
+        <td><a class="xref" href="Kinstrife.Core.DependencyInjection.DIInitializer.html">DIInitializer</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -289,31 +171,6 @@
   </table>
   <h3 id="properties">Properties
   </h3>
-  
-  
-  <a id="Kinstrife_Actor_ActorRoot_boneTransforms_" data-uid="Kinstrife.Actor.ActorRoot.boneTransforms*"></a>
-  <h4 id="Kinstrife_Actor_ActorRoot_boneTransforms" data-uid="Kinstrife.Actor.ActorRoot.boneTransforms">boneTransforms</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public BoneTransformReferences boneTransforms { get; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">BoneTransformReferences</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
   
   
   <a id="Kinstrife_Actor_ActorRoot_initialized_" data-uid="Kinstrife.Actor.ActorRoot.initialized*"></a>
@@ -351,163 +208,6 @@
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public virtual void CacheReferences()</code></pre>
   </div>
-  
-  
-  <a id="Kinstrife_Actor_ActorRoot_GetBoneTransform_" data-uid="Kinstrife.Actor.ActorRoot.GetBoneTransform*"></a>
-  <h4 id="Kinstrife_Actor_ActorRoot_GetBoneTransform_BoneId_System_Boolean_System_Boolean_" data-uid="Kinstrife.Actor.ActorRoot.GetBoneTransform(BoneId,System.Boolean,System.Boolean)">GetBoneTransform(BoneId, Boolean, Boolean)</h4>
-  <div class="markdown level1 summary"><p>Exists so that all actor scripts don't need the whole TransformsContainer package stack</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Transform GetBoneTransform(BoneId boneId, bool tryRetarget = true, bool logNotFound = false)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">BoneId</span></td>
-        <td><span class="parametername">boneId</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><span class="xref">System.Boolean</span></td>
-        <td><span class="parametername">tryRetarget</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><span class="xref">System.Boolean</span></td>
-        <td><span class="parametername">logNotFound</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">Transform</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="Kinstrife_Actor_ActorRoot_TryGetBoneTransform_" data-uid="Kinstrife.Actor.ActorRoot.TryGetBoneTransform*"></a>
-  <h4 id="Kinstrife_Actor_ActorRoot_TryGetBoneTransform_BoneId_Transform__RetargetingAsset_System_Boolean_" data-uid="Kinstrife.Actor.ActorRoot.TryGetBoneTransform(BoneId,Transform@,RetargetingAsset,System.Boolean)">TryGetBoneTransform(BoneId, out Transform, RetargetingAsset, Boolean)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public bool TryGetBoneTransform(BoneId boneId, out Transform transform, RetargetingAsset retargetingAsset, bool logNotfound = false)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">BoneId</span></td>
-        <td><span class="parametername">boneId</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><span class="xref">Transform</span></td>
-        <td><span class="parametername">transform</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><span class="xref">RetargetingAsset</span></td>
-        <td><span class="parametername">retargetingAsset</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><span class="xref">System.Boolean</span></td>
-        <td><span class="parametername">logNotfound</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Boolean</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="Kinstrife_Actor_ActorRoot_TryGetEffector_" data-uid="Kinstrife.Actor.ActorRoot.TryGetEffector*"></a>
-  <h4 id="Kinstrife_Actor_ActorRoot_TryGetEffector_EffectorTag_EffectorHandle__" data-uid="Kinstrife.Actor.ActorRoot.TryGetEffector(EffectorTag,EffectorHandle@)">TryGetEffector(EffectorTag, out EffectorHandle)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public bool TryGetEffector(EffectorTag effector, out EffectorHandle effectorHandle)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">EffectorTag</span></td>
-        <td><span class="parametername">effector</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><span class="xref">EffectorHandle</span></td>
-        <td><span class="parametername">effectorHandle</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Boolean</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
   <h3 id="events">Events
   </h3>
   
@@ -536,10 +236,16 @@
   </table>
   <h3 id="implements">Implements</h3>
   <div>
-      <span class="xref">ICacheReferences</span>
+      <a class="xref" href="Kinstrife.Core.DependencyInjection.ICacheReferences.html">ICacheReferences</a>
   </div>
   <div>
-      <span class="xref">IInstall&lt;&gt;</span>
+      <a class="xref" href="Kinstrife.Core.DependencyInjection.IInstall-1.html">IInstall&lt;T&gt;</a>
+  </div>
+  <div>
+      <a class="xref" href="Kinstrife.Core.DependencyInjection.IInstall.html">IInstall</a>
+  </div>
+  <div>
+      <a class="xref" href="Kinstrife.Core.DependencyInjection.IDependent.html">IDependent</a>
   </div>
 </article>
           </div>

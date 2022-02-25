@@ -119,17 +119,43 @@
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public class SoundPlayerAdapterComponent : OutputAdapterComponent&lt;SoundPlayerAdapterComponent.Instruction&gt;, IInjectable, IDependent</code></pre>
   </div>
+  <h3 id="fields">Fields
+  </h3>
+  
+  
+  <h4 id="Kinstrife_Blueprints_SoundPlayerAdapterComponent_transform" data-uid="Kinstrife.Blueprints.SoundPlayerAdapterComponent.transform">transform</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Transform transform</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Transform</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   <h3 id="methods">Methods
   </h3>
   
   
   <a id="Kinstrife_Blueprints_SoundPlayerAdapterComponent_Inject_" data-uid="Kinstrife.Blueprints.SoundPlayerAdapterComponent.Inject*"></a>
-  <h4 id="Kinstrife_Blueprints_SoundPlayerAdapterComponent_Inject_Kinstrife_Audio_SoundSystem_Entity_Entity_" data-uid="Kinstrife.Blueprints.SoundPlayerAdapterComponent.Inject(Kinstrife.Audio.SoundSystem,Entity,Entity)">Inject(SoundSystem, Entity, Entity)</h4>
+  <h4 id="Kinstrife_Blueprints_SoundPlayerAdapterComponent_Inject_Entity_Entity_" data-uid="Kinstrife.Blueprints.SoundPlayerAdapterComponent.Inject(Entity,Entity)">Inject(Entity, Entity)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void Inject(SoundSystem soundSystem, Entity owner, Entity procedure)</code></pre>
+    <pre><code class="lang-csharp hljs">public void Inject(Entity owner, Entity procedure)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -141,11 +167,6 @@
       </tr>
     </thead>
     <tbody>
-      <tr>
-        <td><a class="xref" href="Kinstrife.Audio.SoundSystem.html">SoundSystem</a></td>
-        <td><span class="parametername">soundSystem</span></td>
-        <td></td>
-      </tr>
       <tr>
         <td><span class="xref">Entity</span></td>
         <td><span class="parametername">owner</span></td>
@@ -219,12 +240,12 @@
   
   
   <a id="Kinstrife_Blueprints_SoundPlayerAdapterComponent_Play_" data-uid="Kinstrife.Blueprints.SoundPlayerAdapterComponent.Play*"></a>
-  <h4 id="Kinstrife_Blueprints_SoundPlayerAdapterComponent_Play_Kinstrife_Audio_Sound_Entity__System_Boolean_System_Boolean_System_Single_System_Single_" data-uid="Kinstrife.Blueprints.SoundPlayerAdapterComponent.Play(Kinstrife.Audio.Sound,Entity@,System.Boolean,System.Boolean,System.Single,System.Single)">Play(Sound, in Entity, Boolean, Boolean, Single, Single)</h4>
+  <h4 id="Kinstrife_Blueprints_SoundPlayerAdapterComponent_Play_AK_Wwise_Event_Entity__System_Boolean_System_Boolean_System_Single_System_Single_" data-uid="Kinstrife.Blueprints.SoundPlayerAdapterComponent.Play(AK.Wwise.Event,Entity@,System.Boolean,System.Boolean,System.Single,System.Single)">Play(AK.Wwise.Event, in Entity, Boolean, Boolean, Single, Single)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void Play(Sound sound, in Entity Id, bool atPosition, bool loop, float volumeModulation, float pitch)</code></pre>
+    <pre><code class="lang-csharp hljs">public void Play(AK.Wwise.Event sound, in Entity Id, bool atPosition, bool loop, float volumeModulation, float pitch)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -237,7 +258,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="Kinstrife.Audio.Sound.html">Sound</a></td>
+        <td><span class="xref">AK.Wwise.Event</span></td>
         <td><span class="parametername">sound</span></td>
         <td></td>
       </tr>
@@ -271,12 +292,12 @@
   
   
   <a id="Kinstrife_Blueprints_SoundPlayerAdapterComponent_Stop_" data-uid="Kinstrife.Blueprints.SoundPlayerAdapterComponent.Stop*"></a>
-  <h4 id="Kinstrife_Blueprints_SoundPlayerAdapterComponent_Stop_Kinstrife_Audio_Sound_Entity__" data-uid="Kinstrife.Blueprints.SoundPlayerAdapterComponent.Stop(Kinstrife.Audio.Sound,Entity@)">Stop(Sound, in Entity)</h4>
+  <h4 id="Kinstrife_Blueprints_SoundPlayerAdapterComponent_Stop_AK_Wwise_Event_Entity__" data-uid="Kinstrife.Blueprints.SoundPlayerAdapterComponent.Stop(AK.Wwise.Event,Entity@)">Stop(AK.Wwise.Event, in Entity)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void Stop(Sound sound, in Entity Id)</code></pre>
+    <pre><code class="lang-csharp hljs">public void Stop(AK.Wwise.Event sound, in Entity Id)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -289,7 +310,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="Kinstrife.Audio.Sound.html">Sound</a></td>
+        <td><span class="xref">AK.Wwise.Event</span></td>
         <td><span class="parametername">sound</span></td>
         <td></td>
       </tr>
