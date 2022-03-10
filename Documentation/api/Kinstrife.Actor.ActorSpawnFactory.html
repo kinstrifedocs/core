@@ -85,6 +85,8 @@
     <h5>Implements</h5>
     <div><a class="xref" href="Kinstrife.Core.DependencyInjection.IInjectable.html">IInjectable</a></div>
     <div><a class="xref" href="Kinstrife.Core.DependencyInjection.IInitializable.html">IInitializable</a></div>
+    <div><a class="xref" href="Kinstrife.Core.DependencyInjection.IInstall-1.html">IInstall</a>&lt;<a class="xref" href="Kinstrife.Actor.ActorSpawnFactory.html">ActorSpawnFactory</a>&gt;</div>
+    <div><a class="xref" href="Kinstrife.Core.DependencyInjection.IInstall.html">IInstall</a></div>
     <div><a class="xref" href="Kinstrife.Core.DependencyInjection.IDependent.html">IDependent</a></div>
   </div>
   <div class="inheritedMembers">
@@ -115,7 +117,7 @@
   <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
   <h5 id="Kinstrife_Actor_ActorSpawnFactory_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class ActorSpawnFactory : ServiceBehaviour&lt;ActorRoot, SpawnArguments&gt;, IInjectable, IInitializable, IDependent</code></pre>
+    <pre><code class="lang-csharp hljs">public class ActorSpawnFactory : ServiceBehaviour&lt;ActorRoot, SpawnArguments&gt;, IInjectable, IInitializable, IInstall&lt;ActorSpawnFactory&gt;, IInstall, IDependent</code></pre>
   </div>
   <h3 id="constructors">Constructors
   </h3>
@@ -592,6 +594,12 @@
   </div>
   <div>
       <a class="xref" href="Kinstrife.Core.DependencyInjection.IInitializable.html">IInitializable</a>
+  </div>
+  <div>
+      <a class="xref" href="Kinstrife.Core.DependencyInjection.IInstall-1.html">IInstall&lt;T&gt;</a>
+  </div>
+  <div>
+      <a class="xref" href="Kinstrife.Core.DependencyInjection.IInstall.html">IInstall</a>
   </div>
   <div>
       <a class="xref" href="Kinstrife.Core.DependencyInjection.IDependent.html">IDependent</a>
