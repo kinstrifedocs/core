@@ -83,6 +83,7 @@
     <div class="level2"><a class="xref" href="Kinstrife.Entities.Blackboard.ExposedParameter-1.html">ExposedParameter</a>&lt;TValue&gt;</div>
     <div class="level3"><span class="xref">ExposedParameter&lt;TValue, TBufferElement&gt;</span></div>
       <div class="level4"><a class="xref" href="Kinstrife.Entities.Blackboard.BoolParameter.html">BoolParameter</a></div>
+      <div class="level4"><a class="xref" href="Kinstrife.Entities.Blackboard.EntityParameter.html">EntityParameter</a></div>
       <div class="level4"><a class="xref" href="Kinstrife.Entities.Blackboard.Float2Parameter.html">Float2Parameter</a></div>
       <div class="level4"><a class="xref" href="Kinstrife.Entities.Blackboard.Float3Parameter.html">Float3Parameter</a></div>
       <div class="level4"><a class="xref" href="Kinstrife.Entities.Blackboard.FloatParameter.html">FloatParameter</a></div>
@@ -90,18 +91,23 @@
   </div>
   <div classs="implements">
     <h5>Implements</h5>
+    <div><span class="xref">IHasNameProperty</span></div>
     <div><a class="xref" href="Kinstrife.Entities.Blackboard.IExposedParameter-1.html">IExposedParameter</a>&lt;TValue&gt;</div>
     <div><a class="xref" href="Kinstrife.Entities.Blackboard.IReadExposedParameter-1.html">IReadExposedParameter</a>&lt;TValue&gt;</div>
     <div><a class="xref" href="Kinstrife.Entities.Blackboard.IWriteExposedParameter-1.html">IWriteExposedParameter</a>&lt;TValue&gt;</div>
     <div><a class="xref" href="Kinstrife.Entities.Blackboard.IExposedParameter.html">IExposedParameter</a></div>
+    <div><span class="xref">IDisposable</span></div>
   </div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
     <div>
+      <a class="xref" href="Kinstrife.Entities.Blackboard.ExposedParameterBase.html#Kinstrife_Entities_Blackboard_ExposedParameterBase_Name">ExposedParameterBase.Name</a>
+    </div>
+    <div>
       <a class="xref" href="Kinstrife.Entities.Blackboard.ExposedParameterBase.html#Kinstrife_Entities_Blackboard_ExposedParameterBase_NativeIdentifier">ExposedParameterBase.NativeIdentifier</a>
     </div>
     <div>
-      <a class="xref" href="Kinstrife.Entities.Blackboard.ExposedParameterBase.html#Kinstrife_Entities_Blackboard_ExposedParameterBase_CreateBase__1_System_Int32_">ExposedParameterBase.CreateBase&lt;T&gt;(Int32)</a>
+      <a class="xref" href="Kinstrife.Entities.Blackboard.ExposedParameterBase.html#Kinstrife_Entities_Blackboard_ExposedParameterBase_CreateBase__1_System_Int32_IHasNameProperty_">ExposedParameterBase.CreateBase&lt;T&gt;(Int32, IHasNameProperty)</a>
     </div>
     <div>
       <span class="xref">System.Object.ToString()</span>
@@ -130,7 +136,7 @@
   <h5 id="Kinstrife_Entities_Blackboard_ExposedParameter_2_syntax">Syntax</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">[Serializable]
-public abstract class ExposedParameter&lt;TValue, TBufferElement&gt; : ExposedParameter&lt;TValue&gt;, IExposedParameter&lt;TValue&gt;, IReadExposedParameter&lt;TValue&gt;, IWriteExposedParameter&lt;TValue&gt;, IExposedParameter where TValue : struct where TBufferElement : struct, IHasValue&lt;TValue&gt;</code></pre>
+public abstract class ExposedParameter&lt;TValue, TBufferElement&gt; : ExposedParameter&lt;TValue&gt;, IExposedParameter&lt;TValue&gt;, IReadExposedParameter&lt;TValue&gt;, IWriteExposedParameter&lt;TValue&gt;, IExposedParameter where TValue : struct where TBufferElement : struct, IBufferElementData, IHasValue&lt;TValue&gt;</code></pre>
   </div>
   <h5 class="typeParameters">Type Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -238,67 +244,14 @@ public TBufferElement*backedElementPtr</code></pre>
   </h3>
   
   
-  <a id="Kinstrife_Entities_Blackboard_ExposedParameter_2_Create_" data-uid="Kinstrife.Entities.Blackboard.ExposedParameter`2.Create*"></a>
-  <h4 id="Kinstrife_Entities_Blackboard_ExposedParameter_2_Create__1__1__System_Int32_" data-uid="Kinstrife.Entities.Blackboard.ExposedParameter`2.Create``1(`1@,System.Int32)">Create&lt;T&gt;(ref TBufferElement, Int32)</h4>
+  <a id="Kinstrife_Entities_Blackboard_ExposedParameter_2_Dispose_" data-uid="Kinstrife.Entities.Blackboard.ExposedParameter`2.Dispose*"></a>
+  <h4 id="Kinstrife_Entities_Blackboard_ExposedParameter_2_Dispose" data-uid="Kinstrife.Entities.Blackboard.ExposedParameter`2.Dispose">Dispose()</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static T Create&lt;T&gt;(ref TBufferElement el, int nativeIdentifier)
-    where T : ExposedParameter&lt;TValue, TBufferElement&gt;, new()</code></pre>
+    <pre><code class="lang-csharp hljs">public void Dispose()</code></pre>
   </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">TBufferElement</span></td>
-        <td><span class="parametername">el</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><span class="xref">System.Int32</span></td>
-        <td><span class="parametername">nativeIdentifier</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">T</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="typeParameters">Type Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="parametername">T</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
   
   
   <a id="Kinstrife_Entities_Blackboard_ExposedParameter_2_GetValue_" data-uid="Kinstrife.Entities.Blackboard.ExposedParameter`2.GetValue*"></a>
@@ -347,6 +300,38 @@ public TBufferElement*backedElementPtr</code></pre>
     <tbody>
       <tr>
         <td><span class="xref">TValue</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Kinstrife_Entities_Blackboard_ExposedParameter_2_InitRuntimeComponents_" data-uid="Kinstrife.Entities.Blackboard.ExposedParameter`2.InitRuntimeComponents*"></a>
+  <h4 id="Kinstrife_Entities_Blackboard_ExposedParameter_2_InitRuntimeComponents_EntityManager__Entity_" data-uid="Kinstrife.Entities.Blackboard.ExposedParameter`2.InitRuntimeComponents(EntityManager@,Entity)">InitRuntimeComponents(ref EntityManager, Entity)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void InitRuntimeComponents(ref EntityManager entityManager, Entity e)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">EntityManager</span></td>
+        <td><span class="parametername">entityManager</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">Entity</span></td>
+        <td><span class="parametername">e</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -409,6 +394,9 @@ public TBufferElement*backedElementPtr</code></pre>
   </table>
   <h3 id="implements">Implements</h3>
   <div>
+      <span class="xref">IHasNameProperty</span>
+  </div>
+  <div>
       <a class="xref" href="Kinstrife.Entities.Blackboard.IExposedParameter-1.html">IExposedParameter&lt;T&gt;</a>
   </div>
   <div>
@@ -419,6 +407,9 @@ public TBufferElement*backedElementPtr</code></pre>
   </div>
   <div>
       <a class="xref" href="Kinstrife.Entities.Blackboard.IExposedParameter.html">IExposedParameter</a>
+  </div>
+  <div>
+      <span class="xref">IDisposable</span>
   </div>
 </article>
           </div>

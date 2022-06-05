@@ -101,12 +101,12 @@
   
   
   <a id="Kinstrife_ProcedureGraph_ConditionEvaluationSystem_ProcessConditionalAction_" data-uid="Kinstrife.ProcedureGraph.ConditionEvaluationSystem.ProcessConditionalAction*"></a>
-  <h4 id="Kinstrife_ProcedureGraph_ConditionEvaluationSystem_ProcessConditionalAction_Entity_Entity_System_Double_Kinstrife_ProcedureGraph_ConditionalAction__ComponentDataFromEntity_Kinstrife_Entities_Procedures_ProcedureInputStream___BufferFromEntity_Kinstrife_Entities_Procedures_OwnedProcedures___" data-uid="Kinstrife.ProcedureGraph.ConditionEvaluationSystem.ProcessConditionalAction(Entity,Entity,System.Double,Kinstrife.ProcedureGraph.ConditionalAction@,ComponentDataFromEntity{Kinstrife.Entities.Procedures.ProcedureInputStream}@,BufferFromEntity{Kinstrife.Entities.Procedures.OwnedProcedures}@)">ProcessConditionalAction(Entity, Entity, Double, in ConditionalAction, ref ComponentDataFromEntity&lt;ProcedureInputStream&gt;, in BufferFromEntity&lt;OwnedProcedures&gt;)</h4>
+  <h4 id="Kinstrife_ProcedureGraph_ConditionEvaluationSystem_ProcessConditionalAction_Entity_Entity_Kinstrife_ProcedureGraph_ConditionalAction__Kinstrife_Entities_Procedures_Procedure__BufferFromEntity_Kinstrife_Entities_Procedures_ProcedureActivationRequest___BufferFromEntity_Kinstrife_Entities_Procedures_OwnedProcedures___" data-uid="Kinstrife.ProcedureGraph.ConditionEvaluationSystem.ProcessConditionalAction(Entity,Entity,Kinstrife.ProcedureGraph.ConditionalAction@,Kinstrife.Entities.Procedures.Procedure@,BufferFromEntity{Kinstrife.Entities.Procedures.ProcedureActivationRequest}@,BufferFromEntity{Kinstrife.Entities.Procedures.OwnedProcedures}@)">ProcessConditionalAction(Entity, Entity, in ConditionalAction, ref Procedure, ref BufferFromEntity&lt;ProcedureActivationRequest&gt;, in BufferFromEntity&lt;OwnedProcedures&gt;)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static void ProcessConditionalAction(Entity procedure, Entity owner, double elapsedTime, in ConditionalAction conditionalAction, ref ComponentDataFromEntity&lt;ProcedureInputStream&gt; inputStreamFromEntity, in BufferFromEntity&lt;OwnedProcedures&gt; ownedProceduresFromEntity)</code></pre>
+    <pre><code class="lang-csharp hljs">public static void ProcessConditionalAction(Entity procedureEntity, Entity owner, in ConditionalAction conditionalAction, ref Procedure procedure, ref BufferFromEntity&lt;ProcedureActivationRequest&gt; inputStreamFromEntity, in BufferFromEntity&lt;OwnedProcedures&gt; ownedProceduresFromEntity)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -120,7 +120,7 @@
     <tbody>
       <tr>
         <td><span class="xref">Entity</span></td>
-        <td><span class="parametername">procedure</span></td>
+        <td><span class="parametername">procedureEntity</span></td>
         <td></td>
       </tr>
       <tr>
@@ -129,17 +129,17 @@
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">System.Double</span></td>
-        <td><span class="parametername">elapsedTime</span></td>
-        <td></td>
-      </tr>
-      <tr>
         <td><a class="xref" href="Kinstrife.ProcedureGraph.ConditionalAction.html">ConditionalAction</a></td>
         <td><span class="parametername">conditionalAction</span></td>
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">ComponentDataFromEntity</span>&lt;<a class="xref" href="Kinstrife.Entities.Procedures.ProcedureInputStream.html">ProcedureInputStream</a>&gt;</td>
+        <td><a class="xref" href="Kinstrife.Entities.Procedures.Procedure.html">Procedure</a></td>
+        <td><span class="parametername">procedure</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">BufferFromEntity</span>&lt;<a class="xref" href="Kinstrife.Entities.Procedures.ProcedureActivationRequest.html">ProcedureActivationRequest</a>&gt;</td>
         <td><span class="parametername">inputStreamFromEntity</span></td>
         <td></td>
       </tr>
@@ -153,12 +153,12 @@
   
   
   <a id="Kinstrife_ProcedureGraph_ConditionEvaluationSystem_ProcessConditionalActionStateMachine_" data-uid="Kinstrife.ProcedureGraph.ConditionEvaluationSystem.ProcessConditionalActionStateMachine*"></a>
-  <h4 id="Kinstrife_ProcedureGraph_ConditionEvaluationSystem_ProcessConditionalActionStateMachine_Entity_Entity_System_Double_Kinstrife_ProcedureGraph_ConditionalAction__ComponentDataFromEntity_Kinstrife_Entities_Procedures_ProcedureInputStream___BufferFromEntity_Kinstrife_Entities_Procedures_OwnedProcedures___Kinstrife_Entities_Procedures_StateMachine__" data-uid="Kinstrife.ProcedureGraph.ConditionEvaluationSystem.ProcessConditionalActionStateMachine(Entity,Entity,System.Double,Kinstrife.ProcedureGraph.ConditionalAction@,ComponentDataFromEntity{Kinstrife.Entities.Procedures.ProcedureInputStream}@,BufferFromEntity{Kinstrife.Entities.Procedures.OwnedProcedures}@,Kinstrife.Entities.Procedures.StateMachine@)">ProcessConditionalActionStateMachine(Entity, Entity, Double, in ConditionalAction, ref ComponentDataFromEntity&lt;ProcedureInputStream&gt;, in BufferFromEntity&lt;OwnedProcedures&gt;, ref StateMachine)</h4>
+  <h4 id="Kinstrife_ProcedureGraph_ConditionEvaluationSystem_ProcessConditionalActionStateMachine_Entity_Entity_Kinstrife_ProcedureGraph_ConditionalAction__Kinstrife_Entities_Procedures_Procedure__BufferFromEntity_Kinstrife_Entities_Procedures_ProcedureActivationRequest___BufferFromEntity_Kinstrife_Entities_Procedures_OwnedProcedures___Kinstrife_Entities_Procedures_StateMachine__" data-uid="Kinstrife.ProcedureGraph.ConditionEvaluationSystem.ProcessConditionalActionStateMachine(Entity,Entity,Kinstrife.ProcedureGraph.ConditionalAction@,Kinstrife.Entities.Procedures.Procedure@,BufferFromEntity{Kinstrife.Entities.Procedures.ProcedureActivationRequest}@,BufferFromEntity{Kinstrife.Entities.Procedures.OwnedProcedures}@,Kinstrife.Entities.Procedures.StateMachine@)">ProcessConditionalActionStateMachine(Entity, Entity, in ConditionalAction, ref Procedure, ref BufferFromEntity&lt;ProcedureActivationRequest&gt;, in BufferFromEntity&lt;OwnedProcedures&gt;, ref StateMachine)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static void ProcessConditionalActionStateMachine(Entity procedure, Entity owner, double elapsedTime, in ConditionalAction conditionalAction, ref ComponentDataFromEntity&lt;ProcedureInputStream&gt; inputStreamFromEntity, in BufferFromEntity&lt;OwnedProcedures&gt; ownedProceduresFromEntity, ref StateMachine stateMachine)</code></pre>
+    <pre><code class="lang-csharp hljs">public static void ProcessConditionalActionStateMachine(Entity procedureEntity, Entity owner, in ConditionalAction conditionalAction, ref Procedure procedure, ref BufferFromEntity&lt;ProcedureActivationRequest&gt; inputStreamFromEntity, in BufferFromEntity&lt;OwnedProcedures&gt; ownedProceduresFromEntity, ref StateMachine stateMachine)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -172,7 +172,7 @@
     <tbody>
       <tr>
         <td><span class="xref">Entity</span></td>
-        <td><span class="parametername">procedure</span></td>
+        <td><span class="parametername">procedureEntity</span></td>
         <td></td>
       </tr>
       <tr>
@@ -181,17 +181,17 @@
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">System.Double</span></td>
-        <td><span class="parametername">elapsedTime</span></td>
-        <td></td>
-      </tr>
-      <tr>
         <td><a class="xref" href="Kinstrife.ProcedureGraph.ConditionalAction.html">ConditionalAction</a></td>
         <td><span class="parametername">conditionalAction</span></td>
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">ComponentDataFromEntity</span>&lt;<a class="xref" href="Kinstrife.Entities.Procedures.ProcedureInputStream.html">ProcedureInputStream</a>&gt;</td>
+        <td><a class="xref" href="Kinstrife.Entities.Procedures.Procedure.html">Procedure</a></td>
+        <td><span class="parametername">procedure</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">BufferFromEntity</span>&lt;<a class="xref" href="Kinstrife.Entities.Procedures.ProcedureActivationRequest.html">ProcedureActivationRequest</a>&gt;</td>
         <td><span class="parametername">inputStreamFromEntity</span></td>
         <td></td>
       </tr>

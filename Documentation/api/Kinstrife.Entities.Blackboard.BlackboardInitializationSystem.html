@@ -90,6 +90,114 @@
   </h3>
   
   
+  <a id="Kinstrife_Entities_Blackboard_BlackboardInitializationSystem_AddParameterType_" data-uid="Kinstrife.Entities.Blackboard.BlackboardInitializationSystem.AddParameterType*"></a>
+  <h4 id="Kinstrife_Entities_Blackboard_BlackboardInitializationSystem_AddParameterType__3_EntityManager__Entity_Kinstrife_Entities_Blackboard_BlackboardComponent_" data-uid="Kinstrife.Entities.Blackboard.BlackboardInitializationSystem.AddParameterType``3(EntityManager@,Entity,Kinstrife.Entities.Blackboard.BlackboardComponent)">AddParameterType&lt;TValueType, TBufferType, TParameterWrapperType&gt;(ref EntityManager, Entity, BlackboardComponent)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void AddParameterType&lt;TValueType, TBufferType, TParameterWrapperType&gt;(ref EntityManager entityManager, Entity e, BlackboardComponent blackboard)
+    where TValueType : struct where TBufferType : struct, IBufferElementData, IExposedParameterBufferElement, IHasValue&lt;TValueType&gt; where TParameterWrapperType : ExposedParameter&lt;TValueType, TBufferType&gt;, new()</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">EntityManager</span></td>
+        <td><span class="parametername">entityManager</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">Entity</span></td>
+        <td><span class="parametername">e</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Kinstrife.Entities.Blackboard.BlackboardComponent.html">BlackboardComponent</a></td>
+        <td><span class="parametername">blackboard</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">TValueType</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="parametername">TBufferType</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="parametername">TParameterWrapperType</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Kinstrife_Entities_Blackboard_BlackboardInitializationSystem_CreateParameterElements_" data-uid="Kinstrife.Entities.Blackboard.BlackboardInitializationSystem.CreateParameterElements*"></a>
+  <h4 id="Kinstrife_Entities_Blackboard_BlackboardInitializationSystem_CreateParameterElements_Entity_Kinstrife_Entities_Blackboard_BlackboardComponent_EntityManager__" data-uid="Kinstrife.Entities.Blackboard.BlackboardInitializationSystem.CreateParameterElements(Entity,Kinstrife.Entities.Blackboard.BlackboardComponent,EntityManager@)">CreateParameterElements(Entity, BlackboardComponent, ref EntityManager)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void CreateParameterElements(Entity e, BlackboardComponent blackboard, ref EntityManager em)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Entity</span></td>
+        <td><span class="parametername">e</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Kinstrife.Entities.Blackboard.BlackboardComponent.html">BlackboardComponent</a></td>
+        <td><span class="parametername">blackboard</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">EntityManager</span></td>
+        <td><span class="parametername">em</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Kinstrife_Entities_Blackboard_BlackboardInitializationSystem_OnCreate_" data-uid="Kinstrife.Entities.Blackboard.BlackboardInitializationSystem.OnCreate*"></a>
+  <h4 id="Kinstrife_Entities_Blackboard_BlackboardInitializationSystem_OnCreate" data-uid="Kinstrife.Entities.Blackboard.BlackboardInitializationSystem.OnCreate">OnCreate()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override void OnCreate()</code></pre>
+  </div>
+  
+  
   <a id="Kinstrife_Entities_Blackboard_BlackboardInitializationSystem_OnUpdate_" data-uid="Kinstrife.Entities.Blackboard.BlackboardInitializationSystem.OnUpdate*"></a>
   <h4 id="Kinstrife_Entities_Blackboard_BlackboardInitializationSystem_OnUpdate" data-uid="Kinstrife.Entities.Blackboard.BlackboardInitializationSystem.OnUpdate">OnUpdate()</h4>
   <div class="markdown level1 summary"></div>

@@ -73,7 +73,8 @@
   
   <h1 id="Kinstrife_Entities_Procedures_ConstraintRequest" data-uid="Kinstrife.Entities.Procedures.ConstraintRequest" class="text-break">Struct ConstraintRequest
   </h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><p>A constraint is a constraint put on a procedure Operation (start/stop). It modifies operations based on any logic that are executed.</p>
+</div>
   <div class="markdown level0 conceptual"></div>
   <div classs="implements">
     <h5>Implements</h5>
@@ -160,6 +161,31 @@
   </table>
   
   
+  <h4 id="Kinstrife_Entities_Procedures_ConstraintRequest_Depth" data-uid="Kinstrife.Entities.Procedures.ConstraintRequest.Depth">Depth</h4>
+  <div class="markdown level1 summary"><p>The amount of ticks we need to resolve the constraint</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int Depth</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
   <h4 id="Kinstrife_Entities_Procedures_ConstraintRequest_IsSatisfied" data-uid="Kinstrife.Entities.Procedures.ConstraintRequest.IsSatisfied">IsSatisfied</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
@@ -178,6 +204,30 @@
     <tbody>
       <tr>
         <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="Kinstrife_Entities_Procedures_ConstraintRequest_Iteration" data-uid="Kinstrife.Entities.Procedures.ConstraintRequest.Iteration">Iteration</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int Iteration</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -233,7 +283,8 @@
   
   
   <h4 id="Kinstrife_Entities_Procedures_ConstraintRequest_NumConditions" data-uid="Kinstrife.Entities.Procedures.ConstraintRequest.NumConditions">NumConditions</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>This number is tallied up with all constraints ran in the <a class="xref" href="Kinstrife.Entities.Procedures.ConstraintLogicSystemGroup.html">ConstraintLogicSystemGroup</a></p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -257,7 +308,8 @@
   
   
   <h4 id="Kinstrife_Entities_Procedures_ConstraintRequest_NumSucceeded" data-uid="Kinstrife.Entities.Procedures.ConstraintRequest.NumSucceeded">NumSucceeded</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>This number is tallied up with all constraints ran in the <a class="xref" href="Kinstrife.Entities.Procedures.ConstraintLogicSystemGroup.html">ConstraintLogicSystemGroup</a>, if sucessful</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -307,30 +359,13 @@
   
   
   <a id="Kinstrife_Entities_Procedures_ConstraintRequest_EvaluateSuccess_" data-uid="Kinstrife.Entities.Procedures.ConstraintRequest.EvaluateSuccess*"></a>
-  <h4 id="Kinstrife_Entities_Procedures_ConstraintRequest_EvaluateSuccess_System_Double_" data-uid="Kinstrife.Entities.Procedures.ConstraintRequest.EvaluateSuccess(System.Double)">EvaluateSuccess(Double)</h4>
+  <h4 id="Kinstrife_Entities_Procedures_ConstraintRequest_EvaluateSuccess" data-uid="Kinstrife.Entities.Procedures.ConstraintRequest.EvaluateSuccess">EvaluateSuccess()</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public ConstraintRequest EvaluateSuccess(double elapsedTime)</code></pre>
+    <pre><code class="lang-csharp hljs">public bool EvaluateSuccess()</code></pre>
   </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Double</span></td>
-        <td><span class="parametername">elapsedTime</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
   <h5 class="returns">Returns</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
@@ -341,7 +376,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="Kinstrife.Entities.Procedures.ConstraintRequest.html">ConstraintRequest</a></td>
+        <td><span class="xref">System.Boolean</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -354,33 +389,35 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public ConstraintRequest Fail()</code></pre>
+    <pre><code class="lang-csharp hljs">public void Fail()</code></pre>
   </div>
-  <h5 class="returns">Returns</h5>
+  
+  
+  <a id="Kinstrife_Entities_Procedures_ConstraintRequest_RegisterActiveConstraint_" data-uid="Kinstrife.Entities.Procedures.ConstraintRequest.RegisterActiveConstraint*"></a>
+  <h4 id="Kinstrife_Entities_Procedures_ConstraintRequest_RegisterActiveConstraint_System_Int32_" data-uid="Kinstrife.Entities.Procedures.ConstraintRequest.RegisterActiveConstraint(System.Int32)">RegisterActiveConstraint(Int32)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void RegisterActiveConstraint(int depth)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
       <tr>
         <th>Type</th>
+        <th>Name</th>
         <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="Kinstrife.Entities.Procedures.ConstraintRequest.html">ConstraintRequest</a></td>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">depth</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
-  
-  
-  <a id="Kinstrife_Entities_Procedures_ConstraintRequest_RegisterActiveConstraint_" data-uid="Kinstrife.Entities.Procedures.ConstraintRequest.RegisterActiveConstraint*"></a>
-  <h4 id="Kinstrife_Entities_Procedures_ConstraintRequest_RegisterActiveConstraint" data-uid="Kinstrife.Entities.Procedures.ConstraintRequest.RegisterActiveConstraint">RegisterActiveConstraint()</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void RegisterActiveConstraint()</code></pre>
-  </div>
   
   
   <a id="Kinstrife_Entities_Procedures_ConstraintRequest_RegisterConstraintValid_" data-uid="Kinstrife.Entities.Procedures.ConstraintRequest.RegisterConstraintValid*"></a>
@@ -409,7 +446,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public ConstraintRequest Satisfy(double elapsedTime)</code></pre>
+    <pre><code class="lang-csharp hljs">public void Satisfy(double elapsedTime)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -424,21 +461,6 @@
       <tr>
         <td><span class="xref">System.Double</span></td>
         <td><span class="parametername">elapsedTime</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Kinstrife.Entities.Procedures.ConstraintRequest.html">ConstraintRequest</a></td>
         <td></td>
       </tr>
     </tbody>

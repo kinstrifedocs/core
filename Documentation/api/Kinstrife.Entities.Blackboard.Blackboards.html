@@ -251,12 +251,12 @@
   
   
   <a id="Kinstrife_Entities_Blackboard_Blackboards_GetBlackboardParameterRef_" data-uid="Kinstrife.Entities.Blackboard.Blackboards.GetBlackboardParameterRef*"></a>
-  <h4 id="Kinstrife_Entities_Blackboard_Blackboards_GetBlackboardParameterRef__1_Entity_System_Int32_BufferFromEntity___0__" data-uid="Kinstrife.Entities.Blackboard.Blackboards.GetBlackboardParameterRef``1(Entity,System.Int32,BufferFromEntity{``0})">GetBlackboardParameterRef&lt;TParam&gt;(Entity, Int32, BufferFromEntity&lt;TParam&gt;)</h4>
+  <h4 id="Kinstrife_Entities_Blackboard_Blackboards_GetBlackboardParameterRef__1_Entity_System_Int32_BufferFromEntity___0___" data-uid="Kinstrife.Entities.Blackboard.Blackboards.GetBlackboardParameterRef``1(Entity,System.Int32,BufferFromEntity{``0}@)">GetBlackboardParameterRef&lt;TParam&gt;(Entity, Int32, in BufferFromEntity&lt;TParam&gt;)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static ref TParam GetBlackboardParameterRef&lt;TParam&gt;(Entity blackboardEntity, int nativeIdentifier, BufferFromEntity&lt;TParam&gt; parametersFromEntity)
+    <pre><code class="lang-csharp hljs">public static ref TParam GetBlackboardParameterRef&lt;TParam&gt;(Entity blackboardEntity, int nativeIdentifier, in BufferFromEntity&lt;TParam&gt; parametersFromEntity)
     where TParam : struct, IExposedParameterBufferElement</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -282,6 +282,69 @@
       <tr>
         <td><span class="xref">BufferFromEntity</span>&lt;TParam&gt;</td>
         <td><span class="parametername">parametersFromEntity</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">TParam</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">TParam</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Kinstrife_Entities_Blackboard_Blackboards_GetBlackboardParameterRef_" data-uid="Kinstrife.Entities.Blackboard.Blackboards.GetBlackboardParameterRef*"></a>
+  <h4 id="Kinstrife_Entities_Blackboard_Blackboards_GetBlackboardParameterRef__1_System_Int32_DynamicBuffer___0___" data-uid="Kinstrife.Entities.Blackboard.Blackboards.GetBlackboardParameterRef``1(System.Int32,DynamicBuffer{``0}@)">GetBlackboardParameterRef&lt;TParam&gt;(Int32, ref DynamicBuffer&lt;TParam&gt;)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static ref TParam GetBlackboardParameterRef&lt;TParam&gt;(int nativeIdentifier, ref DynamicBuffer&lt;TParam&gt; buffer)
+    where TParam : struct, IExposedParameterBufferElement</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">nativeIdentifier</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">DynamicBuffer</span>&lt;TParam&gt;</td>
+        <td><span class="parametername">buffer</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -475,12 +538,12 @@
   
   
   <a id="Kinstrife_Entities_Blackboard_Blackboards_TryGetBlackboardParameter_" data-uid="Kinstrife.Entities.Blackboard.Blackboards.TryGetBlackboardParameter*"></a>
-  <h4 id="Kinstrife_Entities_Blackboard_Blackboards_TryGetBlackboardParameter__1_Entity_System_Int32_BufferFromEntity___0____0__System_Boolean_" data-uid="Kinstrife.Entities.Blackboard.Blackboards.TryGetBlackboardParameter``1(Entity,System.Int32,BufferFromEntity{``0},``0@,System.Boolean)">TryGetBlackboardParameter&lt;TParam&gt;(Entity, Int32, BufferFromEntity&lt;TParam&gt;, out TParam, Boolean)</h4>
+  <h4 id="Kinstrife_Entities_Blackboard_Blackboards_TryGetBlackboardParameter__1_Entity_System_Int32_BufferFromEntity___0_____0__System_Boolean_" data-uid="Kinstrife.Entities.Blackboard.Blackboards.TryGetBlackboardParameter``1(Entity,System.Int32,BufferFromEntity{``0}@,``0@,System.Boolean)">TryGetBlackboardParameter&lt;TParam&gt;(Entity, Int32, in BufferFromEntity&lt;TParam&gt;, out TParam, Boolean)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static bool TryGetBlackboardParameter&lt;TParam&gt;(Entity blackboardEntity, int nativeIdentifier, BufferFromEntity&lt;TParam&gt; parametersFromEntity, out TParam parameter, bool isReadOnly)
+    <pre><code class="lang-csharp hljs">public static bool TryGetBlackboardParameter&lt;TParam&gt;(Entity blackboardEntity, int nativeIdentifier, in BufferFromEntity&lt;TParam&gt; parametersFromEntity, out TParam parameter, bool isReadOnly)
     where TParam : struct, IExposedParameterBufferElement</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -553,12 +616,12 @@
   
   
   <a id="Kinstrife_Entities_Blackboard_Blackboards_TryGetBlackboardParameter_" data-uid="Kinstrife.Entities.Blackboard.Blackboards.TryGetBlackboardParameter*"></a>
-  <h4 id="Kinstrife_Entities_Blackboard_Blackboards_TryGetBlackboardParameter__1_Entity_System_Int32_ComponentDataFromEntity_Kinstrife_Entities_Blackboard_SharedBlackboard__BufferFromEntity___0____0__System_Boolean_" data-uid="Kinstrife.Entities.Blackboard.Blackboards.TryGetBlackboardParameter``1(Entity,System.Int32,ComponentDataFromEntity{Kinstrife.Entities.Blackboard.SharedBlackboard},BufferFromEntity{``0},``0@,System.Boolean)">TryGetBlackboardParameter&lt;TParam&gt;(Entity, Int32, ComponentDataFromEntity&lt;SharedBlackboard&gt;, BufferFromEntity&lt;TParam&gt;, out TParam, Boolean)</h4>
+  <h4 id="Kinstrife_Entities_Blackboard_Blackboards_TryGetBlackboardParameter__1_Entity_System_Int32_ComponentDataFromEntity_Kinstrife_Entities_Blackboard_SharedBlackboard__BufferFromEntity___0_____0__System_Boolean_" data-uid="Kinstrife.Entities.Blackboard.Blackboards.TryGetBlackboardParameter``1(Entity,System.Int32,ComponentDataFromEntity{Kinstrife.Entities.Blackboard.SharedBlackboard},BufferFromEntity{``0}@,``0@,System.Boolean)">TryGetBlackboardParameter&lt;TParam&gt;(Entity, Int32, ComponentDataFromEntity&lt;SharedBlackboard&gt;, in BufferFromEntity&lt;TParam&gt;, out TParam, Boolean)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static bool TryGetBlackboardParameter&lt;TParam&gt;(Entity e, int nativeIdentifier, ComponentDataFromEntity&lt;SharedBlackboard&gt; sharedBlackboards, BufferFromEntity&lt;TParam&gt; parametersFromEntity, out TParam parameter, bool isReadOnly)
+    <pre><code class="lang-csharp hljs">public static bool TryGetBlackboardParameter&lt;TParam&gt;(Entity e, int nativeIdentifier, ComponentDataFromEntity&lt;SharedBlackboard&gt; sharedBlackboards, in BufferFromEntity&lt;TParam&gt; parametersFromEntity, out TParam parameter, bool isReadOnly)
     where TParam : struct, IExposedParameterBufferElement</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>

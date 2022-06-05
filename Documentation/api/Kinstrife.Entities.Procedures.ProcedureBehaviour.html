@@ -113,6 +113,9 @@
       <a class="xref" href="Kinstrife.Entities.Atomics.SubEntityAuthoring.html#Kinstrife_Entities_Atomics_SubEntityAuthoring_ContextEntity">SubEntityAuthoring.ContextEntity</a>
     </div>
     <div>
+      <a class="xref" href="Kinstrife.Entities.Atomics.SubEntityAuthoring.html#Kinstrife_Entities_Atomics_SubEntityAuthoring_DisableBuiltinCallbacks">SubEntityAuthoring.DisableBuiltinCallbacks</a>
+    </div>
+    <div>
       <a class="xref" href="Kinstrife.Entities.Atomics.SubEntityAuthoring.html#Kinstrife_Entities_Atomics_SubEntityAuthoring_Convert_Entity_EntityManager_GameObjectConversionSystem_">SubEntityAuthoring.Convert(Entity, EntityManager, GameObjectConversionSystem)</a>
     </div>
     <div>
@@ -178,30 +181,6 @@ public BlackboardComponent blackboard</code></pre>
   </table>
   
   
-  <h4 id="Kinstrife_Entities_Procedures_ProcedureBehaviour_graph" data-uid="Kinstrife.Entities.Procedures.ProcedureBehaviour.graph">graph</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public ProcedureGraphAsset graph</code></pre>
-  </div>
-  <h5 class="fieldValue">Field Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Kinstrife.Blueprints.ProcedureGraphAsset.html">ProcedureGraphAsset</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
   <h4 id="Kinstrife_Entities_Procedures_ProcedureBehaviour_inStartStopOperationFromEntity" data-uid="Kinstrife.Entities.Procedures.ProcedureBehaviour.inStartStopOperationFromEntity">inStartStopOperationFromEntity</h4>
   <div class="markdown level1 summary"><p>Flag to prevent recurrent callbacks from occurring between ECS and procedure behaviour.
 Is true if the current callback comes from ECS. False if it's done through the managed route (enabled/SetActive).</p>
@@ -246,54 +225,6 @@ Is true if the current callback comes from ECS. False if it's done through the m
     <tbody>
       <tr>
         <td><a class="xref" href="Kinstrife.Entities.Procedures.ProcedureStartStopSystem.html">ProcedureStartStopSystem</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <h4 id="Kinstrife_Entities_Procedures_ProcedureBehaviour_startStopPrio" data-uid="Kinstrife.Entities.Procedures.ProcedureBehaviour.startStopPrio">startStopPrio</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected RequestPriority startStopPrio</code></pre>
-  </div>
-  <h5 class="fieldValue">Field Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Kinstrife.Entities.RequestPriority.html">RequestPriority</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <h4 id="Kinstrife_Entities_Procedures_ProcedureBehaviour_startStopRequestDuration" data-uid="Kinstrife.Entities.Procedures.ProcedureBehaviour.startStopRequestDuration">startStopRequestDuration</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected float startStopRequestDuration</code></pre>
-  </div>
-  <h5 class="fieldValue">Field Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Single</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -402,6 +333,56 @@ Is true if the current callback comes from ECS. False if it's done through the m
   </table>
   
   
+  <a id="Kinstrife_Entities_Procedures_ProcedureBehaviour_Events_" data-uid="Kinstrife.Entities.Procedures.ProcedureBehaviour.Events*"></a>
+  <h4 id="Kinstrife_Entities_Procedures_ProcedureBehaviour_Events" data-uid="Kinstrife.Entities.Procedures.ProcedureBehaviour.Events">Events</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public EventsBroadcaster Events { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Kinstrife.Entities.Procedures.EventsBroadcaster.html">EventsBroadcaster</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Kinstrife_Entities_Procedures_ProcedureBehaviour_Graph_" data-uid="Kinstrife.Entities.Procedures.ProcedureBehaviour.Graph*"></a>
+  <h4 id="Kinstrife_Entities_Procedures_ProcedureBehaviour_Graph" data-uid="Kinstrife.Entities.Procedures.ProcedureBehaviour.Graph">Graph</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ProcedureGraphAsset Graph { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Kinstrife.Blueprints.ProcedureGraphAsset.html">ProcedureGraphAsset</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
   <a id="Kinstrife_Entities_Procedures_ProcedureBehaviour_hasBlackboard_" data-uid="Kinstrife.Entities.Procedures.ProcedureBehaviour.hasBlackboard*"></a>
   <h4 id="Kinstrife_Entities_Procedures_ProcedureBehaviour_hasBlackboard" data-uid="Kinstrife.Entities.Procedures.ProcedureBehaviour.hasBlackboard">hasBlackboard</h4>
   <div class="markdown level1 summary"></div>
@@ -409,6 +390,31 @@ Is true if the current callback comes from ECS. False if it's done through the m
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public bool hasBlackboard { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Kinstrife_Entities_Procedures_ProcedureBehaviour_hasWeights_" data-uid="Kinstrife.Entities.Procedures.ProcedureBehaviour.hasWeights*"></a>
+  <h4 id="Kinstrife_Entities_Procedures_ProcedureBehaviour_hasWeights" data-uid="Kinstrife.Entities.Procedures.ProcedureBehaviour.hasWeights">hasWeights</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected bool hasWeights { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -454,6 +460,31 @@ Is true if the current callback comes from ECS. False if it's done through the m
   <div><a class="xref" href="Kinstrife.Entities.Atomics.SubEntityAuthoring.html#Kinstrife_Entities_Atomics_SubEntityAuthoring_hideConvertibleData">SubEntityAuthoring.hideConvertibleData</a></div>
   
   
+  <a id="Kinstrife_Entities_Procedures_ProcedureBehaviour_instantiate_" data-uid="Kinstrife.Entities.Procedures.ProcedureBehaviour.instantiate*"></a>
+  <h4 id="Kinstrife_Entities_Procedures_ProcedureBehaviour_instantiate" data-uid="Kinstrife.Entities.Procedures.ProcedureBehaviour.instantiate">instantiate</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool instantiate { get; protected set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
   <a id="Kinstrife_Entities_Procedures_ProcedureBehaviour_isStateful_" data-uid="Kinstrife.Entities.Procedures.ProcedureBehaviour.isStateful*"></a>
   <h4 id="Kinstrife_Entities_Procedures_ProcedureBehaviour_isStateful" data-uid="Kinstrife.Entities.Procedures.ProcedureBehaviour.isStateful">isStateful</h4>
   <div class="markdown level1 summary"></div>
@@ -477,6 +508,31 @@ Is true if the current callback comes from ECS. False if it's done through the m
       </tr>
     </tbody>
   </table>
+  
+  
+  <a id="Kinstrife_Entities_Procedures_ProcedureBehaviour_Playables_" data-uid="Kinstrife.Entities.Procedures.ProcedureBehaviour.Playables*"></a>
+  <h4 id="Kinstrife_Entities_Procedures_ProcedureBehaviour_Playables" data-uid="Kinstrife.Entities.Procedures.ProcedureBehaviour.Playables">Playables</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public PlayableAdapterComponent Playables { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Kinstrife.Entities.Procedures.PlayableAdapterComponent.html">PlayableAdapterComponent</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   <h3 id="methods">Methods
   </h3>
   
@@ -489,6 +545,48 @@ Is true if the current callback comes from ECS. False if it's done through the m
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public virtual void CacheReferences()</code></pre>
   </div>
+  
+  
+  <a id="Kinstrife_Entities_Procedures_ProcedureBehaviour_GetOrOpenRequest_" data-uid="Kinstrife.Entities.Procedures.ProcedureBehaviour.GetOrOpenRequest*"></a>
+  <h4 id="Kinstrife_Entities_Procedures_ProcedureBehaviour_GetOrOpenRequest_Kinstrife_Entities_RequestArgs__" data-uid="Kinstrife.Entities.Procedures.ProcedureBehaviour.GetOrOpenRequest(Kinstrife.Entities.RequestArgs@)">GetOrOpenRequest(in RequestArgs)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual bool GetOrOpenRequest(in RequestArgs args)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Kinstrife.Entities.RequestArgs.html">RequestArgs</a></td>
+        <td><span class="parametername">args</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   
   
   <a id="Kinstrife_Entities_Procedures_ProcedureBehaviour_InitBlackboardParameterValues_" data-uid="Kinstrife.Entities.Procedures.ProcedureBehaviour.InitBlackboardParameterValues*"></a>
@@ -533,6 +631,115 @@ Is true if the current callback comes from ECS. False if it's done through the m
   </table>
   <h5 class="overrides">Overrides</h5>
   <div><a class="xref" href="Kinstrife.Entities.Atomics.SubEntityAuthoring.html#Kinstrife_Entities_Atomics_SubEntityAuthoring_InitRuntimeComponents_EntityManager__Entity_">SubEntityAuthoring.InitRuntimeComponents(ref EntityManager, Entity)</a></div>
+  
+  
+  <a id="Kinstrife_Entities_Procedures_ProcedureBehaviour_InternalTryStart_" data-uid="Kinstrife.Entities.Procedures.ProcedureBehaviour.InternalTryStart*"></a>
+  <h4 id="Kinstrife_Entities_Procedures_ProcedureBehaviour_InternalTryStart" data-uid="Kinstrife.Entities.Procedures.ProcedureBehaviour.InternalTryStart">InternalTryStart()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected bool InternalTryStart()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Kinstrife_Entities_Procedures_ProcedureBehaviour_InternalTryStop_" data-uid="Kinstrife.Entities.Procedures.ProcedureBehaviour.InternalTryStop*"></a>
+  <h4 id="Kinstrife_Entities_Procedures_ProcedureBehaviour_InternalTryStop_System_Boolean_" data-uid="Kinstrife.Entities.Procedures.ProcedureBehaviour.InternalTryStop(System.Boolean)">InternalTryStop(Boolean)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected bool InternalTryStop(bool force = false)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">force</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Kinstrife_Entities_Procedures_ProcedureBehaviour_IsActiveClient_" data-uid="Kinstrife.Entities.Procedures.ProcedureBehaviour.IsActiveClient*"></a>
+  <h4 id="Kinstrife_Entities_Procedures_ProcedureBehaviour_IsActiveClient_Entity_" data-uid="Kinstrife.Entities.Procedures.ProcedureBehaviour.IsActiveClient(Entity)">IsActiveClient(Entity)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsActiveClient(Entity e)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Entity</span></td>
+        <td><span class="parametername">e</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   
   
   <a id="Kinstrife_Entities_Procedures_ProcedureBehaviour_IsState_" data-uid="Kinstrife.Entities.Procedures.ProcedureBehaviour.IsState*"></a>
@@ -890,13 +1097,13 @@ Is true if the current callback comes from ECS. False if it's done through the m
   </table>
   
   
-  <a id="Kinstrife_Entities_Procedures_ProcedureBehaviour_RequestStartProcedure_" data-uid="Kinstrife.Entities.Procedures.ProcedureBehaviour.RequestStartProcedure*"></a>
-  <h4 id="Kinstrife_Entities_Procedures_ProcedureBehaviour_RequestStartProcedure_System_Single_" data-uid="Kinstrife.Entities.Procedures.ProcedureBehaviour.RequestStartProcedure(System.Single)">RequestStartProcedure(Single)</h4>
+  <a id="Kinstrife_Entities_Procedures_ProcedureBehaviour_SetWeight_" data-uid="Kinstrife.Entities.Procedures.ProcedureBehaviour.SetWeight*"></a>
+  <h4 id="Kinstrife_Entities_Procedures_ProcedureBehaviour_SetWeight_System_Single_System_Single_System_Single_" data-uid="Kinstrife.Entities.Procedures.ProcedureBehaviour.SetWeight(System.Single,System.Single,System.Single)">SetWeight(Single, Single, Single)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public bool RequestStartProcedure(float duration = 0F)</code></pre>
+    <pre><code class="lang-csharp hljs">public void SetWeight(float weight, float easingTime = -1F, float withDelay = -1F)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -910,69 +1117,17 @@ Is true if the current callback comes from ECS. False if it's done through the m
     <tbody>
       <tr>
         <td><span class="xref">System.Single</span></td>
-        <td><span class="parametername">duration</span></td>
+        <td><span class="parametername">weight</span></td>
         <td></td>
       </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Boolean</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="Kinstrife_Entities_Procedures_ProcedureBehaviour_RequestStopProcedure_" data-uid="Kinstrife.Entities.Procedures.ProcedureBehaviour.RequestStopProcedure*"></a>
-  <h4 id="Kinstrife_Entities_Procedures_ProcedureBehaviour_RequestStopProcedure_System_Single_System_Boolean_" data-uid="Kinstrife.Entities.Procedures.ProcedureBehaviour.RequestStopProcedure(System.Single,System.Boolean)">RequestStopProcedure(Single, Boolean)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public bool RequestStopProcedure(float duration = 0F, bool force = false)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
       <tr>
         <td><span class="xref">System.Single</span></td>
-        <td><span class="parametername">duration</span></td>
+        <td><span class="parametername">easingTime</span></td>
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">System.Boolean</span></td>
-        <td><span class="parametername">force</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="xref">System.Single</span></td>
+        <td><span class="parametername">withDelay</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -1141,6 +1296,90 @@ Is true if the current callback comes from ECS. False if it's done through the m
       <tr>
         <td><a class="xref" href="Kinstrife.Entities.Procedures.SubStateId.html">SubStateId</a></td>
         <td><span class="parametername">id</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Kinstrife_Entities_Procedures_ProcedureBehaviour_TryModifyActiveRequest_" data-uid="Kinstrife.Entities.Procedures.ProcedureBehaviour.TryModifyActiveRequest*"></a>
+  <h4 id="Kinstrife_Entities_Procedures_ProcedureBehaviour_TryModifyActiveRequest_Kinstrife_Entities_RequestArgs__" data-uid="Kinstrife.Entities.Procedures.ProcedureBehaviour.TryModifyActiveRequest(Kinstrife.Entities.RequestArgs@)">TryModifyActiveRequest(in RequestArgs)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool TryModifyActiveRequest(in RequestArgs args)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Kinstrife.Entities.RequestArgs.html">RequestArgs</a></td>
+        <td><span class="parametername">args</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Kinstrife_Entities_Procedures_ProcedureBehaviour_TryReleaseRequest_" data-uid="Kinstrife.Entities.Procedures.ProcedureBehaviour.TryReleaseRequest*"></a>
+  <h4 id="Kinstrife_Entities_Procedures_ProcedureBehaviour_TryReleaseRequest_Entity_" data-uid="Kinstrife.Entities.Procedures.ProcedureBehaviour.TryReleaseRequest(Entity)">TryReleaseRequest(Entity)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool TryReleaseRequest(Entity requestor)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Entity</span></td>
+        <td><span class="parametername">requestor</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
         <td></td>
       </tr>
     </tbody>

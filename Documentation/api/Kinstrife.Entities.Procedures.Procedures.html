@@ -142,12 +142,12 @@ Contains Operations (Start/Stop) for different phases (Request-&gt;Try/Force), I
   
   
   <a id="Kinstrife_Entities_Procedures_Procedures_FindAndRequest_" data-uid="Kinstrife.Entities.Procedures.Procedures.FindAndRequest*"></a>
-  <h4 id="Kinstrife_Entities_Procedures_Procedures_FindAndRequest_Kinstrife_Entities_Procedures_Operation_System_Int32_ComponentDataFromEntity_Kinstrife_Entities_Procedures_ProcedureInputStream___DynamicBuffer_Kinstrife_Entities_Procedures_OwnedProcedures___" data-uid="Kinstrife.Entities.Procedures.Procedures.FindAndRequest(Kinstrife.Entities.Procedures.Operation,System.Int32,ComponentDataFromEntity{Kinstrife.Entities.Procedures.ProcedureInputStream}@,DynamicBuffer{Kinstrife.Entities.Procedures.OwnedProcedures}@)">FindAndRequest(Operation, Int32, ref ComponentDataFromEntity&lt;ProcedureInputStream&gt;, in DynamicBuffer&lt;OwnedProcedures&gt;)</h4>
+  <h4 id="Kinstrife_Entities_Procedures_Procedures_FindAndRequest_Kinstrife_Entities_Procedures_Operation_System_Int32_BufferFromEntity_Kinstrife_Entities_Procedures_ProcedureActivationRequest___DynamicBuffer_Kinstrife_Entities_Procedures_OwnedProcedures___Kinstrife_Entities_RequestArgs__" data-uid="Kinstrife.Entities.Procedures.Procedures.FindAndRequest(Kinstrife.Entities.Procedures.Operation,System.Int32,BufferFromEntity{Kinstrife.Entities.Procedures.ProcedureActivationRequest}@,DynamicBuffer{Kinstrife.Entities.Procedures.OwnedProcedures}@,Kinstrife.Entities.RequestArgs@)">FindAndRequest(Operation, Int32, ref BufferFromEntity&lt;ProcedureActivationRequest&gt;, in DynamicBuffer&lt;OwnedProcedures&gt;, in RequestArgs)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static bool FindAndRequest(Operation operation, int identifier, ref ComponentDataFromEntity&lt;ProcedureInputStream&gt; inputFromEntity, in DynamicBuffer&lt;OwnedProcedures&gt; ownedProcedures)</code></pre>
+    <pre><code class="lang-csharp hljs">public static bool FindAndRequest(Operation operation, int identifier, ref BufferFromEntity&lt;ProcedureActivationRequest&gt; inputFromEntity, in DynamicBuffer&lt;OwnedProcedures&gt; ownedProcedures, in RequestArgs args)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -170,13 +170,18 @@ Contains Operations (Start/Stop) for different phases (Request-&gt;Try/Force), I
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">ComponentDataFromEntity</span>&lt;<a class="xref" href="Kinstrife.Entities.Procedures.ProcedureInputStream.html">ProcedureInputStream</a>&gt;</td>
+        <td><span class="xref">BufferFromEntity</span>&lt;<a class="xref" href="Kinstrife.Entities.Procedures.ProcedureActivationRequest.html">ProcedureActivationRequest</a>&gt;</td>
         <td><span class="parametername">inputFromEntity</span></td>
         <td></td>
       </tr>
       <tr>
         <td><span class="xref">DynamicBuffer</span>&lt;<a class="xref" href="Kinstrife.Entities.Procedures.OwnedProcedures.html">OwnedProcedures</a>&gt;</td>
         <td><span class="parametername">ownedProcedures</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Kinstrife.Entities.RequestArgs.html">RequestArgs</a></td>
+        <td><span class="parametername">args</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -302,13 +307,13 @@ Contains Operations (Start/Stop) for different phases (Request-&gt;Try/Force), I
   </table>
   
   
-  <a id="Kinstrife_Entities_Procedures_Procedures_RequestStart_" data-uid="Kinstrife.Entities.Procedures.Procedures.RequestStart*"></a>
-  <h4 id="Kinstrife_Entities_Procedures_Procedures_RequestStart_Entity__ComponentDataFromEntity_Kinstrife_Entities_Procedures_ProcedureInputStream___" data-uid="Kinstrife.Entities.Procedures.Procedures.RequestStart(Entity@,ComponentDataFromEntity{Kinstrife.Entities.Procedures.ProcedureInputStream}@)">RequestStart(in Entity, ref ComponentDataFromEntity&lt;ProcedureInputStream&gt;)</h4>
+  <a id="Kinstrife_Entities_Procedures_Procedures_ReleaseRequest_" data-uid="Kinstrife.Entities.Procedures.Procedures.ReleaseRequest*"></a>
+  <h4 id="Kinstrife_Entities_Procedures_Procedures_ReleaseRequest_Entity__BufferFromEntity_Kinstrife_Entities_Procedures_ProcedureActivationRequest___Entity__" data-uid="Kinstrife.Entities.Procedures.Procedures.ReleaseRequest(Entity@,BufferFromEntity{Kinstrife.Entities.Procedures.ProcedureActivationRequest}@,Entity@)">ReleaseRequest(in Entity, ref BufferFromEntity&lt;ProcedureActivationRequest&gt;, in Entity)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static bool RequestStart(in Entity e, ref ComponentDataFromEntity&lt;ProcedureInputStream&gt; inputFromEntity)</code></pre>
+    <pre><code class="lang-csharp hljs">public static bool ReleaseRequest(in Entity e, ref BufferFromEntity&lt;ProcedureActivationRequest&gt; inputFromEntity, in Entity requestor)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -326,8 +331,13 @@ Contains Operations (Start/Stop) for different phases (Request-&gt;Try/Force), I
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">ComponentDataFromEntity</span>&lt;<a class="xref" href="Kinstrife.Entities.Procedures.ProcedureInputStream.html">ProcedureInputStream</a>&gt;</td>
+        <td><span class="xref">BufferFromEntity</span>&lt;<a class="xref" href="Kinstrife.Entities.Procedures.ProcedureActivationRequest.html">ProcedureActivationRequest</a>&gt;</td>
         <td><span class="parametername">inputFromEntity</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">Entity</span></td>
+        <td><span class="parametername">requestor</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -349,13 +359,13 @@ Contains Operations (Start/Stop) for different phases (Request-&gt;Try/Force), I
   </table>
   
   
-  <a id="Kinstrife_Entities_Procedures_Procedures_RequestStop_" data-uid="Kinstrife.Entities.Procedures.Procedures.RequestStop*"></a>
-  <h4 id="Kinstrife_Entities_Procedures_Procedures_RequestStop_Entity__ComponentDataFromEntity_Kinstrife_Entities_Procedures_ProcedureInputStream___" data-uid="Kinstrife.Entities.Procedures.Procedures.RequestStop(Entity@,ComponentDataFromEntity{Kinstrife.Entities.Procedures.ProcedureInputStream}@)">RequestStop(in Entity, ref ComponentDataFromEntity&lt;ProcedureInputStream&gt;)</h4>
+  <a id="Kinstrife_Entities_Procedures_Procedures_RequestStart_" data-uid="Kinstrife.Entities.Procedures.Procedures.RequestStart*"></a>
+  <h4 id="Kinstrife_Entities_Procedures_Procedures_RequestStart_Entity__BufferFromEntity_Kinstrife_Entities_Procedures_ProcedureActivationRequest___Kinstrife_Entities_RequestArgs__" data-uid="Kinstrife.Entities.Procedures.Procedures.RequestStart(Entity@,BufferFromEntity{Kinstrife.Entities.Procedures.ProcedureActivationRequest}@,Kinstrife.Entities.RequestArgs@)">RequestStart(in Entity, ref BufferFromEntity&lt;ProcedureActivationRequest&gt;, in RequestArgs)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static bool RequestStop(in Entity e, ref ComponentDataFromEntity&lt;ProcedureInputStream&gt; inputFromEntity)</code></pre>
+    <pre><code class="lang-csharp hljs">public static bool RequestStart(in Entity e, ref BufferFromEntity&lt;ProcedureActivationRequest&gt; inputFromEntity, in RequestArgs args)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -373,8 +383,13 @@ Contains Operations (Start/Stop) for different phases (Request-&gt;Try/Force), I
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">ComponentDataFromEntity</span>&lt;<a class="xref" href="Kinstrife.Entities.Procedures.ProcedureInputStream.html">ProcedureInputStream</a>&gt;</td>
+        <td><span class="xref">BufferFromEntity</span>&lt;<a class="xref" href="Kinstrife.Entities.Procedures.ProcedureActivationRequest.html">ProcedureActivationRequest</a>&gt;</td>
         <td><span class="parametername">inputFromEntity</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Kinstrife.Entities.RequestArgs.html">RequestArgs</a></td>
+        <td><span class="parametername">args</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -397,12 +412,12 @@ Contains Operations (Start/Stop) for different phases (Request-&gt;Try/Force), I
   
   
   <a id="Kinstrife_Entities_Procedures_Procedures_RequestToggle_" data-uid="Kinstrife.Entities.Procedures.Procedures.RequestToggle*"></a>
-  <h4 id="Kinstrife_Entities_Procedures_Procedures_RequestToggle_Entity__ComponentDataFromEntity_Kinstrife_Entities_Procedures_ProcedureInputStream___" data-uid="Kinstrife.Entities.Procedures.Procedures.RequestToggle(Entity@,ComponentDataFromEntity{Kinstrife.Entities.Procedures.ProcedureInputStream}@)">RequestToggle(in Entity, ref ComponentDataFromEntity&lt;ProcedureInputStream&gt;)</h4>
+  <h4 id="Kinstrife_Entities_Procedures_Procedures_RequestToggle_Entity__BufferFromEntity_Kinstrife_Entities_Procedures_ProcedureActivationRequest___Kinstrife_Entities_RequestArgs__" data-uid="Kinstrife.Entities.Procedures.Procedures.RequestToggle(Entity@,BufferFromEntity{Kinstrife.Entities.Procedures.ProcedureActivationRequest}@,Kinstrife.Entities.RequestArgs@)">RequestToggle(in Entity, ref BufferFromEntity&lt;ProcedureActivationRequest&gt;, in RequestArgs)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static bool RequestToggle(in Entity e, ref ComponentDataFromEntity&lt;ProcedureInputStream&gt; inputFromEntity)</code></pre>
+    <pre><code class="lang-csharp hljs">public static bool RequestToggle(in Entity e, ref BufferFromEntity&lt;ProcedureActivationRequest&gt; inputFromEntity, in RequestArgs args)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -420,8 +435,65 @@ Contains Operations (Start/Stop) for different phases (Request-&gt;Try/Force), I
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">ComponentDataFromEntity</span>&lt;<a class="xref" href="Kinstrife.Entities.Procedures.ProcedureInputStream.html">ProcedureInputStream</a>&gt;</td>
+        <td><span class="xref">BufferFromEntity</span>&lt;<a class="xref" href="Kinstrife.Entities.Procedures.ProcedureActivationRequest.html">ProcedureActivationRequest</a>&gt;</td>
         <td><span class="parametername">inputFromEntity</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Kinstrife.Entities.RequestArgs.html">RequestArgs</a></td>
+        <td><span class="parametername">args</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Kinstrife_Entities_Procedures_Procedures_TryFindProcedureEntityById_" data-uid="Kinstrife.Entities.Procedures.Procedures.TryFindProcedureEntityById*"></a>
+  <h4 id="Kinstrife_Entities_Procedures_Procedures_TryFindProcedureEntityById_System_Int32_DynamicBuffer_Kinstrife_Entities_Procedures_OwnedProcedures___Entity__" data-uid="Kinstrife.Entities.Procedures.Procedures.TryFindProcedureEntityById(System.Int32,DynamicBuffer{Kinstrife.Entities.Procedures.OwnedProcedures}@,Entity@)">TryFindProcedureEntityById(Int32, in DynamicBuffer&lt;OwnedProcedures&gt;, out Entity)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool TryFindProcedureEntityById(int procedureId, in DynamicBuffer&lt;OwnedProcedures&gt; ownedProcedures, out Entity result)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">procedureId</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">DynamicBuffer</span>&lt;<a class="xref" href="Kinstrife.Entities.Procedures.OwnedProcedures.html">OwnedProcedures</a>&gt;</td>
+        <td><span class="parametername">ownedProcedures</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">Entity</span></td>
+        <td><span class="parametername">result</span></td>
         <td></td>
       </tr>
     </tbody>

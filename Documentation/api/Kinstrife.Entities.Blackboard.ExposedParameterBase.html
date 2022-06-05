@@ -84,6 +84,7 @@
   <div classs="implements">
     <h5>Implements</h5>
     <div><a class="xref" href="Kinstrife.Entities.Blackboard.IExposedParameter.html">IExposedParameter</a></div>
+    <div><span class="xref">IHasNameProperty</span></div>
   </div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
@@ -120,6 +121,31 @@ public abstract class ExposedParameterBase : IExposedParameter</code></pre>
   </h3>
   
   
+  <a id="Kinstrife_Entities_Blackboard_ExposedParameterBase_Name_" data-uid="Kinstrife.Entities.Blackboard.ExposedParameterBase.Name*"></a>
+  <h4 id="Kinstrife_Entities_Blackboard_ExposedParameterBase_Name" data-uid="Kinstrife.Entities.Blackboard.ExposedParameterBase.Name">Name</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string Name { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
   <a id="Kinstrife_Entities_Blackboard_ExposedParameterBase_NativeIdentifier_" data-uid="Kinstrife.Entities.Blackboard.ExposedParameterBase.NativeIdentifier*"></a>
   <h4 id="Kinstrife_Entities_Blackboard_ExposedParameterBase_NativeIdentifier" data-uid="Kinstrife.Entities.Blackboard.ExposedParameterBase.NativeIdentifier">NativeIdentifier</h4>
   <div class="markdown level1 summary"></div>
@@ -148,12 +174,12 @@ public abstract class ExposedParameterBase : IExposedParameter</code></pre>
   
   
   <a id="Kinstrife_Entities_Blackboard_ExposedParameterBase_CreateBase_" data-uid="Kinstrife.Entities.Blackboard.ExposedParameterBase.CreateBase*"></a>
-  <h4 id="Kinstrife_Entities_Blackboard_ExposedParameterBase_CreateBase__1_System_Int32_" data-uid="Kinstrife.Entities.Blackboard.ExposedParameterBase.CreateBase``1(System.Int32)">CreateBase&lt;T&gt;(Int32)</h4>
+  <h4 id="Kinstrife_Entities_Blackboard_ExposedParameterBase_CreateBase__1_System_Int32_IHasNameProperty_" data-uid="Kinstrife.Entities.Blackboard.ExposedParameterBase.CreateBase``1(System.Int32,IHasNameProperty)">CreateBase&lt;T&gt;(Int32, IHasNameProperty)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static T CreateBase&lt;T&gt;(int nativeIdentifier)
+    <pre><code class="lang-csharp hljs">public static T CreateBase&lt;T&gt;(int nativeIdentifier, IHasNameProperty source)
     where T : ExposedParameterBase, new()</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -169,6 +195,11 @@ public abstract class ExposedParameterBase : IExposedParameter</code></pre>
       <tr>
         <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">nativeIdentifier</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">IHasNameProperty</span></td>
+        <td><span class="parametername">source</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -250,6 +281,9 @@ public abstract class ExposedParameterBase : IExposedParameter</code></pre>
   <h3 id="implements">Implements</h3>
   <div>
       <a class="xref" href="Kinstrife.Entities.Blackboard.IExposedParameter.html">IExposedParameter</a>
+  </div>
+  <div>
+      <span class="xref">IHasNameProperty</span>
   </div>
 </article>
           </div>

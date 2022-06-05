@@ -157,12 +157,12 @@
   
   
   <a id="Kinstrife_Blueprints_BlackboardGraphConversion_GetInputParameterId_" data-uid="Kinstrife.Blueprints.BlackboardGraphConversion.GetInputParameterId*"></a>
-  <h4 id="Kinstrife_Blueprints_BlackboardGraphConversion_GetInputParameterId__1_Kinstrife_GraphTools_BaseNode_" data-uid="Kinstrife.Blueprints.BlackboardGraphConversion.GetInputParameterId``1(Kinstrife.GraphTools.BaseNode)">GetInputParameterId&lt;T&gt;(BaseNode)</h4>
+  <h4 id="Kinstrife_Blueprints_BlackboardGraphConversion_GetInputParameterId__1_GraphProcessor_BaseGraph_Kinstrife_GraphTools_BaseNode_" data-uid="Kinstrife.Blueprints.BlackboardGraphConversion.GetInputParameterId``1(GraphProcessor.BaseGraph,Kinstrife.GraphTools.BaseNode)">GetInputParameterId&lt;T&gt;(GraphProcessor.BaseGraph, BaseNode)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static int GetInputParameterId&lt;T&gt;(BaseNode node)
+    <pre><code class="lang-csharp hljs">public static int GetInputParameterId&lt;T&gt;(GraphProcessor.BaseGraph graphAsset, BaseNode node)
     where T : GraphProcessor.ExposedParameter, IConvertibleParameter</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -175,6 +175,11 @@
       </tr>
     </thead>
     <tbody>
+      <tr>
+        <td><span class="xref">GraphProcessor.BaseGraph</span></td>
+        <td><span class="parametername">graphAsset</span></td>
+        <td></td>
+      </tr>
       <tr>
         <td><a class="xref" href="Kinstrife.GraphTools.BaseNode.html">BaseNode</a></td>
         <td><span class="parametername">node</span></td>
@@ -267,12 +272,12 @@
   
   
   <a id="Kinstrife_Blueprints_BlackboardGraphConversion_GetOutputParameterIdForField_" data-uid="Kinstrife.Blueprints.BlackboardGraphConversion.GetOutputParameterIdForField*"></a>
-  <h4 id="Kinstrife_Blueprints_BlackboardGraphConversion_GetOutputParameterIdForField__1_Kinstrife_GraphTools_BaseNode_System_String_" data-uid="Kinstrife.Blueprints.BlackboardGraphConversion.GetOutputParameterIdForField``1(Kinstrife.GraphTools.BaseNode,System.String)">GetOutputParameterIdForField&lt;T&gt;(BaseNode, String)</h4>
+  <h4 id="Kinstrife_Blueprints_BlackboardGraphConversion_GetOutputParameterIdForField__1_GraphProcessor_BaseGraph_Kinstrife_GraphTools_BaseNode_System_String_" data-uid="Kinstrife.Blueprints.BlackboardGraphConversion.GetOutputParameterIdForField``1(GraphProcessor.BaseGraph,Kinstrife.GraphTools.BaseNode,System.String)">GetOutputParameterIdForField&lt;T&gt;(GraphProcessor.BaseGraph, BaseNode, String)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static int GetOutputParameterIdForField&lt;T&gt;(BaseNode node, string fieldName)
+    <pre><code class="lang-csharp hljs">public static int GetOutputParameterIdForField&lt;T&gt;(GraphProcessor.BaseGraph graphAsset, BaseNode node, string fieldName)
     where T : GraphProcessor.ExposedParameter, IConvertibleParameter</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -285,6 +290,11 @@
       </tr>
     </thead>
     <tbody>
+      <tr>
+        <td><span class="xref">GraphProcessor.BaseGraph</span></td>
+        <td><span class="parametername">graphAsset</span></td>
+        <td></td>
+      </tr>
       <tr>
         <td><a class="xref" href="Kinstrife.GraphTools.BaseNode.html">BaseNode</a></td>
         <td><span class="parametername">node</span></td>
@@ -323,6 +333,38 @@
     <tbody>
       <tr>
         <td><span class="parametername">T</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Kinstrife_Blueprints_BlackboardGraphConversion_ProcessGraphConvertibleParameters_" data-uid="Kinstrife.Blueprints.BlackboardGraphConversion.ProcessGraphConvertibleParameters*"></a>
+  <h4 id="Kinstrife_Blueprints_BlackboardGraphConversion_ProcessGraphConvertibleParameters_Kinstrife_Blueprints_ProcedureGraphAsset_Kinstrife_Entities_Blackboard_BlackboardComponent_" data-uid="Kinstrife.Blueprints.BlackboardGraphConversion.ProcessGraphConvertibleParameters(Kinstrife.Blueprints.ProcedureGraphAsset,Kinstrife.Entities.Blackboard.BlackboardComponent)">ProcessGraphConvertibleParameters(ProcedureGraphAsset, BlackboardComponent)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void ProcessGraphConvertibleParameters(ProcedureGraphAsset graphAsset, BlackboardComponent blackboard)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Kinstrife.Blueprints.ProcedureGraphAsset.html">ProcedureGraphAsset</a></td>
+        <td><span class="parametername">graphAsset</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Kinstrife.Entities.Blackboard.BlackboardComponent.html">BlackboardComponent</a></td>
+        <td><span class="parametername">blackboard</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -382,13 +424,14 @@
   </table>
   
   
-  <a id="Kinstrife_Blueprints_BlackboardGraphConversion_ProcessGraphManagedParameters_" data-uid="Kinstrife.Blueprints.BlackboardGraphConversion.ProcessGraphManagedParameters*"></a>
-  <h4 id="Kinstrife_Blueprints_BlackboardGraphConversion_ProcessGraphManagedParameters_Kinstrife_Blueprints_ProcedureGraphAsset_Kinstrife_Entities_Blackboard_BlackboardComponent_" data-uid="Kinstrife.Blueprints.BlackboardGraphConversion.ProcessGraphManagedParameters(Kinstrife.Blueprints.ProcedureGraphAsset,Kinstrife.Entities.Blackboard.BlackboardComponent)">ProcessGraphManagedParameters(ProcedureGraphAsset, BlackboardComponent)</h4>
+  <a id="Kinstrife_Blueprints_BlackboardGraphConversion_TryGetInputParameter_" data-uid="Kinstrife.Blueprints.BlackboardGraphConversion.TryGetInputParameter*"></a>
+  <h4 id="Kinstrife_Blueprints_BlackboardGraphConversion_TryGetInputParameter__1_GraphProcessor_BaseGraph_Kinstrife_GraphTools_BaseNode___0__" data-uid="Kinstrife.Blueprints.BlackboardGraphConversion.TryGetInputParameter``1(GraphProcessor.BaseGraph,Kinstrife.GraphTools.BaseNode,``0@)">TryGetInputParameter&lt;T&gt;(GraphProcessor.BaseGraph, BaseNode, out T)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static void ProcessGraphManagedParameters(ProcedureGraphAsset graphAsset, BlackboardComponent blackboard)</code></pre>
+    <pre><code class="lang-csharp hljs">public static bool TryGetInputParameter&lt;T&gt;(GraphProcessor.BaseGraph graphAsset, BaseNode node, out T parameter)
+    where T : GraphProcessor.ExposedParameter, IConvertibleParameter</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -401,13 +444,48 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="Kinstrife.Blueprints.ProcedureGraphAsset.html">ProcedureGraphAsset</a></td>
+        <td><span class="xref">GraphProcessor.BaseGraph</span></td>
         <td><span class="parametername">graphAsset</span></td>
         <td></td>
       </tr>
       <tr>
-        <td><a class="xref" href="Kinstrife.Entities.Blackboard.BlackboardComponent.html">BlackboardComponent</a></td>
-        <td><span class="parametername">blackboard</span></td>
+        <td><a class="xref" href="Kinstrife.GraphTools.BaseNode.html">BaseNode</a></td>
+        <td><span class="parametername">node</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">T</span></td>
+        <td><span class="parametername">parameter</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T</span></td>
         <td></td>
       </tr>
     </tbody>

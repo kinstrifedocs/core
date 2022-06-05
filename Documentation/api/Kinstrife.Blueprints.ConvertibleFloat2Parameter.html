@@ -82,7 +82,6 @@
   </div>
   <div classs="implements">
     <h5>Implements</h5>
-    <div><span class="xref">IConvertibleToBufferElement</span>&lt;<span class="xref">Float2ParameterElement</span>&gt;</div>
     <div><span class="xref">IHasNameProperty</span></div>
     <div><a class="xref" href="Kinstrife.Blueprints.IConvertibleParameter.html">IConvertibleParameter</a></div>
   </div>
@@ -94,56 +93,6 @@
   </div>
   <h3 id="properties">Properties
   </h3>
-  
-  
-  <a id="Kinstrife_Blueprints_ConvertibleFloat2Parameter_ConvertibleBufferElement_" data-uid="Kinstrife.Blueprints.ConvertibleFloat2Parameter.ConvertibleBufferElement*"></a>
-  <h4 id="Kinstrife_Blueprints_ConvertibleFloat2Parameter_ConvertibleBufferElement" data-uid="Kinstrife.Blueprints.ConvertibleFloat2Parameter.ConvertibleBufferElement">ConvertibleBufferElement</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public IBufferElementData ConvertibleBufferElement { get; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">IBufferElementData</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="Kinstrife_Blueprints_ConvertibleFloat2Parameter_GetConvertibleBufferElement_" data-uid="Kinstrife.Blueprints.ConvertibleFloat2Parameter.GetConvertibleBufferElement*"></a>
-  <h4 id="Kinstrife_Blueprints_ConvertibleFloat2Parameter_GetConvertibleBufferElement" data-uid="Kinstrife.Blueprints.ConvertibleFloat2Parameter.GetConvertibleBufferElement">GetConvertibleBufferElement</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Float2ParameterElement GetConvertibleBufferElement { get; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">Float2ParameterElement</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
   
   
   <a id="Kinstrife_Blueprints_ConvertibleFloat2Parameter_Name_" data-uid="Kinstrife.Blueprints.ConvertibleFloat2Parameter.Name*"></a>
@@ -173,13 +122,13 @@
   </h3>
   
   
-  <a id="Kinstrife_Blueprints_ConvertibleFloat2Parameter_InitRuntimeComponents_" data-uid="Kinstrife.Blueprints.ConvertibleFloat2Parameter.InitRuntimeComponents*"></a>
-  <h4 id="Kinstrife_Blueprints_ConvertibleFloat2Parameter_InitRuntimeComponents_EntityManager__Entity_" data-uid="Kinstrife.Blueprints.ConvertibleFloat2Parameter.InitRuntimeComponents(EntityManager@,Entity)">InitRuntimeComponents(ref EntityManager, Entity)</h4>
+  <a id="Kinstrife_Blueprints_ConvertibleFloat2Parameter_CreateBlackboardParameter_" data-uid="Kinstrife.Blueprints.ConvertibleFloat2Parameter.CreateBlackboardParameter*"></a>
+  <h4 id="Kinstrife_Blueprints_ConvertibleFloat2Parameter_CreateBlackboardParameter_System_Int32_" data-uid="Kinstrife.Blueprints.ConvertibleFloat2Parameter.CreateBlackboardParameter(System.Int32)">CreateBlackboardParameter(Int32)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void InitRuntimeComponents(ref EntityManager entityManager, Entity e)</code></pre>
+    <pre><code class="lang-csharp hljs">public ExposedParameterBase CreateBlackboardParameter(int nativeKey)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -192,21 +141,28 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">EntityManager</span></td>
-        <td><span class="parametername">entityManager</span></td>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">nativeKey</span></td>
         <td></td>
       </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
       <tr>
-        <td><span class="xref">Entity</span></td>
-        <td><span class="parametername">e</span></td>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">ExposedParameterBase</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <h3 id="implements">Implements</h3>
-  <div>
-      <span class="xref">IConvertibleToBufferElement&lt;&gt;</span>
-  </div>
   <div>
       <span class="xref">IHasNameProperty</span>
   </div>
