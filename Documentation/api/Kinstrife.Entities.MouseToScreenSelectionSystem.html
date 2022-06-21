@@ -178,6 +178,98 @@
   </table>
   
   
+  <a id="Kinstrife_Entities_MouseToScreenSelectionSystem_ConvertWorldToScreenCoordinates_" data-uid="Kinstrife.Entities.MouseToScreenSelectionSystem.ConvertWorldToScreenCoordinates*"></a>
+  <h4 id="Kinstrife_Entities_MouseToScreenSelectionSystem_ConvertWorldToScreenCoordinates_float3_float3_float4x4_float3_float3_float3_System_Single_System_Single_System_Single_" data-uid="Kinstrife.Entities.MouseToScreenSelectionSystem.ConvertWorldToScreenCoordinates(float3,float3,float4x4,float3,float3,float3,System.Single,System.Single,System.Single)">ConvertWorldToScreenCoordinates(float3, float3, float4x4, float3, float3, float3, Single, Single, Single)</h4>
+  <div class="markdown level1 summary"><p>Convert point from world space to screen space</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static float2 ConvertWorldToScreenCoordinates(float3 point, float3 cameraPos, float4x4 camProjMatrix, float3 camUp, float3 camRight, float3 camForward, float pixelWidth, float pixelHeight, float scaleFactor)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">float3</span></td>
+        <td><span class="parametername">point</span></td>
+        <td><p>Point in World Space</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">float3</span></td>
+        <td><span class="parametername">cameraPos</span></td>
+        <td><p>Camera position in World Space</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">float4x4</span></td>
+        <td><span class="parametername">camProjMatrix</span></td>
+        <td><p>Camera.projectionMatrix</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">float3</span></td>
+        <td><span class="parametername">camUp</span></td>
+        <td><p>Camera.transform.up</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">float3</span></td>
+        <td><span class="parametername">camRight</span></td>
+        <td><p>Camera.transform.right</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">float3</span></td>
+        <td><span class="parametername">camForward</span></td>
+        <td><p>Camera.transform.forward</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><span class="parametername">pixelWidth</span></td>
+        <td><p>Camera.pixelWidth</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><span class="parametername">pixelHeight</span></td>
+        <td><p>Camera.pixelHeight</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><span class="parametername">scaleFactor</span></td>
+        <td><p>Canvas.scaleFactor</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">float2</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
   <a id="Kinstrife_Entities_MouseToScreenSelectionSystem_Inject_" data-uid="Kinstrife.Entities.MouseToScreenSelectionSystem.Inject*"></a>
   <h4 id="Kinstrife_Entities_MouseToScreenSelectionSystem_Inject_Kinstrife_Core_Config_EntitySelectionConfig_Kinstrife_Entities_Systems_EntitySelectionSystem_DragSelection_Kinstrife_Entities_Systems_EntityGroupSystem_Kinstrife_Messaging_ISubscriber_Kinstrife_Core_Input_InputFocusState__" data-uid="Kinstrife.Entities.MouseToScreenSelectionSystem.Inject(Kinstrife.Core.Config.EntitySelectionConfig,Kinstrife.Entities.Systems.EntitySelectionSystem,DragSelection,Kinstrife.Entities.Systems.EntityGroupSystem,Kinstrife.Messaging.ISubscriber{Kinstrife.Core.Input.InputFocusState})">Inject(EntitySelectionConfig, EntitySelectionSystem, DragSelection, EntityGroupSystem, ISubscriber&lt;InputFocusState&gt;)</h4>
   <div class="markdown level1 summary"></div>
