@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class BlobBuilderExtensions
    | Kinstrife ">
-    <meta name="generator" content="docfx 2.59.2.0">
+    <meta name="generator" content="docfx 2.59.3.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
@@ -438,13 +438,13 @@ A higher value may result in less collisions and slightly better performance, bu
   
   
   <a id="BlobHashMaps_BlobBuilderExtensions_ConstructHashMap_" data-uid="BlobHashMaps.BlobBuilderExtensions.ConstructHashMap*"></a>
-  <h4 id="BlobHashMaps_BlobBuilderExtensions_ConstructHashMap__2_BlobBuilder__BlobHashMaps_BlobHashMap___0___1___NativeHashMap___0___1___" data-uid="BlobHashMaps.BlobBuilderExtensions.ConstructHashMap``2(BlobBuilder@,BlobHashMaps.BlobHashMap{``0,``1}@,NativeHashMap{``0,``1}@)">ConstructHashMap&lt;TKey, TValue&gt;(ref BlobBuilder, ref BlobHashMap&lt;TKey, TValue&gt;, ref NativeHashMap&lt;TKey, TValue&gt;)</h4>
+  <h4 id="BlobHashMaps_BlobBuilderExtensions_ConstructHashMap__2_BlobBuilder__BlobHashMaps_BlobHashMap___0___1___NativeParallelHashMap___0___1___" data-uid="BlobHashMaps.BlobBuilderExtensions.ConstructHashMap``2(BlobBuilder@,BlobHashMaps.BlobHashMap{``0,``1}@,NativeParallelHashMap{``0,``1}@)">ConstructHashMap&lt;TKey, TValue&gt;(ref BlobBuilder, ref BlobHashMap&lt;TKey, TValue&gt;, ref NativeParallelHashMap&lt;TKey, TValue&gt;)</h4>
   <div class="markdown level1 summary"><p>Allocates a BlobHashMap and copies all key value pairs from the source NativeHashMap</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static void ConstructHashMap&lt;TKey, TValue&gt;(this ref BlobBuilder builder, ref BlobHashMap&lt;TKey, TValue&gt; blobHashMap, ref NativeHashMap&lt;TKey, TValue&gt; source)
+    <pre><code class="lang-csharp hljs">public static void ConstructHashMap&lt;TKey, TValue&gt;(this ref BlobBuilder builder, ref BlobHashMap&lt;TKey, TValue&gt; blobHashMap, ref NativeParallelHashMap&lt;TKey, TValue&gt; source)
     where TKey : struct, IEquatable&lt;TKey&gt; where TValue : struct</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -470,7 +470,7 @@ A higher value may result in less collisions and slightly better performance, bu
 </td>
       </tr>
       <tr>
-        <td><span class="xref">NativeHashMap</span>&lt;TKey, TValue&gt;</td>
+        <td><span class="xref">NativeParallelHashMap</span>&lt;TKey, TValue&gt;</td>
         <td><span class="parametername">source</span></td>
         <td><p>Source hashmap to copy keys and values from</p>
 </td>
@@ -560,13 +560,13 @@ A higher value may result in less collisions and slightly better performance, bu
   
   
   <a id="BlobHashMaps_BlobBuilderExtensions_ConstructMultiHashMap_" data-uid="BlobHashMaps.BlobBuilderExtensions.ConstructMultiHashMap*"></a>
-  <h4 id="BlobHashMaps_BlobBuilderExtensions_ConstructMultiHashMap__2_BlobBuilder__BlobHashMaps_BlobMultiHashMap___0___1___NativeMultiHashMap___0___1___" data-uid="BlobHashMaps.BlobBuilderExtensions.ConstructMultiHashMap``2(BlobBuilder@,BlobHashMaps.BlobMultiHashMap{``0,``1}@,NativeMultiHashMap{``0,``1}@)">ConstructMultiHashMap&lt;TKey, TValue&gt;(ref BlobBuilder, ref BlobMultiHashMap&lt;TKey, TValue&gt;, ref NativeMultiHashMap&lt;TKey, TValue&gt;)</h4>
+  <h4 id="BlobHashMaps_BlobBuilderExtensions_ConstructMultiHashMap__2_BlobBuilder__BlobHashMaps_BlobMultiHashMap___0___1___NativeParallelMultiHashMap___0___1___" data-uid="BlobHashMaps.BlobBuilderExtensions.ConstructMultiHashMap``2(BlobBuilder@,BlobHashMaps.BlobMultiHashMap{``0,``1}@,NativeParallelMultiHashMap{``0,``1}@)">ConstructMultiHashMap&lt;TKey, TValue&gt;(ref BlobBuilder, ref BlobMultiHashMap&lt;TKey, TValue&gt;, ref NativeParallelMultiHashMap&lt;TKey, TValue&gt;)</h4>
   <div class="markdown level1 summary"><p>Allocates a BlobHashMap and copies all key value pairs from the source NativeHashMap</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static void ConstructMultiHashMap&lt;TKey, TValue&gt;(this ref BlobBuilder builder, ref BlobMultiHashMap&lt;TKey, TValue&gt; blobMultiHashMap, ref NativeMultiHashMap&lt;TKey, TValue&gt; source)
+    <pre><code class="lang-csharp hljs">public static void ConstructMultiHashMap&lt;TKey, TValue&gt;(this ref BlobBuilder builder, ref BlobMultiHashMap&lt;TKey, TValue&gt; blobMultiHashMap, ref NativeParallelMultiHashMap&lt;TKey, TValue&gt; source)
     where TKey : struct, IEquatable&lt;TKey&gt; where TValue : struct</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -592,7 +592,7 @@ A higher value may result in less collisions and slightly better performance, bu
 </td>
       </tr>
       <tr>
-        <td><span class="xref">NativeMultiHashMap</span>&lt;TKey, TValue&gt;</td>
+        <td><span class="xref">NativeParallelMultiHashMap</span>&lt;TKey, TValue&gt;</td>
         <td><span class="parametername">source</span></td>
         <td><p>Source multihashmap to copy keys and values from</p>
 </td>

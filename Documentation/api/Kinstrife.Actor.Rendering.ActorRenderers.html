@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class ActorRenderers
    | Kinstrife ">
-    <meta name="generator" content="docfx 2.59.2.0">
+    <meta name="generator" content="docfx 2.59.3.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
@@ -81,11 +81,13 @@
     <div class="level1"><a class="xref" href="Kinstrife.Actor.Rendering.Renderers.html">Renderers</a></div>
     <div class="level2"><span class="xref">ActorRenderers</span></div>
   </div>
-  <div classs="implements">
+  <div class="implements">
     <h5>Implements</h5>
-    <div><span class="xref">IInitializable</span></div>
-    <div><span class="xref">ICacheReferences</span></div>
-    <div><span class="xref">IInstall</span>&lt;<a class="xref" href="Kinstrife.Actor.Rendering.Renderers.html">Renderers</a>&gt;</div>
+    <div><a class="xref" href="Kinstrife.Core.DependencyInjection.IInitializable.html">IInitializable</a></div>
+    <div><a class="xref" href="Kinstrife.Core.DependencyInjection.ICacheReferences.html">ICacheReferences</a></div>
+    <div><a class="xref" href="Kinstrife.Core.DependencyInjection.IInstall-1.html">IInstall</a>&lt;<a class="xref" href="Kinstrife.Actor.Rendering.Renderers.html">Renderers</a>&gt;</div>
+    <div><a class="xref" href="Kinstrife.Core.DependencyInjection.IInstall.html">IInstall</a></div>
+    <div><a class="xref" href="Kinstrife.Core.DependencyInjection.IDependent.html">IDependent</a></div>
     <div><span class="xref">IInstall</span>&lt;<a class="xref" href="Kinstrife.Actor.Rendering.ActorRenderers.html">ActorRenderers</a>&gt;</div>
   </div>
   <div class="inheritedMembers">
@@ -95,6 +97,9 @@
     </div>
     <div>
       <a class="xref" href="Kinstrife.Actor.Rendering.Renderers.html#Kinstrife_Actor_Rendering_Renderers_Components">Renderers.Components</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.Actor.Rendering.Renderers.html#Kinstrife_Actor_Rendering_Renderers_allRenderers">Renderers.allRenderers</a>
     </div>
     <div>
       <a class="xref" href="Kinstrife.Actor.Rendering.Renderers.html#Kinstrife_Actor_Rendering_Renderers_Initialized">Renderers.Initialized</a>
@@ -110,7 +115,7 @@
   <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
   <h5 id="Kinstrife_Actor_Rendering_ActorRenderers_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class ActorRenderers : Renderers</code></pre>
+    <pre><code class="lang-csharp hljs">public class ActorRenderers : Renderers, IInitializable, ICacheReferences, IInstall&lt;Renderers&gt;, IInstall, IDependent</code></pre>
   </div>
   <h3 id="fields">Fields
   </h3>
@@ -186,15 +191,48 @@
       </tr>
     </tbody>
   </table>
+  <h3 id="properties">Properties
+  </h3>
+  
+  
+  <a id="Kinstrife_Actor_Rendering_ActorRenderers_VisualSettings_" data-uid="Kinstrife.Actor.Rendering.ActorRenderers.VisualSettings*"></a>
+  <h4 id="Kinstrife_Actor_Rendering_ActorRenderers_VisualSettings" data-uid="Kinstrife.Actor.Rendering.ActorRenderers.VisualSettings">VisualSettings</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public VisualSettings VisualSettings { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Kinstrife.Actor.Rendering.VisualSettings.html">VisualSettings</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   <h3 id="implements">Implements</h3>
   <div>
-      <span class="xref">IInitializable</span>
+      <a class="xref" href="Kinstrife.Core.DependencyInjection.IInitializable.html">IInitializable</a>
   </div>
   <div>
-      <span class="xref">ICacheReferences</span>
+      <a class="xref" href="Kinstrife.Core.DependencyInjection.ICacheReferences.html">ICacheReferences</a>
   </div>
   <div>
-      <span class="xref">IInstall&lt;&gt;</span>
+      <a class="xref" href="Kinstrife.Core.DependencyInjection.IInstall-1.html">IInstall&lt;T&gt;</a>
+  </div>
+  <div>
+      <a class="xref" href="Kinstrife.Core.DependencyInjection.IInstall.html">IInstall</a>
+  </div>
+  <div>
+      <a class="xref" href="Kinstrife.Core.DependencyInjection.IDependent.html">IDependent</a>
   </div>
   <div>
       <span class="xref">IInstall&lt;&gt;</span>

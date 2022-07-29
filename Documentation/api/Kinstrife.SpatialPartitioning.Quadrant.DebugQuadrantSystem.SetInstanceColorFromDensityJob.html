@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Struct DebugQuadrantSystem.SetInstanceColorFromDensityJob
    | Kinstrife ">
-    <meta name="generator" content="docfx 2.59.2.0">
+    <meta name="generator" content="docfx 2.59.3.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
@@ -75,9 +75,9 @@
   </h1>
   <div class="markdown level0 summary"></div>
   <div class="markdown level0 conceptual"></div>
-  <div classs="implements">
+  <div class="implements">
     <h5>Implements</h5>
-    <div><span class="xref">IJobForEachWithEntity</span>&lt;<a class="xref" href="Kinstrife.Entities.Components.InstanceColorA.html">InstanceColorA</a>, <a class="xref" href="Kinstrife.Entities.Components.InstanceColorB.html">InstanceColorB</a>, <span class="xref">Parent</span>&gt;</div>
+    <div><span class="xref">IJobEntity</span></div>
   </div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
@@ -209,12 +209,12 @@
   
   
   <a id="Kinstrife_SpatialPartitioning_Quadrant_DebugQuadrantSystem_SetInstanceColorFromDensityJob_Execute_" data-uid="Kinstrife.SpatialPartitioning.Quadrant.DebugQuadrantSystem.SetInstanceColorFromDensityJob.Execute*"></a>
-  <h4 id="Kinstrife_SpatialPartitioning_Quadrant_DebugQuadrantSystem_SetInstanceColorFromDensityJob_Execute_Entity_System_Int32_Kinstrife_Entities_Components_InstanceColorA__Kinstrife_Entities_Components_InstanceColorB__Parent__" data-uid="Kinstrife.SpatialPartitioning.Quadrant.DebugQuadrantSystem.SetInstanceColorFromDensityJob.Execute(Entity,System.Int32,Kinstrife.Entities.Components.InstanceColorA@,Kinstrife.Entities.Components.InstanceColorB@,Parent@)">Execute(Entity, Int32, ref InstanceColorA, ref InstanceColorB, ref Parent)</h4>
+  <h4 id="Kinstrife_SpatialPartitioning_Quadrant_DebugQuadrantSystem_SetInstanceColorFromDensityJob_Execute_System_Int32_Kinstrife_Entities_InstanceColorA__Kinstrife_Entities_InstanceColorB__Parent__" data-uid="Kinstrife.SpatialPartitioning.Quadrant.DebugQuadrantSystem.SetInstanceColorFromDensityJob.Execute(System.Int32,Kinstrife.Entities.InstanceColorA@,Kinstrife.Entities.InstanceColorB@,Parent@)">Execute(Int32, ref InstanceColorA, ref InstanceColorB, ref Parent)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void Execute(Entity entity, int index, ref InstanceColorA instanceColor, ref InstanceColorB instanceColorB, ref Parent parent)</code></pre>
+    <pre><code class="lang-csharp hljs">public void Execute(int index, ref InstanceColorA instanceColor, ref InstanceColorB instanceColorB, ref Parent parent)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -227,22 +227,17 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Entity</span></td>
-        <td><span class="parametername">entity</span></td>
-        <td></td>
-      </tr>
-      <tr>
         <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">index</span></td>
         <td></td>
       </tr>
       <tr>
-        <td><a class="xref" href="Kinstrife.Entities.Components.InstanceColorA.html">InstanceColorA</a></td>
+        <td><a class="xref" href="Kinstrife.Entities.InstanceColorA.html">InstanceColorA</a></td>
         <td><span class="parametername">instanceColor</span></td>
         <td></td>
       </tr>
       <tr>
-        <td><a class="xref" href="Kinstrife.Entities.Components.InstanceColorB.html">InstanceColorB</a></td>
+        <td><a class="xref" href="Kinstrife.Entities.InstanceColorB.html">InstanceColorB</a></td>
         <td><span class="parametername">instanceColorB</span></td>
         <td></td>
       </tr>
@@ -317,7 +312,7 @@
   </table>
   <h3 id="implements">Implements</h3>
   <div>
-      <span class="xref">IJobForEachWithEntity&lt;, , &gt;</span>
+      <span class="xref">IJobEntity</span>
   </div>
 </article>
           </div>

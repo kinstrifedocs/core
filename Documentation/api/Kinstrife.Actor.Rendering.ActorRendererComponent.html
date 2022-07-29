@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class ActorRendererComponent
    | Kinstrife ">
-    <meta name="generator" content="docfx 2.59.2.0">
+    <meta name="generator" content="docfx 2.59.3.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
@@ -80,10 +80,14 @@
     <div class="level0"><span class="xref">System.Object</span></div>
     <div class="level1"><a class="xref" href="Kinstrife.Actor.Rendering.RendererComponent.html">RendererComponent</a></div>
     <div class="level2"><span class="xref">ActorRendererComponent</span></div>
+      <div class="level3"><a class="xref" href="Kinstrife.Actor.Rendering.ClothingComponent.html">ClothingComponent</a></div>
+      <div class="level3"><a class="xref" href="Kinstrife.Actor.Rendering.HairComponent.html">HairComponent</a></div>
+      <div class="level3"><a class="xref" href="Kinstrife.Actor.Rendering.SkinComponent.html">SkinComponent</a></div>
   </div>
-  <div classs="implements">
+  <div class="implements">
     <h5>Implements</h5>
     <div><span class="xref">ICacheReferences</span></div>
+    <div><span class="xref">IDisposable</span></div>
     <div><span class="xref">IInjectable</span></div>
     <div><a class="xref" href="Kinstrife.Actor.Rendering.IHasColourProperty.html">IHasColourProperty</a></div>
   </div>
@@ -105,7 +109,19 @@
       <a class="xref" href="Kinstrife.Actor.Rendering.RendererComponent.html#Kinstrife_Actor_Rendering_RendererComponent_meshRenderer">RendererComponent.meshRenderer</a>
     </div>
     <div>
+      <a class="xref" href="Kinstrife.Actor.Rendering.RendererComponent.html#Kinstrife_Actor_Rendering_RendererComponent_sourceMesh">RendererComponent.sourceMesh</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.Actor.Rendering.RendererComponent.html#Kinstrife_Actor_Rendering_RendererComponent_sharedMesh">RendererComponent.sharedMesh</a>
+    </div>
+    <div>
       <a class="xref" href="Kinstrife.Actor.Rendering.RendererComponent.html#Kinstrife_Actor_Rendering_RendererComponent_instantiateMaterialAtAwake">RendererComponent.instantiateMaterialAtAwake</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.Actor.Rendering.RendererComponent.html#Kinstrife_Actor_Rendering_RendererComponent_vertices">RendererComponent.vertices</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.Actor.Rendering.RendererComponent.html#Kinstrife_Actor_Rendering_RendererComponent_normals">RendererComponent.normals</a>
     </div>
     <div>
       <a class="xref" href="Kinstrife.Actor.Rendering.RendererComponent.html#Kinstrife_Actor_Rendering_RendererComponent_CacheReferences">RendererComponent.CacheReferences()</a>
@@ -116,6 +132,15 @@
     <div>
       <a class="xref" href="Kinstrife.Actor.Rendering.RendererComponent.html#Kinstrife_Actor_Rendering_RendererComponent_Refresh">RendererComponent.Refresh()</a>
     </div>
+    <div>
+      <a class="xref" href="Kinstrife.Actor.Rendering.RendererComponent.html#Kinstrife_Actor_Rendering_RendererComponent_SetMesh_Mesh_">RendererComponent.SetMesh(Mesh)</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.Actor.Rendering.RendererComponent.html#Kinstrife_Actor_Rendering_RendererComponent_Dispose">RendererComponent.Dispose()</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.Actor.Rendering.RendererComponent.html#Kinstrife_Actor_Rendering_RendererComponent_Allocate_System_Boolean_">RendererComponent.Allocate(Boolean)</a>
+    </div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Kinstrife.Actor.Rendering.html">Kinstrife.Actor.Rendering</a></h6>
   <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
@@ -123,8 +148,61 @@
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public class ActorRendererComponent : RendererComponent, IHasColourProperty</code></pre>
   </div>
+  <h3 id="fields">Fields
+  </h3>
+  
+  
+  <h4 id="Kinstrife_Actor_Rendering_ActorRendererComponent_actor" data-uid="Kinstrife.Actor.Rendering.ActorRendererComponent.actor">actor</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected ActorRoot actor</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Kinstrife.Actor.ActorRoot.html">ActorRoot</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   <h3 id="methods">Methods
   </h3>
+  
+  
+  <a id="Kinstrife_Actor_Rendering_ActorRendererComponent_Inject_" data-uid="Kinstrife.Actor.Rendering.ActorRendererComponent.Inject*"></a>
+  <h4 id="Kinstrife_Actor_Rendering_ActorRendererComponent_Inject_Kinstrife_Actor_ActorRoot_" data-uid="Kinstrife.Actor.Rendering.ActorRendererComponent.Inject(Kinstrife.Actor.ActorRoot)">Inject(ActorRoot)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Inject(ActorRoot actor)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Kinstrife.Actor.ActorRoot.html">ActorRoot</a></td>
+        <td><span class="parametername">actor</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   
   
   <a id="Kinstrife_Actor_Rendering_ActorRendererComponent_SetBaseColor_" data-uid="Kinstrife.Actor.Rendering.ActorRendererComponent.SetBaseColor*"></a>
@@ -155,6 +233,9 @@
   <h3 id="implements">Implements</h3>
   <div>
       <span class="xref">ICacheReferences</span>
+  </div>
+  <div>
+      <span class="xref">IDisposable</span>
   </div>
   <div>
       <span class="xref">IInjectable</span>

@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class GraphRunner
    | Kinstrife ">
-    <meta name="generator" content="docfx 2.59.2.0">
+    <meta name="generator" content="docfx 2.59.3.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
@@ -79,71 +79,22 @@
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
     <div class="level1"><span class="xref">GraphRunner</span></div>
+      <div class="level2"><a class="xref" href="Kinstrife.GraphTools.GraphRunner-1.html">GraphRunner&lt;TGraphType&gt;</a></div>
   </div>
-  <div classs="implements">
+  <div class="implements">
     <h5>Implements</h5>
     <div><a class="xref" href="Kinstrife.Core.DependencyInjection.IInjectable.html">IInjectable</a></div>
-    <div><span class="xref">IDisposable</span></div>
-    <div><a class="xref" href="Kinstrife.Core.DependencyInjection.IInstall-1.html">IInstall</a>&lt;<a class="xref" href="Kinstrife.GraphTools.GraphRunner.html">GraphRunner</a>&gt;</div>
-    <div><a class="xref" href="Kinstrife.Core.DependencyInjection.IInstall.html">IInstall</a></div>
     <div><a class="xref" href="Kinstrife.Core.DependencyInjection.IDependent.html">IDependent</a></div>
+    <div><span class="xref">IDisposable</span></div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Kinstrife.GraphTools.html">Kinstrife.GraphTools</a></h6>
   <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
   <h5 id="Kinstrife_GraphTools_GraphRunner_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class GraphRunner : MonoBehaviour, IInjectable, IInstall&lt;GraphRunner&gt;, IInstall, IDependent</code></pre>
+    <pre><code class="lang-csharp hljs">public abstract class GraphRunner : MonoBehaviour, IInjectable, IDependent</code></pre>
   </div>
   <h3 id="fields">Fields
   </h3>
-  
-  
-  <h4 id="Kinstrife_GraphTools_GraphRunner_graph" data-uid="Kinstrife.GraphTools.GraphRunner.graph">graph</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public GraphAsset graph</code></pre>
-  </div>
-  <h5 class="fieldValue">Field Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Kinstrife.GraphTools.GraphAsset.html">GraphAsset</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <h4 id="Kinstrife_GraphTools_GraphRunner_isSingleton" data-uid="Kinstrife.GraphTools.GraphRunner.isSingleton">isSingleton</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public bool isSingleton</code></pre>
-  </div>
-  <h5 class="fieldValue">Field Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Boolean</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
   
   
   <h4 id="Kinstrife_GraphTools_GraphRunner_onCanceled" data-uid="Kinstrife.GraphTools.GraphRunner.onCanceled">onCanceled</h4>
@@ -240,16 +191,19 @@
       </tr>
     </tbody>
   </table>
+  <h3 id="properties">Properties
+  </h3>
   
   
-  <h4 id="Kinstrife_GraphTools_GraphRunner_sourceAsset" data-uid="Kinstrife.GraphTools.GraphRunner.sourceAsset">sourceAsset</h4>
+  <a id="Kinstrife_GraphTools_GraphRunner_GraphAsset_" data-uid="Kinstrife.GraphTools.GraphRunner.GraphAsset*"></a>
+  <h4 id="Kinstrife_GraphTools_GraphRunner_GraphAsset" data-uid="Kinstrife.GraphTools.GraphRunner.GraphAsset">GraphAsset</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public GraphAsset sourceAsset</code></pre>
+    <pre><code class="lang-csharp hljs">public abstract GraphAsset GraphAsset { get; }</code></pre>
   </div>
-  <h5 class="fieldValue">Field Value</h5>
+  <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
       <tr>
@@ -264,8 +218,6 @@
       </tr>
     </tbody>
   </table>
-  <h3 id="properties">Properties
-  </h3>
   
   
   <a id="Kinstrife_GraphTools_GraphRunner_Initialized_" data-uid="Kinstrife.GraphTools.GraphRunner.Initialized*"></a>
@@ -274,7 +226,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public bool Initialized { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public abstract bool Initialized { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -293,13 +245,13 @@
   </table>
   
   
-  <a id="Kinstrife_GraphTools_GraphRunner_isSceneBoundInstanceOfSource_" data-uid="Kinstrife.GraphTools.GraphRunner.isSceneBoundInstanceOfSource*"></a>
-  <h4 id="Kinstrife_GraphTools_GraphRunner_isSceneBoundInstanceOfSource" data-uid="Kinstrife.GraphTools.GraphRunner.isSceneBoundInstanceOfSource">isSceneBoundInstanceOfSource</h4>
+  <a id="Kinstrife_GraphTools_GraphRunner_SourceAssetName_" data-uid="Kinstrife.GraphTools.GraphRunner.SourceAssetName*"></a>
+  <h4 id="Kinstrife_GraphTools_GraphRunner_SourceAssetName" data-uid="Kinstrife.GraphTools.GraphRunner.SourceAssetName">SourceAssetName</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public bool isSceneBoundInstanceOfSource { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public abstract string SourceAssetName { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -311,7 +263,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="xref">System.String</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -328,33 +280,6 @@
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public void Dispose()</code></pre>
   </div>
-  
-  
-  <a id="Kinstrife_GraphTools_GraphRunner_GraphAssetChanged_" data-uid="Kinstrife.GraphTools.GraphRunner.GraphAssetChanged*"></a>
-  <h4 id="Kinstrife_GraphTools_GraphRunner_GraphAssetChanged_Kinstrife_GraphTools_GraphAsset_" data-uid="Kinstrife.GraphTools.GraphRunner.GraphAssetChanged(Kinstrife.GraphTools.GraphAsset)">GraphAssetChanged(GraphAsset)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void GraphAssetChanged(GraphAsset graph)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Kinstrife.GraphTools.GraphAsset.html">GraphAsset</a></td>
-        <td><span class="parametername">graph</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
   
   
   <a id="Kinstrife_GraphTools_GraphRunner_Inject_" data-uid="Kinstrife.GraphTools.GraphRunner.Inject*"></a>
@@ -420,7 +345,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void RefreshBindings()</code></pre>
+    <pre><code class="lang-csharp hljs">public abstract void RefreshBindings()</code></pre>
   </div>
   
   
@@ -434,13 +359,14 @@
   </div>
   
   
-  <a id="Kinstrife_GraphTools_GraphRunner_RunWithGraph_" data-uid="Kinstrife.GraphTools.GraphRunner.RunWithGraph*"></a>
-  <h4 id="Kinstrife_GraphTools_GraphRunner_RunWithGraph_Kinstrife_GraphTools_GraphAsset_" data-uid="Kinstrife.GraphTools.GraphRunner.RunWithGraph(Kinstrife.GraphTools.GraphAsset)">RunWithGraph(GraphAsset)</h4>
+  <a id="Kinstrife_GraphTools_GraphRunner_SetGraphAsset_" data-uid="Kinstrife.GraphTools.GraphRunner.SetGraphAsset*"></a>
+  <h4 id="Kinstrife_GraphTools_GraphRunner_SetGraphAsset__1___0_" data-uid="Kinstrife.GraphTools.GraphRunner.SetGraphAsset``1(``0)">SetGraphAsset&lt;T&gt;(T)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void RunWithGraph(GraphAsset graph)</code></pre>
+    <pre><code class="lang-csharp hljs">public abstract void SetGraphAsset&lt;T&gt;(T source)
+    where T : GraphAsset</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -453,35 +379,23 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="Kinstrife.GraphTools.GraphAsset.html">GraphAsset</a></td>
-        <td><span class="parametername">graph</span></td>
+        <td><span class="xref">T</span></td>
+        <td><span class="parametername">source</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
-  
-  
-  <a id="Kinstrife_GraphTools_GraphRunner_SetGraphAsset_" data-uid="Kinstrife.GraphTools.GraphRunner.SetGraphAsset*"></a>
-  <h4 id="Kinstrife_GraphTools_GraphRunner_SetGraphAsset_Kinstrife_GraphTools_GraphAsset_" data-uid="Kinstrife.GraphTools.GraphRunner.SetGraphAsset(Kinstrife.GraphTools.GraphAsset)">SetGraphAsset(GraphAsset)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void SetGraphAsset(GraphAsset source)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
+  <h5 class="typeParameters">Type Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
       <tr>
-        <th>Type</th>
         <th>Name</th>
         <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="Kinstrife.GraphTools.GraphAsset.html">GraphAsset</a></td>
-        <td><span class="parametername">source</span></td>
+        <td><span class="parametername">T</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -561,16 +475,10 @@
       <a class="xref" href="Kinstrife.Core.DependencyInjection.IInjectable.html">IInjectable</a>
   </div>
   <div>
-      <span class="xref">IDisposable</span>
-  </div>
-  <div>
-      <a class="xref" href="Kinstrife.Core.DependencyInjection.IInstall-1.html">IInstall&lt;T&gt;</a>
-  </div>
-  <div>
-      <a class="xref" href="Kinstrife.Core.DependencyInjection.IInstall.html">IInstall</a>
-  </div>
-  <div>
       <a class="xref" href="Kinstrife.Core.DependencyInjection.IDependent.html">IDependent</a>
+  </div>
+  <div>
+      <span class="xref">IDisposable</span>
   </div>
 </article>
           </div>
