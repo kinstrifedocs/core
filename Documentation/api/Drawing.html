@@ -75,64 +75,6 @@
   <div class="markdown level0 summary"></div>
   <div class="markdown level0 conceptual"></div>
   <div class="markdown level0 remarks"></div>
-    <h3 id="classes">Classes
-  </h3>
-      <h4><a class="xref" href="Drawing.Draw.html">Draw</a></h4>
-      <section></section>
-      <h4><a class="xref" href="Drawing.DrawingData.html">DrawingData</a></h4>
-      <section><p>Helper for drawing Gizmos in a performant way.
-This is a replacement for the Unity Gizmos class as that is not very performant
-when drawing very large amounts of geometry (for example a large grid graph).
-These gizmos can be persistent, so if the data does not change, the gizmos
-do not need to be updated.</p>
-<p>How to use</p>
-<ul>
-<li>Create a Hasher object and hash whatever data you will be using to draw the gizmos
-Could be for example the positions of the vertices or something. Just as long as
-if the gizmos should change, then the hash changes as well.</li>
-<li>Check if a cached mesh exists for that hash</li>
-<li>If not, then create a Builder object and call the drawing methods until you are done
-and then call Finalize with a reference to a gizmos class and the hash you calculated before.</li>
-<li>Call gizmos.Draw with the hash.</li>
-<li>When you are done with drawing gizmos for this frame, call gizmos.FinalizeDraw</li>
-</ul>
-<pre><code>var a = Vector3.zero;
-var b = Vector3.one;
-var color = Color.red;
-var hasher = DrawingData.Hasher.Create(this);
-
-hasher.Add(a);
-hasher.Add(b);
-hasher.Add(color);
-var gizmos = DrawingManager.instance.gizmos;
-if (!gizmos.Draw(hasher)) {
-    using (var builder = gizmos.GetBuilder(hasher)) {
-        // Ideally something very complex, not just a single line
-        builder.Line(a, b, color);
-    }
-}</code></pre>
-</section>
-      <h4><a class="xref" href="Drawing.DrawingManager.html">DrawingManager</a></h4>
-      <section><p>Global script which draws debug items and gizmos.
-If a Draw.* method has been used or if any script inheriting from the <a class="xref" href="Drawing.MonoBehaviourGizmos.html">MonoBehaviourGizmos</a> class is in the scene then an instance of this script
-will be created and put on a hidden GameObject.</p>
-<p>It will inject drawing logic into any cameras that are rendered.</p>
-<p>Usually you never have to interact with this class.</p>
-</section>
-      <h4><a class="xref" href="Drawing.DrawingManagerEditor.html">DrawingManagerEditor</a></h4>
-      <section></section>
-      <h4><a class="xref" href="Drawing.DrawingUtilities.html">DrawingUtilities</a></h4>
-      <section><p>Various high-level utilities that are useful when drawing things</p>
-</section>
-      <h4><a class="xref" href="Drawing.GizmoContext.html">GizmoContext</a></h4>
-      <section><p>Info about the current selection in the editor</p>
-</section>
-      <h4><a class="xref" href="Drawing.MonoBehaviourGizmos.html">MonoBehaviourGizmos</a></h4>
-      <section><p>Inherit from this class to draw gizmos.
-See: getstarted (view in online documentation for working links)</p>
-</section>
-      <h4><a class="xref" href="Drawing.SharedDrawingData.html">SharedDrawingData</a></h4>
-      <section></section>
     <h3 id="structs">Structs
   </h3>
       <h4><a class="xref" href="Drawing.CommandBuilder.html">CommandBuilder</a></h4>
@@ -158,22 +100,7 @@ Used for optimization in standalone builds.</p>
       <section></section>
       <h4><a class="xref" href="Drawing.CommandBuilder.ScopePersist.html">CommandBuilder.ScopePersist</a></h4>
       <section></section>
-      <h4><a class="xref" href="Drawing.DrawingData.Hasher.html">DrawingData.Hasher</a></h4>
-      <section><p>Combines hashes into a single hash value</p>
-</section>
       <h4><a class="xref" href="Drawing.LabelAlignment.html">LabelAlignment</a></h4>
-      <section></section>
-      <h4><a class="xref" href="Drawing.RedrawScope.html">RedrawScope</a></h4>
-      <section></section>
-    <h3 id="interfaces">Interfaces
-  </h3>
-      <h4><a class="xref" href="Drawing.IDrawGizmos.html">IDrawGizmos</a></h4>
-      <section><p>Every object that wants to draw gizmos should implement this interface.
-See: <a class="xref" href="Drawing.MonoBehaviourGizmos.html">MonoBehaviourGizmos</a></p>
-</section>
-    <h3 id="enums">Enums
-  </h3>
-      <h4><a class="xref" href="Drawing.DetectedRenderPipeline.html">DetectedRenderPipeline</a></h4>
       <section></section>
 </article>
           </div>
