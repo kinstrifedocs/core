@@ -5,12 +5,12 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Struct ActorState
+    <title>Class ActorState
    | Kinstrife </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Struct ActorState
+    <meta name="title" content="Class ActorState
    | Kinstrife ">
-    <meta name="generator" content="docfx 2.56.6.0">
+    <meta name="generator" content="docfx 2.59.4.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
@@ -71,25 +71,23 @@
             <article class="content wrap" id="_content" data-uid="Kinstrife.Actor.ActorState">
   
   
-  <h1 id="Kinstrife_Actor_ActorState" data-uid="Kinstrife.Actor.ActorState" class="text-break">Struct ActorState
+  <h1 id="Kinstrife_Actor_ActorState" data-uid="Kinstrife.Actor.ActorState" class="text-break">Class ActorState
   </h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><p>Basic state for input, movement, velocity</p>
+</div>
   <div class="markdown level0 conceptual"></div>
-  <div classs="implements">
-    <h5>Implements</h5>
-    <div><span class="xref">IComponentData</span></div>
-    <div><a class="xref" href="Kinstrife.Entities.Components.ISetDirty.html">ISetDirty</a></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">ActorState</span></div>
   </div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
     <div>
-      <span class="xref">System.ValueType.Equals(System.Object)</span>
+      <span class="xref">System.Object.ToString()</span>
     </div>
     <div>
-      <span class="xref">System.ValueType.GetHashCode()</span>
-    </div>
-    <div>
-      <span class="xref">System.ValueType.ToString()</span>
+      <span class="xref">System.Object.Equals(System.Object)</span>
     </div>
     <div>
       <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
@@ -98,26 +96,32 @@
       <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
     </div>
     <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
       <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
     </div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Kinstrife.Actor.html">Kinstrife.Actor</a></h6>
   <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
   <h5 id="Kinstrife_Actor_ActorState_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[Obsolete(&quot;Should turn this into a procedure - ActorGlobalState. Each substate is a global state as seen here. They shouldn't overlap in any sort.&quot;)]
-public struct ActorState : IComponentData, ISetDirty</code></pre>
+    <pre><code class="lang-csharp hljs">[Serializable]
+public class ActorState</code></pre>
   </div>
   <h3 id="fields">Fields
   </h3>
   
   
-  <h4 id="Kinstrife_Actor_ActorState_IsAction" data-uid="Kinstrife.Actor.ActorState.IsAction">IsAction</h4>
+  <h4 id="Kinstrife_Actor_ActorState_faceDirection" data-uid="Kinstrife.Actor.ActorState.faceDirection">faceDirection</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public DelegateProperty IsAction</code></pre>
+    <pre><code class="lang-csharp hljs">public Vector3 faceDirection</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -129,19 +133,19 @@ public struct ActorState : IComponentData, ISetDirty</code></pre>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="Kinstrife.Entities.Components.DelegateProperty.html">DelegateProperty</a></td>
+        <td><span class="xref">Vector3</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   
   
-  <h4 id="Kinstrife_Actor_ActorState_IsCrouching" data-uid="Kinstrife.Actor.ActorState.IsCrouching">IsCrouching</h4>
+  <h4 id="Kinstrife_Actor_ActorState_lookInput" data-uid="Kinstrife.Actor.ActorState.lookInput">lookInput</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public DelegateProperty IsCrouching</code></pre>
+    <pre><code class="lang-csharp hljs">public Vector2 lookInput</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -153,19 +157,19 @@ public struct ActorState : IComponentData, ISetDirty</code></pre>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="Kinstrife.Entities.Components.DelegateProperty.html">DelegateProperty</a></td>
+        <td><span class="xref">Vector2</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   
   
-  <h4 id="Kinstrife_Actor_ActorState_IsGrounded" data-uid="Kinstrife.Actor.ActorState.IsGrounded">IsGrounded</h4>
+  <h4 id="Kinstrife_Actor_ActorState_lookTargetPoint" data-uid="Kinstrife.Actor.ActorState.lookTargetPoint">lookTargetPoint</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public DelegateProperty IsGrounded</code></pre>
+    <pre><code class="lang-csharp hljs">public Vector3 lookTargetPoint</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -177,19 +181,19 @@ public struct ActorState : IComponentData, ISetDirty</code></pre>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="Kinstrife.Entities.Components.DelegateProperty.html">DelegateProperty</a></td>
+        <td><span class="xref">Vector3</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   
   
-  <h4 id="Kinstrife_Actor_ActorState_IsLanded" data-uid="Kinstrife.Actor.ActorState.IsLanded">IsLanded</h4>
+  <h4 id="Kinstrife_Actor_ActorState_moveInput" data-uid="Kinstrife.Actor.ActorState.moveInput">moveInput</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public DelegateProperty IsLanded</code></pre>
+    <pre><code class="lang-csharp hljs">public Vector2 moveInput</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -201,24 +205,21 @@ public struct ActorState : IComponentData, ISetDirty</code></pre>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="Kinstrife.Entities.Components.DelegateProperty.html">DelegateProperty</a></td>
+        <td><span class="xref">Vector2</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
-  <h3 id="properties">Properties
-  </h3>
   
   
-  <a id="Kinstrife_Actor_ActorState_Default_" data-uid="Kinstrife.Actor.ActorState.Default*"></a>
-  <h4 id="Kinstrife_Actor_ActorState_Default" data-uid="Kinstrife.Actor.ActorState.Default">Default</h4>
+  <h4 id="Kinstrife_Actor_ActorState_moveTarget" data-uid="Kinstrife.Actor.ActorState.moveTarget">moveTarget</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static ActorState Default { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Vector3 moveTarget</code></pre>
   </div>
-  <h5 class="propertyValue">Property Value</h5>
+  <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
       <tr>
@@ -228,7 +229,31 @@ public struct ActorState : IComponentData, ISetDirty</code></pre>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="Kinstrife.Actor.ActorState.html">ActorState</a></td>
+        <td><span class="xref">Vector3</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="Kinstrife_Actor_ActorState_velocity" data-uid="Kinstrife.Actor.ActorState.velocity">velocity</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Vector3 velocity</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Vector3</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -237,13 +262,13 @@ public struct ActorState : IComponentData, ISetDirty</code></pre>
   </h3>
   
   
-  <a id="Kinstrife_Actor_ActorState_SetDirty_" data-uid="Kinstrife.Actor.ActorState.SetDirty*"></a>
-  <h4 id="Kinstrife_Actor_ActorState_SetDirty_System_Boolean_" data-uid="Kinstrife.Actor.ActorState.SetDirty(System.Boolean)">SetDirty(Boolean)</h4>
+  <a id="Kinstrife_Actor_ActorState_SetVelocity_" data-uid="Kinstrife.Actor.ActorState.SetVelocity*"></a>
+  <h4 id="Kinstrife_Actor_ActorState_SetVelocity_Vector2_" data-uid="Kinstrife.Actor.ActorState.SetVelocity(Vector2)">SetVelocity(Vector2)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void SetDirty(bool value)</code></pre>
+    <pre><code class="lang-csharp hljs">public void SetVelocity(Vector2 velocityXZ)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -256,19 +281,12 @@ public struct ActorState : IComponentData, ISetDirty</code></pre>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Boolean</span></td>
-        <td><span class="parametername">value</span></td>
+        <td><span class="xref">Vector2</span></td>
+        <td><span class="parametername">velocityXZ</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
-  <h3 id="implements">Implements</h3>
-  <div>
-      <span class="xref">IComponentData</span>
-  </div>
-  <div>
-      <a class="xref" href="Kinstrife.Entities.Components.ISetDirty.html">ISetDirty</a>
-  </div>
 </article>
           </div>
           

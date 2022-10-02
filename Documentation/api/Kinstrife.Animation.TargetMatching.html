@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class TargetMatching
    | Kinstrife ">
-    <meta name="generator" content="docfx 2.59.3.0">
+    <meta name="generator" content="docfx 2.59.4.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
@@ -85,6 +85,10 @@
     <h5>Implements</h5>
     <div><a class="xref" href="Kinstrife.Animation.IAnimationPlayer.html">IAnimationPlayer</a></div>
     <div><a class="xref" href="Kinstrife.Core.DependencyInjection.ICacheReferences.html">ICacheReferences</a></div>
+    <div><span class="xref">IUpdatable</span></div>
+    <div><a class="xref" href="Kinstrife.Core.DependencyInjection.IInstall.html">IInstall</a></div>
+    <div><span class="xref">INotificationReceiver</span></div>
+    <div><span class="xref">IComparable</span>&lt;<a class="xref" href="Kinstrife.Animation.AnimationComponent.html">AnimationComponent</a>&gt;</div>
     <div><a class="xref" href="Kinstrife.Animation.ICreatePlayableFromTrack-1.html">ICreatePlayableFromTrack</a>&lt;<a class="xref" href="Kinstrife.Animation.TargetMatchingTrack.html">TargetMatchingTrack</a>&gt;</div>
     <div><span class="xref">IAnimationWindowPreview</span></div>
     <div><a class="xref" href="Kinstrife.Core.DependencyInjection.IInitializable.html">IInitializable</a></div>
@@ -108,29 +112,107 @@
       <a class="xref" href="Kinstrife.Animation.AnimationComponent.html#Kinstrife_Animation_AnimationComponent_isRegisteredFully">AnimationComponent.isRegisteredFully</a>
     </div>
     <div>
+      <a class="xref" href="Kinstrife.Animation.AnimationComponent.html#Kinstrife_Animation_AnimationComponent_isPlayableInitialized">AnimationComponent.isPlayableInitialized</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.Animation.AnimationComponent.html#Kinstrife_Animation_AnimationComponent_isActiveAndPlaying">AnimationComponent.isActiveAndPlaying</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.Animation.AnimationComponent.html#Kinstrife_Animation_AnimationComponent_canPlay">AnimationComponent.canPlay</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.Animation.AnimationComponent.html#Kinstrife_Animation_AnimationComponent_canStop">AnimationComponent.canStop</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.Animation.AnimationComponent.html#Kinstrife_Animation_AnimationComponent_isEditMode">AnimationComponent.isEditMode</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.Animation.AnimationComponent.html#Kinstrife_Animation_AnimationComponent_onPlay">AnimationComponent.onPlay</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.Animation.AnimationComponent.html#Kinstrife_Animation_AnimationComponent_onPause">AnimationComponent.onPause</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.Animation.AnimationComponent.html#Kinstrife_Animation_AnimationComponent_onStop">AnimationComponent.onStop</a>
+    </div>
+    <div>
       <a class="xref" href="Kinstrife.Animation.AnimationComponent.html#Kinstrife_Animation_AnimationComponent_CastLayer__2">AnimationComponent.CastLayer&lt;TAnimLayer, TPlayableData&gt;()</a>
     </div>
     <div>
       <a class="xref" href="Kinstrife.Animation.AnimationComponent.html#Kinstrife_Animation_AnimationComponent_InjectDependencies_Kinstrife_Animation_AnimationDirector_">AnimationComponent.InjectDependencies(AnimationDirector)</a>
     </div>
     <div>
+      <a class="xref" href="Kinstrife.Animation.AnimationComponent.html#Kinstrife_Animation_AnimationComponent_CacheReferences">AnimationComponent.CacheReferences()</a>
+    </div>
+    <div>
       <a class="xref" href="Kinstrife.Animation.AnimationComponent.html#Kinstrife_Animation_AnimationComponent_OnEnable">AnimationComponent.OnEnable()</a>
     </div>
     <div>
-      <a class="xref" href="Kinstrife.Animation.AnimationComponent.html#Kinstrife_Animation_AnimationComponent_CacheReferences">AnimationComponent.CacheReferences()</a>
+      <a class="xref" href="Kinstrife.Animation.AnimationComponent.html#Kinstrife_Animation_AnimationComponent_OnDisable">AnimationComponent.OnDisable()</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.Animation.AnimationComponent.html#Kinstrife_Animation_AnimationComponent_Play">AnimationComponent.Play()</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.Animation.AnimationComponent.html#Kinstrife_Animation_AnimationComponent_Stop">AnimationComponent.Stop()</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.Animation.AnimationComponent.html#Kinstrife_Animation_AnimationComponent_OnPause">AnimationComponent.OnPause()</a>
     </div>
     <div>
       <a class="xref" href="Kinstrife.Animation.AnimationComponent.html#Kinstrife_Animation_AnimationComponent_SetSpeed_System_Single_">AnimationComponent.SetSpeed(Single)</a>
     </div>
     <div>
-      <a class="xref" href="Kinstrife.Animation.AnimationComponent.html#Kinstrife_Animation_AnimationComponent_SetDesiredSpeed_System_Single_">AnimationComponent.SetDesiredSpeed(Single)</a>
+      <a class="xref" href="Kinstrife.Animation.AnimationComponent.html#Kinstrife_Animation_AnimationComponent_Key">AnimationComponent.Key</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.Animation.AnimationComponent.html#Kinstrife_Animation_AnimationComponent_playMode">AnimationComponent.playMode</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.Animation.AnimationComponent.html#Kinstrife_Animation_AnimationComponent_updateMode">AnimationComponent.updateMode</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.Animation.AnimationComponent.html#Kinstrife_Animation_AnimationComponent_OnUpdate_System_Single_">AnimationComponent.OnUpdate(Single)</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.Animation.AnimationComponent.html#Kinstrife_Animation_AnimationComponent_RefreshUpdateMode">AnimationComponent.RefreshUpdateMode()</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.Animation.AnimationComponent.html#Kinstrife_Animation_AnimationComponent_sortingOrder">AnimationComponent.sortingOrder</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.Animation.AnimationComponent.html#Kinstrife_Animation_AnimationComponent_playableBehaviour">AnimationComponent.playableBehaviour</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.Animation.AnimationComponent.html#Kinstrife_Animation_AnimationComponent_Template">AnimationComponent.Template</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.Animation.AnimationComponent.html#Kinstrife_Animation_AnimationComponent_audioEvent">AnimationComponent.audioEvent</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.Animation.AnimationComponent.html#Kinstrife_Animation_AnimationComponent_audioDelay">AnimationComponent.audioDelay</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.Animation.AnimationComponent.html#Kinstrife_Animation_AnimationComponent_RegisterBehaviour__2___1_">AnimationComponent.RegisterBehaviour&lt;TBehaviourType, TAnimatorType&gt;(TAnimatorType)</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.Animation.AnimationComponent.html#Kinstrife_Animation_AnimationComponent_UnregisterBehaviour">AnimationComponent.UnregisterBehaviour()</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.Animation.AnimationComponent.html#Kinstrife_Animation_AnimationComponent_OnNotify_Playable_INotification_System_Object_">AnimationComponent.OnNotify(Playable, INotification, Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.Animation.AnimationComponent.html#Kinstrife_Animation_AnimationComponent_CompareTo_Kinstrife_Animation_AnimationComponent_">AnimationComponent.CompareTo(AnimationComponent)</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.Animation.AnimationComponent.html#Kinstrife_Animation_AnimationComponent_PushNotification_INotification_System_Object_">AnimationComponent.PushNotification(INotification, Object)</a>
     </div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Kinstrife.Animation.html">Kinstrife.Animation</a></h6>
   <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
   <h5 id="Kinstrife_Animation_TargetMatching_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class TargetMatching : AnimationComponent, IAnimationPlayer, ICacheReferences, ICreatePlayableFromTrack&lt;TargetMatchingTrack&gt;, IInitializable, IDependent</code></pre>
+    <pre><code class="lang-csharp hljs">public class TargetMatching : AnimationComponent, IAnimationPlayer, ICacheReferences, IInstall, ICreatePlayableFromTrack&lt;TargetMatchingTrack&gt;, IInitializable, IDependent</code></pre>
   </div>
   <h3 id="fields">Fields
   </h3>
@@ -593,6 +675,30 @@
   </table>
   
   
+  <a id="Kinstrife_Animation_TargetMatching_OnPlay_" data-uid="Kinstrife.Animation.TargetMatching.OnPlay*"></a>
+  <h4 id="Kinstrife_Animation_TargetMatching_OnPlay" data-uid="Kinstrife.Animation.TargetMatching.OnPlay">OnPlay()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override void OnPlay()</code></pre>
+  </div>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Kinstrife.Animation.AnimationComponent.html#Kinstrife_Animation_AnimationComponent_OnPlay">AnimationComponent.OnPlay()</a></div>
+  
+  
+  <a id="Kinstrife_Animation_TargetMatching_OnStop_" data-uid="Kinstrife.Animation.TargetMatching.OnStop*"></a>
+  <h4 id="Kinstrife_Animation_TargetMatching_OnStop" data-uid="Kinstrife.Animation.TargetMatching.OnStop">OnStop()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override void OnStop()</code></pre>
+  </div>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Kinstrife.Animation.AnimationComponent.html#Kinstrife_Animation_AnimationComponent_OnStop">AnimationComponent.OnStop()</a></div>
+  
+  
   <a id="Kinstrife_Animation_TargetMatching_ProcessFrame_" data-uid="Kinstrife.Animation.TargetMatching.ProcessFrame*"></a>
   <h4 id="Kinstrife_Animation_TargetMatching_ProcessFrame" data-uid="Kinstrife.Animation.TargetMatching.ProcessFrame">ProcessFrame()</h4>
   <div class="markdown level1 summary"></div>
@@ -654,6 +760,18 @@
   </div>
   <div>
       <a class="xref" href="Kinstrife.Core.DependencyInjection.ICacheReferences.html">ICacheReferences</a>
+  </div>
+  <div>
+      <span class="xref">IUpdatable</span>
+  </div>
+  <div>
+      <a class="xref" href="Kinstrife.Core.DependencyInjection.IInstall.html">IInstall</a>
+  </div>
+  <div>
+      <span class="xref">INotificationReceiver</span>
+  </div>
+  <div>
+      <span class="xref">IComparable&lt;&gt;</span>
   </div>
   <div>
       <a class="xref" href="Kinstrife.Animation.ICreatePlayableFromTrack-1.html">ICreatePlayableFromTrack&lt;T&gt;</a>

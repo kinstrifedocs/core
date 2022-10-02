@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class AnimationLayer
    | Kinstrife ">
-    <meta name="generator" content="docfx 2.56.7.0">
+    <meta name="generator" content="docfx 2.59.4.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
@@ -79,32 +79,50 @@
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
     <div class="level1"><span class="xref">AnimationLayer</span></div>
-      <div class="level2"><a class="xref" href="Kinstrife.Rigging.FullBodyIKConstraint.html">FullBodyIKConstraint</a></div>
   </div>
-  <div classs="implements">
-    <h5>Implements</h5>
-    <div><a class="xref" href="Kinstrife.Animation.IAnimationLayer.html">IAnimationLayer</a></div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Kinstrife.Animation.html">Kinstrife.Animation</a></h6>
   <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
   <h5 id="Kinstrife_Animation_AnimationLayer_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public abstract class AnimationLayer : MonoBehaviour, IAnimationLayer</code></pre>
+    <pre><code class="lang-csharp hljs">[Serializable]
+public class AnimationLayer</code></pre>
   </div>
-  <h3 id="methods">Methods
+  <h3 id="fields">Fields
   </h3>
   
   
-  <a id="Kinstrife_Animation_AnimationLayer_CastLayer_" data-uid="Kinstrife.Animation.AnimationLayer.CastLayer*"></a>
-  <h4 id="Kinstrife_Animation_AnimationLayer_CastLayer__2" data-uid="Kinstrife.Animation.AnimationLayer.CastLayer``2">CastLayer&lt;TAnimLayer, TPlayableData&gt;()</h4>
+  <h4 id="Kinstrife_Animation_AnimationLayer_stack" data-uid="Kinstrife.Animation.AnimationLayer.stack">stack</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public TAnimLayer CastLayer&lt;TAnimLayer, TPlayableData&gt;()
-    where TAnimLayer : IAnimationLayer&lt;TPlayableData&gt; where TPlayableData : IPlayableData</code></pre>
+    <pre><code class="lang-csharp hljs">public PriorityStack&lt;AnimationComponent&gt; stack</code></pre>
   </div>
-  <h5 class="returns">Returns</h5>
+  <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
       <tr>
@@ -114,93 +132,63 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">TAnimLayer</span></td>
+        <td><a class="xref" href="Kinstrife.Animation.PriorityStack-1.html">PriorityStack</a>&lt;<a class="xref" href="Kinstrife.Animation.AnimationComponent.html">AnimationComponent</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
-  <h5 class="typeParameters">Type Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="parametername">TAnimLayer</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><span class="parametername">TPlayableData</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
+  <h3 id="properties">Properties
+  </h3>
   
   
-  <a id="Kinstrife_Animation_AnimationLayer_InitializeInGraph_" data-uid="Kinstrife.Animation.AnimationLayer.InitializeInGraph*"></a>
-  <h4 id="Kinstrife_Animation_AnimationLayer_InitializeInGraph_PlayableGraph_AnimancerComponent_" data-uid="Kinstrife.Animation.AnimationLayer.InitializeInGraph(PlayableGraph,AnimancerComponent)">InitializeInGraph(PlayableGraph, AnimancerComponent)</h4>
+  <a id="Kinstrife_Animation_AnimationLayer_ActiveAnimator_" data-uid="Kinstrife.Animation.AnimationLayer.ActiveAnimator*"></a>
+  <h4 id="Kinstrife_Animation_AnimationLayer_ActiveAnimator" data-uid="Kinstrife.Animation.AnimationLayer.ActiveAnimator">ActiveAnimator</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public abstract void InitializeInGraph(PlayableGraph graph, AnimancerComponent animancer)</code></pre>
+    <pre><code class="lang-csharp hljs">public AnimationComponent ActiveAnimator { get; }</code></pre>
   </div>
-  <h5 class="parameters">Parameters</h5>
+  <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
       <tr>
         <th>Type</th>
-        <th>Name</th>
         <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">PlayableGraph</span></td>
-        <td><span class="parametername">graph</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><span class="xref">AnimancerComponent</span></td>
-        <td><span class="parametername">animancer</span></td>
+        <td><a class="xref" href="Kinstrife.Animation.AnimationComponent.html">AnimationComponent</a></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   
   
-  <a id="Kinstrife_Animation_AnimationLayer_RegisterAtDirector_" data-uid="Kinstrife.Animation.AnimationLayer.RegisterAtDirector*"></a>
-  <h4 id="Kinstrife_Animation_AnimationLayer_RegisterAtDirector_Kinstrife_Animation_AnimationDirector_" data-uid="Kinstrife.Animation.AnimationLayer.RegisterAtDirector(Kinstrife.Animation.AnimationDirector)">RegisterAtDirector(AnimationDirector)</h4>
+  <a id="Kinstrife_Animation_AnimationLayer_AnimancerLayer_" data-uid="Kinstrife.Animation.AnimationLayer.AnimancerLayer*"></a>
+  <h4 id="Kinstrife_Animation_AnimationLayer_AnimancerLayer" data-uid="Kinstrife.Animation.AnimationLayer.AnimancerLayer">AnimancerLayer</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public abstract void RegisterAtDirector(AnimationDirector animationDirector)</code></pre>
+    <pre><code class="lang-csharp hljs">public AnimancerLayer AnimancerLayer { get; }</code></pre>
   </div>
-  <h5 class="parameters">Parameters</h5>
+  <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
       <tr>
         <th>Type</th>
-        <th>Name</th>
         <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="Kinstrife.Animation.AnimationDirector.html">AnimationDirector</a></td>
-        <td><span class="parametername">animationDirector</span></td>
+        <td><span class="xref">AnimancerLayer</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
-  <h3 id="implements">Implements</h3>
-  <div>
-      <a class="xref" href="Kinstrife.Animation.IAnimationLayer.html">IAnimationLayer</a>
-  </div>
 </article>
           </div>
           

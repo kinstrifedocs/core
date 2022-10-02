@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class AnimationComponent
    | Kinstrife ">
-    <meta name="generator" content="docfx 2.59.3.0">
+    <meta name="generator" content="docfx 2.59.4.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
@@ -80,21 +80,27 @@
     <div class="level0"><span class="xref">System.Object</span></div>
     <div class="level1"><span class="xref">AnimationComponent</span></div>
       <div class="level2"><a class="xref" href="Kinstrife.Animation.AnimationLayers.html">AnimationLayers</a></div>
-      <div class="level2"><a class="xref" href="Kinstrife.Animation.AnimationPlayer.html">AnimationPlayer</a></div>
       <div class="level2"><a class="xref" href="Kinstrife.Animation.FilterAnimation.html">FilterAnimation</a></div>
+      <div class="level2"><a class="xref" href="Kinstrife.Animation.JobAnimationComponent-2.html">JobAnimationComponent&lt;TJobWrapper, TJobType&gt;</a></div>
+      <div class="level2"><a class="xref" href="Kinstrife.Animation.PlayableAnimationComponent.html">PlayableAnimationComponent</a></div>
       <div class="level2"><a class="xref" href="Kinstrife.Animation.TargetMatching.html">TargetMatching</a></div>
   </div>
   <div class="implements">
     <h5>Implements</h5>
     <div><a class="xref" href="Kinstrife.Animation.IAnimationPlayer.html">IAnimationPlayer</a></div>
+    <div><a class="xref" href="Kinstrife.Core.DependencyInjection.IInitializable.html">IInitializable</a></div>
     <div><a class="xref" href="Kinstrife.Core.DependencyInjection.ICacheReferences.html">ICacheReferences</a></div>
+    <div><span class="xref">IUpdatable</span></div>
+    <div><a class="xref" href="Kinstrife.Core.DependencyInjection.IInstall.html">IInstall</a></div>
     <div><a class="xref" href="Kinstrife.Core.DependencyInjection.IDependent.html">IDependent</a></div>
+    <div><span class="xref">INotificationReceiver</span></div>
+    <div><span class="xref">IComparable</span>&lt;<a class="xref" href="Kinstrife.Animation.AnimationComponent.html">AnimationComponent</a>&gt;</div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Kinstrife.Animation.html">Kinstrife.Animation</a></h6>
   <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
   <h5 id="Kinstrife_Animation_AnimationComponent_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public abstract class AnimationComponent : MonoBehaviour, IAnimationPlayer, ICacheReferences, IDependent</code></pre>
+    <pre><code class="lang-csharp hljs">public abstract class AnimationComponent : MonoBehaviour, IAnimationPlayer, IInitializable, ICacheReferences, IInstall, IDependent</code></pre>
   </div>
   <h3 id="fields">Fields
   </h3>
@@ -124,6 +130,54 @@
   </table>
   
   
+  <h4 id="Kinstrife_Animation_AnimationComponent_audioDelay" data-uid="Kinstrife.Animation.AnimationComponent.audioDelay">audioDelay</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float audioDelay</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="Kinstrife_Animation_AnimationComponent_audioEvent" data-uid="Kinstrife.Animation.AnimationComponent.audioEvent">audioEvent</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public AK.Wwise.Event audioEvent</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">AK.Wwise.Event</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
   <h4 id="Kinstrife_Animation_AnimationComponent_director" data-uid="Kinstrife.Animation.AnimationComponent.director">director</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
@@ -142,6 +196,102 @@
     <tbody>
       <tr>
         <td><a class="xref" href="Kinstrife.Animation.AnimationDirector.html">AnimationDirector</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="Kinstrife_Animation_AnimationComponent_playableBehaviour" data-uid="Kinstrife.Animation.AnimationComponent.playableBehaviour">playableBehaviour</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public PlayableBehaviour playableBehaviour</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Kinstrife.Animation.PlayableBehaviour</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="Kinstrife_Animation_AnimationComponent_playMode" data-uid="Kinstrife.Animation.AnimationComponent.playMode">playMode</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public DIStep playMode</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Kinstrife.Animation.DIStep.html">DIStep</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="Kinstrife_Animation_AnimationComponent_sortingOrder" data-uid="Kinstrife.Animation.AnimationComponent.sortingOrder">sortingOrder</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ushort sortingOrder</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.UInt16</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="Kinstrife_Animation_AnimationComponent_updateMode" data-uid="Kinstrife.Animation.AnimationComponent.updateMode">updateMode</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public AnimationComponent.UpdateMode updateMode</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Kinstrife.Animation.AnimationComponent.UpdateMode.html">AnimationComponent.UpdateMode</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -175,6 +325,131 @@
   </table>
   
   
+  <a id="Kinstrife_Animation_AnimationComponent_canPlay_" data-uid="Kinstrife.Animation.AnimationComponent.canPlay*"></a>
+  <h4 id="Kinstrife_Animation_AnimationComponent_canPlay" data-uid="Kinstrife.Animation.AnimationComponent.canPlay">canPlay</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual bool canPlay { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Kinstrife_Animation_AnimationComponent_canStop_" data-uid="Kinstrife.Animation.AnimationComponent.canStop*"></a>
+  <h4 id="Kinstrife_Animation_AnimationComponent_canStop" data-uid="Kinstrife.Animation.AnimationComponent.canStop">canStop</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual bool canStop { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Kinstrife_Animation_AnimationComponent_isActiveAndPlaying_" data-uid="Kinstrife.Animation.AnimationComponent.isActiveAndPlaying*"></a>
+  <h4 id="Kinstrife_Animation_AnimationComponent_isActiveAndPlaying" data-uid="Kinstrife.Animation.AnimationComponent.isActiveAndPlaying">isActiveAndPlaying</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual bool isActiveAndPlaying { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Kinstrife_Animation_AnimationComponent_isEditMode_" data-uid="Kinstrife.Animation.AnimationComponent.isEditMode*"></a>
+  <h4 id="Kinstrife_Animation_AnimationComponent_isEditMode" data-uid="Kinstrife.Animation.AnimationComponent.isEditMode">isEditMode</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool isEditMode { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Kinstrife_Animation_AnimationComponent_isPlayableInitialized_" data-uid="Kinstrife.Animation.AnimationComponent.isPlayableInitialized*"></a>
+  <h4 id="Kinstrife_Animation_AnimationComponent_isPlayableInitialized" data-uid="Kinstrife.Animation.AnimationComponent.isPlayableInitialized">isPlayableInitialized</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual bool isPlayableInitialized { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
   <a id="Kinstrife_Animation_AnimationComponent_isRegisteredFully_" data-uid="Kinstrife.Animation.AnimationComponent.isRegisteredFully*"></a>
   <h4 id="Kinstrife_Animation_AnimationComponent_isRegisteredFully" data-uid="Kinstrife.Animation.AnimationComponent.isRegisteredFully">isRegisteredFully</h4>
   <div class="markdown level1 summary"></div>
@@ -194,6 +469,31 @@
     <tbody>
       <tr>
         <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Kinstrife_Animation_AnimationComponent_Key_" data-uid="Kinstrife.Animation.AnimationComponent.Key*"></a>
+  <h4 id="Kinstrife_Animation_AnimationComponent_Key" data-uid="Kinstrife.Animation.AnimationComponent.Key">Key</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Key Key { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Key</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -227,6 +527,31 @@
   <h5 id="Kinstrife_Animation_AnimationComponent_orderInGraph_remarks">Remarks</h5>
   <div class="markdown level1 remarks"><p>For actors: FeetIK = -100, LookIK = -99, FBIKSolve = 50, PhysicsAnimate = 1000</p>
 </div>
+  
+  
+  <a id="Kinstrife_Animation_AnimationComponent_Template_" data-uid="Kinstrife.Animation.AnimationComponent.Template*"></a>
+  <h4 id="Kinstrife_Animation_AnimationComponent_Template" data-uid="Kinstrife.Animation.AnimationComponent.Template">Template</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual AnimatorStepperPlayableBehaviour Template { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Kinstrife.Animation.AnimatorStepperPlayableBehaviour.html">AnimatorStepperPlayableBehaviour</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   <h3 id="methods">Methods
   </h3>
   
@@ -286,6 +611,58 @@
   </table>
   
   
+  <a id="Kinstrife_Animation_AnimationComponent_CompareTo_" data-uid="Kinstrife.Animation.AnimationComponent.CompareTo*"></a>
+  <h4 id="Kinstrife_Animation_AnimationComponent_CompareTo_Kinstrife_Animation_AnimationComponent_" data-uid="Kinstrife.Animation.AnimationComponent.CompareTo(Kinstrife.Animation.AnimationComponent)">CompareTo(AnimationComponent)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual int CompareTo(AnimationComponent other)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Kinstrife.Animation.AnimationComponent.html">AnimationComponent</a></td>
+        <td><span class="parametername">other</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Kinstrife_Animation_AnimationComponent_Initialize_" data-uid="Kinstrife.Animation.AnimationComponent.Initialize*"></a>
+  <h4 id="Kinstrife_Animation_AnimationComponent_Initialize" data-uid="Kinstrife.Animation.AnimationComponent.Initialize">Initialize()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void Initialize()</code></pre>
+  </div>
+  
+  
   <a id="Kinstrife_Animation_AnimationComponent_InitializeInGraph_" data-uid="Kinstrife.Animation.AnimationComponent.InitializeInGraph*"></a>
   <h4 id="Kinstrife_Animation_AnimationComponent_InitializeInGraph_PlayableGraph_" data-uid="Kinstrife.Animation.AnimationComponent.InitializeInGraph(PlayableGraph)">InitializeInGraph(PlayableGraph)</h4>
   <div class="markdown level1 summary"></div>
@@ -340,6 +717,16 @@
   </table>
   
   
+  <a id="Kinstrife_Animation_AnimationComponent_OnDisable_" data-uid="Kinstrife.Animation.AnimationComponent.OnDisable*"></a>
+  <h4 id="Kinstrife_Animation_AnimationComponent_OnDisable" data-uid="Kinstrife.Animation.AnimationComponent.OnDisable">OnDisable()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void OnDisable()</code></pre>
+  </div>
+  
+  
   <a id="Kinstrife_Animation_AnimationComponent_OnEnable_" data-uid="Kinstrife.Animation.AnimationComponent.OnEnable*"></a>
   <h4 id="Kinstrife_Animation_AnimationComponent_OnEnable" data-uid="Kinstrife.Animation.AnimationComponent.OnEnable">OnEnable()</h4>
   <div class="markdown level1 summary"></div>
@@ -350,13 +737,80 @@
   </div>
   
   
-  <a id="Kinstrife_Animation_AnimationComponent_SetDesiredSpeed_" data-uid="Kinstrife.Animation.AnimationComponent.SetDesiredSpeed*"></a>
-  <h4 id="Kinstrife_Animation_AnimationComponent_SetDesiredSpeed_System_Single_" data-uid="Kinstrife.Animation.AnimationComponent.SetDesiredSpeed(System.Single)">SetDesiredSpeed(Single)</h4>
+  <a id="Kinstrife_Animation_AnimationComponent_OnNotify_" data-uid="Kinstrife.Animation.AnimationComponent.OnNotify*"></a>
+  <h4 id="Kinstrife_Animation_AnimationComponent_OnNotify_Playable_INotification_System_Object_" data-uid="Kinstrife.Animation.AnimationComponent.OnNotify(Playable,INotification,System.Object)">OnNotify(Playable, INotification, Object)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual void SetDesiredSpeed(float speed)</code></pre>
+    <pre><code class="lang-csharp hljs">public void OnNotify(Playable origin, INotification notification, object context)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Playable</span></td>
+        <td><span class="parametername">origin</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">INotification</span></td>
+        <td><span class="parametername">notification</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Object</span></td>
+        <td><span class="parametername">context</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Kinstrife_Animation_AnimationComponent_OnPause_" data-uid="Kinstrife.Animation.AnimationComponent.OnPause*"></a>
+  <h4 id="Kinstrife_Animation_AnimationComponent_OnPause" data-uid="Kinstrife.Animation.AnimationComponent.OnPause">OnPause()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void OnPause()</code></pre>
+  </div>
+  
+  
+  <a id="Kinstrife_Animation_AnimationComponent_OnPlay_" data-uid="Kinstrife.Animation.AnimationComponent.OnPlay*"></a>
+  <h4 id="Kinstrife_Animation_AnimationComponent_OnPlay" data-uid="Kinstrife.Animation.AnimationComponent.OnPlay">OnPlay()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void OnPlay()</code></pre>
+  </div>
+  
+  
+  <a id="Kinstrife_Animation_AnimationComponent_OnStop_" data-uid="Kinstrife.Animation.AnimationComponent.OnStop*"></a>
+  <h4 id="Kinstrife_Animation_AnimationComponent_OnStop" data-uid="Kinstrife.Animation.AnimationComponent.OnStop">OnStop()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void OnStop()</code></pre>
+  </div>
+  
+  
+  <a id="Kinstrife_Animation_AnimationComponent_OnUpdate_" data-uid="Kinstrife.Animation.AnimationComponent.OnUpdate*"></a>
+  <h4 id="Kinstrife_Animation_AnimationComponent_OnUpdate_System_Single_" data-uid="Kinstrife.Animation.AnimationComponent.OnUpdate(System.Single)">OnUpdate(Single)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void OnUpdate(float deltaTime)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -370,7 +824,107 @@
     <tbody>
       <tr>
         <td><span class="xref">System.Single</span></td>
-        <td><span class="parametername">speed</span></td>
+        <td><span class="parametername">deltaTime</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Kinstrife_Animation_AnimationComponent_Play_" data-uid="Kinstrife.Animation.AnimationComponent.Play*"></a>
+  <h4 id="Kinstrife_Animation_AnimationComponent_Play" data-uid="Kinstrife.Animation.AnimationComponent.Play">Play()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void Play()</code></pre>
+  </div>
+  
+  
+  <a id="Kinstrife_Animation_AnimationComponent_PushNotification_" data-uid="Kinstrife.Animation.AnimationComponent.PushNotification*"></a>
+  <h4 id="Kinstrife_Animation_AnimationComponent_PushNotification_INotification_System_Object_" data-uid="Kinstrife.Animation.AnimationComponent.PushNotification(INotification,System.Object)">PushNotification(INotification, Object)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void PushNotification(INotification notification, object context = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">INotification</span></td>
+        <td><span class="parametername">notification</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Object</span></td>
+        <td><span class="parametername">context</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Kinstrife_Animation_AnimationComponent_RefreshUpdateMode_" data-uid="Kinstrife.Animation.AnimationComponent.RefreshUpdateMode*"></a>
+  <h4 id="Kinstrife_Animation_AnimationComponent_RefreshUpdateMode" data-uid="Kinstrife.Animation.AnimationComponent.RefreshUpdateMode">RefreshUpdateMode()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected void RefreshUpdateMode()</code></pre>
+  </div>
+  
+  
+  <a id="Kinstrife_Animation_AnimationComponent_RegisterBehaviour_" data-uid="Kinstrife.Animation.AnimationComponent.RegisterBehaviour*"></a>
+  <h4 id="Kinstrife_Animation_AnimationComponent_RegisterBehaviour__2___1_" data-uid="Kinstrife.Animation.AnimationComponent.RegisterBehaviour``2(``1)">RegisterBehaviour&lt;TBehaviourType, TAnimatorType&gt;(TAnimatorType)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected void RegisterBehaviour&lt;TBehaviourType, TAnimatorType&gt;(TAnimatorType component)
+    where TBehaviourType : PlayableBehaviour&lt;TAnimatorType&gt;, new()
+    where TAnimatorType : AnimationComponent</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">TAnimatorType</span></td>
+        <td><span class="parametername">component</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">TBehaviourType</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="parametername">TAnimatorType</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -402,15 +956,124 @@
       </tr>
     </tbody>
   </table>
+  
+  
+  <a id="Kinstrife_Animation_AnimationComponent_Stop_" data-uid="Kinstrife.Animation.AnimationComponent.Stop*"></a>
+  <h4 id="Kinstrife_Animation_AnimationComponent_Stop" data-uid="Kinstrife.Animation.AnimationComponent.Stop">Stop()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void Stop()</code></pre>
+  </div>
+  
+  
+  <a id="Kinstrife_Animation_AnimationComponent_UnregisterBehaviour_" data-uid="Kinstrife.Animation.AnimationComponent.UnregisterBehaviour*"></a>
+  <h4 id="Kinstrife_Animation_AnimationComponent_UnregisterBehaviour" data-uid="Kinstrife.Animation.AnimationComponent.UnregisterBehaviour">UnregisterBehaviour()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected void UnregisterBehaviour()</code></pre>
+  </div>
+  <h3 id="events">Events
+  </h3>
+  
+  
+  <h4 id="Kinstrife_Animation_AnimationComponent_onPause" data-uid="Kinstrife.Animation.AnimationComponent.onPause">onPause</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public event Action onPause</code></pre>
+  </div>
+  <h5 class="eventType">Event Type</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Action</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="Kinstrife_Animation_AnimationComponent_onPlay" data-uid="Kinstrife.Animation.AnimationComponent.onPlay">onPlay</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public event Action onPlay</code></pre>
+  </div>
+  <h5 class="eventType">Event Type</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Action</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="Kinstrife_Animation_AnimationComponent_onStop" data-uid="Kinstrife.Animation.AnimationComponent.onStop">onStop</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public event Action onStop</code></pre>
+  </div>
+  <h5 class="eventType">Event Type</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Action</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   <h3 id="implements">Implements</h3>
   <div>
       <a class="xref" href="Kinstrife.Animation.IAnimationPlayer.html">IAnimationPlayer</a>
   </div>
   <div>
+      <a class="xref" href="Kinstrife.Core.DependencyInjection.IInitializable.html">IInitializable</a>
+  </div>
+  <div>
       <a class="xref" href="Kinstrife.Core.DependencyInjection.ICacheReferences.html">ICacheReferences</a>
   </div>
   <div>
+      <span class="xref">IUpdatable</span>
+  </div>
+  <div>
+      <a class="xref" href="Kinstrife.Core.DependencyInjection.IInstall.html">IInstall</a>
+  </div>
+  <div>
       <a class="xref" href="Kinstrife.Core.DependencyInjection.IDependent.html">IDependent</a>
+  </div>
+  <div>
+      <span class="xref">INotificationReceiver</span>
+  </div>
+  <div>
+      <span class="xref">IComparable&lt;&gt;</span>
   </div>
 </article>
           </div>
