@@ -90,11 +90,10 @@
     <div><a class="xref" href="Kinstrife.Core.DependencyInjection.ICacheReferences.html">ICacheReferences</a></div>
     <div><span class="xref">IUpdatable</span></div>
     <div><a class="xref" href="Kinstrife.Core.DependencyInjection.IInstall.html">IInstall</a></div>
+    <div><a class="xref" href="Kinstrife.Core.DependencyInjection.IDependent.html">IDependent</a></div>
     <div><span class="xref">INotificationReceiver</span></div>
     <div><span class="xref">IComparable</span>&lt;<a class="xref" href="Kinstrife.Animation.AnimationComponent.html">AnimationComponent</a>&gt;</div>
     <div><a class="xref" href="Kinstrife.Animation.ILayerAnimator.html">ILayerAnimator</a></div>
-    <div><a class="xref" href="Kinstrife.Core.DependencyInjection.IInitializable.html">IInitializable</a></div>
-    <div><a class="xref" href="Kinstrife.Core.DependencyInjection.IDependent.html">IDependent</a></div>
   </div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
@@ -255,7 +254,7 @@
       <a class="xref" href="Kinstrife.Animation.AnimationComponent.html#Kinstrife_Animation_AnimationComponent_OnDisable">AnimationComponent.OnDisable()</a>
     </div>
     <div>
-      <a class="xref" href="Kinstrife.Animation.AnimationComponent.html#Kinstrife_Animation_AnimationComponent_Initialize">AnimationComponent.Initialize()</a>
+      <a class="xref" href="Kinstrife.Animation.AnimationComponent.html#Kinstrife_Animation_AnimationComponent_InitializeFromDirector">AnimationComponent.InitializeFromDirector()</a>
     </div>
     <div>
       <a class="xref" href="Kinstrife.Animation.AnimationComponent.html#Kinstrife_Animation_AnimationComponent_OnPause">AnimationComponent.OnPause()</a>
@@ -307,7 +306,7 @@
   <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
   <h5 id="Kinstrife_Animation_AnimationAssetPlayer_3_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public abstract class AnimationAssetPlayer&lt;TAssetType, TTransitionType, TStateType&gt; : AnimationPlayer&lt;TAssetType&gt;, IAnimationPlayer, ICacheReferences, IInstall, ILayerAnimator, IInitializable, IDependent where TAssetType : AnimancerTransitionAsset&lt;TTransitionType&gt; where TTransitionType : ITransition&lt;TStateType&gt; where TStateType : AnimancerState</code></pre>
+    <pre><code class="lang-csharp hljs">public abstract class AnimationAssetPlayer&lt;TAssetType, TTransitionType, TStateType&gt; : AnimationPlayer&lt;TAssetType&gt;, IAnimationPlayer, ICacheReferences, IInstall, IDependent, ILayerAnimator where TAssetType : AnimancerTransitionAsset&lt;TTransitionType&gt; where TTransitionType : ITransition&lt;TStateType&gt; where TStateType : AnimancerState</code></pre>
   </div>
   <h5 class="typeParameters">Type Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -440,6 +439,9 @@
       <a class="xref" href="Kinstrife.Core.DependencyInjection.IInstall.html">IInstall</a>
   </div>
   <div>
+      <a class="xref" href="Kinstrife.Core.DependencyInjection.IDependent.html">IDependent</a>
+  </div>
+  <div>
       <span class="xref">INotificationReceiver</span>
   </div>
   <div>
@@ -447,12 +449,6 @@
   </div>
   <div>
       <a class="xref" href="Kinstrife.Animation.ILayerAnimator.html">ILayerAnimator</a>
-  </div>
-  <div>
-      <a class="xref" href="Kinstrife.Core.DependencyInjection.IInitializable.html">IInitializable</a>
-  </div>
-  <div>
-      <a class="xref" href="Kinstrife.Core.DependencyInjection.IDependent.html">IDependent</a>
   </div>
 </article>
           </div>

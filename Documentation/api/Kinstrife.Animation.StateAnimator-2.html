@@ -90,12 +90,10 @@
     <div><a class="xref" href="Kinstrife.Core.DependencyInjection.ICacheReferences.html">ICacheReferences</a></div>
     <div><span class="xref">IUpdatable</span></div>
     <div><a class="xref" href="Kinstrife.Core.DependencyInjection.IInstall.html">IInstall</a></div>
+    <div><a class="xref" href="Kinstrife.Core.DependencyInjection.IDependent.html">IDependent</a></div>
     <div><span class="xref">INotificationReceiver</span></div>
     <div><span class="xref">IComparable</span>&lt;<a class="xref" href="Kinstrife.Animation.AnimationComponent.html">AnimationComponent</a>&gt;</div>
-    <div><a class="xref" href="Kinstrife.Core.DependencyInjection.IInitializable.html">IInitializable</a></div>
-    <div><a class="xref" href="Kinstrife.Core.DependencyInjection.IDependent.html">IDependent</a></div>
     <div><a class="xref" href="Kinstrife.Animation.ILayerAnimator.html">ILayerAnimator</a></div>
-    <div><span class="xref">IInitializable</span></div>
   </div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
@@ -305,7 +303,7 @@
   <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
   <h5 id="Kinstrife_Animation_StateAnimator_2_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public abstract class StateAnimator&lt;TFSMType, TFSMStateType&gt; : PlayableAnimationComponent, IAnimationPlayer, ICacheReferences, IInstall, IInitializable, IDependent, ILayerAnimator where TFSMType : StateMachine&lt;TFSMStateType&gt;, new()
+    <pre><code class="lang-csharp hljs">public abstract class StateAnimator&lt;TFSMType, TFSMStateType&gt; : PlayableAnimationComponent, IAnimationPlayer, ICacheReferences, IInstall, IDependent, ILayerAnimator where TFSMType : StateMachine&lt;TFSMStateType&gt;, new()
     where TFSMStateType : FSMState</code></pre>
   </div>
   <h5 class="typeParameters">Type Parameters</h5>
@@ -460,16 +458,16 @@
   </h3>
   
   
-  <a id="Kinstrife_Animation_StateAnimator_2_Initialize_" data-uid="Kinstrife.Animation.StateAnimator`2.Initialize*"></a>
-  <h4 id="Kinstrife_Animation_StateAnimator_2_Initialize" data-uid="Kinstrife.Animation.StateAnimator`2.Initialize">Initialize()</h4>
+  <a id="Kinstrife_Animation_StateAnimator_2_InitializeFromDirector_" data-uid="Kinstrife.Animation.StateAnimator`2.InitializeFromDirector*"></a>
+  <h4 id="Kinstrife_Animation_StateAnimator_2_InitializeFromDirector" data-uid="Kinstrife.Animation.StateAnimator`2.InitializeFromDirector">InitializeFromDirector()</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public override void Initialize()</code></pre>
+    <pre><code class="lang-csharp hljs">public override void InitializeFromDirector()</code></pre>
   </div>
   <h5 class="overrides">Overrides</h5>
-  <div><a class="xref" href="Kinstrife.Animation.AnimationComponent.html#Kinstrife_Animation_AnimationComponent_Initialize">AnimationComponent.Initialize()</a></div>
+  <div><a class="xref" href="Kinstrife.Animation.AnimationComponent.html#Kinstrife_Animation_AnimationComponent_InitializeFromDirector">AnimationComponent.InitializeFromDirector()</a></div>
   
   
   <a id="Kinstrife_Animation_StateAnimator_2_InjectStates_" data-uid="Kinstrife.Animation.StateAnimator`2.InjectStates*"></a>
@@ -666,22 +664,16 @@
       <a class="xref" href="Kinstrife.Core.DependencyInjection.IInstall.html">IInstall</a>
   </div>
   <div>
+      <a class="xref" href="Kinstrife.Core.DependencyInjection.IDependent.html">IDependent</a>
+  </div>
+  <div>
       <span class="xref">INotificationReceiver</span>
   </div>
   <div>
       <span class="xref">IComparable&lt;&gt;</span>
   </div>
   <div>
-      <a class="xref" href="Kinstrife.Core.DependencyInjection.IInitializable.html">IInitializable</a>
-  </div>
-  <div>
-      <a class="xref" href="Kinstrife.Core.DependencyInjection.IDependent.html">IDependent</a>
-  </div>
-  <div>
       <a class="xref" href="Kinstrife.Animation.ILayerAnimator.html">ILayerAnimator</a>
-  </div>
-  <div>
-      <span class="xref">IInitializable</span>
   </div>
 </article>
           </div>
