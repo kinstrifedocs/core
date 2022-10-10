@@ -120,6 +120,9 @@
       <a class="xref" href="Kinstrife.Application.Module.html#Kinstrife_Application_Module_IsDirector">Module.IsDirector</a>
     </div>
     <div>
+      <a class="xref" href="Kinstrife.Application.Module.html#Kinstrife_Application_Module_IsLoading">Module.IsLoading</a>
+    </div>
+    <div>
       <a class="xref" href="Kinstrife.Application.Module.html#Kinstrife_Application_Module_Priority">Module.Priority</a>
     </div>
     <div>
@@ -251,6 +254,31 @@
   </h3>
   
   
+  <h4 id="Kinstrife_Application_DirectorModule_onCompleteDirecting" data-uid="Kinstrife.Application.DirectorModule.onCompleteDirecting">onCompleteDirecting</h4>
+  <div class="markdown level1 summary"><p>Is called when the ScenarioGraph completes or is canceled internally</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public event Action onCompleteDirecting</code></pre>
+  </div>
+  <h5 class="eventType">Event Type</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Action</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
   <h4 id="Kinstrife_Application_DirectorModule_onStartDirecting" data-uid="Kinstrife.Application.DirectorModule.onStartDirecting">onStartDirecting</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
@@ -276,7 +304,8 @@
   
   
   <h4 id="Kinstrife_Application_DirectorModule_onStopDirecting" data-uid="Kinstrife.Application.DirectorModule.onStopDirecting">onStopDirecting</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Is called when the Director is canceled externally (e.g. by ApplicationFlow)</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">

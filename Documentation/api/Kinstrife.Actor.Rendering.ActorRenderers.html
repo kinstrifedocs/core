@@ -78,14 +78,14 @@
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><a class="xref" href="Kinstrife.Actor.Rendering.Renderers.html">Renderers</a></div>
+    <div class="level1"><a class="xref" href="Kinstrife.Renderers.RendererComponents.html">RendererComponents</a></div>
     <div class="level2"><span class="xref">ActorRenderers</span></div>
   </div>
   <div class="implements">
     <h5>Implements</h5>
     <div><a class="xref" href="Kinstrife.Core.DependencyInjection.IInitializable.html">IInitializable</a></div>
     <div><a class="xref" href="Kinstrife.Core.DependencyInjection.ICacheReferences.html">ICacheReferences</a></div>
-    <div><a class="xref" href="Kinstrife.Core.DependencyInjection.IInstall-1.html">IInstall</a>&lt;<a class="xref" href="Kinstrife.Actor.Rendering.Renderers.html">Renderers</a>&gt;</div>
+    <div><a class="xref" href="Kinstrife.Core.DependencyInjection.IInstall-1.html">IInstall</a>&lt;<a class="xref" href="Kinstrife.Renderers.RendererComponents.html">RendererComponents</a>&gt;</div>
     <div><a class="xref" href="Kinstrife.Core.DependencyInjection.IInstall.html">IInstall</a></div>
     <div><a class="xref" href="Kinstrife.Core.DependencyInjection.IDependent.html">IDependent</a></div>
     <div><span class="xref">IInstall</span>&lt;<a class="xref" href="Kinstrife.Actor.Rendering.ActorRenderers.html">ActorRenderers</a>&gt;</div>
@@ -93,32 +93,77 @@
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
     <div>
-      <a class="xref" href="Kinstrife.Actor.Rendering.Renderers.html#Kinstrife_Actor_Rendering_Renderers_renderers">Renderers.renderers</a>
+      <a class="xref" href="Kinstrife.Renderers.RendererComponents.html#Kinstrife_Renderers_RendererComponents_renderers">RendererComponents.renderers</a>
     </div>
     <div>
-      <a class="xref" href="Kinstrife.Actor.Rendering.Renderers.html#Kinstrife_Actor_Rendering_Renderers_Components">Renderers.Components</a>
+      <a class="xref" href="Kinstrife.Renderers.RendererComponents.html#Kinstrife_Renderers_RendererComponents_Components">RendererComponents.Components</a>
     </div>
     <div>
-      <a class="xref" href="Kinstrife.Actor.Rendering.Renderers.html#Kinstrife_Actor_Rendering_Renderers_allRenderers">Renderers.allRenderers</a>
+      <a class="xref" href="Kinstrife.Renderers.RendererComponents.html#Kinstrife_Renderers_RendererComponents_allRenderers">RendererComponents.allRenderers</a>
     </div>
     <div>
-      <a class="xref" href="Kinstrife.Actor.Rendering.Renderers.html#Kinstrife_Actor_Rendering_Renderers_Initialized">Renderers.Initialized</a>
+      <a class="xref" href="Kinstrife.Renderers.RendererComponents.html#Kinstrife_Renderers_RendererComponents_Initialized">RendererComponents.Initialized</a>
     </div>
     <div>
-      <a class="xref" href="Kinstrife.Actor.Rendering.Renderers.html#Kinstrife_Actor_Rendering_Renderers_CacheReferences">Renderers.CacheReferences()</a>
-    </div>
-    <div>
-      <a class="xref" href="Kinstrife.Actor.Rendering.Renderers.html#Kinstrife_Actor_Rendering_Renderers_Initialize">Renderers.Initialize()</a>
+      <a class="xref" href="Kinstrife.Renderers.RendererComponents.html#Kinstrife_Renderers_RendererComponents_CacheReferences">RendererComponents.CacheReferences()</a>
     </div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Kinstrife.Actor.Rendering.html">Kinstrife.Actor.Rendering</a></h6>
   <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
   <h5 id="Kinstrife_Actor_Rendering_ActorRenderers_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class ActorRenderers : Renderers, IInitializable, ICacheReferences, IInstall&lt;Renderers&gt;, IInstall, IDependent</code></pre>
+    <pre><code class="lang-csharp hljs">public class ActorRenderers : RendererComponents, IInitializable, ICacheReferences, IInstall&lt;RendererComponents&gt;, IInstall, IDependent</code></pre>
   </div>
   <h3 id="fields">Fields
   </h3>
+  
+  
+  <h4 id="Kinstrife_Actor_Rendering_ActorRenderers_bodyComponent" data-uid="Kinstrife.Actor.Rendering.ActorRenderers.bodyComponent">bodyComponent</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected SkinComponent bodyComponent</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Kinstrife.Actor.Rendering.SkinComponent.html">SkinComponent</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="Kinstrife_Actor_Rendering_ActorRenderers_clothingComponents" data-uid="Kinstrife.Actor.Rendering.ActorRenderers.clothingComponents">clothingComponents</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected List&lt;ClothingComponent&gt; clothingComponents</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.List</span>&lt;<a class="xref" href="Kinstrife.Actor.Rendering.ClothingComponent.html">ClothingComponent</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   
   
   <h4 id="Kinstrife_Actor_Rendering_ActorRenderers_wetness" data-uid="Kinstrife.Actor.Rendering.ActorRenderers.wetness">wetness</h4>
@@ -195,6 +240,56 @@
   </h3>
   
   
+  <a id="Kinstrife_Actor_Rendering_ActorRenderers_BodyComponent_" data-uid="Kinstrife.Actor.Rendering.ActorRenderers.BodyComponent*"></a>
+  <h4 id="Kinstrife_Actor_Rendering_ActorRenderers_BodyComponent" data-uid="Kinstrife.Actor.Rendering.ActorRenderers.BodyComponent">BodyComponent</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public SkinComponent BodyComponent { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Kinstrife.Actor.Rendering.SkinComponent.html">SkinComponent</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Kinstrife_Actor_Rendering_ActorRenderers_ClothingComponents_" data-uid="Kinstrife.Actor.Rendering.ActorRenderers.ClothingComponents*"></a>
+  <h4 id="Kinstrife_Actor_Rendering_ActorRenderers_ClothingComponents" data-uid="Kinstrife.Actor.Rendering.ActorRenderers.ClothingComponents">ClothingComponents</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IReadOnlyList&lt;ClothingComponent&gt; ClothingComponents { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IReadOnlyList</span>&lt;<a class="xref" href="Kinstrife.Actor.Rendering.ClothingComponent.html">ClothingComponent</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
   <a id="Kinstrife_Actor_Rendering_ActorRenderers_VisualSettings_" data-uid="Kinstrife.Actor.Rendering.ActorRenderers.VisualSettings*"></a>
   <h4 id="Kinstrife_Actor_Rendering_ActorRenderers_VisualSettings" data-uid="Kinstrife.Actor.Rendering.ActorRenderers.VisualSettings">VisualSettings</h4>
   <div class="markdown level1 summary"></div>
@@ -218,6 +313,20 @@
       </tr>
     </tbody>
   </table>
+  <h3 id="methods">Methods
+  </h3>
+  
+  
+  <a id="Kinstrife_Actor_Rendering_ActorRenderers_Initialize_" data-uid="Kinstrife.Actor.Rendering.ActorRenderers.Initialize*"></a>
+  <h4 id="Kinstrife_Actor_Rendering_ActorRenderers_Initialize" data-uid="Kinstrife.Actor.Rendering.ActorRenderers.Initialize">Initialize()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override void Initialize()</code></pre>
+  </div>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Kinstrife.Renderers.RendererComponents.html#Kinstrife_Renderers_RendererComponents_Initialize">RendererComponents.Initialize()</a></div>
   <h3 id="implements">Implements</h3>
   <div>
       <a class="xref" href="Kinstrife.Core.DependencyInjection.IInitializable.html">IInitializable</a>

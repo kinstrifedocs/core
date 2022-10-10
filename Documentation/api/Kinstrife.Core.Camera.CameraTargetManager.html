@@ -84,13 +84,15 @@
     <h5>Implements</h5>
     <div><a class="xref" href="Kinstrife.Core.DependencyInjection.IInjectable.html">IInjectable</a></div>
     <div><a class="xref" href="Kinstrife.Core.DependencyInjection.IInitializable.html">IInitializable</a></div>
+    <div><a class="xref" href="Kinstrife.Core.DependencyInjection.IInstall-1.html">IInstall</a>&lt;<a class="xref" href="Kinstrife.Core.Camera.CameraTargetManager.html">CameraTargetManager</a>&gt;</div>
+    <div><a class="xref" href="Kinstrife.Core.DependencyInjection.IInstall.html">IInstall</a></div>
     <div><a class="xref" href="Kinstrife.Core.DependencyInjection.IDependent.html">IDependent</a></div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Kinstrife.Core.Camera.html">Kinstrife.Core.Camera</a></h6>
   <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
   <h5 id="Kinstrife_Core_Camera_CameraTargetManager_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class CameraTargetManager : MonoBehaviour, IInjectable, IInitializable, IDependent</code></pre>
+    <pre><code class="lang-csharp hljs">public class CameraTargetManager : MonoBehaviour, IInjectable, IInitializable, IInstall&lt;CameraTargetManager&gt;, IInstall, IDependent</code></pre>
   </div>
   <h3 id="fields">Fields
   </h3>
@@ -480,7 +482,7 @@ public Transform currentTarget</code></pre>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public event Action&lt;Transform&gt; OnNewTarget</code></pre>
+    <pre><code class="lang-csharp hljs">public event Action&lt;Transform, ICameraTargetsProvider&gt; OnNewTarget</code></pre>
   </div>
   <h5 class="eventType">Event Type</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -492,7 +494,7 @@ public Transform currentTarget</code></pre>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Action</span>&lt;<span class="xref">Transform</span>&gt;</td>
+        <td><span class="xref">System.Action</span>&lt;<span class="xref">Transform</span>, <a class="xref" href="Kinstrife.Core.Camera.ICameraTargetsProvider.html">ICameraTargetsProvider</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -503,6 +505,12 @@ public Transform currentTarget</code></pre>
   </div>
   <div>
       <a class="xref" href="Kinstrife.Core.DependencyInjection.IInitializable.html">IInitializable</a>
+  </div>
+  <div>
+      <a class="xref" href="Kinstrife.Core.DependencyInjection.IInstall-1.html">IInstall&lt;T&gt;</a>
+  </div>
+  <div>
+      <a class="xref" href="Kinstrife.Core.DependencyInjection.IInstall.html">IInstall</a>
   </div>
   <div>
       <a class="xref" href="Kinstrife.Core.DependencyInjection.IDependent.html">IDependent</a>
