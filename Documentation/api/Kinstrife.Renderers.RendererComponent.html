@@ -79,6 +79,7 @@
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
     <div class="level1"><span class="xref">RendererComponent</span></div>
+      <div class="level2"><a class="xref" href="Kinstrife.Actor.Rendering.ActorRendererComponent.html">ActorRendererComponent</a></div>
   </div>
   <div class="implements">
     <h5>Implements</h5>
@@ -261,8 +262,82 @@
       </tr>
     </tbody>
   </table>
+  
+  
+  <h4 id="Kinstrife_Renderers_RendererComponent_sourceMesh" data-uid="Kinstrife.Renderers.RendererComponent.sourceMesh">sourceMesh</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected Mesh sourceMesh</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Mesh</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   <h3 id="properties">Properties
   </h3>
+  
+  
+  <a id="Kinstrife_Renderers_RendererComponent_HasProjection_" data-uid="Kinstrife.Renderers.RendererComponent.HasProjection*"></a>
+  <h4 id="Kinstrife_Renderers_RendererComponent_HasProjection" data-uid="Kinstrife.Renderers.RendererComponent.HasProjection">HasProjection</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual bool HasProjection { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Kinstrife_Renderers_RendererComponent_HasSoftBody_" data-uid="Kinstrife.Renderers.RendererComponent.HasSoftBody*"></a>
+  <h4 id="Kinstrife_Renderers_RendererComponent_HasSoftBody" data-uid="Kinstrife.Renderers.RendererComponent.HasSoftBody">HasSoftBody</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual bool HasSoftBody { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   
   
   <a id="Kinstrife_Renderers_RendererComponent_instantiateMaterialAtAwake_" data-uid="Kinstrife.Renderers.RendererComponent.instantiateMaterialAtAwake*"></a>
@@ -284,6 +359,31 @@
     <tbody>
       <tr>
         <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Kinstrife_Renderers_RendererComponent_MaterialInstance_" data-uid="Kinstrife.Renderers.RendererComponent.MaterialInstance*"></a>
+  <h4 id="Kinstrife_Renderers_RendererComponent_MaterialInstance" data-uid="Kinstrife.Renderers.RendererComponent.MaterialInstance">MaterialInstance</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual Material MaterialInstance { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Material</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -428,6 +528,56 @@
       <tr>
         <td><span class="xref">Mesh</span></td>
         <td><span class="parametername">mesh</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="events">Events
+  </h3>
+  
+  
+  <h4 id="Kinstrife_Renderers_RendererComponent_onAddToRenderers" data-uid="Kinstrife.Renderers.RendererComponent.onAddToRenderers">onAddToRenderers</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public event Action&lt;RendererComponents&gt; onAddToRenderers</code></pre>
+  </div>
+  <h5 class="eventType">Event Type</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Action</span>&lt;<a class="xref" href="Kinstrife.Renderers.RendererComponents.html">RendererComponents</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="Kinstrife_Renderers_RendererComponent_onRemoveFromRenderers" data-uid="Kinstrife.Renderers.RendererComponent.onRemoveFromRenderers">onRemoveFromRenderers</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public event Action&lt;RendererComponents&gt; onRemoveFromRenderers</code></pre>
+  </div>
+  <h5 class="eventType">Event Type</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Action</span>&lt;<a class="xref" href="Kinstrife.Renderers.RendererComponents.html">RendererComponents</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>

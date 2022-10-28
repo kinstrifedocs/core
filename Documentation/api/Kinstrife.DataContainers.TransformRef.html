@@ -80,6 +80,10 @@
     <div class="level0"><span class="xref">System.Object</span></div>
     <div class="level1"><span class="xref">TransformRef</span></div>
   </div>
+  <div class="implements">
+    <h5>Implements</h5>
+    <div><a class="xref" href="Kinstrife.DataContainers.ITransformRef.html">ITransformRef</a></div>
+  </div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
     <div>
@@ -109,7 +113,7 @@
   <h5 id="Kinstrife_DataContainers_TransformRef_syntax">Syntax</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">[Serializable]
-public class TransformRef</code></pre>
+public class TransformRef : ITransformRef</code></pre>
   </div>
   <h3 id="constructors">Constructors
   </h3>
@@ -190,6 +194,58 @@ public class TransformRef</code></pre>
       </tr>
     </tbody>
   </table>
+  <h3 id="properties">Properties
+  </h3>
+  
+  
+  <a id="Kinstrife_DataContainers_TransformRef_Transform_" data-uid="Kinstrife.DataContainers.TransformRef.Transform*"></a>
+  <h4 id="Kinstrife_DataContainers_TransformRef_Transform" data-uid="Kinstrife.DataContainers.TransformRef.Transform">Transform</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Transform Transform { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Transform</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Kinstrife_DataContainers_TransformRef_TransformInfo_" data-uid="Kinstrife.DataContainers.TransformRef.TransformInfo*"></a>
+  <h4 id="Kinstrife_DataContainers_TransformRef_TransformInfo" data-uid="Kinstrife.DataContainers.TransformRef.TransformInfo">TransformInfo</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ITransformInfo TransformInfo { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Kinstrife.DataContainers.ITransformInfo.html">ITransformInfo</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   <h3 id="methods">Methods
   </h3>
   
@@ -205,6 +261,33 @@ public class TransformRef</code></pre>
   </div>
   
   
+  <a id="Kinstrife_DataContainers_TransformRef_ApplyFromTransform_" data-uid="Kinstrife.DataContainers.TransformRef.ApplyFromTransform*"></a>
+  <h4 id="Kinstrife_DataContainers_TransformRef_ApplyFromTransform_Transform_" data-uid="Kinstrife.DataContainers.TransformRef.ApplyFromTransform(Transform)">ApplyFromTransform(Transform)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void ApplyFromTransform(Transform root)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Transform</span></td>
+        <td><span class="parametername">root</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
   <a id="Kinstrife_DataContainers_TransformRef_ApplyToTransform_" data-uid="Kinstrife.DataContainers.TransformRef.ApplyToTransform*"></a>
   <h4 id="Kinstrife_DataContainers_TransformRef_ApplyToTransform" data-uid="Kinstrife.DataContainers.TransformRef.ApplyToTransform">ApplyToTransform()</h4>
   <div class="markdown level1 summary"><p>Applies the TransformInfo data to the Transform state</p>
@@ -214,6 +297,33 @@ public class TransformRef</code></pre>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public virtual void ApplyToTransform()</code></pre>
   </div>
+  
+  
+  <a id="Kinstrife_DataContainers_TransformRef_ApplyToTransform_" data-uid="Kinstrife.DataContainers.TransformRef.ApplyToTransform*"></a>
+  <h4 id="Kinstrife_DataContainers_TransformRef_ApplyToTransform_Transform_" data-uid="Kinstrife.DataContainers.TransformRef.ApplyToTransform(Transform)">ApplyToTransform(Transform)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void ApplyToTransform(Transform root)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Transform</span></td>
+        <td><span class="parametername">root</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   <h3 id="operators">Operators
   </h3>
   
@@ -258,6 +368,10 @@ public class TransformRef</code></pre>
       </tr>
     </tbody>
   </table>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <a class="xref" href="Kinstrife.DataContainers.ITransformRef.html">ITransformRef</a>
+  </div>
 </article>
           </div>
           

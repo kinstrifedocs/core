@@ -101,6 +101,9 @@
       <a class="xref" href="Kinstrife.Animation.AnimationPlayer-1.html#Kinstrife_Animation_AnimationPlayer_1_clipAsset">AnimationPlayer&lt;TAssetType&gt;.clipAsset</a>
     </div>
     <div>
+      <a class="xref" href="Kinstrife.Animation.AnimationPlayer-1.html#Kinstrife_Animation_AnimationPlayer_1_PostPlayTransition">AnimationPlayer&lt;TAssetType&gt;.PostPlayTransition()</a>
+    </div>
+    <div>
       <a class="xref" href="Kinstrife.Animation.AnimationPlayer-1.html#Kinstrife_Animation_AnimationPlayer_1_InitializeInGraph_PlayableGraph_">AnimationPlayer&lt;TAssetType&gt;.InitializeInGraph(PlayableGraph)</a>
     </div>
     <div>
@@ -114,6 +117,9 @@
     </div>
     <div>
       <a class="xref" href="Kinstrife.Animation.PlayableAnimationComponent.html#Kinstrife_Animation_PlayableAnimationComponent_fadeTime">PlayableAnimationComponent.fadeTime</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.Animation.PlayableAnimationComponent.html#Kinstrife_Animation_PlayableAnimationComponent_FadeDuration">PlayableAnimationComponent.FadeDuration</a>
     </div>
     <div>
       <a class="xref" href="Kinstrife.Animation.PlayableAnimationComponent.html#Kinstrife_Animation_PlayableAnimationComponent_weight">PlayableAnimationComponent.weight</a>
@@ -137,6 +143,9 @@
       <a class="xref" href="Kinstrife.Animation.PlayableAnimationComponent.html#Kinstrife_Animation_PlayableAnimationComponent_AnimancerState">PlayableAnimationComponent.AnimancerState</a>
     </div>
     <div>
+      <a class="xref" href="Kinstrife.Animation.PlayableAnimationComponent.html#Kinstrife_Animation_PlayableAnimationComponent_layer">PlayableAnimationComponent.layer</a>
+    </div>
+    <div>
       <a class="xref" href="Kinstrife.Animation.PlayableAnimationComponent.html#Kinstrife_Animation_PlayableAnimationComponent_isActiveAndPlaying">PlayableAnimationComponent.isActiveAndPlaying</a>
     </div>
     <div>
@@ -144,6 +153,12 @@
     </div>
     <div>
       <a class="xref" href="Kinstrife.Animation.PlayableAnimationComponent.html#Kinstrife_Animation_PlayableAnimationComponent_canStop">PlayableAnimationComponent.canStop</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.Animation.PlayableAnimationComponent.html#Kinstrife_Animation_PlayableAnimationComponent_PlayButtonColor">PlayableAnimationComponent.PlayButtonColor</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.Animation.PlayableAnimationComponent.html#Kinstrife_Animation_PlayableAnimationComponent_StopButtonColor">PlayableAnimationComponent.StopButtonColor</a>
     </div>
     <div>
       <a class="xref" href="Kinstrife.Animation.PlayableAnimationComponent.html#Kinstrife_Animation_PlayableAnimationComponent_IsTopPriority">PlayableAnimationComponent.IsTopPriority</a>
@@ -170,7 +185,7 @@
       <a class="xref" href="Kinstrife.Animation.PlayableAnimationComponent.html#Kinstrife_Animation_PlayableAnimationComponent_OnPlay">PlayableAnimationComponent.OnPlay()</a>
     </div>
     <div>
-      <a class="xref" href="Kinstrife.Animation.PlayableAnimationComponent.html#Kinstrife_Animation_PlayableAnimationComponent_PrePlayTransition">PlayableAnimationComponent.PrePlayTransition()</a>
+      <a class="xref" href="Kinstrife.Animation.PlayableAnimationComponent.html#Kinstrife_Animation_PlayableAnimationComponent_InternalPlay">PlayableAnimationComponent.InternalPlay()</a>
     </div>
     <div>
       <a class="xref" href="Kinstrife.Animation.PlayableAnimationComponent.html#Kinstrife_Animation_PlayableAnimationComponent_Kinstrife_Animation_ILayerAnimator_StopOnLayer_Kinstrife_Animation_AnimationLayer_">PlayableAnimationComponent.ILayerAnimator.StopOnLayer(AnimationLayer)</a>
@@ -213,6 +228,9 @@
     </div>
     <div>
       <a class="xref" href="Kinstrife.Animation.AnimationComponent.html#Kinstrife_Animation_AnimationComponent_director">AnimationComponent.director</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.Animation.AnimationComponent.html#Kinstrife_Animation_AnimationComponent_Director">AnimationComponent.Director</a>
     </div>
     <div>
       <a class="xref" href="Kinstrife.Animation.AnimationComponent.html#Kinstrife_Animation_AnimationComponent_animator">AnimationComponent.animator</a>
@@ -279,6 +297,9 @@
     </div>
     <div>
       <a class="xref" href="Kinstrife.Animation.AnimationComponent.html#Kinstrife_Animation_AnimationComponent_playableBehaviour">AnimationComponent.playableBehaviour</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.Animation.AnimationComponent.html#Kinstrife_Animation_AnimationComponent_behaviour">AnimationComponent.behaviour</a>
     </div>
     <div>
       <a class="xref" href="Kinstrife.Animation.AnimationComponent.html#Kinstrife_Animation_AnimationComponent_Template">AnimationComponent.Template</a>
@@ -415,16 +436,31 @@
   </h3>
   
   
-  <a id="Kinstrife_Animation_AnimationAssetPlayer_3_PostPlayTransition_" data-uid="Kinstrife.Animation.AnimationAssetPlayer`3.PostPlayTransition*"></a>
-  <h4 id="Kinstrife_Animation_AnimationAssetPlayer_3_PostPlayTransition" data-uid="Kinstrife.Animation.AnimationAssetPlayer`3.PostPlayTransition">PostPlayTransition()</h4>
+  <a id="Kinstrife_Animation_AnimationAssetPlayer_3_GetOrCreateState_" data-uid="Kinstrife.Animation.AnimationAssetPlayer`3.GetOrCreateState*"></a>
+  <h4 id="Kinstrife_Animation_AnimationAssetPlayer_3_GetOrCreateState" data-uid="Kinstrife.Animation.AnimationAssetPlayer`3.GetOrCreateState">GetOrCreateState()</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected override void PostPlayTransition()</code></pre>
+    <pre><code class="lang-csharp hljs">protected override AnimancerState GetOrCreateState()</code></pre>
   </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">AnimancerState</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   <h5 class="overrides">Overrides</h5>
-  <div><span class="xref">Kinstrife.Animation.AnimationPlayer&lt;TAssetType&gt;.PostPlayTransition()</span></div>
+  <div><a class="xref" href="Kinstrife.Animation.PlayableAnimationComponent.html#Kinstrife_Animation_PlayableAnimationComponent_GetOrCreateState">PlayableAnimationComponent.GetOrCreateState()</a></div>
   <h3 id="implements">Implements</h3>
   <div>
       <a class="xref" href="Kinstrife.Animation.IAnimationPlayer.html">IAnimationPlayer</a>

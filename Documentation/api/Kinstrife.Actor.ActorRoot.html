@@ -79,8 +79,6 @@
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
     <div class="level1"><span class="xref">ActorRoot</span></div>
-      <div class="level2"><a class="xref" href="Kinstrife.Actor.HumanoidActorRoot.html">HumanoidActorRoot</a></div>
-      <div class="level2"><a class="xref" href="Kinstrife.Actor.QuadrupedActorRoot.html">QuadrupedActorRoot</a></div>
   </div>
   <div class="implements">
     <h5>Implements</h5>
@@ -93,7 +91,7 @@
   <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
   <h5 id="Kinstrife_Actor_ActorRoot_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class ActorRoot : MonoBehaviour, ICacheReferences, IInstall&lt;ActorRoot&gt;, IInstall, IDependent</code></pre>
+    <pre><code class="lang-csharp hljs">public sealed class ActorRoot : MonoBehaviour, ICacheReferences, IInstall&lt;ActorRoot&gt;, IInstall, IDependent</code></pre>
   </div>
   <h3 id="fields">Fields
   </h3>
@@ -141,30 +139,6 @@
     <tbody>
       <tr>
         <td><a class="xref" href="Kinstrife.Animation.BlendShapeDriver.html">BlendShapeDriver</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <h4 id="Kinstrife_Actor_ActorRoot_data" data-uid="Kinstrife.Actor.ActorRoot.data">data</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public ActorDataContainer data</code></pre>
-  </div>
-  <h5 class="fieldValue">Field Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Kinstrife.Actor.ActorDataContainer.html">ActorDataContainer</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -243,6 +217,31 @@
   </table>
   
   
+  <h4 id="Kinstrife_Actor_ActorRoot_RuntimeState" data-uid="Kinstrife.Actor.ActorRoot.RuntimeState">RuntimeState</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[NonSerialized]
+public ActorState RuntimeState</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Kinstrife.Actor.ActorState.html">ActorState</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
   <h4 id="Kinstrife_Actor_ActorRoot_skeleton" data-uid="Kinstrife.Actor.ActorRoot.skeleton">skeleton</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
@@ -291,6 +290,31 @@
   </table>
   <h3 id="properties">Properties
   </h3>
+  
+  
+  <a id="Kinstrife_Actor_ActorRoot_Data_" data-uid="Kinstrife.Actor.ActorRoot.Data*"></a>
+  <h4 id="Kinstrife_Actor_ActorRoot_Data" data-uid="Kinstrife.Actor.ActorRoot.Data">Data</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ActorDataContainer Data { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Kinstrife.Actor.ActorDataContainer.html">ActorDataContainer</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   
   
   <a id="Kinstrife_Actor_ActorRoot_Definition_" data-uid="Kinstrife.Actor.ActorRoot.Definition*"></a>
@@ -351,7 +375,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual void CacheReferences()</code></pre>
+    <pre><code class="lang-csharp hljs">public void CacheReferences()</code></pre>
   </div>
   
   
