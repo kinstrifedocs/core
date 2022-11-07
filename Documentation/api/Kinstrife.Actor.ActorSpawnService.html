@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class ActorSpawnService
    | Kinstrife ">
-    <meta name="generator" content="docfx 2.59.2.0">
+    <meta name="generator" content="docfx 2.59.4.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
@@ -78,44 +78,536 @@
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><a class="xref" href="Kinstrife.Pipeline.PipelineBuilder.html">PipelineBuilder</a></div>
-    <div class="level2"><a class="xref" href="Kinstrife.Pipeline.PipelineBuilder-2.html">PipelineBuilder</a>&lt;<a class="xref" href="Kinstrife.Actor.Actor.html">Actor</a>, <a class="xref" href="Kinstrife.Actor.Actor.html">Actor</a>&gt;</div>
-    <div class="level3"><span class="xref">ActorSpawnService</span></div>
+    <div class="level1"><a class="xref" href="Kinstrife.Messaging.ServiceBehaviour-2.html">ServiceBehaviour</a>&lt;<a class="xref" href="Kinstrife.Actor.ActorRoot.html">ActorRoot</a>, <a class="xref" href="Kinstrife.Actor.SpawnArguments.html">SpawnArguments</a>&gt;</div>
+    <div class="level2"><span class="xref">ActorSpawnService</span></div>
   </div>
-  <div classs="implements">
+  <div class="implements">
     <h5>Implements</h5>
-    <div><a class="xref" href="Kinstrife.Pipeline.IPipelineBuilder.html">IPipelineBuilder</a></div>
+    <div><a class="xref" href="Kinstrife.Core.DependencyInjection.IInjectable.html">IInjectable</a></div>
+    <div><a class="xref" href="Kinstrife.Core.DependencyInjection.IInitializable.html">IInitializable</a></div>
+    <div><a class="xref" href="Kinstrife.Core.DependencyInjection.IInstall-1.html">IInstall</a>&lt;<a class="xref" href="Kinstrife.Actor.ActorSpawnService.html">ActorSpawnService</a>&gt;</div>
+    <div><a class="xref" href="Kinstrife.Core.DependencyInjection.IInstall.html">IInstall</a></div>
+    <div><a class="xref" href="Kinstrife.Core.DependencyInjection.IDependent.html">IDependent</a></div>
   </div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
     <div>
-      <a class="xref" href="Kinstrife.Pipeline.PipelineBuilder-2.html#Kinstrife_Pipeline_PipelineBuilder_2_TasksList">PipelineBuilder&lt;Actor, Actor&gt;.TasksList</a>
+      <a class="xref" href="Kinstrife.Messaging.ServiceBehaviour-2.html#Kinstrife_Messaging_ServiceBehaviour_2_server">ServiceBehaviour&lt;ActorRoot, SpawnArguments&gt;.server</a>
     </div>
     <div>
-      <a class="xref" href="Kinstrife.Pipeline.PipelineBuilder-2.html#Kinstrife_Pipeline_PipelineBuilder_2_pipeline">PipelineBuilder&lt;Actor, Actor&gt;.pipeline</a>
+      <a class="xref" href="Kinstrife.Messaging.ServiceBehaviour-2.html#Kinstrife_Messaging_ServiceBehaviour_2_descriptor">ServiceBehaviour&lt;ActorRoot, SpawnArguments&gt;.descriptor</a>
     </div>
     <div>
-      <a class="xref" href="Kinstrife.Pipeline.PipelineBuilder-2.html#Kinstrife_Pipeline_PipelineBuilder_2_Pipeline">PipelineBuilder&lt;Actor, Actor&gt;.Pipeline</a>
+      <a class="xref" href="Kinstrife.Messaging.ServiceBehaviour-2.html#Kinstrife_Messaging_ServiceBehaviour_2_Inject_Kinstrife_Messaging_IServiceServer__0_Kinstrife_Messaging_Request__1___">ServiceBehaviour&lt;ActorRoot, SpawnArguments&gt;.Inject(IServiceServer&lt;ActorRoot, Request&lt;SpawnArguments&gt;&gt;)</a>
     </div>
     <div>
-      <a class="xref" href="Kinstrife.Pipeline.PipelineBuilder-2.html#Kinstrife_Pipeline_PipelineBuilder_2_Process__0_">PipelineBuilder&lt;Actor, Actor&gt;.Process(Actor)</a>
+      <a class="xref" href="Kinstrife.Messaging.ServiceBehaviour-2.html#Kinstrife_Messaging_ServiceBehaviour_2_Initialized">ServiceBehaviour&lt;ActorRoot, SpawnArguments&gt;.Initialized</a>
     </div>
     <div>
-      <a class="xref" href="Kinstrife.Pipeline.PipelineBuilder-2.html#Kinstrife_Pipeline_PipelineBuilder_2_FilterTaskList_Kinstrife_Pipeline_Task_">PipelineBuilder&lt;Actor, Actor&gt;.FilterTaskList(Task)</a>
+      <a class="xref" href="Kinstrife.Messaging.ServiceBehaviour-2.html#Kinstrife_Messaging_ServiceBehaviour_2_Initialize">ServiceBehaviour&lt;ActorRoot, SpawnArguments&gt;.Initialize()</a>
     </div>
     <div>
-      <a class="xref" href="Kinstrife.Pipeline.PipelineBuilder.html#Kinstrife_Pipeline_PipelineBuilder_Pipeline">PipelineBuilder.Pipeline</a>
+      <a class="xref" href="Kinstrife.Messaging.ServiceBehaviour-2.html#Kinstrife_Messaging_ServiceBehaviour_2_HandleRequest_Kinstrife_Messaging_Request__1__">ServiceBehaviour&lt;ActorRoot, SpawnArguments&gt;.HandleRequest(Request&lt;SpawnArguments&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.Messaging.ServiceBehaviour-2.html#Kinstrife_Messaging_ServiceBehaviour_2_OnDestroy">ServiceBehaviour&lt;ActorRoot, SpawnArguments&gt;.OnDestroy()</a>
     </div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Kinstrife.Actor.html">Kinstrife.Actor</a></h6>
   <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
   <h5 id="Kinstrife_Actor_ActorSpawnService_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class ActorSpawnService : PipelineBuilder&lt;Actor, Actor&gt;, IPipelineBuilder</code></pre>
+    <pre><code class="lang-csharp hljs">public class ActorSpawnService : ServiceBehaviour&lt;ActorRoot, SpawnArguments&gt;, IInjectable, IInitializable, IInstall&lt;ActorSpawnService&gt;, IInstall, IDependent</code></pre>
   </div>
+  <h3 id="constructors">Constructors
+  </h3>
+  
+  
+  <a id="Kinstrife_Actor_ActorSpawnService__ctor_" data-uid="Kinstrife.Actor.ActorSpawnService.#ctor*"></a>
+  <h4 id="Kinstrife_Actor_ActorSpawnService__ctor" data-uid="Kinstrife.Actor.ActorSpawnService.#ctor">ActorSpawnService()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ActorSpawnService()</code></pre>
+  </div>
+  <h3 id="fields">Fields
+  </h3>
+  
+  
+  <h4 id="Kinstrife_Actor_ActorSpawnService_config" data-uid="Kinstrife.Actor.ActorSpawnService.config">config</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ActorConfig config</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Kinstrife.Actor.ActorConfig.html">ActorConfig</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="Kinstrife_Actor_ActorSpawnService_spawnAmount" data-uid="Kinstrife.Actor.ActorSpawnService.spawnAmount">spawnAmount</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int spawnAmount</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="Kinstrife_Actor_ActorSpawnService_spawnManyMultiplier" data-uid="Kinstrife.Actor.ActorSpawnService.spawnManyMultiplier">spawnManyMultiplier</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int spawnManyMultiplier</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="Kinstrife_Actor_ActorSpawnService_spawnMultipleModifier" data-uid="Kinstrife.Actor.ActorSpawnService.spawnMultipleModifier">spawnMultipleModifier</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int spawnMultipleModifier</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="Kinstrife_Actor_ActorSpawnService_spawnOnInit" data-uid="Kinstrife.Actor.ActorSpawnService.spawnOnInit">spawnOnInit</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool spawnOnInit</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="Kinstrife_Actor_ActorSpawnService_spawnVolume" data-uid="Kinstrife.Actor.ActorSpawnService.spawnVolume">spawnVolume</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public BoxCollider spawnVolume</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">BoxCollider</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  
+  
+  <a id="Kinstrife_Actor_ActorSpawnService_HandleRequest_" data-uid="Kinstrife.Actor.ActorSpawnService.HandleRequest*"></a>
+  <h4 id="Kinstrife_Actor_ActorSpawnService_HandleRequest_Kinstrife_Messaging_Request_Kinstrife_Actor_SpawnArguments__" data-uid="Kinstrife.Actor.ActorSpawnService.HandleRequest(Kinstrife.Messaging.Request{Kinstrife.Actor.SpawnArguments})">HandleRequest(Request&lt;SpawnArguments&gt;)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override async UniTask&lt;ActorRoot&gt; HandleRequest(Request&lt;SpawnArguments&gt; payload)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Kinstrife.Messaging.Request-1.html">Request</a>&lt;<a class="xref" href="Kinstrife.Actor.SpawnArguments.html">SpawnArguments</a>&gt;</td>
+        <td><span class="parametername">payload</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">UniTask</span>&lt;<a class="xref" href="Kinstrife.Actor.ActorRoot.html">ActorRoot</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">Kinstrife.Messaging.ServiceBehaviour&lt;Kinstrife.Actor.ActorRoot, Kinstrife.Actor.SpawnArguments&gt;.HandleRequest(Kinstrife.Messaging.Request&lt;Kinstrife.Actor.SpawnArguments&gt;)</span></div>
+  
+  
+  <a id="Kinstrife_Actor_ActorSpawnService_Initialize_" data-uid="Kinstrife.Actor.ActorSpawnService.Initialize*"></a>
+  <h4 id="Kinstrife_Actor_ActorSpawnService_Initialize" data-uid="Kinstrife.Actor.ActorSpawnService.Initialize">Initialize()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override void Initialize()</code></pre>
+  </div>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">Kinstrife.Messaging.ServiceBehaviour&lt;Kinstrife.Actor.ActorRoot, Kinstrife.Actor.SpawnArguments&gt;.Initialize()</span></div>
+  
+  
+  <a id="Kinstrife_Actor_ActorSpawnService_Inject_" data-uid="Kinstrife.Actor.ActorSpawnService.Inject*"></a>
+  <h4 id="Kinstrife_Actor_ActorSpawnService_Inject_Kinstrife_Messaging_IPublisher_Kinstrife_Actor_ActorRoot__Kinstrife_Messaging_IServiceServer_Kinstrife_Actor_ActorRoot_Kinstrife_Messaging_Request_Kinstrife_Actor_SpawnArguments___Kinstrife_Actor_ActorConfig_Kinstrife_Application_Module_" data-uid="Kinstrife.Actor.ActorSpawnService.Inject(Kinstrife.Messaging.IPublisher{Kinstrife.Actor.ActorRoot},Kinstrife.Messaging.IServiceServer{Kinstrife.Actor.ActorRoot,Kinstrife.Messaging.Request{Kinstrife.Actor.SpawnArguments}},Kinstrife.Actor.ActorConfig,Kinstrife.Application.Module)">Inject(IPublisher&lt;ActorRoot&gt;, IServiceServer&lt;ActorRoot, Request&lt;SpawnArguments&gt;&gt;, ActorConfig, Module)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Inject(IPublisher&lt;ActorRoot&gt; publisher, IServiceServer&lt;ActorRoot, Request&lt;SpawnArguments&gt;&gt; server, ActorConfig config, Module module)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Kinstrife.Messaging.IPublisher-1.html">IPublisher</a>&lt;<a class="xref" href="Kinstrife.Actor.ActorRoot.html">ActorRoot</a>&gt;</td>
+        <td><span class="parametername">publisher</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Kinstrife.Messaging.IServiceServer-2.html">IServiceServer</a>&lt;<a class="xref" href="Kinstrife.Actor.ActorRoot.html">ActorRoot</a>, <a class="xref" href="Kinstrife.Messaging.Request-1.html">Request</a>&lt;<a class="xref" href="Kinstrife.Actor.SpawnArguments.html">SpawnArguments</a>&gt;&gt;</td>
+        <td><span class="parametername">server</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Kinstrife.Actor.ActorConfig.html">ActorConfig</a></td>
+        <td><span class="parametername">config</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Kinstrife.Application.Module.html">Module</a></td>
+        <td><span class="parametername">module</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Kinstrife_Actor_ActorSpawnService_RandomPointInBounds_" data-uid="Kinstrife.Actor.ActorSpawnService.RandomPointInBounds*"></a>
+  <h4 id="Kinstrife_Actor_ActorSpawnService_RandomPointInBounds_Bounds_" data-uid="Kinstrife.Actor.ActorSpawnService.RandomPointInBounds(Bounds)">RandomPointInBounds(Bounds)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Vector3 RandomPointInBounds(Bounds bounds)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Bounds</span></td>
+        <td><span class="parametername">bounds</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Vector3</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Kinstrife_Actor_ActorSpawnService_SetupActor_" data-uid="Kinstrife.Actor.ActorSpawnService.SetupActor*"></a>
+  <h4 id="Kinstrife_Actor_ActorSpawnService_SetupActor_Kinstrife_Actor_ActorRoot_Kinstrife_Actor_SpawnArguments__" data-uid="Kinstrife.Actor.ActorSpawnService.SetupActor(Kinstrife.Actor.ActorRoot,Kinstrife.Actor.SpawnArguments@)">SetupActor(ActorRoot, in SpawnArguments)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetupActor(ActorRoot instance, in SpawnArguments arguments)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Kinstrife.Actor.ActorRoot.html">ActorRoot</a></td>
+        <td><span class="parametername">instance</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Kinstrife.Actor.SpawnArguments.html">SpawnArguments</a></td>
+        <td><span class="parametername">arguments</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Kinstrife_Actor_ActorSpawnService_Spawn_" data-uid="Kinstrife.Actor.ActorSpawnService.Spawn*"></a>
+  <h4 id="Kinstrife_Actor_ActorSpawnService_Spawn" data-uid="Kinstrife.Actor.ActorSpawnService.Spawn">Spawn()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Spawn()</code></pre>
+  </div>
+  
+  
+  <a id="Kinstrife_Actor_ActorSpawnService_Spawn_" data-uid="Kinstrife.Actor.ActorSpawnService.Spawn*"></a>
+  <h4 id="Kinstrife_Actor_ActorSpawnService_Spawn_System_Int32_BoxCollider_" data-uid="Kinstrife.Actor.ActorSpawnService.Spawn(System.Int32,BoxCollider)">Spawn(Int32, BoxCollider)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public async void Spawn(int count, BoxCollider spawnVolume)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">count</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">BoxCollider</span></td>
+        <td><span class="parametername">spawnVolume</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Kinstrife_Actor_ActorSpawnService_SpawnActor_" data-uid="Kinstrife.Actor.ActorSpawnService.SpawnActor*"></a>
+  <h4 id="Kinstrife_Actor_ActorSpawnService_SpawnActor_Kinstrife_Actor_ActorRoot_Kinstrife_Actor_SpawnArguments__" data-uid="Kinstrife.Actor.ActorSpawnService.SpawnActor(Kinstrife.Actor.ActorRoot,Kinstrife.Actor.SpawnArguments@)">SpawnActor(ActorRoot, in SpawnArguments)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ActorRoot SpawnActor(ActorRoot prefab, in SpawnArguments arguments)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Kinstrife.Actor.ActorRoot.html">ActorRoot</a></td>
+        <td><span class="parametername">prefab</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Kinstrife.Actor.SpawnArguments.html">SpawnArguments</a></td>
+        <td><span class="parametername">arguments</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Kinstrife.Actor.ActorRoot.html">ActorRoot</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Kinstrife_Actor_ActorSpawnService_SpawnActor_" data-uid="Kinstrife.Actor.ActorSpawnService.SpawnActor*"></a>
+  <h4 id="Kinstrife_Actor_ActorSpawnService_SpawnActor_System_Int32_" data-uid="Kinstrife.Actor.ActorSpawnService.SpawnActor(System.Int32)">SpawnActor(Int32)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void SpawnActor(int count = 1)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">count</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="events">Events
+  </h3>
+  
+  
+  <h4 id="Kinstrife_Actor_ActorSpawnService_onFinishSetupActor" data-uid="Kinstrife.Actor.ActorSpawnService.onFinishSetupActor">onFinishSetupActor</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static event ActorSpawnService.ActorSpawnEvent onFinishSetupActor</code></pre>
+  </div>
+  <h5 class="eventType">Event Type</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Kinstrife.Actor.ActorSpawnService.ActorSpawnEvent.html">ActorSpawnService.ActorSpawnEvent</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   <h3 id="implements">Implements</h3>
   <div>
-      <a class="xref" href="Kinstrife.Pipeline.IPipelineBuilder.html">IPipelineBuilder</a>
+      <a class="xref" href="Kinstrife.Core.DependencyInjection.IInjectable.html">IInjectable</a>
+  </div>
+  <div>
+      <a class="xref" href="Kinstrife.Core.DependencyInjection.IInitializable.html">IInitializable</a>
+  </div>
+  <div>
+      <a class="xref" href="Kinstrife.Core.DependencyInjection.IInstall-1.html">IInstall&lt;T&gt;</a>
+  </div>
+  <div>
+      <a class="xref" href="Kinstrife.Core.DependencyInjection.IInstall.html">IInstall</a>
+  </div>
+  <div>
+      <a class="xref" href="Kinstrife.Core.DependencyInjection.IDependent.html">IDependent</a>
   </div>
 </article>
           </div>

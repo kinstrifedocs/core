@@ -81,7 +81,8 @@
     <div class="level1"><a class="xref" href="Kinstrife.UI.ViewModelComponent.html">ViewModelComponent</a></div>
     <div class="level2"><a class="xref" href="Kinstrife.UI.AssetSelectViewModel.html">AssetSelectViewModel</a></div>
     <div class="level3"><a class="xref" href="Kinstrife.UI.AssetSelectViewModel-1.html">AssetSelectViewModel</a>&lt;<a class="xref" href="Kinstrife.Application.GameMode.html">GameMode</a>&gt;</div>
-    <div class="level4"><span class="xref">GameModeSelectViewModel</span></div>
+    <div class="level4"><a class="xref" href="Kinstrife.UI.AssetSelectViewModelAddressable-1.html">AssetSelectViewModelAddressable</a>&lt;<a class="xref" href="Kinstrife.Application.GameMode.html">GameMode</a>&gt;</div>
+    <div class="level5"><span class="xref">GameModeSelectViewModel</span></div>
   </div>
   <div class="implements">
     <h5>Implements</h5>
@@ -92,6 +93,12 @@
   </div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="Kinstrife.UI.AssetSelectViewModelAddressable-1.html#Kinstrife_UI_AssetSelectViewModelAddressable_1_label">AssetSelectViewModelAddressable&lt;GameMode&gt;.label</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.UI.AssetSelectViewModelAddressable-1.html#Kinstrife_UI_AssetSelectViewModelAddressable_1_LoadSourceData">AssetSelectViewModelAddressable&lt;GameMode&gt;.LoadSourceData()</a>
+    </div>
     <div>
       <a class="xref" href="Kinstrife.UI.AssetSelectViewModel-1.html#Kinstrife_UI_AssetSelectViewModel_1_SourceData">AssetSelectViewModel&lt;GameMode&gt;.SourceData</a>
     </div>
@@ -105,16 +112,13 @@
       <a class="xref" href="Kinstrife.UI.AssetSelectViewModel-1.html#Kinstrife_UI_AssetSelectViewModel_1_Initialize">AssetSelectViewModel&lt;GameMode&gt;.Initialize()</a>
     </div>
     <div>
-      <a class="xref" href="Kinstrife.UI.AssetSelectViewModel.html#Kinstrife_UI_AssetSelectViewModel_Title">AssetSelectViewModel.Title</a>
-    </div>
-    <div>
-      <a class="xref" href="Kinstrife.UI.AssetSelectViewModel.html#Kinstrife_UI_AssetSelectViewModel_label">AssetSelectViewModel.label</a>
-    </div>
-    <div>
       <a class="xref" href="Kinstrife.UI.AssetSelectViewModel.html#Kinstrife_UI_AssetSelectViewModel_controlType">AssetSelectViewModel.controlType</a>
     </div>
     <div>
       <a class="xref" href="Kinstrife.UI.AssetSelectViewModel.html#Kinstrife_UI_AssetSelectViewModel_data">AssetSelectViewModel.data</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.UI.ViewModelComponent.html#Kinstrife_UI_ViewModelComponent_Title">ViewModelComponent.Title</a>
     </div>
     <div>
       <a class="xref" href="Kinstrife.UI.ViewModelComponent.html#Kinstrife_UI_ViewModelComponent_Render">ViewModelComponent.Render</a>
@@ -127,7 +131,7 @@
   <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
   <h5 id="Kinstrife_UI_GameModeSelectViewModel_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class GameModeSelectViewModel : AssetSelectViewModel&lt;GameMode&gt;, IInjectable, IDependent</code></pre>
+    <pre><code class="lang-csharp hljs">public class GameModeSelectViewModel : AssetSelectViewModelAddressable&lt;GameMode&gt;, IInjectable, IDependent</code></pre>
   </div>
   <h3 id="constructors">Constructors
   </h3>
@@ -176,7 +180,7 @@
     </tbody>
   </table>
   <h5 class="overrides">Overrides</h5>
-  <div><span class="xref">Kinstrife.UI.AssetSelectViewModel&lt;Kinstrife.Application.GameMode&gt;.InitItem(Kinstrife.Application.GameMode, ContextBindableObject)</span></div>
+  <div><span class="xref">Kinstrife.UI.AssetSelectViewModelAddressable&lt;Kinstrife.Application.GameMode&gt;.InitItem(Kinstrife.Application.GameMode, ContextBindableObject)</span></div>
   
   
   <a id="Kinstrife_UI_GameModeSelectViewModel_Inject_" data-uid="Kinstrife.UI.GameModeSelectViewModel.Inject*"></a>
@@ -209,6 +213,35 @@
       </tr>
     </tbody>
   </table>
+  
+  
+  <a id="Kinstrife_UI_GameModeSelectViewModel_OnSelectEntry_" data-uid="Kinstrife.UI.GameModeSelectViewModel.OnSelectEntry*"></a>
+  <h4 id="Kinstrife_UI_GameModeSelectViewModel_OnSelectEntry_Kinstrife_Application_GameMode_" data-uid="Kinstrife.UI.GameModeSelectViewModel.OnSelectEntry(Kinstrife.Application.GameMode)">OnSelectEntry(GameMode)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override void OnSelectEntry(GameMode item)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Kinstrife.Application.GameMode.html">GameMode</a></td>
+        <td><span class="parametername">item</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">Kinstrife.UI.AssetSelectViewModel&lt;Kinstrife.Application.GameMode&gt;.OnSelectEntry(Kinstrife.Application.GameMode)</span></div>
   
   
   <a id="Kinstrife_UI_GameModeSelectViewModel_ValidateItem_" data-uid="Kinstrife.UI.GameModeSelectViewModel.ValidateItem*"></a>
@@ -252,7 +285,7 @@
     </tbody>
   </table>
   <h5 class="overrides">Overrides</h5>
-  <div><span class="xref">Kinstrife.UI.AssetSelectViewModel&lt;Kinstrife.Application.GameMode&gt;.ValidateItem(Kinstrife.Application.GameMode)</span></div>
+  <div><span class="xref">Kinstrife.UI.AssetSelectViewModelAddressable&lt;Kinstrife.Application.GameMode&gt;.ValidateItem(Kinstrife.Application.GameMode)</span></div>
   <h3 id="implements">Implements</h3>
   <div>
       <span class="xref">IModel</span>
