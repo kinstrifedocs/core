@@ -77,6 +77,8 @@
   <div class="markdown level0 remarks"></div>
     <h3 id="classes">Classes
   </h3>
+      <h4><a class="xref" href="Kinstrife.Identifier.CovarianceExtensions.html">CovarianceExtensions</a></h4>
+      <section></section>
       <h4><a class="xref" href="Kinstrife.Identifier.Guid.html">Guid</a></h4>
       <section></section>
       <h4><a class="xref" href="Kinstrife.Identifier.IdentifiableBehaviour.html">IdentifiableBehaviour</a></h4>
@@ -84,16 +86,35 @@
 </section>
       <h4><a class="xref" href="Kinstrife.Identifier.IdentifiableObject.html">IdentifiableObject</a></h4>
       <section></section>
+      <h4><a class="xref" href="Kinstrife.Identifier.Persistent.html">Persistent</a></h4>
+      <section><p>Container for tagging persistent entity with GUID. Will not be serialized.</p>
+</section>
       <h4><a class="xref" href="Kinstrife.Identifier.PreviouslyNamedAttribute.html">PreviouslyNamedAttribute</a></h4>
       <section><p>When renaming a type that will be serialized, either directly as game state data or indirectly as a database reference, use this attribute to specify the old name.
 In case of multiple renaming, add multiple instances of this attribute.</p>
 </section>
       <h4><a class="xref" href="Kinstrife.Identifier.ReadOnlyAttribute.html">ReadOnlyAttribute</a></h4>
       <section></section>
+      <h4><a class="xref" href="Kinstrife.Identifier.Reference-1.html">Reference&lt;T&gt;</a></h4>
+      <section><p>Instead of referencing database (<a class="xref" href="Kinstrife.Identifier.IdentifiableObject.html">IdentifiableObject</a>) and game state objects directly, instances of <a class="xref" href="Kinstrife.Identifier.IPersistentComponent.html">IPersistentComponent</a>
+should utilize this reference wrapper to ensure correct serialization/deserialization.</p>
+</section>
     <h3 id="interfaces">Interfaces
   </h3>
+      <h4><a class="xref" href="Kinstrife.Identifier.IDatabaseInstance-1.html">IDatabaseInstance&lt;T&gt;</a></h4>
+      <section></section>
       <h4><a class="xref" href="Kinstrife.Identifier.IIdentifiable.html">IIdentifiable</a></h4>
       <section></section>
+      <h4><a class="xref" href="Kinstrife.Identifier.INestedReferenceContainer-1.html">INestedReferenceContainer&lt;T&gt;</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Kinstrife.Identifier.INestedReferenceEnumerable-1.html">INestedReferenceEnumerable&lt;T&gt;</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Kinstrife.Identifier.IPersistentComponent.html">IPersistentComponent</a></h4>
+      <section><p>Component data with multiple instances in the game state, assignable to entities with a specific GUID.</p>
+</section>
+      <h4><a class="xref" href="Kinstrife.Identifier.IPersistentSingletonData.html">IPersistentSingletonData</a></h4>
+      <section><p>Singleton which will be saved/persisten.t</p>
+</section>
 </article>
           </div>
           

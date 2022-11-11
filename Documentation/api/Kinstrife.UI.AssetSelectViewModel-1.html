@@ -110,7 +110,7 @@
   <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
   <h5 id="Kinstrife_UI_AssetSelectViewModel_1_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public abstract class AssetSelectViewModel&lt;T&gt; : AssetSelectViewModel where T : Object</code></pre>
+    <pre><code class="lang-csharp hljs">public abstract class AssetSelectViewModel&lt;T&gt; : AssetSelectViewModel</code></pre>
   </div>
   <h5 class="typeParameters">Type Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -129,6 +129,30 @@
   </table>
   <h3 id="fields">Fields
   </h3>
+  
+  
+  <h4 id="Kinstrife_UI_AssetSelectViewModel_1_loadMode" data-uid="Kinstrife.UI.AssetSelectViewModel`1.loadMode">loadMode</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public AssetSelectViewModel&lt;T&gt;.LoadMode loadMode</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Kinstrife.UI.AssetSelectViewModel-1.LoadMode.html">AssetSelectViewModel.LoadMode</a>&lt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   
   
   <h4 id="Kinstrife_UI_AssetSelectViewModel_1_SourceData" data-uid="Kinstrife.UI.AssetSelectViewModel`1.SourceData">SourceData</h4>
@@ -156,6 +180,31 @@ public IEnumerable&lt;T&gt; SourceData</code></pre>
   </table>
   <h3 id="properties">Properties
   </h3>
+  
+  
+  <a id="Kinstrife_UI_AssetSelectViewModel_1_isAsync_" data-uid="Kinstrife.UI.AssetSelectViewModel`1.isAsync*"></a>
+  <h4 id="Kinstrife_UI_AssetSelectViewModel_1_isAsync" data-uid="Kinstrife.UI.AssetSelectViewModel`1.isAsync">isAsync</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected abstract bool isAsync { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   
   
   <a id="Kinstrife_UI_AssetSelectViewModel_1_onSelectItem_" data-uid="Kinstrife.UI.AssetSelectViewModel`1.onSelectItem*"></a>
@@ -191,7 +240,7 @@ public IEnumerable&lt;T&gt; SourceData</code></pre>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public async void Initialize()</code></pre>
+    <pre><code class="lang-csharp hljs">public void Initialize()</code></pre>
   </div>
   
   
@@ -230,12 +279,12 @@ public IEnumerable&lt;T&gt; SourceData</code></pre>
   
   
   <a id="Kinstrife_UI_AssetSelectViewModel_1_InitItem_" data-uid="Kinstrife.UI.AssetSelectViewModel`1.InitItem*"></a>
-  <h4 id="Kinstrife_UI_AssetSelectViewModel_1_InitItem__0_ContextBindableObject_" data-uid="Kinstrife.UI.AssetSelectViewModel`1.InitItem(`0,ContextBindableObject)">InitItem(T, ContextBindableObject)</h4>
+  <h4 id="Kinstrife_UI_AssetSelectViewModel_1_InitItem_System_Int32__0_ContextBindableObject_" data-uid="Kinstrife.UI.AssetSelectViewModel`1.InitItem(System.Int32,`0,ContextBindableObject)">InitItem(Int32, T, ContextBindableObject)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected virtual void InitItem(T source, ContextBindableObject bindable)</code></pre>
+    <pre><code class="lang-csharp hljs">protected virtual void InitItem(int i, T source, ContextBindableObject bindable)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -247,6 +296,11 @@ public IEnumerable&lt;T&gt; SourceData</code></pre>
       </tr>
     </thead>
     <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">i</span></td>
+        <td></td>
+      </tr>
       <tr>
         <td><span class="xref">T</span></td>
         <td><span class="parametername">source</span></td>
@@ -267,7 +321,59 @@ public IEnumerable&lt;T&gt; SourceData</code></pre>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected abstract UniTask&lt;IEnumerable&lt;T&gt;&gt; LoadSourceData()</code></pre>
+    <pre><code class="lang-csharp hljs">protected virtual IEnumerable&lt;T&gt; LoadSourceData()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;T&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Kinstrife_UI_AssetSelectViewModel_1_LoadSourceData_" data-uid="Kinstrife.UI.AssetSelectViewModel`1.LoadSourceData*"></a>
+  <h4 id="Kinstrife_UI_AssetSelectViewModel_1_LoadSourceData_System_Boolean_" data-uid="Kinstrife.UI.AssetSelectViewModel`1.LoadSourceData(System.Boolean)">LoadSourceData(Boolean)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public async void LoadSourceData(bool force)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">force</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Kinstrife_UI_AssetSelectViewModel_1_LoadSourceDataAsync_" data-uid="Kinstrife.UI.AssetSelectViewModel`1.LoadSourceDataAsync*"></a>
+  <h4 id="Kinstrife_UI_AssetSelectViewModel_1_LoadSourceDataAsync" data-uid="Kinstrife.UI.AssetSelectViewModel`1.LoadSourceDataAsync">LoadSourceDataAsync()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual UniTask&lt;IEnumerable&lt;T&gt;&gt; LoadSourceDataAsync()</code></pre>
   </div>
   <h5 class="returns">Returns</h5>
   <table class="table table-bordered table-striped table-condensed">

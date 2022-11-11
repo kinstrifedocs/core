@@ -114,6 +114,43 @@
   </h3>
   
   
+  <a id="Kinstrife_Core_GameState_GameStateAppFlow_FinalizeNewGame_" data-uid="Kinstrife.Core.GameState.GameStateAppFlow.FinalizeNewGame*"></a>
+  <h4 id="Kinstrife_Core_GameState_GameStateAppFlow_FinalizeNewGame_Kinstrife_Core_GameState_GameStateManager_Kinstrife_Application_ApplicationFlow_System_String_" data-uid="Kinstrife.Core.GameState.GameStateAppFlow.FinalizeNewGame(Kinstrife.Core.GameState.GameStateManager,Kinstrife.Application.ApplicationFlow,System.String)">FinalizeNewGame(GameStateManager, ApplicationFlow, String)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void FinalizeNewGame(GameStateManager gameStateManager, ApplicationFlow applicationFlow, string saveName)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Kinstrife.Core.GameState.GameStateManager.html">GameStateManager</a></td>
+        <td><span class="parametername">gameStateManager</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Kinstrife.Application.ApplicationFlow.html">ApplicationFlow</a></td>
+        <td><span class="parametername">applicationFlow</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">saveName</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
   <a id="Kinstrife_Core_GameState_GameStateAppFlow_LoadGame_" data-uid="Kinstrife.Core.GameState.GameStateAppFlow.LoadGame*"></a>
   <h4 id="Kinstrife_Core_GameState_GameStateAppFlow_LoadGame_System_String_Kinstrife_Core_GameState_GameStateManager_Kinstrife_Application_ApplicationFlow_Kinstrife_Database_DatabaseAccessor_" data-uid="Kinstrife.Core.GameState.GameStateAppFlow.LoadGame(System.String,Kinstrife.Core.GameState.GameStateManager,Kinstrife.Application.ApplicationFlow,Kinstrife.Database.DatabaseAccessor)">LoadGame(String, GameStateManager, ApplicationFlow, DatabaseAccessor)</h4>
   <div class="markdown level1 summary"></div>
@@ -157,12 +194,12 @@
   
   
   <a id="Kinstrife_Core_GameState_GameStateAppFlow_StartNewGame_" data-uid="Kinstrife.Core.GameState.GameStateAppFlow.StartNewGame*"></a>
-  <h4 id="Kinstrife_Core_GameState_GameStateAppFlow_StartNewGame_Kinstrife_Core_Campaign_CampaignDefinition_Kinstrife_Application_ApplicationFlow_Kinstrife_Application_Module_" data-uid="Kinstrife.Core.GameState.GameStateAppFlow.StartNewGame(Kinstrife.Core.Campaign.CampaignDefinition,Kinstrife.Application.ApplicationFlow,Kinstrife.Application.Module)">StartNewGame(CampaignDefinition, ApplicationFlow, Module)</h4>
+  <h4 id="Kinstrife_Core_GameState_GameStateAppFlow_StartNewGame_Kinstrife_Core_GameState_GameStateManager_Kinstrife_Core_Campaign_CampaignDefinition_Kinstrife_Application_ApplicationFlow_Kinstrife_Application_Module_" data-uid="Kinstrife.Core.GameState.GameStateAppFlow.StartNewGame(Kinstrife.Core.GameState.GameStateManager,Kinstrife.Core.Campaign.CampaignDefinition,Kinstrife.Application.ApplicationFlow,Kinstrife.Application.Module)">StartNewGame(GameStateManager, CampaignDefinition, ApplicationFlow, Module)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static void StartNewGame(CampaignDefinition campaign, ApplicationFlow applicationFlow, Module callingModule)</code></pre>
+    <pre><code class="lang-csharp hljs">public static void StartNewGame(GameStateManager gameStateManager, CampaignDefinition campaign, ApplicationFlow applicationFlow, Module callingModule)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -174,6 +211,11 @@
       </tr>
     </thead>
     <tbody>
+      <tr>
+        <td><a class="xref" href="Kinstrife.Core.GameState.GameStateManager.html">GameStateManager</a></td>
+        <td><span class="parametername">gameStateManager</span></td>
+        <td></td>
+      </tr>
       <tr>
         <td><a class="xref" href="Kinstrife.Core.Campaign.CampaignDefinition.html">CampaignDefinition</a></td>
         <td><span class="parametername">campaign</span></td>
