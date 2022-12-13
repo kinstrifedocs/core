@@ -408,6 +408,48 @@
   </div>
   
   
+  <a id="Kinstrife_Core_GameState_GameState_GetAllComponentsForEntity_" data-uid="Kinstrife.Core.GameState.GameState.GetAllComponentsForEntity*"></a>
+  <h4 id="Kinstrife_Core_GameState_GameState_GetAllComponentsForEntity_System_Guid_" data-uid="Kinstrife.Core.GameState.GameState.GetAllComponentsForEntity(System.Guid)">GetAllComponentsForEntity(Guid)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IList&lt;IPersistentComponent&gt; GetAllComponentsForEntity(Guid guid)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Guid</span></td>
+        <td><span class="parametername">guid</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IList</span>&lt;<a class="xref" href="Kinstrife.Identifier.IPersistentComponent.html">IPersistentComponent</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
   <a id="Kinstrife_Core_GameState_GameState_GetComponent_" data-uid="Kinstrife.Core.GameState.GameState.GetComponent*"></a>
   <h4 id="Kinstrife_Core_GameState_GameState_GetComponent__1_Entity_" data-uid="Kinstrife.Core.GameState.GameState.GetComponent``1(Entity)">GetComponent&lt;T&gt;(Entity)</h4>
   <div class="markdown level1 summary"></div>
@@ -445,6 +487,47 @@
     <tbody>
       <tr>
         <td><span class="xref">T</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Kinstrife_Core_GameState_GameState_GetComponentsOfType_" data-uid="Kinstrife.Core.GameState.GameState.GetComponentsOfType*"></a>
+  <h4 id="Kinstrife_Core_GameState_GameState_GetComponentsOfType__1" data-uid="Kinstrife.Core.GameState.GameState.GetComponentsOfType``1">GetComponentsOfType&lt;T&gt;()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IList&lt;T&gt; GetComponentsOfType&lt;T&gt;()
+    where T : class, IPersistentComponent</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IList</span>&lt;T&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -666,6 +749,69 @@
     <tbody>
       <tr>
         <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Kinstrife_Core_GameState_GameState_TryGetComponent_" data-uid="Kinstrife.Core.GameState.GameState.TryGetComponent*"></a>
+  <h4 id="Kinstrife_Core_GameState_GameState_TryGetComponent__1_Entity___0__" data-uid="Kinstrife.Core.GameState.GameState.TryGetComponent``1(Entity,``0@)">TryGetComponent&lt;T&gt;(Entity, out T)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool TryGetComponent&lt;T&gt;(Entity e, out T data)
+    where T : class, IPersistentComponent</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Entity</span></td>
+        <td><span class="parametername">e</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">T</span></td>
+        <td><span class="parametername">data</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T</span></td>
         <td></td>
       </tr>
     </tbody>

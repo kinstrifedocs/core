@@ -757,12 +757,12 @@
   
   
   <a id="UnityEngine_AddressableAssets_AssetReferenceExtensions_InstantiateAsync2_" data-uid="UnityEngine.AddressableAssets.AssetReferenceExtensions.InstantiateAsync2*"></a>
-  <h4 id="UnityEngine_AddressableAssets_AssetReferenceExtensions_InstantiateAsync2_AssetReferenceT_GameObject__Vector3_Quaternion_Transform_" data-uid="UnityEngine.AddressableAssets.AssetReferenceExtensions.InstantiateAsync2(AssetReferenceT{GameObject},Vector3,Quaternion,Transform)">InstantiateAsync2(AssetReferenceT&lt;GameObject&gt;, Vector3, Quaternion, Transform)</h4>
+  <h4 id="UnityEngine_AddressableAssets_AssetReferenceExtensions_InstantiateAsync2_AssetReferenceT_GameObject__Vector3_Quaternion_Transform_UnityEngine_Object_" data-uid="UnityEngine.AddressableAssets.AssetReferenceExtensions.InstantiateAsync2(AssetReferenceT{GameObject},Vector3,Quaternion,Transform,UnityEngine.Object)">InstantiateAsync2(AssetReferenceT&lt;GameObject&gt;, Vector3, Quaternion, Transform, Object)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static async UniTask&lt;GameObject&gt; InstantiateAsync2(this AssetReferenceT&lt;GameObject&gt; assetRef, Vector3 position, Quaternion rotation, Transform parent = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public static async UniTask&lt;GameObject&gt; InstantiateAsync2(this AssetReferenceT&lt;GameObject&gt; assetRef, Vector3 position, Quaternion rotation, Transform parent = null, Object caller = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -794,6 +794,11 @@
         <td><span class="parametername">parent</span></td>
         <td></td>
       </tr>
+      <tr>
+        <td><span class="xref">UnityEngine.Object</span></td>
+        <td><span class="parametername">caller</span></td>
+        <td></td>
+      </tr>
     </tbody>
   </table>
   <h5 class="returns">Returns</h5>
@@ -814,12 +819,12 @@
   
   
   <a id="UnityEngine_AddressableAssets_AssetReferenceExtensions_InstantiateAsyncT_" data-uid="UnityEngine.AddressableAssets.AssetReferenceExtensions.InstantiateAsyncT*"></a>
-  <h4 id="UnityEngine_AddressableAssets_AssetReferenceExtensions_InstantiateAsyncT__1_AssetReferenceT___0__Transform_System_Boolean_" data-uid="UnityEngine.AddressableAssets.AssetReferenceExtensions.InstantiateAsyncT``1(AssetReferenceT{``0},Transform,System.Boolean)">InstantiateAsyncT&lt;T&gt;(AssetReferenceT&lt;T&gt;, Transform, Boolean)</h4>
+  <h4 id="UnityEngine_AddressableAssets_AssetReferenceExtensions_InstantiateAsyncT__1_AssetReferenceT___0__Transform_System_Boolean_UnityEngine_Object_" data-uid="UnityEngine.AddressableAssets.AssetReferenceExtensions.InstantiateAsyncT``1(AssetReferenceT{``0},Transform,System.Boolean,UnityEngine.Object)">InstantiateAsyncT&lt;T&gt;(AssetReferenceT&lt;T&gt;, Transform, Boolean, Object)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static async UniTask&lt;T&gt; InstantiateAsyncT&lt;T&gt;(this AssetReferenceT&lt;T&gt; assetRef, Transform parent = null, bool instantiateInWorldSpace = false)
+    <pre><code class="lang-csharp hljs">public static async UniTask&lt;T&gt; InstantiateAsyncT&lt;T&gt;(this AssetReferenceT&lt;T&gt; assetRef, Transform parent = null, bool instantiateInWorldSpace = false, Object caller = null)
     where T : Object</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -845,6 +850,11 @@
       <tr>
         <td><span class="xref">System.Boolean</span></td>
         <td><span class="parametername">instantiateInWorldSpace</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">UnityEngine.Object</span></td>
+        <td><span class="parametername">caller</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -875,6 +885,53 @@
     <tbody>
       <tr>
         <td><span class="parametername">T</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="UnityEngine_AddressableAssets_AssetReferenceExtensions_Validate_" data-uid="UnityEngine.AddressableAssets.AssetReferenceExtensions.Validate*"></a>
+  <h4 id="UnityEngine_AddressableAssets_AssetReferenceExtensions_Validate_AssetReference_UnityEngine_Object_" data-uid="UnityEngine.AddressableAssets.AssetReferenceExtensions.Validate(AssetReference,UnityEngine.Object)">Validate(AssetReference, Object)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool Validate(this AssetReference assetReference, Object caller = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">AssetReference</span></td>
+        <td><span class="parametername">assetReference</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">UnityEngine.Object</span></td>
+        <td><span class="parametername">caller</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
         <td></td>
       </tr>
     </tbody>

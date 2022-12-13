@@ -83,11 +83,19 @@
       <div class="level2"><a class="xref" href="Kinstrife.SpatialHandles.Point.html">Point</a></div>
       <div class="level2"><a class="xref" href="Kinstrife.SpatialHandles.SpatialContainer.html">SpatialContainer</a></div>
   </div>
+  <div class="implements">
+    <h5>Implements</h5>
+    <div><a class="xref" href="Kinstrife.Identifier.ISortable.html">ISortable</a></div>
+    <div><a class="xref" href="Kinstrife.Identifier.IPrimarySortable.html">IPrimarySortable</a></div>
+    <div><a class="xref" href="Kinstrife.Identifier.ISecondarySortable.html">ISecondarySortable</a></div>
+    <div><a class="xref" href="Kinstrife.Identifier.ICategorized.html">ICategorized</a></div>
+    <div><a class="xref" href="Kinstrife.Identifier.ITagged.html">ITagged</a></div>
+  </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Kinstrife.SpatialHandles.html">Kinstrife.SpatialHandles</a></h6>
   <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
   <h5 id="Kinstrife_SpatialHandles_SpatialHandle_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public abstract class SpatialHandle : MonoBehaviour</code></pre>
+    <pre><code class="lang-csharp hljs">public abstract class SpatialHandle : MonoBehaviour, ISortable, IPrimarySortable, ISecondarySortable, ICategorized, ITagged</code></pre>
   </div>
   <h3 id="properties">Properties
   </h3>
@@ -143,6 +151,31 @@
   </table>
   
   
+  <a id="Kinstrife_SpatialHandles_SpatialHandle_Category_" data-uid="Kinstrife.SpatialHandles.SpatialHandle.Category*"></a>
+  <h4 id="Kinstrife_SpatialHandles_SpatialHandle_Category" data-uid="Kinstrife.SpatialHandles.SpatialHandle.Category">Category</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public SceneCategory Category { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Kinstrife.SpatialHandles.SceneCategory.html">SceneCategory</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
   <a id="Kinstrife_SpatialHandles_SpatialHandle_FreeCapacity_" data-uid="Kinstrife.SpatialHandles.SpatialHandle.FreeCapacity*"></a>
   <h4 id="Kinstrife_SpatialHandles_SpatialHandle_FreeCapacity" data-uid="Kinstrife.SpatialHandles.SpatialHandle.FreeCapacity">FreeCapacity</h4>
   <div class="markdown level1 summary"></div>
@@ -150,6 +183,81 @@
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public virtual int FreeCapacity { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Kinstrife_SpatialHandles_SpatialHandle_Guid_" data-uid="Kinstrife.SpatialHandles.SpatialHandle.Guid*"></a>
+  <h4 id="Kinstrife_SpatialHandles_SpatialHandle_Guid" data-uid="Kinstrife.SpatialHandles.SpatialHandle.Guid">Guid</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Guid Guid { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Kinstrife.Identifier.Guid.html">Guid</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Kinstrife_SpatialHandles_SpatialHandle_OrderByPrimary_" data-uid="Kinstrife.SpatialHandles.SpatialHandle.OrderByPrimary*"></a>
+  <h4 id="Kinstrife_SpatialHandles_SpatialHandle_OrderByPrimary" data-uid="Kinstrife.SpatialHandles.SpatialHandle.OrderByPrimary">OrderByPrimary</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int OrderByPrimary { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Kinstrife_SpatialHandles_SpatialHandle_OrderBySecondary_" data-uid="Kinstrife.SpatialHandles.SpatialHandle.OrderBySecondary*"></a>
+  <h4 id="Kinstrife_SpatialHandles_SpatialHandle_OrderBySecondary" data-uid="Kinstrife.SpatialHandles.SpatialHandle.OrderBySecondary">OrderBySecondary</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int OrderBySecondary { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -199,7 +307,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public IReadOnlyList&lt;Tag&gt; Tags { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public IReadOnlyList&lt;SceneTag&gt; Tags { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -211,7 +319,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Generic.IReadOnlyList</span>&lt;<a class="xref" href="Kinstrife.SpatialHandles.Tag.html">Tag</a>&gt;</td>
+        <td><span class="xref">System.Collections.Generic.IReadOnlyList</span>&lt;<a class="xref" href="Kinstrife.SpatialHandles.SceneTag.html">SceneTag</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -332,6 +440,74 @@
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public virtual void Rebuild()</code></pre>
+  </div>
+  <h3 id="eii">Explicit Interface Implementations
+  </h3>
+  
+  
+  <a id="Kinstrife_SpatialHandles_SpatialHandle_Kinstrife_Identifier_ICategorized_Category_" data-uid="Kinstrife.SpatialHandles.SpatialHandle.Kinstrife#Identifier#ICategorized#Category*"></a>
+  <h4 id="Kinstrife_SpatialHandles_SpatialHandle_Kinstrife_Identifier_ICategorized_Category" data-uid="Kinstrife.SpatialHandles.SpatialHandle.Kinstrife#Identifier#ICategorized#Category">ICategorized.Category</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">ICategory ICategorized.Category { get; }</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Kinstrife.Identifier.ICategory.html">ICategory</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Kinstrife_SpatialHandles_SpatialHandle_Kinstrife_Identifier_ITagged_Tags_" data-uid="Kinstrife.SpatialHandles.SpatialHandle.Kinstrife#Identifier#ITagged#Tags*"></a>
+  <h4 id="Kinstrife_SpatialHandles_SpatialHandle_Kinstrife_Identifier_ITagged_Tags" data-uid="Kinstrife.SpatialHandles.SpatialHandle.Kinstrife#Identifier#ITagged#Tags">ITagged.Tags</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IReadOnlyList&lt;ITag&gt; ITagged.Tags { get; }</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IReadOnlyList</span>&lt;<a class="xref" href="Kinstrife.Identifier.ITag.html">ITag</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <a class="xref" href="Kinstrife.Identifier.ISortable.html">ISortable</a>
+  </div>
+  <div>
+      <a class="xref" href="Kinstrife.Identifier.IPrimarySortable.html">IPrimarySortable</a>
+  </div>
+  <div>
+      <a class="xref" href="Kinstrife.Identifier.ISecondarySortable.html">ISecondarySortable</a>
+  </div>
+  <div>
+      <a class="xref" href="Kinstrife.Identifier.ICategorized.html">ICategorized</a>
+  </div>
+  <div>
+      <a class="xref" href="Kinstrife.Identifier.ITagged.html">ITagged</a>
   </div>
 </article>
           </div>

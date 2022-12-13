@@ -85,6 +85,9 @@
     <h5>Implements</h5>
     <div><a class="xref" href="Kinstrife.Identifier.IIdentifiable.html">IIdentifiable</a></div>
     <div><span class="xref">System.IEquatable</span>&lt;<a class="xref" href="Kinstrife.Identifier.IdentifiableObject.html">IdentifiableObject</a>&gt;</div>
+    <div><a class="xref" href="Kinstrife.Identifier.ISortable.html">ISortable</a></div>
+    <div><a class="xref" href="Kinstrife.Identifier.IPrimarySortable.html">IPrimarySortable</a></div>
+    <div><a class="xref" href="Kinstrife.Identifier.ISecondarySortable.html">ISecondarySortable</a></div>
     <div><a class="xref" href="Kinstrife.Core.Campaign.ICampaignSystemRef.html">ICampaignSystemRef</a></div>
   </div>
   <div class="inheritedMembers">
@@ -102,10 +105,10 @@
       <a class="xref" href="Kinstrife.Identifier.IdentifiableObject.html#Kinstrife_Identifier_IdentifiableObject_CreateNewGuid">IdentifiableObject.CreateNewGuid()</a>
     </div>
     <div>
-      <a class="xref" href="Kinstrife.Identifier.IdentifiableObject.html#Kinstrife_Identifier_IdentifiableObject_GetHashCode">IdentifiableObject.GetHashCode()</a>
+      <a class="xref" href="Kinstrife.Identifier.IdentifiableObject.html#Kinstrife_Identifier_IdentifiableObject_OrderByPrimary">IdentifiableObject.OrderByPrimary</a>
     </div>
     <div>
-      <a class="xref" href="Kinstrife.Identifier.IdentifiableObject.html#Kinstrife_Identifier_IdentifiableObject_Equals_System_Object_">IdentifiableObject.Equals(Object)</a>
+      <a class="xref" href="Kinstrife.Identifier.IdentifiableObject.html#Kinstrife_Identifier_IdentifiableObject_OrderBySecondary">IdentifiableObject.OrderBySecondary</a>
     </div>
     <div>
       <a class="xref" href="Kinstrife.Identifier.IdentifiableObject.html#Kinstrife_Identifier_IdentifiableObject_Equals_Kinstrife_Identifier_IdentifiableObject_">IdentifiableObject.Equals(IdentifiableObject)</a>
@@ -115,7 +118,7 @@
   <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
   <h5 id="Kinstrife_Core_Campaign_CampaignSystemRef_1_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public abstract class CampaignSystemRef&lt;T&gt; : IdentifiableObject, IIdentifiable, IEquatable&lt;IdentifiableObject&gt;, ICampaignSystemRef where T : CampaignSystemBase</code></pre>
+    <pre><code class="lang-csharp hljs">public abstract class CampaignSystemRef&lt;T&gt; : IdentifiableObject, IIdentifiable, IEquatable&lt;IdentifiableObject&gt;, ISortable, IPrimarySortable, ISecondarySortable, ICampaignSystemRef where T : CampaignSystemBase</code></pre>
   </div>
   <h5 class="typeParameters">Type Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -191,6 +194,15 @@
   </div>
   <div>
       <span class="xref">System.IEquatable&lt;T&gt;</span>
+  </div>
+  <div>
+      <a class="xref" href="Kinstrife.Identifier.ISortable.html">ISortable</a>
+  </div>
+  <div>
+      <a class="xref" href="Kinstrife.Identifier.IPrimarySortable.html">IPrimarySortable</a>
+  </div>
+  <div>
+      <a class="xref" href="Kinstrife.Identifier.ISecondarySortable.html">ISecondarySortable</a>
   </div>
   <div>
       <a class="xref" href="Kinstrife.Core.Campaign.ICampaignSystemRef.html">ICampaignSystemRef</a>

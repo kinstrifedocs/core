@@ -87,7 +87,8 @@
   <div class="implements">
     <h5>Implements</h5>
     <div><span class="xref">IModel</span></div>
-    <div><span class="xref">IInitializable</span></div>
+    <div><a class="xref" href="Kinstrife.Core.DependencyInjection.IInitializable.html">IInitializable</a></div>
+    <div><a class="xref" href="Kinstrife.Core.DependencyInjection.IDependent.html">IDependent</a></div>
   </div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
@@ -110,6 +111,9 @@
       <a class="xref" href="Kinstrife.UI.AssetSelectViewModel-1.html#Kinstrife_UI_AssetSelectViewModel_1_loadMode">AssetSelectViewModel&lt;ConfigData&gt;.loadMode</a>
     </div>
     <div>
+      <a class="xref" href="Kinstrife.UI.AssetSelectViewModel-1.html#Kinstrife_UI_AssetSelectViewModel_1_hasActiveState">AssetSelectViewModel&lt;ConfigData&gt;.hasActiveState</a>
+    </div>
+    <div>
       <a class="xref" href="Kinstrife.UI.AssetSelectViewModel-1.html#Kinstrife_UI_AssetSelectViewModel_1_onSelectItem">AssetSelectViewModel&lt;ConfigData&gt;.onSelectItem</a>
     </div>
     <div>
@@ -119,13 +123,25 @@
       <a class="xref" href="Kinstrife.UI.AssetSelectViewModel-1.html#Kinstrife_UI_AssetSelectViewModel_1_Initialize_VisualElement_Plate_">AssetSelectViewModel&lt;ConfigData&gt;.Initialize(VisualElement, Plate)</a>
     </div>
     <div>
-      <a class="xref" href="Kinstrife.UI.AssetSelectViewModel-1.html#Kinstrife_UI_AssetSelectViewModel_1_OnSelectEntry__0_">AssetSelectViewModel&lt;ConfigData&gt;.OnSelectEntry(ConfigData)</a>
+      <a class="xref" href="Kinstrife.UI.AssetSelectViewModel-1.html#Kinstrife_UI_AssetSelectViewModel_1_RefreshSourceData">AssetSelectViewModel&lt;ConfigData&gt;.RefreshSourceData()</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.UI.AssetSelectViewModel-1.html#Kinstrife_UI_AssetSelectViewModel_1_OnSelectEntry_System_Int32__0_">AssetSelectViewModel&lt;ConfigData&gt;.OnSelectEntry(Int32, ConfigData)</a>
     </div>
     <div>
       <a class="xref" href="Kinstrife.UI.AssetSelectViewModel-1.html#Kinstrife_UI_AssetSelectViewModel_1_LoadSourceData_System_Boolean_">AssetSelectViewModel&lt;ConfigData&gt;.LoadSourceData(Boolean)</a>
     </div>
     <div>
+      <a class="xref" href="Kinstrife.UI.AssetSelectViewModel-1.html#Kinstrife_UI_AssetSelectViewModel_1_RefreshActiveState">AssetSelectViewModel&lt;ConfigData&gt;.RefreshActiveState()</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.UI.AssetSelectViewModel-1.html#Kinstrife_UI_AssetSelectViewModel_1_EntryIsActive_System_Int32__0_">AssetSelectViewModel&lt;ConfigData&gt;.EntryIsActive(Int32, ConfigData)</a>
+    </div>
+    <div>
       <a class="xref" href="Kinstrife.UI.AssetSelectViewModel-1.html#Kinstrife_UI_AssetSelectViewModel_1_InitItem_System_Int32__0_ContextBindableObject_">AssetSelectViewModel&lt;ConfigData&gt;.InitItem(Int32, ConfigData, ContextBindableObject)</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.UI.AssetSelectViewModel-1.html#Kinstrife_UI_AssetSelectViewModel_1_PostInitializeItems">AssetSelectViewModel&lt;ConfigData&gt;.PostInitializeItems()</a>
     </div>
     <div>
       <a class="xref" href="Kinstrife.UI.AssetSelectViewModel-1.html#Kinstrife_UI_AssetSelectViewModel_1_ValidateItem__0_">AssetSelectViewModel&lt;ConfigData&gt;.ValidateItem(ConfigData)</a>
@@ -135,6 +151,9 @@
     </div>
     <div>
       <a class="xref" href="Kinstrife.UI.AssetSelectViewModel.html#Kinstrife_UI_AssetSelectViewModel_data">AssetSelectViewModel.data</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.UI.AssetSelectViewModel.html#Kinstrife_UI_AssetSelectViewModel_onSelectObject">AssetSelectViewModel.onSelectObject</a>
     </div>
     <div>
       <a class="xref" href="Kinstrife.UI.ViewModelComponent.html#Kinstrife_UI_ViewModelComponent_Title">ViewModelComponent.Title</a>
@@ -150,7 +169,7 @@
   <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
   <h5 id="Kinstrife_UI_ConfigSelectViewModel_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class ConfigSelectViewModel : AssetSelectViewModelAddressable&lt;ConfigData&gt;</code></pre>
+    <pre><code class="lang-csharp hljs">public class ConfigSelectViewModel : AssetSelectViewModelAddressable&lt;ConfigData&gt;, IInitializable, IDependent</code></pre>
   </div>
   <h3 id="constructors">Constructors
   </h3>
@@ -169,7 +188,10 @@
       <span class="xref">IModel</span>
   </div>
   <div>
-      <span class="xref">IInitializable</span>
+      <a class="xref" href="Kinstrife.Core.DependencyInjection.IInitializable.html">IInitializable</a>
+  </div>
+  <div>
+      <a class="xref" href="Kinstrife.Core.DependencyInjection.IDependent.html">IDependent</a>
   </div>
 </article>
           </div>
