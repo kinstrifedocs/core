@@ -181,7 +181,7 @@ public class RTPCRangeSetting : AudioSettingRemap</code></pre>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static float RemapClamped(float aIn1, float aIn2, float aOut1, float aOut2, float aValue)</code></pre>
+    <pre><code class="lang-csharp hljs">public static float RemapClamped(float inMin, float inMax, float outMin, float outMax, float inValue)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -195,27 +195,27 @@ public class RTPCRangeSetting : AudioSettingRemap</code></pre>
     <tbody>
       <tr>
         <td><span class="xref">System.Single</span></td>
-        <td><span class="parametername">aIn1</span></td>
+        <td><span class="parametername">inMin</span></td>
         <td></td>
       </tr>
       <tr>
         <td><span class="xref">System.Single</span></td>
-        <td><span class="parametername">aIn2</span></td>
+        <td><span class="parametername">inMax</span></td>
         <td></td>
       </tr>
       <tr>
         <td><span class="xref">System.Single</span></td>
-        <td><span class="parametername">aOut1</span></td>
+        <td><span class="parametername">outMin</span></td>
         <td></td>
       </tr>
       <tr>
         <td><span class="xref">System.Single</span></td>
-        <td><span class="parametername">aOut2</span></td>
+        <td><span class="parametername">outMax</span></td>
         <td></td>
       </tr>
       <tr>
         <td><span class="xref">System.Single</span></td>
-        <td><span class="parametername">aValue</span></td>
+        <td><span class="parametername">inValue</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -238,12 +238,12 @@ public class RTPCRangeSetting : AudioSettingRemap</code></pre>
   
   
   <a id="Kinstrife_Audio_RTPCRangeSetting_SetVariable_" data-uid="Kinstrife.Audio.RTPCRangeSetting.SetVariable*"></a>
-  <h4 id="Kinstrife_Audio_RTPCRangeSetting_SetVariable_Kinstrife_Audio_Audio_AudioRequest__System_Single_" data-uid="Kinstrife.Audio.RTPCRangeSetting.SetVariable(Kinstrife.Audio.Audio.AudioRequest@,System.Single)">SetVariable(ref Audio.AudioRequest, Single)</h4>
+  <h4 id="Kinstrife_Audio_RTPCRangeSetting_SetVariable_Kinstrife_Audio_AudioRequest__System_Single_" data-uid="Kinstrife.Audio.RTPCRangeSetting.SetVariable(Kinstrife.Audio.AudioRequest@,System.Single)">SetVariable(ref AudioRequest, Single)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public override void SetVariable(ref Audio.AudioRequest request, float input)</code></pre>
+    <pre><code class="lang-csharp hljs">public override void SetVariable(ref AudioRequest request, float input)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -256,7 +256,7 @@ public class RTPCRangeSetting : AudioSettingRemap</code></pre>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="Kinstrife.Audio.Audio.AudioRequest.html">Audio.AudioRequest</a></td>
+        <td><a class="xref" href="Kinstrife.Audio.AudioRequest.html">AudioRequest</a></td>
         <td><span class="parametername">request</span></td>
         <td></td>
       </tr>
@@ -268,7 +268,7 @@ public class RTPCRangeSetting : AudioSettingRemap</code></pre>
     </tbody>
   </table>
   <h5 class="overrides">Overrides</h5>
-  <div><a class="xref" href="Kinstrife.Audio.AudioSettingControl.html#Kinstrife_Audio_AudioSettingControl_SetVariable_Kinstrife_Audio_Audio_AudioRequest__System_Single_">AudioSettingControl.SetVariable(ref Audio.AudioRequest, Single)</a></div>
+  <div><a class="xref" href="Kinstrife.Audio.AudioSettingControl.html#Kinstrife_Audio_AudioSettingControl_SetVariable_Kinstrife_Audio_AudioRequest__System_Single_">AudioSettingControl.SetVariable(ref AudioRequest, Single)</a></div>
   
   
   <a id="Kinstrife_Audio_RTPCRangeSetting_SetVariable_" data-uid="Kinstrife.Audio.RTPCRangeSetting.SetVariable*"></a>
