@@ -89,8 +89,35 @@
   <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
   <h5 id="Kinstrife_Interaction_InteractionSystem_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class InteractionSystem : ComponentSystem, IInjectable, IDependent</code></pre>
+    <pre><code class="lang-csharp hljs">public class InteractionSystem : MonoBehaviour, IInjectable, IDependent</code></pre>
   </div>
+  <h3 id="properties">Properties
+  </h3>
+  
+  
+  <a id="Kinstrife_Interaction_InteractionSystem_ElapsedTime_" data-uid="Kinstrife.Interaction.InteractionSystem.ElapsedTime*"></a>
+  <h4 id="Kinstrife_Interaction_InteractionSystem_ElapsedTime" data-uid="Kinstrife.Interaction.InteractionSystem.ElapsedTime">ElapsedTime</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public double ElapsedTime { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Double</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   <h3 id="methods">Methods
   </h3>
   
@@ -123,13 +150,30 @@
   
   
   <a id="Kinstrife_Interaction_InteractionSystem_OnUpdate_" data-uid="Kinstrife.Interaction.InteractionSystem.OnUpdate*"></a>
-  <h4 id="Kinstrife_Interaction_InteractionSystem_OnUpdate" data-uid="Kinstrife.Interaction.InteractionSystem.OnUpdate">OnUpdate()</h4>
+  <h4 id="Kinstrife_Interaction_InteractionSystem_OnUpdate_Kinstrife_Interaction_InteractionProcedureBehaviour_" data-uid="Kinstrife.Interaction.InteractionSystem.OnUpdate(Kinstrife.Interaction.InteractionProcedureBehaviour)">OnUpdate(InteractionProcedureBehaviour)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected override void OnUpdate()</code></pre>
+    <pre><code class="lang-csharp hljs">public void OnUpdate(InteractionProcedureBehaviour behaviour)</code></pre>
   </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Kinstrife.Interaction.InteractionProcedureBehaviour.html">InteractionProcedureBehaviour</a></td>
+        <td><span class="parametername">behaviour</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   
   
   <a id="Kinstrife_Interaction_InteractionSystem_ReleaseInteraction_" data-uid="Kinstrife.Interaction.InteractionSystem.ReleaseInteraction*"></a>
@@ -187,12 +231,12 @@
   
   
   <a id="Kinstrife_Interaction_InteractionSystem_TryFindNewTarget_" data-uid="Kinstrife.Interaction.InteractionSystem.TryFindNewTarget*"></a>
-  <h4 id="Kinstrife_Interaction_InteractionSystem_TryFindNewTarget_Ray__LayerMask__System_Single_Kinstrife_Interaction_InteractInputStates__Kinstrife_Core_Interaction_Hax_InteractionTargetResults_Kinstrife_Interaction_InteractionTargetFetchMode__" data-uid="Kinstrife.Interaction.InteractionSystem.TryFindNewTarget(Ray@,LayerMask@,System.Single,Kinstrife.Interaction.InteractInputStates@,Kinstrife.Core.Interaction.Hax.InteractionTargetResults,Kinstrife.Interaction.InteractionTargetFetchMode@)">TryFindNewTarget(in Ray, in LayerMask, Single, in InteractInputStates, InteractionTargetResults, in InteractionTargetFetchMode)</h4>
+  <h4 id="Kinstrife_Interaction_InteractionSystem_TryFindNewTarget_Kinstrife_Interaction_InteractionProcedureBehaviour__Kinstrife_Core_Interaction_Hax_InteractionRaySettings_Kinstrife_Core_Interaction_Hax_InteractionTargetResults_Kinstrife_Interaction_InteractionTargetFetchMode__" data-uid="Kinstrife.Interaction.InteractionSystem.TryFindNewTarget(Kinstrife.Interaction.InteractionProcedureBehaviour@,Kinstrife.Core.Interaction.Hax.InteractionRaySettings,Kinstrife.Core.Interaction.Hax.InteractionTargetResults,Kinstrife.Interaction.InteractionTargetFetchMode@)">TryFindNewTarget(in InteractionProcedureBehaviour, InteractionRaySettings, InteractionTargetResults, in InteractionTargetFetchMode)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void TryFindNewTarget(in Ray ray, in LayerMask layerMask, float maxDistance, in InteractInputStates inputState, InteractionTargetResults results, in InteractionTargetFetchMode targetFetchMode)</code></pre>
+    <pre><code class="lang-csharp hljs">public void TryFindNewTarget(in InteractionProcedureBehaviour behaviour, InteractionRaySettings settings, InteractionTargetResults results, in InteractionTargetFetchMode targetFetchMode)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -205,23 +249,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Ray</span></td>
-        <td><span class="parametername">ray</span></td>
+        <td><a class="xref" href="Kinstrife.Interaction.InteractionProcedureBehaviour.html">InteractionProcedureBehaviour</a></td>
+        <td><span class="parametername">behaviour</span></td>
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">LayerMask</span></td>
-        <td><span class="parametername">layerMask</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><span class="xref">System.Single</span></td>
-        <td><span class="parametername">maxDistance</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="Kinstrife.Interaction.InteractInputStates.html">InteractInputStates</a></td>
-        <td><span class="parametername">inputState</span></td>
+        <td><a class="xref" href="Kinstrife.Core.Interaction.Hax.InteractionRaySettings.html">InteractionRaySettings</a></td>
+        <td><span class="parametername">settings</span></td>
         <td></td>
       </tr>
       <tr>
@@ -245,7 +279,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public event Action&lt;InteractionTargetResults&gt; OnInteractStateChanged</code></pre>
+    <pre><code class="lang-csharp hljs">public event Action&lt;InteractionProcedureBehaviour&gt; OnInteractStateChanged</code></pre>
   </div>
   <h5 class="eventType">Event Type</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -257,7 +291,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Action</span>&lt;<a class="xref" href="Kinstrife.Core.Interaction.Hax.InteractionTargetResults.html">InteractionTargetResults</a>&gt;</td>
+        <td><span class="xref">System.Action</span>&lt;<a class="xref" href="Kinstrife.Interaction.InteractionProcedureBehaviour.html">InteractionProcedureBehaviour</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>

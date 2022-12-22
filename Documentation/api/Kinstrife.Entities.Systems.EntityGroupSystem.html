@@ -115,12 +115,12 @@
   
   
   <a id="Kinstrife_Entities_Systems_EntityGroupSystem_CreateGroup_" data-uid="Kinstrife.Entities.Systems.EntityGroupSystem.CreateGroup*"></a>
-  <h4 id="Kinstrife_Entities_Systems_EntityGroupSystem_CreateGroup_EntityQuery_JobHandle_" data-uid="Kinstrife.Entities.Systems.EntityGroupSystem.CreateGroup(EntityQuery,JobHandle)">CreateGroup(EntityQuery, JobHandle)</h4>
+  <h4 id="Kinstrife_Entities_Systems_EntityGroupSystem_CreateGroup_EntityQuery_JobHandle_Entity__" data-uid="Kinstrife.Entities.Systems.EntityGroupSystem.CreateGroup(EntityQuery,JobHandle,Entity@)">CreateGroup(EntityQuery, JobHandle, out Entity)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public JobHandle CreateGroup(EntityQuery query, JobHandle inputDeps)</code></pre>
+    <pre><code class="lang-csharp hljs">public JobHandle CreateGroup(EntityQuery query, JobHandle inputDeps, out Entity groupEntity)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -142,6 +142,11 @@
         <td><span class="parametername">inputDeps</span></td>
         <td></td>
       </tr>
+      <tr>
+        <td><span class="xref">Entity</span></td>
+        <td><span class="parametername">groupEntity</span></td>
+        <td></td>
+      </tr>
     </tbody>
   </table>
   <h5 class="returns">Returns</h5>
@@ -155,6 +160,48 @@
     <tbody>
       <tr>
         <td><span class="xref">JobHandle</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Kinstrife_Entities_Systems_EntityGroupSystem_CreateGroupFromQuery_" data-uid="Kinstrife.Entities.Systems.EntityGroupSystem.CreateGroupFromQuery*"></a>
+  <h4 id="Kinstrife_Entities_Systems_EntityGroupSystem_CreateGroupFromQuery_ComponentType___" data-uid="Kinstrife.Entities.Systems.EntityGroupSystem.CreateGroupFromQuery(ComponentType[])">CreateGroupFromQuery(ComponentType[])</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Entity CreateGroupFromQuery(params ComponentType[] types)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">ComponentType</span>[]</td>
+        <td><span class="parametername">types</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Entity</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -214,13 +261,13 @@
   </table>
   
   
-  <a id="Kinstrife_Entities_Systems_EntityGroupSystem_InitEntityInGroup_" data-uid="Kinstrife.Entities.Systems.EntityGroupSystem.InitEntityInGroup*"></a>
-  <h4 id="Kinstrife_Entities_Systems_EntityGroupSystem_InitEntityInGroup_System_Int32_Entity_Kinstrife_Entities_EntityGroup_EntityCommandBuffer_ParallelWriter_" data-uid="Kinstrife.Entities.Systems.EntityGroupSystem.InitEntityInGroup(System.Int32,Entity,Kinstrife.Entities.EntityGroup,EntityCommandBuffer.ParallelWriter)">InitEntityInGroup(Int32, Entity, EntityGroup, EntityCommandBuffer.ParallelWriter)</h4>
+  <a id="Kinstrife_Entities_Systems_EntityGroupSystem_DestroyGroup_" data-uid="Kinstrife.Entities.Systems.EntityGroupSystem.DestroyGroup*"></a>
+  <h4 id="Kinstrife_Entities_Systems_EntityGroupSystem_DestroyGroup_Entity_" data-uid="Kinstrife.Entities.Systems.EntityGroupSystem.DestroyGroup(Entity)">DestroyGroup(Entity)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static void InitEntityInGroup(int entityInQueryIndex, Entity e, EntityGroup Group, EntityCommandBuffer.ParallelWriter CommandBuffer)</code></pre>
+    <pre><code class="lang-csharp hljs">public void DestroyGroup(Entity group)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -233,23 +280,8 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Int32</span></td>
-        <td><span class="parametername">entityInQueryIndex</span></td>
-        <td></td>
-      </tr>
-      <tr>
         <td><span class="xref">Entity</span></td>
-        <td><span class="parametername">e</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="Kinstrife.Entities.EntityGroup.html">EntityGroup</a></td>
-        <td><span class="parametername">Group</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><span class="xref">EntityCommandBuffer.ParallelWriter</span></td>
-        <td><span class="parametername">CommandBuffer</span></td>
+        <td><span class="parametername">group</span></td>
         <td></td>
       </tr>
     </tbody>

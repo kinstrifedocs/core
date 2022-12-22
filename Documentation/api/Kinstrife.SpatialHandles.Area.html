@@ -94,7 +94,7 @@
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
     <div>
-      <a class="xref" href="Kinstrife.SpatialHandles.SpatialContainer.html#Kinstrife_SpatialHandles_SpatialContainer_children">SpatialContainer.children</a>
+      <a class="xref" href="Kinstrife.SpatialHandles.SpatialContainer.html#Kinstrife_SpatialHandles_SpatialContainer_childHandles">SpatialContainer.childHandles</a>
     </div>
     <div>
       <a class="xref" href="Kinstrife.SpatialHandles.SpatialContainer.html#Kinstrife_SpatialHandles_SpatialContainer_Prio">SpatialContainer.Prio</a>
@@ -121,6 +121,9 @@
       <a class="xref" href="Kinstrife.SpatialHandles.SpatialHandle.html#Kinstrife_SpatialHandles_SpatialHandle_FreeCapacity">SpatialHandle.FreeCapacity</a>
     </div>
     <div>
+      <a class="xref" href="Kinstrife.SpatialHandles.SpatialHandle.html#Kinstrife_SpatialHandles_SpatialHandle_childCount">SpatialHandle.childCount</a>
+    </div>
+    <div>
       <a class="xref" href="Kinstrife.SpatialHandles.SpatialHandle.html#Kinstrife_SpatialHandles_SpatialHandle_CapacityStatus">SpatialHandle.CapacityStatus</a>
     </div>
     <div>
@@ -133,10 +136,13 @@
       <a class="xref" href="Kinstrife.SpatialHandles.SpatialHandle.html#Kinstrife_SpatialHandles_SpatialHandle_CacheReferences">SpatialHandle.CacheReferences()</a>
     </div>
     <div>
-      <a class="xref" href="Kinstrife.SpatialHandles.SpatialHandle.html#Kinstrife_SpatialHandles_SpatialHandle_OnDestroy">SpatialHandle.OnDestroy()</a>
+      <a class="xref" href="Kinstrife.SpatialHandles.SpatialHandle.html#Kinstrife_SpatialHandles_SpatialHandle_GetCapacityStatus">SpatialHandle.GetCapacityStatus()</a>
     </div>
     <div>
-      <a class="xref" href="Kinstrife.SpatialHandles.SpatialHandle.html#Kinstrife_SpatialHandles_SpatialHandle_GetCapacityStatus">SpatialHandle.GetCapacityStatus()</a>
+      <a class="xref" href="Kinstrife.SpatialHandles.SpatialHandle.html#Kinstrife_SpatialHandles_SpatialHandle_SetChild_Transform_">SpatialHandle.SetChild(Transform)</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.SpatialHandles.SpatialHandle.html#Kinstrife_SpatialHandles_SpatialHandle_ReleaseChild_Transform_">SpatialHandle.ReleaseChild(Transform)</a>
     </div>
     <div>
       <a class="xref" href="Kinstrife.SpatialHandles.SpatialHandle.html#Kinstrife_SpatialHandles_SpatialHandle_GetRotation">SpatialHandle.GetRotation()</a>
@@ -150,30 +156,6 @@
   </div>
   <h3 id="fields">Fields
   </h3>
-  
-  
-  <h4 id="Kinstrife_SpatialHandles_Area_plane" data-uid="Kinstrife.SpatialHandles.Area.plane">plane</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Vector3 plane</code></pre>
-  </div>
-  <h5 class="fieldValue">Field Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">Vector3</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
   
   
   <h4 id="Kinstrife_SpatialHandles_Area_radius" data-uid="Kinstrife.SpatialHandles.Area.radius">radius</h4>
@@ -227,6 +209,56 @@
   </table>
   <h5 class="overrides">Overrides</h5>
   <div><a class="xref" href="Kinstrife.SpatialHandles.SpatialContainer.html#Kinstrife_SpatialHandles_SpatialContainer_Capacity">SpatialContainer.Capacity</a></div>
+  
+  
+  <a id="Kinstrife_SpatialHandles_Area_Color_" data-uid="Kinstrife.SpatialHandles.Area.Color*"></a>
+  <h4 id="Kinstrife_SpatialHandles_Area_Color" data-uid="Kinstrife.SpatialHandles.Area.Color">Color</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Color Color { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Color</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Kinstrife_SpatialHandles_Area_plane_" data-uid="Kinstrife.SpatialHandles.Area.plane*"></a>
+  <h4 id="Kinstrife_SpatialHandles_Area_plane" data-uid="Kinstrife.SpatialHandles.Area.plane">plane</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Vector3 plane { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Vector3</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   
   
   <a id="Kinstrife_SpatialHandles_Area_Radius_" data-uid="Kinstrife.SpatialHandles.Area.Radius*"></a>
@@ -379,6 +411,18 @@
       </tr>
     </tbody>
   </table>
+  
+  
+  <a id="Kinstrife_SpatialHandles_Area_OnDestroy_" data-uid="Kinstrife.SpatialHandles.Area.OnDestroy*"></a>
+  <h4 id="Kinstrife_SpatialHandles_Area_OnDestroy" data-uid="Kinstrife.SpatialHandles.Area.OnDestroy">OnDestroy()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override void OnDestroy()</code></pre>
+  </div>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Kinstrife.SpatialHandles.SpatialHandle.html#Kinstrife_SpatialHandles_SpatialHandle_OnDestroy">SpatialHandle.OnDestroy()</a></div>
   
   
   <a id="Kinstrife_SpatialHandles_Area_OnEnable_" data-uid="Kinstrife.SpatialHandles.Area.OnEnable*"></a>

@@ -659,13 +659,13 @@ The only reason why this is currently a MonoBehaviour is because it requires Sta
   </div>
   
   
-  <a id="Kinstrife_Application_ApplicationFlow_SwitchLocation_" data-uid="Kinstrife.Application.ApplicationFlow.SwitchLocation*"></a>
-  <h4 id="Kinstrife_Application_ApplicationFlow_SwitchLocation_Kinstrife_Application_Location_System_Boolean_" data-uid="Kinstrife.Application.ApplicationFlow.SwitchLocation(Kinstrife.Application.Location,System.Boolean)">SwitchLocation(Location, Boolean)</h4>
+  <a id="Kinstrife_Application_ApplicationFlow_ScheduleSwitchLocation_" data-uid="Kinstrife.Application.ApplicationFlow.ScheduleSwitchLocation*"></a>
+  <h4 id="Kinstrife_Application_ApplicationFlow_ScheduleSwitchLocation_Kinstrife_Application_Location_" data-uid="Kinstrife.Application.ApplicationFlow.ScheduleSwitchLocation(Kinstrife.Application.Location)">ScheduleSwitchLocation(Location)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public async void SwitchLocation(Location location, bool immediate)</code></pre>
+    <pre><code class="lang-csharp hljs">public void ScheduleSwitchLocation(Location location)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -682,9 +682,46 @@ The only reason why this is currently a MonoBehaviour is because it requires Sta
         <td><span class="parametername">location</span></td>
         <td></td>
       </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Kinstrife_Application_ApplicationFlow_SwitchLocation_" data-uid="Kinstrife.Application.ApplicationFlow.SwitchLocation*"></a>
+  <h4 id="Kinstrife_Application_ApplicationFlow_SwitchLocation_Kinstrife_Application_Location_" data-uid="Kinstrife.Application.ApplicationFlow.SwitchLocation(Kinstrife.Application.Location)">SwitchLocation(Location)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public async UniTask SwitchLocation(Location location)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
       <tr>
-        <td><span class="xref">System.Boolean</span></td>
-        <td><span class="parametername">immediate</span></td>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Kinstrife.Application.Location.html">Location</a></td>
+        <td><span class="parametername">location</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">UniTask</span></td>
         <td></td>
       </tr>
     </tbody>

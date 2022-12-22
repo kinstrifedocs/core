@@ -91,100 +91,17 @@
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public class MouseToScreenSelectionSystem : SystemBase, IInjectable, IDependent</code></pre>
   </div>
-  <h3 id="fields">Fields
-  </h3>
-  
-  
-  <h4 id="Kinstrife_Entities_MouseToScreenSelectionSystem_MAX_BATCH_SIZE" data-uid="Kinstrife.Entities.MouseToScreenSelectionSystem.MAX_BATCH_SIZE">MAX_BATCH_SIZE</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public const int MAX_BATCH_SIZE = 1023</code></pre>
-  </div>
-  <h5 class="fieldValue">Field Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Int32</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
   <h3 id="methods">Methods
   </h3>
   
   
-  <a id="Kinstrife_Entities_MouseToScreenSelectionSystem_BatchedRaycast_" data-uid="Kinstrife.Entities.MouseToScreenSelectionSystem.BatchedRaycast*"></a>
-  <h4 id="Kinstrife_Entities_MouseToScreenSelectionSystem_BatchedRaycast_JobHandle_NativeArray_RaycastCommand___NativeArray_RaycastHit___System_Int32_" data-uid="Kinstrife.Entities.MouseToScreenSelectionSystem.BatchedRaycast(JobHandle,NativeArray{RaycastCommand}@,NativeArray{RaycastHit}@,System.Int32)">BatchedRaycast(JobHandle, in NativeArray&lt;RaycastCommand&gt;, ref NativeArray&lt;RaycastHit&gt;, Int32)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static JobHandle BatchedRaycast(JobHandle inputDeps, in NativeArray&lt;RaycastCommand&gt; rayCastCommands, ref NativeArray&lt;RaycastHit&gt; raycastHits, int maxBatchSize)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">JobHandle</span></td>
-        <td><span class="parametername">inputDeps</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><span class="xref">NativeArray</span>&lt;<span class="xref">RaycastCommand</span>&gt;</td>
-        <td><span class="parametername">rayCastCommands</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><span class="xref">NativeArray</span>&lt;<span class="xref">RaycastHit</span>&gt;</td>
-        <td><span class="parametername">raycastHits</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><span class="xref">System.Int32</span></td>
-        <td><span class="parametername">maxBatchSize</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">JobHandle</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
   <a id="Kinstrife_Entities_MouseToScreenSelectionSystem_Inject_" data-uid="Kinstrife.Entities.MouseToScreenSelectionSystem.Inject*"></a>
-  <h4 id="Kinstrife_Entities_MouseToScreenSelectionSystem_Inject_Kinstrife_Core_Config_EntitySelectionConfig_Kinstrife_Entities_Systems_EntitySelectionSystem_DragSelection_Kinstrife_Entities_Systems_EntityGroupSystem_Kinstrife_Messaging_ISubscriber_Kinstrife_Core_Input_InputFocusState__" data-uid="Kinstrife.Entities.MouseToScreenSelectionSystem.Inject(Kinstrife.Core.Config.EntitySelectionConfig,Kinstrife.Entities.Systems.EntitySelectionSystem,DragSelection,Kinstrife.Entities.Systems.EntityGroupSystem,Kinstrife.Messaging.ISubscriber{Kinstrife.Core.Input.InputFocusState})">Inject(EntitySelectionConfig, EntitySelectionSystem, DragSelection, EntityGroupSystem, ISubscriber&lt;InputFocusState&gt;)</h4>
+  <h4 id="Kinstrife_Entities_MouseToScreenSelectionSystem_Inject_Kinstrife_Core_Config_EntitySelectionConfig_Kinstrife_Entities_Systems_EntitySelectionSystem_Kinstrife_Entities_Systems_EntityGroupSystem_Kinstrife_Messaging_ISubscriber_Kinstrife_Core_Input_InputFocusState__" data-uid="Kinstrife.Entities.MouseToScreenSelectionSystem.Inject(Kinstrife.Core.Config.EntitySelectionConfig,Kinstrife.Entities.Systems.EntitySelectionSystem,Kinstrife.Entities.Systems.EntityGroupSystem,Kinstrife.Messaging.ISubscriber{Kinstrife.Core.Input.InputFocusState})">Inject(EntitySelectionConfig, EntitySelectionSystem, EntityGroupSystem, ISubscriber&lt;InputFocusState&gt;)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void Inject(EntitySelectionConfig entitySelectionConfig, EntitySelectionSystem EntitySelectionSystem, DragSelection dragSelection, EntityGroupSystem EntityGroupSystem, ISubscriber&lt;InputFocusState&gt; inputFocusSubscriber)</code></pre>
+    <pre><code class="lang-csharp hljs">public void Inject(EntitySelectionConfig entitySelectionConfig, EntitySelectionSystem EntitySelectionSystem, EntityGroupSystem EntityGroupSystem, ISubscriber&lt;InputFocusState&gt; inputFocusSubscriber)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -204,11 +121,6 @@
       <tr>
         <td><a class="xref" href="Kinstrife.Entities.Systems.EntitySelectionSystem.html">EntitySelectionSystem</a></td>
         <td><span class="parametername">EntitySelectionSystem</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><span class="xref">DragSelection</span></td>
-        <td><span class="parametername">dragSelection</span></td>
         <td></td>
       </tr>
       <tr>

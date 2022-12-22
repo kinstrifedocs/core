@@ -339,6 +339,64 @@
   </table>
   
   
+  <a id="Kinstrife_Core_GameState_GameState_CreateQuery_" data-uid="Kinstrife.Core.GameState.GameState.CreateQuery*"></a>
+  <h4 id="Kinstrife_Core_GameState_GameState_CreateQuery__1_ComponentType___" data-uid="Kinstrife.Core.GameState.GameState.CreateQuery``1(ComponentType[])">CreateQuery&lt;T&gt;(ComponentType[])</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IEnumerable&lt;T&gt; CreateQuery&lt;T&gt;(ComponentType[] types)
+    where T : class, IPersistentComponent</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">ComponentType</span>[]</td>
+        <td><span class="parametername">types</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;T&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
   <a id="Kinstrife_Core_GameState_GameState_Deserialize_" data-uid="Kinstrife.Core.GameState.GameState.Deserialize*"></a>
   <h4 id="Kinstrife_Core_GameState_GameState_Deserialize_System_Byte___Kinstrife_Database_DatabaseAccessor_" data-uid="Kinstrife.Core.GameState.GameState.Deserialize(System.Byte[],Kinstrife.Database.DatabaseAccessor)">Deserialize(Byte[], DatabaseAccessor)</h4>
   <div class="markdown level1 summary"></div>
@@ -543,6 +601,58 @@
     <tbody>
       <tr>
         <td><span class="parametername">T</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Kinstrife_Core_GameState_GameState_GetComponentsOfType_" data-uid="Kinstrife.Core.GameState.GameState.GetComponentsOfType*"></a>
+  <h4 id="Kinstrife_Core_GameState_GameState_GetComponentsOfType__2_System_Collections_Generic_IList___0___System_Collections_Generic_IList___1___" data-uid="Kinstrife.Core.GameState.GameState.GetComponentsOfType``2(System.Collections.Generic.IList{``0}@,System.Collections.Generic.IList{``1}@)">GetComponentsOfType&lt;T, U&gt;(out IList&lt;T&gt;, out IList&lt;U&gt;)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void GetComponentsOfType&lt;T, U&gt;(out IList&lt;T&gt; a, out IList&lt;U&gt; b)
+    where T : class, IPersistentComponent where U : class, IPersistentComponent</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IList</span>&lt;T&gt;</td>
+        <td><span class="parametername">a</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IList</span>&lt;U&gt;</td>
+        <td><span class="parametername">b</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="parametername">U</span></td>
         <td></td>
       </tr>
     </tbody>
