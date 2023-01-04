@@ -96,12 +96,12 @@
   
   
   <a id="Kinstrife_Entities_MouseToScreenSelectionSystem_Inject_" data-uid="Kinstrife.Entities.MouseToScreenSelectionSystem.Inject*"></a>
-  <h4 id="Kinstrife_Entities_MouseToScreenSelectionSystem_Inject_Kinstrife_Core_Config_EntitySelectionConfig_Kinstrife_Entities_Systems_EntitySelectionSystem_Kinstrife_Entities_Systems_EntityGroupSystem_Kinstrife_Messaging_ISubscriber_Kinstrife_Core_Input_InputFocusState__" data-uid="Kinstrife.Entities.MouseToScreenSelectionSystem.Inject(Kinstrife.Core.Config.EntitySelectionConfig,Kinstrife.Entities.Systems.EntitySelectionSystem,Kinstrife.Entities.Systems.EntityGroupSystem,Kinstrife.Messaging.ISubscriber{Kinstrife.Core.Input.InputFocusState})">Inject(EntitySelectionConfig, EntitySelectionSystem, EntityGroupSystem, ISubscriber&lt;InputFocusState&gt;)</h4>
+  <h4 id="Kinstrife_Entities_MouseToScreenSelectionSystem_Inject_Kinstrife_Core_Config_EntitySelectionConfig_Kinstrife_Entities_Systems_EntitySelectionSystem_Kinstrife_Entities_Systems_EntityGroupSystem_Kinstrife_Core_Input_AreaSelection_" data-uid="Kinstrife.Entities.MouseToScreenSelectionSystem.Inject(Kinstrife.Core.Config.EntitySelectionConfig,Kinstrife.Entities.Systems.EntitySelectionSystem,Kinstrife.Entities.Systems.EntityGroupSystem,Kinstrife.Core.Input.AreaSelection)">Inject(EntitySelectionConfig, EntitySelectionSystem, EntityGroupSystem, AreaSelection)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void Inject(EntitySelectionConfig entitySelectionConfig, EntitySelectionSystem EntitySelectionSystem, EntityGroupSystem EntityGroupSystem, ISubscriber&lt;InputFocusState&gt; inputFocusSubscriber)</code></pre>
+    <pre><code class="lang-csharp hljs">public void Inject(EntitySelectionConfig entitySelectionConfig, EntitySelectionSystem EntitySelectionSystem, EntityGroupSystem EntityGroupSystem, AreaSelection selection)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -129,8 +129,8 @@
         <td></td>
       </tr>
       <tr>
-        <td><a class="xref" href="Kinstrife.Messaging.ISubscriber-1.html">ISubscriber</a>&lt;<a class="xref" href="Kinstrife.Core.Input.InputFocusState.html">InputFocusState</a>&gt;</td>
-        <td><span class="parametername">inputFocusSubscriber</span></td>
+        <td><a class="xref" href="Kinstrife.Core.Input.AreaSelection.html">AreaSelection</a></td>
+        <td><span class="parametername">selection</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -188,6 +188,33 @@
       <tr>
         <td><span class="xref">System.Boolean</span></td>
         <td><span class="parametername">active</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Kinstrife_Entities_MouseToScreenSelectionSystem_SetSelectionControl_" data-uid="Kinstrife.Entities.MouseToScreenSelectionSystem.SetSelectionControl*"></a>
+  <h4 id="Kinstrife_Entities_MouseToScreenSelectionSystem_SetSelectionControl_Kinstrife_Core_Input_AreaSelection_" data-uid="Kinstrife.Entities.MouseToScreenSelectionSystem.SetSelectionControl(Kinstrife.Core.Input.AreaSelection)">SetSelectionControl(AreaSelection)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetSelectionControl(AreaSelection selection)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Kinstrife.Core.Input.AreaSelection.html">AreaSelection</a></td>
+        <td><span class="parametername">selection</span></td>
         <td></td>
       </tr>
     </tbody>
