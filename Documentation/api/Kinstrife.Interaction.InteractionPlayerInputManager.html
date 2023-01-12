@@ -85,6 +85,8 @@
     <h5>Implements</h5>
     <div><a class="xref" href="Kinstrife.Core.DependencyInjection.IInjectable.html">IInjectable</a></div>
     <div><a class="xref" href="Kinstrife.Core.DependencyInjection.IInitializable.html">IInitializable</a></div>
+    <div><a class="xref" href="Kinstrife.Core.DependencyInjection.IInstall-1.html">IInstall</a>&lt;<a class="xref" href="Kinstrife.Interaction.InteractionPlayerInputManager.html">InteractionPlayerInputManager</a>&gt;</div>
+    <div><a class="xref" href="Kinstrife.Core.DependencyInjection.IInstall.html">IInstall</a></div>
     <div><a class="xref" href="Kinstrife.Core.DependencyInjection.IDependent.html">IDependent</a></div>
   </div>
   <div class="inheritedMembers">
@@ -124,10 +126,34 @@
   <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
   <h5 id="Kinstrife_Interaction_InteractionPlayerInputManager_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class InteractionPlayerInputManager : ModuleInputHandlerBase, IInjectable, IInitializable, IDependent</code></pre>
+    <pre><code class="lang-csharp hljs">public class InteractionPlayerInputManager : ModuleInputHandlerBase, IInjectable, IInitializable, IInstall&lt;InteractionPlayerInputManager&gt;, IInstall, IDependent</code></pre>
   </div>
   <h3 id="fields">Fields
   </h3>
+  
+  
+  <h4 id="Kinstrife_Interaction_InteractionPlayerInputManager_activeContext" data-uid="Kinstrife.Interaction.InteractionPlayerInputManager.activeContext">activeContext</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public InteractionSensor activeContext</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Kinstrife.Interaction.InteractionSensor.html">InteractionSensor</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   
   
   <h4 id="Kinstrife_Interaction_InteractionPlayerInputManager_baseDistance" data-uid="Kinstrife.Interaction.InteractionPlayerInputManager.baseDistance">baseDistance</h4>
@@ -202,30 +228,6 @@
   </table>
   
   
-  <h4 id="Kinstrife_Interaction_InteractionPlayerInputManager_playerInteraction" data-uid="Kinstrife.Interaction.InteractionPlayerInputManager.playerInteraction">playerInteraction</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public InteractionSensor playerInteraction</code></pre>
-  </div>
-  <h5 class="fieldValue">Field Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Kinstrife.Interaction.InteractionSensor.html">InteractionSensor</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
   <h4 id="Kinstrife_Interaction_InteractionPlayerInputManager_pointerOverGameObject" data-uid="Kinstrife.Interaction.InteractionPlayerInputManager.pointerOverGameObject">pointerOverGameObject</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
@@ -277,6 +279,16 @@
   </table>
   <h3 id="methods">Methods
   </h3>
+  
+  
+  <a id="Kinstrife_Interaction_InteractionPlayerInputManager_ClearInteractionContext_" data-uid="Kinstrife.Interaction.InteractionPlayerInputManager.ClearInteractionContext*"></a>
+  <h4 id="Kinstrife_Interaction_InteractionPlayerInputManager_ClearInteractionContext" data-uid="Kinstrife.Interaction.InteractionPlayerInputManager.ClearInteractionContext">ClearInteractionContext()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void ClearInteractionContext()</code></pre>
+  </div>
   
   
   <a id="Kinstrife_Interaction_InteractionPlayerInputManager_DisableInput_" data-uid="Kinstrife.Interaction.InteractionPlayerInputManager.DisableInput*"></a>
@@ -406,6 +418,33 @@
   </table>
   
   
+  <a id="Kinstrife_Interaction_InteractionPlayerInputManager_SetInteractionContext_" data-uid="Kinstrife.Interaction.InteractionPlayerInputManager.SetInteractionContext*"></a>
+  <h4 id="Kinstrife_Interaction_InteractionPlayerInputManager_SetInteractionContext_Kinstrife_Interaction_InteractionSensor_" data-uid="Kinstrife.Interaction.InteractionPlayerInputManager.SetInteractionContext(Kinstrife.Interaction.InteractionSensor)">SetInteractionContext(InteractionSensor)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetInteractionContext(InteractionSensor sensor)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Kinstrife.Interaction.InteractionSensor.html">InteractionSensor</a></td>
+        <td><span class="parametername">sensor</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
   <a id="Kinstrife_Interaction_InteractionPlayerInputManager_StartInteraction_" data-uid="Kinstrife.Interaction.InteractionPlayerInputManager.StartInteraction*"></a>
   <h4 id="Kinstrife_Interaction_InteractionPlayerInputManager_StartInteraction_Kinstrife_Interaction_InteractionSensor_Kinstrife_Interaction_InteractMode_" data-uid="Kinstrife.Interaction.InteractionPlayerInputManager.StartInteraction(Kinstrife.Interaction.InteractionSensor,Kinstrife.Interaction.InteractMode)">StartInteraction(InteractionSensor, InteractMode)</h4>
   <div class="markdown level1 summary"></div>
@@ -463,12 +502,50 @@
       </tr>
     </tbody>
   </table>
+  
+  
+  <a id="Kinstrife_Interaction_InteractionPlayerInputManager_ToggleInteraction_" data-uid="Kinstrife.Interaction.InteractionPlayerInputManager.ToggleInteraction*"></a>
+  <h4 id="Kinstrife_Interaction_InteractionPlayerInputManager_ToggleInteraction_Kinstrife_Interaction_InteractionSensor_Kinstrife_Interaction_InteractMode_" data-uid="Kinstrife.Interaction.InteractionPlayerInputManager.ToggleInteraction(Kinstrife.Interaction.InteractionSensor,Kinstrife.Interaction.InteractMode)">ToggleInteraction(InteractionSensor, InteractMode)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void ToggleInteraction(InteractionSensor behaviour, InteractMode mode)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Kinstrife.Interaction.InteractionSensor.html">InteractionSensor</a></td>
+        <td><span class="parametername">behaviour</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Kinstrife.Interaction.InteractMode.html">InteractMode</a></td>
+        <td><span class="parametername">mode</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   <h3 id="implements">Implements</h3>
   <div>
       <a class="xref" href="Kinstrife.Core.DependencyInjection.IInjectable.html">IInjectable</a>
   </div>
   <div>
       <a class="xref" href="Kinstrife.Core.DependencyInjection.IInitializable.html">IInitializable</a>
+  </div>
+  <div>
+      <a class="xref" href="Kinstrife.Core.DependencyInjection.IInstall-1.html">IInstall&lt;T&gt;</a>
+  </div>
+  <div>
+      <a class="xref" href="Kinstrife.Core.DependencyInjection.IInstall.html">IInstall</a>
   </div>
   <div>
       <a class="xref" href="Kinstrife.Core.DependencyInjection.IDependent.html">IDependent</a>

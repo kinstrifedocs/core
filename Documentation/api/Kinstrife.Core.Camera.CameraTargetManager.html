@@ -84,15 +84,13 @@
     <h5>Implements</h5>
     <div><a class="xref" href="Kinstrife.Core.DependencyInjection.IInjectable.html">IInjectable</a></div>
     <div><a class="xref" href="Kinstrife.Core.DependencyInjection.IInitializable.html">IInitializable</a></div>
-    <div><a class="xref" href="Kinstrife.Core.DependencyInjection.IInstall-1.html">IInstall</a>&lt;<a class="xref" href="Kinstrife.Core.Camera.CameraTargetManager.html">CameraTargetManager</a>&gt;</div>
-    <div><a class="xref" href="Kinstrife.Core.DependencyInjection.IInstall.html">IInstall</a></div>
     <div><a class="xref" href="Kinstrife.Core.DependencyInjection.IDependent.html">IDependent</a></div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Kinstrife.Core.Camera.html">Kinstrife.Core.Camera</a></h6>
   <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
   <h5 id="Kinstrife_Core_Camera_CameraTargetManager_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class CameraTargetManager : MonoBehaviour, IInjectable, IInitializable, IInstall&lt;CameraTargetManager&gt;, IInstall, IDependent</code></pre>
+    <pre><code class="lang-csharp hljs">public class CameraTargetManager : MonoBehaviour, IInjectable, IInitializable, IDependent</code></pre>
   </div>
   <h3 id="fields">Fields
   </h3>
@@ -147,6 +145,30 @@ public Transform currentTarget</code></pre>
   </table>
   
   
+  <h4 id="Kinstrife_Core_Camera_CameraTargetManager_followTargetConstraint" data-uid="Kinstrife.Core.Camera.CameraTargetManager.followTargetConstraint">followTargetConstraint</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public PositionConstraint followTargetConstraint</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">PositionConstraint</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
   <h4 id="Kinstrife_Core_Camera_CameraTargetManager_lookAtStartTransition" data-uid="Kinstrife.Core.Camera.CameraTargetManager.lookAtStartTransition">lookAtStartTransition</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
@@ -165,6 +187,30 @@ public Transform currentTarget</code></pre>
     <tbody>
       <tr>
         <td><span class="xref">float3</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="Kinstrife_Core_Camera_CameraTargetManager_lookTargetConstraint" data-uid="Kinstrife.Core.Camera.CameraTargetManager.lookTargetConstraint">lookTargetConstraint</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public PositionConstraint lookTargetConstraint</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">PositionConstraint</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -328,12 +374,12 @@ public Transform currentTarget</code></pre>
   
   
   <a id="Kinstrife_Core_Camera_CameraTargetManager_SetCameraTarget_" data-uid="Kinstrife.Core.Camera.CameraTargetManager.SetCameraTarget*"></a>
-  <h4 id="Kinstrife_Core_Camera_CameraTargetManager_SetCameraTarget_Transform_" data-uid="Kinstrife.Core.Camera.CameraTargetManager.SetCameraTarget(Transform)">SetCameraTarget(Transform)</h4>
+  <h4 id="Kinstrife_Core_Camera_CameraTargetManager_SetCameraTarget_Transform_Kinstrife_Core_Camera_ICameraTargetsProvider_" data-uid="Kinstrife.Core.Camera.CameraTargetManager.SetCameraTarget(Transform,Kinstrife.Core.Camera.ICameraTargetsProvider)">SetCameraTarget(Transform, ICameraTargetsProvider)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void SetCameraTarget(Transform e)</code></pre>
+    <pre><code class="lang-csharp hljs">public void SetCameraTarget(Transform e, ICameraTargetsProvider provider = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -348,6 +394,11 @@ public Transform currentTarget</code></pre>
       <tr>
         <td><span class="xref">Transform</span></td>
         <td><span class="parametername">e</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Kinstrife.Core.Camera.ICameraTargetsProvider.html">ICameraTargetsProvider</a></td>
+        <td><span class="parametername">provider</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -532,12 +583,6 @@ public Transform currentTarget</code></pre>
   </div>
   <div>
       <a class="xref" href="Kinstrife.Core.DependencyInjection.IInitializable.html">IInitializable</a>
-  </div>
-  <div>
-      <a class="xref" href="Kinstrife.Core.DependencyInjection.IInstall-1.html">IInstall&lt;T&gt;</a>
-  </div>
-  <div>
-      <a class="xref" href="Kinstrife.Core.DependencyInjection.IInstall.html">IInstall</a>
   </div>
   <div>
       <a class="xref" href="Kinstrife.Core.DependencyInjection.IDependent.html">IDependent</a>

@@ -5,10 +5,10 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Class ConvertToEntityLate
+    <title>Class CursorManager
    | Kinstrife </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Class ConvertToEntityLate
+    <meta name="title" content="Class CursorManager
    | Kinstrife ">
     <meta name="generator" content="docfx 2.59.4.0">
     
@@ -68,54 +68,39 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="Kinstrife.Entities.ConvertToEntityLate">
+            <article class="content wrap" id="_content" data-uid="Kinstrife.Core.Input.CursorManager">
   
   
-  <h1 id="Kinstrife_Entities_ConvertToEntityLate" data-uid="Kinstrife.Entities.ConvertToEntityLate" class="text-break">Class ConvertToEntityLate
+  <h1 id="Kinstrife_Core_Input_CursorManager" data-uid="Kinstrife.Core.Input.CursorManager" class="text-break">Class CursorManager
   </h1>
-  <div class="markdown level0 summary"><p>Alternative to Unity ConvertToEntity
-To be used for objects that require dependency injection or initialization before conversion to DOTS
-Needs to be part of an DISource hierarchy to be picked up as a dependent</p>
-</div>
+  <div class="markdown level0 summary"></div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><span class="xref">ConvertToEntityLate</span></div>
+    <div class="level1"><span class="xref">CursorManager</span></div>
   </div>
   <div class="implements">
     <h5>Implements</h5>
-    <div><a class="xref" href="Kinstrife.Entities.IConvertible.html">IConvertible</a></div>
-    <div><span class="xref">IConvertGameObjectToEntity</span></div>
+    <div><a class="xref" href="Kinstrife.Core.DependencyInjection.IInjectable.html">IInjectable</a></div>
+    <div><a class="xref" href="Kinstrife.Core.DependencyInjection.IDependent.html">IDependent</a></div>
   </div>
-  <h6><strong>Namespace</strong>: <a class="xref" href="Kinstrife.Entities.html">Kinstrife.Entities</a></h6>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Kinstrife.Core.Input.html">Kinstrife.Core.Input</a></h6>
   <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
-  <h5 id="Kinstrife_Entities_ConvertToEntityLate_syntax">Syntax</h5>
+  <h5 id="Kinstrife_Core_Input_CursorManager_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class ConvertToEntityLate : ConvertToEntity, IConvertible</code></pre>
-  </div>
-  <h3 id="constructors">Constructors
-  </h3>
-  
-  
-  <a id="Kinstrife_Entities_ConvertToEntityLate__ctor_" data-uid="Kinstrife.Entities.ConvertToEntityLate.#ctor*"></a>
-  <h4 id="Kinstrife_Entities_ConvertToEntityLate__ctor" data-uid="Kinstrife.Entities.ConvertToEntityLate.#ctor">ConvertToEntityLate()</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public ConvertToEntityLate()</code></pre>
+    <pre><code class="lang-csharp hljs">public class CursorManager : MonoBehaviour, IInjectable, IDependent</code></pre>
   </div>
   <h3 id="fields">Fields
   </h3>
   
   
-  <h4 id="Kinstrife_Entities_ConvertToEntityLate_ConvertOnAwake" data-uid="Kinstrife.Entities.ConvertToEntityLate.ConvertOnAwake">ConvertOnAwake</h4>
+  <h4 id="Kinstrife_Core_Input_CursorManager_cursor" data-uid="Kinstrife.Core.Input.CursorManager.cursor">cursor</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public bool ConvertOnAwake</code></pre>
+    <pre><code class="lang-csharp hljs">public Image cursor</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -127,20 +112,19 @@ Needs to be part of an DISource hierarchy to be picked up as a dependent</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="xref">Image</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   
   
-  <h4 id="Kinstrife_Entities_ConvertToEntityLate_isSceneUnloading" data-uid="Kinstrife.Entities.ConvertToEntityLate.isSceneUnloading">isSceneUnloading</h4>
+  <h4 id="Kinstrife_Core_Input_CursorManager_cursorMode" data-uid="Kinstrife.Core.Input.CursorManager.cursorMode">cursorMode</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[NonSerialized]
-public bool isSceneUnloading</code></pre>
+    <pre><code class="lang-csharp hljs">public CursorMode cursorMode</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -152,19 +136,19 @@ public bool isSceneUnloading</code></pre>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="xref">CursorMode</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   
   
-  <h4 id="Kinstrife_Entities_ConvertToEntityLate_RegisterMappingSystem" data-uid="Kinstrife.Entities.ConvertToEntityLate.RegisterMappingSystem">RegisterMappingSystem</h4>
+  <h4 id="Kinstrife_Core_Input_CursorManager_defaultState" data-uid="Kinstrife.Core.Input.CursorManager.defaultState">defaultState</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public bool RegisterMappingSystem</code></pre>
+    <pre><code class="lang-csharp hljs">public CursorState defaultState</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -176,24 +160,21 @@ public bool isSceneUnloading</code></pre>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Boolean</span></td>
+        <td><a class="xref" href="Kinstrife.Core.Input.CursorState.html">CursorState</a></td>
         <td></td>
       </tr>
     </tbody>
   </table>
-  <h3 id="properties">Properties
-  </h3>
   
   
-  <a id="Kinstrife_Entities_ConvertToEntityLate_Entity_" data-uid="Kinstrife.Entities.ConvertToEntityLate.Entity*"></a>
-  <h4 id="Kinstrife_Entities_ConvertToEntityLate_Entity" data-uid="Kinstrife.Entities.ConvertToEntityLate.Entity">Entity</h4>
+  <h4 id="Kinstrife_Core_Input_CursorManager_emtpyCursor" data-uid="Kinstrife.Core.Input.CursorManager.emtpyCursor">emtpyCursor</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Entity Entity { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Texture2D emtpyCursor</code></pre>
   </div>
-  <h5 class="propertyValue">Property Value</h5>
+  <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
       <tr>
@@ -203,22 +184,21 @@ public bool isSceneUnloading</code></pre>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Entity</span></td>
+        <td><span class="xref">Texture2D</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   
   
-  <a id="Kinstrife_Entities_ConvertToEntityLate_IsConverted_" data-uid="Kinstrife.Entities.ConvertToEntityLate.IsConverted*"></a>
-  <h4 id="Kinstrife_Entities_ConvertToEntityLate_IsConverted" data-uid="Kinstrife.Entities.ConvertToEntityLate.IsConverted">IsConverted</h4>
+  <h4 id="Kinstrife_Core_Input_CursorManager_focusState" data-uid="Kinstrife.Core.Input.CursorManager.focusState">focusState</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public bool IsConverted { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public InputFocusState focusState</code></pre>
   </div>
-  <h5 class="propertyValue">Property Value</h5>
+  <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
       <tr>
@@ -228,22 +208,21 @@ public bool isSceneUnloading</code></pre>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Boolean</span></td>
+        <td><a class="xref" href="Kinstrife.Core.Input.InputFocusState.html">InputFocusState</a></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   
   
-  <a id="Kinstrife_Entities_ConvertToEntityLate_isQuitting_" data-uid="Kinstrife.Entities.ConvertToEntityLate.isQuitting*"></a>
-  <h4 id="Kinstrife_Entities_ConvertToEntityLate_isQuitting" data-uid="Kinstrife.Entities.ConvertToEntityLate.isQuitting">isQuitting</h4>
+  <h4 id="Kinstrife_Core_Input_CursorManager_parentCanvas" data-uid="Kinstrife.Core.Input.CursorManager.parentCanvas">parentCanvas</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static bool isQuitting { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Canvas parentCanvas</code></pre>
   </div>
-  <h5 class="propertyValue">Property Value</h5>
+  <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
       <tr>
@@ -253,22 +232,21 @@ public bool isSceneUnloading</code></pre>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="xref">Canvas</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   
   
-  <a id="Kinstrife_Entities_ConvertToEntityLate_isStarting_" data-uid="Kinstrife.Entities.ConvertToEntityLate.isStarting*"></a>
-  <h4 id="Kinstrife_Entities_ConvertToEntityLate_isStarting" data-uid="Kinstrife.Entities.ConvertToEntityLate.isStarting">isStarting</h4>
+  <h4 id="Kinstrife_Core_Input_CursorManager_rawImage" data-uid="Kinstrife.Core.Input.CursorManager.rawImage">rawImage</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static bool isStarting { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public RawImage rawImage</code></pre>
   </div>
-  <h5 class="propertyValue">Property Value</h5>
+  <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
       <tr>
@@ -278,7 +256,31 @@ public bool isSceneUnloading</code></pre>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="xref">RawImage</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="Kinstrife_Core_Input_CursorManager_state" data-uid="Kinstrife.Core.Input.CursorManager.state">state</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public CursorState state</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Kinstrife.Core.Input.CursorState.html">CursorState</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -287,23 +289,13 @@ public bool isSceneUnloading</code></pre>
   </h3>
   
   
-  <a id="Kinstrife_Entities_ConvertToEntityLate_Convert_" data-uid="Kinstrife.Entities.ConvertToEntityLate.Convert*"></a>
-  <h4 id="Kinstrife_Entities_ConvertToEntityLate_Convert" data-uid="Kinstrife.Entities.ConvertToEntityLate.Convert">Convert()</h4>
+  <a id="Kinstrife_Core_Input_CursorManager_Inject_" data-uid="Kinstrife.Core.Input.CursorManager.Inject*"></a>
+  <h4 id="Kinstrife_Core_Input_CursorManager_Inject_Kinstrife_Messaging_ISubscriber_Kinstrife_Core_Input_CursorState__Kinstrife_Messaging_ISubscriber_Kinstrife_Core_Input_InputFocusState__" data-uid="Kinstrife.Core.Input.CursorManager.Inject(Kinstrife.Messaging.ISubscriber{Kinstrife.Core.Input.CursorState},Kinstrife.Messaging.ISubscriber{Kinstrife.Core.Input.InputFocusState})">Inject(ISubscriber&lt;CursorState&gt;, ISubscriber&lt;InputFocusState&gt;)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void Convert()</code></pre>
-  </div>
-  
-  
-  <a id="Kinstrife_Entities_ConvertToEntityLate_Convert_" data-uid="Kinstrife.Entities.ConvertToEntityLate.Convert*"></a>
-  <h4 id="Kinstrife_Entities_ConvertToEntityLate_Convert_Entity_EntityManager_GameObjectConversionSystem_" data-uid="Kinstrife.Entities.ConvertToEntityLate.Convert(Entity,EntityManager,GameObjectConversionSystem)">Convert(Entity, EntityManager, GameObjectConversionSystem)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void Convert(Entity entity, EntityManager dstManager, GameObjectConversionSystem conversionSystem)</code></pre>
+    <pre><code class="lang-csharp hljs">public void Inject(ISubscriber&lt;CursorState&gt; subscriber, ISubscriber&lt;InputFocusState&gt; inputSubscriber)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -316,54 +308,33 @@ public bool isSceneUnloading</code></pre>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Entity</span></td>
-        <td><span class="parametername">entity</span></td>
+        <td><a class="xref" href="Kinstrife.Messaging.ISubscriber-1.html">ISubscriber</a>&lt;<a class="xref" href="Kinstrife.Core.Input.CursorState.html">CursorState</a>&gt;</td>
+        <td><span class="parametername">subscriber</span></td>
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">EntityManager</span></td>
-        <td><span class="parametername">dstManager</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><span class="xref">GameObjectConversionSystem</span></td>
-        <td><span class="parametername">conversionSystem</span></td>
+        <td><a class="xref" href="Kinstrife.Messaging.ISubscriber-1.html">ISubscriber</a>&lt;<a class="xref" href="Kinstrife.Core.Input.InputFocusState.html">InputFocusState</a>&gt;</td>
+        <td><span class="parametername">inputSubscriber</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
-  <h3 id="events">Events
-  </h3>
   
   
-  <h4 id="Kinstrife_Entities_ConvertToEntityLate_onConvertEntity" data-uid="Kinstrife.Entities.ConvertToEntityLate.onConvertEntity">onConvertEntity</h4>
+  <a id="Kinstrife_Core_Input_CursorManager_LateUpdate_" data-uid="Kinstrife.Core.Input.CursorManager.LateUpdate*"></a>
+  <h4 id="Kinstrife_Core_Input_CursorManager_LateUpdate" data-uid="Kinstrife.Core.Input.CursorManager.LateUpdate">LateUpdate()</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static event Action&lt;ConvertToEntityLate&gt; onConvertEntity</code></pre>
+    <pre><code class="lang-csharp hljs">public void LateUpdate()</code></pre>
   </div>
-  <h5 class="eventType">Event Type</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Action</span>&lt;<a class="xref" href="Kinstrife.Entities.ConvertToEntityLate.html">ConvertToEntityLate</a>&gt;</td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
   <h3 id="implements">Implements</h3>
   <div>
-      <a class="xref" href="Kinstrife.Entities.IConvertible.html">IConvertible</a>
+      <a class="xref" href="Kinstrife.Core.DependencyInjection.IInjectable.html">IInjectable</a>
   </div>
   <div>
-      <span class="xref">IConvertGameObjectToEntity</span>
+      <a class="xref" href="Kinstrife.Core.DependencyInjection.IDependent.html">IDependent</a>
   </div>
 </article>
           </div>
