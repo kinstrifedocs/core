@@ -1,0 +1,1136 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class StateMachine&lt;TState&gt;
+   | Kinstrife </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class StateMachine&lt;TState&gt;
+   | Kinstrife ">
+    <meta name="generator" content="docfx 2.59.4.0">
+    
+    <link rel="shortcut icon" href="../../favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet"> 
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../index.html">
+                <img id="logo" class="svg" src="../../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Animancer.FSM.StateMachine`1">
+  
+  
+  <h1 id="Animancer_FSM_StateMachine_1" data-uid="Animancer.FSM.StateMachine`1" class="text-break">Class StateMachine&lt;TState&gt;
+  </h1>
+  <div class="markdown level0 summary"><p>A simple keyless Finite State Machine system.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">StateMachine&lt;TState&gt;</span></div>
+      <div class="level2"><a class="xref" href="Animancer.FSM.StateMachine-1.WithDefault.html">StateMachine&lt;TState&gt;.WithDefault</a></div>
+      <div class="level2"><a class="xref" href="Animancer.FSM.StateMachine-2.html">StateMachine</a>&lt;TKey, TState&gt;</div>
+  </div>
+  <div class="implements">
+    <h5>Implements</h5>
+    <div><a class="xref" href="Animancer.FSM.IStateMachine.html">IStateMachine</a></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Animancer.FSM.html">Animancer.FSM</a></h6>
+  <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
+  <h5 id="Animancer_FSM_StateMachine_1_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class StateMachine&lt;TState&gt; : IStateMachine where TState : class, IState</code></pre>
+  </div>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">TState</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Animancer_FSM_StateMachine_1_remarks"><strong>Remarks</strong></h5>
+  <div class="markdown level0 remarks"><p>This class doesn't keep track of any states other than the currently active one.
+See <a class="xref" href="Animancer.FSM.StateMachine-2.html">StateMachine&lt;TKey, TState&gt;</a> for a system that allows states to be pre-registered and accessed
+using a separate key.</p>
+<p>
+See <a class="xref" href="Animancer.FSM.StateMachine-1.html#Animancer_FSM_StateMachine_1_InitializeAfterDeserialize">InitializeAfterDeserialize()</a> if using this class in a serialized field.
+<p>
+Documentation: <a href="https://kybernetik.com.au/animancer/docs/manual/fsm">Finite State Machines</a>
+</div>
+  <h3 id="constructors">Constructors
+  </h3>
+  
+  
+  <a id="Animancer_FSM_StateMachine_1__ctor_" data-uid="Animancer.FSM.StateMachine`1.#ctor*"></a>
+  <h4 id="Animancer_FSM_StateMachine_1__ctor" data-uid="Animancer.FSM.StateMachine`1.#ctor">StateMachine()</h4>
+  <div class="markdown level1 summary"><p>Creates a new <a class="xref" href="Animancer.FSM.StateMachine-1.html">StateMachine&lt;TState&gt;</a>, leaving the <a class="xref" href="Animancer.FSM.StateMachine-1.html#Animancer_FSM_StateMachine_1_CurrentState">CurrentState</a> null.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public StateMachine()</code></pre>
+  </div>
+  
+  
+  <a id="Animancer_FSM_StateMachine_1__ctor_" data-uid="Animancer.FSM.StateMachine`1.#ctor*"></a>
+  <h4 id="Animancer_FSM_StateMachine_1__ctor__0_" data-uid="Animancer.FSM.StateMachine`1.#ctor(`0)">StateMachine(TState)</h4>
+  <div class="markdown level1 summary"><p>Creates a new <a class="xref" href="Animancer.FSM.StateMachine-1.html">StateMachine&lt;TState&gt;</a> and immediately enters the <code>state</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public StateMachine(TState state)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">TState</span></td>
+        <td><span class="parametername">state</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Animancer_FSM_StateMachine_1__ctor__0__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>This calls <a class="xref" href="Animancer.FSM.IState.html#Animancer_FSM_IState_OnEnterState">OnEnterState()</a> but not <a class="xref" href="Animancer.FSM.IState.html#Animancer_FSM_IState_CanEnterState">CanEnterState</a>.</p>
+</div>
+  <h3 id="properties">Properties
+  </h3>
+  
+  
+  <a id="Animancer_FSM_StateMachine_1_CurrentState_" data-uid="Animancer.FSM.StateMachine`1.CurrentState*"></a>
+  <h4 id="Animancer_FSM_StateMachine_1_CurrentState" data-uid="Animancer.FSM.StateMachine`1.CurrentState">CurrentState</h4>
+  <div class="markdown level1 summary"><p>[<see cref="!:SerializeField"></see>] The currently active state.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TState CurrentState { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">TState</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Animancer_FSM_StateMachine_1_NextState_" data-uid="Animancer.FSM.StateMachine`1.NextState*"></a>
+  <h4 id="Animancer_FSM_StateMachine_1_NextState" data-uid="Animancer.FSM.StateMachine`1.NextState">NextState</h4>
+  <div class="markdown level1 summary"><p>The <a class="xref" href="Animancer.FSM.StateChange-1.html#Animancer_FSM_StateChange_1_NextState">NextState</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TState NextState { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">TState</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Animancer_FSM_StateMachine_1_PreviousState_" data-uid="Animancer.FSM.StateMachine`1.PreviousState*"></a>
+  <h4 id="Animancer_FSM_StateMachine_1_PreviousState" data-uid="Animancer.FSM.StateMachine`1.PreviousState">PreviousState</h4>
+  <div class="markdown level1 summary"><p>The <a class="xref" href="Animancer.FSM.StateChange-1.html#Animancer_FSM_StateChange_1_PreviousState">PreviousState</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TState PreviousState { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">TState</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  
+  
+  <a id="Animancer_FSM_StateMachine_1_CanSetState_" data-uid="Animancer.FSM.StateMachine`1.CanSetState*"></a>
+  <h4 id="Animancer_FSM_StateMachine_1_CanSetState__0_" data-uid="Animancer.FSM.StateMachine`1.CanSetState(`0)">CanSetState(TState)</h4>
+  <div class="markdown level1 summary"><p>Is it currently possible to enter the specified <code>state</code>?</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool CanSetState(TState state)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">TState</span></td>
+        <td><span class="parametername">state</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Animancer_FSM_StateMachine_1_CanSetState__0__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>This requires <a class="xref" href="Animancer.FSM.IState.html#Animancer_FSM_IState_CanExitState">CanExitState</a> on the <a class="xref" href="Animancer.FSM.StateMachine-1.html#Animancer_FSM_StateMachine_1_CurrentState">CurrentState</a> and
+<a class="xref" href="Animancer.FSM.IState.html#Animancer_FSM_IState_CanEnterState">CanEnterState</a> on the specified <code>state</code> to both return true.</p>
+</div>
+  
+  
+  <a id="Animancer_FSM_StateMachine_1_CanSetState_" data-uid="Animancer.FSM.StateMachine`1.CanSetState*"></a>
+  <h4 id="Animancer_FSM_StateMachine_1_CanSetState_System_Collections_Generic_IList__0__" data-uid="Animancer.FSM.StateMachine`1.CanSetState(System.Collections.Generic.IList{`0})">CanSetState(IList&lt;TState&gt;)</h4>
+  <div class="markdown level1 summary"><p>Returns the first of the <code>states</code> which can currently be entered.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TState CanSetState(IList&lt;TState&gt; states)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IList</span>&lt;TState&gt;</td>
+        <td><span class="parametername">states</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">TState</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Animancer_FSM_StateMachine_1_CanSetState_System_Collections_Generic_IList__0___remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>This requires <a class="xref" href="Animancer.FSM.IState.html#Animancer_FSM_IState_CanExitState">CanExitState</a> on the <a class="xref" href="Animancer.FSM.StateMachine-1.html#Animancer_FSM_StateMachine_1_CurrentState">CurrentState</a> and
+<a class="xref" href="Animancer.FSM.IState.html#Animancer_FSM_IState_CanEnterState">CanEnterState</a> on one of the <code>states</code> to both return true.</p>
+<p>
+States are checked in ascending order (i.e. from <code>[0]</code> to <code>[states.Count - 1]</code>).
+</div>
+  
+  
+  <a id="Animancer_FSM_StateMachine_1_ForceSetState_" data-uid="Animancer.FSM.StateMachine`1.ForceSetState*"></a>
+  <h4 id="Animancer_FSM_StateMachine_1_ForceSetState__0_" data-uid="Animancer.FSM.StateMachine`1.ForceSetState(`0)">ForceSetState(TState)</h4>
+  <div class="markdown level1 summary"><p>Calls <a class="xref" href="Animancer.FSM.IState.html#Animancer_FSM_IState_OnExitState">OnExitState()</a> on the <a class="xref" href="Animancer.FSM.StateMachine-1.html#Animancer_FSM_StateMachine_1_CurrentState">CurrentState</a> then changes it to the
+specified <code>state</code> and calls <a class="xref" href="Animancer.FSM.IState.html#Animancer_FSM_IState_OnEnterState">OnEnterState()</a> on it.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void ForceSetState(TState state)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">TState</span></td>
+        <td><span class="parametername">state</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Animancer_FSM_StateMachine_1_ForceSetState__0__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>This method does not check <a class="xref" href="Animancer.FSM.IState.html#Animancer_FSM_IState_CanExitState">CanExitState</a> or
+<a class="xref" href="Animancer.FSM.IState.html#Animancer_FSM_IState_CanEnterState">CanEnterState</a>. To do that, you should use <a class="xref" href="Animancer.FSM.StateMachine-1.html#Animancer_FSM_StateMachine_1_TrySetState__0_">TrySetState(TState)</a> instead.</p>
+</div>
+  
+  
+  <a id="Animancer_FSM_StateMachine_1_InitializeAfterDeserialize_" data-uid="Animancer.FSM.StateMachine`1.InitializeAfterDeserialize*"></a>
+  <h4 id="Animancer_FSM_StateMachine_1_InitializeAfterDeserialize" data-uid="Animancer.FSM.StateMachine`1.InitializeAfterDeserialize">InitializeAfterDeserialize()</h4>
+  <div class="markdown level1 summary"><p>Call this after deserializing to properly initialize the <a class="xref" href="Animancer.FSM.StateMachine-1.html#Animancer_FSM_StateMachine_1_CurrentState">CurrentState</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void InitializeAfterDeserialize()</code></pre>
+  </div>
+  <h5 id="Animancer_FSM_StateMachine_1_InitializeAfterDeserialize_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>Unfortunately, <see cref="!:ISerializationCallbackReceiver"></see> can't be used to automate this because many
+Unity functions are not available during serialization such as getting or setting a
+<see cref="!:Behaviour.enabled"></see> like <a class="xref" href="Animancer.FSM.StateBehaviour.html#Animancer_FSM_StateBehaviour_OnEnterState">OnEnterState()</a> does.</p>
+</div>
+  <h5 id="Animancer_FSM_StateMachine_1_InitializeAfterDeserialize_examples">Examples</h5>
+  <pre><code>    public class MyComponent : MonoBehaviour
+    {
+        [SerializeField]
+        private CharacterState.StateMachine _StateMachine;
+
+        protected virtual void Awake()
+        {
+            _StateMachine.InitializeAfterDeserialize();
+        }
+    }</code></pre>
+
+  
+  
+  <a id="Animancer_FSM_StateMachine_1_SetAllowNullStates_" data-uid="Animancer.FSM.StateMachine`1.SetAllowNullStates*"></a>
+  <h4 id="Animancer_FSM_StateMachine_1_SetAllowNullStates_System_Boolean_" data-uid="Animancer.FSM.StateMachine`1.SetAllowNullStates(System.Boolean)">SetAllowNullStates(Boolean)</h4>
+  <div class="markdown level1 summary"><p>[Assert-Conditional] Sets <see cref="!:AllowNullStates"></see>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Conditional(&quot;UNITY_ASSERTIONS&quot;)]
+public void SetAllowNullStates(bool allow = true)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">allow</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Animancer_FSM_StateMachine_1_ToString_" data-uid="Animancer.FSM.StateMachine`1.ToString*"></a>
+  <h4 id="Animancer_FSM_StateMachine_1_ToString" data-uid="Animancer.FSM.StateMachine`1.ToString">ToString()</h4>
+  <div class="markdown level1 summary"><p>Returns a string describing the type of this state machine and its <a class="xref" href="Animancer.FSM.StateMachine-1.html#Animancer_FSM_StateMachine_1_CurrentState">CurrentState</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override string ToString()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">System.Object.ToString()</span></div>
+  
+  
+  <a id="Animancer_FSM_StateMachine_1_TryResetState_" data-uid="Animancer.FSM.StateMachine`1.TryResetState*"></a>
+  <h4 id="Animancer_FSM_StateMachine_1_TryResetState__0_" data-uid="Animancer.FSM.StateMachine`1.TryResetState(`0)">TryResetState(TState)</h4>
+  <div class="markdown level1 summary"><p>Attempts to enter the specified <code>state</code> and returns true if successful.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool TryResetState(TState state)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">TState</span></td>
+        <td><span class="parametername">state</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Animancer_FSM_StateMachine_1_TryResetState__0__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>This method does not check if the <code>state</code> is already the <a class="xref" href="Animancer.FSM.StateMachine-1.html#Animancer_FSM_StateMachine_1_CurrentState">CurrentState</a>. To do so, use
+<a class="xref" href="Animancer.FSM.StateMachine-1.html#Animancer_FSM_StateMachine_1_TrySetState__0_">TrySetState(TState)</a> instead.</p>
+</div>
+  
+  
+  <a id="Animancer_FSM_StateMachine_1_TryResetState_" data-uid="Animancer.FSM.StateMachine`1.TryResetState*"></a>
+  <h4 id="Animancer_FSM_StateMachine_1_TryResetState_System_Collections_Generic_IList__0__" data-uid="Animancer.FSM.StateMachine`1.TryResetState(System.Collections.Generic.IList{`0})">TryResetState(IList&lt;TState&gt;)</h4>
+  <div class="markdown level1 summary"><p>Attempts to enter any of the specified <code>states</code> and returns true if successful.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool TryResetState(IList&lt;TState&gt; states)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IList</span>&lt;TState&gt;</td>
+        <td><span class="parametername">states</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Animancer_FSM_StateMachine_1_TryResetState_System_Collections_Generic_IList__0___remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>This method does not check if the <code>state</code> is already the <a class="xref" href="Animancer.FSM.StateMachine-1.html#Animancer_FSM_StateMachine_1_CurrentState">CurrentState</a>. To do so, use
+<a class="xref" href="Animancer.FSM.StateMachine-1.html#Animancer_FSM_StateMachine_1_TrySetState_System_Collections_Generic_IList__0__">TrySetState(IList&lt;TState&gt;)</a> instead.</p>
+<p>
+States are checked in ascending order (i.e. from <code>[0]</code> to <code>[states.Count - 1]</code>).
+</div>
+  
+  
+  <a id="Animancer_FSM_StateMachine_1_TrySetState_" data-uid="Animancer.FSM.StateMachine`1.TrySetState*"></a>
+  <h4 id="Animancer_FSM_StateMachine_1_TrySetState__0_" data-uid="Animancer.FSM.StateMachine`1.TrySetState(`0)">TrySetState(TState)</h4>
+  <div class="markdown level1 summary"><p>Attempts to enter the specified <code>state</code> and returns true if successful.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool TrySetState(TState state)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">TState</span></td>
+        <td><span class="parametername">state</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Animancer_FSM_StateMachine_1_TrySetState__0__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>This method returns true immediately if the specified <code>state</code> is already the <a class="xref" href="Animancer.FSM.StateMachine-1.html#Animancer_FSM_StateMachine_1_CurrentState">CurrentState</a>.
+To allow directly re-entering the same state, use <a class="xref" href="Animancer.FSM.StateMachine-1.html#Animancer_FSM_StateMachine_1_TryResetState__0_">TryResetState(TState)</a> instead.</p>
+</div>
+  
+  
+  <a id="Animancer_FSM_StateMachine_1_TrySetState_" data-uid="Animancer.FSM.StateMachine`1.TrySetState*"></a>
+  <h4 id="Animancer_FSM_StateMachine_1_TrySetState_System_Collections_Generic_IList__0__" data-uid="Animancer.FSM.StateMachine`1.TrySetState(System.Collections.Generic.IList{`0})">TrySetState(IList&lt;TState&gt;)</h4>
+  <div class="markdown level1 summary"><p>Attempts to enter any of the specified <code>states</code> and returns true if successful.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool TrySetState(IList&lt;TState&gt; states)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IList</span>&lt;TState&gt;</td>
+        <td><span class="parametername">states</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Animancer_FSM_StateMachine_1_TrySetState_System_Collections_Generic_IList__0___remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>This method returns true and does nothing else if the <a class="xref" href="Animancer.FSM.StateMachine-1.html#Animancer_FSM_StateMachine_1_CurrentState">CurrentState</a> is in the list.
+To allow directly re-entering the same state, use <a class="xref" href="Animancer.FSM.StateMachine-1.html#Animancer_FSM_StateMachine_1_TryResetState_System_Collections_Generic_IList__0__">TryResetState(IList&lt;TState&gt;)</a> instead.</p>
+<p>
+States are checked in ascending order (i.e. from <code>[0]</code> to <code>[states.Count - 1]</code>).
+</div>
+  <h3 id="eii">Explicit Interface Implementations
+  </h3>
+  
+  
+  <a id="Animancer_FSM_StateMachine_1_Animancer_FSM_IStateMachine_CanSetState_" data-uid="Animancer.FSM.StateMachine`1.Animancer#FSM#IStateMachine#CanSetState*"></a>
+  <h4 id="Animancer_FSM_StateMachine_1_Animancer_FSM_IStateMachine_CanSetState_System_Collections_IList_" data-uid="Animancer.FSM.StateMachine`1.Animancer#FSM#IStateMachine#CanSetState(System.Collections.IList)">IStateMachine.CanSetState(IList)</h4>
+  <div class="markdown level1 summary"><p>Returns the first of the <code>states</code> which can currently be entered.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">object IStateMachine.CanSetState(IList states)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.IList</span></td>
+        <td><span class="parametername">states</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Object</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Animancer_FSM_StateMachine_1_Animancer_FSM_IStateMachine_CanSetState_" data-uid="Animancer.FSM.StateMachine`1.Animancer#FSM#IStateMachine#CanSetState*"></a>
+  <h4 id="Animancer_FSM_StateMachine_1_Animancer_FSM_IStateMachine_CanSetState_System_Object_" data-uid="Animancer.FSM.StateMachine`1.Animancer#FSM#IStateMachine#CanSetState(System.Object)">IStateMachine.CanSetState(Object)</h4>
+  <div class="markdown level1 summary"><p>Is it currently possible to enter the specified <code>state</code>?</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">bool IStateMachine.CanSetState(object state)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Object</span></td>
+        <td><span class="parametername">state</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Animancer_FSM_StateMachine_1_Animancer_FSM_IStateMachine_CanSetState_System_Object__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>This requires <a class="xref" href="Animancer.FSM.IState.html#Animancer_FSM_IState_CanExitState">CanExitState</a> on the <a class="xref" href="Animancer.FSM.IStateMachine.html#Animancer_FSM_IStateMachine_CurrentState">CurrentState</a> and
+<a class="xref" href="Animancer.FSM.IState.html#Animancer_FSM_IState_CanEnterState">CanEnterState</a> on the specified <code>state</code> to both return true.</p>
+</div>
+  
+  
+  <a id="Animancer_FSM_StateMachine_1_Animancer_FSM_IStateMachine_CurrentState_" data-uid="Animancer.FSM.StateMachine`1.Animancer#FSM#IStateMachine#CurrentState*"></a>
+  <h4 id="Animancer_FSM_StateMachine_1_Animancer_FSM_IStateMachine_CurrentState" data-uid="Animancer.FSM.StateMachine`1.Animancer#FSM#IStateMachine#CurrentState">IStateMachine.CurrentState</h4>
+  <div class="markdown level1 summary"><p>The currently active state.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">object IStateMachine.CurrentState { get; }</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Object</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Animancer_FSM_StateMachine_1_Animancer_FSM_IStateMachine_ForceSetState_" data-uid="Animancer.FSM.StateMachine`1.Animancer#FSM#IStateMachine#ForceSetState*"></a>
+  <h4 id="Animancer_FSM_StateMachine_1_Animancer_FSM_IStateMachine_ForceSetState_System_Object_" data-uid="Animancer.FSM.StateMachine`1.Animancer#FSM#IStateMachine#ForceSetState(System.Object)">IStateMachine.ForceSetState(Object)</h4>
+  <div class="markdown level1 summary"><p>Calls <a class="xref" href="Animancer.FSM.IState.html#Animancer_FSM_IState_OnExitState">OnExitState()</a> on the <a class="xref" href="Animancer.FSM.IStateMachine.html#Animancer_FSM_IStateMachine_CurrentState">CurrentState</a> then changes it to the
+specified <code>state</code> and calls <a class="xref" href="Animancer.FSM.IState.html#Animancer_FSM_IState_OnEnterState">OnEnterState()</a> on it.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void IStateMachine.ForceSetState(object state)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Object</span></td>
+        <td><span class="parametername">state</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Animancer_FSM_StateMachine_1_Animancer_FSM_IStateMachine_ForceSetState_System_Object__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>This method does not check <a class="xref" href="Animancer.FSM.IState.html#Animancer_FSM_IState_CanExitState">CanExitState</a> or
+<a class="xref" href="Animancer.FSM.IState.html#Animancer_FSM_IState_CanEnterState">CanEnterState</a>. To do that, you should use <a class="xref" href="Animancer.FSM.IStateMachine.html#Animancer_FSM_IStateMachine_TrySetState_System_Object_">TrySetState(Object)</a> instead.</p>
+</div>
+  
+  
+  <a id="Animancer_FSM_StateMachine_1_Animancer_FSM_IStateMachine_NextState_" data-uid="Animancer.FSM.StateMachine`1.Animancer#FSM#IStateMachine#NextState*"></a>
+  <h4 id="Animancer_FSM_StateMachine_1_Animancer_FSM_IStateMachine_NextState" data-uid="Animancer.FSM.StateMachine`1.Animancer#FSM#IStateMachine#NextState">IStateMachine.NextState</h4>
+  <div class="markdown level1 summary"><p>The <a class="xref" href="Animancer.FSM.StateChange-1.html#Animancer_FSM_StateChange_1_NextState">NextState</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">object IStateMachine.NextState { get; }</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Object</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Animancer_FSM_StateMachine_1_Animancer_FSM_IStateMachine_PreviousState_" data-uid="Animancer.FSM.StateMachine`1.Animancer#FSM#IStateMachine#PreviousState*"></a>
+  <h4 id="Animancer_FSM_StateMachine_1_Animancer_FSM_IStateMachine_PreviousState" data-uid="Animancer.FSM.StateMachine`1.Animancer#FSM#IStateMachine#PreviousState">IStateMachine.PreviousState</h4>
+  <div class="markdown level1 summary"><p>The <a class="xref" href="Animancer.FSM.StateChange-1.html#Animancer_FSM_StateChange_1_PreviousState">PreviousState</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">object IStateMachine.PreviousState { get; }</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Object</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Animancer_FSM_StateMachine_1_Animancer_FSM_IStateMachine_SetAllowNullStates_" data-uid="Animancer.FSM.StateMachine`1.Animancer#FSM#IStateMachine#SetAllowNullStates*"></a>
+  <h4 id="Animancer_FSM_StateMachine_1_Animancer_FSM_IStateMachine_SetAllowNullStates_System_Boolean_" data-uid="Animancer.FSM.StateMachine`1.Animancer#FSM#IStateMachine#SetAllowNullStates(System.Boolean)">IStateMachine.SetAllowNullStates(Boolean)</h4>
+  <div class="markdown level1 summary"><p>[Assert-Conditional] Sets <see cref="!:AllowNullStates"></see>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void IStateMachine.SetAllowNullStates(bool allow)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">allow</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Animancer_FSM_StateMachine_1_Animancer_FSM_IStateMachine_TryResetState_" data-uid="Animancer.FSM.StateMachine`1.Animancer#FSM#IStateMachine#TryResetState*"></a>
+  <h4 id="Animancer_FSM_StateMachine_1_Animancer_FSM_IStateMachine_TryResetState_System_Collections_IList_" data-uid="Animancer.FSM.StateMachine`1.Animancer#FSM#IStateMachine#TryResetState(System.Collections.IList)">IStateMachine.TryResetState(IList)</h4>
+  <div class="markdown level1 summary"><p>Attempts to enter any of the specified <code>states</code> and returns true if successful.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">bool IStateMachine.TryResetState(IList states)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.IList</span></td>
+        <td><span class="parametername">states</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Animancer_FSM_StateMachine_1_Animancer_FSM_IStateMachine_TryResetState_System_Collections_IList__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>This method does not check if the <code>state</code> is already the <a class="xref" href="Animancer.FSM.IStateMachine.html#Animancer_FSM_IStateMachine_CurrentState">CurrentState</a>. To do so, use
+<a class="xref" href="Animancer.FSM.IStateMachine.html#Animancer_FSM_IStateMachine_TrySetState_System_Collections_IList_">TrySetState(IList)</a> instead.</p>
+<p>
+States are checked in ascending order (i.e. from <code>[0]</code> to <code>[states.Count - 1]</code>).
+</div>
+  
+  
+  <a id="Animancer_FSM_StateMachine_1_Animancer_FSM_IStateMachine_TryResetState_" data-uid="Animancer.FSM.StateMachine`1.Animancer#FSM#IStateMachine#TryResetState*"></a>
+  <h4 id="Animancer_FSM_StateMachine_1_Animancer_FSM_IStateMachine_TryResetState_System_Object_" data-uid="Animancer.FSM.StateMachine`1.Animancer#FSM#IStateMachine#TryResetState(System.Object)">IStateMachine.TryResetState(Object)</h4>
+  <div class="markdown level1 summary"><p>Attempts to enter the specified <code>state</code> and returns true if successful.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">bool IStateMachine.TryResetState(object state)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Object</span></td>
+        <td><span class="parametername">state</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Animancer_FSM_StateMachine_1_Animancer_FSM_IStateMachine_TryResetState_System_Object__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>This method does not check if the <code>state</code> is already the <a class="xref" href="Animancer.FSM.IStateMachine.html#Animancer_FSM_IStateMachine_CurrentState">CurrentState</a>. To do so, use
+<a class="xref" href="Animancer.FSM.IStateMachine.html#Animancer_FSM_IStateMachine_TrySetState_System_Object_">TrySetState(Object)</a> instead.</p>
+</div>
+  
+  
+  <a id="Animancer_FSM_StateMachine_1_Animancer_FSM_IStateMachine_TrySetState_" data-uid="Animancer.FSM.StateMachine`1.Animancer#FSM#IStateMachine#TrySetState*"></a>
+  <h4 id="Animancer_FSM_StateMachine_1_Animancer_FSM_IStateMachine_TrySetState_System_Collections_IList_" data-uid="Animancer.FSM.StateMachine`1.Animancer#FSM#IStateMachine#TrySetState(System.Collections.IList)">IStateMachine.TrySetState(IList)</h4>
+  <div class="markdown level1 summary"><p>Attempts to enter any of the specified <code>states</code> and returns true if successful.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">bool IStateMachine.TrySetState(IList states)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.IList</span></td>
+        <td><span class="parametername">states</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Animancer_FSM_StateMachine_1_Animancer_FSM_IStateMachine_TrySetState_System_Collections_IList__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>This method returns true and does nothing else if the <a class="xref" href="Animancer.FSM.IStateMachine.html#Animancer_FSM_IStateMachine_CurrentState">CurrentState</a> is in the list.
+To allow directly re-entering the same state, use <a class="xref" href="Animancer.FSM.IStateMachine.html#Animancer_FSM_IStateMachine_TryResetState_System_Collections_IList_">TryResetState(IList)</a> instead.</p>
+<p>
+States are checked in ascending order (i.e. from <code>[0]</code> to <code>[states.Count - 1]</code>).
+</div>
+  
+  
+  <a id="Animancer_FSM_StateMachine_1_Animancer_FSM_IStateMachine_TrySetState_" data-uid="Animancer.FSM.StateMachine`1.Animancer#FSM#IStateMachine#TrySetState*"></a>
+  <h4 id="Animancer_FSM_StateMachine_1_Animancer_FSM_IStateMachine_TrySetState_System_Object_" data-uid="Animancer.FSM.StateMachine`1.Animancer#FSM#IStateMachine#TrySetState(System.Object)">IStateMachine.TrySetState(Object)</h4>
+  <div class="markdown level1 summary"><p>Attempts to enter the specified <code>state</code> and returns true if successful.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">bool IStateMachine.TrySetState(object state)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Object</span></td>
+        <td><span class="parametername">state</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Animancer_FSM_StateMachine_1_Animancer_FSM_IStateMachine_TrySetState_System_Object__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>This method returns true immediately if the specified <code>state</code> is already the <a class="xref" href="Animancer.FSM.IStateMachine.html#Animancer_FSM_IStateMachine_CurrentState">CurrentState</a>.
+To allow directly re-entering the same state, use <a class="xref" href="Animancer.FSM.IStateMachine.html#Animancer_FSM_IStateMachine_TryResetState_System_Object_">TryResetState(Object)</a> instead.</p>
+</div>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <a class="xref" href="Animancer.FSM.IStateMachine.html">IStateMachine</a>
+  </div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+  </body>
+</html>

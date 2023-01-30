@@ -274,56 +274,6 @@ The only reason why this is currently a MonoBehaviour is because it requires Sta
   </table>
   
   
-  <a id="Kinstrife_Application_ApplicationFlow_DirectorModule_" data-uid="Kinstrife.Application.ApplicationFlow.DirectorModule*"></a>
-  <h4 id="Kinstrife_Application_ApplicationFlow_DirectorModule" data-uid="Kinstrife.Application.ApplicationFlow.DirectorModule">DirectorModule</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Module DirectorModule { get; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Kinstrife.Application.Module.html">Module</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="Kinstrife_Application_ApplicationFlow_DirectorModuleDefinition_" data-uid="Kinstrife.Application.ApplicationFlow.DirectorModuleDefinition*"></a>
-  <h4 id="Kinstrife_Application_ApplicationFlow_DirectorModuleDefinition" data-uid="Kinstrife.Application.ApplicationFlow.DirectorModuleDefinition">DirectorModuleDefinition</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public ModuleDefinition DirectorModuleDefinition { get; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Kinstrife.Application.ModuleDefinition.html">ModuleDefinition</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
   <a id="Kinstrife_Application_ApplicationFlow_Loading_" data-uid="Kinstrife.Application.ApplicationFlow.Loading*"></a>
   <h4 id="Kinstrife_Application_ApplicationFlow_Loading" data-uid="Kinstrife.Application.ApplicationFlow.Loading">Loading</h4>
   <div class="markdown level1 summary"></div>
@@ -628,7 +578,7 @@ The only reason why this is currently a MonoBehaviour is because it requires Sta
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public async void RegisterModule(Module module)</code></pre>
+    <pre><code class="lang-csharp hljs">public async UniTaskVoid RegisterModule(Module module)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -643,6 +593,21 @@ The only reason why this is currently a MonoBehaviour is because it requires Sta
       <tr>
         <td><a class="xref" href="Kinstrife.Application.Module.html">Module</a></td>
         <td><span class="parametername">module</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">UniTaskVoid</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -848,95 +813,6 @@ The only reason why this is currently a MonoBehaviour is because it requires Sta
     <tbody>
       <tr>
         <td><span class="xref">System.Boolean</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="Kinstrife_Application_ApplicationFlow_TrySwitchDirectorModule_" data-uid="Kinstrife.Application.ApplicationFlow.TrySwitchDirectorModule*"></a>
-  <h4 id="Kinstrife_Application_ApplicationFlow_TrySwitchDirectorModule_AssetReferenceT_Kinstrife_Application_ModuleDefinition__" data-uid="Kinstrife.Application.ApplicationFlow.TrySwitchDirectorModule(AssetReferenceT{Kinstrife.Application.ModuleDefinition})">TrySwitchDirectorModule(AssetReferenceT&lt;ModuleDefinition&gt;)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public async UniTask&lt;bool&gt; TrySwitchDirectorModule(AssetReferenceT&lt;ModuleDefinition&gt; moduleDefinitionRef)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">AssetReferenceT</span>&lt;<a class="xref" href="Kinstrife.Application.ModuleDefinition.html">ModuleDefinition</a>&gt;</td>
-        <td><span class="parametername">moduleDefinitionRef</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">UniTask</span>&lt;<span class="xref">System.Boolean</span>&gt;</td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="Kinstrife_Application_ApplicationFlow_TrySwitchDirectorModule_" data-uid="Kinstrife.Application.ApplicationFlow.TrySwitchDirectorModule*"></a>
-  <h4 id="Kinstrife_Application_ApplicationFlow_TrySwitchDirectorModule_Kinstrife_Application_ModuleDefinition_Kinstrife_GraphTools_GraphAsset_" data-uid="Kinstrife.Application.ApplicationFlow.TrySwitchDirectorModule(Kinstrife.Application.ModuleDefinition,Kinstrife.GraphTools.GraphAsset)">TrySwitchDirectorModule(ModuleDefinition, GraphAsset)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public async UniTask&lt;bool&gt; TrySwitchDirectorModule(ModuleDefinition targetModuleDefinition, GraphAsset defaultScenario = null)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Kinstrife.Application.ModuleDefinition.html">ModuleDefinition</a></td>
-        <td><span class="parametername">targetModuleDefinition</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="Kinstrife.GraphTools.GraphAsset.html">GraphAsset</a></td>
-        <td><span class="parametername">defaultScenario</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">UniTask</span>&lt;<span class="xref">System.Boolean</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>

@@ -126,7 +126,7 @@ public Transform currentTarget</code></pre>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public float3 followAtStartTransition</code></pre>
+    <pre><code class="lang-csharp hljs">public Vector3 followAtStartTransition</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -138,7 +138,7 @@ public Transform currentTarget</code></pre>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">float3</span></td>
+        <td><span class="xref">Vector3</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -174,7 +174,7 @@ public Transform currentTarget</code></pre>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public float3 lookAtStartTransition</code></pre>
+    <pre><code class="lang-csharp hljs">public Vector3 lookAtStartTransition</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -186,7 +186,7 @@ public Transform currentTarget</code></pre>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">float3</span></td>
+        <td><span class="xref">Vector3</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -239,30 +239,6 @@ public Transform currentTarget</code></pre>
       </tr>
     </tbody>
   </table>
-  
-  
-  <h4 id="Kinstrife_Core_Camera_CameraTargetManager_transition" data-uid="Kinstrife.Core.Camera.CameraTargetManager.transition">transition</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Easing.Float transition</code></pre>
-  </div>
-  <h5 class="fieldValue">Field Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Kinstrife.Mathematics.Easing.Float.html">Easing.Float</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
   <h3 id="properties">Properties
   </h3>
   
@@ -292,38 +268,6 @@ public Transform currentTarget</code></pre>
   </table>
   <h3 id="methods">Methods
   </h3>
-  
-  
-  <a id="Kinstrife_Core_Camera_CameraTargetManager_DepthOfField_" data-uid="Kinstrife.Core.Camera.CameraTargetManager.DepthOfField*"></a>
-  <h4 id="Kinstrife_Core_Camera_CameraTargetManager_DepthOfField_Kinstrife_Core_Camera_CameraRig_System_Single_" data-uid="Kinstrife.Core.Camera.CameraTargetManager.DepthOfField(Kinstrife.Core.Camera.CameraRig,System.Single)">DepthOfField(CameraRig, Single)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void DepthOfField(CameraRig cameraRig, float deltaTime)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Kinstrife.Core.Camera.CameraRig.html">CameraRig</a></td>
-        <td><span class="parametername">cameraRig</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><span class="xref">System.Single</span></td>
-        <td><span class="parametername">deltaTime</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
   
   
   <a id="Kinstrife_Core_Camera_CameraTargetManager_Initialize_" data-uid="Kinstrife.Core.Camera.CameraTargetManager.Initialize*"></a>
@@ -507,12 +451,12 @@ public Transform currentTarget</code></pre>
   
   
   <a id="Kinstrife_Core_Camera_CameraTargetManager_UpdateCameraTargets_" data-uid="Kinstrife.Core.Camera.CameraTargetManager.UpdateCameraTargets*"></a>
-  <h4 id="Kinstrife_Core_Camera_CameraTargetManager_UpdateCameraTargets_Kinstrife_Core_Camera_CameraRig_System_Single_System_Boolean_float3_float3_" data-uid="Kinstrife.Core.Camera.CameraTargetManager.UpdateCameraTargets(Kinstrife.Core.Camera.CameraRig,System.Single,System.Boolean,float3,float3)">UpdateCameraTargets(CameraRig, Single, Boolean, float3, float3)</h4>
+  <h4 id="Kinstrife_Core_Camera_CameraTargetManager_UpdateCameraTargets_Kinstrife_Core_Camera_CameraRig_System_Single_System_Boolean_Vector3_Vector3_" data-uid="Kinstrife.Core.Camera.CameraTargetManager.UpdateCameraTargets(Kinstrife.Core.Camera.CameraRig,System.Single,System.Boolean,Vector3,Vector3)">UpdateCameraTargets(CameraRig, Single, Boolean, Vector3, Vector3)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void UpdateCameraTargets(CameraRig cameraRig, float deltaTime, bool transitioning, float3 look, float3 follow)</code></pre>
+    <pre><code class="lang-csharp hljs">public void UpdateCameraTargets(CameraRig cameraRig, float deltaTime, bool transitioning, Vector3 look, Vector3 follow)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -540,12 +484,12 @@ public Transform currentTarget</code></pre>
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">float3</span></td>
+        <td><span class="xref">Vector3</span></td>
         <td><span class="parametername">look</span></td>
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">float3</span></td>
+        <td><span class="xref">Vector3</span></td>
         <td><span class="parametername">follow</span></td>
         <td></td>
       </tr>
