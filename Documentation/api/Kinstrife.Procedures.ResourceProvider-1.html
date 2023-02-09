@@ -85,13 +85,13 @@
   </div>
   <div class="implements">
     <h5>Implements</h5>
-    <div><a class="xref" href="Kinstrife.Procedures.IResourceProvider-1.html">IResourceProvider</a>&lt;T&gt;</div>
+    <div><a class="xref" href="Kinstrife.Procedures.IConsumableResourceProvider-1.html">IConsumableResourceProvider</a>&lt;T&gt;</div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Kinstrife.Procedures.html">Kinstrife.Procedures</a></h6>
   <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
   <h5 id="Kinstrife_Procedures_ResourceProvider_1_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public abstract class ResourceProvider&lt;T&gt; : ResourceProvider, IResourceProvider&lt;T&gt; where T : ScriptableObject</code></pre>
+    <pre><code class="lang-csharp hljs">public abstract class ResourceProvider&lt;T&gt; : ResourceProvider, IConsumableResourceProvider&lt;T&gt;</code></pre>
   </div>
   <h5 class="typeParameters">Type Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -110,33 +110,6 @@
   </table>
   <h3 id="properties">Properties
   </h3>
-  
-  
-  <a id="Kinstrife_Procedures_ResourceProvider_1_Key_" data-uid="Kinstrife.Procedures.ResourceProvider`1.Key*"></a>
-  <h4 id="Kinstrife_Procedures_ResourceProvider_1_Key" data-uid="Kinstrife.Procedures.ResourceProvider`1.Key">Key</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public override ScriptableObject Key { get; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">ScriptableObject</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="overrides">Overrides</h5>
-  <div><a class="xref" href="Kinstrife.Procedures.ResourceProvider.html#Kinstrife_Procedures_ResourceProvider_Key">ResourceProvider.Key</a></div>
   
   
   <a id="Kinstrife_Procedures_ResourceProvider_1_ResourceType_" data-uid="Kinstrife.Procedures.ResourceProvider`1.ResourceType*"></a>
@@ -200,6 +173,48 @@
   </table>
   
   
+  <a id="Kinstrife_Procedures_ResourceProvider_1_HasAnyOfResource_" data-uid="Kinstrife.Procedures.ResourceProvider`1.HasAnyOfResource*"></a>
+  <h4 id="Kinstrife_Procedures_ResourceProvider_1_HasAnyOfResource__0_" data-uid="Kinstrife.Procedures.ResourceProvider`1.HasAnyOfResource(`0)">HasAnyOfResource(T)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public abstract bool HasAnyOfResource(T resource)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">T</span></td>
+        <td><span class="parametername">resource</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
   <a id="Kinstrife_Procedures_ResourceProvider_1_HasResource_" data-uid="Kinstrife.Procedures.ResourceProvider`1.HasResource*"></a>
   <h4 id="Kinstrife_Procedures_ResourceProvider_1_HasResource__0_System_UInt32_" data-uid="Kinstrife.Procedures.ResourceProvider`1.HasResource(`0,System.UInt32)">HasResource(T, UInt32)</h4>
   <div class="markdown level1 summary"></div>
@@ -248,12 +263,12 @@
   
   
   <a id="Kinstrife_Procedures_ResourceProvider_1_TryConsumeResource_" data-uid="Kinstrife.Procedures.ResourceProvider`1.TryConsumeResource*"></a>
-  <h4 id="Kinstrife_Procedures_ResourceProvider_1_TryConsumeResource__0_System_UInt32_" data-uid="Kinstrife.Procedures.ResourceProvider`1.TryConsumeResource(`0,System.UInt32)">TryConsumeResource(T, UInt32)</h4>
+  <h4 id="Kinstrife_Procedures_ResourceProvider_1_TryConsumeResource__0_System_UInt32_System_Boolean_" data-uid="Kinstrife.Procedures.ResourceProvider`1.TryConsumeResource(`0,System.UInt32,System.Boolean)">TryConsumeResource(T, UInt32, Boolean)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public abstract bool TryConsumeResource(T resource, uint amount)</code></pre>
+    <pre><code class="lang-csharp hljs">public abstract bool TryConsumeResource(T resource, uint amount, bool allOrNothing)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -275,6 +290,11 @@
         <td><span class="parametername">amount</span></td>
         <td></td>
       </tr>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">allOrNothing</span></td>
+        <td></td>
+      </tr>
     </tbody>
   </table>
   <h5 class="returns">Returns</h5>
@@ -294,7 +314,7 @@
   </table>
   <h3 id="implements">Implements</h3>
   <div>
-      <a class="xref" href="Kinstrife.Procedures.IResourceProvider-1.html">IResourceProvider&lt;T&gt;</a>
+      <a class="xref" href="Kinstrife.Procedures.IConsumableResourceProvider-1.html">IConsumableResourceProvider&lt;T&gt;</a>
   </div>
 </article>
           </div>

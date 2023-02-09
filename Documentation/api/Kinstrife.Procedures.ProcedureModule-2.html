@@ -81,6 +81,7 @@
     <div class="level1"><a class="xref" href="Kinstrife.DataContainers.ScriptableObjectComponent.html">ScriptableObjectComponent</a></div>
     <div class="level2"><a class="xref" href="Kinstrife.Procedures.ProcedureComponent.html">ProcedureComponent</a></div>
     <div class="level3"><span class="xref">ProcedureModule&lt;TInstruction, TAuthoring&gt;</span></div>
+      <div class="level4"><a class="xref" href="Kinstrife.Procedures.Activators.html">Activators</a></div>
       <div class="level4"><a class="xref" href="Kinstrife.Procedures.Constraints.html">Constraints</a></div>
       <div class="level4"><a class="xref" href="Kinstrife.Procedures.LinkedProcedures.html">LinkedProcedures</a></div>
       <div class="level4"><a class="xref" href="Kinstrife.Procedures.Outputs.html">Outputs</a></div>
@@ -93,6 +94,7 @@
     <div><a class="xref" href="Kinstrife.Procedures.IInstructions-1.html">IInstructions</a>&lt;TInstruction&gt;</div>
     <div><a class="xref" href="Kinstrife.Procedures.IInstructionsAuthoring-2.html">IInstructionsAuthoring</a>&lt;TInstruction, TAuthoring&gt;</div>
     <div><a class="xref" href="Kinstrife.Core.DependencyInjection.IProvideDependents.html">IProvideDependents</a></div>
+    <div><a class="xref" href="Kinstrife.Procedures.IUpdateable.html">IUpdateable</a></div>
   </div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
@@ -150,7 +152,7 @@
   <h5 id="Kinstrife_Procedures_ProcedureModule_2_syntax">Syntax</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">[Obsolete(&quot;Decide on Module, Handler, Runner, Component, BuildingBlock naming for optional additive components :). Elements that enable certain abilities and/or correspond to a Step within the Procedure may be Modules, and other parts may be Component&quot;)]
-public abstract class ProcedureModule&lt;TInstruction, TAuthoring&gt; : ProcedureComponent, IInitializable, IDependent, IInstructions&lt;TInstruction&gt;, IInstructionsAuthoring&lt;TInstruction, TAuthoring&gt;, IProvideDependents where TInstruction : IInstruction where TAuthoring : IInstructionAuthoring&lt;TInstruction&gt;</code></pre>
+public abstract class ProcedureModule&lt;TInstruction, TAuthoring&gt; : ProcedureComponent, IInitializable, IDependent, IInstructions&lt;TInstruction&gt;, IInstructionsAuthoring&lt;TInstruction, TAuthoring&gt;, IProvideDependents, IUpdateable where TInstruction : IInstruction where TAuthoring : IInstructionAuthoring&lt;TInstruction&gt;</code></pre>
   </div>
   <h5 class="typeParameters">Type Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -193,6 +195,31 @@ public abstract class ProcedureModule&lt;TInstruction, TAuthoring&gt; : Procedur
     <tbody>
       <tr>
         <td>TAuthoring[]</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="Kinstrife_Procedures_ProcedureModule_2_elements" data-uid="Kinstrife.Procedures.ProcedureModule`2.elements">elements</h4>
+  <div class="markdown level1 summary"><p>The authoring instructions</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected List&lt;TAuthoring&gt; elements</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.List</span>&lt;TAuthoring&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -374,6 +401,31 @@ public abstract class ProcedureModule&lt;TInstruction, TAuthoring&gt; : Procedur
       </tr>
     </tbody>
   </table>
+  
+  
+  <a id="Kinstrife_Procedures_ProcedureModule_2_IsActive_" data-uid="Kinstrife.Procedures.ProcedureModule`2.IsActive*"></a>
+  <h4 id="Kinstrife_Procedures_ProcedureModule_2_IsActive" data-uid="Kinstrife.Procedures.ProcedureModule`2.IsActive">IsActive</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsActive { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   <h3 id="methods">Methods
   </h3>
   
@@ -413,6 +465,16 @@ public abstract class ProcedureModule&lt;TInstruction, TAuthoring&gt; : Procedur
       </tr>
     </tbody>
   </table>
+  
+  
+  <a id="Kinstrife_Procedures_ProcedureModule_2_InitializeInstructions_" data-uid="Kinstrife.Procedures.ProcedureModule`2.InitializeInstructions*"></a>
+  <h4 id="Kinstrife_Procedures_ProcedureModule_2_InitializeInstructions" data-uid="Kinstrife.Procedures.ProcedureModule`2.InitializeInstructions">InitializeInstructions()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void InitializeInstructions()</code></pre>
+  </div>
   
   
   <a id="Kinstrife_Procedures_ProcedureModule_2_OnPerformOperation_" data-uid="Kinstrife.Procedures.ProcedureModule`2.OnPerformOperation*"></a>
@@ -464,6 +526,33 @@ public abstract class ProcedureModule&lt;TInstruction, TAuthoring&gt; : Procedur
   </div>
   <h5 class="overrides">Overrides</h5>
   <div><a class="xref" href="Kinstrife.Procedures.ProcedureComponent.html#Kinstrife_Procedures_ProcedureComponent_OnRuntimeEnable">ProcedureComponent.OnRuntimeEnable()</a></div>
+  
+  
+  <a id="Kinstrife_Procedures_ProcedureModule_2_OnUpdate_" data-uid="Kinstrife.Procedures.ProcedureModule`2.OnUpdate*"></a>
+  <h4 id="Kinstrife_Procedures_ProcedureModule_2_OnUpdate_System_Single_" data-uid="Kinstrife.Procedures.ProcedureModule`2.OnUpdate(System.Single)">OnUpdate(Single)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void OnUpdate(float deltaTime)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><span class="parametername">deltaTime</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   
   
   <a id="Kinstrife_Procedures_ProcedureModule_2_ProvideDependents_" data-uid="Kinstrife.Procedures.ProcedureModule`2.ProvideDependents*"></a>
@@ -524,6 +613,9 @@ public abstract class ProcedureModule&lt;TInstruction, TAuthoring&gt; : Procedur
   </div>
   <div>
       <a class="xref" href="Kinstrife.Core.DependencyInjection.IProvideDependents.html">IProvideDependents</a>
+  </div>
+  <div>
+      <a class="xref" href="Kinstrife.Procedures.IUpdateable.html">IUpdateable</a>
   </div>
 </article>
           </div>

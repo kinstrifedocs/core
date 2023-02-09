@@ -116,6 +116,61 @@
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public class StateInstruction : ISubStateInstruction, IInstruction</code></pre>
   </div>
+  <h3 id="constructors">Constructors
+  </h3>
+  
+  
+  <a id="Kinstrife_Procedures_SubStates_3_StateInstruction__ctor_" data-uid="Kinstrife.Procedures.SubStates`3.StateInstruction.#ctor*"></a>
+  <h4 id="Kinstrife_Procedures_SubStates_3_StateInstruction__ctor_Kinstrife_Procedures_ISubstateAuthoring_" data-uid="Kinstrife.Procedures.SubStates`3.StateInstruction.#ctor(Kinstrife.Procedures.ISubstateAuthoring)">StateInstruction(ISubstateAuthoring)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public StateInstruction(ISubstateAuthoring data)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Kinstrife.Procedures.ISubstateAuthoring.html">ISubstateAuthoring</a></td>
+        <td><span class="parametername">data</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="fields">Fields
+  </h3>
+  
+  
+  <h4 id="Kinstrife_Procedures_SubStates_3_StateInstruction_settings" data-uid="Kinstrife.Procedures.SubStates`3.StateInstruction.settings">settings</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected ISubstateAuthoring settings</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Kinstrife.Procedures.ISubstateAuthoring.html">ISubstateAuthoring</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   <h3 id="properties">Properties
   </h3>
   
@@ -126,7 +181,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public bool CanEnterState { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual bool CanEnterState { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -151,7 +206,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public bool CanExitState { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual bool CanExitState { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -176,7 +231,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public bool IsValid { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual bool IsValid { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -193,6 +248,31 @@
       </tr>
     </tbody>
   </table>
+  
+  
+  <a id="Kinstrife_Procedures_SubStates_3_StateInstruction_Settings_" data-uid="Kinstrife.Procedures.SubStates`3.StateInstruction.Settings*"></a>
+  <h4 id="Kinstrife_Procedures_SubStates_3_StateInstruction_Settings" data-uid="Kinstrife.Procedures.SubStates`3.StateInstruction.Settings">Settings</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ISubstateAuthoring Settings { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Kinstrife.Procedures.ISubstateAuthoring.html">ISubstateAuthoring</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   <h3 id="methods">Methods
   </h3>
   
@@ -203,7 +283,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void Execute(Operation operation)</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual void Execute(Operation operation)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -224,13 +304,45 @@
   </table>
   
   
+  <a id="Kinstrife_Procedures_SubStates_3_StateInstruction_Initialize_" data-uid="Kinstrife.Procedures.SubStates`3.StateInstruction.Initialize*"></a>
+  <h4 id="Kinstrife_Procedures_SubStates_3_StateInstruction_Initialize_Kinstrife_Procedures_ProceduresManager_Kinstrife_Procedures_Procedure_" data-uid="Kinstrife.Procedures.SubStates`3.StateInstruction.Initialize(Kinstrife.Procedures.ProceduresManager,Kinstrife.Procedures.Procedure)">Initialize(ProceduresManager, Procedure)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void Initialize(ProceduresManager manager, Procedure procedure)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Kinstrife.Procedures.ProceduresManager.html">ProceduresManager</a></td>
+        <td><span class="parametername">manager</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Kinstrife.Procedures.Procedure.html">Procedure</a></td>
+        <td><span class="parametername">procedure</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
   <a id="Kinstrife_Procedures_SubStates_3_StateInstruction_OnEnterState_" data-uid="Kinstrife.Procedures.SubStates`3.StateInstruction.OnEnterState*"></a>
   <h4 id="Kinstrife_Procedures_SubStates_3_StateInstruction_OnEnterState" data-uid="Kinstrife.Procedures.SubStates`3.StateInstruction.OnEnterState">OnEnterState()</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void OnEnterState()</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual void OnEnterState()</code></pre>
   </div>
   
   
@@ -240,7 +352,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void OnExitState()</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual void OnExitState()</code></pre>
   </div>
   <h3 id="implements">Implements</h3>
   <div>

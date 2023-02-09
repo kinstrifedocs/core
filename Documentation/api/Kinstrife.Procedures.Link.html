@@ -123,12 +123,12 @@ public class Link : ILink, IActivatableInstruction, ISynchronizableInstruction, 
   
   
   <a id="Kinstrife_Procedures_Link__ctor_" data-uid="Kinstrife.Procedures.Link.#ctor*"></a>
-  <h4 id="Kinstrife_Procedures_Link__ctor_Kinstrife_Procedures_Link_Settings_" data-uid="Kinstrife.Procedures.Link.#ctor(Kinstrife.Procedures.Link.Settings)">Link(Link.Settings)</h4>
+  <h4 id="Kinstrife_Procedures_Link__ctor_Kinstrife_Procedures_ILinkAuthoring_" data-uid="Kinstrife.Procedures.Link.#ctor(Kinstrife.Procedures.ILinkAuthoring)">Link(ILinkAuthoring)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Link(Link.Settings settings)</code></pre>
+    <pre><code class="lang-csharp hljs">public Link(ILinkAuthoring settings)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -141,7 +141,7 @@ public class Link : ILink, IActivatableInstruction, ISynchronizableInstruction, 
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="Kinstrife.Procedures.Link.Settings.html">Link.Settings</a></td>
+        <td><a class="xref" href="Kinstrife.Procedures.ILinkAuthoring.html">ILinkAuthoring</a></td>
         <td><span class="parametername">settings</span></td>
         <td></td>
       </tr>
@@ -149,31 +149,6 @@ public class Link : ILink, IActivatableInstruction, ISynchronizableInstruction, 
   </table>
   <h3 id="properties">Properties
   </h3>
-  
-  
-  <a id="Kinstrife_Procedures_Link_ActivationMode_" data-uid="Kinstrife.Procedures.Link.ActivationMode*"></a>
-  <h4 id="Kinstrife_Procedures_Link_ActivationMode" data-uid="Kinstrife.Procedures.Link.ActivationMode">ActivationMode</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public ActivationMode ActivationMode { get; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Kinstrife.Procedures.ActivationMode.html">ActivationMode</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
   
   
   <a id="Kinstrife_Procedures_Link_IsActive_" data-uid="Kinstrife.Procedures.Link.IsActive*"></a>
@@ -251,6 +226,56 @@ public class Link : ILink, IActivatableInstruction, ISynchronizableInstruction, 
   </table>
   
   
+  <a id="Kinstrife_Procedures_Link_Other_" data-uid="Kinstrife.Procedures.Link.Other*"></a>
+  <h4 id="Kinstrife_Procedures_Link_Other" data-uid="Kinstrife.Procedures.Link.Other">Other</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Procedure Other { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Kinstrife.Procedures.Procedure.html">Procedure</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Kinstrife_Procedures_Link_Self_" data-uid="Kinstrife.Procedures.Link.Self*"></a>
+  <h4 id="Kinstrife_Procedures_Link_Self" data-uid="Kinstrife.Procedures.Link.Self">Self</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Procedure Self { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Kinstrife.Procedures.Procedure.html">Procedure</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
   <a id="Kinstrife_Procedures_Link_SynchronizationMode_" data-uid="Kinstrife.Procedures.Link.SynchronizationMode*"></a>
   <h4 id="Kinstrife_Procedures_Link_SynchronizationMode" data-uid="Kinstrife.Procedures.Link.SynchronizationMode">SynchronizationMode</h4>
   <div class="markdown level1 summary"></div>
@@ -306,12 +331,12 @@ public class Link : ILink, IActivatableInstruction, ISynchronizableInstruction, 
   
   
   <a id="Kinstrife_Procedures_Link_Initialize_" data-uid="Kinstrife.Procedures.Link.Initialize*"></a>
-  <h4 id="Kinstrife_Procedures_Link_Initialize_Kinstrife_Procedures_LinkedProcedures_" data-uid="Kinstrife.Procedures.Link.Initialize(Kinstrife.Procedures.LinkedProcedures)">Initialize(LinkedProcedures)</h4>
+  <h4 id="Kinstrife_Procedures_Link_Initialize_Kinstrife_Procedures_ProceduresManager_Kinstrife_Procedures_Procedure_" data-uid="Kinstrife.Procedures.Link.Initialize(Kinstrife.Procedures.ProceduresManager,Kinstrife.Procedures.Procedure)">Initialize(ProceduresManager, Procedure)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void Initialize(LinkedProcedures context)</code></pre>
+    <pre><code class="lang-csharp hljs">public void Initialize(ProceduresManager manager, Procedure procedure)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -324,8 +349,13 @@ public class Link : ILink, IActivatableInstruction, ISynchronizableInstruction, 
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="Kinstrife.Procedures.LinkedProcedures.html">LinkedProcedures</a></td>
-        <td><span class="parametername">context</span></td>
+        <td><a class="xref" href="Kinstrife.Procedures.ProceduresManager.html">ProceduresManager</a></td>
+        <td><span class="parametername">manager</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Kinstrife.Procedures.Procedure.html">Procedure</a></td>
+        <td><span class="parametername">procedure</span></td>
         <td></td>
       </tr>
     </tbody>

@@ -82,22 +82,26 @@
     <div class="level2"><a class="xref" href="Kinstrife.Procedures.ProcedureComponent.html">ProcedureComponent</a></div>
     <div class="level3"><a class="xref" href="Kinstrife.Procedures.ProcedureModule-2.html">ProcedureModule</a>&lt;TState, TAuthoring&gt;</div>
     <div class="level4"><span class="xref">SubStates&lt;TKey, TState, TAuthoring&gt;</span></div>
-      <div class="level5"><a class="xref" href="Kinstrife.Procedures.Sequence.html">Sequence</a></div>
-      <div class="level5"><a class="xref" href="Kinstrife.Procedures.StateMachine-1.html">StateMachine&lt;TAssetType&gt;</a></div>
+      <div class="level5"><a class="xref" href="Kinstrife.Procedures.StateMachine-1.html">StateMachine&lt;TKey&gt;</a></div>
+      <div class="level5"><a class="xref" href="Kinstrife.Procedures.SubStates-2.html">SubStates&lt;TKey, TAuthoring&gt;</a></div>
   </div>
   <div class="implements">
     <h5>Implements</h5>
     <div><a class="xref" href="Kinstrife.Core.DependencyInjection.IInitializable.html">IInitializable</a></div>
     <div><a class="xref" href="Kinstrife.Core.DependencyInjection.IDependent.html">IDependent</a></div>
+    <div><a class="xref" href="Kinstrife.Procedures.IInstructions-1.html">IInstructions</a>&lt;TState&gt;</div>
     <div><a class="xref" href="Kinstrife.Procedures.IInstructionsAuthoring-2.html">IInstructionsAuthoring</a>&lt;TState, TAuthoring&gt;</div>
     <div><a class="xref" href="Kinstrife.Core.DependencyInjection.IProvideDependents.html">IProvideDependents</a></div>
-    <div><a class="xref" href="Kinstrife.Procedures.ISubStateHandler-2.html">ISubStateHandler</a>&lt;TKey, TState&gt;</div>
-    <div><a class="xref" href="Kinstrife.Procedures.IInstructions-1.html">IInstructions</a>&lt;TState&gt;</div>
+    <div><a class="xref" href="Kinstrife.Procedures.IUpdateable.html">IUpdateable</a></div>
     <div><a class="xref" href="Kinstrife.Procedures.IConstraint.html">IConstraint</a></div>
     <div><a class="xref" href="Kinstrife.Procedures.IInstruction.html">IInstruction</a></div>
+    <div><a class="xref" href="Kinstrife.Procedures.IConditionEvaluator.html">IConditionEvaluator</a></div>
   </div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="Kinstrife.Procedures.ProcedureModule-2.html#Kinstrife_Procedures_ProcedureModule_2_elements">ProcedureModule&lt;TState, TAuthoring&gt;.elements</a>
+    </div>
     <div>
       <a class="xref" href="Kinstrife.Procedures.ProcedureModule-2.html#Kinstrife_Procedures_ProcedureModule_2_AuthoringElements">ProcedureModule&lt;TState, TAuthoring&gt;.AuthoringElements</a>
     </div>
@@ -138,6 +142,9 @@
       <a class="xref" href="Kinstrife.Procedures.ProcedureModule-2.html#Kinstrife_Procedures_ProcedureModule_2_Initialize">ProcedureModule&lt;TState, TAuthoring&gt;.Initialize()</a>
     </div>
     <div>
+      <a class="xref" href="Kinstrife.Procedures.ProcedureModule-2.html#Kinstrife_Procedures_ProcedureModule_2_InitializeInstructions">ProcedureModule&lt;TState, TAuthoring&gt;.InitializeInstructions()</a>
+    </div>
+    <div>
       <a class="xref" href="Kinstrife.Procedures.ProcedureModule-2.html#Kinstrife_Procedures_ProcedureModule_2_InitializeInstruction__0_">ProcedureModule&lt;TState, TAuthoring&gt;.InitializeInstruction(TState)</a>
     </div>
     <div>
@@ -145,6 +152,12 @@
     </div>
     <div>
       <a class="xref" href="Kinstrife.Procedures.ProcedureModule-2.html#Kinstrife_Procedures_ProcedureModule_2_OnPerformOperation_Kinstrife_Procedures_Operation_">ProcedureModule&lt;TState, TAuthoring&gt;.OnPerformOperation(Operation)</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.Procedures.ProcedureModule-2.html#Kinstrife_Procedures_ProcedureModule_2_IsActive">ProcedureModule&lt;TState, TAuthoring&gt;.IsActive</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.Procedures.ProcedureModule-2.html#Kinstrife_Procedures_ProcedureModule_2_OnUpdate_System_Single_">ProcedureModule&lt;TState, TAuthoring&gt;.OnUpdate(Single)</a>
     </div>
     <div>
       <a class="xref" href="Kinstrife.Procedures.ProcedureComponent.html#Kinstrife_Procedures_ProcedureComponent_procedure">ProcedureComponent.procedure</a>
@@ -205,7 +218,7 @@
   <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
   <h5 id="Kinstrife_Procedures_SubStates_3_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public abstract class SubStates&lt;TKey, TState, TAuthoring&gt; : ProcedureModule&lt;TState, TAuthoring&gt;, IInitializable, IDependent, IInstructionsAuthoring&lt;TState, TAuthoring&gt;, IProvideDependents, ISubStateHandler&lt;TKey, TState&gt;, IInstructions&lt;TState&gt;, IConstraint, IInstruction where TState : class, ISubStateInstruction where TAuthoring : class, IInstructionAuthoring&lt;TState&gt;</code></pre>
+    <pre><code class="lang-csharp hljs">public abstract class SubStates&lt;TKey, TState, TAuthoring&gt; : ProcedureModule&lt;TState, TAuthoring&gt;, IInitializable, IDependent, IInstructions&lt;TState&gt;, IInstructionsAuthoring&lt;TState, TAuthoring&gt;, IProvideDependents, IUpdateable, IConstraint, IInstruction, IConditionEvaluator where TState : class, ISubStateInstruction where TAuthoring : class, ISubstateAuthoring, IInstructionAuthoring&lt;TState&gt;</code></pre>
   </div>
   <h5 class="typeParameters">Type Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -234,54 +247,6 @@
   </h3>
   
   
-  <h4 id="Kinstrife_Procedures_SubStates_3_activeState" data-uid="Kinstrife.Procedures.SubStates`3.activeState">activeState</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected TState activeState</code></pre>
-  </div>
-  <h5 class="fieldValue">Field Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">TState</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <h4 id="Kinstrife_Procedures_SubStates_3_currentStateIndex" data-uid="Kinstrife.Procedures.SubStates`3.currentStateIndex">currentStateIndex</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected int currentStateIndex</code></pre>
-  </div>
-  <h5 class="fieldValue">Field Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Int32</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
   <h4 id="Kinstrife_Procedures_SubStates_3_fsm" data-uid="Kinstrife.Procedures.SubStates`3.fsm">fsm</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
@@ -304,6 +269,30 @@
       </tr>
     </tbody>
   </table>
+  
+  
+  <h4 id="Kinstrife_Procedures_SubStates_3_startingState" data-uid="Kinstrife.Procedures.SubStates`3.startingState">startingState</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected TKey startingState</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">TKey</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   <h3 id="properties">Properties
   </h3>
   
@@ -314,7 +303,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public ref TState ActiveState { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public TState ActiveState { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -333,13 +322,13 @@
   </table>
   
   
-  <a id="Kinstrife_Procedures_SubStates_3_CurrentStateIndex_" data-uid="Kinstrife.Procedures.SubStates`3.CurrentStateIndex*"></a>
-  <h4 id="Kinstrife_Procedures_SubStates_3_CurrentStateIndex" data-uid="Kinstrife.Procedures.SubStates`3.CurrentStateIndex">CurrentStateIndex</h4>
+  <a id="Kinstrife_Procedures_SubStates_3_CurrentKey_" data-uid="Kinstrife.Procedures.SubStates`3.CurrentKey*"></a>
+  <h4 id="Kinstrife_Procedures_SubStates_3_CurrentKey" data-uid="Kinstrife.Procedures.SubStates`3.CurrentKey">CurrentKey</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public int CurrentStateIndex { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public TKey CurrentKey { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -351,7 +340,32 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Int32</span></td>
+        <td><span class="xref">TKey</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Kinstrife_Procedures_SubStates_3_FSM_" data-uid="Kinstrife.Procedures.SubStates`3.FSM*"></a>
+  <h4 id="Kinstrife_Procedures_SubStates_3_FSM" data-uid="Kinstrife.Procedures.SubStates`3.FSM">FSM</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public StateMachine&lt;TKey, TState&gt; FSM { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Kinstrife.Procedures.StateMachine</span>&lt;TKey, TState&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -402,6 +416,81 @@
     <tbody>
       <tr>
         <td><a class="xref" href="Kinstrife.Procedures.ConstraintMode.html">ConstraintMode</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Kinstrife_Procedures_SubStates_3_NextKey_" data-uid="Kinstrife.Procedures.SubStates`3.NextKey*"></a>
+  <h4 id="Kinstrife_Procedures_SubStates_3_NextKey" data-uid="Kinstrife.Procedures.SubStates`3.NextKey">NextKey</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TKey NextKey { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">TKey</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Kinstrife_Procedures_SubStates_3_PreviousKey_" data-uid="Kinstrife.Procedures.SubStates`3.PreviousKey*"></a>
+  <h4 id="Kinstrife_Procedures_SubStates_3_PreviousKey" data-uid="Kinstrife.Procedures.SubStates`3.PreviousKey">PreviousKey</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TKey PreviousKey { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">TKey</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Kinstrife_Procedures_SubStates_3_StartingState_" data-uid="Kinstrife.Procedures.SubStates`3.StartingState*"></a>
+  <h4 id="Kinstrife_Procedures_SubStates_3_StartingState" data-uid="Kinstrife.Procedures.SubStates`3.StartingState">StartingState</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TKey StartingState { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">TKey</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -504,14 +593,31 @@
   </table>
   
   
-  <a id="Kinstrife_Procedures_SubStates_3_GetEntryStateKey_" data-uid="Kinstrife.Procedures.SubStates`3.GetEntryStateKey*"></a>
-  <h4 id="Kinstrife_Procedures_SubStates_3_GetEntryStateKey" data-uid="Kinstrife.Procedures.SubStates`3.GetEntryStateKey">GetEntryStateKey()</h4>
+  <a id="Kinstrife_Procedures_SubStates_3_ForceSetState_" data-uid="Kinstrife.Procedures.SubStates`3.ForceSetState*"></a>
+  <h4 id="Kinstrife_Procedures_SubStates_3_ForceSetState__0_" data-uid="Kinstrife.Procedures.SubStates`3.ForceSetState(`0)">ForceSetState(TKey)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public abstract TKey GetEntryStateKey()</code></pre>
+    <pre><code class="lang-csharp hljs">public TState ForceSetState(TKey key)</code></pre>
   </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">TKey</span></td>
+        <td><span class="parametername">key</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   <h5 class="returns">Returns</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
@@ -522,45 +628,20 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">TKey</span></td>
+        <td><span class="xref">TState</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   
   
-  <a id="Kinstrife_Procedures_SubStates_3_GetNextStateKey_" data-uid="Kinstrife.Procedures.SubStates`3.GetNextStateKey*"></a>
-  <h4 id="Kinstrife_Procedures_SubStates_3_GetNextStateKey" data-uid="Kinstrife.Procedures.SubStates`3.GetNextStateKey">GetNextStateKey()</h4>
+  <a id="Kinstrife_Procedures_SubStates_3_HasAnyEnterableStates_" data-uid="Kinstrife.Procedures.SubStates`3.HasAnyEnterableStates*"></a>
+  <h4 id="Kinstrife_Procedures_SubStates_3_HasAnyEnterableStates" data-uid="Kinstrife.Procedures.SubStates`3.HasAnyEnterableStates">HasAnyEnterableStates()</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public abstract TKey GetNextStateKey()</code></pre>
-  </div>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">TKey</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="Kinstrife_Procedures_SubStates_3_HasValidStates_" data-uid="Kinstrife.Procedures.SubStates`3.HasValidStates*"></a>
-  <h4 id="Kinstrife_Procedures_SubStates_3_HasValidStates" data-uid="Kinstrife.Procedures.SubStates`3.HasValidStates">HasValidStates()</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public bool HasValidStates()</code></pre>
+    <pre><code class="lang-csharp hljs">public bool HasAnyEnterableStates()</code></pre>
   </div>
   <h5 class="returns">Returns</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -611,13 +692,96 @@
   </table>
   
   
-  <a id="Kinstrife_Procedures_SubStates_3_IsValidKey_" data-uid="Kinstrife.Procedures.SubStates`3.IsValidKey*"></a>
-  <h4 id="Kinstrife_Procedures_SubStates_3_IsValidKey__0_" data-uid="Kinstrife.Procedures.SubStates`3.IsValidKey(`0)">IsValidKey(TKey)</h4>
+  <a id="Kinstrife_Procedures_SubStates_3_InitializeInstruction_" data-uid="Kinstrife.Procedures.SubStates`3.InitializeInstruction*"></a>
+  <h4 id="Kinstrife_Procedures_SubStates_3_InitializeInstruction__1_" data-uid="Kinstrife.Procedures.SubStates`3.InitializeInstruction(`1)">InitializeInstruction(TState)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public abstract bool IsValidKey(TKey key)</code></pre>
+    <pre><code class="lang-csharp hljs">protected override void InitializeInstruction(TState el)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">TState</span></td>
+        <td><span class="parametername">el</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">Kinstrife.Procedures.ProcedureModule&lt;TState, TAuthoring&gt;.InitializeInstruction(TState)</span></div>
+  
+  
+  <a id="Kinstrife_Procedures_SubStates_3_OnPerformOperation_" data-uid="Kinstrife.Procedures.SubStates`3.OnPerformOperation*"></a>
+  <h4 id="Kinstrife_Procedures_SubStates_3_OnPerformOperation_Kinstrife_Procedures_Operation_" data-uid="Kinstrife.Procedures.SubStates`3.OnPerformOperation(Kinstrife.Procedures.Operation)">OnPerformOperation(Operation)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override void OnPerformOperation(Operation operation)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Kinstrife.Procedures.Operation.html">Operation</a></td>
+        <td><span class="parametername">operation</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">Kinstrife.Procedures.ProcedureModule&lt;TState, TAuthoring&gt;.OnPerformOperation(Kinstrife.Procedures.Operation)</span></div>
+  
+  
+  <a id="Kinstrife_Procedures_SubStates_3_ShouldExitCurrentState_" data-uid="Kinstrife.Procedures.SubStates`3.ShouldExitCurrentState*"></a>
+  <h4 id="Kinstrife_Procedures_SubStates_3_ShouldExitCurrentState" data-uid="Kinstrife.Procedures.SubStates`3.ShouldExitCurrentState">ShouldExitCurrentState()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool ShouldExitCurrentState()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Kinstrife_Procedures_SubStates_3_TryResetState_" data-uid="Kinstrife.Procedures.SubStates`3.TryResetState*"></a>
+  <h4 id="Kinstrife_Procedures_SubStates_3_TryResetState__0_" data-uid="Kinstrife.Procedures.SubStates`3.TryResetState(`0)">TryResetState(TKey)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TState TryResetState(TKey key)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -646,45 +810,20 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="xref">TState</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   
   
-  <a id="Kinstrife_Procedures_SubStates_3_ShouldExitCurrentState_" data-uid="Kinstrife.Procedures.SubStates`3.ShouldExitCurrentState*"></a>
-  <h4 id="Kinstrife_Procedures_SubStates_3_ShouldExitCurrentState" data-uid="Kinstrife.Procedures.SubStates`3.ShouldExitCurrentState">ShouldExitCurrentState()</h4>
+  <a id="Kinstrife_Procedures_SubStates_3_TrySetState_" data-uid="Kinstrife.Procedures.SubStates`3.TrySetState*"></a>
+  <h4 id="Kinstrife_Procedures_SubStates_3_TrySetState__0_" data-uid="Kinstrife.Procedures.SubStates`3.TrySetState(`0)">TrySetState(TKey)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public bool ShouldExitCurrentState()</code></pre>
-  </div>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Boolean</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="Kinstrife_Procedures_SubStates_3_TryEnter_" data-uid="Kinstrife.Procedures.SubStates`3.TryEnter*"></a>
-  <h4 id="Kinstrife_Procedures_SubStates_3_TryEnter_System_Int32_" data-uid="Kinstrife.Procedures.SubStates`3.TryEnter(System.Int32)">TryEnter(Int32)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public bool TryEnter(int stateIndex)</code></pre>
+    <pre><code class="lang-csharp hljs">public TState TrySetState(TKey key)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -697,8 +836,8 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Int32</span></td>
-        <td><span class="parametername">stateIndex</span></td>
+        <td><span class="xref">TKey</span></td>
+        <td><span class="parametername">key</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -713,91 +852,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Boolean</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="Kinstrife_Procedures_SubStates_3_TryExit_" data-uid="Kinstrife.Procedures.SubStates`3.TryExit*"></a>
-  <h4 id="Kinstrife_Procedures_SubStates_3_TryExit_System_Int32_" data-uid="Kinstrife.Procedures.SubStates`3.TryExit(System.Int32)">TryExit(Int32)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public bool TryExit(int stateIndex)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Int32</span></td>
-        <td><span class="parametername">stateIndex</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Boolean</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="Kinstrife_Procedures_SubStates_3_TryTransition_" data-uid="Kinstrife.Procedures.SubStates`3.TryTransition*"></a>
-  <h4 id="Kinstrife_Procedures_SubStates_3_TryTransition_System_Int32_" data-uid="Kinstrife.Procedures.SubStates`3.TryTransition(System.Int32)">TryTransition(Int32)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public bool TryTransition(int stateIndex)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Int32</span></td>
-        <td><span class="parametername">stateIndex</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="xref">TState</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -810,22 +865,25 @@
       <a class="xref" href="Kinstrife.Core.DependencyInjection.IDependent.html">IDependent</a>
   </div>
   <div>
+      <a class="xref" href="Kinstrife.Procedures.IInstructions-1.html">IInstructions&lt;T&gt;</a>
+  </div>
+  <div>
       <a class="xref" href="Kinstrife.Procedures.IInstructionsAuthoring-2.html">IInstructionsAuthoring&lt;T, U&gt;</a>
   </div>
   <div>
       <a class="xref" href="Kinstrife.Core.DependencyInjection.IProvideDependents.html">IProvideDependents</a>
   </div>
   <div>
-      <a class="xref" href="Kinstrife.Procedures.ISubStateHandler-2.html">ISubStateHandler&lt;TKey, TState&gt;</a>
-  </div>
-  <div>
-      <a class="xref" href="Kinstrife.Procedures.IInstructions-1.html">IInstructions&lt;T&gt;</a>
+      <a class="xref" href="Kinstrife.Procedures.IUpdateable.html">IUpdateable</a>
   </div>
   <div>
       <a class="xref" href="Kinstrife.Procedures.IConstraint.html">IConstraint</a>
   </div>
   <div>
       <a class="xref" href="Kinstrife.Procedures.IInstruction.html">IInstruction</a>
+  </div>
+  <div>
+      <a class="xref" href="Kinstrife.Procedures.IConditionEvaluator.html">IConditionEvaluator</a>
   </div>
 </article>
           </div>

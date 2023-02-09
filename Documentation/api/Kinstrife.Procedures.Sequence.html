@@ -82,18 +82,20 @@
     <div class="level2"><a class="xref" href="Kinstrife.Procedures.ProcedureComponent.html">ProcedureComponent</a></div>
     <div class="level3"><a class="xref" href="Kinstrife.Procedures.ProcedureModule-2.html">ProcedureModule</a>&lt;<a class="xref" href="Kinstrife.Procedures.ISubStateInstruction.html">ISubStateInstruction</a>, <a class="xref" href="Kinstrife.Procedures.ISubstateAuthoring.html">ISubstateAuthoring</a>&gt;</div>
     <div class="level4"><a class="xref" href="Kinstrife.Procedures.SubStates-3.html">SubStates</a>&lt;<span class="xref">System.Int32</span>, <a class="xref" href="Kinstrife.Procedures.ISubStateInstruction.html">ISubStateInstruction</a>, <a class="xref" href="Kinstrife.Procedures.ISubstateAuthoring.html">ISubstateAuthoring</a>&gt;</div>
-    <div class="level5"><span class="xref">Sequence</span></div>
+    <div class="level5"><a class="xref" href="Kinstrife.Procedures.SubStates-2.html">SubStates</a>&lt;<span class="xref">System.Int32</span>, <a class="xref" href="Kinstrife.Procedures.ISubstateAuthoring.html">ISubstateAuthoring</a>&gt;</div>
+    <div class="level6"><span class="xref">Sequence</span></div>
   </div>
   <div class="implements">
     <h5>Implements</h5>
     <div><a class="xref" href="Kinstrife.Core.DependencyInjection.IInitializable.html">IInitializable</a></div>
     <div><a class="xref" href="Kinstrife.Core.DependencyInjection.IDependent.html">IDependent</a></div>
+    <div><a class="xref" href="Kinstrife.Procedures.IInstructions-1.html">IInstructions</a>&lt;<a class="xref" href="Kinstrife.Procedures.ISubStateInstruction.html">ISubStateInstruction</a>&gt;</div>
     <div><a class="xref" href="Kinstrife.Procedures.IInstructionsAuthoring-2.html">IInstructionsAuthoring</a>&lt;<a class="xref" href="Kinstrife.Procedures.ISubStateInstruction.html">ISubStateInstruction</a>, <a class="xref" href="Kinstrife.Procedures.ISubstateAuthoring.html">ISubstateAuthoring</a>&gt;</div>
     <div><a class="xref" href="Kinstrife.Core.DependencyInjection.IProvideDependents.html">IProvideDependents</a></div>
-    <div><a class="xref" href="Kinstrife.Procedures.ISubStateHandler-2.html">ISubStateHandler</a>&lt;<span class="xref">System.Int32</span>, <a class="xref" href="Kinstrife.Procedures.ISubStateInstruction.html">ISubStateInstruction</a>&gt;</div>
-    <div><a class="xref" href="Kinstrife.Procedures.IInstructions-1.html">IInstructions</a>&lt;<a class="xref" href="Kinstrife.Procedures.ISubStateInstruction.html">ISubStateInstruction</a>&gt;</div>
+    <div><a class="xref" href="Kinstrife.Procedures.IUpdateable.html">IUpdateable</a></div>
     <div><a class="xref" href="Kinstrife.Procedures.IConstraint.html">IConstraint</a></div>
     <div><a class="xref" href="Kinstrife.Procedures.IInstruction.html">IInstruction</a></div>
+    <div><a class="xref" href="Kinstrife.Procedures.IConditionEvaluator.html">IConditionEvaluator</a></div>
   </div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
@@ -101,19 +103,46 @@
       <a class="xref" href="Kinstrife.Procedures.SubStates-3.html#Kinstrife_Procedures_SubStates_3_fsm">SubStates&lt;Int32, ISubStateInstruction, ISubstateAuthoring&gt;.fsm</a>
     </div>
     <div>
-      <a class="xref" href="Kinstrife.Procedures.SubStates-3.html#Kinstrife_Procedures_SubStates_3_Mode">SubStates&lt;Int32, ISubStateInstruction, ISubstateAuthoring&gt;.Mode</a>
+      <a class="xref" href="Kinstrife.Procedures.SubStates-3.html#Kinstrife_Procedures_SubStates_3_FSM">SubStates&lt;Int32, ISubStateInstruction, ISubstateAuthoring&gt;.FSM</a>
     </div>
     <div>
-      <a class="xref" href="Kinstrife.Procedures.SubStates-3.html#Kinstrife_Procedures_SubStates_3_activeState">SubStates&lt;Int32, ISubStateInstruction, ISubstateAuthoring&gt;.activeState</a>
+      <a class="xref" href="Kinstrife.Procedures.SubStates-3.html#Kinstrife_Procedures_SubStates_3_startingState">SubStates&lt;Int32, ISubStateInstruction, ISubstateAuthoring&gt;.startingState</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.Procedures.SubStates-3.html#Kinstrife_Procedures_SubStates_3_StartingState">SubStates&lt;Int32, ISubStateInstruction, ISubstateAuthoring&gt;.StartingState</a>
     </div>
     <div>
       <a class="xref" href="Kinstrife.Procedures.SubStates-3.html#Kinstrife_Procedures_SubStates_3_ActiveState">SubStates&lt;Int32, ISubStateInstruction, ISubstateAuthoring&gt;.ActiveState</a>
     </div>
     <div>
-      <a class="xref" href="Kinstrife.Procedures.SubStates-3.html#Kinstrife_Procedures_SubStates_3_currentStateIndex">SubStates&lt;Int32, ISubStateInstruction, ISubstateAuthoring&gt;.currentStateIndex</a>
+      <a class="xref" href="Kinstrife.Procedures.SubStates-3.html#Kinstrife_Procedures_SubStates_3_CurrentKey">SubStates&lt;Int32, ISubStateInstruction, ISubstateAuthoring&gt;.CurrentKey</a>
     </div>
     <div>
-      <a class="xref" href="Kinstrife.Procedures.SubStates-3.html#Kinstrife_Procedures_SubStates_3_CurrentStateIndex">SubStates&lt;Int32, ISubStateInstruction, ISubstateAuthoring&gt;.CurrentStateIndex</a>
+      <a class="xref" href="Kinstrife.Procedures.SubStates-3.html#Kinstrife_Procedures_SubStates_3_PreviousKey">SubStates&lt;Int32, ISubStateInstruction, ISubstateAuthoring&gt;.PreviousKey</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.Procedures.SubStates-3.html#Kinstrife_Procedures_SubStates_3_NextKey">SubStates&lt;Int32, ISubStateInstruction, ISubstateAuthoring&gt;.NextKey</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.Procedures.SubStates-3.html#Kinstrife_Procedures_SubStates_3_TrySetState__0_">SubStates&lt;Int32, ISubStateInstruction, ISubstateAuthoring&gt;.TrySetState(Int32)</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.Procedures.SubStates-3.html#Kinstrife_Procedures_SubStates_3_TryResetState__0_">SubStates&lt;Int32, ISubStateInstruction, ISubstateAuthoring&gt;.TryResetState(Int32)</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.Procedures.SubStates-3.html#Kinstrife_Procedures_SubStates_3_ForceSetState__0_">SubStates&lt;Int32, ISubStateInstruction, ISubstateAuthoring&gt;.ForceSetState(Int32)</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.Procedures.SubStates-3.html#Kinstrife_Procedures_SubStates_3_HasAnyEnterableStates">SubStates&lt;Int32, ISubStateInstruction, ISubstateAuthoring&gt;.HasAnyEnterableStates()</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.Procedures.SubStates-3.html#Kinstrife_Procedures_SubStates_3_CanExitCurrentState">SubStates&lt;Int32, ISubStateInstruction, ISubstateAuthoring&gt;.CanExitCurrentState()</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.Procedures.SubStates-3.html#Kinstrife_Procedures_SubStates_3_ShouldExitCurrentState">SubStates&lt;Int32, ISubStateInstruction, ISubstateAuthoring&gt;.ShouldExitCurrentState()</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.Procedures.SubStates-3.html#Kinstrife_Procedures_SubStates_3_Mode">SubStates&lt;Int32, ISubStateInstruction, ISubstateAuthoring&gt;.Mode</a>
     </div>
     <div>
       <a class="xref" href="Kinstrife.Procedures.SubStates-3.html#Kinstrife_Procedures_SubStates_3_IsValid">SubStates&lt;Int32, ISubStateInstruction, ISubstateAuthoring&gt;.IsValid</a>
@@ -125,34 +154,16 @@
       <a class="xref" href="Kinstrife.Procedures.SubStates-3.html#Kinstrife_Procedures_SubStates_3_Initialize_Kinstrife_Procedures_ProceduresManager_Kinstrife_Procedures_IEvaluateConstraints_">SubStates&lt;Int32, ISubStateInstruction, ISubstateAuthoring&gt;.Initialize(ProceduresManager, IEvaluateConstraints)</a>
     </div>
     <div>
-      <a class="xref" href="Kinstrife.Procedures.SubStates-3.html#Kinstrife_Procedures_SubStates_3_GetEntryStateKey">SubStates&lt;Int32, ISubStateInstruction, ISubstateAuthoring&gt;.GetEntryStateKey()</a>
-    </div>
-    <div>
-      <a class="xref" href="Kinstrife.Procedures.SubStates-3.html#Kinstrife_Procedures_SubStates_3_GetNextStateKey">SubStates&lt;Int32, ISubStateInstruction, ISubstateAuthoring&gt;.GetNextStateKey()</a>
-    </div>
-    <div>
-      <a class="xref" href="Kinstrife.Procedures.SubStates-3.html#Kinstrife_Procedures_SubStates_3_IsValidKey__0_">SubStates&lt;Int32, ISubStateInstruction, ISubstateAuthoring&gt;.IsValidKey(Int32)</a>
-    </div>
-    <div>
-      <a class="xref" href="Kinstrife.Procedures.SubStates-3.html#Kinstrife_Procedures_SubStates_3_HasValidStates">SubStates&lt;Int32, ISubStateInstruction, ISubstateAuthoring&gt;.HasValidStates()</a>
-    </div>
-    <div>
-      <a class="xref" href="Kinstrife.Procedures.SubStates-3.html#Kinstrife_Procedures_SubStates_3_TryEnter_System_Int32_">SubStates&lt;Int32, ISubStateInstruction, ISubstateAuthoring&gt;.TryEnter(Int32)</a>
-    </div>
-    <div>
-      <a class="xref" href="Kinstrife.Procedures.SubStates-3.html#Kinstrife_Procedures_SubStates_3_TryExit_System_Int32_">SubStates&lt;Int32, ISubStateInstruction, ISubstateAuthoring&gt;.TryExit(Int32)</a>
-    </div>
-    <div>
-      <a class="xref" href="Kinstrife.Procedures.SubStates-3.html#Kinstrife_Procedures_SubStates_3_TryTransition_System_Int32_">SubStates&lt;Int32, ISubStateInstruction, ISubstateAuthoring&gt;.TryTransition(Int32)</a>
-    </div>
-    <div>
-      <a class="xref" href="Kinstrife.Procedures.SubStates-3.html#Kinstrife_Procedures_SubStates_3_CanExitCurrentState">SubStates&lt;Int32, ISubStateInstruction, ISubstateAuthoring&gt;.CanExitCurrentState()</a>
-    </div>
-    <div>
-      <a class="xref" href="Kinstrife.Procedures.SubStates-3.html#Kinstrife_Procedures_SubStates_3_ShouldExitCurrentState">SubStates&lt;Int32, ISubStateInstruction, ISubstateAuthoring&gt;.ShouldExitCurrentState()</a>
-    </div>
-    <div>
       <a class="xref" href="Kinstrife.Procedures.SubStates-3.html#Kinstrife_Procedures_SubStates_3_Execute_Kinstrife_Procedures_Operation_">SubStates&lt;Int32, ISubStateInstruction, ISubstateAuthoring&gt;.Execute(Operation)</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.Procedures.SubStates-3.html#Kinstrife_Procedures_SubStates_3_InitializeInstruction__1_">SubStates&lt;Int32, ISubStateInstruction, ISubstateAuthoring&gt;.InitializeInstruction(ISubStateInstruction)</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.Procedures.SubStates-3.html#Kinstrife_Procedures_SubStates_3_OnPerformOperation_Kinstrife_Procedures_Operation_">SubStates&lt;Int32, ISubStateInstruction, ISubstateAuthoring&gt;.OnPerformOperation(Operation)</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.Procedures.ProcedureModule-2.html#Kinstrife_Procedures_ProcedureModule_2_elements">ProcedureModule&lt;ISubStateInstruction, ISubstateAuthoring&gt;.elements</a>
     </div>
     <div>
       <a class="xref" href="Kinstrife.Procedures.ProcedureModule-2.html#Kinstrife_Procedures_ProcedureModule_2_AuthoringElements">ProcedureModule&lt;ISubStateInstruction, ISubstateAuthoring&gt;.AuthoringElements</a>
@@ -194,6 +205,9 @@
       <a class="xref" href="Kinstrife.Procedures.ProcedureModule-2.html#Kinstrife_Procedures_ProcedureModule_2_Initialize">ProcedureModule&lt;ISubStateInstruction, ISubstateAuthoring&gt;.Initialize()</a>
     </div>
     <div>
+      <a class="xref" href="Kinstrife.Procedures.ProcedureModule-2.html#Kinstrife_Procedures_ProcedureModule_2_InitializeInstructions">ProcedureModule&lt;ISubStateInstruction, ISubstateAuthoring&gt;.InitializeInstructions()</a>
+    </div>
+    <div>
       <a class="xref" href="Kinstrife.Procedures.ProcedureModule-2.html#Kinstrife_Procedures_ProcedureModule_2_InitializeInstruction__0_">ProcedureModule&lt;ISubStateInstruction, ISubstateAuthoring&gt;.InitializeInstruction(ISubStateInstruction)</a>
     </div>
     <div>
@@ -201,6 +215,12 @@
     </div>
     <div>
       <a class="xref" href="Kinstrife.Procedures.ProcedureModule-2.html#Kinstrife_Procedures_ProcedureModule_2_OnPerformOperation_Kinstrife_Procedures_Operation_">ProcedureModule&lt;ISubStateInstruction, ISubstateAuthoring&gt;.OnPerformOperation(Operation)</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.Procedures.ProcedureModule-2.html#Kinstrife_Procedures_ProcedureModule_2_IsActive">ProcedureModule&lt;ISubStateInstruction, ISubstateAuthoring&gt;.IsActive</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.Procedures.ProcedureModule-2.html#Kinstrife_Procedures_ProcedureModule_2_OnUpdate_System_Single_">ProcedureModule&lt;ISubStateInstruction, ISubstateAuthoring&gt;.OnUpdate(Single)</a>
     </div>
     <div>
       <a class="xref" href="Kinstrife.Procedures.ProcedureComponent.html#Kinstrife_Procedures_ProcedureComponent_procedure">ProcedureComponent.procedure</a>
@@ -261,193 +281,8 @@
   <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
   <h5 id="Kinstrife_Procedures_Sequence_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class Sequence : SubStates&lt;int, ISubStateInstruction, ISubstateAuthoring&gt;, IInitializable, IDependent, IInstructionsAuthoring&lt;ISubStateInstruction, ISubstateAuthoring&gt;, IProvideDependents, ISubStateHandler&lt;int, ISubStateInstruction&gt;, IInstructions&lt;ISubStateInstruction&gt;, IConstraint, IInstruction</code></pre>
+    <pre><code class="lang-csharp hljs">public class Sequence : SubStates&lt;int, ISubstateAuthoring&gt;, IInitializable, IDependent, IInstructions&lt;ISubStateInstruction&gt;, IInstructionsAuthoring&lt;ISubStateInstruction, ISubstateAuthoring&gt;, IProvideDependents, IUpdateable, IConstraint, IInstruction, IConditionEvaluator</code></pre>
   </div>
-  <h3 id="properties">Properties
-  </h3>
-  
-  
-  <a id="Kinstrife_Procedures_Sequence_Loop_" data-uid="Kinstrife.Procedures.Sequence.Loop*"></a>
-  <h4 id="Kinstrife_Procedures_Sequence_Loop" data-uid="Kinstrife.Procedures.Sequence.Loop">Loop</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public bool Loop { get; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Boolean</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h3 id="methods">Methods
-  </h3>
-  
-  
-  <a id="Kinstrife_Procedures_Sequence_GetEntryStateKey_" data-uid="Kinstrife.Procedures.Sequence.GetEntryStateKey*"></a>
-  <h4 id="Kinstrife_Procedures_Sequence_GetEntryStateKey" data-uid="Kinstrife.Procedures.Sequence.GetEntryStateKey">GetEntryStateKey()</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public override int GetEntryStateKey()</code></pre>
-  </div>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Int32</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="overrides">Overrides</h5>
-  <div><span class="xref">Kinstrife.Procedures.SubStates&lt;System.Int32, Kinstrife.Procedures.ISubStateInstruction, Kinstrife.Procedures.ISubstateAuthoring&gt;.GetEntryStateKey()</span></div>
-  
-  
-  <a id="Kinstrife_Procedures_Sequence_GetNextStateKey_" data-uid="Kinstrife.Procedures.Sequence.GetNextStateKey*"></a>
-  <h4 id="Kinstrife_Procedures_Sequence_GetNextStateKey" data-uid="Kinstrife.Procedures.Sequence.GetNextStateKey">GetNextStateKey()</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public override int GetNextStateKey()</code></pre>
-  </div>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Int32</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="overrides">Overrides</h5>
-  <div><span class="xref">Kinstrife.Procedures.SubStates&lt;System.Int32, Kinstrife.Procedures.ISubStateInstruction, Kinstrife.Procedures.ISubstateAuthoring&gt;.GetNextStateKey()</span></div>
-  
-  
-  <a id="Kinstrife_Procedures_Sequence_InitializeInstruction_" data-uid="Kinstrife.Procedures.Sequence.InitializeInstruction*"></a>
-  <h4 id="Kinstrife_Procedures_Sequence_InitializeInstruction_Kinstrife_Procedures_ISubStateInstruction_" data-uid="Kinstrife.Procedures.Sequence.InitializeInstruction(Kinstrife.Procedures.ISubStateInstruction)">InitializeInstruction(ISubStateInstruction)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected override void InitializeInstruction(ISubStateInstruction el)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Kinstrife.Procedures.ISubStateInstruction.html">ISubStateInstruction</a></td>
-        <td><span class="parametername">el</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="overrides">Overrides</h5>
-  <div><span class="xref">Kinstrife.Procedures.ProcedureModule&lt;Kinstrife.Procedures.ISubStateInstruction, Kinstrife.Procedures.ISubstateAuthoring&gt;.InitializeInstruction(Kinstrife.Procedures.ISubStateInstruction)</span></div>
-  
-  
-  <a id="Kinstrife_Procedures_Sequence_IsValidKey_" data-uid="Kinstrife.Procedures.Sequence.IsValidKey*"></a>
-  <h4 id="Kinstrife_Procedures_Sequence_IsValidKey_System_Int32_" data-uid="Kinstrife.Procedures.Sequence.IsValidKey(System.Int32)">IsValidKey(Int32)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public override bool IsValidKey(int key)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Int32</span></td>
-        <td><span class="parametername">key</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Boolean</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="overrides">Overrides</h5>
-  <div><span class="xref">Kinstrife.Procedures.SubStates&lt;System.Int32, Kinstrife.Procedures.ISubStateInstruction, Kinstrife.Procedures.ISubstateAuthoring&gt;.IsValidKey(System.Int32)</span></div>
-  
-  
-  <a id="Kinstrife_Procedures_Sequence_OnPerformOperation_" data-uid="Kinstrife.Procedures.Sequence.OnPerformOperation*"></a>
-  <h4 id="Kinstrife_Procedures_Sequence_OnPerformOperation_Kinstrife_Procedures_Operation_" data-uid="Kinstrife.Procedures.Sequence.OnPerformOperation(Kinstrife.Procedures.Operation)">OnPerformOperation(Operation)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected override void OnPerformOperation(Operation operation)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Kinstrife.Procedures.Operation.html">Operation</a></td>
-        <td><span class="parametername">operation</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="overrides">Overrides</h5>
-  <div><span class="xref">Kinstrife.Procedures.ProcedureModule&lt;Kinstrife.Procedures.ISubStateInstruction, Kinstrife.Procedures.ISubstateAuthoring&gt;.OnPerformOperation(Kinstrife.Procedures.Operation)</span></div>
   <h3 id="implements">Implements</h3>
   <div>
       <a class="xref" href="Kinstrife.Core.DependencyInjection.IInitializable.html">IInitializable</a>
@@ -456,22 +291,25 @@
       <a class="xref" href="Kinstrife.Core.DependencyInjection.IDependent.html">IDependent</a>
   </div>
   <div>
+      <a class="xref" href="Kinstrife.Procedures.IInstructions-1.html">IInstructions&lt;T&gt;</a>
+  </div>
+  <div>
       <a class="xref" href="Kinstrife.Procedures.IInstructionsAuthoring-2.html">IInstructionsAuthoring&lt;T, U&gt;</a>
   </div>
   <div>
       <a class="xref" href="Kinstrife.Core.DependencyInjection.IProvideDependents.html">IProvideDependents</a>
   </div>
   <div>
-      <a class="xref" href="Kinstrife.Procedures.ISubStateHandler-2.html">ISubStateHandler&lt;TKey, TState&gt;</a>
-  </div>
-  <div>
-      <a class="xref" href="Kinstrife.Procedures.IInstructions-1.html">IInstructions&lt;T&gt;</a>
+      <a class="xref" href="Kinstrife.Procedures.IUpdateable.html">IUpdateable</a>
   </div>
   <div>
       <a class="xref" href="Kinstrife.Procedures.IConstraint.html">IConstraint</a>
   </div>
   <div>
       <a class="xref" href="Kinstrife.Procedures.IInstruction.html">IInstruction</a>
+  </div>
+  <div>
+      <a class="xref" href="Kinstrife.Procedures.IConditionEvaluator.html">IConditionEvaluator</a>
   </div>
 </article>
           </div>

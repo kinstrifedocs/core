@@ -79,7 +79,7 @@
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
     <div class="level1"><a class="xref" href="Kinstrife.Animation.AnimationComponent.html">AnimationComponent</a></div>
-    <div class="level2"><a class="xref" href="Kinstrife.Animation.PlayableAnimationComponent.html">PlayableAnimationComponent</a></div>
+    <div class="level2"><a class="xref" href="Kinstrife.Animation.LayerAnimationComponent.html">LayerAnimationComponent</a></div>
     <div class="level3"><a class="xref" href="Kinstrife.Animation.AnimationPlayer-1.html">AnimationPlayer</a>&lt;<span class="xref">ClipTransition</span>&gt;</div>
     <div class="level4"><a class="xref" href="Kinstrife.Animation.AnimationPlayer-2.html">AnimationPlayer</a>&lt;<span class="xref">ClipTransition</span>, <span class="xref">ClipState</span>&gt;</div>
     <div class="level5"><span class="xref">PlayAnimationClip</span></div>
@@ -94,6 +94,8 @@
     <div><span class="xref">INotificationReceiver</span></div>
     <div><span class="xref">IComparable</span>&lt;<a class="xref" href="Kinstrife.Animation.AnimationComponent.html">AnimationComponent</a>&gt;</div>
     <div><a class="xref" href="Kinstrife.Animation.ILayerAnimator.html">ILayerAnimator</a></div>
+    <div><a class="xref" href="Kinstrife.Animation.IWeightedAnimator.html">IWeightedAnimator</a></div>
+    <div><span class="xref">IComparable</span>&lt;<a class="xref" href="Kinstrife.Animation.ILayerAnimator.html">ILayerAnimator</a>&gt;</div>
   </div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
@@ -119,127 +121,121 @@
       <a class="xref" href="Kinstrife.Animation.AnimationPlayer-1.html#Kinstrife_Animation_AnimationPlayer_1_InitializeInGraph_PlayableGraph_">AnimationPlayer&lt;ClipTransition&gt;.InitializeInGraph(PlayableGraph)</a>
     </div>
     <div>
-      <a class="xref" href="Kinstrife.Animation.PlayableAnimationComponent.html#Kinstrife_Animation_PlayableAnimationComponent_layerId">PlayableAnimationComponent.layerId</a>
+      <a class="xref" href="Kinstrife.Animation.LayerAnimationComponent.html#Kinstrife_Animation_LayerAnimationComponent_Settings">LayerAnimationComponent.Settings</a>
     </div>
     <div>
-      <a class="xref" href="Kinstrife.Animation.PlayableAnimationComponent.html#Kinstrife_Animation_PlayableAnimationComponent_fadeMode">PlayableAnimationComponent.fadeMode</a>
+      <a class="xref" href="Kinstrife.Animation.LayerAnimationComponent.html#Kinstrife_Animation_LayerAnimationComponent_LayerId">LayerAnimationComponent.LayerId</a>
     </div>
     <div>
-      <a class="xref" href="Kinstrife.Animation.PlayableAnimationComponent.html#Kinstrife_Animation_PlayableAnimationComponent_speed">PlayableAnimationComponent.speed</a>
+      <a class="xref" href="Kinstrife.Animation.LayerAnimationComponent.html#Kinstrife_Animation_LayerAnimationComponent_FadeMode">LayerAnimationComponent.FadeMode</a>
     </div>
     <div>
-      <a class="xref" href="Kinstrife.Animation.PlayableAnimationComponent.html#Kinstrife_Animation_PlayableAnimationComponent_fadeTime">PlayableAnimationComponent.fadeTime</a>
+      <a class="xref" href="Kinstrife.Animation.LayerAnimationComponent.html#Kinstrife_Animation_LayerAnimationComponent_Speed">LayerAnimationComponent.Speed</a>
     </div>
     <div>
-      <a class="xref" href="Kinstrife.Animation.PlayableAnimationComponent.html#Kinstrife_Animation_PlayableAnimationComponent_FadeDuration">PlayableAnimationComponent.FadeDuration</a>
+      <a class="xref" href="Kinstrife.Animation.LayerAnimationComponent.html#Kinstrife_Animation_LayerAnimationComponent_FadeDuration">LayerAnimationComponent.FadeDuration</a>
     </div>
     <div>
-      <a class="xref" href="Kinstrife.Animation.PlayableAnimationComponent.html#Kinstrife_Animation_PlayableAnimationComponent_weight">PlayableAnimationComponent.weight</a>
+      <a class="xref" href="Kinstrife.Animation.LayerAnimationComponent.html#Kinstrife_Animation_LayerAnimationComponent_Weight">LayerAnimationComponent.Weight</a>
     </div>
     <div>
-      <a class="xref" href="Kinstrife.Animation.PlayableAnimationComponent.html#Kinstrife_Animation_PlayableAnimationComponent_targetWeight">PlayableAnimationComponent.targetWeight</a>
+      <a class="xref" href="Kinstrife.Animation.LayerAnimationComponent.html#Kinstrife_Animation_LayerAnimationComponent_Length">LayerAnimationComponent.Length</a>
     </div>
     <div>
-      <a class="xref" href="Kinstrife.Animation.PlayableAnimationComponent.html#Kinstrife_Animation_PlayableAnimationComponent_endEventMode">PlayableAnimationComponent.endEventMode</a>
+      <a class="xref" href="Kinstrife.Animation.LayerAnimationComponent.html#Kinstrife_Animation_LayerAnimationComponent_transition">LayerAnimationComponent.transition</a>
     </div>
     <div>
-      <a class="xref" href="Kinstrife.Animation.PlayableAnimationComponent.html#Kinstrife_Animation_PlayableAnimationComponent_endEventTime">PlayableAnimationComponent.endEventTime</a>
+      <a class="xref" href="Kinstrife.Animation.LayerAnimationComponent.html#Kinstrife_Animation_LayerAnimationComponent_AnimancerState">LayerAnimationComponent.AnimancerState</a>
     </div>
     <div>
-      <a class="xref" href="Kinstrife.Animation.PlayableAnimationComponent.html#Kinstrife_Animation_PlayableAnimationComponent_Length">PlayableAnimationComponent.Length</a>
+      <a class="xref" href="Kinstrife.Animation.LayerAnimationComponent.html#Kinstrife_Animation_LayerAnimationComponent_layer">LayerAnimationComponent.layer</a>
     </div>
     <div>
-      <a class="xref" href="Kinstrife.Animation.PlayableAnimationComponent.html#Kinstrife_Animation_PlayableAnimationComponent_transition">PlayableAnimationComponent.transition</a>
+      <a class="xref" href="Kinstrife.Animation.LayerAnimationComponent.html#Kinstrife_Animation_LayerAnimationComponent_isActiveAndPlaying">LayerAnimationComponent.isActiveAndPlaying</a>
     </div>
     <div>
-      <a class="xref" href="Kinstrife.Animation.PlayableAnimationComponent.html#Kinstrife_Animation_PlayableAnimationComponent_AnimancerState">PlayableAnimationComponent.AnimancerState</a>
+      <a class="xref" href="Kinstrife.Animation.LayerAnimationComponent.html#Kinstrife_Animation_LayerAnimationComponent_canPlay">LayerAnimationComponent.canPlay</a>
     </div>
     <div>
-      <a class="xref" href="Kinstrife.Animation.PlayableAnimationComponent.html#Kinstrife_Animation_PlayableAnimationComponent_layer">PlayableAnimationComponent.layer</a>
+      <a class="xref" href="Kinstrife.Animation.LayerAnimationComponent.html#Kinstrife_Animation_LayerAnimationComponent_canStop">LayerAnimationComponent.canStop</a>
     </div>
     <div>
-      <a class="xref" href="Kinstrife.Animation.PlayableAnimationComponent.html#Kinstrife_Animation_PlayableAnimationComponent_isActiveAndPlaying">PlayableAnimationComponent.isActiveAndPlaying</a>
+      <a class="xref" href="Kinstrife.Animation.LayerAnimationComponent.html#Kinstrife_Animation_LayerAnimationComponent_PlayButtonColor">LayerAnimationComponent.PlayButtonColor</a>
     </div>
     <div>
-      <a class="xref" href="Kinstrife.Animation.PlayableAnimationComponent.html#Kinstrife_Animation_PlayableAnimationComponent_canPlay">PlayableAnimationComponent.canPlay</a>
+      <a class="xref" href="Kinstrife.Animation.LayerAnimationComponent.html#Kinstrife_Animation_LayerAnimationComponent_StopButtonColor">LayerAnimationComponent.StopButtonColor</a>
     </div>
     <div>
-      <a class="xref" href="Kinstrife.Animation.PlayableAnimationComponent.html#Kinstrife_Animation_PlayableAnimationComponent_canStop">PlayableAnimationComponent.canStop</a>
+      <a class="xref" href="Kinstrife.Animation.LayerAnimationComponent.html#Kinstrife_Animation_LayerAnimationComponent_IsTopPriority">LayerAnimationComponent.IsTopPriority</a>
     </div>
     <div>
-      <a class="xref" href="Kinstrife.Animation.PlayableAnimationComponent.html#Kinstrife_Animation_PlayableAnimationComponent_PlayButtonColor">PlayableAnimationComponent.PlayButtonColor</a>
+      <a class="xref" href="Kinstrife.Animation.LayerAnimationComponent.html#Kinstrife_Animation_LayerAnimationComponent_Play">LayerAnimationComponent.Play()</a>
     </div>
     <div>
-      <a class="xref" href="Kinstrife.Animation.PlayableAnimationComponent.html#Kinstrife_Animation_PlayableAnimationComponent_StopButtonColor">PlayableAnimationComponent.StopButtonColor</a>
+      <a class="xref" href="Kinstrife.Animation.LayerAnimationComponent.html#Kinstrife_Animation_LayerAnimationComponent_Stop">LayerAnimationComponent.Stop()</a>
     </div>
     <div>
-      <a class="xref" href="Kinstrife.Animation.PlayableAnimationComponent.html#Kinstrife_Animation_PlayableAnimationComponent_IsTopPriority">PlayableAnimationComponent.IsTopPriority</a>
+      <a class="xref" href="Kinstrife.Animation.LayerAnimationComponent.html#Kinstrife_Animation_LayerAnimationComponent_Play__1___0_">LayerAnimationComponent.Play&lt;T&gt;(T)</a>
     </div>
     <div>
-      <a class="xref" href="Kinstrife.Animation.PlayableAnimationComponent.html#Kinstrife_Animation_PlayableAnimationComponent_Play">PlayableAnimationComponent.Play()</a>
+      <a class="xref" href="Kinstrife.Animation.LayerAnimationComponent.html#Kinstrife_Animation_LayerAnimationComponent_Play_Kinstrife_Animation_AnimationAsset_">LayerAnimationComponent.Play(AnimationAsset)</a>
     </div>
     <div>
-      <a class="xref" href="Kinstrife.Animation.PlayableAnimationComponent.html#Kinstrife_Animation_PlayableAnimationComponent_Stop">PlayableAnimationComponent.Stop()</a>
+      <a class="xref" href="Kinstrife.Animation.LayerAnimationComponent.html#Kinstrife_Animation_LayerAnimationComponent_Play_Kinstrife_Animation_AnimationAssetBase_">LayerAnimationComponent.Play(AnimationAssetBase)</a>
     </div>
     <div>
-      <a class="xref" href="Kinstrife.Animation.PlayableAnimationComponent.html#Kinstrife_Animation_PlayableAnimationComponent_Play__1___0_">PlayableAnimationComponent.Play&lt;T&gt;(T)</a>
+      <a class="xref" href="Kinstrife.Animation.LayerAnimationComponent.html#Kinstrife_Animation_LayerAnimationComponent_Play_Kinstrife_Animation_AnimationAssetT_">LayerAnimationComponent.Play(AnimationAssetT)</a>
     </div>
     <div>
-      <a class="xref" href="Kinstrife.Animation.PlayableAnimationComponent.html#Kinstrife_Animation_PlayableAnimationComponent_Play_Kinstrife_Animation_AnimationAsset_">PlayableAnimationComponent.Play(AnimationAsset)</a>
+      <a class="xref" href="Kinstrife.Animation.LayerAnimationComponent.html#Kinstrife_Animation_LayerAnimationComponent_SetTransition_ITransition_">LayerAnimationComponent.SetTransition(ITransition)</a>
     </div>
     <div>
-      <a class="xref" href="Kinstrife.Animation.PlayableAnimationComponent.html#Kinstrife_Animation_PlayableAnimationComponent_SetTransition_ITransition_">PlayableAnimationComponent.SetTransition(ITransition)</a>
+      <a class="xref" href="Kinstrife.Animation.LayerAnimationComponent.html#Kinstrife_Animation_LayerAnimationComponent_PlayOnLayer_Kinstrife_Animation_AnimationLayer_">LayerAnimationComponent.PlayOnLayer(AnimationLayer)</a>
     </div>
     <div>
-      <a class="xref" href="Kinstrife.Animation.PlayableAnimationComponent.html#Kinstrife_Animation_PlayableAnimationComponent_PlayOnLayer_Kinstrife_Animation_AnimationLayer_">PlayableAnimationComponent.PlayOnLayer(AnimationLayer)</a>
+      <a class="xref" href="Kinstrife.Animation.LayerAnimationComponent.html#Kinstrife_Animation_LayerAnimationComponent_OnPlay">LayerAnimationComponent.OnPlay()</a>
     </div>
     <div>
-      <a class="xref" href="Kinstrife.Animation.PlayableAnimationComponent.html#Kinstrife_Animation_PlayableAnimationComponent_OnPlay">PlayableAnimationComponent.OnPlay()</a>
+      <a class="xref" href="Kinstrife.Animation.LayerAnimationComponent.html#Kinstrife_Animation_LayerAnimationComponent_InternalPlay">LayerAnimationComponent.InternalPlay()</a>
     </div>
     <div>
-      <a class="xref" href="Kinstrife.Animation.PlayableAnimationComponent.html#Kinstrife_Animation_PlayableAnimationComponent_InternalPlay">PlayableAnimationComponent.InternalPlay()</a>
+      <a class="xref" href="Kinstrife.Animation.LayerAnimationComponent.html#Kinstrife_Animation_LayerAnimationComponent_GetOrCreateState">LayerAnimationComponent.GetOrCreateState()</a>
     </div>
     <div>
-      <a class="xref" href="Kinstrife.Animation.PlayableAnimationComponent.html#Kinstrife_Animation_PlayableAnimationComponent_GetOrCreateState">PlayableAnimationComponent.GetOrCreateState()</a>
+      <a class="xref" href="Kinstrife.Animation.LayerAnimationComponent.html#Kinstrife_Animation_LayerAnimationComponent_Kinstrife_Animation_ILayerAnimator_StopOnLayer_Kinstrife_Animation_AnimationLayer_">LayerAnimationComponent.ILayerAnimator.StopOnLayer(AnimationLayer)</a>
     </div>
     <div>
-      <a class="xref" href="Kinstrife.Animation.PlayableAnimationComponent.html#Kinstrife_Animation_PlayableAnimationComponent_Kinstrife_Animation_ILayerAnimator_StopOnLayer_Kinstrife_Animation_AnimationLayer_">PlayableAnimationComponent.ILayerAnimator.StopOnLayer(AnimationLayer)</a>
+      <a class="xref" href="Kinstrife.Animation.LayerAnimationComponent.html#Kinstrife_Animation_LayerAnimationComponent_DebugEndEvent">LayerAnimationComponent.DebugEndEvent()</a>
     </div>
     <div>
-      <a class="xref" href="Kinstrife.Animation.PlayableAnimationComponent.html#Kinstrife_Animation_PlayableAnimationComponent_OnStop">PlayableAnimationComponent.OnStop()</a>
+      <a class="xref" href="Kinstrife.Animation.LayerAnimationComponent.html#Kinstrife_Animation_LayerAnimationComponent_SetSpeed_System_Single_">LayerAnimationComponent.SetSpeed(Single)</a>
     </div>
     <div>
-      <a class="xref" href="Kinstrife.Animation.PlayableAnimationComponent.html#Kinstrife_Animation_PlayableAnimationComponent_DebugEndEvent">PlayableAnimationComponent.DebugEndEvent()</a>
+      <a class="xref" href="Kinstrife.Animation.LayerAnimationComponent.html#Kinstrife_Animation_LayerAnimationComponent_SetWeight_System_Single_">LayerAnimationComponent.SetWeight(Single)</a>
     </div>
     <div>
-      <a class="xref" href="Kinstrife.Animation.PlayableAnimationComponent.html#Kinstrife_Animation_PlayableAnimationComponent_SetSpeed_System_Single_">PlayableAnimationComponent.SetSpeed(Single)</a>
+      <a class="xref" href="Kinstrife.Animation.LayerAnimationComponent.html#Kinstrife_Animation_LayerAnimationComponent_SetTargetWeight_System_Single_">LayerAnimationComponent.SetTargetWeight(Single)</a>
     </div>
     <div>
-      <a class="xref" href="Kinstrife.Animation.PlayableAnimationComponent.html#Kinstrife_Animation_PlayableAnimationComponent_SetWeight_System_Single_">PlayableAnimationComponent.SetWeight(Single)</a>
+      <a class="xref" href="Kinstrife.Animation.LayerAnimationComponent.html#Kinstrife_Animation_LayerAnimationComponent_PriorityInLayer">LayerAnimationComponent.PriorityInLayer</a>
     </div>
     <div>
-      <a class="xref" href="Kinstrife.Animation.PlayableAnimationComponent.html#Kinstrife_Animation_PlayableAnimationComponent_SetTargetWeight_System_Single_">PlayableAnimationComponent.SetTargetWeight(Single)</a>
+      <a class="xref" href="Kinstrife.Animation.LayerAnimationComponent.html#Kinstrife_Animation_LayerAnimationComponent_Transition">LayerAnimationComponent.Transition</a>
     </div>
     <div>
-      <a class="xref" href="Kinstrife.Animation.PlayableAnimationComponent.html#Kinstrife_Animation_PlayableAnimationComponent_CreatePlayable_PlayableGraph_">PlayableAnimationComponent.CreatePlayable(PlayableGraph)</a>
+      <a class="xref" href="Kinstrife.Animation.LayerAnimationComponent.html#Kinstrife_Animation_LayerAnimationComponent_HasEndEvent">LayerAnimationComponent.HasEndEvent</a>
     </div>
     <div>
-      <a class="xref" href="Kinstrife.Animation.PlayableAnimationComponent.html#Kinstrife_Animation_PlayableAnimationComponent_PriorityInLayer">PlayableAnimationComponent.PriorityInLayer</a>
+      <a class="xref" href="Kinstrife.Animation.LayerAnimationComponent.html#Kinstrife_Animation_LayerAnimationComponent_PrimaryLayer">LayerAnimationComponent.PrimaryLayer</a>
     </div>
     <div>
-      <a class="xref" href="Kinstrife.Animation.PlayableAnimationComponent.html#Kinstrife_Animation_PlayableAnimationComponent_Transition">PlayableAnimationComponent.Transition</a>
+      <a class="xref" href="Kinstrife.Animation.LayerAnimationComponent.html#Kinstrife_Animation_LayerAnimationComponent_FallbackLayer">LayerAnimationComponent.FallbackLayer</a>
     </div>
     <div>
-      <a class="xref" href="Kinstrife.Animation.PlayableAnimationComponent.html#Kinstrife_Animation_PlayableAnimationComponent_HasEndEvent">PlayableAnimationComponent.HasEndEvent</a>
+      <a class="xref" href="Kinstrife.Animation.LayerAnimationComponent.html#Kinstrife_Animation_LayerAnimationComponent_CompareTo_Kinstrife_Animation_AnimationComponent_">LayerAnimationComponent.CompareTo(AnimationComponent)</a>
     </div>
     <div>
-      <a class="xref" href="Kinstrife.Animation.PlayableAnimationComponent.html#Kinstrife_Animation_PlayableAnimationComponent_PrimaryLayer">PlayableAnimationComponent.PrimaryLayer</a>
-    </div>
-    <div>
-      <a class="xref" href="Kinstrife.Animation.PlayableAnimationComponent.html#Kinstrife_Animation_PlayableAnimationComponent_FallbackLayer">PlayableAnimationComponent.FallbackLayer</a>
-    </div>
-    <div>
-      <a class="xref" href="Kinstrife.Animation.PlayableAnimationComponent.html#Kinstrife_Animation_PlayableAnimationComponent_CompareTo_Kinstrife_Animation_AnimationComponent_">PlayableAnimationComponent.CompareTo(AnimationComponent)</a>
+      <a class="xref" href="Kinstrife.Animation.LayerAnimationComponent.html#Kinstrife_Animation_LayerAnimationComponent_CompareTo_Kinstrife_Animation_ILayerAnimator_">LayerAnimationComponent.CompareTo(ILayerAnimator)</a>
     </div>
     <div>
       <a class="xref" href="Kinstrife.Animation.AnimationComponent.html#Kinstrife_Animation_AnimationComponent_animancer">AnimationComponent.animancer</a>
@@ -296,6 +292,9 @@
       <a class="xref" href="Kinstrife.Animation.AnimationComponent.html#Kinstrife_Animation_AnimationComponent_OnPause">AnimationComponent.OnPause()</a>
     </div>
     <div>
+      <a class="xref" href="Kinstrife.Animation.AnimationComponent.html#Kinstrife_Animation_AnimationComponent_OnStop">AnimationComponent.OnStop()</a>
+    </div>
+    <div>
       <a class="xref" href="Kinstrife.Animation.AnimationComponent.html#Kinstrife_Animation_AnimationComponent_Key">AnimationComponent.Key</a>
     </div>
     <div>
@@ -323,12 +322,6 @@
       <a class="xref" href="Kinstrife.Animation.AnimationComponent.html#Kinstrife_Animation_AnimationComponent_Template">AnimationComponent.Template</a>
     </div>
     <div>
-      <a class="xref" href="Kinstrife.Animation.AnimationComponent.html#Kinstrife_Animation_AnimationComponent_audioEvent">AnimationComponent.audioEvent</a>
-    </div>
-    <div>
-      <a class="xref" href="Kinstrife.Animation.AnimationComponent.html#Kinstrife_Animation_AnimationComponent_audioDelay">AnimationComponent.audioDelay</a>
-    </div>
-    <div>
       <a class="xref" href="Kinstrife.Animation.AnimationComponent.html#Kinstrife_Animation_AnimationComponent_RegisterBehaviour__2___1_">AnimationComponent.RegisterBehaviour&lt;TBehaviourType, TAnimatorType&gt;(TAnimatorType)</a>
     </div>
     <div>
@@ -340,12 +333,21 @@
     <div>
       <a class="xref" href="Kinstrife.Animation.AnimationComponent.html#Kinstrife_Animation_AnimationComponent_PushNotification_INotification_System_Object_">AnimationComponent.PushNotification(INotification, Object)</a>
     </div>
+    <div>
+      <a class="xref" href="Kinstrife.Animation.AnimationComponent.html#Kinstrife_Animation_AnimationComponent_MainTabActions">AnimationComponent.MainTabActions</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.Animation.AnimationComponent.html#Kinstrife_Animation_AnimationComponent_DebugTabActions">AnimationComponent.DebugTabActions</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.Animation.AnimationComponent.html#Kinstrife_Animation_AnimationComponent_SettingsTabActions">AnimationComponent.SettingsTabActions</a>
+    </div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Kinstrife.Animation.html">Kinstrife.Animation</a></h6>
   <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
   <h5 id="Kinstrife_Animation_PlayAnimationClip_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class PlayAnimationClip : AnimationPlayer&lt;ClipTransition, ClipState&gt;, IAnimationPlayer, ICacheReferences, IInstall, IDependent, ILayerAnimator</code></pre>
+    <pre><code class="lang-csharp hljs">public class PlayAnimationClip : AnimationPlayer&lt;ClipTransition, ClipState&gt;, IAnimationPlayer, ICacheReferences, IInstall, IDependent, ILayerAnimator, IWeightedAnimator</code></pre>
   </div>
   <h3 id="implements">Implements</h3>
   <div>
@@ -371,6 +373,12 @@
   </div>
   <div>
       <a class="xref" href="Kinstrife.Animation.ILayerAnimator.html">ILayerAnimator</a>
+  </div>
+  <div>
+      <a class="xref" href="Kinstrife.Animation.IWeightedAnimator.html">IWeightedAnimator</a>
+  </div>
+  <div>
+      <span class="xref">IComparable&lt;&gt;</span>
   </div>
 </article>
           </div>

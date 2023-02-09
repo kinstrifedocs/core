@@ -78,9 +78,6 @@
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
     <div>
-      <a class="xref" href="Kinstrife.Procedures.IActivatableInstruction.html#Kinstrife_Procedures_IActivatableInstruction_ActivationMode">IActivatableInstruction.ActivationMode</a>
-    </div>
-    <div>
       <a class="xref" href="Kinstrife.Procedures.IActivatableInstruction.html#Kinstrife_Procedures_IActivatableInstruction_IsActive">IActivatableInstruction.IsActive</a>
     </div>
     <div>
@@ -102,17 +99,69 @@
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public interface ILink : IActivatableInstruction, ISynchronizableInstruction, IInstruction</code></pre>
   </div>
+  <h3 id="properties">Properties
+  </h3>
+  
+  
+  <a id="Kinstrife_Procedures_ILink_Other_" data-uid="Kinstrife.Procedures.ILink.Other*"></a>
+  <h4 id="Kinstrife_Procedures_ILink_Other" data-uid="Kinstrife.Procedures.ILink.Other">Other</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Procedure Other { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Kinstrife.Procedures.Procedure.html">Procedure</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Kinstrife_Procedures_ILink_Self_" data-uid="Kinstrife.Procedures.ILink.Self*"></a>
+  <h4 id="Kinstrife_Procedures_ILink_Self" data-uid="Kinstrife.Procedures.ILink.Self">Self</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Procedure Self { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Kinstrife.Procedures.Procedure.html">Procedure</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   <h3 id="methods">Methods
   </h3>
   
   
   <a id="Kinstrife_Procedures_ILink_Initialize_" data-uid="Kinstrife.Procedures.ILink.Initialize*"></a>
-  <h4 id="Kinstrife_Procedures_ILink_Initialize_Kinstrife_Procedures_LinkedProcedures_" data-uid="Kinstrife.Procedures.ILink.Initialize(Kinstrife.Procedures.LinkedProcedures)">Initialize(LinkedProcedures)</h4>
+  <h4 id="Kinstrife_Procedures_ILink_Initialize_Kinstrife_Procedures_ProceduresManager_Kinstrife_Procedures_Procedure_" data-uid="Kinstrife.Procedures.ILink.Initialize(Kinstrife.Procedures.ProceduresManager,Kinstrife.Procedures.Procedure)">Initialize(ProceduresManager, Procedure)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">void Initialize(LinkedProcedures context)</code></pre>
+    <pre><code class="lang-csharp hljs">void Initialize(ProceduresManager manager, Procedure procedure)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -125,8 +174,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="Kinstrife.Procedures.LinkedProcedures.html">LinkedProcedures</a></td>
-        <td><span class="parametername">context</span></td>
+        <td><a class="xref" href="Kinstrife.Procedures.ProceduresManager.html">ProceduresManager</a></td>
+        <td><span class="parametername">manager</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Kinstrife.Procedures.Procedure.html">Procedure</a></td>
+        <td><span class="parametername">procedure</span></td>
         <td></td>
       </tr>
     </tbody>

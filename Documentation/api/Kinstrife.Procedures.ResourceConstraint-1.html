@@ -78,25 +78,30 @@
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><a class="xref" href="Kinstrife.Procedures.Constraint-1.html">Constraint</a>&lt;<a class="xref" href="Kinstrife.Procedures.ResourceConstraint-1.Settings.html">ResourceConstraint.Settings</a>&lt;&gt;&gt;</div>
+    <div class="level1"><a class="xref" href="Kinstrife.Procedures.Constraint-1.html">Constraint</a>&lt;<a class="xref" href="Kinstrife.Procedures.ResourceConstraint-1.Data.html">ResourceConstraint.Data</a>&lt;&gt;&gt;</div>
     <div class="level2"><span class="xref">ResourceConstraint&lt;T&gt;</span></div>
       <div class="level3"><a class="xref" href="Kinstrife.Procedures.GenericResourceConstraint.html">GenericResourceConstraint</a></div>
+      <div class="level3"><a class="xref" href="Kinstrife.Procedures.ResourceConstraint-2.html">ResourceConstraint&lt;T, U&gt;</a></div>
   </div>
   <div class="implements">
     <h5>Implements</h5>
     <div><a class="xref" href="Kinstrife.Procedures.IConstraint.html">IConstraint</a></div>
     <div><a class="xref" href="Kinstrife.Procedures.IInstruction.html">IInstruction</a></div>
+    <div><a class="xref" href="Kinstrife.Procedures.IConditionEvaluator.html">IConditionEvaluator</a></div>
   </div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
     <div>
-      <a class="xref" href="Kinstrife.Procedures.Constraint-1.html#Kinstrife_Procedures_Constraint_1_evaluator">Constraint&lt;ResourceConstraint&lt;T&gt;.Settings&gt;.evaluator</a>
+      <a class="xref" href="Kinstrife.Procedures.Constraint-1.html#Kinstrife_Procedures_Constraint_1_evaluator">Constraint&lt;ResourceConstraint&lt;T&gt;.Data&gt;.evaluator</a>
     </div>
     <div>
-      <a class="xref" href="Kinstrife.Procedures.Constraint-1.html#Kinstrife_Procedures_Constraint_1_settings">Constraint&lt;ResourceConstraint&lt;T&gt;.Settings&gt;.settings</a>
+      <a class="xref" href="Kinstrife.Procedures.Constraint-1.html#Kinstrife_Procedures_Constraint_1_settings">Constraint&lt;ResourceConstraint&lt;T&gt;.Data&gt;.settings</a>
     </div>
     <div>
-      <a class="xref" href="Kinstrife.Procedures.Constraint-1.html#Kinstrife_Procedures_Constraint_1_Mode">Constraint&lt;ResourceConstraint&lt;T&gt;.Settings&gt;.Mode</a>
+      <a class="xref" href="Kinstrife.Procedures.Constraint-1.html#Kinstrife_Procedures_Constraint_1_Settings">Constraint&lt;ResourceConstraint&lt;T&gt;.Data&gt;.Settings</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.Procedures.Constraint-1.html#Kinstrife_Procedures_Constraint_1_Mode">Constraint&lt;ResourceConstraint&lt;T&gt;.Data&gt;.Mode</a>
     </div>
     <div>
       <span class="xref">System.Object.ToString()</span>
@@ -124,7 +129,7 @@
   <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
   <h5 id="Kinstrife_Procedures_ResourceConstraint_1_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public abstract class ResourceConstraint&lt;T&gt; : Constraint&lt;ResourceConstraint&lt;T&gt;.Settings&gt;, IConstraint, IInstruction where T : ScriptableObject</code></pre>
+    <pre><code class="lang-csharp hljs">public abstract class ResourceConstraint&lt;T&gt; : Constraint&lt;ResourceConstraint&lt;T&gt;.Data&gt;, IConstraint, IInstruction, IConditionEvaluator where T : ScriptableObject</code></pre>
   </div>
   <h5 class="typeParameters">Type Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -141,31 +146,28 @@
       </tr>
     </tbody>
   </table>
-  <h3 id="constructors">Constructors
+  <h3 id="fields">Fields
   </h3>
   
   
-  <a id="Kinstrife_Procedures_ResourceConstraint_1__ctor_" data-uid="Kinstrife.Procedures.ResourceConstraint`1.#ctor*"></a>
-  <h4 id="Kinstrife_Procedures_ResourceConstraint_1__ctor_Kinstrife_Procedures_ResourceConstraint__0__Settings_" data-uid="Kinstrife.Procedures.ResourceConstraint`1.#ctor(Kinstrife.Procedures.ResourceConstraint{`0}.Settings)">ResourceConstraint(ResourceConstraint&lt;T&gt;.Settings)</h4>
+  <h4 id="Kinstrife_Procedures_ResourceConstraint_1_provider" data-uid="Kinstrife.Procedures.ResourceConstraint`1.provider">provider</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public ResourceConstraint(ResourceConstraint&lt;T&gt;.Settings settings)</code></pre>
+    <pre><code class="lang-csharp hljs">protected IConsumableResourceProvider&lt;T&gt; provider</code></pre>
   </div>
-  <h5 class="parameters">Parameters</h5>
+  <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
       <tr>
         <th>Type</th>
-        <th>Name</th>
         <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="Kinstrife.Procedures.ResourceConstraint-1.Settings.html">ResourceConstraint.Settings</a>&lt;&gt;</td>
-        <td><span class="parametername">settings</span></td>
+        <td><a class="xref" href="Kinstrife.Procedures.IConsumableResourceProvider-1.html">IConsumableResourceProvider</a>&lt;T&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -198,7 +200,7 @@
     </tbody>
   </table>
   <h5 class="overrides">Overrides</h5>
-  <div><span class="xref">Kinstrife.Procedures.Constraint&lt;Kinstrife.Procedures.ResourceConstraint&lt;T&gt;.Settings&gt;.IsValid</span></div>
+  <div><span class="xref">Kinstrife.Procedures.Constraint&lt;Kinstrife.Procedures.ResourceConstraint&lt;T&gt;.Data&gt;.IsValid</span></div>
   <h3 id="methods">Methods
   </h3>
   
@@ -244,7 +246,7 @@
     </tbody>
   </table>
   <h5 class="overrides">Overrides</h5>
-  <div><span class="xref">Kinstrife.Procedures.Constraint&lt;Kinstrife.Procedures.ResourceConstraint&lt;T&gt;.Settings&gt;.Evaluate(Kinstrife.Procedures.Operation)</span></div>
+  <div><span class="xref">Kinstrife.Procedures.Constraint&lt;Kinstrife.Procedures.ResourceConstraint&lt;T&gt;.Data&gt;.Evaluate(Kinstrife.Procedures.Operation)</span></div>
   
   
   <a id="Kinstrife_Procedures_ResourceConstraint_1_Execute_" data-uid="Kinstrife.Procedures.ResourceConstraint`1.Execute*"></a>
@@ -273,7 +275,7 @@
     </tbody>
   </table>
   <h5 class="overrides">Overrides</h5>
-  <div><span class="xref">Kinstrife.Procedures.Constraint&lt;Kinstrife.Procedures.ResourceConstraint&lt;T&gt;.Settings&gt;.Execute(Kinstrife.Procedures.Operation)</span></div>
+  <div><span class="xref">Kinstrife.Procedures.Constraint&lt;Kinstrife.Procedures.ResourceConstraint&lt;T&gt;.Data&gt;.Execute(Kinstrife.Procedures.Operation)</span></div>
   
   
   <a id="Kinstrife_Procedures_ResourceConstraint_1_Initialize_" data-uid="Kinstrife.Procedures.ResourceConstraint`1.Initialize*"></a>
@@ -307,13 +309,16 @@
     </tbody>
   </table>
   <h5 class="overrides">Overrides</h5>
-  <div><span class="xref">Kinstrife.Procedures.Constraint&lt;Kinstrife.Procedures.ResourceConstraint&lt;T&gt;.Settings&gt;.Initialize(Kinstrife.Procedures.ProceduresManager, Kinstrife.Procedures.IEvaluateConstraints)</span></div>
+  <div><span class="xref">Kinstrife.Procedures.Constraint&lt;Kinstrife.Procedures.ResourceConstraint&lt;T&gt;.Data&gt;.Initialize(Kinstrife.Procedures.ProceduresManager, Kinstrife.Procedures.IEvaluateConstraints)</span></div>
   <h3 id="implements">Implements</h3>
   <div>
       <a class="xref" href="Kinstrife.Procedures.IConstraint.html">IConstraint</a>
   </div>
   <div>
       <a class="xref" href="Kinstrife.Procedures.IInstruction.html">IInstruction</a>
+  </div>
+  <div>
+      <a class="xref" href="Kinstrife.Procedures.IConditionEvaluator.html">IConditionEvaluator</a>
   </div>
 </article>
           </div>

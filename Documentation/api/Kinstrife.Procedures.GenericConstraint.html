@@ -78,27 +78,31 @@
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><a class="xref" href="Kinstrife.Procedures.Constraint-1.html">Constraint</a>&lt;<a class="xref" href="Kinstrife.Procedures.GenericConstraint.Settings.html">GenericConstraint.Settings</a>&gt;</div>
+    <div class="level1"><a class="xref" href="Kinstrife.Procedures.Constraint-1.html">Constraint</a>&lt;<a class="xref" href="Kinstrife.Procedures.GenericConstraint.Data.html">GenericConstraint.Data</a>&gt;</div>
     <div class="level2"><span class="xref">GenericConstraint</span></div>
   </div>
   <div class="implements">
     <h5>Implements</h5>
     <div><a class="xref" href="Kinstrife.Procedures.IConstraint.html">IConstraint</a></div>
     <div><a class="xref" href="Kinstrife.Procedures.IInstruction.html">IInstruction</a></div>
+    <div><a class="xref" href="Kinstrife.Procedures.IConditionEvaluator.html">IConditionEvaluator</a></div>
   </div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
     <div>
-      <a class="xref" href="Kinstrife.Procedures.Constraint-1.html#Kinstrife_Procedures_Constraint_1_evaluator">Constraint&lt;GenericConstraint.Settings&gt;.evaluator</a>
+      <a class="xref" href="Kinstrife.Procedures.Constraint-1.html#Kinstrife_Procedures_Constraint_1_evaluator">Constraint&lt;GenericConstraint.Data&gt;.evaluator</a>
     </div>
     <div>
-      <a class="xref" href="Kinstrife.Procedures.Constraint-1.html#Kinstrife_Procedures_Constraint_1_settings">Constraint&lt;GenericConstraint.Settings&gt;.settings</a>
+      <a class="xref" href="Kinstrife.Procedures.Constraint-1.html#Kinstrife_Procedures_Constraint_1_settings">Constraint&lt;GenericConstraint.Data&gt;.settings</a>
     </div>
     <div>
-      <a class="xref" href="Kinstrife.Procedures.Constraint-1.html#Kinstrife_Procedures_Constraint_1_Mode">Constraint&lt;GenericConstraint.Settings&gt;.Mode</a>
+      <a class="xref" href="Kinstrife.Procedures.Constraint-1.html#Kinstrife_Procedures_Constraint_1_Settings">Constraint&lt;GenericConstraint.Data&gt;.Settings</a>
     </div>
     <div>
-      <a class="xref" href="Kinstrife.Procedures.Constraint-1.html#Kinstrife_Procedures_Constraint_1_Initialize_Kinstrife_Procedures_ProceduresManager_Kinstrife_Procedures_IEvaluateConstraints_">Constraint&lt;GenericConstraint.Settings&gt;.Initialize(ProceduresManager, IEvaluateConstraints)</a>
+      <a class="xref" href="Kinstrife.Procedures.Constraint-1.html#Kinstrife_Procedures_Constraint_1_Mode">Constraint&lt;GenericConstraint.Data&gt;.Mode</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.Procedures.Constraint-1.html#Kinstrife_Procedures_Constraint_1_Initialize_Kinstrife_Procedures_ProceduresManager_Kinstrife_Procedures_IEvaluateConstraints_">Constraint&lt;GenericConstraint.Data&gt;.Initialize(ProceduresManager, IEvaluateConstraints)</a>
     </div>
     <div>
       <span class="xref">System.Object.ToString()</span>
@@ -127,37 +131,8 @@
   <h5 id="Kinstrife_Procedures_GenericConstraint_syntax">Syntax</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">[Serializable]
-public class GenericConstraint : Constraint&lt;GenericConstraint.Settings&gt;, IConstraint, IInstruction</code></pre>
+public class GenericConstraint : Constraint&lt;GenericConstraint.Data&gt;, IConstraint, IInstruction, IConditionEvaluator</code></pre>
   </div>
-  <h3 id="constructors">Constructors
-  </h3>
-  
-  
-  <a id="Kinstrife_Procedures_GenericConstraint__ctor_" data-uid="Kinstrife.Procedures.GenericConstraint.#ctor*"></a>
-  <h4 id="Kinstrife_Procedures_GenericConstraint__ctor_Kinstrife_Procedures_GenericConstraint_Settings_" data-uid="Kinstrife.Procedures.GenericConstraint.#ctor(Kinstrife.Procedures.GenericConstraint.Settings)">GenericConstraint(GenericConstraint.Settings)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public GenericConstraint(GenericConstraint.Settings settings)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Kinstrife.Procedures.GenericConstraint.Settings.html">GenericConstraint.Settings</a></td>
-        <td><span class="parametername">settings</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
   <h3 id="properties">Properties
   </h3>
   
@@ -186,7 +161,7 @@ public class GenericConstraint : Constraint&lt;GenericConstraint.Settings&gt;, I
     </tbody>
   </table>
   <h5 class="overrides">Overrides</h5>
-  <div><span class="xref">Kinstrife.Procedures.Constraint&lt;Kinstrife.Procedures.GenericConstraint.Settings&gt;.IsValid</span></div>
+  <div><span class="xref">Kinstrife.Procedures.Constraint&lt;Kinstrife.Procedures.GenericConstraint.Data&gt;.IsValid</span></div>
   <h3 id="methods">Methods
   </h3>
   
@@ -232,7 +207,7 @@ public class GenericConstraint : Constraint&lt;GenericConstraint.Settings&gt;, I
     </tbody>
   </table>
   <h5 class="overrides">Overrides</h5>
-  <div><span class="xref">Kinstrife.Procedures.Constraint&lt;Kinstrife.Procedures.GenericConstraint.Settings&gt;.Evaluate(Kinstrife.Procedures.Operation)</span></div>
+  <div><span class="xref">Kinstrife.Procedures.Constraint&lt;Kinstrife.Procedures.GenericConstraint.Data&gt;.Evaluate(Kinstrife.Procedures.Operation)</span></div>
   
   
   <a id="Kinstrife_Procedures_GenericConstraint_Execute_" data-uid="Kinstrife.Procedures.GenericConstraint.Execute*"></a>
@@ -261,13 +236,16 @@ public class GenericConstraint : Constraint&lt;GenericConstraint.Settings&gt;, I
     </tbody>
   </table>
   <h5 class="overrides">Overrides</h5>
-  <div><span class="xref">Kinstrife.Procedures.Constraint&lt;Kinstrife.Procedures.GenericConstraint.Settings&gt;.Execute(Kinstrife.Procedures.Operation)</span></div>
+  <div><span class="xref">Kinstrife.Procedures.Constraint&lt;Kinstrife.Procedures.GenericConstraint.Data&gt;.Execute(Kinstrife.Procedures.Operation)</span></div>
   <h3 id="implements">Implements</h3>
   <div>
       <a class="xref" href="Kinstrife.Procedures.IConstraint.html">IConstraint</a>
   </div>
   <div>
       <a class="xref" href="Kinstrife.Procedures.IInstruction.html">IInstruction</a>
+  </div>
+  <div>
+      <a class="xref" href="Kinstrife.Procedures.IConditionEvaluator.html">IConditionEvaluator</a>
   </div>
 </article>
           </div>

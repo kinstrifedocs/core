@@ -73,14 +73,14 @@
   
   <h1 id="Kinstrife_Animation_RadialStateAnimator_2" data-uid="Kinstrife.Animation.RadialStateAnimator`2" class="text-break">Class RadialStateAnimator&lt;TFSMType, TFSMStateType&gt;
   </h1>
-  <div class="markdown level0 summary"><p>Animator based on Radial Final State Machine</p>
+  <div class="markdown level0 summary"><p>Animator based on Radial Finite State Machine</p>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
     <div class="level1"><a class="xref" href="Kinstrife.Animation.AnimationComponent.html">AnimationComponent</a></div>
-    <div class="level2"><a class="xref" href="Kinstrife.Animation.PlayableAnimationComponent.html">PlayableAnimationComponent</a></div>
+    <div class="level2"><a class="xref" href="Kinstrife.Animation.LayerAnimationComponent.html">LayerAnimationComponent</a></div>
     <div class="level3"><a class="xref" href="Kinstrife.Animation.StateAnimator-2.html">StateAnimator</a>&lt;TFSMType, TFSMStateType&gt;</div>
     <div class="level4"><span class="xref">RadialStateAnimator&lt;TFSMType, TFSMStateType&gt;</span></div>
   </div>
@@ -94,6 +94,10 @@
     <div><span class="xref">INotificationReceiver</span></div>
     <div><span class="xref">IComparable</span>&lt;<a class="xref" href="Kinstrife.Animation.AnimationComponent.html">AnimationComponent</a>&gt;</div>
     <div><a class="xref" href="Kinstrife.Animation.ILayerAnimator.html">ILayerAnimator</a></div>
+    <div><a class="xref" href="Kinstrife.Animation.IWeightedAnimator.html">IWeightedAnimator</a></div>
+    <div><span class="xref">IComparable</span>&lt;<a class="xref" href="Kinstrife.Animation.ILayerAnimator.html">ILayerAnimator</a>&gt;</div>
+    <div><a class="xref" href="Kinstrife.Animation.IRadialStateAnimator.html">IRadialStateAnimator</a></div>
+    <div><a class="xref" href="Kinstrife.Animation.IAnimator.html">IAnimator</a></div>
   </div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
@@ -137,124 +141,121 @@
       <a class="xref" href="Kinstrife.Animation.StateAnimator-2.html#Kinstrife_Animation_StateAnimator_2_StatesChange">StateAnimator&lt;TFSMType, TFSMStateType&gt;.StatesChange()</a>
     </div>
     <div>
-      <a class="xref" href="Kinstrife.Animation.PlayableAnimationComponent.html#Kinstrife_Animation_PlayableAnimationComponent_layerId">PlayableAnimationComponent.layerId</a>
+      <a class="xref" href="Kinstrife.Animation.LayerAnimationComponent.html#Kinstrife_Animation_LayerAnimationComponent_Settings">LayerAnimationComponent.Settings</a>
     </div>
     <div>
-      <a class="xref" href="Kinstrife.Animation.PlayableAnimationComponent.html#Kinstrife_Animation_PlayableAnimationComponent_fadeMode">PlayableAnimationComponent.fadeMode</a>
+      <a class="xref" href="Kinstrife.Animation.LayerAnimationComponent.html#Kinstrife_Animation_LayerAnimationComponent_LayerId">LayerAnimationComponent.LayerId</a>
     </div>
     <div>
-      <a class="xref" href="Kinstrife.Animation.PlayableAnimationComponent.html#Kinstrife_Animation_PlayableAnimationComponent_speed">PlayableAnimationComponent.speed</a>
+      <a class="xref" href="Kinstrife.Animation.LayerAnimationComponent.html#Kinstrife_Animation_LayerAnimationComponent_FadeMode">LayerAnimationComponent.FadeMode</a>
     </div>
     <div>
-      <a class="xref" href="Kinstrife.Animation.PlayableAnimationComponent.html#Kinstrife_Animation_PlayableAnimationComponent_fadeTime">PlayableAnimationComponent.fadeTime</a>
+      <a class="xref" href="Kinstrife.Animation.LayerAnimationComponent.html#Kinstrife_Animation_LayerAnimationComponent_Speed">LayerAnimationComponent.Speed</a>
     </div>
     <div>
-      <a class="xref" href="Kinstrife.Animation.PlayableAnimationComponent.html#Kinstrife_Animation_PlayableAnimationComponent_FadeDuration">PlayableAnimationComponent.FadeDuration</a>
+      <a class="xref" href="Kinstrife.Animation.LayerAnimationComponent.html#Kinstrife_Animation_LayerAnimationComponent_FadeDuration">LayerAnimationComponent.FadeDuration</a>
     </div>
     <div>
-      <a class="xref" href="Kinstrife.Animation.PlayableAnimationComponent.html#Kinstrife_Animation_PlayableAnimationComponent_weight">PlayableAnimationComponent.weight</a>
+      <a class="xref" href="Kinstrife.Animation.LayerAnimationComponent.html#Kinstrife_Animation_LayerAnimationComponent_Weight">LayerAnimationComponent.Weight</a>
     </div>
     <div>
-      <a class="xref" href="Kinstrife.Animation.PlayableAnimationComponent.html#Kinstrife_Animation_PlayableAnimationComponent_targetWeight">PlayableAnimationComponent.targetWeight</a>
+      <a class="xref" href="Kinstrife.Animation.LayerAnimationComponent.html#Kinstrife_Animation_LayerAnimationComponent_Length">LayerAnimationComponent.Length</a>
     </div>
     <div>
-      <a class="xref" href="Kinstrife.Animation.PlayableAnimationComponent.html#Kinstrife_Animation_PlayableAnimationComponent_endEventMode">PlayableAnimationComponent.endEventMode</a>
+      <a class="xref" href="Kinstrife.Animation.LayerAnimationComponent.html#Kinstrife_Animation_LayerAnimationComponent_transition">LayerAnimationComponent.transition</a>
     </div>
     <div>
-      <a class="xref" href="Kinstrife.Animation.PlayableAnimationComponent.html#Kinstrife_Animation_PlayableAnimationComponent_endEventTime">PlayableAnimationComponent.endEventTime</a>
+      <a class="xref" href="Kinstrife.Animation.LayerAnimationComponent.html#Kinstrife_Animation_LayerAnimationComponent_AnimancerState">LayerAnimationComponent.AnimancerState</a>
     </div>
     <div>
-      <a class="xref" href="Kinstrife.Animation.PlayableAnimationComponent.html#Kinstrife_Animation_PlayableAnimationComponent_Length">PlayableAnimationComponent.Length</a>
+      <a class="xref" href="Kinstrife.Animation.LayerAnimationComponent.html#Kinstrife_Animation_LayerAnimationComponent_layer">LayerAnimationComponent.layer</a>
     </div>
     <div>
-      <a class="xref" href="Kinstrife.Animation.PlayableAnimationComponent.html#Kinstrife_Animation_PlayableAnimationComponent_transition">PlayableAnimationComponent.transition</a>
+      <a class="xref" href="Kinstrife.Animation.LayerAnimationComponent.html#Kinstrife_Animation_LayerAnimationComponent_isActiveAndPlaying">LayerAnimationComponent.isActiveAndPlaying</a>
     </div>
     <div>
-      <a class="xref" href="Kinstrife.Animation.PlayableAnimationComponent.html#Kinstrife_Animation_PlayableAnimationComponent_AnimancerState">PlayableAnimationComponent.AnimancerState</a>
+      <a class="xref" href="Kinstrife.Animation.LayerAnimationComponent.html#Kinstrife_Animation_LayerAnimationComponent_canPlay">LayerAnimationComponent.canPlay</a>
     </div>
     <div>
-      <a class="xref" href="Kinstrife.Animation.PlayableAnimationComponent.html#Kinstrife_Animation_PlayableAnimationComponent_layer">PlayableAnimationComponent.layer</a>
+      <a class="xref" href="Kinstrife.Animation.LayerAnimationComponent.html#Kinstrife_Animation_LayerAnimationComponent_canStop">LayerAnimationComponent.canStop</a>
     </div>
     <div>
-      <a class="xref" href="Kinstrife.Animation.PlayableAnimationComponent.html#Kinstrife_Animation_PlayableAnimationComponent_isActiveAndPlaying">PlayableAnimationComponent.isActiveAndPlaying</a>
+      <a class="xref" href="Kinstrife.Animation.LayerAnimationComponent.html#Kinstrife_Animation_LayerAnimationComponent_PlayButtonColor">LayerAnimationComponent.PlayButtonColor</a>
     </div>
     <div>
-      <a class="xref" href="Kinstrife.Animation.PlayableAnimationComponent.html#Kinstrife_Animation_PlayableAnimationComponent_canPlay">PlayableAnimationComponent.canPlay</a>
+      <a class="xref" href="Kinstrife.Animation.LayerAnimationComponent.html#Kinstrife_Animation_LayerAnimationComponent_StopButtonColor">LayerAnimationComponent.StopButtonColor</a>
     </div>
     <div>
-      <a class="xref" href="Kinstrife.Animation.PlayableAnimationComponent.html#Kinstrife_Animation_PlayableAnimationComponent_canStop">PlayableAnimationComponent.canStop</a>
+      <a class="xref" href="Kinstrife.Animation.LayerAnimationComponent.html#Kinstrife_Animation_LayerAnimationComponent_IsTopPriority">LayerAnimationComponent.IsTopPriority</a>
     </div>
     <div>
-      <a class="xref" href="Kinstrife.Animation.PlayableAnimationComponent.html#Kinstrife_Animation_PlayableAnimationComponent_PlayButtonColor">PlayableAnimationComponent.PlayButtonColor</a>
+      <a class="xref" href="Kinstrife.Animation.LayerAnimationComponent.html#Kinstrife_Animation_LayerAnimationComponent_Play">LayerAnimationComponent.Play()</a>
     </div>
     <div>
-      <a class="xref" href="Kinstrife.Animation.PlayableAnimationComponent.html#Kinstrife_Animation_PlayableAnimationComponent_StopButtonColor">PlayableAnimationComponent.StopButtonColor</a>
+      <a class="xref" href="Kinstrife.Animation.LayerAnimationComponent.html#Kinstrife_Animation_LayerAnimationComponent_Stop">LayerAnimationComponent.Stop()</a>
     </div>
     <div>
-      <a class="xref" href="Kinstrife.Animation.PlayableAnimationComponent.html#Kinstrife_Animation_PlayableAnimationComponent_IsTopPriority">PlayableAnimationComponent.IsTopPriority</a>
+      <a class="xref" href="Kinstrife.Animation.LayerAnimationComponent.html#Kinstrife_Animation_LayerAnimationComponent_Play__1___0_">LayerAnimationComponent.Play&lt;T&gt;(T)</a>
     </div>
     <div>
-      <a class="xref" href="Kinstrife.Animation.PlayableAnimationComponent.html#Kinstrife_Animation_PlayableAnimationComponent_Play">PlayableAnimationComponent.Play()</a>
+      <a class="xref" href="Kinstrife.Animation.LayerAnimationComponent.html#Kinstrife_Animation_LayerAnimationComponent_Play_Kinstrife_Animation_AnimationAsset_">LayerAnimationComponent.Play(AnimationAsset)</a>
     </div>
     <div>
-      <a class="xref" href="Kinstrife.Animation.PlayableAnimationComponent.html#Kinstrife_Animation_PlayableAnimationComponent_Stop">PlayableAnimationComponent.Stop()</a>
+      <a class="xref" href="Kinstrife.Animation.LayerAnimationComponent.html#Kinstrife_Animation_LayerAnimationComponent_Play_Kinstrife_Animation_AnimationAssetBase_">LayerAnimationComponent.Play(AnimationAssetBase)</a>
     </div>
     <div>
-      <a class="xref" href="Kinstrife.Animation.PlayableAnimationComponent.html#Kinstrife_Animation_PlayableAnimationComponent_Play__1___0_">PlayableAnimationComponent.Play&lt;T&gt;(T)</a>
+      <a class="xref" href="Kinstrife.Animation.LayerAnimationComponent.html#Kinstrife_Animation_LayerAnimationComponent_Play_Kinstrife_Animation_AnimationAssetT_">LayerAnimationComponent.Play(AnimationAssetT)</a>
     </div>
     <div>
-      <a class="xref" href="Kinstrife.Animation.PlayableAnimationComponent.html#Kinstrife_Animation_PlayableAnimationComponent_Play_Kinstrife_Animation_AnimationAsset_">PlayableAnimationComponent.Play(AnimationAsset)</a>
+      <a class="xref" href="Kinstrife.Animation.LayerAnimationComponent.html#Kinstrife_Animation_LayerAnimationComponent_SetTransition_ITransition_">LayerAnimationComponent.SetTransition(ITransition)</a>
     </div>
     <div>
-      <a class="xref" href="Kinstrife.Animation.PlayableAnimationComponent.html#Kinstrife_Animation_PlayableAnimationComponent_SetTransition_ITransition_">PlayableAnimationComponent.SetTransition(ITransition)</a>
+      <a class="xref" href="Kinstrife.Animation.LayerAnimationComponent.html#Kinstrife_Animation_LayerAnimationComponent_PlayOnLayer_Kinstrife_Animation_AnimationLayer_">LayerAnimationComponent.PlayOnLayer(AnimationLayer)</a>
     </div>
     <div>
-      <a class="xref" href="Kinstrife.Animation.PlayableAnimationComponent.html#Kinstrife_Animation_PlayableAnimationComponent_PlayOnLayer_Kinstrife_Animation_AnimationLayer_">PlayableAnimationComponent.PlayOnLayer(AnimationLayer)</a>
+      <a class="xref" href="Kinstrife.Animation.LayerAnimationComponent.html#Kinstrife_Animation_LayerAnimationComponent_InternalPlay">LayerAnimationComponent.InternalPlay()</a>
     </div>
     <div>
-      <a class="xref" href="Kinstrife.Animation.PlayableAnimationComponent.html#Kinstrife_Animation_PlayableAnimationComponent_InternalPlay">PlayableAnimationComponent.InternalPlay()</a>
+      <a class="xref" href="Kinstrife.Animation.LayerAnimationComponent.html#Kinstrife_Animation_LayerAnimationComponent_GetOrCreateState">LayerAnimationComponent.GetOrCreateState()</a>
     </div>
     <div>
-      <a class="xref" href="Kinstrife.Animation.PlayableAnimationComponent.html#Kinstrife_Animation_PlayableAnimationComponent_GetOrCreateState">PlayableAnimationComponent.GetOrCreateState()</a>
+      <a class="xref" href="Kinstrife.Animation.LayerAnimationComponent.html#Kinstrife_Animation_LayerAnimationComponent_PostPlayTransition">LayerAnimationComponent.PostPlayTransition()</a>
     </div>
     <div>
-      <a class="xref" href="Kinstrife.Animation.PlayableAnimationComponent.html#Kinstrife_Animation_PlayableAnimationComponent_PostPlayTransition">PlayableAnimationComponent.PostPlayTransition()</a>
+      <a class="xref" href="Kinstrife.Animation.LayerAnimationComponent.html#Kinstrife_Animation_LayerAnimationComponent_Kinstrife_Animation_ILayerAnimator_StopOnLayer_Kinstrife_Animation_AnimationLayer_">LayerAnimationComponent.ILayerAnimator.StopOnLayer(AnimationLayer)</a>
     </div>
     <div>
-      <a class="xref" href="Kinstrife.Animation.PlayableAnimationComponent.html#Kinstrife_Animation_PlayableAnimationComponent_Kinstrife_Animation_ILayerAnimator_StopOnLayer_Kinstrife_Animation_AnimationLayer_">PlayableAnimationComponent.ILayerAnimator.StopOnLayer(AnimationLayer)</a>
+      <a class="xref" href="Kinstrife.Animation.LayerAnimationComponent.html#Kinstrife_Animation_LayerAnimationComponent_DebugEndEvent">LayerAnimationComponent.DebugEndEvent()</a>
     </div>
     <div>
-      <a class="xref" href="Kinstrife.Animation.PlayableAnimationComponent.html#Kinstrife_Animation_PlayableAnimationComponent_DebugEndEvent">PlayableAnimationComponent.DebugEndEvent()</a>
+      <a class="xref" href="Kinstrife.Animation.LayerAnimationComponent.html#Kinstrife_Animation_LayerAnimationComponent_SetSpeed_System_Single_">LayerAnimationComponent.SetSpeed(Single)</a>
     </div>
     <div>
-      <a class="xref" href="Kinstrife.Animation.PlayableAnimationComponent.html#Kinstrife_Animation_PlayableAnimationComponent_SetSpeed_System_Single_">PlayableAnimationComponent.SetSpeed(Single)</a>
+      <a class="xref" href="Kinstrife.Animation.LayerAnimationComponent.html#Kinstrife_Animation_LayerAnimationComponent_SetWeight_System_Single_">LayerAnimationComponent.SetWeight(Single)</a>
     </div>
     <div>
-      <a class="xref" href="Kinstrife.Animation.PlayableAnimationComponent.html#Kinstrife_Animation_PlayableAnimationComponent_SetWeight_System_Single_">PlayableAnimationComponent.SetWeight(Single)</a>
+      <a class="xref" href="Kinstrife.Animation.LayerAnimationComponent.html#Kinstrife_Animation_LayerAnimationComponent_SetTargetWeight_System_Single_">LayerAnimationComponent.SetTargetWeight(Single)</a>
     </div>
     <div>
-      <a class="xref" href="Kinstrife.Animation.PlayableAnimationComponent.html#Kinstrife_Animation_PlayableAnimationComponent_SetTargetWeight_System_Single_">PlayableAnimationComponent.SetTargetWeight(Single)</a>
+      <a class="xref" href="Kinstrife.Animation.LayerAnimationComponent.html#Kinstrife_Animation_LayerAnimationComponent_PriorityInLayer">LayerAnimationComponent.PriorityInLayer</a>
     </div>
     <div>
-      <a class="xref" href="Kinstrife.Animation.PlayableAnimationComponent.html#Kinstrife_Animation_PlayableAnimationComponent_CreatePlayable_PlayableGraph_">PlayableAnimationComponent.CreatePlayable(PlayableGraph)</a>
+      <a class="xref" href="Kinstrife.Animation.LayerAnimationComponent.html#Kinstrife_Animation_LayerAnimationComponent_Transition">LayerAnimationComponent.Transition</a>
     </div>
     <div>
-      <a class="xref" href="Kinstrife.Animation.PlayableAnimationComponent.html#Kinstrife_Animation_PlayableAnimationComponent_PriorityInLayer">PlayableAnimationComponent.PriorityInLayer</a>
+      <a class="xref" href="Kinstrife.Animation.LayerAnimationComponent.html#Kinstrife_Animation_LayerAnimationComponent_HasEndEvent">LayerAnimationComponent.HasEndEvent</a>
     </div>
     <div>
-      <a class="xref" href="Kinstrife.Animation.PlayableAnimationComponent.html#Kinstrife_Animation_PlayableAnimationComponent_Transition">PlayableAnimationComponent.Transition</a>
+      <a class="xref" href="Kinstrife.Animation.LayerAnimationComponent.html#Kinstrife_Animation_LayerAnimationComponent_PrimaryLayer">LayerAnimationComponent.PrimaryLayer</a>
     </div>
     <div>
-      <a class="xref" href="Kinstrife.Animation.PlayableAnimationComponent.html#Kinstrife_Animation_PlayableAnimationComponent_HasEndEvent">PlayableAnimationComponent.HasEndEvent</a>
+      <a class="xref" href="Kinstrife.Animation.LayerAnimationComponent.html#Kinstrife_Animation_LayerAnimationComponent_FallbackLayer">LayerAnimationComponent.FallbackLayer</a>
     </div>
     <div>
-      <a class="xref" href="Kinstrife.Animation.PlayableAnimationComponent.html#Kinstrife_Animation_PlayableAnimationComponent_PrimaryLayer">PlayableAnimationComponent.PrimaryLayer</a>
+      <a class="xref" href="Kinstrife.Animation.LayerAnimationComponent.html#Kinstrife_Animation_LayerAnimationComponent_CompareTo_Kinstrife_Animation_AnimationComponent_">LayerAnimationComponent.CompareTo(AnimationComponent)</a>
     </div>
     <div>
-      <a class="xref" href="Kinstrife.Animation.PlayableAnimationComponent.html#Kinstrife_Animation_PlayableAnimationComponent_FallbackLayer">PlayableAnimationComponent.FallbackLayer</a>
-    </div>
-    <div>
-      <a class="xref" href="Kinstrife.Animation.PlayableAnimationComponent.html#Kinstrife_Animation_PlayableAnimationComponent_CompareTo_Kinstrife_Animation_AnimationComponent_">PlayableAnimationComponent.CompareTo(AnimationComponent)</a>
+      <a class="xref" href="Kinstrife.Animation.LayerAnimationComponent.html#Kinstrife_Animation_LayerAnimationComponent_CompareTo_Kinstrife_Animation_ILayerAnimator_">LayerAnimationComponent.CompareTo(ILayerAnimator)</a>
     </div>
     <div>
       <a class="xref" href="Kinstrife.Animation.AnimationComponent.html#Kinstrife_Animation_AnimationComponent_animancer">AnimationComponent.animancer</a>
@@ -338,12 +339,6 @@
       <a class="xref" href="Kinstrife.Animation.AnimationComponent.html#Kinstrife_Animation_AnimationComponent_Template">AnimationComponent.Template</a>
     </div>
     <div>
-      <a class="xref" href="Kinstrife.Animation.AnimationComponent.html#Kinstrife_Animation_AnimationComponent_audioEvent">AnimationComponent.audioEvent</a>
-    </div>
-    <div>
-      <a class="xref" href="Kinstrife.Animation.AnimationComponent.html#Kinstrife_Animation_AnimationComponent_audioDelay">AnimationComponent.audioDelay</a>
-    </div>
-    <div>
       <a class="xref" href="Kinstrife.Animation.AnimationComponent.html#Kinstrife_Animation_AnimationComponent_RegisterBehaviour__2___1_">AnimationComponent.RegisterBehaviour&lt;TBehaviourType, TAnimatorType&gt;(TAnimatorType)</a>
     </div>
     <div>
@@ -355,12 +350,21 @@
     <div>
       <a class="xref" href="Kinstrife.Animation.AnimationComponent.html#Kinstrife_Animation_AnimationComponent_PushNotification_INotification_System_Object_">AnimationComponent.PushNotification(INotification, Object)</a>
     </div>
+    <div>
+      <a class="xref" href="Kinstrife.Animation.AnimationComponent.html#Kinstrife_Animation_AnimationComponent_MainTabActions">AnimationComponent.MainTabActions</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.Animation.AnimationComponent.html#Kinstrife_Animation_AnimationComponent_DebugTabActions">AnimationComponent.DebugTabActions</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.Animation.AnimationComponent.html#Kinstrife_Animation_AnimationComponent_SettingsTabActions">AnimationComponent.SettingsTabActions</a>
+    </div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Kinstrife.Animation.html">Kinstrife.Animation</a></h6>
   <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
   <h5 id="Kinstrife_Animation_RadialStateAnimator_2_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public abstract class RadialStateAnimator&lt;TFSMType, TFSMStateType&gt; : StateAnimator&lt;TFSMType, TFSMStateType&gt;, IAnimationPlayer, ICacheReferences, IInstall, IDependent, ILayerAnimator where TFSMType : StateMachine&lt;TFSMStateType&gt;, new()
+    <pre><code class="lang-csharp hljs">public abstract class RadialStateAnimator&lt;TFSMType, TFSMStateType&gt; : StateAnimator&lt;TFSMType, TFSMStateType&gt;, IAnimationPlayer, ICacheReferences, IInstall, IDependent, ILayerAnimator, IWeightedAnimator, IRadialStateAnimator, IAnimator where TFSMType : StateMachine&lt;TFSMStateType&gt;, new()
     where TFSMStateType : FSMState</code></pre>
   </div>
   <h5 class="typeParameters">Type Parameters</h5>
@@ -391,7 +395,8 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Vector2 input</code></pre>
+    <pre><code class="lang-csharp hljs">[NonSerialized]
+public Vector2 input</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -416,7 +421,7 @@
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">[NonSerialized]
-public RadialStateAnimator&lt;TFSMType, TFSMStateType&gt;.InputState inputState</code></pre>
+public InputState inputState</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -428,7 +433,7 @@ public RadialStateAnimator&lt;TFSMType, TFSMStateType&gt;.InputState inputState<
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="Kinstrife.Animation.RadialStateAnimator-2.InputState.html">RadialStateAnimator.InputState</a>&lt;&gt;</td>
+        <td><a class="xref" href="Kinstrife.Animation.InputState.html">InputState</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -484,17 +489,167 @@ public RadialStateAnimator&lt;TFSMType, TFSMStateType&gt;.InputState inputState<
       </tr>
     </tbody>
   </table>
+  
+  
+  <a id="Kinstrife_Animation_RadialStateAnimator_2_CanReturnToNeutral_" data-uid="Kinstrife.Animation.RadialStateAnimator`2.CanReturnToNeutral*"></a>
+  <h4 id="Kinstrife_Animation_RadialStateAnimator_2_CanReturnToNeutral" data-uid="Kinstrife.Animation.RadialStateAnimator`2.CanReturnToNeutral">CanReturnToNeutral</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual bool CanReturnToNeutral { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Kinstrife_Animation_RadialStateAnimator_2_DebugDrawOffset_" data-uid="Kinstrife.Animation.RadialStateAnimator`2.DebugDrawOffset*"></a>
+  <h4 id="Kinstrife_Animation_RadialStateAnimator_2_DebugDrawOffset" data-uid="Kinstrife.Animation.RadialStateAnimator`2.DebugDrawOffset">DebugDrawOffset</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual Vector3 DebugDrawOffset { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Vector3</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Kinstrife_Animation_RadialStateAnimator_2_InputRaw_" data-uid="Kinstrife.Animation.RadialStateAnimator`2.InputRaw*"></a>
+  <h4 id="Kinstrife_Animation_RadialStateAnimator_2_InputRaw" data-uid="Kinstrife.Animation.RadialStateAnimator`2.InputRaw">InputRaw</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ref Vector2 InputRaw { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Vector2</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Kinstrife_Animation_RadialStateAnimator_2_InputState_" data-uid="Kinstrife.Animation.RadialStateAnimator`2.InputState*"></a>
+  <h4 id="Kinstrife_Animation_RadialStateAnimator_2_InputState" data-uid="Kinstrife.Animation.RadialStateAnimator`2.InputState">InputState</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ref InputState InputState { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Kinstrife.Animation.InputState.html">InputState</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Kinstrife_Animation_RadialStateAnimator_2_Radial_" data-uid="Kinstrife.Animation.RadialStateAnimator`2.Radial*"></a>
+  <h4 id="Kinstrife_Animation_RadialStateAnimator_2_Radial" data-uid="Kinstrife.Animation.RadialStateAnimator`2.Radial">Radial</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ref RadialParameters Radial { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Kinstrife.Animation.RadialParameters.html">RadialParameters</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Kinstrife_Animation_RadialStateAnimator_2_VirtualTarget_" data-uid="Kinstrife.Animation.RadialStateAnimator`2.VirtualTarget*"></a>
+  <h4 id="Kinstrife_Animation_RadialStateAnimator_2_VirtualTarget" data-uid="Kinstrife.Animation.RadialStateAnimator`2.VirtualTarget">VirtualTarget</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public abstract ref Springs.Vector2D VirtualTarget { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Kinstrife.Mathematics.Springs.Vector2D.html">Springs.Vector2D</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   <h3 id="methods">Methods
   </h3>
   
   
   <a id="Kinstrife_Animation_RadialStateAnimator_2_FindActiveSegmentIndex_" data-uid="Kinstrife.Animation.RadialStateAnimator`2.FindActiveSegmentIndex*"></a>
-  <h4 id="Kinstrife_Animation_RadialStateAnimator_2_FindActiveSegmentIndex_Kinstrife_Animation_RadialParameters__Kinstrife_Animation_RadialStateAnimator__0__1__InputState__" data-uid="Kinstrife.Animation.RadialStateAnimator`2.FindActiveSegmentIndex(Kinstrife.Animation.RadialParameters@,Kinstrife.Animation.RadialStateAnimator{`0,`1}.InputState@)">FindActiveSegmentIndex(in RadialParameters, in RadialStateAnimator&lt;TFSMType, TFSMStateType&gt;.InputState)</h4>
+  <h4 id="Kinstrife_Animation_RadialStateAnimator_2_FindActiveSegmentIndex_Kinstrife_Animation_RadialParameters__Kinstrife_Animation_InputState__" data-uid="Kinstrife.Animation.RadialStateAnimator`2.FindActiveSegmentIndex(Kinstrife.Animation.RadialParameters@,Kinstrife.Animation.InputState@)">FindActiveSegmentIndex(in RadialParameters, in InputState)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static int FindActiveSegmentIndex(in RadialParameters radial, in RadialStateAnimator&lt;TFSMType, TFSMStateType&gt;.InputState inputState)</code></pre>
+    <pre><code class="lang-csharp hljs">public static int FindActiveSegmentIndex(in RadialParameters radial, in InputState inputState)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -512,7 +667,7 @@ public RadialStateAnimator&lt;TFSMType, TFSMStateType&gt;.InputState inputState<
         <td></td>
       </tr>
       <tr>
-        <td><a class="xref" href="Kinstrife.Animation.RadialStateAnimator-2.InputState.html">RadialStateAnimator.InputState</a>&lt;&gt;</td>
+        <td><a class="xref" href="Kinstrife.Animation.InputState.html">InputState</a></td>
         <td><span class="parametername">inputState</span></td>
         <td></td>
       </tr>
@@ -554,7 +709,7 @@ public RadialStateAnimator&lt;TFSMType, TFSMStateType&gt;.InputState inputState<
     <pre><code class="lang-csharp hljs">protected override void OnPlay()</code></pre>
   </div>
   <h5 class="overrides">Overrides</h5>
-  <div><a class="xref" href="Kinstrife.Animation.PlayableAnimationComponent.html#Kinstrife_Animation_PlayableAnimationComponent_OnPlay">PlayableAnimationComponent.OnPlay()</a></div>
+  <div><a class="xref" href="Kinstrife.Animation.LayerAnimationComponent.html#Kinstrife_Animation_LayerAnimationComponent_OnPlay">LayerAnimationComponent.OnPlay()</a></div>
   
   
   <a id="Kinstrife_Animation_RadialStateAnimator_2_OnStop_" data-uid="Kinstrife.Animation.RadialStateAnimator`2.OnStop*"></a>
@@ -566,7 +721,7 @@ public RadialStateAnimator&lt;TFSMType, TFSMStateType&gt;.InputState inputState<
     <pre><code class="lang-csharp hljs">protected override void OnStop()</code></pre>
   </div>
   <h5 class="overrides">Overrides</h5>
-  <div><a class="xref" href="Kinstrife.Animation.PlayableAnimationComponent.html#Kinstrife_Animation_PlayableAnimationComponent_OnStop">PlayableAnimationComponent.OnStop()</a></div>
+  <div><a class="xref" href="Kinstrife.Animation.AnimationComponent.html#Kinstrife_Animation_AnimationComponent_OnStop">AnimationComponent.OnStop()</a></div>
   
   
   <a id="Kinstrife_Animation_RadialStateAnimator_2_OnUpdate_" data-uid="Kinstrife.Animation.RadialStateAnimator`2.OnUpdate*"></a>
@@ -598,90 +753,6 @@ public RadialStateAnimator&lt;TFSMType, TFSMStateType&gt;.InputState inputState<
   <div><a class="xref" href="Kinstrife.Animation.AnimationComponent.html#Kinstrife_Animation_AnimationComponent_OnUpdate_System_Single_">AnimationComponent.OnUpdate(Single)</a></div>
   
   
-  <a id="Kinstrife_Animation_RadialStateAnimator_2_PointOnUnitCircle_" data-uid="Kinstrife.Animation.RadialStateAnimator`2.PointOnUnitCircle*"></a>
-  <h4 id="Kinstrife_Animation_RadialStateAnimator_2_PointOnUnitCircle_System_Single_" data-uid="Kinstrife.Animation.RadialStateAnimator`2.PointOnUnitCircle(System.Single)">PointOnUnitCircle(Single)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static Vector2 PointOnUnitCircle(float degrees)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Single</span></td>
-        <td><span class="parametername">degrees</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">Vector2</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="Kinstrife_Animation_RadialStateAnimator_2_PointOnUnitCircle3_" data-uid="Kinstrife.Animation.RadialStateAnimator`2.PointOnUnitCircle3*"></a>
-  <h4 id="Kinstrife_Animation_RadialStateAnimator_2_PointOnUnitCircle3_System_Single_" data-uid="Kinstrife.Animation.RadialStateAnimator`2.PointOnUnitCircle3(System.Single)">PointOnUnitCircle3(Single)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static Vector3 PointOnUnitCircle3(float degrees)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Single</span></td>
-        <td><span class="parametername">degrees</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">Vector3</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
   <a id="Kinstrife_Animation_RadialStateAnimator_2_ProcessStateChange_" data-uid="Kinstrife.Animation.RadialStateAnimator`2.ProcessStateChange*"></a>
   <h4 id="Kinstrife_Animation_RadialStateAnimator_2_ProcessStateChange_Vector2_" data-uid="Kinstrife.Animation.RadialStateAnimator`2.ProcessStateChange(Vector2)">ProcessStateChange(Vector2)</h4>
   <div class="markdown level1 summary"></div>
@@ -703,251 +774,6 @@ public RadialStateAnimator&lt;TFSMType, TFSMStateType&gt;.InputState inputState<
       <tr>
         <td><span class="xref">Vector2</span></td>
         <td><span class="parametername">input</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="Kinstrife_Animation_RadialStateAnimator_2_Rotate_" data-uid="Kinstrife.Animation.RadialStateAnimator`2.Rotate*"></a>
-  <h4 id="Kinstrife_Animation_RadialStateAnimator_2_Rotate_Vector2_System_Single_" data-uid="Kinstrife.Animation.RadialStateAnimator`2.Rotate(Vector2,System.Single)">Rotate(Vector2, Single)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static Vector2 Rotate(Vector2 v, float delta)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">Vector2</span></td>
-        <td><span class="parametername">v</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><span class="xref">System.Single</span></td>
-        <td><span class="parametername">delta</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">Vector2</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="Kinstrife_Animation_RadialStateAnimator_2_SameSign_" data-uid="Kinstrife.Animation.RadialStateAnimator`2.SameSign*"></a>
-  <h4 id="Kinstrife_Animation_RadialStateAnimator_2_SameSign_System_Single_System_Single_" data-uid="Kinstrife.Animation.RadialStateAnimator`2.SameSign(System.Single,System.Single)">SameSign(Single, Single)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static bool SameSign(float a, float b)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Single</span></td>
-        <td><span class="parametername">a</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><span class="xref">System.Single</span></td>
-        <td><span class="parametername">b</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Boolean</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="Kinstrife_Animation_RadialStateAnimator_2_SegmentActive_" data-uid="Kinstrife.Animation.RadialStateAnimator`2.SegmentActive*"></a>
-  <h4 id="Kinstrife_Animation_RadialStateAnimator_2_SegmentActive_System_Int32_Kinstrife_Animation_RadialStateAnimator__0__1__InputState__Kinstrife_Animation_RadialParameters__" data-uid="Kinstrife.Animation.RadialStateAnimator`2.SegmentActive(System.Int32,Kinstrife.Animation.RadialStateAnimator{`0,`1}.InputState@,Kinstrife.Animation.RadialParameters@)">SegmentActive(Int32, in RadialStateAnimator&lt;TFSMType, TFSMStateType&gt;.InputState, in RadialParameters)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static bool SegmentActive(int i, in RadialStateAnimator&lt;TFSMType, TFSMStateType&gt;.InputState inputState, in RadialParameters radial)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Int32</span></td>
-        <td><span class="parametername">i</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="Kinstrife.Animation.RadialStateAnimator-2.InputState.html">RadialStateAnimator.InputState</a>&lt;&gt;</td>
-        <td><span class="parametername">inputState</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="Kinstrife.Animation.RadialParameters.html">RadialParameters</a></td>
-        <td><span class="parametername">radial</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Boolean</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="Kinstrife_Animation_RadialStateAnimator_2_SegmentAngle_" data-uid="Kinstrife.Animation.RadialStateAnimator`2.SegmentAngle*"></a>
-  <h4 id="Kinstrife_Animation_RadialStateAnimator_2_SegmentAngle_System_Single_" data-uid="Kinstrife.Animation.RadialStateAnimator`2.SegmentAngle(System.Single)">SegmentAngle(Single)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static float SegmentAngle(float angleDeg)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Single</span></td>
-        <td><span class="parametername">angleDeg</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Single</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="Kinstrife_Animation_RadialStateAnimator_2_SegmentAngles_" data-uid="Kinstrife.Animation.RadialStateAnimator`2.SegmentAngles*"></a>
-  <h4 id="Kinstrife_Animation_RadialStateAnimator_2_SegmentAngles_System_Int32_System_Boolean_Kinstrife_Animation_RadialParameters__System_Single__" data-uid="Kinstrife.Animation.RadialStateAnimator`2.SegmentAngles(System.Int32,System.Boolean,Kinstrife.Animation.RadialParameters@,System.Single@)">SegmentAngles(Int32, Boolean, in RadialParameters, out Single)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static Vector2 SegmentAngles(int i, bool addPadding, in RadialParameters radial, out float segmentCenter)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Int32</span></td>
-        <td><span class="parametername">i</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><span class="xref">System.Boolean</span></td>
-        <td><span class="parametername">addPadding</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="Kinstrife.Animation.RadialParameters.html">RadialParameters</a></td>
-        <td><span class="parametername">radial</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><span class="xref">System.Single</span></td>
-        <td><span class="parametername">segmentCenter</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">Vector2</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -1048,48 +874,6 @@ public RadialStateAnimator&lt;TFSMType, TFSMStateType&gt;.InputState inputState<
   </table>
   
   
-  <a id="Kinstrife_Animation_RadialStateAnimator_2_SignedAngle_" data-uid="Kinstrife.Animation.RadialStateAnimator`2.SignedAngle*"></a>
-  <h4 id="Kinstrife_Animation_RadialStateAnimator_2_SignedAngle_System_Single_" data-uid="Kinstrife.Animation.RadialStateAnimator`2.SignedAngle(System.Single)">SignedAngle(Single)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static float SignedAngle(float angleDegrees)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Single</span></td>
-        <td><span class="parametername">angleDegrees</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Single</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
   <a id="Kinstrife_Animation_RadialStateAnimator_2_StatesChange_" data-uid="Kinstrife.Animation.RadialStateAnimator`2.StatesChange*"></a>
   <h4 id="Kinstrife_Animation_RadialStateAnimator_2_StatesChange" data-uid="Kinstrife.Animation.RadialStateAnimator`2.StatesChange">StatesChange()</h4>
   <div class="markdown level1 summary"></div>
@@ -1100,34 +884,18 @@ public RadialStateAnimator&lt;TFSMType, TFSMStateType&gt;.InputState inputState<
   </div>
   <h5 class="overrides">Overrides</h5>
   <div><span class="xref">Kinstrife.Animation.StateAnimator&lt;TFSMType, TFSMStateType&gt;.StatesChange()</span></div>
+  <h3 id="events">Events
+  </h3>
   
   
-  <a id="Kinstrife_Animation_RadialStateAnimator_2_UnsignedAngle_" data-uid="Kinstrife.Animation.RadialStateAnimator`2.UnsignedAngle*"></a>
-  <h4 id="Kinstrife_Animation_RadialStateAnimator_2_UnsignedAngle_System_Single_" data-uid="Kinstrife.Animation.RadialStateAnimator`2.UnsignedAngle(System.Single)">UnsignedAngle(Single)</h4>
+  <h4 id="Kinstrife_Animation_RadialStateAnimator_2_OnPlayEvent" data-uid="Kinstrife.Animation.RadialStateAnimator`2.OnPlayEvent">OnPlayEvent</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static float UnsignedAngle(float angleDegrees)</code></pre>
+    <pre><code class="lang-csharp hljs">public event Action OnPlayEvent</code></pre>
   </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Single</span></td>
-        <td><span class="parametername">angleDegrees</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
+  <h5 class="eventType">Event Type</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
       <tr>
@@ -1137,44 +905,21 @@ public RadialStateAnimator&lt;TFSMType, TFSMStateType&gt;.InputState inputState<
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Single</span></td>
+        <td><span class="xref">System.Action</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   
   
-  <a id="Kinstrife_Animation_RadialStateAnimator_2_WithinRange_" data-uid="Kinstrife.Animation.RadialStateAnimator`2.WithinRange*"></a>
-  <h4 id="Kinstrife_Animation_RadialStateAnimator_2_WithinRange_System_Single_Vector2_" data-uid="Kinstrife.Animation.RadialStateAnimator`2.WithinRange(System.Single,Vector2)">WithinRange(Single, Vector2)</h4>
+  <h4 id="Kinstrife_Animation_RadialStateAnimator_2_OnStopEvent" data-uid="Kinstrife.Animation.RadialStateAnimator`2.OnStopEvent">OnStopEvent</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static bool WithinRange(float value, Vector2 range)</code></pre>
+    <pre><code class="lang-csharp hljs">public event Action OnStopEvent</code></pre>
   </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Single</span></td>
-        <td><span class="parametername">value</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><span class="xref">Vector2</span></td>
-        <td><span class="parametername">range</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
+  <h5 class="eventType">Event Type</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
       <tr>
@@ -1184,7 +929,7 @@ public RadialStateAnimator&lt;TFSMType, TFSMStateType&gt;.InputState inputState<
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="xref">System.Action</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -1213,6 +958,18 @@ public RadialStateAnimator&lt;TFSMType, TFSMStateType&gt;.InputState inputState<
   </div>
   <div>
       <a class="xref" href="Kinstrife.Animation.ILayerAnimator.html">ILayerAnimator</a>
+  </div>
+  <div>
+      <a class="xref" href="Kinstrife.Animation.IWeightedAnimator.html">IWeightedAnimator</a>
+  </div>
+  <div>
+      <span class="xref">IComparable&lt;&gt;</span>
+  </div>
+  <div>
+      <a class="xref" href="Kinstrife.Animation.IRadialStateAnimator.html">IRadialStateAnimator</a>
+  </div>
+  <div>
+      <a class="xref" href="Kinstrife.Animation.IAnimator.html">IAnimator</a>
   </div>
 </article>
           </div>

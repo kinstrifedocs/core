@@ -98,7 +98,10 @@
       <a class="xref" href="Kinstrife.Core.Input.ModuleInputHandlerBase.html#Kinstrife_Core_Input_ModuleInputHandlerBase_module">ModuleInputHandlerBase.module</a>
     </div>
     <div>
-      <a class="xref" href="Kinstrife.Core.Input.ModuleInputHandlerBase.html#Kinstrife_Core_Input_ModuleInputHandlerBase_Inject_Kinstrife_Application_Module_Kinstrife_Core_Input_KinstrifeInputActions_">ModuleInputHandlerBase.Inject(Module, KinstrifeInputActions)</a>
+      <a class="xref" href="Kinstrife.Core.Input.ModuleInputHandlerBase.html#Kinstrife_Core_Input_ModuleInputHandlerBase_ActiveFocusState">ModuleInputHandlerBase.ActiveFocusState</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.Core.Input.ModuleInputHandlerBase.html#Kinstrife_Core_Input_ModuleInputHandlerBase_Inject_Kinstrife_Application_Module_Kinstrife_Core_Input_KinstrifeInputActions_Kinstrife_Core_Input_InputFocusService_">ModuleInputHandlerBase.Inject(Module, KinstrifeInputActions, InputFocusService)</a>
     </div>
     <div>
       <a class="xref" href="Kinstrife.Core.Input.ModuleInputHandlerBase.html#Kinstrife_Core_Input_ModuleInputHandlerBase_Awake">ModuleInputHandlerBase.Awake()</a>
@@ -328,12 +331,12 @@
   
   
   <a id="Kinstrife_Interaction_InteractionPlayerInputManager_Inject_" data-uid="Kinstrife.Interaction.InteractionPlayerInputManager.Inject*"></a>
-  <h4 id="Kinstrife_Interaction_InteractionPlayerInputManager_Inject_Kinstrife_Application_Module_Kinstrife_Interaction_InteractionConfig_Kinstrife_Core_Camera_CameraRig_Kinstrife_Messaging_ISubscriber_Kinstrife_Core_Input_InputFocusState__Kinstrife_Core_Input_KinstrifeInputActions_Kinstrife_Core_Input_AreaSelection_" data-uid="Kinstrife.Interaction.InteractionPlayerInputManager.Inject(Kinstrife.Application.Module,Kinstrife.Interaction.InteractionConfig,Kinstrife.Core.Camera.CameraRig,Kinstrife.Messaging.ISubscriber{Kinstrife.Core.Input.InputFocusState},Kinstrife.Core.Input.KinstrifeInputActions,Kinstrife.Core.Input.AreaSelection)">Inject(Module, InteractionConfig, CameraRig, ISubscriber&lt;InputFocusState&gt;, KinstrifeInputActions, AreaSelection)</h4>
+  <h4 id="Kinstrife_Interaction_InteractionPlayerInputManager_Inject_Kinstrife_Application_Module_Kinstrife_Interaction_InteractionConfig_Kinstrife_Core_Camera_CameraRig_Kinstrife_Core_Input_InputFocusService_Kinstrife_Messaging_ISubscriber_Kinstrife_Core_Input_InputFocusState__Kinstrife_Core_Input_KinstrifeInputActions_Kinstrife_Core_Input_AreaSelection_" data-uid="Kinstrife.Interaction.InteractionPlayerInputManager.Inject(Kinstrife.Application.Module,Kinstrife.Interaction.InteractionConfig,Kinstrife.Core.Camera.CameraRig,Kinstrife.Core.Input.InputFocusService,Kinstrife.Messaging.ISubscriber{Kinstrife.Core.Input.InputFocusState},Kinstrife.Core.Input.KinstrifeInputActions,Kinstrife.Core.Input.AreaSelection)">Inject(Module, InteractionConfig, CameraRig, InputFocusService, ISubscriber&lt;InputFocusState&gt;, KinstrifeInputActions, AreaSelection)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void Inject(Module module, InteractionConfig config, CameraRig cameraRig, ISubscriber&lt;InputFocusState&gt; inputFocusSubscriber, KinstrifeInputActions inputActions, AreaSelection selection)</code></pre>
+    <pre><code class="lang-csharp hljs">public void Inject(Module module, InteractionConfig config, CameraRig cameraRig, InputFocusService inputFocusService, ISubscriber&lt;InputFocusState&gt; inputFocusSubscriber, KinstrifeInputActions inputActions, AreaSelection selection)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -358,6 +361,11 @@
       <tr>
         <td><a class="xref" href="Kinstrife.Core.Camera.CameraRig.html">CameraRig</a></td>
         <td><span class="parametername">cameraRig</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Kinstrife.Core.Input.InputFocusService.html">InputFocusService</a></td>
+        <td><span class="parametername">inputFocusService</span></td>
         <td></td>
       </tr>
       <tr>

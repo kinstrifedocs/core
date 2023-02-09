@@ -78,7 +78,7 @@
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><a class="xref" href="Kinstrife.Procedures.Constraint-1.html">Constraint</a>&lt;<a class="xref" href="Kinstrife.Procedures.ResourceConstraint-1.Settings.html">ResourceConstraint.Settings</a>&lt;&gt;&gt;</div>
+    <div class="level1"><a class="xref" href="Kinstrife.Procedures.Constraint-1.html">Constraint</a>&lt;<a class="xref" href="Kinstrife.Procedures.ResourceConstraint-1.Data.html">ResourceConstraint.Data</a>&lt;&gt;&gt;</div>
     <div class="level2"><a class="xref" href="Kinstrife.Procedures.ResourceConstraint-1.html">ResourceConstraint</a>&lt;<span class="xref">ScriptableObject</span>&gt;</div>
     <div class="level3"><span class="xref">GenericResourceConstraint</span></div>
   </div>
@@ -86,9 +86,13 @@
     <h5>Implements</h5>
     <div><a class="xref" href="Kinstrife.Procedures.IConstraint.html">IConstraint</a></div>
     <div><a class="xref" href="Kinstrife.Procedures.IInstruction.html">IInstruction</a></div>
+    <div><a class="xref" href="Kinstrife.Procedures.IConditionEvaluator.html">IConditionEvaluator</a></div>
   </div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="Kinstrife.Procedures.ResourceConstraint-1.html#Kinstrife_Procedures_ResourceConstraint_1_provider">ResourceConstraint&lt;ScriptableObject&gt;.provider</a>
+    </div>
     <div>
       <a class="xref" href="Kinstrife.Procedures.ResourceConstraint-1.html#Kinstrife_Procedures_ResourceConstraint_1_Initialize_Kinstrife_Procedures_ProceduresManager_Kinstrife_Procedures_IEvaluateConstraints_">ResourceConstraint&lt;ScriptableObject&gt;.Initialize(ProceduresManager, IEvaluateConstraints)</a>
     </div>
@@ -99,13 +103,16 @@
       <a class="xref" href="Kinstrife.Procedures.ResourceConstraint-1.html#Kinstrife_Procedures_ResourceConstraint_1_Evaluate_Kinstrife_Procedures_Operation_">ResourceConstraint&lt;ScriptableObject&gt;.Evaluate(Operation)</a>
     </div>
     <div>
-      <a class="xref" href="Kinstrife.Procedures.Constraint-1.html#Kinstrife_Procedures_Constraint_1_evaluator">Constraint&lt;ResourceConstraint&lt;ScriptableObject&gt;.Settings&gt;.evaluator</a>
+      <a class="xref" href="Kinstrife.Procedures.Constraint-1.html#Kinstrife_Procedures_Constraint_1_evaluator">Constraint&lt;ResourceConstraint&lt;ScriptableObject&gt;.Data&gt;.evaluator</a>
     </div>
     <div>
-      <a class="xref" href="Kinstrife.Procedures.Constraint-1.html#Kinstrife_Procedures_Constraint_1_settings">Constraint&lt;ResourceConstraint&lt;ScriptableObject&gt;.Settings&gt;.settings</a>
+      <a class="xref" href="Kinstrife.Procedures.Constraint-1.html#Kinstrife_Procedures_Constraint_1_settings">Constraint&lt;ResourceConstraint&lt;ScriptableObject&gt;.Data&gt;.settings</a>
     </div>
     <div>
-      <a class="xref" href="Kinstrife.Procedures.Constraint-1.html#Kinstrife_Procedures_Constraint_1_Mode">Constraint&lt;ResourceConstraint&lt;ScriptableObject&gt;.Settings&gt;.Mode</a>
+      <a class="xref" href="Kinstrife.Procedures.Constraint-1.html#Kinstrife_Procedures_Constraint_1_Settings">Constraint&lt;ResourceConstraint&lt;ScriptableObject&gt;.Data&gt;.Settings</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.Procedures.Constraint-1.html#Kinstrife_Procedures_Constraint_1_Mode">Constraint&lt;ResourceConstraint&lt;ScriptableObject&gt;.Data&gt;.Mode</a>
     </div>
     <div>
       <span class="xref">System.Object.ToString()</span>
@@ -134,37 +141,8 @@
   <h5 id="Kinstrife_Procedures_GenericResourceConstraint_syntax">Syntax</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">[Serializable]
-public class GenericResourceConstraint : ResourceConstraint&lt;ScriptableObject&gt;, IConstraint, IInstruction</code></pre>
+public class GenericResourceConstraint : ResourceConstraint&lt;ScriptableObject&gt;, IConstraint, IInstruction, IConditionEvaluator</code></pre>
   </div>
-  <h3 id="constructors">Constructors
-  </h3>
-  
-  
-  <a id="Kinstrife_Procedures_GenericResourceConstraint__ctor_" data-uid="Kinstrife.Procedures.GenericResourceConstraint.#ctor*"></a>
-  <h4 id="Kinstrife_Procedures_GenericResourceConstraint__ctor_Kinstrife_Procedures_GenericResourceConstraint_Settings_" data-uid="Kinstrife.Procedures.GenericResourceConstraint.#ctor(Kinstrife.Procedures.GenericResourceConstraint.Settings)">GenericResourceConstraint(GenericResourceConstraint.Settings)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public GenericResourceConstraint(GenericResourceConstraint.Settings settings)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Kinstrife.Procedures.GenericResourceConstraint.Settings.html">GenericResourceConstraint.Settings</a></td>
-        <td><span class="parametername">settings</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
   <h3 id="methods">Methods
   </h3>
   
@@ -202,6 +180,9 @@ public class GenericResourceConstraint : ResourceConstraint&lt;ScriptableObject&
   </div>
   <div>
       <a class="xref" href="Kinstrife.Procedures.IInstruction.html">IInstruction</a>
+  </div>
+  <div>
+      <a class="xref" href="Kinstrife.Procedures.IConditionEvaluator.html">IConditionEvaluator</a>
   </div>
 </article>
           </div>
