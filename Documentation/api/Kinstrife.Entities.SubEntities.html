@@ -122,8 +122,79 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static Entity CreateSubEntity&lt;U&gt;(ref EntityManager entityManager, Entity rootEntity, U convertibleData, bool asPrefab)
-    where U : IConvertible</code></pre>
+    <pre><code class="lang-csharp hljs">public static Entity CreateSubEntity&lt;U&gt;(ref EntityManager entityManager, Entity rootEntity, U convertibleData, bool asPrefab)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">EntityManager</span></td>
+        <td><span class="parametername">entityManager</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">Entity</span></td>
+        <td><span class="parametername">rootEntity</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">U</span></td>
+        <td><span class="parametername">convertibleData</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">asPrefab</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Entity</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">U</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Kinstrife_Entities_SubEntities_CreateSubEntity_" data-uid="Kinstrife.Entities.SubEntities.CreateSubEntity*"></a>
+  <h4 id="Kinstrife_Entities_SubEntities_CreateSubEntity__1_EntityManager__Entity___0_System_Boolean_" data-uid="Kinstrife.Entities.SubEntities.CreateSubEntity``1(EntityManager@,Entity,``0,System.Boolean)">CreateSubEntity&lt;U&gt;(ref EntityManager, Entity, U, Boolean)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Entity CreateSubEntity&lt;U&gt;(ref EntityManager entityManager, Entity rootEntity, U convertibleData, bool asPrefab)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -196,7 +267,84 @@
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static Entity CreateSubEntity&lt;T, U&gt;(ref EntityManager entityManager, Entity rootEntity, U convertibleData, bool asPrefab)
-    where T : struct, IComponentData where U : Object, IConvertible</code></pre>
+    where T : struct, IComponentData where U : Object, IConvertibleToEntity</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">EntityManager</span></td>
+        <td><span class="parametername">entityManager</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">Entity</span></td>
+        <td><span class="parametername">rootEntity</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">U</span></td>
+        <td><span class="parametername">convertibleData</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">asPrefab</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Entity</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="parametername">U</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Kinstrife_Entities_SubEntities_CreateSubEntity_" data-uid="Kinstrife.Entities.SubEntities.CreateSubEntity*"></a>
+  <h4 id="Kinstrife_Entities_SubEntities_CreateSubEntity__2_EntityManager__Entity___1_System_Boolean_" data-uid="Kinstrife.Entities.SubEntities.CreateSubEntity``2(EntityManager@,Entity,``1,System.Boolean)">CreateSubEntity&lt;T, U&gt;(ref EntityManager, Entity, U, Boolean)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Entity CreateSubEntity&lt;T, U&gt;(ref EntityManager entityManager, Entity rootEntity, U convertibleData, bool asPrefab)
+    where T : struct, IComponentData where U : Object, IConvertibleToEntity</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -619,7 +767,65 @@
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static void Instantiate&lt;TDataType&gt;(EntityManager entityManager, IEnumerable&lt;TDataType&gt; presetInstances, Entity rootEntity, bool asPrefab)
-    where TDataType : IConvertible</code></pre>
+    where TDataType : IConvertibleToEntity</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">EntityManager</span></td>
+        <td><span class="parametername">entityManager</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;TDataType&gt;</td>
+        <td><span class="parametername">presetInstances</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">Entity</span></td>
+        <td><span class="parametername">rootEntity</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">asPrefab</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">TDataType</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Kinstrife_Entities_SubEntities_Instantiate_" data-uid="Kinstrife.Entities.SubEntities.Instantiate*"></a>
+  <h4 id="Kinstrife_Entities_SubEntities_Instantiate__1_EntityManager_System_Collections_Generic_IEnumerable___0__Entity_System_Boolean_" data-uid="Kinstrife.Entities.SubEntities.Instantiate``1(EntityManager,System.Collections.Generic.IEnumerable{``0},Entity,System.Boolean)">Instantiate&lt;TDataType&gt;(EntityManager, IEnumerable&lt;TDataType&gt;, Entity, Boolean)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void Instantiate&lt;TDataType&gt;(EntityManager entityManager, IEnumerable&lt;TDataType&gt; presetInstances, Entity rootEntity, bool asPrefab)
+    where TDataType : IConvertibleToEntity</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">

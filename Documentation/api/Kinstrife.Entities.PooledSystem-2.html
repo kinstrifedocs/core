@@ -78,32 +78,13 @@
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><a class="xref" href="Kinstrife.Entities.BaseComponentSystem.html">BaseComponentSystem</a></div>
-    <div class="level2"><span class="xref">PooledSystem&lt;TInstanceType, TPoolType&gt;</span></div>
-  </div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
-    <div>
-      <a class="xref" href="Kinstrife.Entities.BaseComponentSystem.html#Kinstrife_Entities_BaseComponentSystem_EndSimulationEntityCommandBufferSystem">BaseComponentSystem.EndSimulationEntityCommandBufferSystem</a>
-    </div>
-    <div>
-      <a class="xref" href="Kinstrife.Entities.BaseComponentSystem.html#Kinstrife_Entities_BaseComponentSystem_OnCreate">BaseComponentSystem.OnCreate()</a>
-    </div>
-    <div>
-      <a class="xref" href="Kinstrife.Entities.BaseComponentSystem.html#Kinstrife_Entities_BaseComponentSystem_AddComponents__1_EntityQuery_NativeArray___0__">BaseComponentSystem.AddComponents&lt;T&gt;(EntityQuery, NativeArray&lt;T&gt;)</a>
-    </div>
-    <div>
-      <a class="xref" href="Kinstrife.Entities.BaseComponentSystem.html#Kinstrife_Entities_BaseComponentSystem_Count__1">BaseComponentSystem.Count&lt;T&gt;()</a>
-    </div>
-    <div>
-      <a class="xref" href="Kinstrife.Entities.BaseComponentSystem.html#Kinstrife_Entities_BaseComponentSystem_print_System_Object_Object_">BaseComponentSystem.print(Object, Object)</a>
-    </div>
+    <div class="level1"><span class="xref">PooledSystem&lt;TInstanceType, TPoolType&gt;</span></div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Kinstrife.Entities.html">Kinstrife.Entities</a></h6>
   <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
   <h5 id="Kinstrife_Entities_PooledSystem_2_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public abstract class PooledSystem&lt;TInstanceType, TPoolType&gt; : BaseComponentSystem where TInstanceType : IDisposable where TPoolType : InstancePool&lt;TInstanceType&gt;</code></pre>
+    <pre><code class="lang-csharp hljs">public abstract class PooledSystem&lt;TInstanceType, TPoolType&gt; : ComponentSystemBase where TInstanceType : IDisposable where TPoolType : InstancePool&lt;TInstanceType&gt;</code></pre>
   </div>
   <h5 class="typeParameters">Type Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -231,16 +212,6 @@
   </table>
   
   
-  <a id="Kinstrife_Entities_PooledSystem_2_DoUpdate_" data-uid="Kinstrife.Entities.PooledSystem`2.DoUpdate*"></a>
-  <h4 id="Kinstrife_Entities_PooledSystem_2_DoUpdate" data-uid="Kinstrife.Entities.PooledSystem`2.DoUpdate">DoUpdate()</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected abstract void DoUpdate()</code></pre>
-  </div>
-  
-  
   <a id="Kinstrife_Entities_PooledSystem_2_Inject_" data-uid="Kinstrife.Entities.PooledSystem`2.Inject*"></a>
   <h4 id="Kinstrife_Entities_PooledSystem_2_Inject_Scene_" data-uid="Kinstrife.Entities.PooledSystem`2.Inject(Scene)">Inject(Scene)</h4>
   <div class="markdown level1 summary"></div>
@@ -266,16 +237,6 @@
       </tr>
     </tbody>
   </table>
-  
-  
-  <a id="Kinstrife_Entities_PooledSystem_2_OnUpdate_" data-uid="Kinstrife.Entities.PooledSystem`2.OnUpdate*"></a>
-  <h4 id="Kinstrife_Entities_PooledSystem_2_OnUpdate" data-uid="Kinstrife.Entities.PooledSystem`2.OnUpdate">OnUpdate()</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected override void OnUpdate()</code></pre>
-  </div>
   
   
   <a id="Kinstrife_Entities_PooledSystem_2_ReleaseInstance_" data-uid="Kinstrife.Entities.PooledSystem`2.ReleaseInstance*"></a>

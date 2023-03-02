@@ -88,14 +88,15 @@
     <div><span class="xref">System.Collections.IEnumerable</span></div>
     <div><a class="xref" href="Kinstrife.Core.DependencyInjection.IInstall-1.html">IInstall</a>&lt;<a class="xref" href="Kinstrife.Procedures.ProceduresManager.html">ProceduresManager</a>&gt;</div>
     <div><a class="xref" href="Kinstrife.Core.DependencyInjection.IInstall.html">IInstall</a></div>
-    <div><a class="xref" href="Kinstrife.Core.DependencyInjection.IDependent.html">IDependent</a></div>
     <div><a class="xref" href="Kinstrife.Core.DependencyInjection.IProvideDependents.html">IProvideDependents</a></div>
+    <div><a class="xref" href="Kinstrife.Core.DependencyInjection.ILateInitializable.html">ILateInitializable</a></div>
+    <div><a class="xref" href="Kinstrife.Core.DependencyInjection.IDependent.html">IDependent</a></div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Kinstrife.Procedures.html">Kinstrife.Procedures</a></h6>
   <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
   <h5 id="Kinstrife_Procedures_ProceduresManager_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class ProceduresManager : MonoBehaviour, IReadOnlyDictionary&lt;Procedure, Procedure&gt;, IReadOnlyCollection&lt;KeyValuePair&lt;Procedure, Procedure&gt;&gt;, IEnumerable&lt;KeyValuePair&lt;Procedure, Procedure&gt;&gt;, IEnumerable, IInstall&lt;ProceduresManager&gt;, IInstall, IDependent, IProvideDependents</code></pre>
+    <pre><code class="lang-csharp hljs">public class ProceduresManager : MonoBehaviour, IReadOnlyDictionary&lt;Procedure, Procedure&gt;, IReadOnlyCollection&lt;KeyValuePair&lt;Procedure, Procedure&gt;&gt;, IEnumerable&lt;KeyValuePair&lt;Procedure, Procedure&gt;&gt;, IEnumerable, IInstall&lt;ProceduresManager&gt;, IInstall, IProvideDependents, ILateInitializable, IDependent</code></pre>
   </div>
   <h3 id="properties">Properties
   </h3>
@@ -412,6 +413,16 @@
   </table>
   
   
+  <a id="Kinstrife_Procedures_ProceduresManager_LateInitialize_" data-uid="Kinstrife.Procedures.ProceduresManager.LateInitialize*"></a>
+  <h4 id="Kinstrife_Procedures_ProceduresManager_LateInitialize" data-uid="Kinstrife.Procedures.ProceduresManager.LateInitialize">LateInitialize()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void LateInitialize()</code></pre>
+  </div>
+  
+  
   <a id="Kinstrife_Procedures_ProceduresManager_ProvideDependents_" data-uid="Kinstrife.Procedures.ProceduresManager.ProvideDependents*"></a>
   <h4 id="Kinstrife_Procedures_ProceduresManager_ProvideDependents" data-uid="Kinstrife.Procedures.ProceduresManager.ProvideDependents">ProvideDependents()</h4>
   <div class="markdown level1 summary"></div>
@@ -621,7 +632,8 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public bool TryFindTasksHandler&lt;TType&gt;(out TType result)</code></pre>
+    <pre><code class="lang-csharp hljs">public bool TryFindTasksHandler&lt;TType&gt;(out TType result)
+    where TType : ITaskHandler</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -635,6 +647,63 @@
     <tbody>
       <tr>
         <td><span class="xref">TType</span></td>
+        <td><span class="parametername">result</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">TType</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Kinstrife_Procedures_ProceduresManager_TryFindTasksHandler2_" data-uid="Kinstrife.Procedures.ProceduresManager.TryFindTasksHandler2*"></a>
+  <h4 id="Kinstrife_Procedures_ProceduresManager_TryFindTasksHandler2__1_Kinstrife_Procedures_ITaskHandler___0___" data-uid="Kinstrife.Procedures.ProceduresManager.TryFindTasksHandler2``1(Kinstrife.Procedures.ITaskHandler{``0}@)">TryFindTasksHandler2&lt;TType&gt;(out ITaskHandler&lt;TType&gt;)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool TryFindTasksHandler2&lt;TType&gt;(out ITaskHandler&lt;TType&gt; result)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Kinstrife.Procedures.ITaskHandler-1.html">ITaskHandler</a>&lt;TType&gt;</td>
         <td><span class="parametername">result</span></td>
         <td></td>
       </tr>
@@ -735,6 +804,53 @@
   </table>
   
   
+  <a id="Kinstrife_Procedures_ProceduresManager_TryGetProcedure_" data-uid="Kinstrife.Procedures.ProceduresManager.TryGetProcedure*"></a>
+  <h4 id="Kinstrife_Procedures_ProceduresManager_TryGetProcedure_Kinstrife_Procedures_Procedure_Kinstrife_Procedures_Procedure__" data-uid="Kinstrife.Procedures.ProceduresManager.TryGetProcedure(Kinstrife.Procedures.Procedure,Kinstrife.Procedures.Procedure@)">TryGetProcedure(Procedure, out Procedure)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool TryGetProcedure(Procedure key, out Procedure value)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Kinstrife.Procedures.Procedure.html">Procedure</a></td>
+        <td><span class="parametername">key</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Kinstrife.Procedures.Procedure.html">Procedure</a></td>
+        <td><span class="parametername">value</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
   <a id="Kinstrife_Procedures_ProceduresManager_TryGetValue_" data-uid="Kinstrife.Procedures.ProceduresManager.TryGetValue*"></a>
   <h4 id="Kinstrife_Procedures_ProceduresManager_TryGetValue_Kinstrife_Procedures_Procedure_Kinstrife_Procedures_Procedure__" data-uid="Kinstrife.Procedures.ProceduresManager.TryGetValue(Kinstrife.Procedures.Procedure,Kinstrife.Procedures.Procedure@)">TryGetValue(Procedure, out Procedure)</h4>
   <div class="markdown level1 summary"></div>
@@ -761,6 +877,184 @@
       <tr>
         <td><a class="xref" href="Kinstrife.Procedures.Procedure.html">Procedure</a></td>
         <td><span class="parametername">value</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Kinstrife_Procedures_ProceduresManager_TryStart_" data-uid="Kinstrife.Procedures.ProceduresManager.TryStart*"></a>
+  <h4 id="Kinstrife_Procedures_ProceduresManager_TryStart_Kinstrife_Procedures_Procedure_" data-uid="Kinstrife.Procedures.ProceduresManager.TryStart(Kinstrife.Procedures.Procedure)">TryStart(Procedure)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool TryStart(Procedure id)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Kinstrife.Procedures.Procedure.html">Procedure</a></td>
+        <td><span class="parametername">id</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Kinstrife_Procedures_ProceduresManager_TryStartAsClient_" data-uid="Kinstrife.Procedures.ProceduresManager.TryStartAsClient*"></a>
+  <h4 id="Kinstrife_Procedures_ProceduresManager_TryStartAsClient_Kinstrife_Procedures_Procedure_Kinstrife_Procedures_ClientId__" data-uid="Kinstrife.Procedures.ProceduresManager.TryStartAsClient(Kinstrife.Procedures.Procedure,Kinstrife.Procedures.ClientId@)">TryStartAsClient(Procedure, in ClientId)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool TryStartAsClient(Procedure id, in ClientId caller)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Kinstrife.Procedures.Procedure.html">Procedure</a></td>
+        <td><span class="parametername">id</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Kinstrife.Procedures.ClientId.html">ClientId</a></td>
+        <td><span class="parametername">caller</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Kinstrife_Procedures_ProceduresManager_TryStop_" data-uid="Kinstrife.Procedures.ProceduresManager.TryStop*"></a>
+  <h4 id="Kinstrife_Procedures_ProceduresManager_TryStop_Kinstrife_Procedures_Procedure_" data-uid="Kinstrife.Procedures.ProceduresManager.TryStop(Kinstrife.Procedures.Procedure)">TryStop(Procedure)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool TryStop(Procedure id)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Kinstrife.Procedures.Procedure.html">Procedure</a></td>
+        <td><span class="parametername">id</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Kinstrife_Procedures_ProceduresManager_TryStopAsClient_" data-uid="Kinstrife.Procedures.ProceduresManager.TryStopAsClient*"></a>
+  <h4 id="Kinstrife_Procedures_ProceduresManager_TryStopAsClient_Kinstrife_Procedures_Procedure_Kinstrife_Procedures_ClientId__" data-uid="Kinstrife.Procedures.ProceduresManager.TryStopAsClient(Kinstrife.Procedures.Procedure,Kinstrife.Procedures.ClientId@)">TryStopAsClient(Procedure, in ClientId)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool TryStopAsClient(Procedure id, in ClientId caller)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Kinstrife.Procedures.Procedure.html">Procedure</a></td>
+        <td><span class="parametername">id</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Kinstrife.Procedures.ClientId.html">ClientId</a></td>
+        <td><span class="parametername">caller</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -853,10 +1147,13 @@
       <a class="xref" href="Kinstrife.Core.DependencyInjection.IInstall.html">IInstall</a>
   </div>
   <div>
-      <a class="xref" href="Kinstrife.Core.DependencyInjection.IDependent.html">IDependent</a>
+      <a class="xref" href="Kinstrife.Core.DependencyInjection.IProvideDependents.html">IProvideDependents</a>
   </div>
   <div>
-      <a class="xref" href="Kinstrife.Core.DependencyInjection.IProvideDependents.html">IProvideDependents</a>
+      <a class="xref" href="Kinstrife.Core.DependencyInjection.ILateInitializable.html">ILateInitializable</a>
+  </div>
+  <div>
+      <a class="xref" href="Kinstrife.Core.DependencyInjection.IDependent.html">IDependent</a>
   </div>
 </article>
           </div>

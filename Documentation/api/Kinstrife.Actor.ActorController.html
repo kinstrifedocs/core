@@ -430,8 +430,82 @@
       </tr>
     </tbody>
   </table>
+  
+  
+  <h4 id="Kinstrife_Actor_ActorController_stepUp" data-uid="Kinstrife.Actor.ActorController.stepUp">stepUp</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float stepUp</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   <h3 id="properties">Properties
   </h3>
+  
+  
+  <a id="Kinstrife_Actor_ActorController_CanUpdateRootMotion_" data-uid="Kinstrife.Actor.ActorController.CanUpdateRootMotion*"></a>
+  <h4 id="Kinstrife_Actor_ActorController_CanUpdateRootMotion" data-uid="Kinstrife.Actor.ActorController.CanUpdateRootMotion">CanUpdateRootMotion</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool CanUpdateRootMotion { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Kinstrife_Actor_ActorController_Collider_" data-uid="Kinstrife.Actor.ActorController.Collider*"></a>
+  <h4 id="Kinstrife_Actor_ActorController_Collider" data-uid="Kinstrife.Actor.ActorController.Collider">Collider</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public CapsuleCollider Collider { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">CapsuleCollider</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   
   
   <a id="Kinstrife_Actor_ActorController_Input_" data-uid="Kinstrife.Actor.ActorController.Input*"></a>
@@ -548,6 +622,92 @@
   </table>
   
   
+  <a id="Kinstrife_Actor_ActorController_GetDirectionTangentToSurface_" data-uid="Kinstrife.Actor.ActorController.GetDirectionTangentToSurface*"></a>
+  <h4 id="Kinstrife_Actor_ActorController_GetDirectionTangentToSurface_Vector3_Vector3_Vector3_" data-uid="Kinstrife.Actor.ActorController.GetDirectionTangentToSurface(Vector3,Vector3,Vector3)">GetDirectionTangentToSurface(Vector3, Vector3, Vector3)</h4>
+  <div class="markdown level1 summary"><p>Returns the direction adjusted to be tangent to a specified surface normal relatively to the character's up direction.
+Useful for reorienting a direction on a slope without any lateral deviation in trajectory</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Vector3 GetDirectionTangentToSurface(Vector3 direction, Vector3 surfaceNormal, Vector3 actorUp)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Vector3</span></td>
+        <td><span class="parametername">direction</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">Vector3</span></td>
+        <td><span class="parametername">surfaceNormal</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">Vector3</span></td>
+        <td><span class="parametername">actorUp</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Vector3</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Kinstrife_Actor_ActorController_Ground_" data-uid="Kinstrife.Actor.ActorController.Ground*"></a>
+  <h4 id="Kinstrife_Actor_ActorController_Ground_Vector3_Vector3_" data-uid="Kinstrife.Actor.ActorController.Ground(Vector3,Vector3)">Ground(Vector3, Vector3)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Ground(Vector3 lowestPoint, Vector3 highestPoint)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Vector3</span></td>
+        <td><span class="parametername">lowestPoint</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">Vector3</span></td>
+        <td><span class="parametername">highestPoint</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
   <a id="Kinstrife_Actor_ActorController_HardStrafe_" data-uid="Kinstrife.Actor.ActorController.HardStrafe*"></a>
   <h4 id="Kinstrife_Actor_ActorController_HardStrafe_System_Boolean_" data-uid="Kinstrife.Actor.ActorController.HardStrafe(System.Boolean)">HardStrafe(Boolean)</h4>
   <div class="markdown level1 summary"></div>
@@ -603,12 +763,12 @@
   
   
   <a id="Kinstrife_Actor_ActorController_Move_" data-uid="Kinstrife.Actor.ActorController.Move*"></a>
-  <h4 id="Kinstrife_Actor_ActorController_Move_Vector3_" data-uid="Kinstrife.Actor.ActorController.Move(Vector3)">Move(Vector3)</h4>
+  <h4 id="Kinstrife_Actor_ActorController_Move_Vector3_System_Single_" data-uid="Kinstrife.Actor.ActorController.Move(Vector3,System.Single)">Move(Vector3, Single)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void Move(Vector3 motion)</code></pre>
+    <pre><code class="lang-csharp hljs">public void Move(Vector3 motion, float deltaTime)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -623,6 +783,11 @@
       <tr>
         <td><span class="xref">Vector3</span></td>
         <td><span class="parametername">motion</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><span class="parametername">deltaTime</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -650,6 +815,65 @@
       <tr>
         <td><span class="xref">Quaternion</span></td>
         <td><span class="parametername">rot</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Kinstrife_Actor_ActorController_SetCollisionLayerEnabled_" data-uid="Kinstrife.Actor.ActorController.SetCollisionLayerEnabled*"></a>
+  <h4 id="Kinstrife_Actor_ActorController_SetCollisionLayerEnabled_System_Boolean_System_Boolean_" data-uid="Kinstrife.Actor.ActorController.SetCollisionLayerEnabled(System.Boolean,System.Boolean)">SetCollisionLayerEnabled(Boolean, Boolean)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetCollisionLayerEnabled(bool value, bool includeCapsule)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">value</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">includeCapsule</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Kinstrife_Actor_ActorController_SetRagdollEnabled_" data-uid="Kinstrife.Actor.ActorController.SetRagdollEnabled*"></a>
+  <h4 id="Kinstrife_Actor_ActorController_SetRagdollEnabled_System_Boolean_" data-uid="Kinstrife.Actor.ActorController.SetRagdollEnabled(System.Boolean)">SetRagdollEnabled(Boolean)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetRagdollEnabled(bool value)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">value</span></td>
         <td></td>
       </tr>
     </tbody>

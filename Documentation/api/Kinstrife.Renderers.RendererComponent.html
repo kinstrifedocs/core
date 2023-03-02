@@ -101,7 +101,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public MaterialAsset materialAsset</code></pre>
+    <pre><code class="lang-csharp hljs">public MaterialDefinitionBase materialAsset</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -113,31 +113,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="Kinstrife.Renderers.MaterialAsset.html">MaterialAsset</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <h4 id="Kinstrife_Renderers_RendererComponent_materialInstance" data-uid="Kinstrife.Renderers.RendererComponent.materialInstance">materialInstance</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected Material materialInstance</code></pre>
-  </div>
-  <h5 class="fieldValue">Field Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">Material</span></td>
+        <td><a class="xref" href="Kinstrife.Renderers.MaterialDefinitionBase.html">MaterialDefinitionBase</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -162,6 +138,30 @@
     <tbody>
       <tr>
         <td><span class="xref">Material</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="Kinstrife_Renderers_RendererComponent_materialParamsMapping" data-uid="Kinstrife.Renderers.RendererComponent.materialParamsMapping">materialParamsMapping</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Dictionary&lt;MaterialParam, List&lt;Material&gt;&gt; materialParamsMapping</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.Dictionary</span>&lt;<a class="xref" href="Kinstrife.Renderers.MaterialParam.html">MaterialParam</a>, <span class="xref">System.Collections.Generic.List</span>&lt;<span class="xref">Material</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -413,31 +413,6 @@
   </table>
   
   
-  <a id="Kinstrife_Renderers_RendererComponent_MaterialInstance_" data-uid="Kinstrife.Renderers.RendererComponent.MaterialInstance*"></a>
-  <h4 id="Kinstrife_Renderers_RendererComponent_MaterialInstance" data-uid="Kinstrife.Renderers.RendererComponent.MaterialInstance">MaterialInstance</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual Material MaterialInstance { get; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">Material</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
   <a id="Kinstrife_Renderers_RendererComponent_sharedMesh_" data-uid="Kinstrife.Renderers.RendererComponent.sharedMesh*"></a>
   <h4 id="Kinstrife_Renderers_RendererComponent_sharedMesh" data-uid="Kinstrife.Renderers.RendererComponent.sharedMesh">sharedMesh</h4>
   <div class="markdown level1 summary"></div>
@@ -601,6 +576,38 @@
       <tr>
         <td><span class="xref">Mesh</span></td>
         <td><span class="parametername">mesh</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Kinstrife_Renderers_RendererComponent_SetShaderParameter_" data-uid="Kinstrife.Renderers.RendererComponent.SetShaderParameter*"></a>
+  <h4 id="Kinstrife_Renderers_RendererComponent_SetShaderParameter_Kinstrife_Renderers_FloatMaterialParam_System_Single_" data-uid="Kinstrife.Renderers.RendererComponent.SetShaderParameter(Kinstrife.Renderers.FloatMaterialParam,System.Single)">SetShaderParameter(FloatMaterialParam, Single)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetShaderParameter(FloatMaterialParam asset, float value)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Kinstrife.Renderers.FloatMaterialParam.html">FloatMaterialParam</a></td>
+        <td><span class="parametername">asset</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><span class="parametername">value</span></td>
         <td></td>
       </tr>
     </tbody>

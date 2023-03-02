@@ -111,6 +111,24 @@
     <div>
       <a class="xref" href="Kinstrife.DataContainers.ScriptableObjectComponent.html#Kinstrife_DataContainers_ScriptableObjectComponent_Duplicate__1___0_">ScriptableObjectComponent.Duplicate&lt;T&gt;(T)</a>
     </div>
+    <div>
+      <a class="xref" href="Kinstrife.DataContainers.ScriptableObjectComponent.html#Kinstrife_DataContainers_ScriptableObjectComponent_AuthoringTab">ScriptableObjectComponent.AuthoringTab</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.DataContainers.ScriptableObjectComponent.html#Kinstrife_DataContainers_ScriptableObjectComponent_RuntimeTab">ScriptableObjectComponent.RuntimeTab</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.DataContainers.ScriptableObjectComponent.html#Kinstrife_DataContainers_ScriptableObjectComponent_DebugTab">ScriptableObjectComponent.DebugTab</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.DataContainers.ScriptableObjectComponent.html#Kinstrife_DataContainers_ScriptableObjectComponent_AuthoringTabActions">ScriptableObjectComponent.AuthoringTabActions</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.DataContainers.ScriptableObjectComponent.html#Kinstrife_DataContainers_ScriptableObjectComponent_RuntimeTabActions">ScriptableObjectComponent.RuntimeTabActions</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.DataContainers.ScriptableObjectComponent.html#Kinstrife_DataContainers_ScriptableObjectComponent_DebugTabActions">ScriptableObjectComponent.DebugTabActions</a>
+    </div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Kinstrife.DataContainers.html">Kinstrife.DataContainers</a></h6>
   <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
@@ -381,6 +399,48 @@
   </table>
   
   
+  <a id="Kinstrife_DataContainers_ScriptableObjectDataContainer_1_HasComponent_" data-uid="Kinstrife.DataContainers.ScriptableObjectDataContainer`1.HasComponent*"></a>
+  <h4 id="Kinstrife_DataContainers_ScriptableObjectDataContainer_1_HasComponent_System_Type_" data-uid="Kinstrife.DataContainers.ScriptableObjectDataContainer`1.HasComponent(System.Type)">HasComponent(Type)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool HasComponent(Type t)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Type</span></td>
+        <td><span class="parametername">t</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
   <a id="Kinstrife_DataContainers_ScriptableObjectDataContainer_1_IsOwner_" data-uid="Kinstrife.DataContainers.ScriptableObjectDataContainer`1.IsOwner*"></a>
   <h4 id="Kinstrife_DataContainers_ScriptableObjectDataContainer_1_IsOwner__0_" data-uid="Kinstrife.DataContainers.ScriptableObjectDataContainer`1.IsOwner(`0)">IsOwner(TComponentType)</h4>
   <div class="markdown level1 summary"></div>
@@ -507,6 +567,53 @@
   
   
   <a id="Kinstrife_DataContainers_ScriptableObjectDataContainer_1_TryGetComponent_" data-uid="Kinstrife.DataContainers.ScriptableObjectDataContainer`1.TryGetComponent*"></a>
+  <h4 id="Kinstrife_DataContainers_ScriptableObjectDataContainer_1_TryGetComponent_System_Type_Kinstrife_DataContainers_ScriptableObjectComponent__" data-uid="Kinstrife.DataContainers.ScriptableObjectDataContainer`1.TryGetComponent(System.Type,Kinstrife.DataContainers.ScriptableObjectComponent@)">TryGetComponent(Type, out ScriptableObjectComponent)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool TryGetComponent(Type type, out ScriptableObjectComponent component)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Type</span></td>
+        <td><span class="parametername">type</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Kinstrife.DataContainers.ScriptableObjectComponent.html">ScriptableObjectComponent</a></td>
+        <td><span class="parametername">component</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Kinstrife_DataContainers_ScriptableObjectDataContainer_1_TryGetComponent_" data-uid="Kinstrife.DataContainers.ScriptableObjectDataContainer`1.TryGetComponent*"></a>
   <h4 id="Kinstrife_DataContainers_ScriptableObjectDataContainer_1_TryGetComponent__1___0__" data-uid="Kinstrife.DataContainers.ScriptableObjectDataContainer`1.TryGetComponent``1(``0@)">TryGetComponent&lt;U&gt;(out U)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
@@ -557,6 +664,33 @@
     <tbody>
       <tr>
         <td><span class="parametername">U</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Kinstrife_DataContainers_ScriptableObjectDataContainer_1_TryRemoveComponent_" data-uid="Kinstrife.DataContainers.ScriptableObjectDataContainer`1.TryRemoveComponent*"></a>
+  <h4 id="Kinstrife_DataContainers_ScriptableObjectDataContainer_1_TryRemoveComponent_System_Type_" data-uid="Kinstrife.DataContainers.ScriptableObjectDataContainer`1.TryRemoveComponent(System.Type)">TryRemoveComponent(Type)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void TryRemoveComponent(Type type)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Type</span></td>
+        <td><span class="parametername">type</span></td>
         <td></td>
       </tr>
     </tbody>
