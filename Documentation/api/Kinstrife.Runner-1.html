@@ -116,7 +116,7 @@
   <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
   <h5 id="Kinstrife_Runner_1_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public abstract class Runner&lt;T&gt; : Runner where T : ICustomUpdateable</code></pre>
+    <pre><code class="lang-csharp hljs">public abstract class Runner&lt;T&gt; : Runner where T : class, ICustomUpdateable</code></pre>
   </div>
   <h5 class="typeParameters">Type Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -143,7 +143,7 @@
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">[NonSerialized]
-public List&lt;T&gt; tickables</code></pre>
+public HashSet&lt;T&gt; tickables</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -155,7 +155,7 @@ public List&lt;T&gt; tickables</code></pre>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Generic.List</span>&lt;T&gt;</td>
+        <td><span class="xref">HashSet</span>&lt;T&gt;</td>
         <td></td>
       </tr>
     </tbody>

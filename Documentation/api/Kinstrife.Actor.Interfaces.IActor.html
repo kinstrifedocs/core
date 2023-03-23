@@ -75,14 +75,70 @@
   </h1>
   <div class="markdown level0 summary"></div>
   <div class="markdown level0 conceptual"></div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="Kinstrife.Actor.Interfaces.ITeleportable.html#Kinstrife_Actor_Interfaces_ITeleportable_Teleport_Vector3_Quaternion_">ITeleportable.Teleport(Vector3, Quaternion)</a>
+    </div>
+  </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Kinstrife.Actor.Interfaces.html">Kinstrife.Actor.Interfaces</a></h6>
   <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
   <h5 id="Kinstrife_Actor_Interfaces_IActor_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public interface IActor</code></pre>
+    <pre><code class="lang-csharp hljs">public interface IActor : ITeleportable</code></pre>
   </div>
   <h3 id="properties">Properties
   </h3>
+  
+  
+  <a id="Kinstrife_Actor_Interfaces_IActor_gameObject_" data-uid="Kinstrife.Actor.Interfaces.IActor.gameObject*"></a>
+  <h4 id="Kinstrife_Actor_Interfaces_IActor_gameObject" data-uid="Kinstrife.Actor.Interfaces.IActor.gameObject">gameObject</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">GameObject gameObject { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">GameObject</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Kinstrife_Actor_Interfaces_IActor_Initialized_" data-uid="Kinstrife.Actor.Interfaces.IActor.Initialized*"></a>
+  <h4 id="Kinstrife_Actor_Interfaces_IActor_Initialized" data-uid="Kinstrife.Actor.Interfaces.IActor.Initialized">Initialized</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">bool Initialized { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   
   
   <a id="Kinstrife_Actor_Interfaces_IActor_IsAlive_" data-uid="Kinstrife.Actor.Interfaces.IActor.IsAlive*"></a>
@@ -135,13 +191,13 @@
   </table>
   
   
-  <a id="Kinstrife_Actor_Interfaces_IActor_IsUnresponsive_" data-uid="Kinstrife.Actor.Interfaces.IActor.IsUnresponsive*"></a>
-  <h4 id="Kinstrife_Actor_Interfaces_IActor_IsUnresponsive" data-uid="Kinstrife.Actor.Interfaces.IActor.IsUnresponsive">IsUnresponsive</h4>
+  <a id="Kinstrife_Actor_Interfaces_IActor_IsUnavailable_" data-uid="Kinstrife.Actor.Interfaces.IActor.IsUnavailable*"></a>
+  <h4 id="Kinstrife_Actor_Interfaces_IActor_IsUnavailable" data-uid="Kinstrife.Actor.Interfaces.IActor.IsUnavailable">IsUnavailable</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">virtual bool IsUnresponsive { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">virtual bool IsUnavailable { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -154,6 +210,31 @@
     <tbody>
       <tr>
         <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Kinstrife_Actor_Interfaces_IActor_name_" data-uid="Kinstrife.Actor.Interfaces.IActor.name*"></a>
+  <h4 id="Kinstrife_Actor_Interfaces_IActor_name" data-uid="Kinstrife.Actor.Interfaces.IActor.name">name</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">string name { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -179,6 +260,60 @@
     <tbody>
       <tr>
         <td><a class="xref" href="Kinstrife.Actor.Interfaces.ActorStatus.html">ActorStatus</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Kinstrife_Actor_Interfaces_IActor_transform_" data-uid="Kinstrife.Actor.Interfaces.IActor.transform*"></a>
+  <h4 id="Kinstrife_Actor_Interfaces_IActor_transform" data-uid="Kinstrife.Actor.Interfaces.IActor.transform">transform</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Transform transform { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Transform</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  
+  
+  <a id="Kinstrife_Actor_Interfaces_IActor_Pause_" data-uid="Kinstrife.Actor.Interfaces.IActor.Pause*"></a>
+  <h4 id="Kinstrife_Actor_Interfaces_IActor_Pause_System_Boolean_" data-uid="Kinstrife.Actor.Interfaces.IActor.Pause(System.Boolean)">Pause(Boolean)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void Pause(bool pause)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">pause</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -235,12 +370,12 @@
   </table>
   
   
-  <h4 id="Kinstrife_Actor_Interfaces_IActor_StatusChanged" data-uid="Kinstrife.Actor.Interfaces.IActor.StatusChanged">StatusChanged</h4>
+  <h4 id="Kinstrife_Actor_Interfaces_IActor_OnReceiveDamage" data-uid="Kinstrife.Actor.Interfaces.IActor.OnReceiveDamage">OnReceiveDamage</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">event Action&lt;ActorStatus&gt; StatusChanged</code></pre>
+    <pre><code class="lang-csharp hljs">event Action&lt;IActor, float&gt; OnReceiveDamage</code></pre>
   </div>
   <h5 class="eventType">Event Type</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -252,7 +387,31 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Action</span>&lt;<a class="xref" href="Kinstrife.Actor.Interfaces.ActorStatus.html">ActorStatus</a>&gt;</td>
+        <td><span class="xref">System.Action</span>&lt;<a class="xref" href="Kinstrife.Actor.Interfaces.IActor.html">IActor</a>, <span class="xref">System.Single</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="Kinstrife_Actor_Interfaces_IActor_StatusChanged" data-uid="Kinstrife.Actor.Interfaces.IActor.StatusChanged">StatusChanged</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">event Action&lt;ActorStatus, ActorStatus&gt; StatusChanged</code></pre>
+  </div>
+  <h5 class="eventType">Event Type</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Action</span>&lt;<a class="xref" href="Kinstrife.Actor.Interfaces.ActorStatus.html">ActorStatus</a>, <a class="xref" href="Kinstrife.Actor.Interfaces.ActorStatus.html">ActorStatus</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>

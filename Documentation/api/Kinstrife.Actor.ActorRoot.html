@@ -83,16 +83,18 @@
   <div class="implements">
     <h5>Implements</h5>
     <div><a class="xref" href="Kinstrife.Core.DependencyInjection.ICacheReferences.html">ICacheReferences</a></div>
+    <div><a class="xref" href="Kinstrife.Actor.Interfaces.IActor.html">IActor</a></div>
+    <div><a class="xref" href="Kinstrife.Actor.Interfaces.ITeleportable.html">ITeleportable</a></div>
     <div><a class="xref" href="Kinstrife.Core.DependencyInjection.IInstall-1.html">IInstall</a>&lt;<a class="xref" href="Kinstrife.Actor.ActorRoot.html">ActorRoot</a>&gt;</div>
+    <div><a class="xref" href="Kinstrife.Core.DependencyInjection.IInstall-1.html">IInstall</a>&lt;<a class="xref" href="Kinstrife.Actor.Interfaces.IActor.html">IActor</a>&gt;</div>
     <div><a class="xref" href="Kinstrife.Core.DependencyInjection.IInstall.html">IInstall</a></div>
     <div><a class="xref" href="Kinstrife.Core.DependencyInjection.IDependent.html">IDependent</a></div>
-    <div><a class="xref" href="Kinstrife.Actor.Interfaces.IActor.html">IActor</a></div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Kinstrife.Actor.html">Kinstrife.Actor</a></h6>
   <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
   <h5 id="Kinstrife_Actor_ActorRoot_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public sealed class ActorRoot : MonoBehaviour, ICacheReferences, IInstall&lt;ActorRoot&gt;, IInstall, IDependent, IActor</code></pre>
+    <pre><code class="lang-csharp hljs">public sealed class ActorRoot : MonoBehaviour, ICacheReferences, IActor, ITeleportable, IInstall&lt;ActorRoot&gt;, IInstall&lt;IActor&gt;, IInstall, IDependent</code></pre>
   </div>
   <h3 id="fields">Fields
   </h3>
@@ -188,6 +190,30 @@
     <tbody>
       <tr>
         <td><a class="xref" href="Kinstrife.Core.DependencyInjection.DIInitializer.html">DIInitializer</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="Kinstrife_Actor_ActorRoot_physicsRigRootTransform" data-uid="Kinstrife.Actor.ActorRoot.physicsRigRootTransform">physicsRigRootTransform</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Transform physicsRigRootTransform</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Transform</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -368,6 +394,106 @@
   </table>
   
   
+  <a id="Kinstrife_Actor_ActorRoot_Initialized_" data-uid="Kinstrife.Actor.ActorRoot.Initialized*"></a>
+  <h4 id="Kinstrife_Actor_ActorRoot_Initialized" data-uid="Kinstrife.Actor.ActorRoot.Initialized">Initialized</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool Initialized { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Kinstrife_Actor_ActorRoot_IsAlive_" data-uid="Kinstrife.Actor.ActorRoot.IsAlive*"></a>
+  <h4 id="Kinstrife_Actor_ActorRoot_IsAlive" data-uid="Kinstrife.Actor.ActorRoot.IsAlive">IsAlive</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsAlive { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Kinstrife_Actor_ActorRoot_IsDead_" data-uid="Kinstrife.Actor.ActorRoot.IsDead*"></a>
+  <h4 id="Kinstrife_Actor_ActorRoot_IsDead" data-uid="Kinstrife.Actor.ActorRoot.IsDead">IsDead</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsDead { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Kinstrife_Actor_ActorRoot_IsUnavailable_" data-uid="Kinstrife.Actor.ActorRoot.IsUnavailable*"></a>
+  <h4 id="Kinstrife_Actor_ActorRoot_IsUnavailable" data-uid="Kinstrife.Actor.ActorRoot.IsUnavailable">IsUnavailable</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsUnavailable { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
   <a id="Kinstrife_Actor_ActorRoot_Status_" data-uid="Kinstrife.Actor.ActorRoot.Status*"></a>
   <h4 id="Kinstrife_Actor_ActorRoot_Status" data-uid="Kinstrife.Actor.ActorRoot.Status">Status</h4>
   <div class="markdown level1 summary"></div>
@@ -430,6 +556,38 @@
       </tr>
     </tbody>
   </table>
+  
+  
+  <a id="Kinstrife_Actor_ActorRoot_Teleport_" data-uid="Kinstrife.Actor.ActorRoot.Teleport*"></a>
+  <h4 id="Kinstrife_Actor_ActorRoot_Teleport_Vector3_Quaternion_" data-uid="Kinstrife.Actor.ActorRoot.Teleport(Vector3,Quaternion)">Teleport(Vector3, Quaternion)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Teleport(Vector3 position, Quaternion rotation)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Vector3</span></td>
+        <td><span class="parametername">position</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">Quaternion</span></td>
+        <td><span class="parametername">rotation</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   <h3 id="events">Events
   </h3>
   
@@ -451,7 +609,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Action</span>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+        <td><span class="xref">Kinstrife.Action</span>&lt;<span class="xref">System.Boolean</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -499,7 +657,31 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Action</span></td>
+        <td><a class="xref" href="Kinstrife.Action.html">Kinstrife.Action</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="Kinstrife_Actor_ActorRoot_OnReceiveDamage" data-uid="Kinstrife.Actor.ActorRoot.OnReceiveDamage">OnReceiveDamage</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public event Action&lt;IActor, float&gt; OnReceiveDamage</code></pre>
+  </div>
+  <h5 class="eventType">Event Type</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Kinstrife.Action</span>&lt;<a class="xref" href="Kinstrife.Actor.Interfaces.IActor.html">IActor</a>, <span class="xref">System.Single</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -535,7 +717,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public event Action&lt;ActorStatus&gt; StatusChanged</code></pre>
+    <pre><code class="lang-csharp hljs">public event Action&lt;ActorStatus, ActorStatus&gt; StatusChanged</code></pre>
   </div>
   <h5 class="eventType">Event Type</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -547,7 +729,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Action</span>&lt;<a class="xref" href="Kinstrife.Actor.Interfaces.ActorStatus.html">ActorStatus</a>&gt;</td>
+        <td><span class="xref">Kinstrife.Action</span>&lt;<a class="xref" href="Kinstrife.Actor.Interfaces.ActorStatus.html">ActorStatus</a>, <a class="xref" href="Kinstrife.Actor.Interfaces.ActorStatus.html">ActorStatus</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -557,6 +739,15 @@
       <a class="xref" href="Kinstrife.Core.DependencyInjection.ICacheReferences.html">ICacheReferences</a>
   </div>
   <div>
+      <a class="xref" href="Kinstrife.Actor.Interfaces.IActor.html">IActor</a>
+  </div>
+  <div>
+      <a class="xref" href="Kinstrife.Actor.Interfaces.ITeleportable.html">ITeleportable</a>
+  </div>
+  <div>
+      <a class="xref" href="Kinstrife.Core.DependencyInjection.IInstall-1.html">IInstall&lt;T&gt;</a>
+  </div>
+  <div>
       <a class="xref" href="Kinstrife.Core.DependencyInjection.IInstall-1.html">IInstall&lt;T&gt;</a>
   </div>
   <div>
@@ -564,9 +755,6 @@
   </div>
   <div>
       <a class="xref" href="Kinstrife.Core.DependencyInjection.IDependent.html">IDependent</a>
-  </div>
-  <div>
-      <a class="xref" href="Kinstrife.Actor.Interfaces.IActor.html">IActor</a>
   </div>
 </article>
           </div>

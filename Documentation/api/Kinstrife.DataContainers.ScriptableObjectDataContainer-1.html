@@ -82,8 +82,15 @@
     <div class="level2"><span class="xref">ScriptableObjectDataContainer&lt;TComponentType&gt;</span></div>
       <div class="level3"><a class="xref" href="Kinstrife.Procedures.Procedure.html">Procedure</a></div>
   </div>
+  <div class="implements">
+    <h5>Implements</h5>
+    <div><a class="xref" href="Kinstrife.DataContainers.IScriptableObjectDataContainer-1.html">IScriptableObjectDataContainer</a>&lt;TComponentType&gt;</div>
+  </div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="Kinstrife.DataContainers.ScriptableObjectComponent.html#Kinstrife_DataContainers_ScriptableObjectComponent_Name">ScriptableObjectComponent.Name</a>
+    </div>
     <div>
       <a class="xref" href="Kinstrife.DataContainers.ScriptableObjectComponent.html#Kinstrife_DataContainers_ScriptableObjectComponent_isInstance">ScriptableObjectComponent.isInstance</a>
     </div>
@@ -106,10 +113,7 @@
       <a class="xref" href="Kinstrife.DataContainers.ScriptableObjectComponent.html#Kinstrife_DataContainers_ScriptableObjectComponent_TrySetEnabled_System_Boolean_">ScriptableObjectComponent.TrySetEnabled(Boolean)</a>
     </div>
     <div>
-      <a class="xref" href="Kinstrife.DataContainers.ScriptableObjectComponent.html#Kinstrife_DataContainers_ScriptableObjectComponent_OnAddComponent__1_Kinstrife_DataContainers_ScriptableObjectDataContainer___0__">ScriptableObjectComponent.OnAddComponent&lt;T&gt;(ScriptableObjectDataContainer&lt;T&gt;)</a>
-    </div>
-    <div>
-      <a class="xref" href="Kinstrife.DataContainers.ScriptableObjectComponent.html#Kinstrife_DataContainers_ScriptableObjectComponent_Duplicate__1___0_">ScriptableObjectComponent.Duplicate&lt;T&gt;(T)</a>
+      <a class="xref" href="Kinstrife.DataContainers.ScriptableObjectComponent.html#Kinstrife_DataContainers_ScriptableObjectComponent_OnAddComponent__1_Kinstrife_DataContainers_IScriptableObjectDataContainer___0__">ScriptableObjectComponent.OnAddComponent&lt;T&gt;(IScriptableObjectDataContainer&lt;T&gt;)</a>
     </div>
     <div>
       <a class="xref" href="Kinstrife.DataContainers.ScriptableObjectComponent.html#Kinstrife_DataContainers_ScriptableObjectComponent_AuthoringTab">ScriptableObjectComponent.AuthoringTab</a>
@@ -134,7 +138,7 @@
   <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
   <h5 id="Kinstrife_DataContainers_ScriptableObjectDataContainer_1_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public abstract class ScriptableObjectDataContainer&lt;TComponentType&gt; : ScriptableObjectComponent where TComponentType : ScriptableObjectComponent</code></pre>
+    <pre><code class="lang-csharp hljs">public abstract class ScriptableObjectDataContainer&lt;TComponentType&gt; : ScriptableObjectComponent, IScriptableObjectDataContainer&lt;TComponentType&gt; where TComponentType : ScriptableObjectComponent</code></pre>
   </div>
   <h5 class="typeParameters">Type Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -208,80 +212,13 @@
   </h3>
   
   
-  <a id="Kinstrife_DataContainers_ScriptableObjectDataContainer_1_AddComponent_" data-uid="Kinstrife.DataContainers.ScriptableObjectDataContainer`1.AddComponent*"></a>
-  <h4 id="Kinstrife_DataContainers_ScriptableObjectDataContainer_1_AddComponent" data-uid="Kinstrife.DataContainers.ScriptableObjectDataContainer`1.AddComponent">AddComponent()</h4>
+  <a id="Kinstrife_DataContainers_ScriptableObjectDataContainer_1_FilterGetter_" data-uid="Kinstrife.DataContainers.ScriptableObjectDataContainer`1.FilterGetter*"></a>
+  <h4 id="Kinstrife_DataContainers_ScriptableObjectDataContainer_1_FilterGetter_System_Type_System_Boolean_System_Collections_Generic_IList__0__" data-uid="Kinstrife.DataContainers.ScriptableObjectDataContainer`1.FilterGetter(System.Type,System.Boolean,System.Collections.Generic.IList{`0})">FilterGetter(Type, Boolean, IList&lt;TComponentType&gt;)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public TComponentType AddComponent()</code></pre>
-  </div>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">TComponentType</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="Kinstrife_DataContainers_ScriptableObjectDataContainer_1_AddComponent_" data-uid="Kinstrife.DataContainers.ScriptableObjectDataContainer`1.AddComponent*"></a>
-  <h4 id="Kinstrife_DataContainers_ScriptableObjectDataContainer_1_AddComponent_System_String_" data-uid="Kinstrife.DataContainers.ScriptableObjectDataContainer`1.AddComponent(System.String)">AddComponent(String)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public TComponentType AddComponent(string typeName)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.String</span></td>
-        <td><span class="parametername">typeName</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">TComponentType</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="Kinstrife_DataContainers_ScriptableObjectDataContainer_1_AddComponent_" data-uid="Kinstrife.DataContainers.ScriptableObjectDataContainer`1.AddComponent*"></a>
-  <h4 id="Kinstrife_DataContainers_ScriptableObjectDataContainer_1_AddComponent_System_Type_" data-uid="Kinstrife.DataContainers.ScriptableObjectDataContainer`1.AddComponent(System.Type)">AddComponent(Type)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public TComponentType AddComponent(Type type)</code></pre>
+    <pre><code class="lang-csharp hljs">public static IEnumerable&lt;Type&gt; FilterGetter(Type containerType, bool filter, IList&lt;TComponentType&gt; components)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -295,7 +232,17 @@
     <tbody>
       <tr>
         <td><span class="xref">System.Type</span></td>
-        <td><span class="parametername">type</span></td>
+        <td><span class="parametername">containerType</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">filter</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IList</span>&lt;TComponentType&gt;</td>
+        <td><span class="parametername">components</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -310,7 +257,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">TComponentType</span></td>
+        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<span class="xref">System.Type</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -399,13 +346,13 @@
   </table>
   
   
-  <a id="Kinstrife_DataContainers_ScriptableObjectDataContainer_1_HasComponent_" data-uid="Kinstrife.DataContainers.ScriptableObjectDataContainer`1.HasComponent*"></a>
-  <h4 id="Kinstrife_DataContainers_ScriptableObjectDataContainer_1_HasComponent_System_Type_" data-uid="Kinstrife.DataContainers.ScriptableObjectDataContainer`1.HasComponent(System.Type)">HasComponent(Type)</h4>
+  <a id="Kinstrife_DataContainers_ScriptableObjectDataContainer_1_HasComponentOfType_" data-uid="Kinstrife.DataContainers.ScriptableObjectDataContainer`1.HasComponentOfType*"></a>
+  <h4 id="Kinstrife_DataContainers_ScriptableObjectDataContainer_1_HasComponentOfType_System_Type_System_Collections_Generic_IList__0__" data-uid="Kinstrife.DataContainers.ScriptableObjectDataContainer`1.HasComponentOfType(System.Type,System.Collections.Generic.IList{`0})">HasComponentOfType(Type, IList&lt;TComponentType&gt;)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public bool HasComponent(Type t)</code></pre>
+    <pre><code class="lang-csharp hljs">public static bool HasComponentOfType(Type t, IList&lt;TComponentType&gt; components)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -420,6 +367,58 @@
       <tr>
         <td><span class="xref">System.Type</span></td>
         <td><span class="parametername">t</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IList</span>&lt;TComponentType&gt;</td>
+        <td><span class="parametername">components</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Kinstrife_DataContainers_ScriptableObjectDataContainer_1_IsCompatibleWith_" data-uid="Kinstrife.DataContainers.ScriptableObjectDataContainer`1.IsCompatibleWith*"></a>
+  <h4 id="Kinstrife_DataContainers_ScriptableObjectDataContainer_1_IsCompatibleWith_System_Type_System_Type_" data-uid="Kinstrife.DataContainers.ScriptableObjectDataContainer`1.IsCompatibleWith(System.Type,System.Type)">IsCompatibleWith(Type, Type)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool IsCompatibleWith(Type containerType, Type componentType)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Type</span></td>
+        <td><span class="parametername">containerType</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Type</span></td>
+        <td><span class="parametername">componentType</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -447,7 +446,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected abstract bool IsOwner(TComponentType component)</code></pre>
+    <pre><code class="lang-csharp hljs">public abstract bool IsOwner(TComponentType component)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -518,7 +517,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected virtual void PostAddComponent(TComponentType component)</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual void PostAddComponent(TComponentType component)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -539,13 +538,13 @@
   </table>
   
   
-  <a id="Kinstrife_DataContainers_ScriptableObjectDataContainer_1_RemoveComponent_" data-uid="Kinstrife.DataContainers.ScriptableObjectDataContainer`1.RemoveComponent*"></a>
-  <h4 id="Kinstrife_DataContainers_ScriptableObjectDataContainer_1_RemoveComponent__0_" data-uid="Kinstrife.DataContainers.ScriptableObjectDataContainer`1.RemoveComponent(`0)">RemoveComponent(TComponentType)</h4>
+  <a id="Kinstrife_DataContainers_ScriptableObjectDataContainer_1_RemoveComponentInspector_" data-uid="Kinstrife.DataContainers.ScriptableObjectDataContainer`1.RemoveComponentInspector*"></a>
+  <h4 id="Kinstrife_DataContainers_ScriptableObjectDataContainer_1_RemoveComponentInspector__0_" data-uid="Kinstrife.DataContainers.ScriptableObjectDataContainer`1.RemoveComponentInspector(`0)">RemoveComponentInspector(TComponentType)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void RemoveComponent(TComponentType component)</code></pre>
+    <pre><code class="lang-csharp hljs">public void RemoveComponentInspector(TComponentType component)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -668,33 +667,37 @@
       </tr>
     </tbody>
   </table>
+  <h3 id="eii">Explicit Interface Implementations
+  </h3>
   
   
-  <a id="Kinstrife_DataContainers_ScriptableObjectDataContainer_1_TryRemoveComponent_" data-uid="Kinstrife.DataContainers.ScriptableObjectDataContainer`1.TryRemoveComponent*"></a>
-  <h4 id="Kinstrife_DataContainers_ScriptableObjectDataContainer_1_TryRemoveComponent_System_Type_" data-uid="Kinstrife.DataContainers.ScriptableObjectDataContainer`1.TryRemoveComponent(System.Type)">TryRemoveComponent(Type)</h4>
+  <a id="Kinstrife_DataContainers_ScriptableObjectDataContainer_1_Kinstrife_DataContainers_IScriptableObjectDataContainer_TComponentType__Components_" data-uid="Kinstrife.DataContainers.ScriptableObjectDataContainer`1.Kinstrife#DataContainers#IScriptableObjectDataContainer{TComponentType}#Components*"></a>
+  <h4 id="Kinstrife_DataContainers_ScriptableObjectDataContainer_1_Kinstrife_DataContainers_IScriptableObjectDataContainer_TComponentType__Components" data-uid="Kinstrife.DataContainers.ScriptableObjectDataContainer`1.Kinstrife#DataContainers#IScriptableObjectDataContainer{TComponentType}#Components">IScriptableObjectDataContainer&lt;TComponentType&gt;.Components</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void TryRemoveComponent(Type type)</code></pre>
+    <pre><code class="lang-csharp hljs">IList&lt;TComponentType&gt; IScriptableObjectDataContainer&lt;TComponentType&gt;.Components { get; }</code></pre>
   </div>
-  <h5 class="parameters">Parameters</h5>
+  <h5 class="returns">Returns</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
       <tr>
         <th>Type</th>
-        <th>Name</th>
         <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Type</span></td>
-        <td><span class="parametername">type</span></td>
+        <td><span class="xref">System.Collections.Generic.IList</span>&lt;TComponentType&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <a class="xref" href="Kinstrife.DataContainers.IScriptableObjectDataContainer-1.html">IScriptableObjectDataContainer&lt;TComponentType&gt;</a>
+  </div>
 </article>
           </div>
           

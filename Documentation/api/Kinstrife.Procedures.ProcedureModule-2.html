@@ -112,9 +112,6 @@
       <a class="xref" href="Kinstrife.Procedures.ProcedureComponent.html#Kinstrife_Procedures_ProcedureComponent_manager">ProcedureComponent.manager</a>
     </div>
     <div>
-      <a class="xref" href="Kinstrife.Procedures.ProcedureComponent.html#Kinstrife_Procedures_ProcedureComponent_OnAddComponent__1_Kinstrife_DataContainers_ScriptableObjectDataContainer___0__">ProcedureComponent.OnAddComponent&lt;T&gt;(ScriptableObjectDataContainer&lt;T&gt;)</a>
-    </div>
-    <div>
       <a class="xref" href="Kinstrife.Procedures.ProcedureComponent.html#Kinstrife_Procedures_ProcedureComponent_RuntimeCacheReferences">ProcedureComponent.RuntimeCacheReferences()</a>
     </div>
     <div>
@@ -122,6 +119,9 @@
     </div>
     <div>
       <a class="xref" href="Kinstrife.Procedures.ProcedureComponent.html#Kinstrife_Procedures_ProcedureComponent_ValidateInstance_Kinstrife_DataContainers_ScriptableObjectComponent_">ProcedureComponent.ValidateInstance(ScriptableObjectComponent)</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.DataContainers.ScriptableObjectComponent.html#Kinstrife_DataContainers_ScriptableObjectComponent_Name">ScriptableObjectComponent.Name</a>
     </div>
     <div>
       <a class="xref" href="Kinstrife.DataContainers.ScriptableObjectComponent.html#Kinstrife_DataContainers_ScriptableObjectComponent_isInstance">ScriptableObjectComponent.isInstance</a>
@@ -142,7 +142,7 @@
       <a class="xref" href="Kinstrife.DataContainers.ScriptableObjectComponent.html#Kinstrife_DataContainers_ScriptableObjectComponent_TrySetEnabled_System_Boolean_">ScriptableObjectComponent.TrySetEnabled(Boolean)</a>
     </div>
     <div>
-      <a class="xref" href="Kinstrife.DataContainers.ScriptableObjectComponent.html#Kinstrife_DataContainers_ScriptableObjectComponent_Duplicate__1___0_">ScriptableObjectComponent.Duplicate&lt;T&gt;(T)</a>
+      <a class="xref" href="Kinstrife.DataContainers.ScriptableObjectComponent.html#Kinstrife_DataContainers_ScriptableObjectComponent_OnAddComponent__1_Kinstrife_DataContainers_IScriptableObjectDataContainer___0__">ScriptableObjectComponent.OnAddComponent&lt;T&gt;(IScriptableObjectDataContainer&lt;T&gt;)</a>
     </div>
     <div>
       <a class="xref" href="Kinstrife.DataContainers.ScriptableObjectComponent.html#Kinstrife_DataContainers_ScriptableObjectComponent_AuthoringTab">ScriptableObjectComponent.AuthoringTab</a>
@@ -419,13 +419,13 @@ public abstract class ProcedureModule&lt;TInstruction, TAuthoring&gt; : Procedur
   </table>
   
   
-  <a id="Kinstrife_Procedures_ProcedureModule_2_IsActive_" data-uid="Kinstrife.Procedures.ProcedureModule`2.IsActive*"></a>
-  <h4 id="Kinstrife_Procedures_ProcedureModule_2_IsActive" data-uid="Kinstrife.Procedures.ProcedureModule`2.IsActive">IsActive</h4>
+  <a id="Kinstrife_Procedures_ProcedureModule_2_ShouldUpdate_" data-uid="Kinstrife.Procedures.ProcedureModule`2.ShouldUpdate*"></a>
+  <h4 id="Kinstrife_Procedures_ProcedureModule_2_ShouldUpdate" data-uid="Kinstrife.Procedures.ProcedureModule`2.ShouldUpdate">ShouldUpdate</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public bool IsActive { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual bool ShouldUpdate { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -444,6 +444,16 @@ public abstract class ProcedureModule&lt;TInstruction, TAuthoring&gt; : Procedur
   </table>
   <h3 id="methods">Methods
   </h3>
+  
+  
+  <a id="Kinstrife_Procedures_ProcedureModule_2_DrawTitleBarGUI_" data-uid="Kinstrife.Procedures.ProcedureModule`2.DrawTitleBarGUI*"></a>
+  <h4 id="Kinstrife_Procedures_ProcedureModule_2_DrawTitleBarGUI" data-uid="Kinstrife.Procedures.ProcedureModule`2.DrawTitleBarGUI">DrawTitleBarGUI()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void DrawTitleBarGUI()</code></pre>
+  </div>
   
   
   <a id="Kinstrife_Procedures_ProcedureModule_2_Initialize_" data-uid="Kinstrife.Procedures.ProcedureModule`2.Initialize*"></a>
@@ -633,6 +643,33 @@ public abstract class ProcedureModule&lt;TInstruction, TAuthoring&gt; : Procedur
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">protected virtual void RegisterEvents()</code></pre>
   </div>
+  
+  
+  <a id="Kinstrife_Procedures_ProcedureModule_2_RemoveElementInspector_" data-uid="Kinstrife.Procedures.ProcedureModule`2.RemoveElementInspector*"></a>
+  <h4 id="Kinstrife_Procedures_ProcedureModule_2_RemoveElementInspector__1_" data-uid="Kinstrife.Procedures.ProcedureModule`2.RemoveElementInspector(`1)">RemoveElementInspector(TAuthoring)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void RemoveElementInspector(TAuthoring el)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">TAuthoring</span></td>
+        <td><span class="parametername">el</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   
   
   <a id="Kinstrife_Procedures_ProcedureModule_2_UnregisterEvents_" data-uid="Kinstrife.Procedures.ProcedureModule`2.UnregisterEvents*"></a>

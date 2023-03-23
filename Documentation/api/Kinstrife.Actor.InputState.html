@@ -108,12 +108,12 @@ public struct InputState</code></pre>
   </h3>
   
   
-  <h4 id="Kinstrife_Actor_InputState_lookInput" data-uid="Kinstrife.Actor.InputState.lookInput">lookInput</h4>
+  <h4 id="Kinstrife_Actor_InputState_disableMoveInput" data-uid="Kinstrife.Actor.InputState.disableMoveInput">disableMoveInput</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Vector2 lookInput</code></pre>
+    <pre><code class="lang-csharp hljs">public bool disableMoveInput</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -125,7 +125,7 @@ public struct InputState</code></pre>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Vector2</span></td>
+        <td><span class="xref">System.Boolean</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -282,12 +282,12 @@ public struct InputState</code></pre>
   
   
   <a id="Kinstrife_Actor_InputState_SetMove_" data-uid="Kinstrife.Actor.InputState.SetMove*"></a>
-  <h4 id="Kinstrife_Actor_InputState_SetMove_Vector3_Vector2_" data-uid="Kinstrife.Actor.InputState.SetMove(Vector3,Vector2)">SetMove(Vector3, Vector2)</h4>
+  <h4 id="Kinstrife_Actor_InputState_SetMove_Vector3_Vector2_System_Boolean_" data-uid="Kinstrife.Actor.InputState.SetMove(Vector3,Vector2,System.Boolean)">SetMove(Vector3, Vector2, Boolean)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void SetMove(Vector3 moveWorldTarget, Vector2 moveLocal)</code></pre>
+    <pre><code class="lang-csharp hljs">public void SetMove(Vector3 moveWorldTarget, Vector2 moveLocal, bool force)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -307,6 +307,11 @@ public struct InputState</code></pre>
       <tr>
         <td><span class="xref">Vector2</span></td>
         <td><span class="parametername">moveLocal</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">force</span></td>
         <td></td>
       </tr>
     </tbody>

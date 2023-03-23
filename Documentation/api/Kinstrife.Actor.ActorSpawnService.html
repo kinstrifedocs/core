@@ -78,7 +78,7 @@
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><a class="xref" href="Kinstrife.Messaging.ServiceBehaviour-2.html">ServiceBehaviour</a>&lt;<a class="xref" href="Kinstrife.Actor.ActorRoot.html">ActorRoot</a>, <a class="xref" href="Kinstrife.Actor.SpawnArguments.html">SpawnArguments</a>&gt;</div>
+    <div class="level1"><a class="xref" href="Kinstrife.Messaging.ServiceBehaviour-2.html">ServiceBehaviour</a>&lt;<a class="xref" href="Kinstrife.Actor.Interfaces.IActor.html">IActor</a>, <a class="xref" href="Kinstrife.Actor.Interfaces.SpawnArguments.html">SpawnArguments</a>&gt;</div>
     <div class="level2"><span class="xref">ActorSpawnService</span></div>
   </div>
   <div class="implements">
@@ -92,32 +92,32 @@
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
     <div>
-      <a class="xref" href="Kinstrife.Messaging.ServiceBehaviour-2.html#Kinstrife_Messaging_ServiceBehaviour_2_server">ServiceBehaviour&lt;ActorRoot, SpawnArguments&gt;.server</a>
+      <a class="xref" href="Kinstrife.Messaging.ServiceBehaviour-2.html#Kinstrife_Messaging_ServiceBehaviour_2_server">ServiceBehaviour&lt;IActor, SpawnArguments&gt;.server</a>
     </div>
     <div>
-      <a class="xref" href="Kinstrife.Messaging.ServiceBehaviour-2.html#Kinstrife_Messaging_ServiceBehaviour_2_descriptor">ServiceBehaviour&lt;ActorRoot, SpawnArguments&gt;.descriptor</a>
+      <a class="xref" href="Kinstrife.Messaging.ServiceBehaviour-2.html#Kinstrife_Messaging_ServiceBehaviour_2_descriptor">ServiceBehaviour&lt;IActor, SpawnArguments&gt;.descriptor</a>
     </div>
     <div>
-      <a class="xref" href="Kinstrife.Messaging.ServiceBehaviour-2.html#Kinstrife_Messaging_ServiceBehaviour_2_Inject_Kinstrife_Messaging_IServiceServer__0_Kinstrife_Messaging_Request__1___">ServiceBehaviour&lt;ActorRoot, SpawnArguments&gt;.Inject(IServiceServer&lt;ActorRoot, Request&lt;SpawnArguments&gt;&gt;)</a>
+      <a class="xref" href="Kinstrife.Messaging.ServiceBehaviour-2.html#Kinstrife_Messaging_ServiceBehaviour_2_Inject_Kinstrife_Messaging_IServiceServer__0_Kinstrife_Messaging_Request__1___">ServiceBehaviour&lt;IActor, SpawnArguments&gt;.Inject(IServiceServer&lt;IActor, Request&lt;SpawnArguments&gt;&gt;)</a>
     </div>
     <div>
-      <a class="xref" href="Kinstrife.Messaging.ServiceBehaviour-2.html#Kinstrife_Messaging_ServiceBehaviour_2_Initialized">ServiceBehaviour&lt;ActorRoot, SpawnArguments&gt;.Initialized</a>
+      <a class="xref" href="Kinstrife.Messaging.ServiceBehaviour-2.html#Kinstrife_Messaging_ServiceBehaviour_2_Initialized">ServiceBehaviour&lt;IActor, SpawnArguments&gt;.Initialized</a>
     </div>
     <div>
-      <a class="xref" href="Kinstrife.Messaging.ServiceBehaviour-2.html#Kinstrife_Messaging_ServiceBehaviour_2_Initialize">ServiceBehaviour&lt;ActorRoot, SpawnArguments&gt;.Initialize()</a>
+      <a class="xref" href="Kinstrife.Messaging.ServiceBehaviour-2.html#Kinstrife_Messaging_ServiceBehaviour_2_Initialize">ServiceBehaviour&lt;IActor, SpawnArguments&gt;.Initialize()</a>
     </div>
     <div>
-      <a class="xref" href="Kinstrife.Messaging.ServiceBehaviour-2.html#Kinstrife_Messaging_ServiceBehaviour_2_HandleRequest_Kinstrife_Messaging_Request__1__">ServiceBehaviour&lt;ActorRoot, SpawnArguments&gt;.HandleRequest(Request&lt;SpawnArguments&gt;)</a>
+      <a class="xref" href="Kinstrife.Messaging.ServiceBehaviour-2.html#Kinstrife_Messaging_ServiceBehaviour_2_HandleRequest_Kinstrife_Messaging_Request__1__">ServiceBehaviour&lt;IActor, SpawnArguments&gt;.HandleRequest(Request&lt;SpawnArguments&gt;)</a>
     </div>
     <div>
-      <a class="xref" href="Kinstrife.Messaging.ServiceBehaviour-2.html#Kinstrife_Messaging_ServiceBehaviour_2_OnDestroy">ServiceBehaviour&lt;ActorRoot, SpawnArguments&gt;.OnDestroy()</a>
+      <a class="xref" href="Kinstrife.Messaging.ServiceBehaviour-2.html#Kinstrife_Messaging_ServiceBehaviour_2_OnDestroy">ServiceBehaviour&lt;IActor, SpawnArguments&gt;.OnDestroy()</a>
     </div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Kinstrife.Actor.html">Kinstrife.Actor</a></h6>
   <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
   <h5 id="Kinstrife_Actor_ActorSpawnService_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class ActorSpawnService : ServiceBehaviour&lt;ActorRoot, SpawnArguments&gt;, IInjectable, IInitializable, IInstall&lt;ActorSpawnService&gt;, IInstall, IDependent</code></pre>
+    <pre><code class="lang-csharp hljs">public class ActorSpawnService : ServiceBehaviour&lt;IActor, SpawnArguments&gt;, IInjectable, IInitializable, IInstall&lt;ActorSpawnService&gt;, IInstall, IDependent</code></pre>
   </div>
   <h3 id="constructors">Constructors
   </h3>
@@ -282,12 +282,12 @@
   
   
   <a id="Kinstrife_Actor_ActorSpawnService_HandleRequest_" data-uid="Kinstrife.Actor.ActorSpawnService.HandleRequest*"></a>
-  <h4 id="Kinstrife_Actor_ActorSpawnService_HandleRequest_Kinstrife_Messaging_Request_Kinstrife_Actor_SpawnArguments__" data-uid="Kinstrife.Actor.ActorSpawnService.HandleRequest(Kinstrife.Messaging.Request{Kinstrife.Actor.SpawnArguments})">HandleRequest(Request&lt;SpawnArguments&gt;)</h4>
+  <h4 id="Kinstrife_Actor_ActorSpawnService_HandleRequest_Kinstrife_Messaging_Request_Kinstrife_Actor_Interfaces_SpawnArguments__" data-uid="Kinstrife.Actor.ActorSpawnService.HandleRequest(Kinstrife.Messaging.Request{Kinstrife.Actor.Interfaces.SpawnArguments})">HandleRequest(Request&lt;SpawnArguments&gt;)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected override async UniTask&lt;ActorRoot&gt; HandleRequest(Request&lt;SpawnArguments&gt; payload)</code></pre>
+    <pre><code class="lang-csharp hljs">protected override async UniTask&lt;IActor&gt; HandleRequest(Request&lt;SpawnArguments&gt; payload)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -300,7 +300,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="Kinstrife.Messaging.Request-1.html">Request</a>&lt;<a class="xref" href="Kinstrife.Actor.SpawnArguments.html">SpawnArguments</a>&gt;</td>
+        <td><a class="xref" href="Kinstrife.Messaging.Request-1.html">Request</a>&lt;<a class="xref" href="Kinstrife.Actor.Interfaces.SpawnArguments.html">SpawnArguments</a>&gt;</td>
         <td><span class="parametername">payload</span></td>
         <td></td>
       </tr>
@@ -316,13 +316,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">UniTask</span>&lt;<a class="xref" href="Kinstrife.Actor.ActorRoot.html">ActorRoot</a>&gt;</td>
+        <td><span class="xref">UniTask</span>&lt;<a class="xref" href="Kinstrife.Actor.Interfaces.IActor.html">IActor</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <h5 class="overrides">Overrides</h5>
-  <div><span class="xref">Kinstrife.Messaging.ServiceBehaviour&lt;Kinstrife.Actor.ActorRoot, Kinstrife.Actor.SpawnArguments&gt;.HandleRequest(Kinstrife.Messaging.Request&lt;Kinstrife.Actor.SpawnArguments&gt;)</span></div>
+  <div><span class="xref">Kinstrife.Messaging.ServiceBehaviour&lt;Kinstrife.Actor.Interfaces.IActor, Kinstrife.Actor.Interfaces.SpawnArguments&gt;.HandleRequest(Kinstrife.Messaging.Request&lt;Kinstrife.Actor.Interfaces.SpawnArguments&gt;)</span></div>
   
   
   <a id="Kinstrife_Actor_ActorSpawnService_Initialize_" data-uid="Kinstrife.Actor.ActorSpawnService.Initialize*"></a>
@@ -334,16 +334,16 @@
     <pre><code class="lang-csharp hljs">public override void Initialize()</code></pre>
   </div>
   <h5 class="overrides">Overrides</h5>
-  <div><span class="xref">Kinstrife.Messaging.ServiceBehaviour&lt;Kinstrife.Actor.ActorRoot, Kinstrife.Actor.SpawnArguments&gt;.Initialize()</span></div>
+  <div><span class="xref">Kinstrife.Messaging.ServiceBehaviour&lt;Kinstrife.Actor.Interfaces.IActor, Kinstrife.Actor.Interfaces.SpawnArguments&gt;.Initialize()</span></div>
   
   
   <a id="Kinstrife_Actor_ActorSpawnService_Inject_" data-uid="Kinstrife.Actor.ActorSpawnService.Inject*"></a>
-  <h4 id="Kinstrife_Actor_ActorSpawnService_Inject_Kinstrife_Messaging_IServiceServer_Kinstrife_Actor_ActorRoot_Kinstrife_Messaging_Request_Kinstrife_Actor_SpawnArguments___Kinstrife_Actor_ActorConfig_Kinstrife_Application_Module_" data-uid="Kinstrife.Actor.ActorSpawnService.Inject(Kinstrife.Messaging.IServiceServer{Kinstrife.Actor.ActorRoot,Kinstrife.Messaging.Request{Kinstrife.Actor.SpawnArguments}},Kinstrife.Actor.ActorConfig,Kinstrife.Application.Module)">Inject(IServiceServer&lt;ActorRoot, Request&lt;SpawnArguments&gt;&gt;, ActorConfig, Module)</h4>
+  <h4 id="Kinstrife_Actor_ActorSpawnService_Inject_Kinstrife_Actor_Input_PlayerActorManager_Kinstrife_Messaging_IServiceServer_Kinstrife_Actor_Interfaces_IActor_Kinstrife_Messaging_Request_Kinstrife_Actor_Interfaces_SpawnArguments___Kinstrife_Actor_ActorConfig_Kinstrife_Application_Module_" data-uid="Kinstrife.Actor.ActorSpawnService.Inject(Kinstrife.Actor.Input.PlayerActorManager,Kinstrife.Messaging.IServiceServer{Kinstrife.Actor.Interfaces.IActor,Kinstrife.Messaging.Request{Kinstrife.Actor.Interfaces.SpawnArguments}},Kinstrife.Actor.ActorConfig,Kinstrife.Application.Module)">Inject(PlayerActorManager, IServiceServer&lt;IActor, Request&lt;SpawnArguments&gt;&gt;, ActorConfig, Module)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void Inject(IServiceServer&lt;ActorRoot, Request&lt;SpawnArguments&gt;&gt; server, ActorConfig config, Module module)</code></pre>
+    <pre><code class="lang-csharp hljs">public void Inject(PlayerActorManager playerActorManager, IServiceServer&lt;IActor, Request&lt;SpawnArguments&gt;&gt; server, ActorConfig config, Module module)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -356,7 +356,12 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="Kinstrife.Messaging.IServiceServer-2.html">IServiceServer</a>&lt;<a class="xref" href="Kinstrife.Actor.ActorRoot.html">ActorRoot</a>, <a class="xref" href="Kinstrife.Messaging.Request-1.html">Request</a>&lt;<a class="xref" href="Kinstrife.Actor.SpawnArguments.html">SpawnArguments</a>&gt;&gt;</td>
+        <td><a class="xref" href="Kinstrife.Actor.Input.PlayerActorManager.html">PlayerActorManager</a></td>
+        <td><span class="parametername">playerActorManager</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Kinstrife.Messaging.IServiceServer-2.html">IServiceServer</a>&lt;<a class="xref" href="Kinstrife.Actor.Interfaces.IActor.html">IActor</a>, <a class="xref" href="Kinstrife.Messaging.Request-1.html">Request</a>&lt;<a class="xref" href="Kinstrife.Actor.Interfaces.SpawnArguments.html">SpawnArguments</a>&gt;&gt;</td>
         <td><span class="parametername">server</span></td>
         <td></td>
       </tr>
@@ -417,7 +422,7 @@
   
   
   <a id="Kinstrife_Actor_ActorSpawnService_SetupActor_" data-uid="Kinstrife.Actor.ActorSpawnService.SetupActor*"></a>
-  <h4 id="Kinstrife_Actor_ActorSpawnService_SetupActor_Kinstrife_Actor_ActorRoot_Kinstrife_Actor_SpawnArguments__" data-uid="Kinstrife.Actor.ActorSpawnService.SetupActor(Kinstrife.Actor.ActorRoot,Kinstrife.Actor.SpawnArguments@)">SetupActor(ActorRoot, in SpawnArguments)</h4>
+  <h4 id="Kinstrife_Actor_ActorSpawnService_SetupActor_Kinstrife_Actor_ActorRoot_Kinstrife_Actor_Interfaces_SpawnArguments__" data-uid="Kinstrife.Actor.ActorSpawnService.SetupActor(Kinstrife.Actor.ActorRoot,Kinstrife.Actor.Interfaces.SpawnArguments@)">SetupActor(ActorRoot, in SpawnArguments)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -440,7 +445,7 @@
         <td></td>
       </tr>
       <tr>
-        <td><a class="xref" href="Kinstrife.Actor.SpawnArguments.html">SpawnArguments</a></td>
+        <td><a class="xref" href="Kinstrife.Actor.Interfaces.SpawnArguments.html">SpawnArguments</a></td>
         <td><span class="parametername">arguments</span></td>
         <td></td>
       </tr>
@@ -506,7 +511,7 @@
   
   
   <a id="Kinstrife_Actor_ActorSpawnService_SpawnActor_" data-uid="Kinstrife.Actor.ActorSpawnService.SpawnActor*"></a>
-  <h4 id="Kinstrife_Actor_ActorSpawnService_SpawnActor_Kinstrife_Actor_ActorRoot_Kinstrife_Actor_SpawnArguments__" data-uid="Kinstrife.Actor.ActorSpawnService.SpawnActor(Kinstrife.Actor.ActorRoot,Kinstrife.Actor.SpawnArguments@)">SpawnActor(ActorRoot, in SpawnArguments)</h4>
+  <h4 id="Kinstrife_Actor_ActorSpawnService_SpawnActor_Kinstrife_Actor_ActorRoot_Kinstrife_Actor_Interfaces_SpawnArguments__" data-uid="Kinstrife.Actor.ActorSpawnService.SpawnActor(Kinstrife.Actor.ActorRoot,Kinstrife.Actor.Interfaces.SpawnArguments@)">SpawnActor(ActorRoot, in SpawnArguments)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -529,7 +534,7 @@
         <td></td>
       </tr>
       <tr>
-        <td><a class="xref" href="Kinstrife.Actor.SpawnArguments.html">SpawnArguments</a></td>
+        <td><a class="xref" href="Kinstrife.Actor.Interfaces.SpawnArguments.html">SpawnArguments</a></td>
         <td><span class="parametername">arguments</span></td>
         <td></td>
       </tr>

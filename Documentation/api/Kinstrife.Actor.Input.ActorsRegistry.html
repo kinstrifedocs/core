@@ -82,15 +82,14 @@
   </div>
   <div class="implements">
     <h5>Implements</h5>
-    <div><a class="xref" href="Kinstrife.Core.DependencyInjection.IInstall-1.html">IInstall</a>&lt;<a class="xref" href="Kinstrife.Actor.Input.ActorsRegistry.html">ActorsRegistry</a>&gt;</div>
-    <div><a class="xref" href="Kinstrife.Core.DependencyInjection.IInstall.html">IInstall</a></div>
+    <div><a class="xref" href="Kinstrife.Core.DependencyInjection.IInjectable.html">IInjectable</a></div>
     <div><a class="xref" href="Kinstrife.Core.DependencyInjection.IDependent.html">IDependent</a></div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Kinstrife.Actor.Input.html">Kinstrife.Actor.Input</a></h6>
   <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
   <h5 id="Kinstrife_Actor_Input_ActorsRegistry_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class ActorsRegistry : MonoBehaviour, IInstall&lt;ActorsRegistry&gt;, IInstall, IDependent</code></pre>
+    <pre><code class="lang-csharp hljs">public class ActorsRegistry : MonoBehaviour, IInjectable, IDependent</code></pre>
   </div>
   <h3 id="properties">Properties
   </h3>
@@ -115,6 +114,56 @@
     <tbody>
       <tr>
         <td><span class="xref">System.Collections.Generic.IReadOnlyList</span>&lt;<a class="xref" href="Kinstrife.Actor.ActorRoot.html">ActorRoot</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Kinstrife_Actor_Input_ActorsRegistry_ActorsByStatus_" data-uid="Kinstrife.Actor.Input.ActorsRegistry.ActorsByStatus*"></a>
+  <h4 id="Kinstrife_Actor_Input_ActorsRegistry_ActorsByStatus" data-uid="Kinstrife.Actor.Input.ActorsRegistry.ActorsByStatus">ActorsByStatus</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IReadOnlyDictionary&lt;ActorStatus, HashSet&lt;ActorRoot&gt;&gt; ActorsByStatus { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IReadOnlyDictionary</span>&lt;<a class="xref" href="Kinstrife.Actor.Interfaces.ActorStatus.html">ActorStatus</a>, <span class="xref">HashSet</span>&lt;<a class="xref" href="Kinstrife.Actor.ActorRoot.html">ActorRoot</a>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Kinstrife_Actor_Input_ActorsRegistry_Instance_" data-uid="Kinstrife.Actor.Input.ActorsRegistry.Instance*"></a>
+  <h4 id="Kinstrife_Actor_Input_ActorsRegistry_Instance" data-uid="Kinstrife.Actor.Input.ActorsRegistry.Instance">Instance</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static ActorsRegistry Instance { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Kinstrife.Actor.Input.ActorsRegistry.html">ActorsRegistry</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -146,12 +195,36 @@
       </tr>
     </tbody>
   </table>
+  
+  
+  <a id="Kinstrife_Actor_Input_ActorsRegistry_Inject_" data-uid="Kinstrife.Actor.Input.ActorsRegistry.Inject*"></a>
+  <h4 id="Kinstrife_Actor_Input_ActorsRegistry_Inject_Kinstrife_Application_ApplicationFlow_" data-uid="Kinstrife.Actor.Input.ActorsRegistry.Inject(Kinstrife.Application.ApplicationFlow)">Inject(ApplicationFlow)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Inject(ApplicationFlow flow)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Kinstrife.Application.ApplicationFlow.html">ApplicationFlow</a></td>
+        <td><span class="parametername">flow</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   <h3 id="implements">Implements</h3>
   <div>
-      <a class="xref" href="Kinstrife.Core.DependencyInjection.IInstall-1.html">IInstall&lt;T&gt;</a>
-  </div>
-  <div>
-      <a class="xref" href="Kinstrife.Core.DependencyInjection.IInstall.html">IInstall</a>
+      <a class="xref" href="Kinstrife.Core.DependencyInjection.IInjectable.html">IInjectable</a>
   </div>
   <div>
       <a class="xref" href="Kinstrife.Core.DependencyInjection.IDependent.html">IDependent</a>

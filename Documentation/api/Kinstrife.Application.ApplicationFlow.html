@@ -149,6 +149,31 @@ The only reason why this is currently a MonoBehaviour is because it requires Sta
   </h3>
   
   
+  <a id="Kinstrife_Application_ApplicationFlow_ActiveCampaign_" data-uid="Kinstrife.Application.ApplicationFlow.ActiveCampaign*"></a>
+  <h4 id="Kinstrife_Application_ApplicationFlow_ActiveCampaign" data-uid="Kinstrife.Application.ApplicationFlow.ActiveCampaign">ActiveCampaign</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public CampaignDefinition ActiveCampaign { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">CampaignDefinition</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
   <a id="Kinstrife_Application_ApplicationFlow_CanChangeState_" data-uid="Kinstrife.Application.ApplicationFlow.CanChangeState*"></a>
   <h4 id="Kinstrife_Application_ApplicationFlow_CanChangeState" data-uid="Kinstrife.Application.ApplicationFlow.CanChangeState">CanChangeState</h4>
   <div class="markdown level1 summary"></div>
@@ -693,6 +718,48 @@ The only reason why this is currently a MonoBehaviour is because it requires Sta
   </table>
   
   
+  <a id="Kinstrife_Application_ApplicationFlow_TryEndCampaign_" data-uid="Kinstrife.Application.ApplicationFlow.TryEndCampaign*"></a>
+  <h4 id="Kinstrife_Application_ApplicationFlow_TryEndCampaign_Kinstrife_Application_GameMode_" data-uid="Kinstrife.Application.ApplicationFlow.TryEndCampaign(Kinstrife.Application.GameMode)">TryEndCampaign(GameMode)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool TryEndCampaign(GameMode gameModeToSwitchTo)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Kinstrife.Application.GameMode.html">GameMode</a></td>
+        <td><span class="parametername">gameModeToSwitchTo</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
   <a id="Kinstrife_Application_ApplicationFlow_TryReleasePrimaryModule_" data-uid="Kinstrife.Application.ApplicationFlow.TryReleasePrimaryModule*"></a>
   <h4 id="Kinstrife_Application_ApplicationFlow_TryReleasePrimaryModule_AssetReferenceT_Kinstrife_Application_ModuleDefinition__" data-uid="Kinstrife.Application.ApplicationFlow.TryReleasePrimaryModule(AssetReferenceT{Kinstrife.Application.ModuleDefinition})">TryReleasePrimaryModule(AssetReferenceT&lt;ModuleDefinition&gt;)</h4>
   <div class="markdown level1 summary"></div>
@@ -798,6 +865,58 @@ The only reason why this is currently a MonoBehaviour is because it requires Sta
       <tr>
         <td><span class="xref">System.Boolean</span></td>
         <td><span class="parametername">pause</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Kinstrife_Application_ApplicationFlow_TryStartCampaign_" data-uid="Kinstrife.Application.ApplicationFlow.TryStartCampaign*"></a>
+  <h4 id="Kinstrife_Application_ApplicationFlow_TryStartCampaign_CampaignDefinition_System_Boolean_System_Boolean_" data-uid="Kinstrife.Application.ApplicationFlow.TryStartCampaign(CampaignDefinition,System.Boolean,System.Boolean)">TryStartCampaign(CampaignDefinition, Boolean, Boolean)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool TryStartCampaign(CampaignDefinition newCampaign, bool unloadExisting, bool isNewGame)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">CampaignDefinition</span></td>
+        <td><span class="parametername">newCampaign</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">unloadExisting</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">isNewGame</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -1119,6 +1238,54 @@ The only reason why this is currently a MonoBehaviour is because it requires Sta
   </table>
   
   
+  <h4 id="Kinstrife_Application_ApplicationFlow_OnEndCampaign" data-uid="Kinstrife.Application.ApplicationFlow.OnEndCampaign">OnEndCampaign</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public event Action&lt;CampaignDefinition&gt; OnEndCampaign</code></pre>
+  </div>
+  <h5 class="eventType">Event Type</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Action</span>&lt;<span class="xref">CampaignDefinition</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="Kinstrife_Application_ApplicationFlow_OnFinishLoadGameMode" data-uid="Kinstrife.Application.ApplicationFlow.OnFinishLoadGameMode">OnFinishLoadGameMode</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public event Action&lt;GameMode&gt; OnFinishLoadGameMode</code></pre>
+  </div>
+  <h5 class="eventType">Event Type</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Action</span>&lt;<a class="xref" href="Kinstrife.Application.GameMode.html">GameMode</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
   <h4 id="Kinstrife_Application_ApplicationFlow_OnLocationReady" data-uid="Kinstrife.Application.ApplicationFlow.OnLocationReady">OnLocationReady</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
@@ -1137,6 +1304,54 @@ The only reason why this is currently a MonoBehaviour is because it requires Sta
     <tbody>
       <tr>
         <td><span class="xref">System.Action</span>&lt;<a class="xref" href="Kinstrife.Application.LocationHandle.html">LocationHandle</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="Kinstrife_Application_ApplicationFlow_OnStartCampaign" data-uid="Kinstrife.Application.ApplicationFlow.OnStartCampaign">OnStartCampaign</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public event Action&lt;CampaignDefinition&gt; OnStartCampaign</code></pre>
+  </div>
+  <h5 class="eventType">Event Type</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Action</span>&lt;<span class="xref">CampaignDefinition</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="Kinstrife_Application_ApplicationFlow_OnStartLoadGameMode" data-uid="Kinstrife.Application.ApplicationFlow.OnStartLoadGameMode">OnStartLoadGameMode</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public event Action&lt;GameMode&gt; OnStartLoadGameMode</code></pre>
+  </div>
+  <h5 class="eventType">Event Type</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Action</span>&lt;<a class="xref" href="Kinstrife.Application.GameMode.html">GameMode</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
