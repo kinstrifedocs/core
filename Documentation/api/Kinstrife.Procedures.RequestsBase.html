@@ -178,7 +178,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected PriorityStack&lt;IRequestInstance&gt; prioritySet</code></pre>
+    <pre><code class="lang-csharp hljs">protected PriorityStack&lt;IRequestArgs&gt; prioritySet</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -190,7 +190,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">PriorityStack</span>&lt;<a class="xref" href="Kinstrife.Procedures.IRequestInstance.html">IRequestInstance</a>&gt;</td>
+        <td><span class="xref">PriorityStack</span>&lt;<a class="xref" href="Kinstrife.Procedures.IRequestArgs.html">IRequestArgs</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -205,7 +205,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public IRequestInstance ActiveRequest { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public IRequestArgs ActiveRequest { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -217,7 +217,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="Kinstrife.Procedures.IRequestInstance.html">IRequestInstance</a></td>
+        <td><a class="xref" href="Kinstrife.Procedures.IRequestArgs.html">IRequestArgs</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -277,13 +277,13 @@
   
   
   <a id="Kinstrife_Procedures_RequestsBase_CanPush_" data-uid="Kinstrife.Procedures.RequestsBase.CanPush*"></a>
-  <h4 id="Kinstrife_Procedures_RequestsBase_CanPush_Kinstrife_Procedures_IRequestInstance__" data-uid="Kinstrife.Procedures.RequestsBase.CanPush(Kinstrife.Procedures.IRequestInstance@)">CanPush(in IRequestInstance)</h4>
+  <h4 id="Kinstrife_Procedures_RequestsBase_CanPush_Kinstrife_Procedures_RequestArgs__" data-uid="Kinstrife.Procedures.RequestsBase.CanPush(Kinstrife.Procedures.RequestArgs@)">CanPush(in RequestArgs)</h4>
   <div class="markdown level1 summary"><p>Checks if the current request argument can or should be enqueued in the PriorityStack.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected bool CanPush(in IRequestInstance args)</code></pre>
+    <pre><code class="lang-csharp hljs">protected bool CanPush(in RequestArgs args)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -296,7 +296,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="Kinstrife.Procedures.IRequestInstance.html">IRequestInstance</a></td>
+        <td><a class="xref" href="Kinstrife.Procedures.RequestArgs.html">RequestArgs</a></td>
         <td><span class="parametername">args</span></td>
         <td><p>The current <a class="xref" href="Kinstrife.Procedures.RequestArgs.html">RequestArgs</a></p>
 </td>
@@ -319,7 +319,7 @@
       </tr>
     </tbody>
   </table>
-  <h5 id="Kinstrife_Procedures_RequestsBase_CanPush_Kinstrife_Procedures_IRequestInstance___remarks">Remarks</h5>
+  <h5 id="Kinstrife_Procedures_RequestsBase_CanPush_Kinstrife_Procedures_RequestArgs___remarks">Remarks</h5>
   <div class="markdown level1 remarks"><p>If there are no other requests, this will always be the min. If the request lifetime is greater than 0, we can enqueue.</p>
 </div>
   
@@ -330,7 +330,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public bool GetOrOpenRequest(in RequestArgs request, double timestamp, out bool isHighestPrio)</code></pre>
+    <pre><code class="lang-csharp hljs">public bool GetOrOpenRequest(in RequestArgs args, double timestamp, out bool isHighestPrio)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -344,7 +344,7 @@
     <tbody>
       <tr>
         <td><a class="xref" href="Kinstrife.Procedures.RequestArgs.html">RequestArgs</a></td>
-        <td><span class="parametername">request</span></td>
+        <td><span class="parametername">args</span></td>
         <td></td>
       </tr>
       <tr>
@@ -418,13 +418,13 @@
   </table>
   
   
-  <a id="Kinstrife_Procedures_RequestsBase_ValidateRequest_" data-uid="Kinstrife.Procedures.RequestsBase.ValidateRequest*"></a>
-  <h4 id="Kinstrife_Procedures_RequestsBase_ValidateRequest_Kinstrife_Procedures_IRequestInstance__" data-uid="Kinstrife.Procedures.RequestsBase.ValidateRequest(Kinstrife.Procedures.IRequestInstance@)">ValidateRequest(in IRequestInstance)</h4>
+  <a id="Kinstrife_Procedures_RequestsBase_TryReleaseRequest_" data-uid="Kinstrife.Procedures.RequestsBase.TryReleaseRequest*"></a>
+  <h4 id="Kinstrife_Procedures_RequestsBase_TryReleaseRequest_Kinstrife_Procedures_RequestArgs__" data-uid="Kinstrife.Procedures.RequestsBase.TryReleaseRequest(Kinstrife.Procedures.RequestArgs@)">TryReleaseRequest(in RequestArgs)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected void ValidateRequest(in IRequestInstance args)</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual bool TryReleaseRequest(in RequestArgs args)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -437,7 +437,49 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="Kinstrife.Procedures.IRequestInstance.html">IRequestInstance</a></td>
+        <td><a class="xref" href="Kinstrife.Procedures.RequestArgs.html">RequestArgs</a></td>
+        <td><span class="parametername">args</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Kinstrife_Procedures_RequestsBase_ValidateRequest_" data-uid="Kinstrife.Procedures.RequestsBase.ValidateRequest*"></a>
+  <h4 id="Kinstrife_Procedures_RequestsBase_ValidateRequest_Kinstrife_Procedures_RequestArgs__" data-uid="Kinstrife.Procedures.RequestsBase.ValidateRequest(Kinstrife.Procedures.RequestArgs@)">ValidateRequest(in RequestArgs)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected void ValidateRequest(in RequestArgs args)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Kinstrife.Procedures.RequestArgs.html">RequestArgs</a></td>
         <td><span class="parametername">args</span></td>
         <td></td>
       </tr>

@@ -103,16 +103,19 @@
       <a class="xref" href="Kinstrife.Procedures.RequestsBase.html#Kinstrife_Procedures_RequestsBase_ActiveRequest">RequestsBase.ActiveRequest</a>
     </div>
     <div>
-      <a class="xref" href="Kinstrife.Procedures.RequestsBase.html#Kinstrife_Procedures_RequestsBase_CanPush_Kinstrife_Procedures_IRequestInstance__">RequestsBase.CanPush(IRequestInstance)</a>
+      <a class="xref" href="Kinstrife.Procedures.RequestsBase.html#Kinstrife_Procedures_RequestsBase_CanPush_Kinstrife_Procedures_RequestArgs__">RequestsBase.CanPush(RequestArgs)</a>
     </div>
     <div>
-      <a class="xref" href="Kinstrife.Procedures.RequestsBase.html#Kinstrife_Procedures_RequestsBase_ValidateRequest_Kinstrife_Procedures_IRequestInstance__">RequestsBase.ValidateRequest(IRequestInstance)</a>
+      <a class="xref" href="Kinstrife.Procedures.RequestsBase.html#Kinstrife_Procedures_RequestsBase_ValidateRequest_Kinstrife_Procedures_RequestArgs__">RequestsBase.ValidateRequest(RequestArgs)</a>
     </div>
     <div>
       <a class="xref" href="Kinstrife.Procedures.RequestsBase.html#Kinstrife_Procedures_RequestsBase_IsActiveClient_Kinstrife_Procedures_ClientId_">RequestsBase.IsActiveClient(ClientId)</a>
     </div>
     <div>
       <a class="xref" href="Kinstrife.Procedures.RequestsBase.html#Kinstrife_Procedures_RequestsBase_GetOrOpenRequest_Kinstrife_Procedures_RequestArgs__System_Double_System_Boolean__">RequestsBase.GetOrOpenRequest(RequestArgs, Double, Boolean)</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.Procedures.RequestsBase.html#Kinstrife_Procedures_RequestsBase_TryReleaseRequest_Kinstrife_Procedures_RequestArgs__">RequestsBase.TryReleaseRequest(RequestArgs)</a>
     </div>
     <div>
       <a class="xref" href="Kinstrife.Procedures.ProcedureComponent.html#Kinstrife_Procedures_ProcedureComponent_procedure">ProcedureComponent.procedure</a>
@@ -212,13 +215,13 @@
   </h3>
   
   
-  <a id="Kinstrife_Procedures_IORequest_1_TryRelease_" data-uid="Kinstrife.Procedures.IORequest`1.TryRelease*"></a>
-  <h4 id="Kinstrife_Procedures_IORequest_1_TryRelease_Kinstrife_Procedures_ClientId__" data-uid="Kinstrife.Procedures.IORequest`1.TryRelease(Kinstrife.Procedures.ClientId@)">TryRelease(in ClientId)</h4>
+  <a id="Kinstrife_Procedures_IORequest_1_OnRelease_" data-uid="Kinstrife.Procedures.IORequest`1.OnRelease*"></a>
+  <h4 id="Kinstrife_Procedures_IORequest_1_OnRelease_Kinstrife_Procedures_RequestWithArguments__0___" data-uid="Kinstrife.Procedures.IORequest`1.OnRelease(Kinstrife.Procedures.RequestWithArguments{`0}@)">OnRelease(in RequestWithArguments&lt;T&gt;)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public bool TryRelease(in ClientId client)</code></pre>
+    <pre><code class="lang-csharp hljs">protected virtual void OnRelease(in RequestWithArguments&lt;T&gt; requestInstance)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -231,8 +234,35 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="Kinstrife.Procedures.ClientId.html">ClientId</a></td>
-        <td><span class="parametername">client</span></td>
+        <td><a class="xref" href="Kinstrife.Procedures.RequestWithArguments-1.html">RequestWithArguments</a>&lt;T&gt;</td>
+        <td><span class="parametername">requestInstance</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Kinstrife_Procedures_IORequest_1_TryReleaseWithArguments_" data-uid="Kinstrife.Procedures.IORequest`1.TryReleaseWithArguments*"></a>
+  <h4 id="Kinstrife_Procedures_IORequest_1_TryReleaseWithArguments_Kinstrife_Procedures_RequestArgs__" data-uid="Kinstrife.Procedures.IORequest`1.TryReleaseWithArguments(Kinstrife.Procedures.RequestArgs@)">TryReleaseWithArguments(in RequestArgs)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool TryReleaseWithArguments(in RequestArgs args)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Kinstrife.Procedures.RequestArgs.html">RequestArgs</a></td>
+        <td><span class="parametername">args</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -254,13 +284,13 @@
   </table>
   
   
-  <a id="Kinstrife_Procedures_IORequest_1_TryRequest_" data-uid="Kinstrife.Procedures.IORequest`1.TryRequest*"></a>
-  <h4 id="Kinstrife_Procedures_IORequest_1_TryRequest_Kinstrife_Procedures_RequestWithArguments__0___" data-uid="Kinstrife.Procedures.IORequest`1.TryRequest(Kinstrife.Procedures.RequestWithArguments{`0}@)">TryRequest(in RequestWithArguments&lt;T&gt;)</h4>
+  <a id="Kinstrife_Procedures_IORequest_1_TryRequestWithArguments_" data-uid="Kinstrife.Procedures.IORequest`1.TryRequestWithArguments*"></a>
+  <h4 id="Kinstrife_Procedures_IORequest_1_TryRequestWithArguments_Kinstrife_Procedures_RequestWithArguments__0___" data-uid="Kinstrife.Procedures.IORequest`1.TryRequestWithArguments(Kinstrife.Procedures.RequestWithArguments{`0}@)">TryRequestWithArguments(in RequestWithArguments&lt;T&gt;)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public bool TryRequest(in RequestWithArguments&lt;T&gt; data)</code></pre>
+    <pre><code class="lang-csharp hljs">public bool TryRequestWithArguments(in RequestWithArguments&lt;T&gt; data)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">

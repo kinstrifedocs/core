@@ -312,30 +312,6 @@
   </table>
   
   
-  <h4 id="Kinstrife_Actor_ActorController_MoveSpeed" data-uid="Kinstrife.Actor.ActorController.MoveSpeed">MoveSpeed</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public float MoveSpeed</code></pre>
-  </div>
-  <h5 class="fieldValue">Field Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Single</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
   <h4 id="Kinstrife_Actor_ActorController_RotationSmoothTime" data-uid="Kinstrife.Actor.ActorController.RotationSmoothTime">RotationSmoothTime</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
@@ -390,30 +366,6 @@
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public float SpeedChangeRate</code></pre>
-  </div>
-  <h5 class="fieldValue">Field Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Single</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <h4 id="Kinstrife_Actor_ActorController_SprintSpeed" data-uid="Kinstrife.Actor.ActorController.SprintSpeed">SprintSpeed</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public float SprintSpeed</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -533,6 +485,31 @@
   </table>
   
   
+  <a id="Kinstrife_Actor_ActorController_GroundedProgress_" data-uid="Kinstrife.Actor.ActorController.GroundedProgress*"></a>
+  <h4 id="Kinstrife_Actor_ActorController_GroundedProgress" data-uid="Kinstrife.Actor.ActorController.GroundedProgress">GroundedProgress</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float GroundedProgress { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
   <a id="Kinstrife_Actor_ActorController_Input_" data-uid="Kinstrife.Actor.ActorController.Input*"></a>
   <h4 id="Kinstrife_Actor_ActorController_Input" data-uid="Kinstrife.Actor.ActorController.Input">Input</h4>
   <div class="markdown level1 summary"></div>
@@ -610,6 +587,33 @@
   </h3>
   
   
+  <a id="Kinstrife_Actor_ActorController_AddState_" data-uid="Kinstrife.Actor.ActorController.AddState*"></a>
+  <h4 id="Kinstrife_Actor_ActorController_AddState_Kinstrife_Actor_MotorFlags_" data-uid="Kinstrife.Actor.ActorController.AddState(Kinstrife.Actor.MotorFlags)">AddState(MotorFlags)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void AddState(MotorFlags flag)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Kinstrife.Actor.MotorFlags.html">MotorFlags</a></td>
+        <td><span class="parametername">flag</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
   <a id="Kinstrife_Actor_ActorController_CacheReferences_" data-uid="Kinstrife.Actor.ActorController.CacheReferences*"></a>
   <h4 id="Kinstrife_Actor_ActorController_CacheReferences" data-uid="Kinstrife.Actor.ActorController.CacheReferences">CacheReferences()</h4>
   <div class="markdown level1 summary"></div>
@@ -641,6 +645,53 @@
       <tr>
         <td><span class="xref">System.Boolean</span></td>
         <td><span class="parametername">value</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Kinstrife_Actor_ActorController_EvaluateState_" data-uid="Kinstrife.Actor.ActorController.EvaluateState*"></a>
+  <h4 id="Kinstrife_Actor_ActorController_EvaluateState_Kinstrife_Actor_MotorFlags_Kinstrife_Actor_EnumComparison_" data-uid="Kinstrife.Actor.ActorController.EvaluateState(Kinstrife.Actor.MotorFlags,Kinstrife.Actor.EnumComparison)">EvaluateState(MotorFlags, EnumComparison)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool EvaluateState(MotorFlags flags, EnumComparison comparison)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Kinstrife.Actor.MotorFlags.html">MotorFlags</a></td>
+        <td><span class="parametername">flags</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Kinstrife.Actor.EnumComparison.html">EnumComparison</a></td>
+        <td><span class="parametername">comparison</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -760,6 +811,48 @@ Useful for reorienting a direction on a slope without any lateral deviation in t
   </table>
   
   
+  <a id="Kinstrife_Actor_ActorController_HasState_" data-uid="Kinstrife.Actor.ActorController.HasState*"></a>
+  <h4 id="Kinstrife_Actor_ActorController_HasState_Kinstrife_Actor_MotorFlags_" data-uid="Kinstrife.Actor.ActorController.HasState(Kinstrife.Actor.MotorFlags)">HasState(MotorFlags)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool HasState(MotorFlags flags)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Kinstrife.Actor.MotorFlags.html">MotorFlags</a></td>
+        <td><span class="parametername">flags</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
   <a id="Kinstrife_Actor_ActorController_Jump_" data-uid="Kinstrife.Actor.ActorController.Jump*"></a>
   <h4 id="Kinstrife_Actor_ActorController_Jump_System_Boolean_" data-uid="Kinstrife.Actor.ActorController.Jump(System.Boolean)">Jump(Boolean)</h4>
   <div class="markdown level1 summary"></div>
@@ -813,6 +906,33 @@ Useful for reorienting a direction on a slope without any lateral deviation in t
       <tr>
         <td><span class="xref">System.Single</span></td>
         <td><span class="parametername">deltaTime</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Kinstrife_Actor_ActorController_RemoveState_" data-uid="Kinstrife.Actor.ActorController.RemoveState*"></a>
+  <h4 id="Kinstrife_Actor_ActorController_RemoveState_Kinstrife_Actor_MotorFlags_" data-uid="Kinstrife.Actor.ActorController.RemoveState(Kinstrife.Actor.MotorFlags)">RemoveState(MotorFlags)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void RemoveState(MotorFlags flag)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Kinstrife.Actor.MotorFlags.html">MotorFlags</a></td>
+        <td><span class="parametername">flag</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -899,6 +1019,48 @@ Useful for reorienting a direction on a slope without any lateral deviation in t
       <tr>
         <td><span class="xref">System.Boolean</span></td>
         <td><span class="parametername">enabled</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Kinstrife_Actor_ActorController_SetMove_" data-uid="Kinstrife.Actor.ActorController.SetMove*"></a>
+  <h4 id="Kinstrife_Actor_ActorController_SetMove_Vector3_Vector2_System_Single_System_Boolean_" data-uid="Kinstrife.Actor.ActorController.SetMove(Vector3,Vector2,System.Single,System.Boolean)">SetMove(Vector3, Vector2, Single, Boolean)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetMove(Vector3 moveWorldTarget, Vector2 moveLocal, float speedNormalized, bool force)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Vector3</span></td>
+        <td><span class="parametername">moveWorldTarget</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">Vector2</span></td>
+        <td><span class="parametername">moveLocal</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><span class="parametername">speedNormalized</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">force</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -1040,16 +1202,6 @@ Useful for reorienting a direction on a slope without any lateral deviation in t
   </table>
   
   
-  <a id="Kinstrife_Actor_ActorController_StrafeToggle_" data-uid="Kinstrife.Actor.ActorController.StrafeToggle*"></a>
-  <h4 id="Kinstrife_Actor_ActorController_StrafeToggle" data-uid="Kinstrife.Actor.ActorController.StrafeToggle">StrafeToggle()</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void StrafeToggle()</code></pre>
-  </div>
-  
-  
   <a id="Kinstrife_Actor_ActorController_Teleport_" data-uid="Kinstrife.Actor.ActorController.Teleport*"></a>
   <h4 id="Kinstrife_Actor_ActorController_Teleport_Vector3_Quaternion_" data-uid="Kinstrife.Actor.ActorController.Teleport(Vector3,Quaternion)">Teleport(Vector3, Quaternion)</h4>
   <div class="markdown level1 summary"></div>
@@ -1082,6 +1234,38 @@ Useful for reorienting a direction on a slope without any lateral deviation in t
   </table>
   
   
+  <a id="Kinstrife_Actor_ActorController_UpdateState_" data-uid="Kinstrife.Actor.ActorController.UpdateState*"></a>
+  <h4 id="Kinstrife_Actor_ActorController_UpdateState_Kinstrife_Actor_MotorFlags_System_Boolean_" data-uid="Kinstrife.Actor.ActorController.UpdateState(Kinstrife.Actor.MotorFlags,System.Boolean)">UpdateState(MotorFlags, Boolean)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void UpdateState(MotorFlags flag, bool value)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Kinstrife.Actor.MotorFlags.html">MotorFlags</a></td>
+        <td><span class="parametername">flag</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">value</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
   <a id="Kinstrife_Actor_ActorController_Walk_" data-uid="Kinstrife.Actor.ActorController.Walk*"></a>
   <h4 id="Kinstrife_Actor_ActorController_Walk_System_Boolean_" data-uid="Kinstrife.Actor.ActorController.Walk(System.Boolean)">Walk(Boolean)</h4>
   <div class="markdown level1 summary"></div>
@@ -1107,18 +1291,32 @@ Useful for reorienting a direction on a slope without any lateral deviation in t
       </tr>
     </tbody>
   </table>
+  <h3 id="events">Events
+  </h3>
   
   
-  <a id="Kinstrife_Actor_ActorController_WalkToggle_" data-uid="Kinstrife.Actor.ActorController.WalkToggle*"></a>
-  <h4 id="Kinstrife_Actor_ActorController_WalkToggle" data-uid="Kinstrife.Actor.ActorController.WalkToggle">WalkToggle()</h4>
+  <h4 id="Kinstrife_Actor_ActorController_onNewState" data-uid="Kinstrife.Actor.ActorController.onNewState">onNewState</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void WalkToggle()</code></pre>
+    <pre><code class="lang-csharp hljs">public event ActorController.MotorDelegate onNewState</code></pre>
   </div>
-  <h3 id="events">Events
-  </h3>
+  <h5 class="eventType">Event Type</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Kinstrife.Actor.ActorController.MotorDelegate.html">ActorController.MotorDelegate</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   
   
   <h4 id="Kinstrife_Actor_ActorController_onStartFalling" data-uid="Kinstrife.Actor.ActorController.onStartFalling">onStartFalling</h4>

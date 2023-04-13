@@ -82,6 +82,10 @@
     <div class="level2"><a class="xref" href="Kinstrife.Audio.AudioEventDefinition.html">AudioEventDefinition</a></div>
     <div class="level3"><span class="xref">MusicEventDefinition</span></div>
   </div>
+  <div class="implements">
+    <h5>Implements</h5>
+    <div><span class="xref">IComparable</span>&lt;<a class="xref" href="Kinstrife.Audio.MusicEventDefinition.html">MusicEventDefinition</a>&gt;</div>
+  </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Kinstrife.Audio.html">Kinstrife.Audio</a></h6>
   <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
   <h5 id="Kinstrife_Audio_MusicEventDefinition_syntax">Syntax</h5>
@@ -115,8 +119,100 @@
       </tr>
     </tbody>
   </table>
+  
+  
+  <a id="Kinstrife_Audio_MusicEventDefinition_Overlay_" data-uid="Kinstrife.Audio.MusicEventDefinition.Overlay*"></a>
+  <h4 id="Kinstrife_Audio_MusicEventDefinition_Overlay" data-uid="Kinstrife.Audio.MusicEventDefinition.Overlay">Overlay</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool Overlay { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Kinstrife_Audio_MusicEventDefinition_Priority_" data-uid="Kinstrife.Audio.MusicEventDefinition.Priority*"></a>
+  <h4 id="Kinstrife_Audio_MusicEventDefinition_Priority" data-uid="Kinstrife.Audio.MusicEventDefinition.Priority">Priority</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int Priority { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   <h3 id="methods">Methods
   </h3>
+  
+  
+  <a id="Kinstrife_Audio_MusicEventDefinition_CompareTo_" data-uid="Kinstrife.Audio.MusicEventDefinition.CompareTo*"></a>
+  <h4 id="Kinstrife_Audio_MusicEventDefinition_CompareTo_Kinstrife_Audio_MusicEventDefinition_" data-uid="Kinstrife.Audio.MusicEventDefinition.CompareTo(Kinstrife.Audio.MusicEventDefinition)">CompareTo(MusicEventDefinition)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int CompareTo(MusicEventDefinition other)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Kinstrife.Audio.MusicEventDefinition.html">MusicEventDefinition</a></td>
+        <td><span class="parametername">other</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   
   
   <a id="Kinstrife_Audio_MusicEventDefinition_Play_" data-uid="Kinstrife.Audio.MusicEventDefinition.Play*"></a>
@@ -162,12 +258,12 @@
   
   
   <a id="Kinstrife_Audio_MusicEventDefinition_SetIntensity_" data-uid="Kinstrife.Audio.MusicEventDefinition.SetIntensity*"></a>
-  <h4 id="Kinstrife_Audio_MusicEventDefinition_SetIntensity_System_UInt32_System_Int32_" data-uid="Kinstrife.Audio.MusicEventDefinition.SetIntensity(System.UInt32,System.Int32)">SetIntensity(UInt32, Int32)</h4>
+  <h4 id="Kinstrife_Audio_MusicEventDefinition_SetIntensity_System_Int32_" data-uid="Kinstrife.Audio.MusicEventDefinition.SetIntensity(System.Int32)">SetIntensity(Int32)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void SetIntensity(uint id, int intensity)</code></pre>
+    <pre><code class="lang-csharp hljs">public void SetIntensity(int intensity)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -179,11 +275,6 @@
       </tr>
     </thead>
     <tbody>
-      <tr>
-        <td><span class="xref">System.UInt32</span></td>
-        <td><span class="parametername">id</span></td>
-        <td></td>
-      </tr>
       <tr>
         <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">intensity</span></td>
@@ -194,12 +285,12 @@
   
   
   <a id="Kinstrife_Audio_MusicEventDefinition_SetState_" data-uid="Kinstrife.Audio.MusicEventDefinition.SetState*"></a>
-  <h4 id="Kinstrife_Audio_MusicEventDefinition_SetState_System_UInt32_System_Int32_" data-uid="Kinstrife.Audio.MusicEventDefinition.SetState(System.UInt32,System.Int32)">SetState(UInt32, Int32)</h4>
+  <h4 id="Kinstrife_Audio_MusicEventDefinition_SetState_System_Int32_" data-uid="Kinstrife.Audio.MusicEventDefinition.SetState(System.Int32)">SetState(Int32)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void SetState(uint id, int state)</code></pre>
+    <pre><code class="lang-csharp hljs">public void SetState(int state)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -211,11 +302,6 @@
       </tr>
     </thead>
     <tbody>
-      <tr>
-        <td><span class="xref">System.UInt32</span></td>
-        <td><span class="parametername">id</span></td>
-        <td></td>
-      </tr>
       <tr>
         <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">state</span></td>
@@ -223,33 +309,10 @@
       </tr>
     </tbody>
   </table>
-  
-  
-  <a id="Kinstrife_Audio_MusicEventDefinition_Stop_" data-uid="Kinstrife.Audio.MusicEventDefinition.Stop*"></a>
-  <h4 id="Kinstrife_Audio_MusicEventDefinition_Stop_System_UInt32_" data-uid="Kinstrife.Audio.MusicEventDefinition.Stop(System.UInt32)">Stop(UInt32)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void Stop(uint id)</code></pre>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <span class="xref">IComparable&lt;&gt;</span>
   </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.UInt32</span></td>
-        <td><span class="parametername">id</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
 </article>
           </div>
           

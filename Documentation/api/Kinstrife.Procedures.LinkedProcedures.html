@@ -92,6 +92,7 @@
     <div><a class="xref" href="Kinstrife.Procedures.IInstructionsAuthoring-2.html">IInstructionsAuthoring</a>&lt;<a class="xref" href="Kinstrife.Procedures.ILink.html">ILink</a>, <a class="xref" href="Kinstrife.Procedures.ILinkAuthoring.html">ILinkAuthoring</a>&gt;</div>
     <div><a class="xref" href="Kinstrife.Core.DependencyInjection.IProvideDependents.html">IProvideDependents</a></div>
     <div><a class="xref" href="Kinstrife.Procedures.IUpdateable.html">IUpdateable</a></div>
+    <div><a class="xref" href="Kinstrife.Procedures.IHasReferencedProcedures.html">IHasReferencedProcedures</a></div>
   </div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
@@ -148,6 +149,9 @@
     </div>
     <div>
       <a class="xref" href="Kinstrife.Procedures.ProcedureModule-2.html#Kinstrife_Procedures_ProcedureModule_2_ProvideDependents">ProcedureModule&lt;ILink, ILinkAuthoring&gt;.ProvideDependents()</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.Procedures.ProcedureModule-2.html#Kinstrife_Procedures_ProcedureModule_2_GetReferencedProcedures">ProcedureModule&lt;ILink, ILinkAuthoring&gt;.GetReferencedProcedures()</a>
     </div>
     <div>
       <a class="xref" href="Kinstrife.Procedures.ProcedureModule-2.html#Kinstrife_Procedures_ProcedureModule_2_OnPerformOperation_Kinstrife_Procedures_Operation_">ProcedureModule&lt;ILink, ILinkAuthoring&gt;.OnPerformOperation(Operation)</a>
@@ -241,7 +245,7 @@
   <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
   <h5 id="Kinstrife_Procedures_LinkedProcedures_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class LinkedProcedures : ProcedureModule&lt;ILink, ILinkAuthoring&gt;, IProcedureComponent, IInitializable, IDependent, IInstructions&lt;ILink&gt;, IInstructionsAuthoring&lt;ILink, ILinkAuthoring&gt;, IProvideDependents, IUpdateable</code></pre>
+    <pre><code class="lang-csharp hljs">public class LinkedProcedures : ProcedureModule&lt;ILink, ILinkAuthoring&gt;, IProcedureComponent, IInitializable, IDependent, IInstructions&lt;ILink&gt;, IInstructionsAuthoring&lt;ILink, ILinkAuthoring&gt;, IProvideDependents, IUpdateable, IHasReferencedProcedures</code></pre>
   </div>
   <h3 id="methods">Methods
   </h3>
@@ -324,6 +328,9 @@
   </div>
   <div>
       <a class="xref" href="Kinstrife.Procedures.IUpdateable.html">IUpdateable</a>
+  </div>
+  <div>
+      <a class="xref" href="Kinstrife.Procedures.IHasReferencedProcedures.html">IHasReferencedProcedures</a>
   </div>
 </article>
           </div>

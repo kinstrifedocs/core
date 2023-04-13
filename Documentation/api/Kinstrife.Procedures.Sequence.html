@@ -94,6 +94,7 @@
     <div><a class="xref" href="Kinstrife.Procedures.IInstructionsAuthoring-2.html">IInstructionsAuthoring</a>&lt;<a class="xref" href="Kinstrife.Procedures.ISubStateInstruction.html">ISubStateInstruction</a>, <a class="xref" href="Kinstrife.Procedures.ISubstateAuthoring.html">ISubstateAuthoring</a>&gt;</div>
     <div><a class="xref" href="Kinstrife.Core.DependencyInjection.IProvideDependents.html">IProvideDependents</a></div>
     <div><a class="xref" href="Kinstrife.Procedures.IUpdateable.html">IUpdateable</a></div>
+    <div><a class="xref" href="Kinstrife.Procedures.IHasReferencedProcedures.html">IHasReferencedProcedures</a></div>
     <div><a class="xref" href="Kinstrife.Procedures.IConstraint.html">IConstraint</a></div>
     <div><a class="xref" href="Kinstrife.Procedures.IInstruction.html">IInstruction</a></div>
     <div><a class="xref" href="Kinstrife.Procedures.IConditionEvaluator.html">IConditionEvaluator</a></div>
@@ -114,6 +115,9 @@
     </div>
     <div>
       <a class="xref" href="Kinstrife.Procedures.SubStates-3.html#Kinstrife_Procedures_SubStates_3_ActiveState">SubStates&lt;Int32, ISubStateInstruction, ISubstateAuthoring&gt;.ActiveState</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.Procedures.SubStates-3.html#Kinstrife_Procedures_SubStates_3_ActiveKey">SubStates&lt;Int32, ISubStateInstruction, ISubstateAuthoring&gt;.ActiveKey</a>
     </div>
     <div>
       <a class="xref" href="Kinstrife.Procedures.SubStates-3.html#Kinstrife_Procedures_SubStates_3_CurrentKey">SubStates&lt;Int32, ISubStateInstruction, ISubstateAuthoring&gt;.CurrentKey</a>
@@ -218,6 +222,9 @@
       <a class="xref" href="Kinstrife.Procedures.ProcedureModule-2.html#Kinstrife_Procedures_ProcedureModule_2_ProvideDependents">ProcedureModule&lt;ISubStateInstruction, ISubstateAuthoring&gt;.ProvideDependents()</a>
     </div>
     <div>
+      <a class="xref" href="Kinstrife.Procedures.ProcedureModule-2.html#Kinstrife_Procedures_ProcedureModule_2_GetReferencedProcedures">ProcedureModule&lt;ISubStateInstruction, ISubstateAuthoring&gt;.GetReferencedProcedures()</a>
+    </div>
+    <div>
       <a class="xref" href="Kinstrife.Procedures.ProcedureModule-2.html#Kinstrife_Procedures_ProcedureModule_2_OnPerformOperation_Kinstrife_Procedures_Operation_">ProcedureModule&lt;ISubStateInstruction, ISubstateAuthoring&gt;.OnPerformOperation(Operation)</a>
     </div>
     <div>
@@ -309,7 +316,7 @@
   <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
   <h5 id="Kinstrife_Procedures_Sequence_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class Sequence : SubStates&lt;int, ISubstateAuthoring&gt;, IProcedureComponent, IInitializable, IDependent, IInstructions&lt;ISubStateInstruction&gt;, IInstructionsAuthoring&lt;ISubStateInstruction, ISubstateAuthoring&gt;, IProvideDependents, IUpdateable, IConstraint, IInstruction, IConditionEvaluator</code></pre>
+    <pre><code class="lang-csharp hljs">public class Sequence : SubStates&lt;int, ISubstateAuthoring&gt;, IProcedureComponent, IInitializable, IDependent, IInstructions&lt;ISubStateInstruction&gt;, IInstructionsAuthoring&lt;ISubStateInstruction, ISubstateAuthoring&gt;, IProvideDependents, IUpdateable, IHasReferencedProcedures, IConstraint, IInstruction, IConditionEvaluator</code></pre>
   </div>
   <h3 id="implements">Implements</h3>
   <div>
@@ -332,6 +339,9 @@
   </div>
   <div>
       <a class="xref" href="Kinstrife.Procedures.IUpdateable.html">IUpdateable</a>
+  </div>
+  <div>
+      <a class="xref" href="Kinstrife.Procedures.IHasReferencedProcedures.html">IHasReferencedProcedures</a>
   </div>
   <div>
       <a class="xref" href="Kinstrife.Procedures.IConstraint.html">IConstraint</a>

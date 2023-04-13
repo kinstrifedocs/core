@@ -93,6 +93,7 @@
     <div><a class="xref" href="Kinstrife.Procedures.IInstructionsAuthoring-2.html">IInstructionsAuthoring</a>&lt;TState, TAuthoring&gt;</div>
     <div><a class="xref" href="Kinstrife.Core.DependencyInjection.IProvideDependents.html">IProvideDependents</a></div>
     <div><a class="xref" href="Kinstrife.Procedures.IUpdateable.html">IUpdateable</a></div>
+    <div><a class="xref" href="Kinstrife.Procedures.IHasReferencedProcedures.html">IHasReferencedProcedures</a></div>
     <div><a class="xref" href="Kinstrife.Procedures.IConstraint.html">IConstraint</a></div>
     <div><a class="xref" href="Kinstrife.Procedures.IInstruction.html">IInstruction</a></div>
     <div><a class="xref" href="Kinstrife.Procedures.IConditionEvaluator.html">IConditionEvaluator</a></div>
@@ -152,6 +153,9 @@
     </div>
     <div>
       <a class="xref" href="Kinstrife.Procedures.ProcedureModule-2.html#Kinstrife_Procedures_ProcedureModule_2_ProvideDependents">ProcedureModule&lt;TState, TAuthoring&gt;.ProvideDependents()</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.Procedures.ProcedureModule-2.html#Kinstrife_Procedures_ProcedureModule_2_GetReferencedProcedures">ProcedureModule&lt;TState, TAuthoring&gt;.GetReferencedProcedures()</a>
     </div>
     <div>
       <a class="xref" href="Kinstrife.Procedures.ProcedureModule-2.html#Kinstrife_Procedures_ProcedureModule_2_OnPerformOperation_Kinstrife_Procedures_Operation_">ProcedureModule&lt;TState, TAuthoring&gt;.OnPerformOperation(Operation)</a>
@@ -245,7 +249,7 @@
   <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
   <h5 id="Kinstrife_Procedures_SubStates_3_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public abstract class SubStates&lt;TKey, TState, TAuthoring&gt; : ProcedureModule&lt;TState, TAuthoring&gt;, IProcedureComponent, IInitializable, IDependent, IInstructions&lt;TState&gt;, IInstructionsAuthoring&lt;TState, TAuthoring&gt;, IProvideDependents, IUpdateable, IConstraint, IInstruction, IConditionEvaluator where TState : class, ISubStateInstruction where TAuthoring : class, ISubstateAuthoring, IInstructionAuthoring&lt;TState&gt;</code></pre>
+    <pre><code class="lang-csharp hljs">public abstract class SubStates&lt;TKey, TState, TAuthoring&gt; : ProcedureModule&lt;TState, TAuthoring&gt;, IProcedureComponent, IInitializable, IDependent, IInstructions&lt;TState&gt;, IInstructionsAuthoring&lt;TState, TAuthoring&gt;, IProvideDependents, IUpdateable, IHasReferencedProcedures, IConstraint, IInstruction, IConditionEvaluator where TState : class, ISubStateInstruction where TAuthoring : class, ISubstateAuthoring, IInstructionAuthoring&lt;TState&gt;</code></pre>
   </div>
   <h5 class="typeParameters">Type Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -322,6 +326,31 @@
   </table>
   <h3 id="properties">Properties
   </h3>
+  
+  
+  <a id="Kinstrife_Procedures_SubStates_3_ActiveKey_" data-uid="Kinstrife.Procedures.SubStates`3.ActiveKey*"></a>
+  <h4 id="Kinstrife_Procedures_SubStates_3_ActiveKey" data-uid="Kinstrife.Procedures.SubStates`3.ActiveKey">ActiveKey</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TKey ActiveKey { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">TKey</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   
   
   <a id="Kinstrife_Procedures_SubStates_3_ActiveState_" data-uid="Kinstrife.Procedures.SubStates`3.ActiveState*"></a>
@@ -905,6 +934,9 @@
   </div>
   <div>
       <a class="xref" href="Kinstrife.Procedures.IUpdateable.html">IUpdateable</a>
+  </div>
+  <div>
+      <a class="xref" href="Kinstrife.Procedures.IHasReferencedProcedures.html">IHasReferencedProcedures</a>
   </div>
   <div>
       <a class="xref" href="Kinstrife.Procedures.IConstraint.html">IConstraint</a>

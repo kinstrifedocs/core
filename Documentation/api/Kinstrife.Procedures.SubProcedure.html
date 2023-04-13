@@ -90,6 +90,7 @@
     <div><a class="xref" href="Kinstrife.Core.DependencyInjection.IInitializable.html">IInitializable</a></div>
     <div><a class="xref" href="Kinstrife.Core.DependencyInjection.IDependent.html">IDependent</a></div>
     <div><a class="xref" href="Kinstrife.Procedures.IProcedureEventsSource.html">IProcedureEventsSource</a></div>
+    <div><a class="xref" href="Kinstrife.Procedures.IHasReferencedProcedures.html">IHasReferencedProcedures</a></div>
     <div><a class="xref" href="Kinstrife.Procedures.ISubProcedureAuthoring.html">ISubProcedureAuthoring</a></div>
     <div><a class="xref" href="Kinstrife.Procedures.ISubstateAuthoring.html">ISubstateAuthoring</a></div>
     <div><a class="xref" href="Kinstrife.Procedures.IInstructionAuthoring-1.html">IInstructionAuthoring</a>&lt;<a class="xref" href="Kinstrife.Procedures.ISubStateInstruction.html">ISubStateInstruction</a>&gt;</div>
@@ -199,6 +200,9 @@
       <a class="xref" href="Kinstrife.Procedures.Procedure.html#Kinstrife_Procedures_Procedure_UnregisterListener_Kinstrife_Procedures_IProcedureEventsListener_">Procedure.UnregisterListener(IProcedureEventsListener)</a>
     </div>
     <div>
+      <a class="xref" href="Kinstrife.Procedures.Procedure.html#Kinstrife_Procedures_Procedure_GetReferencedProcedures">Procedure.GetReferencedProcedures()</a>
+    </div>
+    <div>
       <a class="xref" href="Kinstrife.Procedures.Procedure.html#Kinstrife_Procedures_Procedure_OnRuntimeDuplicate_Kinstrife_DataContainers_ScriptableObjectComponent_">Procedure.OnRuntimeDuplicate(ScriptableObjectComponent)</a>
     </div>
     <div>
@@ -281,7 +285,7 @@
   <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
   <h5 id="Kinstrife_Procedures_SubProcedure_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class SubProcedure : Procedure, IScriptableObjectDataContainer&lt;ProcedureComponent&gt;, IHasClient, IInitializable, IDependent, IProcedureEventsSource, ISubProcedureAuthoring, ISubstateAuthoring, IInstructionAuthoring&lt;ISubStateInstruction&gt;, ILinkAuthoring, IInstructionAuthoring&lt;ILink&gt;, IInstructionAuthoring</code></pre>
+    <pre><code class="lang-csharp hljs">public class SubProcedure : Procedure, IScriptableObjectDataContainer&lt;ProcedureComponent&gt;, IHasClient, IInitializable, IDependent, IProcedureEventsSource, IHasReferencedProcedures, ISubProcedureAuthoring, ISubstateAuthoring, IInstructionAuthoring&lt;ISubStateInstruction&gt;, ILinkAuthoring, IInstructionAuthoring&lt;ILink&gt;, IInstructionAuthoring</code></pre>
   </div>
   <h3 id="properties">Properties
   </h3>
@@ -454,6 +458,9 @@
   </div>
   <div>
       <a class="xref" href="Kinstrife.Procedures.IProcedureEventsSource.html">IProcedureEventsSource</a>
+  </div>
+  <div>
+      <a class="xref" href="Kinstrife.Procedures.IHasReferencedProcedures.html">IHasReferencedProcedures</a>
   </div>
   <div>
       <a class="xref" href="Kinstrife.Procedures.ISubProcedureAuthoring.html">ISubProcedureAuthoring</a>

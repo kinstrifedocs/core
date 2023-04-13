@@ -82,7 +82,7 @@
   </div>
   <div class="implements">
     <h5>Implements</h5>
-    <div><span class="xref">IModel</span></div>
+    <div><span class="xref">IFormViewModel</span></div>
     <div><span class="xref">ICustomDrawContext</span></div>
     <div><a class="xref" href="Kinstrife.Core.DependencyInjection.IInjectable.html">IInjectable</a></div>
     <div><a class="xref" href="Kinstrife.Core.DependencyInjection.IDependent.html">IDependent</a></div>
@@ -93,7 +93,7 @@
   <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
   <h5 id="Kinstrife_Settings_SettingsViewModel_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class SettingsViewModel : MonoBehaviour, IInjectable, IDependent</code></pre>
+    <pre><code class="lang-csharp hljs">public class SettingsViewModel : ViewModelComponent, IInjectable, IDependent</code></pre>
   </div>
   <h3 id="fields">Fields
   </h3>
@@ -150,13 +150,13 @@ public SettingsData viewModelCopy</code></pre>
   </h3>
   
   
-  <a id="Kinstrife_Settings_SettingsViewModel_isModelDirty_" data-uid="Kinstrife.Settings.SettingsViewModel.isModelDirty*"></a>
-  <h4 id="Kinstrife_Settings_SettingsViewModel_isModelDirty" data-uid="Kinstrife.Settings.SettingsViewModel.isModelDirty">isModelDirty</h4>
+  <a id="Kinstrife_Settings_SettingsViewModel_BlockRoutingOnDirty_" data-uid="Kinstrife.Settings.SettingsViewModel.BlockRoutingOnDirty*"></a>
+  <h4 id="Kinstrife_Settings_SettingsViewModel_BlockRoutingOnDirty" data-uid="Kinstrife.Settings.SettingsViewModel.BlockRoutingOnDirty">BlockRoutingOnDirty</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public bool isModelDirty { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public bool BlockRoutingOnDirty { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -175,88 +175,13 @@ public SettingsData viewModelCopy</code></pre>
   </table>
   
   
-  <a id="Kinstrife_Settings_SettingsViewModel_onCancel_" data-uid="Kinstrife.Settings.SettingsViewModel.onCancel*"></a>
-  <h4 id="Kinstrife_Settings_SettingsViewModel_onCancel" data-uid="Kinstrife.Settings.SettingsViewModel.onCancel">onCancel</h4>
+  <a id="Kinstrife_Settings_SettingsViewModel_HideButtons_" data-uid="Kinstrife.Settings.SettingsViewModel.HideButtons*"></a>
+  <h4 id="Kinstrife_Settings_SettingsViewModel_HideButtons" data-uid="Kinstrife.Settings.SettingsViewModel.HideButtons">HideButtons</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Action onCancel { get; set; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Action</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="Kinstrife_Settings_SettingsViewModel_onModelChange_" data-uid="Kinstrife.Settings.SettingsViewModel.onModelChange*"></a>
-  <h4 id="Kinstrife_Settings_SettingsViewModel_onModelChange" data-uid="Kinstrife.Settings.SettingsViewModel.onModelChange">onModelChange</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Action onModelChange { get; set; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Kinstrife.Action.html">Kinstrife.Action</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="Kinstrife_Settings_SettingsViewModel_onSubmit_" data-uid="Kinstrife.Settings.SettingsViewModel.onSubmit*"></a>
-  <h4 id="Kinstrife_Settings_SettingsViewModel_onSubmit" data-uid="Kinstrife.Settings.SettingsViewModel.onSubmit">onSubmit</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Action onSubmit { get; set; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Action</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="Kinstrife_Settings_SettingsViewModel_Render_" data-uid="Kinstrife.Settings.SettingsViewModel.Render*"></a>
-  <h4 id="Kinstrife_Settings_SettingsViewModel_Render" data-uid="Kinstrife.Settings.SettingsViewModel.Render">Render</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public bool Render { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public bool HideButtons { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -269,6 +194,81 @@ public SettingsData viewModelCopy</code></pre>
     <tbody>
       <tr>
         <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Kinstrife_Settings_SettingsViewModel_IsModelDirty_" data-uid="Kinstrife.Settings.SettingsViewModel.IsModelDirty*"></a>
+  <h4 id="Kinstrife_Settings_SettingsViewModel_IsModelDirty" data-uid="Kinstrife.Settings.SettingsViewModel.IsModelDirty">IsModelDirty</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsModelDirty { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Kinstrife_Settings_SettingsViewModel_OnCancel_" data-uid="Kinstrife.Settings.SettingsViewModel.OnCancel*"></a>
+  <h4 id="Kinstrife_Settings_SettingsViewModel_OnCancel" data-uid="Kinstrife.Settings.SettingsViewModel.OnCancel">OnCancel</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Action OnCancel { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Action</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Kinstrife_Settings_SettingsViewModel_OnSubmit_" data-uid="Kinstrife.Settings.SettingsViewModel.OnSubmit*"></a>
+  <h4 id="Kinstrife_Settings_SettingsViewModel_OnSubmit" data-uid="Kinstrife.Settings.SettingsViewModel.OnSubmit">OnSubmit</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Action OnSubmit { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Action</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -281,7 +281,7 @@ public SettingsData viewModelCopy</code></pre>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public string Title { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public override string Title { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -328,7 +328,7 @@ public SettingsData viewModelCopy</code></pre>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void Initialize(VisualElement container, Plate plate)</code></pre>
+    <pre><code class="lang-csharp hljs">public override void Initialize(VisualElement container, Plate plate)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -355,7 +355,7 @@ public SettingsData viewModelCopy</code></pre>
   
   
   <a id="Kinstrife_Settings_SettingsViewModel_Inject_" data-uid="Kinstrife.Settings.SettingsViewModel.Inject*"></a>
-  <h4 id="Kinstrife_Settings_SettingsViewModel_Inject_Kinstrife_Settings_SettingsManager_UIInteraction_" data-uid="Kinstrife.Settings.SettingsViewModel.Inject(Kinstrife.Settings.SettingsManager,UIInteraction)">Inject(SettingsManager, UIInteraction)</h4>
+  <h4 id="Kinstrife_Settings_SettingsViewModel_Inject_Kinstrife_Settings_SettingsManager_Kinstrife_UI_UIInteraction_" data-uid="Kinstrife.Settings.SettingsViewModel.Inject(Kinstrife.Settings.SettingsManager,Kinstrife.UI.UIInteraction)">Inject(SettingsManager, UIInteraction)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -378,7 +378,7 @@ public SettingsData viewModelCopy</code></pre>
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">UIInteraction</span></td>
+        <td><a class="xref" href="Kinstrife.UI.UIInteraction.html">UIInteraction</a></td>
         <td><span class="parametername">interaction</span></td>
         <td></td>
       </tr>
@@ -394,9 +394,91 @@ public SettingsData viewModelCopy</code></pre>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public void Submit()</code></pre>
   </div>
+  
+  
+  <a id="Kinstrife_Settings_SettingsViewModel_UpdateFormButtonsState_" data-uid="Kinstrife.Settings.SettingsViewModel.UpdateFormButtonsState*"></a>
+  <h4 id="Kinstrife_Settings_SettingsViewModel_UpdateFormButtonsState_System_Boolean_System_Boolean_" data-uid="Kinstrife.Settings.SettingsViewModel.UpdateFormButtonsState(System.Boolean,System.Boolean)">UpdateFormButtonsState(Boolean, Boolean)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void UpdateFormButtonsState(bool enabled, bool active)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">enabled</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">active</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="events">Events
+  </h3>
+  
+  
+  <h4 id="Kinstrife_Settings_SettingsViewModel_onCancel" data-uid="Kinstrife.Settings.SettingsViewModel.onCancel">onCancel</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public event Action onCancel</code></pre>
+  </div>
+  <h5 class="eventType">Event Type</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Action</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="Kinstrife_Settings_SettingsViewModel_onSubmit" data-uid="Kinstrife.Settings.SettingsViewModel.onSubmit">onSubmit</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public event Action onSubmit</code></pre>
+  </div>
+  <h5 class="eventType">Event Type</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Action</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   <h3 id="implements">Implements</h3>
   <div>
-      <span class="xref">IModel</span>
+      <span class="xref">IFormViewModel</span>
   </div>
   <div>
       <span class="xref">ICustomDrawContext</span>

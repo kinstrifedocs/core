@@ -267,6 +267,30 @@
   </table>
   
   
+  <h4 id="Kinstrife_Core_Camera_CameraRig_inputManager" data-uid="Kinstrife.Core.Camera.CameraRig.inputManager">inputManager</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public CameraInputManager inputManager</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Kinstrife.Core.Camera.Systems.CameraInputManager.html">CameraInputManager</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
   <h4 id="Kinstrife_Core_Camera_CameraRig_Lens" data-uid="Kinstrife.Core.Camera.CameraRig.Lens">Lens</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
@@ -583,12 +607,12 @@
   
   
   <a id="Kinstrife_Core_Camera_CameraRig_Inject_" data-uid="Kinstrife.Core.Camera.CameraRig.Inject*"></a>
-  <h4 id="Kinstrife_Core_Camera_CameraRig_Inject_Kinstrife_Messaging_IServiceServer_System_Boolean_Kinstrife_Messaging_Request_Kinstrife_Camera_CameraState___Kinstrife_Core_Camera_CameraConfig_Kinstrife_Messaging_IPublisher_Kinstrife_Camera_CameraState__" data-uid="Kinstrife.Core.Camera.CameraRig.Inject(Kinstrife.Messaging.IServiceServer{System.Boolean,Kinstrife.Messaging.Request{Kinstrife.Camera.CameraState}},Kinstrife.Core.Camera.CameraConfig,Kinstrife.Messaging.IPublisher{Kinstrife.Camera.CameraState})">Inject(IServiceServer&lt;Boolean, Request&lt;CameraState&gt;&gt;, CameraConfig, IPublisher&lt;CameraState&gt;)</h4>
+  <h4 id="Kinstrife_Core_Camera_CameraRig_Inject_Kinstrife_Application_TimeController_Kinstrife_Messaging_IServiceServer_System_Boolean_Kinstrife_Messaging_Request_Kinstrife_Camera_CameraState___Kinstrife_Core_Camera_CameraConfig_Kinstrife_Messaging_IPublisher_Kinstrife_Camera_CameraState__" data-uid="Kinstrife.Core.Camera.CameraRig.Inject(Kinstrife.Application.TimeController,Kinstrife.Messaging.IServiceServer{System.Boolean,Kinstrife.Messaging.Request{Kinstrife.Camera.CameraState}},Kinstrife.Core.Camera.CameraConfig,Kinstrife.Messaging.IPublisher{Kinstrife.Camera.CameraState})">Inject(TimeController, IServiceServer&lt;Boolean, Request&lt;CameraState&gt;&gt;, CameraConfig, IPublisher&lt;CameraState&gt;)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void Inject(IServiceServer&lt;bool, Request&lt;CameraState&gt;&gt; server, CameraConfig config, IPublisher&lt;CameraState&gt; publisher)</code></pre>
+    <pre><code class="lang-csharp hljs">public void Inject(TimeController time, IServiceServer&lt;bool, Request&lt;CameraState&gt;&gt; server, CameraConfig config, IPublisher&lt;CameraState&gt; publisher)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -600,6 +624,11 @@
       </tr>
     </thead>
     <tbody>
+      <tr>
+        <td><a class="xref" href="Kinstrife.Application.TimeController.html">TimeController</a></td>
+        <td><span class="parametername">time</span></td>
+        <td></td>
+      </tr>
       <tr>
         <td><a class="xref" href="Kinstrife.Messaging.IServiceServer-2.html">IServiceServer</a>&lt;<span class="xref">System.Boolean</span>, <a class="xref" href="Kinstrife.Messaging.Request-1.html">Request</a>&lt;<a class="xref" href="Kinstrife.Camera.CameraState.html">CameraState</a>&gt;&gt;</td>
         <td><span class="parametername">server</span></td>

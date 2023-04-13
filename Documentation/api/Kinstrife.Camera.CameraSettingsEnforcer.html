@@ -81,12 +81,13 @@
     <div class="level1"><a class="xref" href="Kinstrife.Settings.SettingsBehaviour.html">SettingsBehaviour</a></div>
     <div class="level2"><a class="xref" href="Kinstrife.Settings.SettingsBehaviour-1.html">SettingsBehaviour</a>&lt;<a class="xref" href="Kinstrife.Settings.CameraSettingsData.html">CameraSettingsData</a>&gt;</div>
     <div class="level3"><span class="xref">CameraSettingsEnforcer</span></div>
-      <div class="level4"><a class="xref" href="Kinstrife.Camera.CameraSettingsEnforcer-2.html">CameraSettingsEnforcer&lt;TSettingsType, TCinemachineComponentType&gt;</a></div>
   </div>
   <div class="implements">
     <h5>Implements</h5>
     <div><span class="xref">IInjectable</span></div>
     <div><span class="xref">IInitializable</span></div>
+    <div><a class="xref" href="Kinstrife.Core.DependencyInjection.IInjectable.html">IInjectable</a></div>
+    <div><a class="xref" href="Kinstrife.Core.DependencyInjection.IDependent.html">IDependent</a></div>
   </div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
@@ -100,67 +101,84 @@
       <a class="xref" href="Kinstrife.Settings.SettingsBehaviour-1.html#Kinstrife_Settings_SettingsBehaviour_1_Initialized">SettingsBehaviour&lt;CameraSettingsData&gt;.Initialized</a>
     </div>
     <div>
+      <a class="xref" href="Kinstrife.Settings.SettingsBehaviour-1.html#Kinstrife_Settings_SettingsBehaviour_1_Initialize">SettingsBehaviour&lt;CameraSettingsData&gt;.Initialize()</a>
+    </div>
+    <div>
       <a class="xref" href="Kinstrife.Settings.SettingsBehaviour-1.html#Kinstrife_Settings_SettingsBehaviour_1_InitializeDefaults">SettingsBehaviour&lt;CameraSettingsData&gt;.InitializeDefaults()</a>
     </div>
     <div>
       <a class="xref" href="Kinstrife.Settings.SettingsBehaviour-1.html#Kinstrife_Settings_SettingsBehaviour_1_OnDestroy">SettingsBehaviour&lt;CameraSettingsData&gt;.OnDestroy()</a>
-    </div>
-    <div>
-      <a class="xref" href="Kinstrife.Settings.SettingsBehaviour-1.html#Kinstrife_Settings_SettingsBehaviour_1_ApplySettings">SettingsBehaviour&lt;CameraSettingsData&gt;.ApplySettings()</a>
     </div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Kinstrife.Camera.html">Kinstrife.Camera</a></h6>
   <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
   <h5 id="Kinstrife_Camera_CameraSettingsEnforcer_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public abstract class CameraSettingsEnforcer : SettingsBehaviour&lt;CameraSettingsData&gt;</code></pre>
+    <pre><code class="lang-csharp hljs">public class CameraSettingsEnforcer : SettingsBehaviour&lt;CameraSettingsData&gt;, IInjectable, IDependent</code></pre>
   </div>
-  <h3 id="fields">Fields
+  <h3 id="methods">Methods
   </h3>
   
   
-  <h4 id="Kinstrife_Camera_CameraSettingsEnforcer_virtualCamera" data-uid="Kinstrife.Camera.CameraSettingsEnforcer.virtualCamera">virtualCamera</h4>
+  <a id="Kinstrife_Camera_CameraSettingsEnforcer_ApplySettings_" data-uid="Kinstrife.Camera.CameraSettingsEnforcer.ApplySettings*"></a>
+  <h4 id="Kinstrife_Camera_CameraSettingsEnforcer_ApplySettings" data-uid="Kinstrife.Camera.CameraSettingsEnforcer.ApplySettings">ApplySettings()</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected VirtualCameraHandle virtualCamera</code></pre>
+    <pre><code class="lang-csharp hljs">protected override void ApplySettings()</code></pre>
   </div>
-  <h5 class="fieldValue">Field Value</h5>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">Kinstrife.Settings.SettingsBehaviour&lt;Kinstrife.Settings.CameraSettingsData&gt;.ApplySettings()</span></div>
+  
+  
+  <a id="Kinstrife_Camera_CameraSettingsEnforcer_Inject_" data-uid="Kinstrife.Camera.CameraSettingsEnforcer.Inject*"></a>
+  <h4 id="Kinstrife_Camera_CameraSettingsEnforcer_Inject_Kinstrife_Settings_CameraSettingsData_Kinstrife_Core_Camera_CameraRig_Kinstrife_Settings_SettingsManager_" data-uid="Kinstrife.Camera.CameraSettingsEnforcer.Inject(Kinstrife.Settings.CameraSettingsData,Kinstrife.Core.Camera.CameraRig,Kinstrife.Settings.SettingsManager)">Inject(CameraSettingsData, CameraRig, SettingsManager)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Inject(CameraSettingsData data, CameraRig cameraRig, SettingsManager manager)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
       <tr>
         <th>Type</th>
+        <th>Name</th>
         <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="Kinstrife.Camera.VirtualCameraHandle.html">VirtualCameraHandle</a></td>
+        <td><a class="xref" href="Kinstrife.Settings.CameraSettingsData.html">CameraSettingsData</a></td>
+        <td><span class="parametername">data</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Kinstrife.Core.Camera.CameraRig.html">CameraRig</a></td>
+        <td><span class="parametername">cameraRig</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Kinstrife.Settings.SettingsManager.html">SettingsManager</a></td>
+        <td><span class="parametername">manager</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
-  <h3 id="methods">Methods
-  </h3>
-  
-  
-  <a id="Kinstrife_Camera_CameraSettingsEnforcer_Initialize_" data-uid="Kinstrife.Camera.CameraSettingsEnforcer.Initialize*"></a>
-  <h4 id="Kinstrife_Camera_CameraSettingsEnforcer_Initialize" data-uid="Kinstrife.Camera.CameraSettingsEnforcer.Initialize">Initialize()</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public override void Initialize()</code></pre>
-  </div>
-  <h5 class="overrides">Overrides</h5>
-  <div><span class="xref">Kinstrife.Settings.SettingsBehaviour&lt;Kinstrife.Settings.CameraSettingsData&gt;.Initialize()</span></div>
   <h3 id="implements">Implements</h3>
   <div>
       <span class="xref">IInjectable</span>
   </div>
   <div>
       <span class="xref">IInitializable</span>
+  </div>
+  <div>
+      <a class="xref" href="Kinstrife.Core.DependencyInjection.IInjectable.html">IInjectable</a>
+  </div>
+  <div>
+      <a class="xref" href="Kinstrife.Core.DependencyInjection.IDependent.html">IDependent</a>
   </div>
 </article>
           </div>

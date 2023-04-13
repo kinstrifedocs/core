@@ -96,6 +96,7 @@
     <div><a class="xref" href="Kinstrife.Procedures.IInstructionsAuthoring-2.html">IInstructionsAuthoring</a>&lt;TInstruction, TAuthoring&gt;</div>
     <div><a class="xref" href="Kinstrife.Core.DependencyInjection.IProvideDependents.html">IProvideDependents</a></div>
     <div><a class="xref" href="Kinstrife.Procedures.IUpdateable.html">IUpdateable</a></div>
+    <div><a class="xref" href="Kinstrife.Procedures.IHasReferencedProcedures.html">IHasReferencedProcedures</a></div>
   </div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
@@ -168,7 +169,7 @@
   <h5 id="Kinstrife_Procedures_ProcedureModule_2_syntax">Syntax</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">[Obsolete(&quot;Decide on Module, Handler, Runner, Component, BuildingBlock naming for optional additive components :). Elements that enable certain abilities and/or correspond to a Step within the Procedure may be Modules, and other parts may be Component&quot;)]
-public abstract class ProcedureModule&lt;TInstruction, TAuthoring&gt; : ProcedureComponent, IProcedureComponent, IInitializable, IDependent, IInstructions&lt;TInstruction&gt;, IInstructionsAuthoring&lt;TInstruction, TAuthoring&gt;, IProvideDependents, IUpdateable where TInstruction : IInstruction where TAuthoring : IInstructionAuthoring&lt;TInstruction&gt;</code></pre>
+public abstract class ProcedureModule&lt;TInstruction, TAuthoring&gt; : ProcedureComponent, IProcedureComponent, IInitializable, IDependent, IInstructions&lt;TInstruction&gt;, IInstructionsAuthoring&lt;TInstruction, TAuthoring&gt;, IProvideDependents, IUpdateable, IHasReferencedProcedures where TInstruction : IInstruction where TAuthoring : IInstructionAuthoring&lt;TInstruction&gt;</code></pre>
   </div>
   <h5 class="typeParameters">Type Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -456,6 +457,31 @@ public abstract class ProcedureModule&lt;TInstruction, TAuthoring&gt; : Procedur
   </div>
   
   
+  <a id="Kinstrife_Procedures_ProcedureModule_2_GetReferencedProcedures_" data-uid="Kinstrife.Procedures.ProcedureModule`2.GetReferencedProcedures*"></a>
+  <h4 id="Kinstrife_Procedures_ProcedureModule_2_GetReferencedProcedures" data-uid="Kinstrife.Procedures.ProcedureModule`2.GetReferencedProcedures">GetReferencedProcedures()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IEnumerable&lt;Procedure&gt; GetReferencedProcedures()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="Kinstrife.Procedures.Procedure.html">Procedure</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
   <a id="Kinstrife_Procedures_ProcedureModule_2_Initialize_" data-uid="Kinstrife.Procedures.ProcedureModule`2.Initialize*"></a>
   <h4 id="Kinstrife_Procedures_ProcedureModule_2_Initialize" data-uid="Kinstrife.Procedures.ProcedureModule`2.Initialize">Initialize()</h4>
   <div class="markdown level1 summary"></div>
@@ -701,6 +727,9 @@ public abstract class ProcedureModule&lt;TInstruction, TAuthoring&gt; : Procedur
   </div>
   <div>
       <a class="xref" href="Kinstrife.Procedures.IUpdateable.html">IUpdateable</a>
+  </div>
+  <div>
+      <a class="xref" href="Kinstrife.Procedures.IHasReferencedProcedures.html">IHasReferencedProcedures</a>
   </div>
 </article>
           </div>
