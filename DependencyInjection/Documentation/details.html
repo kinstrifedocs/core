@@ -1,0 +1,232 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>uid: dependencyinjectiondetails | Kinstrife </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="uid: dependencyinjectiondetails | Kinstrife ">
+    <meta name="generator" content="docfx 2.59.4.0">
+    
+    <link rel="shortcut icon" href="../../favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet"> 
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="../../articles/packages/toc.html">
+    
+    
+    
+  </head>  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../index.html">
+                <img id="logo" class="svg" src="../../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+
+<hr>
+<h2 id="uid-dependencyinjectiondetails">uid: dependencyinjectiondetails</h2>
+<h1 id="dependency-injection-di-details">Dependency Injection (DI) details</h1>
+<ul>
+<li><a href="#dependency-injection-di-details">Dependency Injection (DI) details</a></li>
+<li><a href="#core-concepts">Core Concepts</a>
+<ul>
+<li><a href="#scene-installation-process">Scene Installation Process</a>
+<ul>
+<li><a href="#injectablesource">InjectableSource</a>
+<ul>
+<li><a href="#di-scopes">DI Scopes</a></li>
+<li><a href="#parentchild-scopes">Parent/Child Scopes</a></li>
+<li><a href="#sibling-transform-roots">Sibling Transform Roots</a></li>
+<li><a href="#standalone-diinitializer">Standalone (DIInitializer)</a></li>
+<li><a href="#specificcustom">Specific/Custom</a></li>
+</ul>
+</li>
+<li><a href="#context">Context</a></li>
+<li><a href="#installer">Installer</a></li>
+<li><a href="#interfaces">Interfaces</a>
+<ul>
+<li><a href="#idependent">IDependent</a></li>
+<li><a href="#iinjectable">IInjectable</a></li>
+<li><a href="#iinitializable">IInitializable</a></li>
+<li><a href="#ilateinitializable">ILateInitializable</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#internala">Internala</a>
+<ul>
+<li><a href="#container">Container</a></li>
+<li><a href="#injector">Injector</a></li>
+</ul>
+</li>
+<li><a href="#uml-diagram">UML Diagram</a></li>
+</ul>
+</li>
+</ul>
+<h1 id="core-concepts">Core Concepts</h1>
+<h2 id="scene-installation-process">Scene Installation Process</h2>
+<p>The scene installation process consists of the following steps:</p>
+<ol>
+<li>Scene entry starts the process (Bootstrapper) of runing installation through InjectableSource</li>
+<li>Context runs Installers</li>
+<li>Locating scene <code>IDependents</code> (components that inherit from <code>IDependent</code>) into a cache</li>
+<li>The <code>InjectableSource</code> then iterates over dependents to:
+<ol>
+<li>Inject (see <code>IInjectable</code>)</li>
+<li>Initialize (see <code>IInitializable</code>)</li>
+<li>LateInitialize (see <code>ILateInitializable</code>)</li>
+<li>Convert (see <code>IConvertible</code>)</li>
+</ol>
+</li>
+</ol>
+<h3 id="injectablesource">InjectableSource</h3>
+<p>The <a href="Scripts/InjectableSource.cs"><code>InjectableSource</code></a> is the main point of reference for the scene installation process. It references a <a href="Scripts/Context.cs"><code>Context</code></a>  and allow the specification of the DI hierarchy through referencing another <code>Context</code> as its <code>parent</code>.</p>
+<div class="NOTE">
+<h5>Note</h5>
+<p>By default, the <code>InjectableSource</code> doesn't initialize by itself. It needs a custom scene entry, such as a <code>Bootstrapper</code>. For standalone usage, see the <code>Standalone</code> section.</p>
+</div>
+<h4 id="di-scopes">DI Scopes</h4>
+<p>An <code>InjectableSource</code> designates a new scope in a transform hierarchy. Every child nested transform is considered part of its scope. However, when a nested transform branch contains a nested <code>InjectableSource</code>, the scope terminates.</p>
+<blockquote>
+<p>During the scene installation process, the scopes are determined based on the location of the <code>InjectableSource</code> in the transform hierarchy <em>relative to others</em></p>
+</blockquote>
+<h4 id="parentchild-scopes">Parent/Child Scopes</h4>
+<p>You can nest <code>InjectableSources</code> during authoring time to automatically set up parent/child relations for contexts.</p>
+<blockquote>
+<p>Parent-child relations for <code>InjectableSources</code> can also be set up <strong>manually</strong> by hotwiring it via the inspector.</p>
+</blockquote>
+<h4 id="sibling-transform-roots">Sibling Transform Roots</h4>
+<p>To specify the inclusion of another <strong>transform root</strong> into a scope, add  <a href="Scripts/ContextLocator.cs"><code>ContextLocators</code></a> to the <code>InjectableSource</code></p>
+<p>Typically, a scene-scope Context will scan <em>all</em> scene root transforms for <code>ContextLocators</code> for inclusion in its scope.</p>
+<p>An <code>InjectableSource</code>'s capacity to gather <code>ContextLocators</code> is limited to a <code>Scene</code> by design.</p>
+<h4 id="standalone-diinitializer">Standalone (DIInitializer)</h4>
+<p>The <a href="Scripts/DIInitializer.cs"><code>DIInitializer</code></a> is the standalone variant for the <code>InjectableSource</code>. Use this to start the DI process if no <code>Bootstrapper</code> or other scene entry point is available.</p>
+<div class="NOTE">
+<h5>Note</h5>
+<p>The DIInitializer should typically only be used when testing scenes in a standalone setting.</p>
+</div>
+<h4 id="specificcustom">Specific/Custom</h4>
+<p>A bootstrapper or module is an example of a custom <code>InjectableSource</code>. They both run the 4-step IDependent installation process for their own context scope.</p>
+<div class="NOTE">
+<h5>Note</h5>
+<p>Using a combination of the above components is expected to satisfy most-all use cases, so there should be very little need to create custom InjectableSources.</p>
+</div>
+<h3 id="context">Context</h3>
+<p>The <a href="Scripts/Context.cs"><code>Context</code></a> MonoBehaviour exists at the core of the dependency injection functionality, its primary function is to reference the <a href="Scripts/Container.cs"><code>Container</code></a>, and contains an API to run the installation.</p>
+<p>To Context is authored to contain references to installers <a href="Scripts/Installer.cs"><code>Installers</code></a>, whose output is cached in its <code>Container</code> before the injection step.</p>
+<details>
+  <summary>Code Examples</summary>
+<p><strong>Context usage in <code>InjectableSource</code></strong></p>
+<pre><code>// Inject dependencies
+source.Context.InjectDependencies(source.DependentsCache.GetCachedDependents&lt;IInjectable&gt;());
+</code></pre>
+<blockquote>
+<p>Although in a typical MonoBehaviour-based workflow direct Context API access required or desired (see InjectableSource), it also allows you to inject dependencies directly.</p>
+</blockquote>
+<p> </p>
+<p><strong>ECS Injection</strong></p>
+<pre><code>EntityManager.GetComponentObject&lt;Context&gt;(owner).InjectDependencies(managedComponent);
+</code></pre>
+<blockquote>
+<p>In this case the Context component was converted by ECS, and therefore queryable by the EntityManager.</p>
+</blockquote>
+</details>
+<h3 id="installer">Installer</h3>
+<p><a href="Scripts/Installer.cs"><code>Installers</code></a> are run on the Context as a way to bind dependencies to a container. They are available as either a MonoBehaviour or ScriptableObject.</p>
+<p><a href="installers.html">See here for more details on creating installers.</a></p>
+<h3 id="interfaces">Interfaces</h3>
+<h4 id="idependent">IDependent</h4>
+<p>The base interface to mark any type that requires to be hooked up to the DI process. This can be injection, initialization or conversion (entities)</p>
+<h4 id="iinjectable">IInjectable</h4>
+<h4 id="iinitializable">IInitializable</h4>
+<h4 id="ilateinitializable">ILateInitializable</h4>
+<h2 id="internala">Internala</h2>
+<h3 id="container">Container</h3>
+<h3 id="injector">Injector</h3>
+<h2 id="uml-diagram">UML Diagram</h2>
+<p><a href="https://app.diagrams.net/#G19nEZ9rnV26Mfpgd0J5D1g_sRuskQ1Dnc">https://app.diagrams.net/#G19nEZ9rnV26Mfpgd0J5D1g_sRuskQ1Dnc</a></p>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://kinstrife.visualstudio.com/Core/_git/Core?path=Packages/DependencyInjection/Documentation/details.md&amp;version=GBmaster&amp;line=1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+  </body>
+</html>

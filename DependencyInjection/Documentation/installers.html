@@ -1,0 +1,194 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>uid: dependencyinjectioninstallers | Kinstrife </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="uid: dependencyinjectioninstallers | Kinstrife ">
+    <meta name="generator" content="docfx 2.59.4.0">
+    
+    <link rel="shortcut icon" href="../../favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet"> 
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="../../articles/packages/toc.html">
+    
+    
+    
+  </head>  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../index.html">
+                <img id="logo" class="svg" src="../../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+
+<hr>
+<h2 id="uid-dependencyinjectioninstallers">uid: dependencyinjectioninstallers</h2>
+<h1 id="creating-custom-installers">Creating Custom Installers</h1>
+<p>If you create code that provides a sort of service that will be used by other classes, you will want to create an installer for it.</p>
+<ul>
+<li><a href="#creating-custom-installers">Creating Custom Installers</a>
+<ul>
+<li><a href="#about-installers">About Installers</a></li>
+<li><a href="#monobehaviour-installers">MonoBehaviour Installers</a>
+<ul>
+<li><a href="#example">Example</a></li>
+</ul>
+</li>
+<li><a href="#scriptableobject-installers">ScriptableObject Installers</a>
+<ul>
+<li><a href="#example-1">Example</a></li>
+</ul>
+</li>
+<li><a href="#dots-installers-extensions">DOTS Installers Extensions</a></li>
+</ul>
+</li>
+</ul>
+<br>
+<h2 id="about-installers">About Installers</h2>
+<p><a href="/../Scripts/Installer.cs"><code>Installers</code></a> are run on the Context as a way to bind dependencies to a container. They are available as either a MonoBehaviour or ScriptableObject. If you create an Installer, follow these steps to make it available:</p>
+<ol>
+<li>Create the Installer script (see <a href="#monobehaviour-installers">here</a> or <a href="#scriptableobject-installers">here</a>)</li>
+<li>Create an Instance
+<ul>
+<li>For <strong>MonoBehaviour Installers</strong>, you will need to create a Prefab which contains the installer and any other objects you may want to install from it</li>
+<li>For <strong>ScriptableObject Installers</strong>, you need to generate a ScriptableObject instance (e.g. via the Unity's <code>CreateAssetMenu</code> attribute)</li>
+</ul>
+</li>
+<li>Assign the instance to whichever <strong>Context</strong> you want them to be installed in.</li>
+<li><strong>Addressables???</strong></li>
+<li>And you're done! This installer should now provide all the dependencies for this context it was set up for.</li>
+</ol>
+<h2 id="monobehaviour-installers">MonoBehaviour Installers</h2>
+<p>MonoBehaviour installers are used for installations that are specific to the scene transform hierarchy.</p>
+<h3 id="example">Example</h3>
+<pre><code>public class VfxInstaller : Installer
+{
+  [SerializeField]
+  VfxSystem vfxSystem;
+
+  [SerializeField]
+  DynamicDecalSystem decalSystem;
+
+  public override void InstallBindings(Container container, IInjectableSource source)
+  {
+    container.BindAsSingleton(vfxSystem);
+    container.BindAsSingleton(decalSystem);
+  }
+
+  public override void UninstallBindings(Container container, IInjectableSource source)
+  {
+    throw new System.NotImplementedException();
+  }
+}
+</code></pre>
+<h2 id="scriptableobject-installers">ScriptableObject Installers</h2>
+<p>ScriptableObject installers are the preferred method of installing assets or runtime instantiated objects.</p>
+<h3 id="example-1">Example</h3>
+<pre><code>public class DatabaseInstaller : ScriptableObjectInstaller
+{   
+  // Add fields here
+
+  public override void InstallBindings(Container container, IInjectableSource source)
+  {
+    var database = Database.CreateUnitTestDatabase();
+    container.BindAsSingleton(database.Access);
+  }
+}
+</code></pre>
+<div class="TIP">
+<h5>Tip</h5>
+<p>ScriptableObject Installers can be set up to use <strong>sub-installers</strong>, by adding other ScriptableObject Installers to the <code>SubInstallers</code> field in the asset. When doing so, make sure there are no recursive dependencies!</p>
+</div>
+<h2 id="dots-installers-extensions">DOTS Installers Extensions</h2>
+<p>A DOTS-specific installer extension method exists in the <code>DOTSExtensions</code> package. This provides a consistent way to inject dependencies in systems and register them as dependents and proceed with the initialization process. This API is typically used in ScriptableObject Installers.</p>
+<p>This example installs systems and registers for the initialization process if they are marked with any <a href="Scripts/Interfaces.cs"><code>IDependent</code></a> interfaces:</p>
+<pre><code>// Install systems and register them as [`IDependent`](Scripts/Interfaces.cs)
+DOTSInstaller.InstallSystem&lt;NavAgentSystem, AISystemsGroup&gt;(container, source);
+</code></pre>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://kinstrife.visualstudio.com/Core/_git/Core?path=Packages/DependencyInjection/Documentation/installers.md&amp;version=GBmaster&amp;line=1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+  </body>
+</html>

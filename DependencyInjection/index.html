@@ -74,129 +74,67 @@
 <blockquote>
 <p><code>&quot;com.kinstrife.core.dependency-injection&quot;: &quot;file:/GameDev/Core/Packages/Dependency Injection&quot;</code></p>
 </blockquote>
-<h2 id="intro">Intro</h2>
-<p>This package contains a lightweight, performant dependency injection framework. It can be used to turn your application into a collection of loosely-coupled parts with highly segmented responsibilities.</p>
-<h2 id="quickstart">Quickstart</h2>
+<br>
+This package contains a lightweight, performant dependency injection framework. It can be used to turn your application into a collection of loosely-coupled parts with highly segmented responsibilities.
+<h2 id="why-a-custom-solution">Why a custom solution?</h2>
+<p>We used Zenject before and it was creating increasingly long delays when starting up scenes due to it traversing entire scenes and solutions via reflection. This is unacceptably slow, so we created a custom lightweight solution instead that uses a mixture of more direct dependency declaration and a sprinkle of reflection for convenience without slowing things down too much.</p>
+<hr>
+<ul>
+<li><a href="#dependency-injection-di-basics">Dependency Injection (DI) basics</a>
+<ul>
+<li><a href="#why-a-custom-solution">Why a custom solution?</a></li>
+<li><a href="#core-concepts">Core concepts</a></li>
+<li><a href="#quickstart--recipes">Quickstart &amp; 'Recipes'</a>
+<ul>
+<li><a href="#adding-di-to-a-standalone-scene">Adding DI to a standalone scene</a></li>
+<li><a href="#creating-an-object-or-prefab-with-dependencies">Creating an object or prefab with dependencies</a></li>
+<li><a href="#adding-di-to-a-module">Adding DI to a module</a></li>
+</ul>
+</li>
+<li><a href="#creating-injectable-types">Creating injectable types</a></li>
+<li><a href="#creating-installers">Creating Installers</a></li>
+<li><a href="#further-reading">Further reading</a></li>
+</ul>
+</li>
+</ul>
+<hr>
+<br>
+<h2 id="core-concepts">Core concepts</h2>
 <p>Dependency Injection requires a <code>Context</code> , a <code>InjectableSource</code>, and a controller to direct the application flow. If the scene exists outside of an application flow environment, the standalone variant of the <code>InjectableSource</code> is used (<code>DIInitializer</code>).</p>
-<h3 id="steps">Steps</h3>
+<h2 id="quickstart--recipes">Quickstart &amp; 'Recipes'</h2>
+<p>When using DI, you will likely want to do one of the following things:</p>
+<h3 id="adding-di-to-a-standalone-scene">Adding DI to a standalone scene</h3>
 <ol>
+<li>Set up an <code>InjectableSource</code></li>
 <li>Create a GameObject with a <code>DIInitializer</code></li>
 <li>A <code>Context</code> will be added automatically.</li>
 <li>Enable <code>InitializeOnAwake</code> or <code>InitializeOnStart</code> in the <code>DIInitializer</code></li>
 <li>The <code>DIInitializer</code> will now <code>locate</code> MonoBehaviours that are <code>IDependents</code> within the transform hierarchy</li>
 <li>To locate <code>IDependents</code> <em>outside</em> of the direct hierarchy of a context, use the <code>ContextLocator</code> to mark that hierarchy as searchable.</li>
 </ol>
-<h2 id="core-concepts">Core Concepts</h2>
-<h3 id="scene-installation-process">Scene Installation Process</h3>
-<p>The scene installation process consists of the following steps:</p>
+<h3 id="creating-an-object-or-prefab-with-dependencies">Creating an object or prefab with dependencies</h3>
 <ol>
-<li>Scene entry starts the process (Bootstrapper) of runing installation through InjectableSource</li>
-<li>Context runs Installers</li>
-<li>Locating scene <code>IDependents</code> (components that inherit from <code>IDependent</code>) into a cache</li>
+<li>Set up your prefab as usual, ensure that your classes <a href="#creating-injectable-types">were created to be injectable</a>.</li>
+<li>Add a <code>LinkedHierarchy</code> MonoBehaviour so that it will be picked up by dependency injection</li>
+<li><strong>Specify context?</strong></li>
 </ol>
- <details>
-   <summary>Dependent?</summary>
-<blockquote>
-<p>Dependent in this case explicitly refers to a component that is in some way dependent on this very installation process for its dependency injection, initialization or conversion to ECS.</p>
-</blockquote>
- </details>
-<ol start="3">
-<li>The <code>InjectableSource</code> then iterates over dependents to:
+<h3 id="adding-di-to-a-module">Adding DI to a module</h3>
 <ol>
-<li>Inject (see <code>IInjectable</code>)</li>
-<li>Initialize (see <code>IInitializable</code>)</li>
-<li>LateInitialize (see <code>ILateInitializable</code>)</li>
-<li>Convert (see <code>IConvertible</code>)</li>
+<li>TODO</li>
+<li></li>
 </ol>
-</li>
-</ol>
-<h3 id="injectablesource">InjectableSource</h3>
-<p>The <a href="Scripts/InjectableSource.cs"><code>InjectableSource</code></a> is the main point of reference for the scene installation process. It references a <a href="Scripts/Context.cs"><code>Context</code></a>  and allow the specification of the DI hierarchy through referencing another <code>Context</code> as its <code>parent</code>.</p>
-<blockquote>
-<p>By default, the <code>InjectableSource</code> doesn't initialize by itself. It needs a custom scene entry, such as a <code>Bootstrapper</code>. For standalone usage, see the <code>Standalone</code> section.</p>
-</blockquote>
-<h4 id="di-scopes">DI Scopes</h4>
-<p>An <code>InjectableSource</code> designates a new scope in a transform hierarchy. Every child nested transform is considered part of its scope. However, when a nested transform branch contains a nested <code>InjectableSource</code>, the scope terminates.</p>
-<blockquote>
-<p>During the scene installation process, the scopes are determined based on the location of the <code>InjectableSource</code> in the transform hierarchy <em>relative to others</em></p>
-</blockquote>
-<h4 id="parentchild-scopes">Parent/Child Scopes</h4>
-<p>You can nest <code>InjectableSources</code> during authoring time to automatically set up parent/child relations for contexts.</p>
-<blockquote>
-<p>Parent-child relations for <code>InjectableSources</code> can also be set up <strong>manually</strong> by hotwiring it via the inspector.</p>
-</blockquote>
-<h4 id="sibling-transform-roots">Sibling Transform Roots</h4>
-<p>To specify the inclusion of another <strong>transform root</strong> into a scope, add  <a href="Scripts/ContextLocator.cs"><code>ContextLocators</code></a> to the <code>InjectableSource</code></p>
-<p>Typically, a scene-scope Context will scan <em>all</em> scene root transforms for <code>ContextLocators</code> for inclusion in its scope.</p>
-<p>An <code>InjectableSource</code>'s capacity to gather <code>ContextLocators</code> is limited to a <code>Scene</code> by design.</p>
-<h4 id="standalone-diinitializer">Standalone (DIInitializer)</h4>
-<p>The <a href="Scripts/DIInitializer.cs"><code>DIInitializer</code></a> is the standalone variant for the <code>InjectableSource</code>. Use this to start the DI process if no <code>Bootstrapper</code> or other scene entry point is available.</p>
-<blockquote>
-<p>The DIInitializer should typically only be used when testing scenes in a standalone setting.</p>
-</blockquote>
-<h4 id="specificcustom">Specific/Custom</h4>
-<p>A bootstrapper or module is an example of a custom <code>InjectableSource</code>. They both run the 4-step IDependent installation process for their own context scope.</p>
-<blockquote>
-<p>Using a combination of the above components is expected to satisfy most-all use cases, so there should be very little need to create custom InjectableSources.</p>
-</blockquote>
-<h3 id="context">Context</h3>
-<p>The <a href="Scripts/Context.cs"><code>Context</code></a> MonoBehaviour exists at the core of the dependency injection functionality, its primary function is to reference the <a href="Scripts/Container.cs"><code>Container</code></a>, and contains an API to run the installation.</p>
-<p>To Context is authored to contain references to installers <a href="Scripts/Installer.cs"><code>Installers</code></a>, whose output is cached in its <code>Container</code> before the injection step.</p>
-<details>
-  <summary>Code Examples</summary>
-<p><strong>Context usage in <code>InjectableSource</code></strong></p>
-<pre><code>// Inject dependencies
-source.Context.InjectDependencies(source.DependentsCache.GetCachedDependents&lt;IInjectable&gt;());
-</code></pre>
-<blockquote>
-<p>Although in a typical MonoBehaviour-based workflow direct Context API access required or desired (see InjectableSource), it also allows you to inject dependencies directly.</p>
-</blockquote>
-<p> </p>
-<p><strong>ECS Injection</strong></p>
-<pre><code>EntityManager.GetComponentObject&lt;Context&gt;(owner).InjectDependencies(managedComponent);
-</code></pre>
-<blockquote>
-<p>In this case the Context component was converted by ECS, and therefore queryable by the EntityManager.</p>
-</blockquote>
-</details>
-<h3 id="installer">Installer</h3>
-<p><a href="Scripts/Installer.cs"><code>Installers</code></a> are run on the Context as a way to bind dependencies to a container. They are available as either a MonoBehaviour or ScriptableObject.</p>
-<h4 id="monobehaviour-installers">MonoBehaviour Installers</h4>
-<p>MonoBehaviour installers are used for installations that are specific to the scene transform hierarchy.</p>
-<h4 id="scriptableobject-installers">ScriptableObject Installers</h4>
-<p>ScriptableObject installers are the preferred method of installing assets or runtime instantiated objects.</p>
-<pre><code>// Usage example
-public class DatabaseInstaller : ScriptableObjectInstaller
- {   
-   // Add fields here
-
-   public override void InstallBindings(Container container, IInjectableSource source)
-   {
-     var database = Database.CreateUnitTestDatabase();
-     container.BindAsSingleton(database.Access);
-   }
- }
-</code></pre>
-<blockquote>
-<p>ScriptableObject Installers can be set up to use <strong>sub-installers</strong>, by adding other ScriptableObject Installers to the <code>SubInstallers</code> field in the asset. When doing so, make sure there are no recursive dependencies!</p>
-</blockquote>
-<h4 id="dots-installers-extensions">DOTS Installers Extensions</h4>
-<p>A DOTS-specific installer extension method exists in the <code>DOTSExtensions</code> package. This provides a consistent way to inject dependencies in systems and register them as dependents and proceed with the initialization process. This API is typically used in ScriptableObject Installers.</p>
-<p>This example installs systems and registers for the initialization process if they are marked with any <a href="Scripts/Interfaces.cs"><code>IDependent</code></a> interfaces:</p>
-<pre><code>// Install systems and register them as [`IDependent`](Scripts/Interfaces.cs)
-DOTSInstaller.InstallSystem&lt;NavAgentSystem, AISystemsGroup&gt;(container, source);
-</code></pre>
-<h3 id="interfaces">Interfaces</h3>
-<h4 id="idependent">IDependent</h4>
-<p>The base interface to mark any type that requires to be hooked up to the DI process. This can be injection, initialization or conversion (entities)</p>
-<h4 id="iinjectable">IInjectable</h4>
-<h4 id="iinitializable">IInitializable</h4>
-<h4 id="ilateinitializable">ILateInitializable</h4>
-<h2 id="internala">Internala</h2>
-<h3 id="container">Container</h3>
-<h3 id="injector">Injector</h3>
-<h2 id="uml-diagram">UML Diagram</h2>
-<p><a href="https://app.diagrams.net/#G19nEZ9rnV26Mfpgd0J5D1g_sRuskQ1Dnc">https://app.diagrams.net/#G19nEZ9rnV26Mfpgd0J5D1g_sRuskQ1Dnc</a></p>
+<br>
+<h2 id="creating-injectable-types">Creating injectable types</h2>
+<p>Classes that require dependencies should implement one of the following interfaces:</p>
+<ul>
+<li><code>IInjectable</code>: Add a <code>public void Inject</code> method that can take any number of dependency objects as parameters and assign them to your class variables</li>
+<li><code>IInitializable</code>: Same as above, except that it is called <strong>??when??</strong></li>
+<li><code>ILateInitializable</code>: Same as above, except it is called <strong>??when??</strong></li>
+</ul>
+<h2 id="creating-installers">Creating Installers</h2>
+<p><a href="Documentation/installers.html">See here.</a></p>
+<h2 id="further-reading">Further reading</h2>
+<p><a href="Documentation/details.html">See here.</a></p>
 </article>
           </div>
           
