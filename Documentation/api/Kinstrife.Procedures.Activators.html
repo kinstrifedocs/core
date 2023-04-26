@@ -87,10 +87,10 @@
     <h5>Implements</h5>
     <div><a class="xref" href="Kinstrife.Procedures.IProcedureComponent.html">IProcedureComponent</a></div>
     <div><a class="xref" href="Kinstrife.Core.DependencyInjection.IInitializable.html">IInitializable</a></div>
-    <div><a class="xref" href="Kinstrife.Core.DependencyInjection.IDependent.html">IDependent</a></div>
     <div><a class="xref" href="Kinstrife.Procedures.IInstructions-1.html">IInstructions</a>&lt;<a class="xref" href="Kinstrife.Procedures.IActivatorInstruction.html">IActivatorInstruction</a>&gt;</div>
     <div><a class="xref" href="Kinstrife.Procedures.IInstructionsAuthoring-2.html">IInstructionsAuthoring</a>&lt;<a class="xref" href="Kinstrife.Procedures.IActivatorInstruction.html">IActivatorInstruction</a>, <a class="xref" href="Kinstrife.Procedures.IActivatorAuthoring.html">IActivatorAuthoring</a>&gt;</div>
     <div><a class="xref" href="Kinstrife.Core.DependencyInjection.IProvideDependents.html">IProvideDependents</a></div>
+    <div><a class="xref" href="Kinstrife.Core.DependencyInjection.IDependent.html">IDependent</a></div>
     <div><a class="xref" href="Kinstrife.Procedures.IUpdateable.html">IUpdateable</a></div>
     <div><a class="xref" href="Kinstrife.Procedures.IHasReferencedProcedures.html">IHasReferencedProcedures</a></div>
   </div>
@@ -245,7 +245,7 @@
   <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
   <h5 id="Kinstrife_Procedures_Activators_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class Activators : ProcedureModule&lt;IActivatorInstruction, IActivatorAuthoring&gt;, IProcedureComponent, IInitializable, IDependent, IInstructions&lt;IActivatorInstruction&gt;, IInstructionsAuthoring&lt;IActivatorInstruction, IActivatorAuthoring&gt;, IProvideDependents, IUpdateable, IHasReferencedProcedures</code></pre>
+    <pre><code class="lang-csharp hljs">public class Activators : ProcedureModule&lt;IActivatorInstruction, IActivatorAuthoring&gt;, IProcedureComponent, IInitializable, IInstructions&lt;IActivatorInstruction&gt;, IInstructionsAuthoring&lt;IActivatorInstruction, IActivatorAuthoring&gt;, IProvideDependents, IDependent, IUpdateable, IHasReferencedProcedures</code></pre>
   </div>
   <h3 id="methods">Methods
   </h3>
@@ -315,9 +315,6 @@
       <a class="xref" href="Kinstrife.Core.DependencyInjection.IInitializable.html">IInitializable</a>
   </div>
   <div>
-      <a class="xref" href="Kinstrife.Core.DependencyInjection.IDependent.html">IDependent</a>
-  </div>
-  <div>
       <a class="xref" href="Kinstrife.Procedures.IInstructions-1.html">IInstructions&lt;T&gt;</a>
   </div>
   <div>
@@ -325,6 +322,9 @@
   </div>
   <div>
       <a class="xref" href="Kinstrife.Core.DependencyInjection.IProvideDependents.html">IProvideDependents</a>
+  </div>
+  <div>
+      <a class="xref" href="Kinstrife.Core.DependencyInjection.IDependent.html">IDependent</a>
   </div>
   <div>
       <a class="xref" href="Kinstrife.Procedures.IUpdateable.html">IUpdateable</a>

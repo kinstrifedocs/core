@@ -91,10 +91,10 @@
     <h5>Implements</h5>
     <div><a class="xref" href="Kinstrife.Procedures.IProcedureComponent.html">IProcedureComponent</a></div>
     <div><a class="xref" href="Kinstrife.Core.DependencyInjection.IInitializable.html">IInitializable</a></div>
-    <div><a class="xref" href="Kinstrife.Core.DependencyInjection.IDependent.html">IDependent</a></div>
     <div><a class="xref" href="Kinstrife.Procedures.IInstructions-1.html">IInstructions</a>&lt;<a class="xref" href="Kinstrife.Procedures.ISubStateInstruction.html">ISubStateInstruction</a>&gt;</div>
     <div><a class="xref" href="Kinstrife.Procedures.IInstructionsAuthoring-2.html">IInstructionsAuthoring</a>&lt;<a class="xref" href="Kinstrife.Procedures.ISubStateInstruction.html">ISubStateInstruction</a>, TKey&gt;</div>
     <div><a class="xref" href="Kinstrife.Core.DependencyInjection.IProvideDependents.html">IProvideDependents</a></div>
+    <div><a class="xref" href="Kinstrife.Core.DependencyInjection.IDependent.html">IDependent</a></div>
     <div><a class="xref" href="Kinstrife.Procedures.IUpdateable.html">IUpdateable</a></div>
     <div><a class="xref" href="Kinstrife.Procedures.IHasReferencedProcedures.html">IHasReferencedProcedures</a></div>
     <div><a class="xref" href="Kinstrife.Procedures.IConstraint.html">IConstraint</a></div>
@@ -318,7 +318,7 @@
   <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
   <h5 id="Kinstrife_Procedures_SubStates_1_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public abstract class SubStates&lt;TKey&gt; : SubStates&lt;TKey, TKey&gt;, IProcedureComponent, IInitializable, IDependent, IInstructions&lt;ISubStateInstruction&gt;, IInstructionsAuthoring&lt;ISubStateInstruction, TKey&gt;, IProvideDependents, IUpdateable, IHasReferencedProcedures, IConstraint, IInstruction, IConditionEvaluator where TKey : class, ISubstateAuthoring</code></pre>
+    <pre><code class="lang-csharp hljs">public abstract class SubStates&lt;TKey&gt; : SubStates&lt;TKey, TKey&gt;, IProcedureComponent, IInitializable, IInstructions&lt;ISubStateInstruction&gt;, IInstructionsAuthoring&lt;ISubStateInstruction, TKey&gt;, IProvideDependents, IDependent, IUpdateable, IHasReferencedProcedures, IConstraint, IInstruction, IConditionEvaluator where TKey : class, ISubstateAuthoring</code></pre>
   </div>
   <h5 class="typeParameters">Type Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -357,9 +357,6 @@
       <a class="xref" href="Kinstrife.Core.DependencyInjection.IInitializable.html">IInitializable</a>
   </div>
   <div>
-      <a class="xref" href="Kinstrife.Core.DependencyInjection.IDependent.html">IDependent</a>
-  </div>
-  <div>
       <a class="xref" href="Kinstrife.Procedures.IInstructions-1.html">IInstructions&lt;T&gt;</a>
   </div>
   <div>
@@ -367,6 +364,9 @@
   </div>
   <div>
       <a class="xref" href="Kinstrife.Core.DependencyInjection.IProvideDependents.html">IProvideDependents</a>
+  </div>
+  <div>
+      <a class="xref" href="Kinstrife.Core.DependencyInjection.IDependent.html">IDependent</a>
   </div>
   <div>
       <a class="xref" href="Kinstrife.Procedures.IUpdateable.html">IUpdateable</a>

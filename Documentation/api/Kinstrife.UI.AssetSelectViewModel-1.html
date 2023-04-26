@@ -129,6 +129,54 @@
   </h3>
   
   
+  <h4 id="Kinstrife_UI_AssetSelectViewModel_1_lastSelectedEntry" data-uid="Kinstrife.UI.AssetSelectViewModel`1.lastSelectedEntry">lastSelectedEntry</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected T lastSelectedEntry</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">T</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="Kinstrife_UI_AssetSelectViewModel_1_lastSelectedIndex" data-uid="Kinstrife.UI.AssetSelectViewModel`1.lastSelectedIndex">lastSelectedIndex</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected int lastSelectedIndex</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
   <h4 id="Kinstrife_UI_AssetSelectViewModel_1_loadMode" data-uid="Kinstrife.UI.AssetSelectViewModel`1.loadMode">loadMode</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
@@ -230,13 +278,13 @@ public IEnumerable&lt;T&gt; SourceData</code></pre>
   </table>
   
   
-  <a id="Kinstrife_UI_AssetSelectViewModel_1_onSelectItem_" data-uid="Kinstrife.UI.AssetSelectViewModel`1.onSelectItem*"></a>
-  <h4 id="Kinstrife_UI_AssetSelectViewModel_1_onSelectItem" data-uid="Kinstrife.UI.AssetSelectViewModel`1.onSelectItem">onSelectItem</h4>
+  <a id="Kinstrife_UI_AssetSelectViewModel_1_SelectedEntry_" data-uid="Kinstrife.UI.AssetSelectViewModel`1.SelectedEntry*"></a>
+  <h4 id="Kinstrife_UI_AssetSelectViewModel_1_SelectedEntry" data-uid="Kinstrife.UI.AssetSelectViewModel`1.SelectedEntry">SelectedEntry</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Action&lt;int, T&gt; onSelectItem { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public T SelectedEntry { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -248,7 +296,32 @@ public IEnumerable&lt;T&gt; SourceData</code></pre>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Kinstrife.Action</span>&lt;<span class="xref">System.Int32</span>, T&gt;</td>
+        <td><span class="xref">T</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Kinstrife_UI_AssetSelectViewModel_1_SelectedIndex_" data-uid="Kinstrife.UI.AssetSelectViewModel`1.SelectedIndex*"></a>
+  <h4 id="Kinstrife_UI_AssetSelectViewModel_1_SelectedIndex" data-uid="Kinstrife.UI.AssetSelectViewModel`1.SelectedIndex">SelectedIndex</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int SelectedIndex { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -539,6 +612,33 @@ public IEnumerable&lt;T&gt; SourceData</code></pre>
   <div><a class="xref" href="Kinstrife.UI.AssetSelectViewModel.html#Kinstrife_UI_AssetSelectViewModel_RefreshSourceData">AssetSelectViewModel.RefreshSourceData()</a></div>
   
   
+  <a id="Kinstrife_UI_AssetSelectViewModel_1_SelectEntryAt_" data-uid="Kinstrife.UI.AssetSelectViewModel`1.SelectEntryAt*"></a>
+  <h4 id="Kinstrife_UI_AssetSelectViewModel_1_SelectEntryAt_System_Int32_" data-uid="Kinstrife.UI.AssetSelectViewModel`1.SelectEntryAt(System.Int32)">SelectEntryAt(Int32)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SelectEntryAt(int index)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">index</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
   <a id="Kinstrife_UI_AssetSelectViewModel_1_ValidateItem_" data-uid="Kinstrife.UI.AssetSelectViewModel`1.ValidateItem*"></a>
   <h4 id="Kinstrife_UI_AssetSelectViewModel_1_ValidateItem__0_" data-uid="Kinstrife.UI.AssetSelectViewModel`1.ValidateItem(`0)">ValidateItem(T)</h4>
   <div class="markdown level1 summary"></div>
@@ -575,6 +675,32 @@ public IEnumerable&lt;T&gt; SourceData</code></pre>
     <tbody>
       <tr>
         <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="events">Events
+  </h3>
+  
+  
+  <h4 id="Kinstrife_UI_AssetSelectViewModel_1_onSelectItem" data-uid="Kinstrife.UI.AssetSelectViewModel`1.onSelectItem">onSelectItem</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public event Action&lt;int, T&gt; onSelectItem</code></pre>
+  </div>
+  <h5 class="eventType">Event Type</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Kinstrife.Action</span>&lt;<span class="xref">System.Int32</span>, T&gt;</td>
         <td></td>
       </tr>
     </tbody>

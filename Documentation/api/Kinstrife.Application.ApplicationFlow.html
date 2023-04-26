@@ -962,6 +962,105 @@ The only reason why this is currently a MonoBehaviour is because it requires Sta
   </table>
   
   
+  <a id="Kinstrife_Application_ApplicationFlow_TryStartCampaignAsync_" data-uid="Kinstrife.Application.ApplicationFlow.TryStartCampaignAsync*"></a>
+  <h4 id="Kinstrife_Application_ApplicationFlow_TryStartCampaignAsync_AssetReferenceT_CampaignDefinition__System_Boolean_System_Boolean_" data-uid="Kinstrife.Application.ApplicationFlow.TryStartCampaignAsync(AssetReferenceT{CampaignDefinition},System.Boolean,System.Boolean)">TryStartCampaignAsync(AssetReferenceT&lt;CampaignDefinition&gt;, Boolean, Boolean)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public async UniTask&lt;bool&gt; TryStartCampaignAsync(AssetReferenceT&lt;CampaignDefinition&gt; campaign, bool unloadExisting, bool isNewGame)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">AssetReferenceT</span>&lt;<span class="xref">CampaignDefinition</span>&gt;</td>
+        <td><span class="parametername">campaign</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">unloadExisting</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">isNewGame</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">UniTask</span>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Kinstrife_Application_ApplicationFlow_TrySwitchMode_" data-uid="Kinstrife.Application.ApplicationFlow.TrySwitchMode*"></a>
+  <h4 id="Kinstrife_Application_ApplicationFlow_TrySwitchMode_AssetRef_Kinstrife_Application_GameMode__System_Boolean_" data-uid="Kinstrife.Application.ApplicationFlow.TrySwitchMode(AssetRef{Kinstrife.Application.GameMode},System.Boolean)">TrySwitchMode(AssetRef&lt;GameMode&gt;, Boolean)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public async UniTask&lt;bool&gt; TrySwitchMode(AssetRef&lt;GameMode&gt; gameMode, bool resetCurrent = false)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">AssetRef</span>&lt;<a class="xref" href="Kinstrife.Application.GameMode.html">GameMode</a>&gt;</td>
+        <td><span class="parametername">gameMode</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">resetCurrent</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">UniTask</span>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
   <a id="Kinstrife_Application_ApplicationFlow_TrySwitchMode_" data-uid="Kinstrife.Application.ApplicationFlow.TrySwitchMode*"></a>
   <h4 id="Kinstrife_Application_ApplicationFlow_TrySwitchMode_Kinstrife_Application_GameMode_System_Boolean_" data-uid="Kinstrife.Application.ApplicationFlow.TrySwitchMode(Kinstrife.Application.GameMode,System.Boolean)">TrySwitchMode(GameMode, Boolean)</h4>
   <div class="markdown level1 summary"></div>
@@ -1089,48 +1188,6 @@ The only reason why this is currently a MonoBehaviour is because it requires Sta
     <tbody>
       <tr>
         <td><span class="xref">System.Boolean</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="Kinstrife_Application_ApplicationFlow_TrySwitchPrimaryModule2_" data-uid="Kinstrife.Application.ApplicationFlow.TrySwitchPrimaryModule2*"></a>
-  <h4 id="Kinstrife_Application_ApplicationFlow_TrySwitchPrimaryModule2_Kinstrife_Application_ModuleDefinition_" data-uid="Kinstrife.Application.ApplicationFlow.TrySwitchPrimaryModule2(Kinstrife.Application.ModuleDefinition)">TrySwitchPrimaryModule2(ModuleDefinition)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public async UniTask&lt;bool&gt; TrySwitchPrimaryModule2(ModuleDefinition targetModuleDefinition)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Kinstrife.Application.ModuleDefinition.html">ModuleDefinition</a></td>
-        <td><span class="parametername">targetModuleDefinition</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">UniTask</span>&lt;<span class="xref">System.Boolean</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>

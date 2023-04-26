@@ -680,6 +680,53 @@ up in its proper order to avoid setup dependency issues.</p>
   </div>
   
   
+  <a id="Kinstrife_Application_Module_SwitchLocation_" data-uid="Kinstrife.Application.Module.SwitchLocation*"></a>
+  <h4 id="Kinstrife_Application_Module_SwitchLocation_AssetRef_Kinstrife_Application_Location__System_Boolean_" data-uid="Kinstrife.Application.Module.SwitchLocation(AssetRef{Kinstrife.Application.Location},System.Boolean)">SwitchLocation(AssetRef&lt;Location&gt;, Boolean)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public async UniTask&lt;bool&gt; SwitchLocation(AssetRef&lt;Location&gt; locationRef, bool immediate)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">AssetRef</span>&lt;<a class="xref" href="Kinstrife.Application.Location.html">Location</a>&gt;</td>
+        <td><span class="parametername">locationRef</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">immediate</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">UniTask</span>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
   <a id="Kinstrife_Application_Module_Terminate_" data-uid="Kinstrife.Application.Module.Terminate*"></a>
   <h4 id="Kinstrife_Application_Module_Terminate" data-uid="Kinstrife.Application.Module.Terminate">Terminate()</h4>
   <div class="markdown level1 summary"></div>
@@ -741,12 +788,64 @@ up in its proper order to avoid setup dependency issues.</p>
   
   
   <a id="Kinstrife_Application_Module_TrySwitchGameMode_" data-uid="Kinstrife.Application.Module.TrySwitchGameMode*"></a>
+  <h4 id="Kinstrife_Application_Module_TrySwitchGameMode_AssetRef_Kinstrife_Application_GameMode__AssetRef_Kinstrife_Application_Location__System_Boolean_" data-uid="Kinstrife.Application.Module.TrySwitchGameMode(AssetRef{Kinstrife.Application.GameMode},AssetRef{Kinstrife.Application.Location},System.Boolean)">TrySwitchGameMode(AssetRef&lt;GameMode&gt;, AssetRef&lt;Location&gt;, Boolean)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public async UniTask&lt;bool&gt; TrySwitchGameMode(AssetRef&lt;GameMode&gt; gameMode, AssetRef&lt;Location&gt; location = null, bool resetCurrent = false)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">AssetRef</span>&lt;<a class="xref" href="Kinstrife.Application.GameMode.html">GameMode</a>&gt;</td>
+        <td><span class="parametername">gameMode</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">AssetRef</span>&lt;<a class="xref" href="Kinstrife.Application.Location.html">Location</a>&gt;</td>
+        <td><span class="parametername">location</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">resetCurrent</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">UniTask</span>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Kinstrife_Application_Module_TrySwitchGameMode_" data-uid="Kinstrife.Application.Module.TrySwitchGameMode*"></a>
   <h4 id="Kinstrife_Application_Module_TrySwitchGameMode_Kinstrife_Application_GameMode_Kinstrife_Application_Location_System_Boolean_" data-uid="Kinstrife.Application.Module.TrySwitchGameMode(Kinstrife.Application.GameMode,Kinstrife.Application.Location,System.Boolean)">TrySwitchGameMode(GameMode, Location, Boolean)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void TrySwitchGameMode(GameMode gameMode, Location location = null, bool resetCurrent = false)</code></pre>
+    <pre><code class="lang-csharp hljs">public bool TrySwitchGameMode(GameMode gameMode, Location location = null, bool resetCurrent = false)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -771,6 +870,21 @@ up in its proper order to avoid setup dependency issues.</p>
       <tr>
         <td><span class="xref">System.Boolean</span></td>
         <td><span class="parametername">resetCurrent</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
         <td></td>
       </tr>
     </tbody>

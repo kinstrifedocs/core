@@ -91,6 +91,32 @@
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public class InteractionSystem : MonoBehaviour, IInjectable, IDependent</code></pre>
   </div>
+  <h3 id="fields">Fields
+  </h3>
+  
+  
+  <h4 id="Kinstrife_Interaction_InteractionSystem_context" data-uid="Kinstrife.Interaction.InteractionSystem.context">context</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public InteractionContext context</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Kinstrife.Interaction.InteractionContext.html">InteractionContext</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   <h3 id="properties">Properties
   </h3>
   
@@ -123,12 +149,12 @@
   
   
   <a id="Kinstrife_Interaction_InteractionSystem_ClearAllInteractions_" data-uid="Kinstrife.Interaction.InteractionSystem.ClearAllInteractions*"></a>
-  <h4 id="Kinstrife_Interaction_InteractionSystem_ClearAllInteractions_Kinstrife_Interaction_InteractionSensor_" data-uid="Kinstrife.Interaction.InteractionSystem.ClearAllInteractions(Kinstrife.Interaction.InteractionSensor)">ClearAllInteractions(InteractionSensor)</h4>
+  <h4 id="Kinstrife_Interaction_InteractionSystem_ClearAllInteractions_Kinstrife_Interaction_InteractionContext_" data-uid="Kinstrife.Interaction.InteractionSystem.ClearAllInteractions(Kinstrife.Interaction.InteractionContext)">ClearAllInteractions(InteractionContext)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void ClearAllInteractions(InteractionSensor behaviour)</code></pre>
+    <pre><code class="lang-csharp hljs">public void ClearAllInteractions(InteractionContext behaviour)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -141,7 +167,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="Kinstrife.Interaction.InteractionSensor.html">InteractionSensor</a></td>
+        <td><a class="xref" href="Kinstrife.Interaction.InteractionContext.html">InteractionContext</a></td>
         <td><span class="parametername">behaviour</span></td>
         <td></td>
       </tr>
@@ -177,30 +203,13 @@
   
   
   <a id="Kinstrife_Interaction_InteractionSystem_OnUpdate_" data-uid="Kinstrife.Interaction.InteractionSystem.OnUpdate*"></a>
-  <h4 id="Kinstrife_Interaction_InteractionSystem_OnUpdate_Kinstrife_Interaction_InteractionSensor_" data-uid="Kinstrife.Interaction.InteractionSystem.OnUpdate(Kinstrife.Interaction.InteractionSensor)">OnUpdate(InteractionSensor)</h4>
+  <h4 id="Kinstrife_Interaction_InteractionSystem_OnUpdate" data-uid="Kinstrife.Interaction.InteractionSystem.OnUpdate">OnUpdate()</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void OnUpdate(InteractionSensor behaviour)</code></pre>
+    <pre><code class="lang-csharp hljs">public void OnUpdate()</code></pre>
   </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Kinstrife.Interaction.InteractionSensor.html">InteractionSensor</a></td>
-        <td><span class="parametername">behaviour</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
   
   
   <a id="Kinstrife_Interaction_InteractionSystem_ReleaseInteraction_" data-uid="Kinstrife.Interaction.InteractionSystem.ReleaseInteraction*"></a>
@@ -224,6 +233,33 @@
       <tr>
         <td><a class="xref" href="Kinstrife.Interaction.InteractionTargetResults.html">InteractionTargetResults</a></td>
         <td><span class="parametername">targetResults</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Kinstrife_Interaction_InteractionSystem_SetContext_" data-uid="Kinstrife.Interaction.InteractionSystem.SetContext*"></a>
+  <h4 id="Kinstrife_Interaction_InteractionSystem_SetContext_Kinstrife_Interaction_InteractionContext_" data-uid="Kinstrife.Interaction.InteractionSystem.SetContext(Kinstrife.Interaction.InteractionContext)">SetContext(InteractionContext)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetContext(InteractionContext context)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Kinstrife.Interaction.InteractionContext.html">InteractionContext</a></td>
+        <td><span class="parametername">context</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -263,12 +299,12 @@
   
   
   <a id="Kinstrife_Interaction_InteractionSystem_TryFindNewTarget_" data-uid="Kinstrife.Interaction.InteractionSystem.TryFindNewTarget*"></a>
-  <h4 id="Kinstrife_Interaction_InteractionSystem_TryFindNewTarget_Kinstrife_Interaction_InteractionSensor__Kinstrife_Core_Interaction_Hax_InteractionRaySettings_Kinstrife_Interaction_InteractionTargetResults_Kinstrife_Interaction_InteractionTargetFetchMode__" data-uid="Kinstrife.Interaction.InteractionSystem.TryFindNewTarget(Kinstrife.Interaction.InteractionSensor@,Kinstrife.Core.Interaction.Hax.InteractionRaySettings,Kinstrife.Interaction.InteractionTargetResults,Kinstrife.Interaction.InteractionTargetFetchMode@)">TryFindNewTarget(in InteractionSensor, InteractionRaySettings, InteractionTargetResults, in InteractionTargetFetchMode)</h4>
+  <h4 id="Kinstrife_Interaction_InteractionSystem_TryFindNewTarget_Kinstrife_Interaction_InteractionContext__Kinstrife_Core_Interaction_Hax_InteractionRaySettings_Kinstrife_Interaction_InteractionTargetResults_Kinstrife_Interaction_InteractionTargetFetchMode__" data-uid="Kinstrife.Interaction.InteractionSystem.TryFindNewTarget(Kinstrife.Interaction.InteractionContext@,Kinstrife.Core.Interaction.Hax.InteractionRaySettings,Kinstrife.Interaction.InteractionTargetResults,Kinstrife.Interaction.InteractionTargetFetchMode@)">TryFindNewTarget(in InteractionContext, InteractionRaySettings, InteractionTargetResults, in InteractionTargetFetchMode)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void TryFindNewTarget(in InteractionSensor behaviour, InteractionRaySettings settings, InteractionTargetResults results, in InteractionTargetFetchMode targetFetchMode)</code></pre>
+    <pre><code class="lang-csharp hljs">public void TryFindNewTarget(in InteractionContext context, InteractionRaySettings settings, InteractionTargetResults results, in InteractionTargetFetchMode targetFetchMode)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -281,8 +317,8 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="Kinstrife.Interaction.InteractionSensor.html">InteractionSensor</a></td>
-        <td><span class="parametername">behaviour</span></td>
+        <td><a class="xref" href="Kinstrife.Interaction.InteractionContext.html">InteractionContext</a></td>
+        <td><span class="parametername">context</span></td>
         <td></td>
       </tr>
       <tr>
@@ -311,7 +347,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public event Action&lt;InteractionSensor&gt; OnInteractStateChanged</code></pre>
+    <pre><code class="lang-csharp hljs">public event Action&lt;InteractionContext&gt; OnInteractStateChanged</code></pre>
   </div>
   <h5 class="eventType">Event Type</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -323,7 +359,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Action</span>&lt;<a class="xref" href="Kinstrife.Interaction.InteractionSensor.html">InteractionSensor</a>&gt;</td>
+        <td><span class="xref">System.Action</span>&lt;<a class="xref" href="Kinstrife.Interaction.InteractionContext.html">InteractionContext</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>

@@ -98,6 +98,15 @@
     <div>
       <a class="xref" href="Kinstrife.Interaction.InteractionAction.html#Kinstrife_Interaction_InteractionAction_GetDescription">InteractionAction.GetDescription()</a>
     </div>
+    <div>
+      <a class="xref" href="Kinstrife.Interaction.InteractionAction.html#Kinstrife_Interaction_InteractionAction_StartAction_Kinstrife_Interaction_InteractiveObject_Kinstrife_Interaction_InteractionContext_Kinstrife_Interaction_InteractMode_">InteractionAction.StartAction(InteractiveObject, InteractionContext, InteractMode)</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.Interaction.InteractionAction.html#Kinstrife_Interaction_InteractionAction_FinishAction_Kinstrife_Interaction_InteractiveObject_Kinstrife_Interaction_InteractionContext_Kinstrife_Interaction_InteractMode_">InteractionAction.FinishAction(InteractiveObject, InteractionContext, InteractMode)</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.Interaction.InteractionAction.html#Kinstrife_Interaction_InteractionAction_CancelAction_Kinstrife_Interaction_InteractiveObject_Kinstrife_Interaction_InteractionContext_Kinstrife_Interaction_InteractMode_">InteractionAction.CancelAction(InteractiveObject, InteractionContext, InteractMode)</a>
+    </div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Kinstrife.Interaction.html">Kinstrife.Interaction</a></h6>
   <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
@@ -314,30 +323,6 @@
   </h3>
   
   
-  <a id="Kinstrife_Interaction_PhysicsGrab_CancelAction_" data-uid="Kinstrife.Interaction.PhysicsGrab.CancelAction*"></a>
-  <h4 id="Kinstrife_Interaction_PhysicsGrab_CancelAction" data-uid="Kinstrife.Interaction.PhysicsGrab.CancelAction">CancelAction()</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public override void CancelAction()</code></pre>
-  </div>
-  <h5 class="overrides">Overrides</h5>
-  <div><a class="xref" href="Kinstrife.Interaction.InteractionAction.html#Kinstrife_Interaction_InteractionAction_CancelAction">InteractionAction.CancelAction()</a></div>
-  
-  
-  <a id="Kinstrife_Interaction_PhysicsGrab_FinishAction_" data-uid="Kinstrife.Interaction.PhysicsGrab.FinishAction*"></a>
-  <h4 id="Kinstrife_Interaction_PhysicsGrab_FinishAction" data-uid="Kinstrife.Interaction.PhysicsGrab.FinishAction">FinishAction()</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public override void FinishAction()</code></pre>
-  </div>
-  <h5 class="overrides">Overrides</h5>
-  <div><a class="xref" href="Kinstrife.Interaction.InteractionAction.html#Kinstrife_Interaction_InteractionAction_FinishAction">InteractionAction.FinishAction()</a></div>
-  
-  
   <a id="Kinstrife_Interaction_PhysicsGrab_Grab_" data-uid="Kinstrife.Interaction.PhysicsGrab.Grab*"></a>
   <h4 id="Kinstrife_Interaction_PhysicsGrab_Grab" data-uid="Kinstrife.Interaction.PhysicsGrab.Grab">Grab()</h4>
   <div class="markdown level1 summary"></div>
@@ -390,23 +375,13 @@
   </div>
   
   
-  <a id="Kinstrife_Interaction_PhysicsGrab_Release_" data-uid="Kinstrife.Interaction.PhysicsGrab.Release*"></a>
-  <h4 id="Kinstrife_Interaction_PhysicsGrab_Release" data-uid="Kinstrife.Interaction.PhysicsGrab.Release">Release()</h4>
+  <a id="Kinstrife_Interaction_PhysicsGrab_OnCancelAction_" data-uid="Kinstrife.Interaction.PhysicsGrab.OnCancelAction*"></a>
+  <h4 id="Kinstrife_Interaction_PhysicsGrab_OnCancelAction_Kinstrife_Interaction_InteractiveObject_Kinstrife_Interaction_InteractionContext_Kinstrife_Interaction_InteractMode_" data-uid="Kinstrife.Interaction.PhysicsGrab.OnCancelAction(Kinstrife.Interaction.InteractiveObject,Kinstrife.Interaction.InteractionContext,Kinstrife.Interaction.InteractMode)">OnCancelAction(InteractiveObject, InteractionContext, InteractMode)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void Release()</code></pre>
-  </div>
-  
-  
-  <a id="Kinstrife_Interaction_PhysicsGrab_StartAction_" data-uid="Kinstrife.Interaction.PhysicsGrab.StartAction*"></a>
-  <h4 id="Kinstrife_Interaction_PhysicsGrab_StartAction_Kinstrife_Interaction_InteractMode_" data-uid="Kinstrife.Interaction.PhysicsGrab.StartAction(Kinstrife.Interaction.InteractMode)">StartAction(InteractMode)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public override void StartAction(InteractMode mode)</code></pre>
+    <pre><code class="lang-csharp hljs">protected override void OnCancelAction(InteractiveObject interactiveObject, InteractionContext context, InteractMode mode)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -419,6 +394,16 @@
     </thead>
     <tbody>
       <tr>
+        <td><a class="xref" href="Kinstrife.Interaction.InteractiveObject.html">InteractiveObject</a></td>
+        <td><span class="parametername">interactiveObject</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Kinstrife.Interaction.InteractionContext.html">InteractionContext</a></td>
+        <td><span class="parametername">context</span></td>
+        <td></td>
+      </tr>
+      <tr>
         <td><a class="xref" href="Kinstrife.Interaction.InteractMode.html">InteractMode</a></td>
         <td><span class="parametername">mode</span></td>
         <td></td>
@@ -426,7 +411,95 @@
     </tbody>
   </table>
   <h5 class="overrides">Overrides</h5>
-  <div><a class="xref" href="Kinstrife.Interaction.InteractionAction.html#Kinstrife_Interaction_InteractionAction_StartAction_Kinstrife_Interaction_InteractMode_">InteractionAction.StartAction(InteractMode)</a></div>
+  <div><a class="xref" href="Kinstrife.Interaction.InteractionAction.html#Kinstrife_Interaction_InteractionAction_OnCancelAction_Kinstrife_Interaction_InteractiveObject_Kinstrife_Interaction_InteractionContext_Kinstrife_Interaction_InteractMode_">InteractionAction.OnCancelAction(InteractiveObject, InteractionContext, InteractMode)</a></div>
+  
+  
+  <a id="Kinstrife_Interaction_PhysicsGrab_OnFinishAction_" data-uid="Kinstrife.Interaction.PhysicsGrab.OnFinishAction*"></a>
+  <h4 id="Kinstrife_Interaction_PhysicsGrab_OnFinishAction_Kinstrife_Interaction_InteractiveObject_Kinstrife_Interaction_InteractionContext_Kinstrife_Interaction_InteractMode_" data-uid="Kinstrife.Interaction.PhysicsGrab.OnFinishAction(Kinstrife.Interaction.InteractiveObject,Kinstrife.Interaction.InteractionContext,Kinstrife.Interaction.InteractMode)">OnFinishAction(InteractiveObject, InteractionContext, InteractMode)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override void OnFinishAction(InteractiveObject interactiveObject, InteractionContext context, InteractMode mode)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Kinstrife.Interaction.InteractiveObject.html">InteractiveObject</a></td>
+        <td><span class="parametername">interactiveObject</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Kinstrife.Interaction.InteractionContext.html">InteractionContext</a></td>
+        <td><span class="parametername">context</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Kinstrife.Interaction.InteractMode.html">InteractMode</a></td>
+        <td><span class="parametername">mode</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Kinstrife.Interaction.InteractionAction.html#Kinstrife_Interaction_InteractionAction_OnFinishAction_Kinstrife_Interaction_InteractiveObject_Kinstrife_Interaction_InteractionContext_Kinstrife_Interaction_InteractMode_">InteractionAction.OnFinishAction(InteractiveObject, InteractionContext, InteractMode)</a></div>
+  
+  
+  <a id="Kinstrife_Interaction_PhysicsGrab_OnStartAction_" data-uid="Kinstrife.Interaction.PhysicsGrab.OnStartAction*"></a>
+  <h4 id="Kinstrife_Interaction_PhysicsGrab_OnStartAction_Kinstrife_Interaction_InteractiveObject_Kinstrife_Interaction_InteractionContext_Kinstrife_Interaction_InteractMode_" data-uid="Kinstrife.Interaction.PhysicsGrab.OnStartAction(Kinstrife.Interaction.InteractiveObject,Kinstrife.Interaction.InteractionContext,Kinstrife.Interaction.InteractMode)">OnStartAction(InteractiveObject, InteractionContext, InteractMode)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override void OnStartAction(InteractiveObject interactiveObject, InteractionContext context, InteractMode mode)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Kinstrife.Interaction.InteractiveObject.html">InteractiveObject</a></td>
+        <td><span class="parametername">interactiveObject</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Kinstrife.Interaction.InteractionContext.html">InteractionContext</a></td>
+        <td><span class="parametername">context</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Kinstrife.Interaction.InteractMode.html">InteractMode</a></td>
+        <td><span class="parametername">mode</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Kinstrife.Interaction.InteractionAction.html#Kinstrife_Interaction_InteractionAction_OnStartAction_Kinstrife_Interaction_InteractiveObject_Kinstrife_Interaction_InteractionContext_Kinstrife_Interaction_InteractMode_">InteractionAction.OnStartAction(InteractiveObject, InteractionContext, InteractMode)</a></div>
+  
+  
+  <a id="Kinstrife_Interaction_PhysicsGrab_Release_" data-uid="Kinstrife.Interaction.PhysicsGrab.Release*"></a>
+  <h4 id="Kinstrife_Interaction_PhysicsGrab_Release" data-uid="Kinstrife.Interaction.PhysicsGrab.Release">Release()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Release()</code></pre>
+  </div>
   <h3 id="implements">Implements</h3>
   <div>
       <a class="xref" href="Kinstrife.Interaction.IInteractionAction.html">IInteractionAction</a>

@@ -197,7 +197,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Action&lt;InteractMode&gt; onInteractPerformed</code></pre>
+    <pre><code class="lang-csharp hljs">public UnityEvent onInteractPerformed</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -209,7 +209,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Action</span>&lt;<a class="xref" href="Kinstrife.Interaction.InteractMode.html">InteractMode</a>&gt;</td>
+        <td><span class="xref">UnityEvent</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -237,6 +237,31 @@
     <tbody>
       <tr>
         <td><a class="xref" href="Kinstrife.Interaction.InteractionAction.html">InteractionAction</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Kinstrife_Interaction_InteractiveObject_ActiveContext_" data-uid="Kinstrife.Interaction.InteractiveObject.ActiveContext*"></a>
+  <h4 id="Kinstrife_Interaction_InteractiveObject_ActiveContext" data-uid="Kinstrife.Interaction.InteractiveObject.ActiveContext">ActiveContext</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public InteractionContext ActiveContext { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Kinstrife.Interaction.InteractionContext.html">InteractionContext</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -293,6 +318,31 @@
   </table>
   
   
+  <a id="Kinstrife_Interaction_InteractiveObject_HasInteraction_" data-uid="Kinstrife.Interaction.InteractiveObject.HasInteraction*"></a>
+  <h4 id="Kinstrife_Interaction_InteractiveObject_HasInteraction" data-uid="Kinstrife.Interaction.InteractiveObject.HasInteraction">HasInteraction</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool HasInteraction { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
   <a id="Kinstrife_Interaction_InteractiveObject_Initialized_" data-uid="Kinstrife.Interaction.InteractiveObject.Initialized*"></a>
   <h4 id="Kinstrife_Interaction_InteractiveObject_Initialized" data-uid="Kinstrife.Interaction.InteractiveObject.Initialized">Initialized</h4>
   <div class="markdown level1 summary"></div>
@@ -318,13 +368,13 @@
   </table>
   
   
-  <a id="Kinstrife_Interaction_InteractiveObject_IsActive_" data-uid="Kinstrife.Interaction.InteractiveObject.IsActive*"></a>
-  <h4 id="Kinstrife_Interaction_InteractiveObject_IsActive" data-uid="Kinstrife.Interaction.InteractiveObject.IsActive">IsActive</h4>
+  <a id="Kinstrife_Interaction_InteractiveObject_Interaction_" data-uid="Kinstrife.Interaction.InteractiveObject.Interaction*"></a>
+  <h4 id="Kinstrife_Interaction_InteractiveObject_Interaction" data-uid="Kinstrife.Interaction.InteractiveObject.Interaction">Interaction</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public bool IsActive { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Interaction Interaction { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -336,20 +386,45 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Boolean</span></td>
+        <td><a class="xref" href="Kinstrife.Interaction.Interaction.html">Interaction</a></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   
   
-  <a id="Kinstrife_Interaction_InteractiveObject_IsInteracting_" data-uid="Kinstrife.Interaction.InteractiveObject.IsInteracting*"></a>
-  <h4 id="Kinstrife_Interaction_InteractiveObject_IsInteracting" data-uid="Kinstrife.Interaction.InteractiveObject.IsInteracting">IsInteracting</h4>
+  <a id="Kinstrife_Interaction_InteractiveObject_InteractionAction_" data-uid="Kinstrife.Interaction.InteractiveObject.InteractionAction*"></a>
+  <h4 id="Kinstrife_Interaction_InteractiveObject_InteractionAction" data-uid="Kinstrife.Interaction.InteractiveObject.InteractionAction">InteractionAction</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public bool IsInteracting { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public IInteractionAction InteractionAction { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Kinstrife.Interaction.IInteractionAction.html">IInteractionAction</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Kinstrife_Interaction_InteractiveObject_IsActive_" data-uid="Kinstrife.Interaction.InteractiveObject.IsActive*"></a>
+  <h4 id="Kinstrife_Interaction_InteractiveObject_IsActive" data-uid="Kinstrife.Interaction.InteractiveObject.IsActive">IsActive</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsActive { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -448,23 +523,57 @@
   
   
   <a id="Kinstrife_Interaction_InteractiveObject_CancelInteraction_" data-uid="Kinstrife.Interaction.InteractiveObject.CancelInteraction*"></a>
-  <h4 id="Kinstrife_Interaction_InteractiveObject_CancelInteraction" data-uid="Kinstrife.Interaction.InteractiveObject.CancelInteraction">CancelInteraction()</h4>
+  <h4 id="Kinstrife_Interaction_InteractiveObject_CancelInteraction_Kinstrife_Interaction_InteractionContext_" data-uid="Kinstrife.Interaction.InteractiveObject.CancelInteraction(Kinstrife.Interaction.InteractionContext)">CancelInteraction(InteractionContext)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void CancelInteraction()</code></pre>
+    <pre><code class="lang-csharp hljs">public void CancelInteraction(InteractionContext context)</code></pre>
   </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Kinstrife.Interaction.InteractionContext.html">InteractionContext</a></td>
+        <td><span class="parametername">context</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   
   
   <a id="Kinstrife_Interaction_InteractiveObject_CompleteInteraction_" data-uid="Kinstrife.Interaction.InteractiveObject.CompleteInteraction*"></a>
-  <h4 id="Kinstrife_Interaction_InteractiveObject_CompleteInteraction" data-uid="Kinstrife.Interaction.InteractiveObject.CompleteInteraction">CompleteInteraction()</h4>
+  <h4 id="Kinstrife_Interaction_InteractiveObject_CompleteInteraction_Kinstrife_Interaction_InteractionContext_" data-uid="Kinstrife.Interaction.InteractiveObject.CompleteInteraction(Kinstrife.Interaction.InteractionContext)">CompleteInteraction(InteractionContext)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void CompleteInteraction()</code></pre>
+    <pre><code class="lang-csharp hljs">public void CompleteInteraction(InteractionContext context)</code></pre>
   </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Kinstrife.Interaction.InteractionContext.html">InteractionContext</a></td>
+        <td><span class="parametername">context</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   
   
   <a id="Kinstrife_Interaction_InteractiveObject_GetDescription_" data-uid="Kinstrife.Interaction.InteractiveObject.GetDescription*"></a>
@@ -560,12 +669,12 @@
   
   
   <a id="Kinstrife_Interaction_InteractiveObject_StartInteraction_" data-uid="Kinstrife.Interaction.InteractiveObject.StartInteraction*"></a>
-  <h4 id="Kinstrife_Interaction_InteractiveObject_StartInteraction_Kinstrife_Interaction_InteractMode_" data-uid="Kinstrife.Interaction.InteractiveObject.StartInteraction(Kinstrife.Interaction.InteractMode)">StartInteraction(InteractMode)</h4>
+  <h4 id="Kinstrife_Interaction_InteractiveObject_StartInteraction_Kinstrife_Interaction_InteractionContext_" data-uid="Kinstrife.Interaction.InteractiveObject.StartInteraction(Kinstrife.Interaction.InteractionContext)">StartInteraction(InteractionContext)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void StartInteraction(InteractMode mode)</code></pre>
+    <pre><code class="lang-csharp hljs">public void StartInteraction(InteractionContext context)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -578,8 +687,8 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="Kinstrife.Interaction.InteractMode.html">InteractMode</a></td>
-        <td><span class="parametername">mode</span></td>
+        <td><a class="xref" href="Kinstrife.Interaction.InteractionContext.html">InteractionContext</a></td>
+        <td><span class="parametername">context</span></td>
         <td></td>
       </tr>
     </tbody>

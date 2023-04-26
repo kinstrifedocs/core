@@ -87,12 +87,6 @@
     <h5>Implements</h5>
     <div><a class="xref" href="Kinstrife.Core.DependencyInjection.ICacheReferences.html">ICacheReferences</a></div>
     <div><a class="xref" href="Kinstrife.Core.DependencyInjection.IDependent.html">IDependent</a></div>
-    <div><a class="xref" href="Kinstrife.Actor.Rendering.IHasColourProperty.html">IHasColourProperty</a></div>
-    <div><a class="xref" href="Kinstrife.Actor.Rendering.IHasDirtProperty.html">IHasDirtProperty</a></div>
-    <div><a class="xref" href="Kinstrife.Actor.Rendering.IHasWetnessProperty.html">IHasWetnessProperty</a></div>
-    <div><a class="xref" href="Kinstrife.Actor.Rendering.IHasWindProperty.html">IHasWindProperty</a></div>
-    <div><a class="xref" href="Kinstrife.Actor.Rendering.IHasWearProperty.html">IHasWearProperty</a></div>
-    <div><a class="xref" href="Kinstrife.Actor.Rendering.IRendererProperty.html">IRendererProperty</a></div>
   </div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
@@ -101,9 +95,6 @@
     </div>
     <div>
       <a class="xref" href="Kinstrife.Actor.Rendering.ActorRendererComponent.html#Kinstrife_Actor_Rendering_ActorRendererComponent_root">ActorRendererComponent.root</a>
-    </div>
-    <div>
-      <a class="xref" href="Kinstrife.Actor.Rendering.ActorRendererComponent.html#Kinstrife_Actor_Rendering_ActorRendererComponent_SetBaseColor_Color_">ActorRendererComponent.SetBaseColor(Color)</a>
     </div>
     <div>
       <a class="xref" href="Kinstrife.Actor.Rendering.ActorRendererComponent.html#Kinstrife_Actor_Rendering_ActorRendererComponent_CacheReferences">ActorRendererComponent.CacheReferences()</a>
@@ -179,7 +170,7 @@
   <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
   <h5 id="Kinstrife_Actor_Rendering_ClothingComponent_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class ClothingComponent : AttachmentComponent, ICacheReferences, IDependent, IHasColourProperty, IHasDirtProperty, IHasWetnessProperty, IHasWindProperty, IHasWearProperty, IRendererProperty</code></pre>
+    <pre><code class="lang-csharp hljs">public class ClothingComponent : AttachmentComponent, ICacheReferences, IDependent</code></pre>
   </div>
   <h3 id="properties">Properties
   </h3>
@@ -278,148 +269,12 @@
   </div>
   <h5 class="overrides">Overrides</h5>
   <div><a class="xref" href="Kinstrife.Renderers.RendererComponent.html#Kinstrife_Renderers_RendererComponent_Refresh">RendererComponent.Refresh()</a></div>
-  
-  
-  <a id="Kinstrife_Actor_Rendering_ClothingComponent_SetDirt_" data-uid="Kinstrife.Actor.Rendering.ClothingComponent.SetDirt*"></a>
-  <h4 id="Kinstrife_Actor_Rendering_ClothingComponent_SetDirt_System_Single_Color_" data-uid="Kinstrife.Actor.Rendering.ClothingComponent.SetDirt(System.Single,Color)">SetDirt(Single, Color)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void SetDirt(float dirt, Color color)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Single</span></td>
-        <td><span class="parametername">dirt</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><span class="xref">Color</span></td>
-        <td><span class="parametername">color</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="Kinstrife_Actor_Rendering_ClothingComponent_SetWear_" data-uid="Kinstrife.Actor.Rendering.ClothingComponent.SetWear*"></a>
-  <h4 id="Kinstrife_Actor_Rendering_ClothingComponent_SetWear_System_Single_" data-uid="Kinstrife.Actor.Rendering.ClothingComponent.SetWear(System.Single)">SetWear(Single)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void SetWear(float wearDesaturation)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Single</span></td>
-        <td><span class="parametername">wearDesaturation</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="Kinstrife_Actor_Rendering_ClothingComponent_SetWetness_" data-uid="Kinstrife.Actor.Rendering.ClothingComponent.SetWetness*"></a>
-  <h4 id="Kinstrife_Actor_Rendering_ClothingComponent_SetWetness_System_Single_" data-uid="Kinstrife.Actor.Rendering.ClothingComponent.SetWetness(System.Single)">SetWetness(Single)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void SetWetness(float wetnessLevel)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Single</span></td>
-        <td><span class="parametername">wetnessLevel</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="Kinstrife_Actor_Rendering_ClothingComponent_SetWind_" data-uid="Kinstrife.Actor.Rendering.ClothingComponent.SetWind*"></a>
-  <h4 id="Kinstrife_Actor_Rendering_ClothingComponent_SetWind_System_Single_Vector4_" data-uid="Kinstrife.Actor.Rendering.ClothingComponent.SetWind(System.Single,Vector4)">SetWind(Single, Vector4)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void SetWind(float wind, Vector4 direction)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Single</span></td>
-        <td><span class="parametername">wind</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><span class="xref">Vector4</span></td>
-        <td><span class="parametername">direction</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
   <h3 id="implements">Implements</h3>
   <div>
       <a class="xref" href="Kinstrife.Core.DependencyInjection.ICacheReferences.html">ICacheReferences</a>
   </div>
   <div>
       <a class="xref" href="Kinstrife.Core.DependencyInjection.IDependent.html">IDependent</a>
-  </div>
-  <div>
-      <a class="xref" href="Kinstrife.Actor.Rendering.IHasColourProperty.html">IHasColourProperty</a>
-  </div>
-  <div>
-      <a class="xref" href="Kinstrife.Actor.Rendering.IHasDirtProperty.html">IHasDirtProperty</a>
-  </div>
-  <div>
-      <a class="xref" href="Kinstrife.Actor.Rendering.IHasWetnessProperty.html">IHasWetnessProperty</a>
-  </div>
-  <div>
-      <a class="xref" href="Kinstrife.Actor.Rendering.IHasWindProperty.html">IHasWindProperty</a>
-  </div>
-  <div>
-      <a class="xref" href="Kinstrife.Actor.Rendering.IHasWearProperty.html">IHasWearProperty</a>
-  </div>
-  <div>
-      <a class="xref" href="Kinstrife.Actor.Rendering.IRendererProperty.html">IRendererProperty</a>
   </div>
 </article>
           </div>
