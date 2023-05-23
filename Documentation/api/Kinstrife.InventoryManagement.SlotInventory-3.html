@@ -438,7 +438,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public bool CanFit(T identifier, U slot, uint amount = 1U)</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual bool CanFit(T identifier, U slot, uint amount = 1U)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -490,7 +490,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public bool CanFit(T identifier, uint amount = 1U)</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual bool CanFit(T identifier, uint amount = 1U)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -713,6 +713,60 @@
     <tbody>
       <tr>
         <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Kinstrife_InventoryManagement_SlotInventory_3_CopyFrom_" data-uid="Kinstrife.InventoryManagement.SlotInventory`3.CopyFrom*"></a>
+  <h4 id="Kinstrife_InventoryManagement_SlotInventory_3_CopyFrom_Kinstrife_InventoryManagement_SlotInventory__0__1__2__" data-uid="Kinstrife.InventoryManagement.SlotInventory`3.CopyFrom(Kinstrife.InventoryManagement.SlotInventory{`0,`1,`2})">CopyFrom(SlotInventory&lt;T, U, V&gt;)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void CopyFrom(SlotInventory&lt;T, U, V&gt; other)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Kinstrife.InventoryManagement.SlotInventory-3.html">SlotInventory</a>&lt;T, U, V&gt;</td>
+        <td><span class="parametername">other</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Kinstrife_InventoryManagement_SlotInventory_3_CopyFrom_" data-uid="Kinstrife.InventoryManagement.SlotInventory`3.CopyFrom*"></a>
+  <h4 id="Kinstrife_InventoryManagement_SlotInventory_3_CopyFrom_System_Collections_Generic_IReadOnlyDictionary__0_System_UInt32__" data-uid="Kinstrife.InventoryManagement.SlotInventory`3.CopyFrom(System.Collections.Generic.IReadOnlyDictionary{`0,System.UInt32})">CopyFrom(IReadOnlyDictionary&lt;T, UInt32&gt;)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void CopyFrom(IReadOnlyDictionary&lt;T, uint&gt; source)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IReadOnlyDictionary</span>&lt;T, <span class="xref">System.UInt32</span>&gt;</td>
+        <td><span class="parametername">source</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -1701,7 +1755,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public bool TryRemove(T identifier, U slot, uint amount = 1U, bool removeAmountOrNothing = true, bool clearSlotIfEmpty = true)</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual bool TryRemove(T identifier, U slot, uint amount = 1U, bool removeAmountOrNothing = true, bool clearSlotIfEmpty = true)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1877,6 +1931,31 @@
   </table>
   <h3 id="eii">Explicit Interface Implementations
   </h3>
+  
+  
+  <a id="Kinstrife_InventoryManagement_SlotInventory_3_Kinstrife_InventoryManagement_IInventory_T__GetEnumerator_" data-uid="Kinstrife.InventoryManagement.SlotInventory`3.Kinstrife#InventoryManagement#IInventory{T}#GetEnumerator*"></a>
+  <h4 id="Kinstrife_InventoryManagement_SlotInventory_3_Kinstrife_InventoryManagement_IInventory_T__GetEnumerator" data-uid="Kinstrife.InventoryManagement.SlotInventory`3.Kinstrife#InventoryManagement#IInventory{T}#GetEnumerator">IInventory&lt;T&gt;.GetEnumerator()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IEnumerator&lt;KeyValuePair&lt;T, uint&gt;&gt; IInventory&lt;T&gt;.GetEnumerator()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IEnumerator</span>&lt;<span class="xref">System.Collections.Generic.KeyValuePair</span>&lt;T, <span class="xref">System.UInt32</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   
   
   <a id="Kinstrife_InventoryManagement_SlotInventory_3_System_Collections_IEnumerable_GetEnumerator_" data-uid="Kinstrife.InventoryManagement.SlotInventory`3.System#Collections#IEnumerable#GetEnumerator*"></a>

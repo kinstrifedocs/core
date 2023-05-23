@@ -87,18 +87,44 @@
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public abstract class AssetSelectViewModel : ViewModelComponent</code></pre>
   </div>
-  <h3 id="fields">Fields
+  <h3 id="properties">Properties
   </h3>
   
   
-  <h4 id="Kinstrife_UI_AssetSelectViewModel_controlType" data-uid="Kinstrife.UI.AssetSelectViewModel.controlType">controlType</h4>
+  <a id="Kinstrife_UI_AssetSelectViewModel_bindableData_" data-uid="Kinstrife.UI.AssetSelectViewModel.bindableData*"></a>
+  <h4 id="Kinstrife_UI_AssetSelectViewModel_bindableData" data-uid="Kinstrife.UI.AssetSelectViewModel.bindableData">bindableData</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public ControlType controlType</code></pre>
+    <pre><code class="lang-csharp hljs">public abstract IList&lt;ContextBindableObject&gt; bindableData { get; }</code></pre>
   </div>
-  <h5 class="fieldValue">Field Value</h5>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IList</span>&lt;<span class="xref">ContextBindableObject</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Kinstrife_UI_AssetSelectViewModel_DefaultControlType_" data-uid="Kinstrife.UI.AssetSelectViewModel.DefaultControlType*"></a>
+  <h4 id="Kinstrife_UI_AssetSelectViewModel_DefaultControlType" data-uid="Kinstrife.UI.AssetSelectViewModel.DefaultControlType">DefaultControlType</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public abstract ControlType DefaultControlType { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
       <tr>
@@ -115,14 +141,15 @@
   </table>
   
   
-  <h4 id="Kinstrife_UI_AssetSelectViewModel_data" data-uid="Kinstrife.UI.AssetSelectViewModel.data">data</h4>
+  <a id="Kinstrife_UI_AssetSelectViewModel_DisableIfEmpty_" data-uid="Kinstrife.UI.AssetSelectViewModel.DisableIfEmpty*"></a>
+  <h4 id="Kinstrife_UI_AssetSelectViewModel_DisableIfEmpty" data-uid="Kinstrife.UI.AssetSelectViewModel.DisableIfEmpty">DisableIfEmpty</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public List&lt;ContextBindableObject&gt; data</code></pre>
+    <pre><code class="lang-csharp hljs">public bool DisableIfEmpty { get; }</code></pre>
   </div>
-  <h5 class="fieldValue">Field Value</h5>
+  <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
       <tr>
@@ -132,22 +159,20 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Generic.List</span>&lt;<span class="xref">ContextBindableObject</span>&gt;</td>
+        <td><span class="xref">System.Boolean</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
-  <h3 id="properties">Properties
-  </h3>
   
   
-  <a id="Kinstrife_UI_AssetSelectViewModel_DisableIfEmpty_" data-uid="Kinstrife.UI.AssetSelectViewModel.DisableIfEmpty*"></a>
-  <h4 id="Kinstrife_UI_AssetSelectViewModel_DisableIfEmpty" data-uid="Kinstrife.UI.AssetSelectViewModel.DisableIfEmpty">DisableIfEmpty</h4>
+  <a id="Kinstrife_UI_AssetSelectViewModel_IsEmpty_" data-uid="Kinstrife.UI.AssetSelectViewModel.IsEmpty*"></a>
+  <h4 id="Kinstrife_UI_AssetSelectViewModel_IsEmpty" data-uid="Kinstrife.UI.AssetSelectViewModel.IsEmpty">IsEmpty</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public bool DisableIfEmpty { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public bool IsEmpty { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -189,8 +214,70 @@
       </tr>
     </tbody>
   </table>
+  
+  
+  <a id="Kinstrife_UI_AssetSelectViewModel_SelectedIndices_" data-uid="Kinstrife.UI.AssetSelectViewModel.SelectedIndices*"></a>
+  <h4 id="Kinstrife_UI_AssetSelectViewModel_SelectedIndices" data-uid="Kinstrife.UI.AssetSelectViewModel.SelectedIndices">SelectedIndices</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual IEnumerable&lt;int&gt; SelectedIndices { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   <h3 id="methods">Methods
   </h3>
+  
+  
+  <a id="Kinstrife_UI_AssetSelectViewModel_AddData_" data-uid="Kinstrife.UI.AssetSelectViewModel.AddData*"></a>
+  <h4 id="Kinstrife_UI_AssetSelectViewModel_AddData_ContextBindableObject_" data-uid="Kinstrife.UI.AssetSelectViewModel.AddData(ContextBindableObject)">AddData(ContextBindableObject)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void AddData(ContextBindableObject entry)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">ContextBindableObject</span></td>
+        <td><span class="parametername">entry</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Kinstrife_UI_AssetSelectViewModel_ClearData_" data-uid="Kinstrife.UI.AssetSelectViewModel.ClearData*"></a>
+  <h4 id="Kinstrife_UI_AssetSelectViewModel_ClearData" data-uid="Kinstrife.UI.AssetSelectViewModel.ClearData">ClearData()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void ClearData()</code></pre>
+  </div>
   
   
   <a id="Kinstrife_UI_AssetSelectViewModel_RefreshSourceData_" data-uid="Kinstrife.UI.AssetSelectViewModel.RefreshSourceData*"></a>

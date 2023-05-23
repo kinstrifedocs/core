@@ -80,8 +80,8 @@
     <div class="level0"><span class="xref">System.Object</span></div>
     <div class="level1"><a class="xref" href="Kinstrife.UI.AssetSelectViewModel.html">AssetSelectViewModel</a></div>
     <div class="level2"><span class="xref">AssetSelectViewModel&lt;T&gt;</span></div>
-      <div class="level3"><a class="xref" href="Kinstrife.UI.AssetSelectViewModelAddressable-1.html">AssetSelectViewModelAddressable&lt;T&gt;</a></div>
-      <div class="level3"><a class="xref" href="Kinstrife.UI.DbViewModel-1.html">DbViewModel&lt;T&gt;</a></div>
+      <div class="level3"><a class="xref" href="Kinstrife.UI.ListSelectViewModel-1.html">ListSelectViewModel&lt;T&gt;</a></div>
+      <div class="level3"><a class="xref" href="Kinstrife.UI.SelectViewModel-1.html">SelectViewModel&lt;T&gt;</a></div>
   </div>
   <div class="implements">
     <h5>Implements</h5>
@@ -95,13 +95,25 @@
       <a class="xref" href="Kinstrife.UI.AssetSelectViewModel.html#Kinstrife_UI_AssetSelectViewModel_DisableIfEmpty">AssetSelectViewModel.DisableIfEmpty</a>
     </div>
     <div>
-      <a class="xref" href="Kinstrife.UI.AssetSelectViewModel.html#Kinstrife_UI_AssetSelectViewModel_controlType">AssetSelectViewModel.controlType</a>
+      <a class="xref" href="Kinstrife.UI.AssetSelectViewModel.html#Kinstrife_UI_AssetSelectViewModel_bindableData">AssetSelectViewModel.bindableData</a>
     </div>
     <div>
-      <a class="xref" href="Kinstrife.UI.AssetSelectViewModel.html#Kinstrife_UI_AssetSelectViewModel_data">AssetSelectViewModel.data</a>
+      <a class="xref" href="Kinstrife.UI.AssetSelectViewModel.html#Kinstrife_UI_AssetSelectViewModel_DefaultControlType">AssetSelectViewModel.DefaultControlType</a>
     </div>
     <div>
       <a class="xref" href="Kinstrife.UI.AssetSelectViewModel.html#Kinstrife_UI_AssetSelectViewModel_onSelectObject">AssetSelectViewModel.onSelectObject</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.UI.AssetSelectViewModel.html#Kinstrife_UI_AssetSelectViewModel_AddData_ContextBindableObject_">AssetSelectViewModel.AddData(ContextBindableObject)</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.UI.AssetSelectViewModel.html#Kinstrife_UI_AssetSelectViewModel_ClearData">AssetSelectViewModel.ClearData()</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.UI.AssetSelectViewModel.html#Kinstrife_UI_AssetSelectViewModel_IsEmpty">AssetSelectViewModel.IsEmpty</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.UI.AssetSelectViewModel.html#Kinstrife_UI_AssetSelectViewModel_SelectedIndices">AssetSelectViewModel.SelectedIndices</a>
     </div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Kinstrife.UI.html">Kinstrife.UI</a></h6>
@@ -226,6 +238,31 @@ public IEnumerable&lt;T&gt; SourceData</code></pre>
   </table>
   <h3 id="properties">Properties
   </h3>
+  
+  
+  <a id="Kinstrife_UI_AssetSelectViewModel_1_hardRefresh_" data-uid="Kinstrife.UI.AssetSelectViewModel`1.hardRefresh*"></a>
+  <h4 id="Kinstrife_UI_AssetSelectViewModel_1_hardRefresh" data-uid="Kinstrife.UI.AssetSelectViewModel`1.hardRefresh">hardRefresh</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual bool hardRefresh { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   
   
   <a id="Kinstrife_UI_AssetSelectViewModel_1_hasActiveState_" data-uid="Kinstrife.UI.AssetSelectViewModel`1.hasActiveState*"></a>
@@ -487,7 +524,7 @@ public IEnumerable&lt;T&gt; SourceData</code></pre>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public async UniTaskVoid LoadSourceData(bool force)</code></pre>
+    <pre><code class="lang-csharp hljs">public async UniTask LoadSourceData(bool force)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -516,7 +553,7 @@ public IEnumerable&lt;T&gt; SourceData</code></pre>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">UniTaskVoid</span></td>
+        <td><span class="xref">UniTask</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -549,12 +586,12 @@ public IEnumerable&lt;T&gt; SourceData</code></pre>
   
   
   <a id="Kinstrife_UI_AssetSelectViewModel_1_OnSelectEntry_" data-uid="Kinstrife.UI.AssetSelectViewModel`1.OnSelectEntry*"></a>
-  <h4 id="Kinstrife_UI_AssetSelectViewModel_1_OnSelectEntry_System_Int32__0_" data-uid="Kinstrife.UI.AssetSelectViewModel`1.OnSelectEntry(System.Int32,`0)">OnSelectEntry(Int32, T)</h4>
+  <h4 id="Kinstrife_UI_AssetSelectViewModel_1_OnSelectEntry_System_Int32__0_MouseButton_" data-uid="Kinstrife.UI.AssetSelectViewModel`1.OnSelectEntry(System.Int32,`0,MouseButton)">OnSelectEntry(Int32, T, MouseButton)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected virtual void OnSelectEntry(int index, T item)</code></pre>
+    <pre><code class="lang-csharp hljs">protected virtual void OnSelectEntry(int index, T item, MouseButton btn)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -574,6 +611,11 @@ public IEnumerable&lt;T&gt; SourceData</code></pre>
       <tr>
         <td><span class="xref">T</span></td>
         <td><span class="parametername">item</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">MouseButton</span></td>
+        <td><span class="parametername">btn</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -613,12 +655,12 @@ public IEnumerable&lt;T&gt; SourceData</code></pre>
   
   
   <a id="Kinstrife_UI_AssetSelectViewModel_1_SelectEntryAt_" data-uid="Kinstrife.UI.AssetSelectViewModel`1.SelectEntryAt*"></a>
-  <h4 id="Kinstrife_UI_AssetSelectViewModel_1_SelectEntryAt_System_Int32_" data-uid="Kinstrife.UI.AssetSelectViewModel`1.SelectEntryAt(System.Int32)">SelectEntryAt(Int32)</h4>
+  <h4 id="Kinstrife_UI_AssetSelectViewModel_1_SelectEntryAt_System_Int32_MouseButton_" data-uid="Kinstrife.UI.AssetSelectViewModel`1.SelectEntryAt(System.Int32,MouseButton)">SelectEntryAt(Int32, MouseButton)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void SelectEntryAt(int index)</code></pre>
+    <pre><code class="lang-csharp hljs">public void SelectEntryAt(int index, MouseButton btn)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -633,6 +675,58 @@ public IEnumerable&lt;T&gt; SourceData</code></pre>
       <tr>
         <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">index</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">MouseButton</span></td>
+        <td><span class="parametername">btn</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Kinstrife_UI_AssetSelectViewModel_1_TryAddSourceData_" data-uid="Kinstrife.UI.AssetSelectViewModel`1.TryAddSourceData*"></a>
+  <h4 id="Kinstrife_UI_AssetSelectViewModel_1_TryAddSourceData_System_Int32__0_" data-uid="Kinstrife.UI.AssetSelectViewModel`1.TryAddSourceData(System.Int32,`0)">TryAddSourceData(Int32, T)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected bool TryAddSourceData(int i, T source)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">i</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">T</span></td>
+        <td><span class="parametername">source</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -688,7 +782,7 @@ public IEnumerable&lt;T&gt; SourceData</code></pre>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public event Action&lt;int, T&gt; onSelectItem</code></pre>
+    <pre><code class="lang-csharp hljs">public event Action&lt;int, T, MouseButton&gt; onSelectItem</code></pre>
   </div>
   <h5 class="eventType">Event Type</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -700,7 +794,7 @@ public IEnumerable&lt;T&gt; SourceData</code></pre>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Kinstrife.Action</span>&lt;<span class="xref">System.Int32</span>, T&gt;</td>
+        <td><span class="xref">Kinstrife.Action</span>&lt;<span class="xref">System.Int32</span>, T, <span class="xref">MouseButton</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>

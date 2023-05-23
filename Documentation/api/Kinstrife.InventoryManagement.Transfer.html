@@ -421,6 +421,73 @@
   </table>
   
   
+  <a id="Kinstrife_InventoryManagement_Transfer_CanTransferAll_" data-uid="Kinstrife.InventoryManagement.Transfer.CanTransferAll*"></a>
+  <h4 id="Kinstrife_InventoryManagement_Transfer_CanTransferAll__1_Kinstrife_InventoryManagement_IInventory___0__Kinstrife_InventoryManagement_IInventory___0__System_Collections_Generic_IEnumerable___0__" data-uid="Kinstrife.InventoryManagement.Transfer.CanTransferAll``1(Kinstrife.InventoryManagement.IInventory{``0},Kinstrife.InventoryManagement.IInventory{``0},System.Collections.Generic.IEnumerable{``0})">CanTransferAll&lt;T&gt;(IInventory&lt;T&gt;, IInventory&lt;T&gt;, IEnumerable&lt;T&gt;)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool CanTransferAll&lt;T&gt;(IInventory&lt;T&gt; source, IInventory&lt;T&gt; destination, IEnumerable&lt;T&gt; keys)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Kinstrife.InventoryManagement.IInventory-1.html">IInventory</a>&lt;T&gt;</td>
+        <td><span class="parametername">source</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Kinstrife.InventoryManagement.IInventory-1.html">IInventory</a>&lt;T&gt;</td>
+        <td><span class="parametername">destination</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;T&gt;</td>
+        <td><span class="parametername">keys</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
   <a id="Kinstrife_InventoryManagement_Transfer_CanTransferAtSlot_" data-uid="Kinstrife.InventoryManagement.Transfer.CanTransferAtSlot*"></a>
   <h4 id="Kinstrife_InventoryManagement_Transfer_CanTransferAtSlot__2_Kinstrife_InventoryManagement_IStackableSlotInventory___0___1____0_Kinstrife_InventoryManagement_IInventory___0____0_" data-uid="Kinstrife.InventoryManagement.Transfer.CanTransferAtSlot``2(Kinstrife.InventoryManagement.IStackableSlotInventory{``0,``1},``0,Kinstrife.InventoryManagement.IInventory{``0},``0)">CanTransferAtSlot&lt;T, U&gt;(IStackableSlotInventory&lt;T, U&gt;, T, IInventory&lt;T&gt;, T)</h4>
   <div class="markdown level1 summary"></div>
@@ -975,6 +1042,78 @@
       </tr>
       <tr>
         <td><span class="parametername">U</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Kinstrife_InventoryManagement_Transfer_TryTransferAll_" data-uid="Kinstrife.InventoryManagement.Transfer.TryTransferAll*"></a>
+  <h4 id="Kinstrife_InventoryManagement_Transfer_TryTransferAll__1_Kinstrife_InventoryManagement_IInventory___0__Kinstrife_InventoryManagement_IInventory___0__System_Collections_Generic_IEnumerable___0__System_Boolean_" data-uid="Kinstrife.InventoryManagement.Transfer.TryTransferAll``1(Kinstrife.InventoryManagement.IInventory{``0},Kinstrife.InventoryManagement.IInventory{``0},System.Collections.Generic.IEnumerable{``0},System.Boolean)">TryTransferAll&lt;T&gt;(IInventory&lt;T&gt;, IInventory&lt;T&gt;, IEnumerable&lt;T&gt;, Boolean)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool TryTransferAll&lt;T&gt;(IInventory&lt;T&gt; source, IInventory&lt;T&gt; destination, IEnumerable&lt;T&gt; keys, bool addAllOrNothing = true)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Kinstrife.InventoryManagement.IInventory-1.html">IInventory</a>&lt;T&gt;</td>
+        <td><span class="parametername">source</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Kinstrife.InventoryManagement.IInventory-1.html">IInventory</a>&lt;T&gt;</td>
+        <td><span class="parametername">destination</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;T&gt;</td>
+        <td><span class="parametername">keys</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">addAllOrNothing</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T</span></td>
         <td></td>
       </tr>
     </tbody>
