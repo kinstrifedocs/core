@@ -83,11 +83,15 @@
       <div class="level3"><a class="xref" href="Kinstrife.InventoryManagement.ObjectSlotInventoryBehaviour-5.html">ObjectSlotInventoryBehaviour&lt;O, T, U, V, W&gt;</a></div>
       <div class="level3"><a class="xref" href="Kinstrife.InventoryManagement.SlotInventoryBehaviour-4.html">SlotInventoryBehaviour&lt;T, U, V, W&gt;</a></div>
   </div>
+  <div class="implements">
+    <h5>Implements</h5>
+    <div><a class="xref" href="Kinstrife.InventoryManagement.IHasInventory-2.html">IHasInventory</a>&lt;W, T&gt;</div>
+  </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Kinstrife.InventoryManagement.html">Kinstrife.InventoryManagement</a></h6>
   <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
   <h5 id="Kinstrife_InventoryManagement_InventoryBehaviour_2_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class InventoryBehaviour&lt;T, W&gt; : InventoryBehaviour where W : IInventory&lt;T&gt;, new()</code></pre>
+    <pre><code class="lang-csharp hljs">public class InventoryBehaviour&lt;T, W&gt; : InventoryBehaviour, IHasInventory&lt;W, T&gt; where W : IInventory&lt;T&gt;, new()</code></pre>
   </div>
   <h5 class="typeParameters">Type Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -135,6 +139,10 @@
       </tr>
     </tbody>
   </table>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <a class="xref" href="Kinstrife.InventoryManagement.IHasInventory-2.html">IHasInventory&lt;T, U&gt;</a>
+  </div>
 </article>
           </div>
           

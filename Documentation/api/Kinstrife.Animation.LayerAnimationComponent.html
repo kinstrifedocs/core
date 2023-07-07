@@ -148,9 +148,6 @@
       <a class="xref" href="Kinstrife.Animation.AnimationComponent.html#Kinstrife_Animation_AnimationComponent_OnDisable">AnimationComponent.OnDisable()</a>
     </div>
     <div>
-      <a class="xref" href="Kinstrife.Animation.AnimationComponent.html#Kinstrife_Animation_AnimationComponent_InitializeInGraph_PlayableGraph_">AnimationComponent.InitializeInGraph(PlayableGraph)</a>
-    </div>
-    <div>
       <a class="xref" href="Kinstrife.Animation.AnimationComponent.html#Kinstrife_Animation_AnimationComponent_InitializeFromDirector">AnimationComponent.InitializeFromDirector()</a>
     </div>
     <div>
@@ -212,10 +209,34 @@
   <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
   <h5 id="Kinstrife_Animation_LayerAnimationComponent_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public abstract class LayerAnimationComponent : AnimationComponent, IAnimationPlayer, ICacheReferences, IInstall, IDependent, ILayerAnimator, IWeightedAnimator</code></pre>
+    <pre><code class="lang-csharp hljs">public class LayerAnimationComponent : AnimationComponent, IAnimationPlayer, ICacheReferences, IInstall, IDependent, ILayerAnimator, IWeightedAnimator</code></pre>
   </div>
   <h3 id="fields">Fields
   </h3>
+  
+  
+  <h4 id="Kinstrife_Animation_LayerAnimationComponent_asset" data-uid="Kinstrife.Animation.LayerAnimationComponent.asset">asset</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected AnimationAssetBase asset</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Kinstrife.Animation.AnimationAssetBase.html">AnimationAssetBase</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   
   
   <h4 id="Kinstrife_Animation_LayerAnimationComponent_layer" data-uid="Kinstrife.Animation.LayerAnimationComponent.layer">layer</h4>
@@ -429,6 +450,31 @@
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public bool HasEndEvent { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Kinstrife_Animation_LayerAnimationComponent_HasOverrideEndEvent_" data-uid="Kinstrife.Animation.LayerAnimationComponent.HasOverrideEndEvent*"></a>
+  <h4 id="Kinstrife_Animation_LayerAnimationComponent_HasOverrideEndEvent" data-uid="Kinstrife.Animation.LayerAnimationComponent.HasOverrideEndEvent">HasOverrideEndEvent</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool HasOverrideEndEvent { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -916,6 +962,35 @@
   </table>
   
   
+  <a id="Kinstrife_Animation_LayerAnimationComponent_InitializeInGraph_" data-uid="Kinstrife.Animation.LayerAnimationComponent.InitializeInGraph*"></a>
+  <h4 id="Kinstrife_Animation_LayerAnimationComponent_InitializeInGraph_PlayableGraph_" data-uid="Kinstrife.Animation.LayerAnimationComponent.InitializeInGraph(PlayableGraph)">InitializeInGraph(PlayableGraph)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override void InitializeInGraph(PlayableGraph graph)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">PlayableGraph</span></td>
+        <td><span class="parametername">graph</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Kinstrife.Animation.AnimationComponent.html#Kinstrife_Animation_AnimationComponent_InitializeInGraph_PlayableGraph_">AnimationComponent.InitializeInGraph(PlayableGraph)</a></div>
+  
+  
   <a id="Kinstrife_Animation_LayerAnimationComponent_InternalPlay_" data-uid="Kinstrife.Animation.LayerAnimationComponent.InternalPlay*"></a>
   <h4 id="Kinstrife_Animation_LayerAnimationComponent_InternalPlay" data-uid="Kinstrife.Animation.LayerAnimationComponent.InternalPlay">InternalPlay()</h4>
   <div class="markdown level1 summary"></div>
@@ -970,33 +1045,6 @@
     <tbody>
       <tr>
         <td><a class="xref" href="Kinstrife.Animation.AnimationAsset.html">AnimationAsset</a></td>
-        <td><span class="parametername">asset</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="Kinstrife_Animation_LayerAnimationComponent_Play_" data-uid="Kinstrife.Animation.LayerAnimationComponent.Play*"></a>
-  <h4 id="Kinstrife_Animation_LayerAnimationComponent_Play_Kinstrife_Animation_AnimationAssetBase_" data-uid="Kinstrife.Animation.LayerAnimationComponent.Play(Kinstrife.Animation.AnimationAssetBase)">Play(AnimationAssetBase)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual void Play(AnimationAssetBase asset)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Kinstrife.Animation.AnimationAssetBase.html">AnimationAssetBase</a></td>
         <td><span class="parametername">asset</span></td>
         <td></td>
       </tr>
@@ -1068,6 +1116,33 @@
     <tbody>
       <tr>
         <td><span class="parametername">T</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Kinstrife_Animation_LayerAnimationComponent_PlayBase_" data-uid="Kinstrife.Animation.LayerAnimationComponent.PlayBase*"></a>
+  <h4 id="Kinstrife_Animation_LayerAnimationComponent_PlayBase_Kinstrife_Animation_AnimationAssetBase_" data-uid="Kinstrife.Animation.LayerAnimationComponent.PlayBase(Kinstrife.Animation.AnimationAssetBase)">PlayBase(AnimationAssetBase)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void PlayBase(AnimationAssetBase asset)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Kinstrife.Animation.AnimationAssetBase.html">AnimationAssetBase</a></td>
+        <td><span class="parametername">asset</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -1231,6 +1306,16 @@
   </div>
   <h5 class="overrides">Overrides</h5>
   <div><a class="xref" href="Kinstrife.Animation.AnimationComponent.html#Kinstrife_Animation_AnimationComponent_Stop">AnimationComponent.Stop()</a></div>
+  
+  
+  <a id="Kinstrife_Animation_LayerAnimationComponent_TryMakeTopPriority_" data-uid="Kinstrife.Animation.LayerAnimationComponent.TryMakeTopPriority*"></a>
+  <h4 id="Kinstrife_Animation_LayerAnimationComponent_TryMakeTopPriority" data-uid="Kinstrife.Animation.LayerAnimationComponent.TryMakeTopPriority">TryMakeTopPriority()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void TryMakeTopPriority()</code></pre>
+  </div>
   <h3 id="eii">Explicit Interface Implementations
   </h3>
   

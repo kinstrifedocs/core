@@ -244,13 +244,13 @@
   </table>
   
   
-  <a id="Kinstrife_Application_SceneLoader_RegisterSceneInstanceOperation_" data-uid="Kinstrife.Application.SceneLoader.RegisterSceneInstanceOperation*"></a>
-  <h4 id="Kinstrife_Application_SceneLoader_RegisterSceneInstanceOperation_System_Object_AsyncOperationHandle_SceneInstance__" data-uid="Kinstrife.Application.SceneLoader.RegisterSceneInstanceOperation(System.Object,AsyncOperationHandle{SceneInstance})">RegisterSceneInstanceOperation(Object, AsyncOperationHandle&lt;SceneInstance&gt;)</h4>
+  <a id="Kinstrife_Application_SceneLoader_LoadSceneInBackground_" data-uid="Kinstrife.Application.SceneLoader.LoadSceneInBackground*"></a>
+  <h4 id="Kinstrife_Application_SceneLoader_LoadSceneInBackground_Kinstrife_Application_SceneReference_System_Threading_CancellationTokenSource_" data-uid="Kinstrife.Application.SceneLoader.LoadSceneInBackground(Kinstrife.Application.SceneReference,System.Threading.CancellationTokenSource)">LoadSceneInBackground(SceneReference, CancellationTokenSource)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static void RegisterSceneInstanceOperation(object key, AsyncOperationHandle&lt;SceneInstance&gt; handle)</code></pre>
+    <pre><code class="lang-csharp hljs">public async UniTask LoadSceneInBackground(SceneReference sceneRef, CancellationTokenSource cts)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -263,13 +263,28 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Object</span></td>
-        <td><span class="parametername">key</span></td>
+        <td><a class="xref" href="Kinstrife.Application.SceneReference.html">SceneReference</a></td>
+        <td><span class="parametername">sceneRef</span></td>
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">AsyncOperationHandle</span>&lt;<span class="xref">SceneInstance</span>&gt;</td>
-        <td><span class="parametername">handle</span></td>
+        <td><span class="xref">System.Threading.CancellationTokenSource</span></td>
+        <td><span class="parametername">cts</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">UniTask</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -339,6 +354,179 @@
     <tbody>
       <tr>
         <td><span class="xref">UniTask</span>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Kinstrife_Application_SceneLoader_TryActivateScene_" data-uid="Kinstrife.Application.SceneLoader.TryActivateScene*"></a>
+  <h4 id="Kinstrife_Application_SceneLoader_TryActivateScene_Kinstrife_Application_SceneReference_System_Threading_CancellationTokenSource_System_Boolean_" data-uid="Kinstrife.Application.SceneLoader.TryActivateScene(Kinstrife.Application.SceneReference,System.Threading.CancellationTokenSource,System.Boolean)">TryActivateScene(SceneReference, CancellationTokenSource, Boolean)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public async UniTask&lt;bool&gt; TryActivateScene(SceneReference sceneRef, CancellationTokenSource cts, bool waitUntilLoaded)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Kinstrife.Application.SceneReference.html">SceneReference</a></td>
+        <td><span class="parametername">sceneRef</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Threading.CancellationTokenSource</span></td>
+        <td><span class="parametername">cts</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">waitUntilLoaded</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">UniTask</span>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Kinstrife_Application_SceneLoader_TryRegisterSceneInstanceOperation_" data-uid="Kinstrife.Application.SceneLoader.TryRegisterSceneInstanceOperation*"></a>
+  <h4 id="Kinstrife_Application_SceneLoader_TryRegisterSceneInstanceOperation_System_Object_AsyncOperationHandle_SceneInstance__" data-uid="Kinstrife.Application.SceneLoader.TryRegisterSceneInstanceOperation(System.Object,AsyncOperationHandle{SceneInstance})">TryRegisterSceneInstanceOperation(Object, AsyncOperationHandle&lt;SceneInstance&gt;)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool TryRegisterSceneInstanceOperation(object key, AsyncOperationHandle&lt;SceneInstance&gt; handle)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Object</span></td>
+        <td><span class="parametername">key</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">AsyncOperationHandle</span>&lt;<span class="xref">SceneInstance</span>&gt;</td>
+        <td><span class="parametername">handle</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Kinstrife_Application_SceneLoader_TryUnloadScene_" data-uid="Kinstrife.Application.SceneLoader.TryUnloadScene*"></a>
+  <h4 id="Kinstrife_Application_SceneLoader_TryUnloadScene_Kinstrife_Application_SceneReference_System_Threading_CancellationTokenSource_" data-uid="Kinstrife.Application.SceneLoader.TryUnloadScene(Kinstrife.Application.SceneReference,System.Threading.CancellationTokenSource)">TryUnloadScene(SceneReference, CancellationTokenSource)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public async UniTask&lt;bool&gt; TryUnloadScene(SceneReference sceneRef, CancellationTokenSource cts)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Kinstrife.Application.SceneReference.html">SceneReference</a></td>
+        <td><span class="parametername">sceneRef</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Threading.CancellationTokenSource</span></td>
+        <td><span class="parametername">cts</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">UniTask</span>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Kinstrife_Application_SceneLoader_UnregisterSceneInstanceOperation_" data-uid="Kinstrife.Application.SceneLoader.UnregisterSceneInstanceOperation*"></a>
+  <h4 id="Kinstrife_Application_SceneLoader_UnregisterSceneInstanceOperation_Kinstrife_Application_AssetReferenceScene_" data-uid="Kinstrife.Application.SceneLoader.UnregisterSceneInstanceOperation(Kinstrife.Application.AssetReferenceScene)">UnregisterSceneInstanceOperation(AssetReferenceScene)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void UnregisterSceneInstanceOperation(AssetReferenceScene key)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Kinstrife.Application.AssetReferenceScene.html">AssetReferenceScene</a></td>
+        <td><span class="parametername">key</span></td>
         <td></td>
       </tr>
     </tbody>

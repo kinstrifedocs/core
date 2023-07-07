@@ -100,9 +100,6 @@
       <a class="xref" href="Kinstrife.Renderers.RendererComponents.html#Kinstrife_Renderers_RendererComponents_Components">RendererComponents.Components</a>
     </div>
     <div>
-      <a class="xref" href="Kinstrife.Renderers.RendererComponents.html#Kinstrife_Renderers_RendererComponents_allRenderers">RendererComponents.allRenderers</a>
-    </div>
-    <div>
       <a class="xref" href="Kinstrife.Renderers.RendererComponents.html#Kinstrife_Renderers_RendererComponents_Skeleton">RendererComponents.Skeleton</a>
     </div>
     <div>
@@ -110,6 +107,9 @@
     </div>
     <div>
       <a class="xref" href="Kinstrife.Renderers.RendererComponents.html#Kinstrife_Renderers_RendererComponents_onRemoveRenderer">RendererComponents.onRemoveRenderer</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.Renderers.RendererComponents.html#Kinstrife_Renderers_RendererComponents_onFinishAddingOrRemovingRenderers">RendererComponents.onFinishAddingOrRemovingRenderers</a>
     </div>
     <div>
       <a class="xref" href="Kinstrife.Renderers.RendererComponents.html#Kinstrife_Renderers_RendererComponents_Initialized">RendererComponents.Initialized</a>
@@ -122,6 +122,9 @@
     </div>
     <div>
       <a class="xref" href="Kinstrife.Renderers.RendererComponents.html#Kinstrife_Renderers_RendererComponents_InitRenderer_Kinstrife_Renderers_RendererComponent_">RendererComponents.InitRenderer(RendererComponent)</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.Renderers.RendererComponents.html#Kinstrife_Renderers_RendererComponents_FinishAddRemoveRenderers">RendererComponents.FinishAddRemoveRenderers()</a>
     </div>
     <div>
       <a class="xref" href="Kinstrife.Renderers.RendererComponents.html#Kinstrife_Renderers_RendererComponents_TryAddRenderer_Kinstrife_Renderers_RendererComponent_">RendererComponents.TryAddRenderer(RendererComponent)</a>
@@ -475,7 +478,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public IReadOnlyList&lt;RendererComponent&gt; Attachments { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public IReadOnlyList&lt;AttachmentComponent&gt; Attachments { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -487,7 +490,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Generic.IReadOnlyList</span>&lt;<a class="xref" href="Kinstrife.Renderers.RendererComponent.html">RendererComponent</a>&gt;</td>
+        <td><span class="xref">System.Collections.Generic.IReadOnlyList</span>&lt;<a class="xref" href="Kinstrife.Actor.Rendering.AttachmentComponent.html">AttachmentComponent</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -563,31 +566,6 @@
     <tbody>
       <tr>
         <td><span class="xref">System.Collections.Generic.IReadOnlyCollection</span>&lt;<a class="xref" href="Kinstrife.Renderers.RendererComponent.html">RendererComponent</a>&gt;</td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="Kinstrife_Actor_Rendering_ActorRenderers_Definition_" data-uid="Kinstrife.Actor.Rendering.ActorRenderers.Definition*"></a>
-  <h4 id="Kinstrife_Actor_Rendering_ActorRenderers_Definition" data-uid="Kinstrife.Actor.Rendering.ActorRenderers.Definition">Definition</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public ActorDefinition Definition { get; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Kinstrife.Actor.ActorDefinition.html">ActorDefinition</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -771,6 +749,16 @@
   </h3>
   
   
+  <a id="Kinstrife_Actor_Rendering_ActorRenderers_FindOrSetupBodyComponents_" data-uid="Kinstrife.Actor.Rendering.ActorRenderers.FindOrSetupBodyComponents*"></a>
+  <h4 id="Kinstrife_Actor_Rendering_ActorRenderers_FindOrSetupBodyComponents" data-uid="Kinstrife.Actor.Rendering.ActorRenderers.FindOrSetupBodyComponents">FindOrSetupBodyComponents()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void FindOrSetupBodyComponents()</code></pre>
+  </div>
+  
+  
   <a id="Kinstrife_Actor_Rendering_ActorRenderers_Initialize_" data-uid="Kinstrife.Actor.Rendering.ActorRenderers.Initialize*"></a>
   <h4 id="Kinstrife_Actor_Rendering_ActorRenderers_Initialize" data-uid="Kinstrife.Actor.Rendering.ActorRenderers.Initialize">Initialize()</h4>
   <div class="markdown level1 summary"></div>
@@ -871,6 +859,16 @@
   </table>
   <h5 class="overrides">Overrides</h5>
   <div><a class="xref" href="Kinstrife.Renderers.RendererComponents.html#Kinstrife_Renderers_RendererComponents_OnRemoveRenderer_Kinstrife_Renderers_RendererComponent_">RendererComponents.OnRemoveRenderer(RendererComponent)</a></div>
+  
+  
+  <a id="Kinstrife_Actor_Rendering_ActorRenderers_SetupBodyRenderers_" data-uid="Kinstrife.Actor.Rendering.ActorRenderers.SetupBodyRenderers*"></a>
+  <h4 id="Kinstrife_Actor_Rendering_ActorRenderers_SetupBodyRenderers" data-uid="Kinstrife.Actor.Rendering.ActorRenderers.SetupBodyRenderers">SetupBodyRenderers()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetupBodyRenderers()</code></pre>
+  </div>
   <h3 id="implements">Implements</h3>
   <div>
       <a class="xref" href="Kinstrife.Core.DependencyInjection.IInitializable.html">IInitializable</a>

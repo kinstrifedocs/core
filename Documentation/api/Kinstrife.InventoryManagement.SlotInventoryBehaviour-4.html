@@ -85,6 +85,10 @@
       <div class="level4"><a class="xref" href="Kinstrife.InventoryManagement.SingleSlotInventoryBehaviour-3.html">SingleSlotInventoryBehaviour&lt;T, U, W&gt;</a></div>
       <div class="level4"><a class="xref" href="Kinstrife.InventoryManagement.SingleSlotObjectInventoryBehaviour-4.html">SingleSlotObjectInventoryBehaviour&lt;O, T, U, W&gt;</a></div>
   </div>
+  <div class="implements">
+    <h5>Implements</h5>
+    <div><a class="xref" href="Kinstrife.InventoryManagement.IHasInventory-2.html">IHasInventory</a>&lt;W, T&gt;</div>
+  </div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
     <div>
@@ -95,7 +99,7 @@
   <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
   <h5 id="Kinstrife_InventoryManagement_SlotInventoryBehaviour_4_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public abstract class SlotInventoryBehaviour&lt;T, U, V, W&gt; : InventoryBehaviour&lt;T, W&gt; where T : class where V : SlotInventory&lt;T, U, V&gt;.SlotEntry, new()
+    <pre><code class="lang-csharp hljs">public abstract class SlotInventoryBehaviour&lt;T, U, V, W&gt; : InventoryBehaviour&lt;T, W&gt;, IHasInventory&lt;W, T&gt; where T : class where V : SlotInventory&lt;T, U, V&gt;.SlotEntry, new()
     where W : SlotInventory&lt;T, U, V&gt;, new()</code></pre>
   </div>
   <h5 class="typeParameters">Type Parameters</h5>
@@ -125,6 +129,10 @@
       </tr>
     </tbody>
   </table>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <a class="xref" href="Kinstrife.InventoryManagement.IHasInventory-2.html">IHasInventory&lt;T, U&gt;</a>
+  </div>
 </article>
           </div>
           

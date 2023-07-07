@@ -301,6 +301,31 @@ e. g. for the actor module, where unneeded actors for the next mode/scene can be
   </table>
   
   
+  <a id="Kinstrife_Application_Module_IsRegistered_" data-uid="Kinstrife.Application.Module.IsRegistered*"></a>
+  <h4 id="Kinstrife_Application_Module_IsRegistered" data-uid="Kinstrife.Application.Module.IsRegistered">IsRegistered</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsRegistered { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
   <a id="Kinstrife_Application_Module_ModuleRef_" data-uid="Kinstrife.Application.Module.ModuleRef*"></a>
   <h4 id="Kinstrife_Application_Module_ModuleRef" data-uid="Kinstrife.Application.Module.ModuleRef">ModuleRef</h4>
   <div class="markdown level1 summary"></div>
@@ -320,31 +345,6 @@ e. g. for the actor module, where unneeded actors for the next mode/scene can be
     <tbody>
       <tr>
         <td><span class="xref">AssetRef</span>&lt;<a class="xref" href="Kinstrife.Application.ModuleDefinition.html">ModuleDefinition</a>&gt;</td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="Kinstrife_Application_Module_Priority_" data-uid="Kinstrife.Application.Module.Priority*"></a>
-  <h4 id="Kinstrife_Application_Module_Priority" data-uid="Kinstrife.Application.Module.Priority">Priority</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public int Priority { get; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Int32</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -808,12 +808,64 @@ up in its proper order to avoid setup dependency issues.</p>
   
   
   <a id="Kinstrife_Application_Module_TrySwitchGameMode_" data-uid="Kinstrife.Application.Module.TrySwitchGameMode*"></a>
-  <h4 id="Kinstrife_Application_Module_TrySwitchGameMode_AssetRef_Kinstrife_Application_GameMode__AssetRef_Kinstrife_Application_Location__System_Boolean_" data-uid="Kinstrife.Application.Module.TrySwitchGameMode(AssetRef{Kinstrife.Application.GameMode},AssetRef{Kinstrife.Application.Location},System.Boolean)">TrySwitchGameMode(AssetRef&lt;GameMode&gt;, AssetRef&lt;Location&gt;, Boolean)</h4>
+  <h4 id="Kinstrife_Application_Module_TrySwitchGameMode_Kinstrife_Application_GameMode_Kinstrife_Application_Location_System_Boolean_" data-uid="Kinstrife.Application.Module.TrySwitchGameMode(Kinstrife.Application.GameMode,Kinstrife.Application.Location,System.Boolean)">TrySwitchGameMode(GameMode, Location, Boolean)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public async UniTask&lt;bool&gt; TrySwitchGameMode(AssetRef&lt;GameMode&gt; gameMode, AssetRef&lt;Location&gt; location = null, bool resetCurrent = false)</code></pre>
+    <pre><code class="lang-csharp hljs">public async UniTask&lt;bool&gt; TrySwitchGameMode(GameMode gameMode, Location location = null, bool resetCurrent = false)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Kinstrife.Application.GameMode.html">GameMode</a></td>
+        <td><span class="parametername">gameMode</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Kinstrife.Application.Location.html">Location</a></td>
+        <td><span class="parametername">location</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">resetCurrent</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">UniTask</span>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Kinstrife_Application_Module_TrySwitchGameModeAsync_" data-uid="Kinstrife.Application.Module.TrySwitchGameModeAsync*"></a>
+  <h4 id="Kinstrife_Application_Module_TrySwitchGameModeAsync_AssetRef_Kinstrife_Application_GameMode__AssetRef_Kinstrife_Application_Location__System_Boolean_" data-uid="Kinstrife.Application.Module.TrySwitchGameModeAsync(AssetRef{Kinstrife.Application.GameMode},AssetRef{Kinstrife.Application.Location},System.Boolean)">TrySwitchGameModeAsync(AssetRef&lt;GameMode&gt;, AssetRef&lt;Location&gt;, Boolean)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public async UniTask&lt;bool&gt; TrySwitchGameModeAsync(AssetRef&lt;GameMode&gt; gameMode, AssetRef&lt;Location&gt; location = null, bool resetCurrent = false)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -853,58 +905,6 @@ up in its proper order to avoid setup dependency issues.</p>
     <tbody>
       <tr>
         <td><span class="xref">UniTask</span>&lt;<span class="xref">System.Boolean</span>&gt;</td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="Kinstrife_Application_Module_TrySwitchGameMode_" data-uid="Kinstrife.Application.Module.TrySwitchGameMode*"></a>
-  <h4 id="Kinstrife_Application_Module_TrySwitchGameMode_Kinstrife_Application_GameMode_Kinstrife_Application_Location_System_Boolean_" data-uid="Kinstrife.Application.Module.TrySwitchGameMode(Kinstrife.Application.GameMode,Kinstrife.Application.Location,System.Boolean)">TrySwitchGameMode(GameMode, Location, Boolean)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public bool TrySwitchGameMode(GameMode gameMode, Location location = null, bool resetCurrent = false)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Kinstrife.Application.GameMode.html">GameMode</a></td>
-        <td><span class="parametername">gameMode</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="Kinstrife.Application.Location.html">Location</a></td>
-        <td><span class="parametername">location</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><span class="xref">System.Boolean</span></td>
-        <td><span class="parametername">resetCurrent</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Boolean</span></td>
         <td></td>
       </tr>
     </tbody>

@@ -521,6 +521,31 @@ The only reason why this is currently a MonoBehaviour is because it requires Sta
       </tr>
     </tbody>
   </table>
+  
+  
+  <a id="Kinstrife_Application_ApplicationFlow_ScheduledLocation_" data-uid="Kinstrife.Application.ApplicationFlow.ScheduledLocation*"></a>
+  <h4 id="Kinstrife_Application_ApplicationFlow_ScheduledLocation" data-uid="Kinstrife.Application.ApplicationFlow.ScheduledLocation">ScheduledLocation</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Location ScheduledLocation { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Kinstrife.Application.Location.html">Location</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   <h3 id="methods">Methods
   </h3>
   
@@ -551,6 +576,95 @@ The only reason why this is currently a MonoBehaviour is because it requires Sta
       <tr>
         <td><a class="xref" href="Kinstrife.Application.GameMode.html">GameMode</a></td>
         <td><span class="parametername">modeToStartIn</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">UniTask</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Kinstrife_Application_ApplicationFlow_ModuleIsLoaded_" data-uid="Kinstrife.Application.ApplicationFlow.ModuleIsLoaded*"></a>
+  <h4 id="Kinstrife_Application_ApplicationFlow_ModuleIsLoaded_Kinstrife_Application_ModuleDefinition_" data-uid="Kinstrife.Application.ApplicationFlow.ModuleIsLoaded(Kinstrife.Application.ModuleDefinition)">ModuleIsLoaded(ModuleDefinition)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool ModuleIsLoaded(ModuleDefinition moduleDefinition)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Kinstrife.Application.ModuleDefinition.html">ModuleDefinition</a></td>
+        <td><span class="parametername">moduleDefinition</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Kinstrife_Application_ApplicationFlow_PreLoadLocation_" data-uid="Kinstrife.Application.ApplicationFlow.PreLoadLocation*"></a>
+  <h4 id="Kinstrife_Application_ApplicationFlow_PreLoadLocation_Kinstrife_Application_Location_UnityEngine_ThreadPriority_" data-uid="Kinstrife.Application.ApplicationFlow.PreLoadLocation(Kinstrife.Application.Location,UnityEngine.ThreadPriority)">PreLoadLocation(Location, ThreadPriority)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public async UniTask PreLoadLocation(Location location, ThreadPriority threadPriority = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Kinstrife.Application.Location.html">Location</a></td>
+        <td><span class="parametername">location</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">UnityEngine.ThreadPriority</span></td>
+        <td><span class="parametername">threadPriority</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -652,7 +766,7 @@ The only reason why this is currently a MonoBehaviour is because it requires Sta
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public async UniTaskVoid RegisterModule(Module module)</code></pre>
+    <pre><code class="lang-csharp hljs">public async UniTask RegisterModule(Module module)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -681,7 +795,7 @@ The only reason why this is currently a MonoBehaviour is because it requires Sta
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">UniTaskVoid</span></td>
+        <td><span class="xref">UniTask</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -773,7 +887,7 @@ The only reason why this is currently a MonoBehaviour is because it requires Sta
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public bool TryEndCampaign(GameMode gameModeToSwitchTo)</code></pre>
+    <pre><code class="lang-csharp hljs">public async UniTask&lt;bool&gt; TryEndCampaign(GameMode gameModeToSwitchTo)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -802,7 +916,7 @@ The only reason why this is currently a MonoBehaviour is because it requires Sta
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="xref">UniTask</span>&lt;<span class="xref">System.Boolean</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -941,7 +1055,7 @@ The only reason why this is currently a MonoBehaviour is because it requires Sta
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public bool TryStartCampaign(CampaignDefinition newCampaign, bool unloadExisting, bool isNewGame)</code></pre>
+    <pre><code class="lang-csharp hljs">public async UniTask&lt;bool&gt; TryStartCampaign(CampaignDefinition newCampaign, bool unloadExisting, bool isNewGame)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -980,7 +1094,7 @@ The only reason why this is currently a MonoBehaviour is because it requires Sta
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="xref">UniTask</span>&lt;<span class="xref">System.Boolean</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -1040,12 +1154,59 @@ The only reason why this is currently a MonoBehaviour is because it requires Sta
   
   
   <a id="Kinstrife_Application_ApplicationFlow_TrySwitchMode_" data-uid="Kinstrife.Application.ApplicationFlow.TrySwitchMode*"></a>
-  <h4 id="Kinstrife_Application_ApplicationFlow_TrySwitchMode_AssetRef_Kinstrife_Application_GameMode__System_Boolean_" data-uid="Kinstrife.Application.ApplicationFlow.TrySwitchMode(AssetRef{Kinstrife.Application.GameMode},System.Boolean)">TrySwitchMode(AssetRef&lt;GameMode&gt;, Boolean)</h4>
+  <h4 id="Kinstrife_Application_ApplicationFlow_TrySwitchMode_Kinstrife_Application_GameMode_System_Boolean_" data-uid="Kinstrife.Application.ApplicationFlow.TrySwitchMode(Kinstrife.Application.GameMode,System.Boolean)">TrySwitchMode(GameMode, Boolean)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public async UniTask&lt;bool&gt; TrySwitchMode(AssetRef&lt;GameMode&gt; gameMode, bool resetCurrent = false)</code></pre>
+    <pre><code class="lang-csharp hljs">public async UniTask&lt;bool&gt; TrySwitchMode(GameMode targetMode, bool resetAlreadyLoaded = false)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Kinstrife.Application.GameMode.html">GameMode</a></td>
+        <td><span class="parametername">targetMode</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">resetAlreadyLoaded</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">UniTask</span>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Kinstrife_Application_ApplicationFlow_TrySwitchModeAsync_" data-uid="Kinstrife.Application.ApplicationFlow.TrySwitchModeAsync*"></a>
+  <h4 id="Kinstrife_Application_ApplicationFlow_TrySwitchModeAsync_AssetRef_Kinstrife_Application_GameMode__System_Boolean_" data-uid="Kinstrife.Application.ApplicationFlow.TrySwitchModeAsync(AssetRef{Kinstrife.Application.GameMode},System.Boolean)">TrySwitchModeAsync(AssetRef&lt;GameMode&gt;, Boolean)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public async UniTask&lt;bool&gt; TrySwitchModeAsync(AssetRef&lt;GameMode&gt; gameMode, bool resetCurrent = false)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1080,53 +1241,6 @@ The only reason why this is currently a MonoBehaviour is because it requires Sta
     <tbody>
       <tr>
         <td><span class="xref">UniTask</span>&lt;<span class="xref">System.Boolean</span>&gt;</td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="Kinstrife_Application_ApplicationFlow_TrySwitchMode_" data-uid="Kinstrife.Application.ApplicationFlow.TrySwitchMode*"></a>
-  <h4 id="Kinstrife_Application_ApplicationFlow_TrySwitchMode_Kinstrife_Application_GameMode_System_Boolean_" data-uid="Kinstrife.Application.ApplicationFlow.TrySwitchMode(Kinstrife.Application.GameMode,System.Boolean)">TrySwitchMode(GameMode, Boolean)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public bool TrySwitchMode(GameMode targetMode, bool resetAlreadyLoaded = false)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Kinstrife.Application.GameMode.html">GameMode</a></td>
-        <td><span class="parametername">targetMode</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><span class="xref">System.Boolean</span></td>
-        <td><span class="parametername">resetAlreadyLoaded</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Boolean</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -1288,30 +1402,6 @@ The only reason why this is currently a MonoBehaviour is because it requires Sta
   </table>
   <h3 id="events">Events
   </h3>
-  
-  
-  <h4 id="Kinstrife_Application_ApplicationFlow_DirectorModuleChanged" data-uid="Kinstrife.Application.ApplicationFlow.DirectorModuleChanged">DirectorModuleChanged</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public event Action&lt;Module&gt; DirectorModuleChanged</code></pre>
-  </div>
-  <h5 class="eventType">Event Type</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Action</span>&lt;<a class="xref" href="Kinstrife.Application.Module.html">Module</a>&gt;</td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
   
   
   <h4 id="Kinstrife_Application_ApplicationFlow_LoadingEnded" data-uid="Kinstrife.Application.ApplicationFlow.LoadingEnded">LoadingEnded</h4>

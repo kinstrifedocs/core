@@ -97,10 +97,19 @@
       <a class="xref" href="Kinstrife.SpatialHandles.SpatialContainer.html#Kinstrife_SpatialHandles_SpatialContainer_childHandles">SpatialContainer.childHandles</a>
     </div>
     <div>
+      <a class="xref" href="Kinstrife.SpatialHandles.SpatialContainer.html#Kinstrife_SpatialHandles_SpatialContainer_Children">SpatialContainer.Children</a>
+    </div>
+    <div>
       <a class="xref" href="Kinstrife.SpatialHandles.SpatialContainer.html#Kinstrife_SpatialHandles_SpatialContainer_Capacity">SpatialContainer.Capacity</a>
     </div>
     <div>
       <a class="xref" href="Kinstrife.SpatialHandles.SpatialContainer.html#Kinstrife_SpatialHandles_SpatialContainer_Prio">SpatialContainer.Prio</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.SpatialHandles.SpatialContainer.html#Kinstrife_SpatialHandles_SpatialContainer_lineColor">SpatialContainer.lineColor</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.SpatialHandles.SpatialContainer.html#Kinstrife_SpatialHandles_SpatialContainer_Color">SpatialContainer.Color</a>
     </div>
     <div>
       <a class="xref" href="Kinstrife.SpatialHandles.SpatialContainer.html#Kinstrife_SpatialHandles_SpatialContainer_Rebuild">SpatialContainer.Rebuild()</a>
@@ -154,10 +163,10 @@
       <a class="xref" href="Kinstrife.SpatialHandles.SpatialHandle.html#Kinstrife_SpatialHandles_SpatialHandle_ReleaseChild_Transform_">SpatialHandle.ReleaseChild(Transform)</a>
     </div>
     <div>
-      <a class="xref" href="Kinstrife.SpatialHandles.SpatialHandle.html#Kinstrife_SpatialHandles_SpatialHandle_GetPosition">SpatialHandle.GetPosition()</a>
+      <a class="xref" href="Kinstrife.SpatialHandles.SpatialHandle.html#Kinstrife_SpatialHandles_SpatialHandle_GetRotation">SpatialHandle.GetRotation()</a>
     </div>
     <div>
-      <a class="xref" href="Kinstrife.SpatialHandles.SpatialHandle.html#Kinstrife_SpatialHandles_SpatialHandle_GetRotation">SpatialHandle.GetRotation()</a>
+      <a class="xref" href="Kinstrife.SpatialHandles.SpatialHandle.html#Kinstrife_SpatialHandles_SpatialHandle_TransformChanged">SpatialHandle.TransformChanged()</a>
     </div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Kinstrife.SpatialHandles.html">Kinstrife.SpatialHandles</a></h6>
@@ -170,12 +179,36 @@
   </h3>
   
   
-  <h4 id="Kinstrife_SpatialHandles_LevelBounds_margin" data-uid="Kinstrife.SpatialHandles.LevelBounds.margin">margin</h4>
+  <h4 id="Kinstrife_SpatialHandles_LevelBounds_boundsWidth" data-uid="Kinstrife.SpatialHandles.LevelBounds.boundsWidth">boundsWidth</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public float margin</code></pre>
+    <pre><code class="lang-csharp hljs">public float boundsWidth</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="Kinstrife_SpatialHandles_LevelBounds_centerRadiusPct" data-uid="Kinstrife.SpatialHandles.LevelBounds.centerRadiusPct">centerRadiusPct</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float centerRadiusPct</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -221,13 +254,13 @@
   </table>
   
   
-  <a id="Kinstrife_SpatialHandles_LevelBounds_East_" data-uid="Kinstrife.SpatialHandles.LevelBounds.East*"></a>
-  <h4 id="Kinstrife_SpatialHandles_LevelBounds_East" data-uid="Kinstrife.SpatialHandles.LevelBounds.East">East</h4>
+  <a id="Kinstrife_SpatialHandles_LevelBounds_Center_" data-uid="Kinstrife.SpatialHandles.LevelBounds.Center*"></a>
+  <h4 id="Kinstrife_SpatialHandles_LevelBounds_Center" data-uid="Kinstrife.SpatialHandles.LevelBounds.Center">Center</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public SpatialHandle East { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Area Center { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -239,7 +272,32 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="Kinstrife.SpatialHandles.SpatialHandle.html">SpatialHandle</a></td>
+        <td><a class="xref" href="Kinstrife.SpatialHandles.Area.html">Area</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Kinstrife_SpatialHandles_LevelBounds_East_" data-uid="Kinstrife.SpatialHandles.LevelBounds.East*"></a>
+  <h4 id="Kinstrife_SpatialHandles_LevelBounds_East" data-uid="Kinstrife.SpatialHandles.LevelBounds.East">East</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public LevelBoundary East { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Kinstrife.SpatialHandles.LevelBoundary.html">LevelBoundary</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -252,7 +310,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public SpatialHandle North { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public LevelBoundary North { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -264,7 +322,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="Kinstrife.SpatialHandles.SpatialHandle.html">SpatialHandle</a></td>
+        <td><a class="xref" href="Kinstrife.SpatialHandles.LevelBoundary.html">LevelBoundary</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -277,7 +335,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public SpatialHandle South { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public LevelBoundary South { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -289,7 +347,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="Kinstrife.SpatialHandles.SpatialHandle.html">SpatialHandle</a></td>
+        <td><a class="xref" href="Kinstrife.SpatialHandles.LevelBoundary.html">LevelBoundary</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -302,7 +360,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public SpatialHandle West { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public LevelBoundary West { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -314,7 +372,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="Kinstrife.SpatialHandles.SpatialHandle.html">SpatialHandle</a></td>
+        <td><a class="xref" href="Kinstrife.SpatialHandles.LevelBoundary.html">LevelBoundary</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -394,6 +452,156 @@
   </table>
   
   
+  <a id="Kinstrife_SpatialHandles_LevelBounds_Dirty_" data-uid="Kinstrife.SpatialHandles.LevelBounds.Dirty*"></a>
+  <h4 id="Kinstrife_SpatialHandles_LevelBounds_Dirty" data-uid="Kinstrife.SpatialHandles.LevelBounds.Dirty">Dirty()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Dirty()</code></pre>
+  </div>
+  
+  
+  <a id="Kinstrife_SpatialHandles_LevelBounds_Encapsulate_" data-uid="Kinstrife.SpatialHandles.LevelBounds.Encapsulate*"></a>
+  <h4 id="Kinstrife_SpatialHandles_LevelBounds_Encapsulate_Vector3_" data-uid="Kinstrife.SpatialHandles.LevelBounds.Encapsulate(Vector3)">Encapsulate(Vector3)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Encapsulate(Vector3 worldPoint)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Vector3</span></td>
+        <td><span class="parametername">worldPoint</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Kinstrife_SpatialHandles_LevelBounds_ExpandBounds_" data-uid="Kinstrife.SpatialHandles.LevelBounds.ExpandBounds*"></a>
+  <h4 id="Kinstrife_SpatialHandles_LevelBounds_ExpandBounds_Vector3_" data-uid="Kinstrife.SpatialHandles.LevelBounds.ExpandBounds(Vector3)">ExpandBounds(Vector3)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void ExpandBounds(Vector3 expand)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Vector3</span></td>
+        <td><span class="parametername">expand</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Kinstrife_SpatialHandles_LevelBounds_GetPosition_" data-uid="Kinstrife.SpatialHandles.LevelBounds.GetPosition*"></a>
+  <h4 id="Kinstrife_SpatialHandles_LevelBounds_GetPosition" data-uid="Kinstrife.SpatialHandles.LevelBounds.GetPosition">GetPosition()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override Vector3 GetPosition()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Vector3</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Kinstrife.SpatialHandles.SpatialHandle.html#Kinstrife_SpatialHandles_SpatialHandle_GetPosition">SpatialHandle.GetPosition()</a></div>
+  
+  
+  <a id="Kinstrife_SpatialHandles_LevelBounds_GetRandomBoundary_" data-uid="Kinstrife.SpatialHandles.LevelBounds.GetRandomBoundary*"></a>
+  <h4 id="Kinstrife_SpatialHandles_LevelBounds_GetRandomBoundary" data-uid="Kinstrife.SpatialHandles.LevelBounds.GetRandomBoundary">GetRandomBoundary()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public LevelBoundary GetRandomBoundary()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Kinstrife.SpatialHandles.LevelBoundary.html">LevelBoundary</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Kinstrife_SpatialHandles_LevelBounds_GetRandomPositionAndRotation_" data-uid="Kinstrife.SpatialHandles.LevelBounds.GetRandomPositionAndRotation*"></a>
+  <h4 id="Kinstrife_SpatialHandles_LevelBounds_GetRandomPositionAndRotation_Vector3__Quaternion__" data-uid="Kinstrife.SpatialHandles.LevelBounds.GetRandomPositionAndRotation(Vector3@,Quaternion@)">GetRandomPositionAndRotation(out Vector3, out Quaternion)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override void GetRandomPositionAndRotation(out Vector3 pos, out Quaternion rot)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Vector3</span></td>
+        <td><span class="parametername">pos</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">Quaternion</span></td>
+        <td><span class="parametername">rot</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Kinstrife.SpatialHandles.SpatialHandle.html#Kinstrife_SpatialHandles_SpatialHandle_GetRandomPositionAndRotation_Vector3__Quaternion__">SpatialHandle.GetRandomPositionAndRotation(out Vector3, out Quaternion)</a></div>
+  
+  
   <a id="Kinstrife_SpatialHandles_LevelBounds_InitializeGizmoSettings_" data-uid="Kinstrife.SpatialHandles.LevelBounds.InitializeGizmoSettings*"></a>
   <h4 id="Kinstrife_SpatialHandles_LevelBounds_InitializeGizmoSettings_Gizmo_" data-uid="Kinstrife.SpatialHandles.LevelBounds.InitializeGizmoSettings(Gizmo)">InitializeGizmoSettings(Gizmo)</h4>
   <div class="markdown level1 summary"></div>
@@ -419,6 +627,85 @@
       </tr>
     </tbody>
   </table>
+  
+  
+  <a id="Kinstrife_SpatialHandles_LevelBounds_RandomPointInBounds_" data-uid="Kinstrife.SpatialHandles.LevelBounds.RandomPointInBounds*"></a>
+  <h4 id="Kinstrife_SpatialHandles_LevelBounds_RandomPointInBounds_Bounds_" data-uid="Kinstrife.SpatialHandles.LevelBounds.RandomPointInBounds(Bounds)">RandomPointInBounds(Bounds)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Vector3 RandomPointInBounds(Bounds bounds)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Bounds</span></td>
+        <td><span class="parametername">bounds</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Vector3</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Kinstrife_SpatialHandles_LevelBounds_SetBoundsY_" data-uid="Kinstrife.SpatialHandles.LevelBounds.SetBoundsY*"></a>
+  <h4 id="Kinstrife_SpatialHandles_LevelBounds_SetBoundsY_System_Single_" data-uid="Kinstrife.SpatialHandles.LevelBounds.SetBoundsY(System.Single)">SetBoundsY(Single)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetBoundsY(float newY)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><span class="parametername">newY</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Kinstrife_SpatialHandles_LevelBounds_UpdateFromBoundaries_" data-uid="Kinstrife.SpatialHandles.LevelBounds.UpdateFromBoundaries*"></a>
+  <h4 id="Kinstrife_SpatialHandles_LevelBounds_UpdateFromBoundaries" data-uid="Kinstrife.SpatialHandles.LevelBounds.UpdateFromBoundaries">UpdateFromBoundaries()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void UpdateFromBoundaries()</code></pre>
+  </div>
   <h3 id="implements">Implements</h3>
   <div>
       <a class="xref" href="Kinstrife.Identifier.ISortable.html">ISortable</a>
