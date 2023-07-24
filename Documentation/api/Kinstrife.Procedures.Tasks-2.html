@@ -86,8 +86,8 @@
   <div class="implements">
     <h5>Implements</h5>
     <div><a class="xref" href="Kinstrife.Procedures.IProcedureComponent.html">IProcedureComponent</a></div>
+    <div><a class="xref" href="Kinstrife.Procedures.ITaskHandler-2.html">ITaskHandler</a>&lt;TInput, TOutput&gt;</div>
     <div><a class="xref" href="Kinstrife.Procedures.ITaskHandler.html">ITaskHandler</a></div>
-    <div><a class="xref" href="Kinstrife.Procedures.IAsyncTaskHandler-2.html">IAsyncTaskHandler</a>&lt;TInput, TOutput&gt;</div>
   </div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
@@ -168,7 +168,7 @@
   <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
   <h5 id="Kinstrife_Procedures_Tasks_2_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public abstract class Tasks&lt;TInput, TOutput&gt; : Tasks, IProcedureComponent, ITaskHandler, IAsyncTaskHandler&lt;TInput, TOutput&gt;</code></pre>
+    <pre><code class="lang-csharp hljs">public abstract class Tasks&lt;TInput, TOutput&gt; : Tasks, IProcedureComponent, ITaskHandler&lt;TInput, TOutput&gt;, ITaskHandler</code></pre>
   </div>
   <h5 class="typeParameters">Type Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -193,13 +193,55 @@
   </h3>
   
   
-  <a id="Kinstrife_Procedures_Tasks_2_PerformTaskAsync_" data-uid="Kinstrife.Procedures.Tasks`2.PerformTaskAsync*"></a>
-  <h4 id="Kinstrife_Procedures_Tasks_2_PerformTaskAsync__0_System_Nullable_CancellationToken__" data-uid="Kinstrife.Procedures.Tasks`2.PerformTaskAsync(`0,System.Nullable{CancellationToken})">PerformTaskAsync(TInput, Nullable&lt;CancellationToken&gt;)</h4>
+  <a id="Kinstrife_Procedures_Tasks_2_PerformTask_" data-uid="Kinstrife.Procedures.Tasks`2.PerformTask*"></a>
+  <h4 id="Kinstrife_Procedures_Tasks_2_PerformTask__0_" data-uid="Kinstrife.Procedures.Tasks`2.PerformTask(`0)">PerformTask(TInput)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual UniTask&lt;TOutput&gt; PerformTaskAsync(TInput input, CancellationToken? token)</code></pre>
+    <pre><code class="lang-csharp hljs">public TOutput PerformTask(TInput input)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">TInput</span></td>
+        <td><span class="parametername">input</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">TOutput</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Kinstrife_Procedures_Tasks_2_PerformTask_" data-uid="Kinstrife.Procedures.Tasks`2.PerformTask*"></a>
+  <h4 id="Kinstrife_Procedures_Tasks_2_PerformTask__0_Kinstrife_Action__1__" data-uid="Kinstrife.Procedures.Tasks`2.PerformTask(`0,Kinstrife.Action{`1})">PerformTask(TInput, Action&lt;TOutput&gt;)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void PerformTask(TInput input, Action&lt;TOutput&gt; callback)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -217,23 +259,8 @@
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CancellationToken</span>&gt;</td>
-        <td><span class="parametername">token</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">UniTask</span>&lt;TOutput&gt;</td>
+        <td><span class="xref">Kinstrife.Action</span>&lt;TOutput&gt;</td>
+        <td><span class="parametername">callback</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -243,10 +270,10 @@
       <a class="xref" href="Kinstrife.Procedures.IProcedureComponent.html">IProcedureComponent</a>
   </div>
   <div>
-      <a class="xref" href="Kinstrife.Procedures.ITaskHandler.html">ITaskHandler</a>
+      <a class="xref" href="Kinstrife.Procedures.ITaskHandler-2.html">ITaskHandler&lt;TInput, TOutput&gt;</a>
   </div>
   <div>
-      <a class="xref" href="Kinstrife.Procedures.IAsyncTaskHandler-2.html">IAsyncTaskHandler&lt;TInput, TOutput&gt;</a>
+      <a class="xref" href="Kinstrife.Procedures.ITaskHandler.html">ITaskHandler</a>
   </div>
 </article>
           </div>

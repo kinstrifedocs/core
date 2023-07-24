@@ -166,9 +166,6 @@
       <a class="xref" href="Kinstrife.Animation.AnimationComponent.html#Kinstrife_Animation_AnimationComponent_updateMode">AnimationComponent.updateMode</a>
     </div>
     <div>
-      <a class="xref" href="Kinstrife.Animation.AnimationComponent.html#Kinstrife_Animation_AnimationComponent_OnUpdate_System_Single_">AnimationComponent.OnUpdate(Single)</a>
-    </div>
-    <div>
       <a class="xref" href="Kinstrife.Animation.AnimationComponent.html#Kinstrife_Animation_AnimationComponent_RefreshUpdateMode">AnimationComponent.RefreshUpdateMode()</a>
     </div>
     <div>
@@ -191,9 +188,6 @@
     </div>
     <div>
       <a class="xref" href="Kinstrife.Animation.AnimationComponent.html#Kinstrife_Animation_AnimationComponent_OnNotify_Playable_INotification_System_Object_">AnimationComponent.OnNotify(Playable, INotification, Object)</a>
-    </div>
-    <div>
-      <a class="xref" href="Kinstrife.Animation.AnimationComponent.html#Kinstrife_Animation_AnimationComponent_PushNotification_INotification_System_Object_">AnimationComponent.PushNotification(INotification, Object)</a>
     </div>
     <div>
       <a class="xref" href="Kinstrife.Animation.AnimationComponent.html#Kinstrife_Animation_AnimationComponent_MainTabActions">AnimationComponent.MainTabActions</a>
@@ -244,7 +238,8 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected AnimationLayer layer</code></pre>
+    <pre><code class="lang-csharp hljs">[NonSerialized]
+protected AnimationLayer layer</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -539,6 +534,31 @@
     <tbody>
       <tr>
         <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Kinstrife_Animation_LayerAnimationComponent_Layer_" data-uid="Kinstrife.Animation.LayerAnimationComponent.Layer*"></a>
+  <h4 id="Kinstrife_Animation_LayerAnimationComponent_Layer" data-uid="Kinstrife.Animation.LayerAnimationComponent.Layer">Layer</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public AnimationLayer Layer { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Kinstrife.Animation.AnimationLayer.html">AnimationLayer</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -937,6 +957,16 @@
   </table>
   
   
+  <a id="Kinstrife_Animation_LayerAnimationComponent_ForceStopFromLayer_" data-uid="Kinstrife.Animation.LayerAnimationComponent.ForceStopFromLayer*"></a>
+  <h4 id="Kinstrife_Animation_LayerAnimationComponent_ForceStopFromLayer" data-uid="Kinstrife.Animation.LayerAnimationComponent.ForceStopFromLayer">ForceStopFromLayer()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void ForceStopFromLayer()</code></pre>
+  </div>
+  
+  
   <a id="Kinstrife_Animation_LayerAnimationComponent_GetOrCreateState_" data-uid="Kinstrife.Animation.LayerAnimationComponent.GetOrCreateState*"></a>
   <h4 id="Kinstrife_Animation_LayerAnimationComponent_GetOrCreateState" data-uid="Kinstrife.Animation.LayerAnimationComponent.GetOrCreateState">GetOrCreateState()</h4>
   <div class="markdown level1 summary"></div>
@@ -1011,6 +1041,35 @@
   </div>
   <h5 class="overrides">Overrides</h5>
   <div><a class="xref" href="Kinstrife.Animation.AnimationComponent.html#Kinstrife_Animation_AnimationComponent_OnPlay">AnimationComponent.OnPlay()</a></div>
+  
+  
+  <a id="Kinstrife_Animation_LayerAnimationComponent_OnUpdate_" data-uid="Kinstrife.Animation.LayerAnimationComponent.OnUpdate*"></a>
+  <h4 id="Kinstrife_Animation_LayerAnimationComponent_OnUpdate_System_Single_" data-uid="Kinstrife.Animation.LayerAnimationComponent.OnUpdate(System.Single)">OnUpdate(Single)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override void OnUpdate(float deltaTime)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><span class="parametername">deltaTime</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Kinstrife.Animation.AnimationComponent.html#Kinstrife_Animation_AnimationComponent_OnUpdate_System_Single_">AnimationComponent.OnUpdate(Single)</a></div>
   
   
   <a id="Kinstrife_Animation_LayerAnimationComponent_Play_" data-uid="Kinstrife.Animation.LayerAnimationComponent.Play*"></a>
@@ -1263,33 +1322,6 @@
       <tr>
         <td><span class="xref">ITransition</span></td>
         <td><span class="parametername">transition</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="Kinstrife_Animation_LayerAnimationComponent_SetWeight_" data-uid="Kinstrife.Animation.LayerAnimationComponent.SetWeight*"></a>
-  <h4 id="Kinstrife_Animation_LayerAnimationComponent_SetWeight_System_Single_" data-uid="Kinstrife.Animation.LayerAnimationComponent.SetWeight(System.Single)">SetWeight(Single)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void SetWeight(float value)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Single</span></td>
-        <td><span class="parametername">value</span></td>
         <td></td>
       </tr>
     </tbody>

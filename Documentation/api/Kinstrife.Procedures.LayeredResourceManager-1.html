@@ -111,7 +111,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected Dictionary&lt;T, ResourceLayer&gt; layers</code></pre>
+    <pre><code class="lang-csharp hljs">protected Dictionary&lt;T, ResourceLayer&lt;T&gt;&gt; layers</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -123,7 +123,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Generic.Dictionary</span>&lt;T, <a class="xref" href="Kinstrife.Procedures.ResourceLayer.html">ResourceLayer</a>&gt;</td>
+        <td><span class="xref">System.Collections.Generic.Dictionary</span>&lt;T, <a class="xref" href="Kinstrife.Procedures.ResourceLayer-1.html">ResourceLayer</a>&lt;T&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -167,7 +167,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public ResourceLayer GetOrCreateLayer(T id)</code></pre>
+    <pre><code class="lang-csharp hljs">public ResourceLayer&lt;T&gt; GetOrCreateLayer(T id)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -196,92 +196,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="Kinstrife.Procedures.ResourceLayer.html">ResourceLayer</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="Kinstrife_Procedures_LayeredResourceManager_1_Stop_" data-uid="Kinstrife.Procedures.LayeredResourceManager`1.Stop*"></a>
-  <h4 id="Kinstrife_Procedures_LayeredResourceManager_1_Stop_Kinstrife_Procedures_ILayeredProcedure__0__" data-uid="Kinstrife.Procedures.LayeredResourceManager`1.Stop(Kinstrife.Procedures.ILayeredProcedure{`0})">Stop(ILayeredProcedure&lt;T&gt;)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void Stop(ILayeredProcedure&lt;T&gt; component)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Kinstrife.Procedures.ILayeredProcedure-1.html">ILayeredProcedure</a>&lt;T&gt;</td>
-        <td><span class="parametername">component</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="Kinstrife_Procedures_LayeredResourceManager_1_TryStart_" data-uid="Kinstrife.Procedures.LayeredResourceManager`1.TryStart*"></a>
-  <h4 id="Kinstrife_Procedures_LayeredResourceManager_1_TryStart__1___0_" data-uid="Kinstrife.Procedures.LayeredResourceManager`1.TryStart``1(``0)">TryStart&lt;TProcedureType&gt;(TProcedureType)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public bool TryStart&lt;TProcedureType&gt;(TProcedureType component)
-    where TProcedureType : Procedure, ILayeredProcedure&lt;T&gt;</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">TProcedureType</span></td>
-        <td><span class="parametername">component</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Boolean</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="typeParameters">Type Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="parametername">TProcedureType</span></td>
+        <td><a class="xref" href="Kinstrife.Procedures.ResourceLayer-1.html">ResourceLayer</a>&lt;T&gt;</td>
         <td></td>
       </tr>
     </tbody>

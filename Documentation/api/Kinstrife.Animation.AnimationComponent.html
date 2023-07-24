@@ -80,6 +80,7 @@
     <div class="level0"><span class="xref">System.Object</span></div>
     <div class="level1"><span class="xref">AnimationComponent</span></div>
       <div class="level2"><a class="xref" href="Kinstrife.Animation.AnimationLayers.html">AnimationLayers</a></div>
+      <div class="level2"><a class="xref" href="Kinstrife.Animation.BlendshapeAnimator.html">BlendshapeAnimator</a></div>
       <div class="level2"><a class="xref" href="Kinstrife.Animation.FilterAnimation.html">FilterAnimation</a></div>
       <div class="level2"><a class="xref" href="Kinstrife.Animation.JobAnimationComponent-2.html">JobAnimationComponent&lt;TJobWrapper, TJobType&gt;</a></div>
       <div class="level2"><a class="xref" href="Kinstrife.Animation.LayerAnimationComponent.html">LayerAnimationComponent</a></div>
@@ -866,7 +867,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void OnNotify(Playable origin, INotification notification, object context)</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual void OnNotify(Playable origin, INotification notification, object context)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -962,38 +963,6 @@
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public virtual void Play()</code></pre>
   </div>
-  
-  
-  <a id="Kinstrife_Animation_AnimationComponent_PushNotification_" data-uid="Kinstrife.Animation.AnimationComponent.PushNotification*"></a>
-  <h4 id="Kinstrife_Animation_AnimationComponent_PushNotification_INotification_System_Object_" data-uid="Kinstrife.Animation.AnimationComponent.PushNotification(INotification,System.Object)">PushNotification(INotification, Object)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void PushNotification(INotification notification, object context = null)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">INotification</span></td>
-        <td><span class="parametername">notification</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><span class="xref">System.Object</span></td>
-        <td><span class="parametername">context</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
   
   
   <a id="Kinstrife_Animation_AnimationComponent_RefreshUpdateMode_" data-uid="Kinstrife.Animation.AnimationComponent.RefreshUpdateMode*"></a>

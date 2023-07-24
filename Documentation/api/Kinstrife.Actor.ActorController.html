@@ -82,13 +82,16 @@
   </div>
   <div class="implements">
     <h5>Implements</h5>
+    <div><a class="xref" href="Kinstrife.Core.DependencyInjection.IInstall-1.html">IInstall</a>&lt;<a class="xref" href="Kinstrife.Actor.ActorController.html">ActorController</a>&gt;</div>
+    <div><a class="xref" href="Kinstrife.Core.DependencyInjection.IInstall.html">IInstall</a></div>
+    <div><a class="xref" href="Kinstrife.Core.DependencyInjection.IDependent.html">IDependent</a></div>
     <div><span class="xref">MonoBehaviour</span></div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Kinstrife.Actor.html">Kinstrife.Actor</a></h6>
   <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
   <h5 id="Kinstrife_Actor_ActorController_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class ActorController : MonoBehaviour</code></pre>
+    <pre><code class="lang-csharp hljs">public class ActorController : MonoBehaviour, IInstall&lt;ActorController&gt;, IInstall, IDependent</code></pre>
   </div>
   <h3 id="fields">Fields
   </h3>
@@ -358,12 +361,12 @@
   </table>
   
   
-  <h4 id="Kinstrife_Actor_ActorController_SpeedChangeRate" data-uid="Kinstrife.Actor.ActorController.SpeedChangeRate">SpeedChangeRate</h4>
+  <h4 id="Kinstrife_Actor_ActorController_stepUp" data-uid="Kinstrife.Actor.ActorController.stepUp">stepUp</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public float SpeedChangeRate</code></pre>
+    <pre><code class="lang-csharp hljs">public float stepUp</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -382,12 +385,12 @@
   </table>
   
   
-  <h4 id="Kinstrife_Actor_ActorController_stepUp" data-uid="Kinstrife.Actor.ActorController.stepUp">stepUp</h4>
+  <h4 id="Kinstrife_Actor_ActorController_velocitySmooth" data-uid="Kinstrife.Actor.ActorController.velocitySmooth">velocitySmooth</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public float stepUp</code></pre>
+    <pre><code class="lang-csharp hljs">public float velocitySmooth</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -477,6 +480,31 @@
     <tbody>
       <tr>
         <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Kinstrife_Actor_ActorController_DesiredSpeedNormalized_" data-uid="Kinstrife.Actor.ActorController.DesiredSpeedNormalized*"></a>
+  <h4 id="Kinstrife_Actor_ActorController_DesiredSpeedNormalized" data-uid="Kinstrife.Actor.ActorController.DesiredSpeedNormalized">DesiredSpeedNormalized</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float DesiredSpeedNormalized { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -868,6 +896,33 @@ Useful for reorienting a direction on a slope without any lateral deviation in t
   </table>
   
   
+  <a id="Kinstrife_Actor_ActorController_LinkToController_" data-uid="Kinstrife.Actor.ActorController.LinkToController*"></a>
+  <h4 id="Kinstrife_Actor_ActorController_LinkToController_Kinstrife_Actor_ActorController_" data-uid="Kinstrife.Actor.ActorController.LinkToController(Kinstrife.Actor.ActorController)">LinkToController(ActorController)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void LinkToController(ActorController other)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Kinstrife.Actor.ActorController.html">ActorController</a></td>
+        <td><span class="parametername">other</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
   <a id="Kinstrife_Actor_ActorController_Move_" data-uid="Kinstrife.Actor.ActorController.Move*"></a>
   <h4 id="Kinstrife_Actor_ActorController_Move_Vector3_System_Single_" data-uid="Kinstrife.Actor.ActorController.Move(Vector3,System.Single)">Move(Vector3, Single)</h4>
   <div class="markdown level1 summary"></div>
@@ -980,6 +1035,43 @@ Useful for reorienting a direction on a slope without any lateral deviation in t
       <tr>
         <td><span class="xref">System.Boolean</span></td>
         <td><span class="parametername">includeCapsule</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Kinstrife_Actor_ActorController_SetMove_" data-uid="Kinstrife.Actor.ActorController.SetMove*"></a>
+  <h4 id="Kinstrife_Actor_ActorController_SetMove_Vector3_Vector2_System_Boolean_" data-uid="Kinstrife.Actor.ActorController.SetMove(Vector3,Vector2,System.Boolean)">SetMove(Vector3, Vector2, Boolean)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetMove(Vector3 moveWorldTarget, Vector2 moveLocal, bool force)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Vector3</span></td>
+        <td><span class="parametername">moveWorldTarget</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">Vector2</span></td>
+        <td><span class="parametername">moveLocal</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">force</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -1351,6 +1443,15 @@ Useful for reorienting a direction on a slope without any lateral deviation in t
     </tbody>
   </table>
   <h3 id="implements">Implements</h3>
+  <div>
+      <a class="xref" href="Kinstrife.Core.DependencyInjection.IInstall-1.html">IInstall&lt;T&gt;</a>
+  </div>
+  <div>
+      <a class="xref" href="Kinstrife.Core.DependencyInjection.IInstall.html">IInstall</a>
+  </div>
+  <div>
+      <a class="xref" href="Kinstrife.Core.DependencyInjection.IDependent.html">IDependent</a>
+  </div>
   <div>
       <span class="xref">MonoBehaviour</span>
   </div>
