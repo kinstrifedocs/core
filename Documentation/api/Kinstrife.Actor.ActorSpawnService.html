@@ -101,10 +101,16 @@
       <a class="xref" href="Kinstrife.Messaging.ServiceBehaviour-2.html#Kinstrife_Messaging_ServiceBehaviour_2_Inject_Kinstrife_Messaging_IServiceServer__0_Kinstrife_Messaging_Request__1___">ServiceBehaviour&lt;IActor, SpawnArguments&gt;.Inject(IServiceServer&lt;IActor, Request&lt;SpawnArguments&gt;&gt;)</a>
     </div>
     <div>
+      <a class="xref" href="Kinstrife.Messaging.ServiceBehaviour-2.html#Kinstrife_Messaging_ServiceBehaviour_2_AllowConcurrency">ServiceBehaviour&lt;IActor, SpawnArguments&gt;.AllowConcurrency</a>
+    </div>
+    <div>
       <a class="xref" href="Kinstrife.Messaging.ServiceBehaviour-2.html#Kinstrife_Messaging_ServiceBehaviour_2_Initialized">ServiceBehaviour&lt;IActor, SpawnArguments&gt;.Initialized</a>
     </div>
     <div>
       <a class="xref" href="Kinstrife.Messaging.ServiceBehaviour-2.html#Kinstrife_Messaging_ServiceBehaviour_2_Initialize">ServiceBehaviour&lt;IActor, SpawnArguments&gt;.Initialize()</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.Messaging.ServiceBehaviour-2.html#Kinstrife_Messaging_ServiceBehaviour_2_TryHandleRequest_Kinstrife_Messaging_Request__1__">ServiceBehaviour&lt;IActor, SpawnArguments&gt;.TryHandleRequest(Request&lt;SpawnArguments&gt;)</a>
     </div>
     <div>
       <a class="xref" href="Kinstrife.Messaging.ServiceBehaviour-2.html#Kinstrife_Messaging_ServiceBehaviour_2_HandleRequest_Kinstrife_Messaging_Request__1__">ServiceBehaviour&lt;IActor, SpawnArguments&gt;.HandleRequest(Request&lt;SpawnArguments&gt;)</a>
@@ -118,18 +124,6 @@
   <h5 id="Kinstrife_Actor_ActorSpawnService_syntax">Syntax</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public class ActorSpawnService : ServiceBehaviour&lt;IActor, SpawnArguments&gt;, IInjectable, IInitializable, IInstall&lt;ActorSpawnService&gt;, IInstall, IDependent</code></pre>
-  </div>
-  <h3 id="constructors">Constructors
-  </h3>
-  
-  
-  <a id="Kinstrife_Actor_ActorSpawnService__ctor_" data-uid="Kinstrife.Actor.ActorSpawnService.#ctor*"></a>
-  <h4 id="Kinstrife_Actor_ActorSpawnService__ctor" data-uid="Kinstrife.Actor.ActorSpawnService.#ctor">ActorSpawnService()</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public ActorSpawnService()</code></pre>
   </div>
   <h3 id="fields">Fields
   </h3>
@@ -277,6 +271,35 @@
       </tr>
     </tbody>
   </table>
+  <h3 id="properties">Properties
+  </h3>
+  
+  
+  <a id="Kinstrife_Actor_ActorSpawnService_descriptor_" data-uid="Kinstrife.Actor.ActorSpawnService.descriptor*"></a>
+  <h4 id="Kinstrife_Actor_ActorSpawnService_descriptor" data-uid="Kinstrife.Actor.ActorSpawnService.descriptor">descriptor</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override ServiceDescriptor descriptor { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Kinstrife.Messaging.ServiceDescriptor.html">ServiceDescriptor</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">Kinstrife.Messaging.ServiceBehaviour&lt;Kinstrife.Actor.Interfaces.IActor, Kinstrife.Actor.Interfaces.SpawnArguments&gt;.descriptor</span></div>
   <h3 id="methods">Methods
   </h3>
   

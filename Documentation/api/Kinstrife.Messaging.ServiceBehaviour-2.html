@@ -80,6 +80,7 @@
     <div class="level0"><span class="xref">System.Object</span></div>
     <div class="level1"><span class="xref">ServiceBehaviour&lt;TResponse, TPayload&gt;</span></div>
       <div class="level2"><a class="xref" href="Kinstrife.Actor.ActorSpawnService.html">ActorSpawnService</a></div>
+      <div class="level2"><a class="xref" href="Kinstrife.Camera.CinematicCameraService.html">CinematicCameraService</a></div>
       <div class="level2"><a class="xref" href="Kinstrife.Core.Camera.CameraRig.html">CameraRig</a></div>
       <div class="level2"><a class="xref" href="Kinstrife.Core.Input.InputFocusService.html">InputFocusService</a></div>
       <div class="level2"><a class="xref" href="Kinstrife.UI.UIService-2.html">UIService&lt;TResponse, TPayload&gt;</a></div>
@@ -119,30 +120,6 @@
   </h3>
   
   
-  <h4 id="Kinstrife_Messaging_ServiceBehaviour_2_descriptor" data-uid="Kinstrife.Messaging.ServiceBehaviour`2.descriptor">descriptor</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected ServiceDescriptor descriptor</code></pre>
-  </div>
-  <h5 class="fieldValue">Field Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Kinstrife.Messaging.ServiceDescriptor.html">ServiceDescriptor</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
   <h4 id="Kinstrife_Messaging_ServiceBehaviour_2_server" data-uid="Kinstrife.Messaging.ServiceBehaviour`2.server">server</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
@@ -167,6 +144,56 @@
   </table>
   <h3 id="properties">Properties
   </h3>
+  
+  
+  <a id="Kinstrife_Messaging_ServiceBehaviour_2_AllowConcurrency_" data-uid="Kinstrife.Messaging.ServiceBehaviour`2.AllowConcurrency*"></a>
+  <h4 id="Kinstrife_Messaging_ServiceBehaviour_2_AllowConcurrency" data-uid="Kinstrife.Messaging.ServiceBehaviour`2.AllowConcurrency">AllowConcurrency</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual bool AllowConcurrency { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Kinstrife_Messaging_ServiceBehaviour_2_descriptor_" data-uid="Kinstrife.Messaging.ServiceBehaviour`2.descriptor*"></a>
+  <h4 id="Kinstrife_Messaging_ServiceBehaviour_2_descriptor" data-uid="Kinstrife.Messaging.ServiceBehaviour`2.descriptor">descriptor</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected abstract ServiceDescriptor descriptor { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Kinstrife.Messaging.ServiceDescriptor.html">ServiceDescriptor</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   
   
   <a id="Kinstrife_Messaging_ServiceBehaviour_2_Initialized_" data-uid="Kinstrife.Messaging.ServiceBehaviour`2.Initialized*"></a>
@@ -283,6 +310,48 @@
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">protected virtual void OnDestroy()</code></pre>
   </div>
+  
+  
+  <a id="Kinstrife_Messaging_ServiceBehaviour_2_TryHandleRequest_" data-uid="Kinstrife.Messaging.ServiceBehaviour`2.TryHandleRequest*"></a>
+  <h4 id="Kinstrife_Messaging_ServiceBehaviour_2_TryHandleRequest_Kinstrife_Messaging_Request__1__" data-uid="Kinstrife.Messaging.ServiceBehaviour`2.TryHandleRequest(Kinstrife.Messaging.Request{`1})">TryHandleRequest(Request&lt;TPayload&gt;)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected async UniTask&lt;TResponse&gt; TryHandleRequest(Request&lt;TPayload&gt; payload)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Kinstrife.Messaging.Request-1.html">Request</a>&lt;TPayload&gt;</td>
+        <td><span class="parametername">payload</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">UniTask</span>&lt;TResponse&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   <h3 id="implements">Implements</h3>
   <div>
       <a class="xref" href="Kinstrife.Core.DependencyInjection.IInjectable.html">IInjectable</a>

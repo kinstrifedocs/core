@@ -103,9 +103,6 @@
       <a class="xref" href="Kinstrife.Database.QueryParams-1.html#Kinstrife_Database_QueryParams_1_FilterTypeSelect">QueryParams&lt;T&gt;.FilterTypeSelect()</a>
     </div>
     <div>
-      <span class="xref">System.Object.ToString()</span>
-    </div>
-    <div>
       <span class="xref">System.Object.Equals(System.Object)</span>
     </div>
     <div>
@@ -129,7 +126,7 @@
   <h5 id="Kinstrife_Database_QueryParams_3_syntax">Syntax</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">[Serializable]
-public class QueryParams&lt;T, U, V&gt; : QueryParams&lt;T&gt; where T : ICategorized, ITagged, ISortable where U : ICategory where V : ITag</code></pre>
+public class QueryParams&lt;T, U, V&gt; : QueryParams&lt;T&gt; where T : ICategorized, ITagged, ISortable where U : IdentifiableObject, ICategory where V : IdentifiableObject, ITag</code></pre>
   </div>
   <h5 class="typeParameters">Type Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -272,6 +269,33 @@ public class QueryParams&lt;T, U, V&gt; : QueryParams&lt;T&gt; where T : ICatego
       </tr>
     </tbody>
   </table>
+  
+  
+  <a id="Kinstrife_Database_QueryParams_3_ToString_" data-uid="Kinstrife.Database.QueryParams`3.ToString*"></a>
+  <h4 id="Kinstrife_Database_QueryParams_3_ToString" data-uid="Kinstrife.Database.QueryParams`3.ToString">ToString()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override string ToString()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">Kinstrife.Database.QueryParams&lt;T&gt;.ToString()</span></div>
 </article>
           </div>
           

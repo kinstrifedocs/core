@@ -103,10 +103,16 @@
       <a class="xref" href="Kinstrife.Messaging.ServiceBehaviour-2.html#Kinstrife_Messaging_ServiceBehaviour_2_Inject_Kinstrife_Messaging_IServiceServer__0_Kinstrife_Messaging_Request__1___">ServiceBehaviour&lt;Boolean, InputFocusState&gt;.Inject(IServiceServer&lt;Boolean, Request&lt;InputFocusState&gt;&gt;)</a>
     </div>
     <div>
+      <a class="xref" href="Kinstrife.Messaging.ServiceBehaviour-2.html#Kinstrife_Messaging_ServiceBehaviour_2_AllowConcurrency">ServiceBehaviour&lt;Boolean, InputFocusState&gt;.AllowConcurrency</a>
+    </div>
+    <div>
       <a class="xref" href="Kinstrife.Messaging.ServiceBehaviour-2.html#Kinstrife_Messaging_ServiceBehaviour_2_Initialized">ServiceBehaviour&lt;Boolean, InputFocusState&gt;.Initialized</a>
     </div>
     <div>
       <a class="xref" href="Kinstrife.Messaging.ServiceBehaviour-2.html#Kinstrife_Messaging_ServiceBehaviour_2_Initialize">ServiceBehaviour&lt;Boolean, InputFocusState&gt;.Initialize()</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.Messaging.ServiceBehaviour-2.html#Kinstrife_Messaging_ServiceBehaviour_2_TryHandleRequest_Kinstrife_Messaging_Request__1__">ServiceBehaviour&lt;Boolean, InputFocusState&gt;.TryHandleRequest(Request&lt;InputFocusState&gt;)</a>
     </div>
     <div>
       <a class="xref" href="Kinstrife.Messaging.ServiceBehaviour-2.html#Kinstrife_Messaging_ServiceBehaviour_2_HandleRequest_Kinstrife_Messaging_Request__1__">ServiceBehaviour&lt;Boolean, InputFocusState&gt;.HandleRequest(Request&lt;InputFocusState&gt;)</a>
@@ -120,18 +126,6 @@
   <h5 id="Kinstrife_Core_Input_InputFocusService_syntax">Syntax</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public class InputFocusService : ServiceBehaviour&lt;bool, InputFocusState&gt;, IInjectable, IInitializable, IInputHandler, IInstall&lt;InputFocusService&gt;, IInstall, IDependent</code></pre>
-  </div>
-  <h3 id="constructors">Constructors
-  </h3>
-  
-  
-  <a id="Kinstrife_Core_Input_InputFocusService__ctor_" data-uid="Kinstrife.Core.Input.InputFocusService.#ctor*"></a>
-  <h4 id="Kinstrife_Core_Input_InputFocusService__ctor" data-uid="Kinstrife.Core.Input.InputFocusService.#ctor">InputFocusService()</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public InputFocusService()</code></pre>
   </div>
   <h3 id="fields">Fields
   </h3>
@@ -258,6 +252,33 @@
       </tr>
     </tbody>
   </table>
+  
+  
+  <a id="Kinstrife_Core_Input_InputFocusService_descriptor_" data-uid="Kinstrife.Core.Input.InputFocusService.descriptor*"></a>
+  <h4 id="Kinstrife_Core_Input_InputFocusService_descriptor" data-uid="Kinstrife.Core.Input.InputFocusService.descriptor">descriptor</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override ServiceDescriptor descriptor { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Kinstrife.Messaging.ServiceDescriptor.html">ServiceDescriptor</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">Kinstrife.Messaging.ServiceBehaviour&lt;System.Boolean, Kinstrife.Core.Input.InputFocusState&gt;.descriptor</span></div>
   <h3 id="methods">Methods
   </h3>
   
