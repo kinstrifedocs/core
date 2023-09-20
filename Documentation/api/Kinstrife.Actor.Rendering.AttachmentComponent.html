@@ -182,6 +182,9 @@
     <div>
       <a class="xref" href="Kinstrife.Renderers.RendererComponent.html#Kinstrife_Renderers_RendererComponent_SetMaterialParameter__1_Kinstrife_Renderers_MaterialParam___0____0_">RendererComponent.SetMaterialParameter&lt;T&gt;(MaterialParam&lt;T&gt;, T)</a>
     </div>
+    <div>
+      <a class="xref" href="Kinstrife.Renderers.RendererComponent.html#Kinstrife_Renderers_RendererComponent_UpdateProbeAnchor">RendererComponent.UpdateProbeAnchor()</a>
+    </div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Kinstrife.Actor.Rendering.html">Kinstrife.Actor.Rendering</a></h6>
   <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
@@ -196,14 +199,14 @@
   </h3>
   
   
-  <h4 id="Kinstrife_Actor_Rendering_AttachmentComponent_layerInflation" data-uid="Kinstrife.Actor.Rendering.AttachmentComponent.layerInflation">layerInflation</h4>
+  <h4 id="Kinstrife_Actor_Rendering_AttachmentComponent_LayeringData" data-uid="Kinstrife.Actor.Rendering.AttachmentComponent.LayeringData">LayeringData</h4>
   <div class="markdown level1 summary"><p>Inflation added from layering</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">[NonSerialized]
-public float layerInflation</code></pre>
+public LayerInflationData LayeringData</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -215,32 +218,7 @@ public float layerInflation</code></pre>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Single</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <h4 id="Kinstrife_Actor_Rendering_AttachmentComponent_layerPush" data-uid="Kinstrife.Actor.Rendering.AttachmentComponent.layerPush">layerPush</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[NonSerialized]
-public float layerPush</code></pre>
-  </div>
-  <h5 class="fieldValue">Field Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Single</span></td>
+        <td><span class="xref">LayerInflationData</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -257,6 +235,31 @@ public float layerPush</code></pre>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public float Inflation { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Kinstrife_Actor_Rendering_AttachmentComponent_InflationAndPush_" data-uid="Kinstrife.Actor.Rendering.AttachmentComponent.InflationAndPush*"></a>
+  <h4 id="Kinstrife_Actor_Rendering_AttachmentComponent_InflationAndPush" data-uid="Kinstrife.Actor.Rendering.AttachmentComponent.InflationAndPush">InflationAndPush</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float InflationAndPush { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">

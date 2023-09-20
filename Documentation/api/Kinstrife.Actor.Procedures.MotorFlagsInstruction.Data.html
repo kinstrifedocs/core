@@ -5,10 +5,10 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Struct CoverageData
+    <title>Class MotorFlagsInstruction.Data
    | Kinstrife </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Struct CoverageData
+    <meta name="title" content="Class MotorFlagsInstruction.Data
    | Kinstrife ">
     <meta name="generator" content="docfx 2.59.4.0">
     
@@ -68,23 +68,31 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="Kinstrife.Renderers.CoverageData">
+            <article class="content wrap" id="_content" data-uid="Kinstrife.Actor.Procedures.MotorFlagsInstruction.Data">
   
   
-  <h1 id="Kinstrife_Renderers_CoverageData" data-uid="Kinstrife.Renderers.CoverageData" class="text-break">Struct CoverageData
+  <h1 id="Kinstrife_Actor_Procedures_MotorFlagsInstruction_Data" data-uid="Kinstrife.Actor.Procedures.MotorFlagsInstruction.Data" class="text-break">Class MotorFlagsInstruction.Data
   </h1>
   <div class="markdown level0 summary"></div>
   <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">MotorFlagsInstruction.Data</span></div>
+  </div>
+  <div class="implements">
+    <h5>Implements</h5>
+    <div><a class="xref" href="Kinstrife.Procedures.IOutputAuthoring.html">IOutputAuthoring</a></div>
+    <div><a class="xref" href="Kinstrife.Procedures.IInstructionAuthoring-1.html">IInstructionAuthoring</a>&lt;<a class="xref" href="Kinstrife.Procedures.IOutputInstruction.html">IOutputInstruction</a>&gt;</div>
+    <div><a class="xref" href="Kinstrife.Procedures.IInstructionAuthoring.html">IInstructionAuthoring</a></div>
+  </div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
     <div>
-      <span class="xref">System.ValueType.Equals(System.Object)</span>
+      <span class="xref">System.Object.ToString()</span>
     </div>
     <div>
-      <span class="xref">System.ValueType.GetHashCode()</span>
-    </div>
-    <div>
-      <span class="xref">System.ValueType.ToString()</span>
+      <span class="xref">System.Object.Equals(System.Object)</span>
     </div>
     <div>
       <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
@@ -93,67 +101,61 @@
       <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
     </div>
     <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
       <span class="xref">System.Object.GetType()</span>
     </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
   </div>
-  <h6><strong>Namespace</strong>: <a class="xref" href="Kinstrife.Renderers.html">Kinstrife.Renderers</a></h6>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Kinstrife.Actor.Procedures.html">Kinstrife.Actor.Procedures</a></h6>
   <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
-  <h5 id="Kinstrife_Renderers_CoverageData_syntax">Syntax</h5>
+  <h5 id="Kinstrife_Actor_Procedures_MotorFlagsInstruction_Data_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[Serializable]
-public struct CoverageData</code></pre>
+    <pre><code class="lang-csharp hljs">public class Data : IOutputAuthoring, IInstructionAuthoring&lt;IOutputInstruction&gt;, IInstructionAuthoring</code></pre>
   </div>
-  <h3 id="constructors">Constructors
+  <h3 id="properties">Properties
   </h3>
   
   
-  <a id="Kinstrife_Renderers_CoverageData__ctor_" data-uid="Kinstrife.Renderers.CoverageData.#ctor*"></a>
-  <h4 id="Kinstrife_Renderers_CoverageData__ctor_Kinstrife_Renderers_HumanRenderersLayer_System_Single_System_Single_" data-uid="Kinstrife.Renderers.CoverageData.#ctor(Kinstrife.Renderers.HumanRenderersLayer,System.Single,System.Single)">CoverageData(HumanRenderersLayer, Single, Single)</h4>
+  <a id="Kinstrife_Actor_Procedures_MotorFlagsInstruction_Data_OperationMask_" data-uid="Kinstrife.Actor.Procedures.MotorFlagsInstruction.Data.OperationMask*"></a>
+  <h4 id="Kinstrife_Actor_Procedures_MotorFlagsInstruction_Data_OperationMask" data-uid="Kinstrife.Actor.Procedures.MotorFlagsInstruction.Data.OperationMask">OperationMask</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public CoverageData(HumanRenderersLayer layer, float weight, float push)</code></pre>
+    <pre><code class="lang-csharp hljs">public Operation OperationMask { get; }</code></pre>
   </div>
-  <h5 class="parameters">Parameters</h5>
+  <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
       <tr>
         <th>Type</th>
-        <th>Name</th>
         <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="Kinstrife.Renderers.HumanRenderersLayer.html">HumanRenderersLayer</a></td>
-        <td><span class="parametername">layer</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><span class="xref">System.Single</span></td>
-        <td><span class="parametername">weight</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><span class="xref">System.Single</span></td>
-        <td><span class="parametername">push</span></td>
+        <td><a class="xref" href="Kinstrife.Procedures.Operation.html">Operation</a></td>
         <td></td>
       </tr>
     </tbody>
   </table>
-  <h3 id="fields">Fields
+  <h3 id="methods">Methods
   </h3>
   
   
-  <h4 id="Kinstrife_Renderers_CoverageData_Push" data-uid="Kinstrife.Renderers.CoverageData.Push">Push</h4>
+  <a id="Kinstrife_Actor_Procedures_MotorFlagsInstruction_Data_ToRuntimeInstruction_" data-uid="Kinstrife.Actor.Procedures.MotorFlagsInstruction.Data.ToRuntimeInstruction*"></a>
+  <h4 id="Kinstrife_Actor_Procedures_MotorFlagsInstruction_Data_ToRuntimeInstruction" data-uid="Kinstrife.Actor.Procedures.MotorFlagsInstruction.Data.ToRuntimeInstruction">ToRuntimeInstruction()</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public float Push</code></pre>
+    <pre><code class="lang-csharp hljs">public IOutputInstruction ToRuntimeInstruction()</code></pre>
   </div>
-  <h5 class="fieldValue">Field Value</h5>
+  <h5 class="returns">Returns</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
       <tr>
@@ -163,83 +165,21 @@ public struct CoverageData</code></pre>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Single</span></td>
+        <td><a class="xref" href="Kinstrife.Procedures.IOutputInstruction.html">IOutputInstruction</a></td>
         <td></td>
       </tr>
     </tbody>
   </table>
-  
-  
-  <h4 id="Kinstrife_Renderers_CoverageData_PushFalloff" data-uid="Kinstrife.Renderers.CoverageData.PushFalloff">PushFalloff</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public int PushFalloff</code></pre>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <a class="xref" href="Kinstrife.Procedures.IOutputAuthoring.html">IOutputAuthoring</a>
   </div>
-  <h5 class="fieldValue">Field Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Int32</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <h4 id="Kinstrife_Renderers_CoverageData_PushFromLayer" data-uid="Kinstrife.Renderers.CoverageData.PushFromLayer">PushFromLayer</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public HumanRenderersLayer PushFromLayer</code></pre>
+  <div>
+      <a class="xref" href="Kinstrife.Procedures.IInstructionAuthoring-1.html">IInstructionAuthoring&lt;T&gt;</a>
   </div>
-  <h5 class="fieldValue">Field Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Kinstrife.Renderers.HumanRenderersLayer.html">HumanRenderersLayer</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <h4 id="Kinstrife_Renderers_CoverageData_WeightCutoff" data-uid="Kinstrife.Renderers.CoverageData.WeightCutoff">WeightCutoff</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public float WeightCutoff</code></pre>
+  <div>
+      <a class="xref" href="Kinstrife.Procedures.IInstructionAuthoring.html">IInstructionAuthoring</a>
   </div>
-  <h5 class="fieldValue">Field Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Single</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
 </article>
           </div>
           
