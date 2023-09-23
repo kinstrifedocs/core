@@ -1,0 +1,614 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class StateExtensions
+   | Kinstrife </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class StateExtensions
+   | Kinstrife ">
+    <meta name="generator" content="docfx 2.59.4.0">
+    
+    <link rel="shortcut icon" href="../../favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet"> 
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../index.html">
+                <img id="logo" class="svg" src="../../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Kinstrife.FSM.StateExtensions">
+  
+  
+  <h1 id="Kinstrife_FSM_StateExtensions" data-uid="Kinstrife.FSM.StateExtensions" class="text-break">Class StateExtensions
+  </h1>
+  <div class="markdown level0 summary"><p>Various extension methods for <a class="xref" href="Kinstrife.FSM.IState.html">IState</a> and <a class="xref" href="Kinstrife.FSM.IOwnedState-1.html">IOwnedState&lt;TState&gt;</a>.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">StateExtensions</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Kinstrife.FSM.html">Kinstrife.FSM</a></h6>
+  <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
+  <h5 id="Kinstrife_FSM_StateExtensions_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static class StateExtensions</code></pre>
+  </div>
+  <h5 id="Kinstrife_FSM_StateExtensions_remarks"><strong>Remarks</strong></h5>
+  <div class="markdown level0 remarks"><p>Documentation: <a href="https://kybernetik.com.au/animancer/docs/manual/fsm">Finite State Machines</a></p>
+</div>
+  <h5 id="Kinstrife_FSM_StateExtensions_examples"><strong>Examples</strong></h5>
+  <pre><code>    public class Character : MonoBehaviour
+    {
+        public StateMachine&lt;CharacterState> StateMachine { get; private set; }
+    }
+
+    public class CharacterState : StateBehaviour, IOwnedState&lt;CharacterState>
+    {
+        [SerializeField]
+        private Character _Character;
+        public Character Character => _Character;
+
+        public StateMachine&lt;CharacterState> OwnerStateMachine => _Character.StateMachine;
+    }
+
+    public class CharacterBrain : MonoBehaviour
+    {
+        [SerializeField] private Character _Character;
+        [SerializeField] private CharacterState _Jump;
+
+        private void Update()
+        {
+            if (Input.GetKeyDown(KeyCode.Space))
+            {
+                // Normally you would need to refer to both the state machine and the state:
+                _Character.StateMachine.TrySetState(_Jump);
+
+                // But since CharacterState implements IOwnedState you can use these extension methods:
+                _Jump.TryEnterState();
+            }
+        }
+    }</code></pre>
+<h2>Inherited Types</h2>
+Unfortunately, if the field type is not the same as the <code>T</code> in the <code>IOwnedState&lt;T></code>
+implementation then attempting to use these extension methods without specifying the generic argument will
+give the following error:
+<p>
+<em>The type &apos;StateType&apos; cannot be used as type parameter &apos;TState&apos; in the generic type or method
+&apos;StateExtensions.TryEnterState&lt;TState>(TState)&apos;. There is no implicit reference conversion from
+&apos;StateType&apos; to &apos;Animancer.FSM.IOwnedState&lt;StateType>&apos;.</em>
+<p>
+For example, you might want to access members of a derived state class like this <code>SetTarget</code> method:
+<p><pre><code>public class AttackState : CharacterState
+{
+    public void SetTarget(Transform target) { }
+}
+<p>public class CharacterBrain : MonoBehaviour
+{
+[SerializeField] private AttackState _Attack;</p>
+<pre><code>private void Update()
+{
+    if (Input.GetMouseButtonDown(0))
+    {
+        _Attack.SetTarget(...)
+        // Can&amp;apos;t do _Attack.TryEnterState();
+        _Attack.TryEnterState&amp;lt;CharacterState&gt;();
+    }
+}
+</code></pre>
+<p>}</code></pre>
+Unlike the <code>_Jump</code> example, the <code>_Attack</code> field is an <code>AttackState</code> rather than the base
+<code>CharacterState</code> so we can call <code>_Attack.SetTarget(...)</code> but that causes problems with these extension
+methods.</p>
+<p>
+Calling the method without specifying its generic argument automatically uses the variable&apos;s type as the
+argument so both of the following calls do the same thing:
+<p><pre><code>_Attack.TryEnterState();
+_Attack.TryEnterState&lt;AttackState>();</code></pre>
+The problem is that <code>AttackState</code> inherits the implementation of <code>IOwnedState</code> from the base
+<code>CharacterState</code> class. But since that implementation is <code>IOwnedState&lt;CharacterState></code>, rather
+than <code>IOwnedState&lt;AttackState></code> that means <code>TryEnterState&lt;AttackState></code> does not satisfy
+that method&apos;s generic constraints: <code>where TState : class, IOwnedState&lt;TState></code>
+<p>
+That is why you simply need to specify the base class which implements <code>IOwnedState</code> as the generic
+argument to prevent it from inferring the wrong type:
+<p><pre><code>_Attack.TryEnterState&lt;CharacterState>();</code></pre>
+
+  <h3 id="fields">Fields
+  </h3>
+  
+  
+  <h4 id="Kinstrife_FSM_StateExtensions_APIDocumentationURL" data-uid="Kinstrife.FSM.StateExtensions.APIDocumentationURL">APIDocumentationURL</h4>
+  <div class="markdown level1 summary"><p>The URL of the API documentation for the <a class="xref" href="Kinstrife.FSM.html">Kinstrife.FSM</a> system.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const string APIDocumentationURL = &quot;https://kybernetik.com.au/animancer/api/Animancer.FSM/&quot;</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  
+  
+  <a id="Kinstrife_FSM_StateExtensions_ForceEnterState_" data-uid="Kinstrife.FSM.StateExtensions.ForceEnterState*"></a>
+  <h4 id="Kinstrife_FSM_StateExtensions_ForceEnterState__1___0_" data-uid="Kinstrife.FSM.StateExtensions.ForceEnterState``1(``0)">ForceEnterState&lt;TState&gt;(TState)</h4>
+  <div class="markdown level1 summary"><p>[Animancer Extension]
+Calls <a class="xref" href="Kinstrife.FSM.IState.html#Kinstrife_FSM_IState_OnExitState">OnExitState()</a> on the <a class="xref" href="Kinstrife.FSM.StateMachine-1.html#Kinstrife_FSM_StateMachine_1_CurrentState">CurrentState</a> then
+changes to the specified <code>state</code> and calls <a class="xref" href="Kinstrife.FSM.IState.html#Kinstrife_FSM_IState_OnEnterState">OnEnterState()</a> on it.</p>
+<p>
+This method does not check <a class="xref" href="Kinstrife.FSM.IState.html#Kinstrife_FSM_IState_CanExitState">CanExitState</a> or
+<a class="xref" href="Kinstrife.FSM.IState.html#Kinstrife_FSM_IState_CanEnterState">CanEnterState</a>. To do that, you should use <see cref="!:TrySetState"></see> instead.
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void ForceEnterState&lt;TState&gt;(this TState state)
+    where TState : class, IOwnedState&lt;TState&gt;</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">TState</span></td>
+        <td><span class="parametername">state</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">TState</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Kinstrife_FSM_StateExtensions_GetNextState_" data-uid="Kinstrife.FSM.StateExtensions.GetNextState*"></a>
+  <h4 id="Kinstrife_FSM_StateExtensions_GetNextState__1___0_" data-uid="Kinstrife.FSM.StateExtensions.GetNextState``1(``0)">GetNextState&lt;TState&gt;(TState)</h4>
+  <div class="markdown level1 summary"><p>[Animancer Extension] Returns the <a class="xref" href="Kinstrife.FSM.StateChange-1.html#Kinstrife_FSM_StateChange_1_NextState">NextState</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static TState GetNextState&lt;TState&gt;(this TState state)
+    where TState : class, IState</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">TState</span></td>
+        <td><span class="parametername">state</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">TState</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">TState</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Kinstrife_FSM_StateExtensions_GetPreviousState_" data-uid="Kinstrife.FSM.StateExtensions.GetPreviousState*"></a>
+  <h4 id="Kinstrife_FSM_StateExtensions_GetPreviousState__1___0_" data-uid="Kinstrife.FSM.StateExtensions.GetPreviousState``1(``0)">GetPreviousState&lt;TState&gt;(TState)</h4>
+  <div class="markdown level1 summary"><p>[Animancer Extension] Returns the <a class="xref" href="Kinstrife.FSM.StateChange-1.html#Kinstrife_FSM_StateChange_1_PreviousState">PreviousState</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static TState GetPreviousState&lt;TState&gt;(this TState state)
+    where TState : class, IState</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">TState</span></td>
+        <td><span class="parametername">state</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">TState</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">TState</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Kinstrife_FSM_StateExtensions_IsCurrentState_" data-uid="Kinstrife.FSM.StateExtensions.IsCurrentState*"></a>
+  <h4 id="Kinstrife_FSM_StateExtensions_IsCurrentState__1___0_" data-uid="Kinstrife.FSM.StateExtensions.IsCurrentState``1(``0)">IsCurrentState&lt;TState&gt;(TState)</h4>
+  <div class="markdown level1 summary"><p>[Animancer Extension]
+Checks if the specified <code>state</code> is the <a class="xref" href="Kinstrife.FSM.StateMachine-1.html#Kinstrife_FSM_StateMachine_1_CurrentState">CurrentState</a> in its
+<a class="xref" href="Kinstrife.FSM.IOwnedState-1.html#Kinstrife_FSM_IOwnedState_1_OwnerStateMachine">OwnerStateMachine</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool IsCurrentState&lt;TState&gt;(this TState state)
+    where TState : class, IOwnedState&lt;TState&gt;</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">TState</span></td>
+        <td><span class="parametername">state</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">TState</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Kinstrife_FSM_StateExtensions_TryEnterState_" data-uid="Kinstrife.FSM.StateExtensions.TryEnterState*"></a>
+  <h4 id="Kinstrife_FSM_StateExtensions_TryEnterState__1___0_" data-uid="Kinstrife.FSM.StateExtensions.TryEnterState``1(``0)">TryEnterState&lt;TState&gt;(TState)</h4>
+  <div class="markdown level1 summary"><p>[Animancer Extension]
+Attempts to enter the specified <code>state</code> and returns true if successful.</p>
+<p>
+This method returns true immediately if the specified `state` is already the
+<a class="xref" href="Kinstrife.FSM.StateMachine-1.html#Kinstrife_FSM_StateMachine_1_CurrentState">CurrentState</a>. To allow directly re-entering the same state, use
+<a class="xref" href="Kinstrife.FSM.StateExtensions.html#Kinstrife_FSM_StateExtensions_TryReEnterState__1___0_">TryReEnterState&lt;TState&gt;(TState)</a> instead.
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool TryEnterState&lt;TState&gt;(this TState state)
+    where TState : class, IOwnedState&lt;TState&gt;</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">TState</span></td>
+        <td><span class="parametername">state</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">TState</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Kinstrife_FSM_StateExtensions_TryReEnterState_" data-uid="Kinstrife.FSM.StateExtensions.TryReEnterState*"></a>
+  <h4 id="Kinstrife_FSM_StateExtensions_TryReEnterState__1___0_" data-uid="Kinstrife.FSM.StateExtensions.TryReEnterState``1(``0)">TryReEnterState&lt;TState&gt;(TState)</h4>
+  <div class="markdown level1 summary"><p>[Animancer Extension]
+Attempts to enter the specified <code>state</code> and returns true if successful.</p>
+<p>
+This method does not check if the `state` is already the <a class="xref" href="Kinstrife.FSM.StateMachine-1.html#Kinstrife_FSM_StateMachine_1_CurrentState">CurrentState</a>.
+To do so, use <a class="xref" href="Kinstrife.FSM.StateExtensions.html#Kinstrife_FSM_StateExtensions_TryEnterState__1___0_">TryEnterState&lt;TState&gt;(TState)</a> instead.
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool TryReEnterState&lt;TState&gt;(this TState state)
+    where TState : class, IOwnedState&lt;TState&gt;</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">TState</span></td>
+        <td><span class="parametername">state</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">TState</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+  </body>
+</html>

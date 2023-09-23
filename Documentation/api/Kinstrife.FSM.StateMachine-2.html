@@ -1,0 +1,1598 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class StateMachine&lt;TKey, TState&gt;
+   | Kinstrife </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class StateMachine&lt;TKey, TState&gt;
+   | Kinstrife ">
+    <meta name="generator" content="docfx 2.59.4.0">
+    
+    <link rel="shortcut icon" href="../../favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet"> 
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../index.html">
+                <img id="logo" class="svg" src="../../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Kinstrife.FSM.StateMachine`2">
+  
+  
+  <h1 id="Kinstrife_FSM_StateMachine_2" data-uid="Kinstrife.FSM.StateMachine`2" class="text-break">Class StateMachine&lt;TKey, TState&gt;
+  </h1>
+  <div class="markdown level0 summary"><p>A simple Finite State Machine system that registers each state with a particular key.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><a class="xref" href="Kinstrife.FSM.StateMachine-1.html">StateMachine</a>&lt;TState&gt;</div>
+    <div class="level2"><span class="xref">StateMachine&lt;TKey, TState&gt;</span></div>
+      <div class="level3"><a class="xref" href="Kinstrife.FSM.StateMachine-2.WithDefault.html">StateMachine&lt;TKey, TState&gt;.WithDefault</a></div>
+  </div>
+  <div class="implements">
+    <h5>Implements</h5>
+    <div><a class="xref" href="Kinstrife.FSM.IStateMachine.html">IStateMachine</a></div>
+    <div><a class="xref" href="Kinstrife.FSM.IKeyedStateMachine-1.html">IKeyedStateMachine</a>&lt;TKey&gt;</div>
+    <div><span class="xref">System.Collections.Generic.IDictionary</span>&lt;TKey, TState&gt;</div>
+    <div><span class="xref">System.Collections.Generic.ICollection</span>&lt;<span class="xref">System.Collections.Generic.KeyValuePair</span>&lt;TKey, TState&gt;&gt;</div>
+    <div><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<span class="xref">System.Collections.Generic.KeyValuePair</span>&lt;TKey, TState&gt;&gt;</div>
+    <div><span class="xref">System.Collections.IEnumerable</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="Kinstrife.FSM.StateMachine-1.html#Kinstrife_FSM_StateMachine_1_CurrentState">StateMachine&lt;TState&gt;.CurrentState</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.FSM.StateMachine-1.html#Kinstrife_FSM_StateMachine_1_PreviousState">StateMachine&lt;TState&gt;.PreviousState</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.FSM.StateMachine-1.html#Kinstrife_FSM_StateMachine_1_NextState">StateMachine&lt;TState&gt;.NextState</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.FSM.StateMachine-1.html#Kinstrife_FSM_StateMachine_1_CanSetState__0_">StateMachine&lt;TState&gt;.CanSetState(TState)</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.FSM.StateMachine-1.html#Kinstrife_FSM_StateMachine_1_CanSetState_System_Collections_Generic_IList__0__">StateMachine&lt;TState&gt;.CanSetState(IList&lt;TState&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.FSM.StateMachine-1.html#Kinstrife_FSM_StateMachine_1_TrySetState__0_">StateMachine&lt;TState&gt;.TrySetState(TState)</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.FSM.StateMachine-1.html#Kinstrife_FSM_StateMachine_1_TrySetState_System_Collections_Generic_IList__0__">StateMachine&lt;TState&gt;.TrySetState(IList&lt;TState&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.FSM.StateMachine-1.html#Kinstrife_FSM_StateMachine_1_TryResetState__0_">StateMachine&lt;TState&gt;.TryResetState(TState)</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.FSM.StateMachine-1.html#Kinstrife_FSM_StateMachine_1_TryResetState_System_Collections_Generic_IList__0__">StateMachine&lt;TState&gt;.TryResetState(IList&lt;TState&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.FSM.StateMachine-1.html#Kinstrife_FSM_StateMachine_1_ForceSetState__0_">StateMachine&lt;TState&gt;.ForceSetState(TState)</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.FSM.StateMachine-1.html#Kinstrife_FSM_StateMachine_1_SetAllowNullStates_System_Boolean_">StateMachine&lt;TState&gt;.SetAllowNullStates(Boolean)</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.FSM.StateMachine-1.html#Kinstrife_FSM_StateMachine_1_Kinstrife_FSM_IStateMachine_CurrentState">StateMachine&lt;TState&gt;.IStateMachine.CurrentState</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.FSM.StateMachine-1.html#Kinstrife_FSM_StateMachine_1_Kinstrife_FSM_IStateMachine_PreviousState">StateMachine&lt;TState&gt;.IStateMachine.PreviousState</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.FSM.StateMachine-1.html#Kinstrife_FSM_StateMachine_1_Kinstrife_FSM_IStateMachine_NextState">StateMachine&lt;TState&gt;.IStateMachine.NextState</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.FSM.StateMachine-1.html#Kinstrife_FSM_StateMachine_1_Kinstrife_FSM_IStateMachine_CanSetState_System_Collections_IList_">StateMachine&lt;TState&gt;.IStateMachine.CanSetState(IList)</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.FSM.StateMachine-1.html#Kinstrife_FSM_StateMachine_1_Kinstrife_FSM_IStateMachine_CanSetState_System_Object_">StateMachine&lt;TState&gt;.IStateMachine.CanSetState(Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.FSM.StateMachine-1.html#Kinstrife_FSM_StateMachine_1_Kinstrife_FSM_IStateMachine_ForceSetState_System_Object_">StateMachine&lt;TState&gt;.IStateMachine.ForceSetState(Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.FSM.StateMachine-1.html#Kinstrife_FSM_StateMachine_1_Kinstrife_FSM_IStateMachine_TryResetState_System_Collections_IList_">StateMachine&lt;TState&gt;.IStateMachine.TryResetState(IList)</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.FSM.StateMachine-1.html#Kinstrife_FSM_StateMachine_1_Kinstrife_FSM_IStateMachine_TryResetState_System_Object_">StateMachine&lt;TState&gt;.IStateMachine.TryResetState(Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.FSM.StateMachine-1.html#Kinstrife_FSM_StateMachine_1_Kinstrife_FSM_IStateMachine_TrySetState_System_Collections_IList_">StateMachine&lt;TState&gt;.IStateMachine.TrySetState(IList)</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.FSM.StateMachine-1.html#Kinstrife_FSM_StateMachine_1_Kinstrife_FSM_IStateMachine_TrySetState_System_Object_">StateMachine&lt;TState&gt;.IStateMachine.TrySetState(Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.FSM.StateMachine-1.html#Kinstrife_FSM_StateMachine_1_Kinstrife_FSM_IStateMachine_SetAllowNullStates_System_Boolean_">StateMachine&lt;TState&gt;.IStateMachine.SetAllowNullStates(Boolean)</a>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Kinstrife.FSM.html">Kinstrife.FSM</a></h6>
+  <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
+  <h5 id="Kinstrife_FSM_StateMachine_2_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class StateMachine&lt;TKey, TState&gt; : StateMachine&lt;TState&gt;, IStateMachine, IKeyedStateMachine&lt;TKey&gt;, IDictionary&lt;TKey, TState&gt;, ICollection&lt;KeyValuePair&lt;TKey, TState&gt;&gt;, IEnumerable&lt;KeyValuePair&lt;TKey, TState&gt;&gt;, IEnumerable where TState : class, IState</code></pre>
+  </div>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">TKey</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="parametername">TState</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Kinstrife_FSM_StateMachine_2_remarks"><strong>Remarks</strong></h5>
+  <div class="markdown level0 remarks"><p>This class allows states to be registered with a particular key upfront and then accessed later using that key.
+See <a class="xref" href="Kinstrife.FSM.StateMachine-1.html">StateMachine&lt;TState&gt;</a> for a system that does not bother keeping track of any states other than
+the active one.</p>
+<p>
+See <a class="xref" href="Kinstrife.FSM.StateMachine-2.html#Kinstrife_FSM_StateMachine_2_InitializeAfterDeserialize">InitializeAfterDeserialize()</a> if using this class in a serialized field.
+<p>
+Documentation: <a href="https://kybernetik.com.au/animancer/docs/manual/fsm/keys">Keyed State Machines</a>
+</div>
+  <h3 id="constructors">Constructors
+  </h3>
+  
+  
+  <a id="Kinstrife_FSM_StateMachine_2__ctor_" data-uid="Kinstrife.FSM.StateMachine`2.#ctor*"></a>
+  <h4 id="Kinstrife_FSM_StateMachine_2__ctor" data-uid="Kinstrife.FSM.StateMachine`2.#ctor">StateMachine()</h4>
+  <div class="markdown level1 summary"><p>Creates a new <a class="xref" href="Kinstrife.FSM.StateMachine-2.html">StateMachine&lt;TKey, TState&gt;</a> with a new <a class="xref" href="Kinstrife.FSM.StateMachine-2.html#Kinstrife_FSM_StateMachine_2_Dictionary">Dictionary</a>, leaving the
+<see cref="!:CurrentState"></see> null.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public StateMachine()</code></pre>
+  </div>
+  
+  
+  <a id="Kinstrife_FSM_StateMachine_2__ctor_" data-uid="Kinstrife.FSM.StateMachine`2.#ctor*"></a>
+  <h4 id="Kinstrife_FSM_StateMachine_2__ctor__0__1_" data-uid="Kinstrife.FSM.StateMachine`2.#ctor(`0,`1)">StateMachine(TKey, TState)</h4>
+  <div class="markdown level1 summary"><p>Constructs a new <a class="xref" href="Kinstrife.FSM.StateMachine-2.html">StateMachine&lt;TKey, TState&gt;</a> with a new <a class="xref" href="Kinstrife.FSM.StateMachine-2.html#Kinstrife_FSM_StateMachine_2_Dictionary">Dictionary</a> and
+immediately uses the <code>defaultKey</code> to enter the <code>defaultState</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public StateMachine(TKey defaultKey, TState defaultState)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">TKey</span></td>
+        <td><span class="parametername">defaultKey</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">TState</span></td>
+        <td><span class="parametername">defaultState</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Kinstrife_FSM_StateMachine_2__ctor__0__1__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>This calls <a class="xref" href="Kinstrife.FSM.IState.html#Kinstrife_FSM_IState_OnEnterState">OnEnterState()</a> but not <a class="xref" href="Kinstrife.FSM.IState.html#Kinstrife_FSM_IState_CanEnterState">CanEnterState</a>.</p>
+</div>
+  
+  
+  <a id="Kinstrife_FSM_StateMachine_2__ctor_" data-uid="Kinstrife.FSM.StateMachine`2.#ctor*"></a>
+  <h4 id="Kinstrife_FSM_StateMachine_2__ctor_System_Collections_Generic_IDictionary__0__1__" data-uid="Kinstrife.FSM.StateMachine`2.#ctor(System.Collections.Generic.IDictionary{`0,`1})">StateMachine(IDictionary&lt;TKey, TState&gt;)</h4>
+  <div class="markdown level1 summary"><p>Creates a new <a class="xref" href="Kinstrife.FSM.StateMachine-2.html">StateMachine&lt;TKey, TState&gt;</a> which uses the specified <code>dictionary</code>, leaving the
+<see cref="!:CurrentState"></see> null.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public StateMachine(IDictionary&lt;TKey, TState&gt; dictionary)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IDictionary</span>&lt;TKey, TState&gt;</td>
+        <td><span class="parametername">dictionary</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Kinstrife_FSM_StateMachine_2__ctor_" data-uid="Kinstrife.FSM.StateMachine`2.#ctor*"></a>
+  <h4 id="Kinstrife_FSM_StateMachine_2__ctor_System_Collections_Generic_IDictionary__0__1___0__1_" data-uid="Kinstrife.FSM.StateMachine`2.#ctor(System.Collections.Generic.IDictionary{`0,`1},`0,`1)">StateMachine(IDictionary&lt;TKey, TState&gt;, TKey, TState)</h4>
+  <div class="markdown level1 summary"><p>Constructs a new <a class="xref" href="Kinstrife.FSM.StateMachine-2.html">StateMachine&lt;TKey, TState&gt;</a> which uses the specified <code>dictionary</code> and
+immediately uses the <code>defaultKey</code> to enter the <code>defaultState</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public StateMachine(IDictionary&lt;TKey, TState&gt; dictionary, TKey defaultKey, TState defaultState)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IDictionary</span>&lt;TKey, TState&gt;</td>
+        <td><span class="parametername">dictionary</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">TKey</span></td>
+        <td><span class="parametername">defaultKey</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">TState</span></td>
+        <td><span class="parametername">defaultState</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Kinstrife_FSM_StateMachine_2__ctor_System_Collections_Generic_IDictionary__0__1___0__1__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>This calls <a class="xref" href="Kinstrife.FSM.IState.html#Kinstrife_FSM_IState_OnEnterState">OnEnterState()</a> but not <a class="xref" href="Kinstrife.FSM.IState.html#Kinstrife_FSM_IState_CanEnterState">CanEnterState</a>.</p>
+</div>
+  <h3 id="properties">Properties
+  </h3>
+  
+  
+  <a id="Kinstrife_FSM_StateMachine_2_Count_" data-uid="Kinstrife.FSM.StateMachine`2.Count*"></a>
+  <h4 id="Kinstrife_FSM_StateMachine_2_Count" data-uid="Kinstrife.FSM.StateMachine`2.Count">Count</h4>
+  <div class="markdown level1 summary"><p>Gets the number of states contained in the <a class="xref" href="Kinstrife.FSM.StateMachine-2.html#Kinstrife_FSM_StateMachine_2_Dictionary">Dictionary</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int Count { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Kinstrife_FSM_StateMachine_2_CurrentKey_" data-uid="Kinstrife.FSM.StateMachine`2.CurrentKey*"></a>
+  <h4 id="Kinstrife_FSM_StateMachine_2_CurrentKey" data-uid="Kinstrife.FSM.StateMachine`2.CurrentKey">CurrentKey</h4>
+  <div class="markdown level1 summary"><p>The key which identifies the <a class="xref" href="Kinstrife.FSM.StateMachine-1.html#Kinstrife_FSM_StateMachine_1_CurrentState">CurrentState</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TKey CurrentKey { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">TKey</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Kinstrife_FSM_StateMachine_2_Dictionary_" data-uid="Kinstrife.FSM.StateMachine`2.Dictionary*"></a>
+  <h4 id="Kinstrife_FSM_StateMachine_2_Dictionary" data-uid="Kinstrife.FSM.StateMachine`2.Dictionary">Dictionary</h4>
+  <div class="markdown level1 summary"><p>The collection of states mapped to a particular key.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IDictionary&lt;TKey, TState&gt; Dictionary { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IDictionary</span>&lt;TKey, TState&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Kinstrife_FSM_StateMachine_2_Item_" data-uid="Kinstrife.FSM.StateMachine`2.Item*"></a>
+  <h4 id="Kinstrife_FSM_StateMachine_2_Item__0_" data-uid="Kinstrife.FSM.StateMachine`2.Item(`0)">Item[TKey]</h4>
+  <div class="markdown level1 summary"><p>The state registered with the <code>key</code> in the <a class="xref" href="Kinstrife.FSM.StateMachine-2.html#Kinstrife_FSM_StateMachine_2_Dictionary">Dictionary</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TState this[TKey key] { get; set; }</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">TKey</span></td>
+        <td><span class="parametername">key</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">TState</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Kinstrife_FSM_StateMachine_2_Keys_" data-uid="Kinstrife.FSM.StateMachine`2.Keys*"></a>
+  <h4 id="Kinstrife_FSM_StateMachine_2_Keys" data-uid="Kinstrife.FSM.StateMachine`2.Keys">Keys</h4>
+  <div class="markdown level1 summary"><p>Gets an <span class="xref">System.Collections.Generic.ICollection&lt;T&gt;</span> containing the keys of the <a class="xref" href="Kinstrife.FSM.StateMachine-2.html#Kinstrife_FSM_StateMachine_2_Dictionary">Dictionary</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ICollection&lt;TKey&gt; Keys { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.ICollection</span>&lt;TKey&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Kinstrife_FSM_StateMachine_2_NextKey_" data-uid="Kinstrife.FSM.StateMachine`2.NextKey*"></a>
+  <h4 id="Kinstrife_FSM_StateMachine_2_NextKey" data-uid="Kinstrife.FSM.StateMachine`2.NextKey">NextKey</h4>
+  <div class="markdown level1 summary"><p>The <a class="xref" href="Kinstrife.FSM.KeyChange-1.html#Kinstrife_FSM_KeyChange_1_NextKey">NextKey</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TKey NextKey { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">TKey</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Kinstrife_FSM_StateMachine_2_PreviousKey_" data-uid="Kinstrife.FSM.StateMachine`2.PreviousKey*"></a>
+  <h4 id="Kinstrife_FSM_StateMachine_2_PreviousKey" data-uid="Kinstrife.FSM.StateMachine`2.PreviousKey">PreviousKey</h4>
+  <div class="markdown level1 summary"><p>The <a class="xref" href="Kinstrife.FSM.KeyChange-1.html#Kinstrife_FSM_KeyChange_1_PreviousKey">PreviousKey</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TKey PreviousKey { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">TKey</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Kinstrife_FSM_StateMachine_2_Values_" data-uid="Kinstrife.FSM.StateMachine`2.Values*"></a>
+  <h4 id="Kinstrife_FSM_StateMachine_2_Values" data-uid="Kinstrife.FSM.StateMachine`2.Values">Values</h4>
+  <div class="markdown level1 summary"><p>Gets an <span class="xref">System.Collections.Generic.ICollection&lt;T&gt;</span> containing the state of the <a class="xref" href="Kinstrife.FSM.StateMachine-2.html#Kinstrife_FSM_StateMachine_2_Dictionary">Dictionary</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ICollection&lt;TState&gt; Values { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.ICollection</span>&lt;TState&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  
+  
+  <a id="Kinstrife_FSM_StateMachine_2_Add_" data-uid="Kinstrife.FSM.StateMachine`2.Add*"></a>
+  <h4 id="Kinstrife_FSM_StateMachine_2_Add__0__1_" data-uid="Kinstrife.FSM.StateMachine`2.Add(`0,`1)">Add(TKey, TState)</h4>
+  <div class="markdown level1 summary"><p>Adds a state to the <a class="xref" href="Kinstrife.FSM.StateMachine-2.html#Kinstrife_FSM_StateMachine_2_Dictionary">Dictionary</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Add(TKey key, TState state)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">TKey</span></td>
+        <td><span class="parametername">key</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">TState</span></td>
+        <td><span class="parametername">state</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Kinstrife_FSM_StateMachine_2_Add_" data-uid="Kinstrife.FSM.StateMachine`2.Add*"></a>
+  <h4 id="Kinstrife_FSM_StateMachine_2_Add_System_Collections_Generic_KeyValuePair__0__1__" data-uid="Kinstrife.FSM.StateMachine`2.Add(System.Collections.Generic.KeyValuePair{`0,`1})">Add(KeyValuePair&lt;TKey, TState&gt;)</h4>
+  <div class="markdown level1 summary"><p>Adds a state to the <a class="xref" href="Kinstrife.FSM.StateMachine-2.html#Kinstrife_FSM_StateMachine_2_Dictionary">Dictionary</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Add(KeyValuePair&lt;TKey, TState&gt; item)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.KeyValuePair</span>&lt;TKey, TState&gt;</td>
+        <td><span class="parametername">item</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Kinstrife_FSM_StateMachine_2_AddRange_" data-uid="Kinstrife.FSM.StateMachine`2.AddRange*"></a>
+  <h4 id="Kinstrife_FSM_StateMachine_2_AddRange__0____1___" data-uid="Kinstrife.FSM.StateMachine`2.AddRange(`0[],`1[])">AddRange(TKey[], TState[])</h4>
+  <div class="markdown level1 summary"><p>Adds the specified <code>keys</code> and <code>states</code>. Both arrays must be the same size.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void AddRange(TKey[] keys, TState[] states)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>TKey[]</td>
+        <td><span class="parametername">keys</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>TState[]</td>
+        <td><span class="parametername">states</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Kinstrife_FSM_StateMachine_2_Clear_" data-uid="Kinstrife.FSM.StateMachine`2.Clear*"></a>
+  <h4 id="Kinstrife_FSM_StateMachine_2_Clear" data-uid="Kinstrife.FSM.StateMachine`2.Clear">Clear()</h4>
+  <div class="markdown level1 summary"><p>Removes all state from the <a class="xref" href="Kinstrife.FSM.StateMachine-2.html#Kinstrife_FSM_StateMachine_2_Dictionary">Dictionary</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Clear()</code></pre>
+  </div>
+  
+  
+  <a id="Kinstrife_FSM_StateMachine_2_Contains_" data-uid="Kinstrife.FSM.StateMachine`2.Contains*"></a>
+  <h4 id="Kinstrife_FSM_StateMachine_2_Contains_System_Collections_Generic_KeyValuePair__0__1__" data-uid="Kinstrife.FSM.StateMachine`2.Contains(System.Collections.Generic.KeyValuePair{`0,`1})">Contains(KeyValuePair&lt;TKey, TState&gt;)</h4>
+  <div class="markdown level1 summary"><p>Determines whether the <a class="xref" href="Kinstrife.FSM.StateMachine-2.html#Kinstrife_FSM_StateMachine_2_Dictionary">Dictionary</a> contains a specific value.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool Contains(KeyValuePair&lt;TKey, TState&gt; item)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.KeyValuePair</span>&lt;TKey, TState&gt;</td>
+        <td><span class="parametername">item</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Kinstrife_FSM_StateMachine_2_ContainsKey_" data-uid="Kinstrife.FSM.StateMachine`2.ContainsKey*"></a>
+  <h4 id="Kinstrife_FSM_StateMachine_2_ContainsKey__0_" data-uid="Kinstrife.FSM.StateMachine`2.ContainsKey(`0)">ContainsKey(TKey)</h4>
+  <div class="markdown level1 summary"><p>Determines whether the <a class="xref" href="Kinstrife.FSM.StateMachine-2.html#Kinstrife_FSM_StateMachine_2_Dictionary">Dictionary</a> contains a state with the specified <code>key</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool ContainsKey(TKey key)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">TKey</span></td>
+        <td><span class="parametername">key</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Kinstrife_FSM_StateMachine_2_CopyTo_" data-uid="Kinstrife.FSM.StateMachine`2.CopyTo*"></a>
+  <h4 id="Kinstrife_FSM_StateMachine_2_CopyTo_System_Collections_Generic_KeyValuePair__0__1____System_Int32_" data-uid="Kinstrife.FSM.StateMachine`2.CopyTo(System.Collections.Generic.KeyValuePair{`0,`1}[],System.Int32)">CopyTo(KeyValuePair&lt;TKey, TState&gt;[], Int32)</h4>
+  <div class="markdown level1 summary"><p>Copies the contents of the <a class="xref" href="Kinstrife.FSM.StateMachine-2.html#Kinstrife_FSM_StateMachine_2_Dictionary">Dictionary</a> to the <code>array</code> starting at the <code>arrayIndex</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void CopyTo(KeyValuePair&lt;TKey, TState&gt;[] array, int arrayIndex)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.KeyValuePair</span>&lt;TKey, TState&gt;[]</td>
+        <td><span class="parametername">array</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">arrayIndex</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Kinstrife_FSM_StateMachine_2_ForceSetState_" data-uid="Kinstrife.FSM.StateMachine`2.ForceSetState*"></a>
+  <h4 id="Kinstrife_FSM_StateMachine_2_ForceSetState__0_" data-uid="Kinstrife.FSM.StateMachine`2.ForceSetState(`0)">ForceSetState(TKey)</h4>
+  <div class="markdown level1 summary"><p>Uses <a class="xref" href="Kinstrife.FSM.StateMachine-2.html#Kinstrife_FSM_StateMachine_2_ForceSetState__0__1_">ForceSetState(TKey, TState)</a> to change to the state registered with the <code>key</code>. If nothing
+is registered, it use <code>null</code> and will throw an exception unless
+<see cref="!:StateMachine&lt;TState>.AllowNullStates"></see> is enabled.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TState ForceSetState(TKey key)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">TKey</span></td>
+        <td><span class="parametername">key</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">TState</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Kinstrife_FSM_StateMachine_2_ForceSetState_" data-uid="Kinstrife.FSM.StateMachine`2.ForceSetState*"></a>
+  <h4 id="Kinstrife_FSM_StateMachine_2_ForceSetState__0__1_" data-uid="Kinstrife.FSM.StateMachine`2.ForceSetState(`0,`1)">ForceSetState(TKey, TState)</h4>
+  <div class="markdown level1 summary"><p>Calls <a class="xref" href="Kinstrife.FSM.IState.html#Kinstrife_FSM_IState_OnExitState">OnExitState()</a> on the <a class="xref" href="Kinstrife.FSM.StateMachine-1.html#Kinstrife_FSM_StateMachine_1_CurrentState">CurrentState</a> then changes
+to the specified <code>key</code> and <code>state</code> and calls <a class="xref" href="Kinstrife.FSM.IState.html#Kinstrife_FSM_IState_OnEnterState">OnEnterState()</a> on it.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void ForceSetState(TKey key, TState state)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">TKey</span></td>
+        <td><span class="parametername">key</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">TState</span></td>
+        <td><span class="parametername">state</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Kinstrife_FSM_StateMachine_2_ForceSetState__0__1__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>This method does not check <a class="xref" href="Kinstrife.FSM.IState.html#Kinstrife_FSM_IState_CanExitState">CanExitState</a> or <a class="xref" href="Kinstrife.FSM.IState.html#Kinstrife_FSM_IState_CanEnterState">CanEnterState</a>. To do
+that, you should use <a class="xref" href="Kinstrife.FSM.StateMachine-2.html#Kinstrife_FSM_StateMachine_2_TrySetState__0__1_">TrySetState(TKey, TState)</a> instead.</p>
+</div>
+  
+  
+  <a id="Kinstrife_FSM_StateMachine_2_GetEnumerator_" data-uid="Kinstrife.FSM.StateMachine`2.GetEnumerator*"></a>
+  <h4 id="Kinstrife_FSM_StateMachine_2_GetEnumerator" data-uid="Kinstrife.FSM.StateMachine`2.GetEnumerator">GetEnumerator()</h4>
+  <div class="markdown level1 summary"><p>Returns an enumerator that iterates through the <a class="xref" href="Kinstrife.FSM.StateMachine-2.html#Kinstrife_FSM_StateMachine_2_Dictionary">Dictionary</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IEnumerator&lt;KeyValuePair&lt;TKey, TState&gt;&gt; GetEnumerator()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IEnumerator</span>&lt;<span class="xref">System.Collections.Generic.KeyValuePair</span>&lt;TKey, TState&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Kinstrife_FSM_StateMachine_2_GetState_" data-uid="Kinstrife.FSM.StateMachine`2.GetState*"></a>
+  <h4 id="Kinstrife_FSM_StateMachine_2_GetState__0_" data-uid="Kinstrife.FSM.StateMachine`2.GetState(`0)">GetState(TKey)</h4>
+  <div class="markdown level1 summary"><p>Returns the state registered with the specified <code>key</code>, or null if none is present.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TState GetState(TKey key)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">TKey</span></td>
+        <td><span class="parametername">key</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">TState</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Kinstrife_FSM_StateMachine_2_InitializeAfterDeserialize_" data-uid="Kinstrife.FSM.StateMachine`2.InitializeAfterDeserialize*"></a>
+  <h4 id="Kinstrife_FSM_StateMachine_2_InitializeAfterDeserialize" data-uid="Kinstrife.FSM.StateMachine`2.InitializeAfterDeserialize">InitializeAfterDeserialize()</h4>
+  <div class="markdown level1 summary"><p>Call this after deserializing to properly initialize the <a class="xref" href="Kinstrife.FSM.StateMachine-1.html#Kinstrife_FSM_StateMachine_1_CurrentState">CurrentState</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override void InitializeAfterDeserialize()</code></pre>
+  </div>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">Kinstrife.FSM.StateMachine&lt;TState&gt;.InitializeAfterDeserialize()</span></div>
+  <h5 id="Kinstrife_FSM_StateMachine_2_InitializeAfterDeserialize_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>Unfortunately, <see cref="!:ISerializationCallbackReceiver"></see> can't be used to automate this because many
+Unity functions are not available during serialization such as getting or setting a
+<see cref="!:Behaviour.enabled"></see> like <a class="xref" href="Kinstrife.FSM.StateBehaviour.html#Kinstrife_FSM_StateBehaviour_OnEnterState">OnEnterState()</a> does.</p>
+</div>
+  
+  
+  <a id="Kinstrife_FSM_StateMachine_2_Remove_" data-uid="Kinstrife.FSM.StateMachine`2.Remove*"></a>
+  <h4 id="Kinstrife_FSM_StateMachine_2_Remove__0_" data-uid="Kinstrife.FSM.StateMachine`2.Remove(`0)">Remove(TKey)</h4>
+  <div class="markdown level1 summary"><p>Removes a state from the <a class="xref" href="Kinstrife.FSM.StateMachine-2.html#Kinstrife_FSM_StateMachine_2_Dictionary">Dictionary</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool Remove(TKey key)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">TKey</span></td>
+        <td><span class="parametername">key</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Kinstrife_FSM_StateMachine_2_Remove_" data-uid="Kinstrife.FSM.StateMachine`2.Remove*"></a>
+  <h4 id="Kinstrife_FSM_StateMachine_2_Remove_System_Collections_Generic_KeyValuePair__0__1__" data-uid="Kinstrife.FSM.StateMachine`2.Remove(System.Collections.Generic.KeyValuePair{`0,`1})">Remove(KeyValuePair&lt;TKey, TState&gt;)</h4>
+  <div class="markdown level1 summary"><p>Removes a state from the <a class="xref" href="Kinstrife.FSM.StateMachine-2.html#Kinstrife_FSM_StateMachine_2_Dictionary">Dictionary</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool Remove(KeyValuePair&lt;TKey, TState&gt; item)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.KeyValuePair</span>&lt;TKey, TState&gt;</td>
+        <td><span class="parametername">item</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Kinstrife_FSM_StateMachine_2_SetFakeKey_" data-uid="Kinstrife.FSM.StateMachine`2.SetFakeKey*"></a>
+  <h4 id="Kinstrife_FSM_StateMachine_2_SetFakeKey__0_" data-uid="Kinstrife.FSM.StateMachine`2.SetFakeKey(`0)">SetFakeKey(TKey)</h4>
+  <div class="markdown level1 summary"><p>Sets the <a class="xref" href="Kinstrife.FSM.StateMachine-2.html#Kinstrife_FSM_StateMachine_2_CurrentKey">CurrentKey</a> without changing the <a class="xref" href="Kinstrife.FSM.StateMachine-1.html#Kinstrife_FSM_StateMachine_1_CurrentState">CurrentState</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetFakeKey(TKey key)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">TKey</span></td>
+        <td><span class="parametername">key</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Kinstrife_FSM_StateMachine_2_ToString_" data-uid="Kinstrife.FSM.StateMachine`2.ToString*"></a>
+  <h4 id="Kinstrife_FSM_StateMachine_2_ToString" data-uid="Kinstrife.FSM.StateMachine`2.ToString">ToString()</h4>
+  <div class="markdown level1 summary"><p>Returns a string describing the type of this state machine and its <a class="xref" href="Kinstrife.FSM.StateMachine-2.html#Kinstrife_FSM_StateMachine_2_CurrentKey">CurrentKey</a> and
+<a class="xref" href="Kinstrife.FSM.StateMachine-1.html#Kinstrife_FSM_StateMachine_1_CurrentState">CurrentState</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override string ToString()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">Kinstrife.FSM.StateMachine&lt;TState&gt;.ToString()</span></div>
+  
+  
+  <a id="Kinstrife_FSM_StateMachine_2_TryGetValue_" data-uid="Kinstrife.FSM.StateMachine`2.TryGetValue*"></a>
+  <h4 id="Kinstrife_FSM_StateMachine_2_TryGetValue__0__1__" data-uid="Kinstrife.FSM.StateMachine`2.TryGetValue(`0,`1@)">TryGetValue(TKey, out TState)</h4>
+  <div class="markdown level1 summary"><p>Gets the state registered with the specified <code>key</code> in the <a class="xref" href="Kinstrife.FSM.StateMachine-2.html#Kinstrife_FSM_StateMachine_2_Dictionary">Dictionary</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool TryGetValue(TKey key, out TState state)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">TKey</span></td>
+        <td><span class="parametername">key</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">TState</span></td>
+        <td><span class="parametername">state</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Kinstrife_FSM_StateMachine_2_TryResetState_" data-uid="Kinstrife.FSM.StateMachine`2.TryResetState*"></a>
+  <h4 id="Kinstrife_FSM_StateMachine_2_TryResetState__0_" data-uid="Kinstrife.FSM.StateMachine`2.TryResetState(`0)">TryResetState(TKey)</h4>
+  <div class="markdown level1 summary"><p>Attempts to enter the state registered with the specified <code>key</code> and returns it if successful.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TState TryResetState(TKey key)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">TKey</span></td>
+        <td><span class="parametername">key</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">TState</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Kinstrife_FSM_StateMachine_2_TryResetState__0__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>This method does not check if the <code>key</code> is already the <a class="xref" href="Kinstrife.FSM.StateMachine-2.html#Kinstrife_FSM_StateMachine_2_CurrentKey">CurrentKey</a>. To do so, use
+<a class="xref" href="Kinstrife.FSM.StateMachine-2.html#Kinstrife_FSM_StateMachine_2_TrySetState__0_">TrySetState(TKey)</a> instead.</p>
+</div>
+  
+  
+  <a id="Kinstrife_FSM_StateMachine_2_TryResetState_" data-uid="Kinstrife.FSM.StateMachine`2.TryResetState*"></a>
+  <h4 id="Kinstrife_FSM_StateMachine_2_TryResetState__0__1_" data-uid="Kinstrife.FSM.StateMachine`2.TryResetState(`0,`1)">TryResetState(TKey, TState)</h4>
+  <div class="markdown level1 summary"><p>Attempts to enter the specified <code>state</code> and returns true if successful.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool TryResetState(TKey key, TState state)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">TKey</span></td>
+        <td><span class="parametername">key</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">TState</span></td>
+        <td><span class="parametername">state</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Kinstrife_FSM_StateMachine_2_TryResetState__0__1__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>This method does not check if the <code>state</code> is already the <a class="xref" href="Kinstrife.FSM.StateMachine-1.html#Kinstrife_FSM_StateMachine_1_CurrentState">CurrentState</a>.
+To do so, use <a class="xref" href="Kinstrife.FSM.StateMachine-2.html#Kinstrife_FSM_StateMachine_2_TrySetState__0__1_">TrySetState(TKey, TState)</a> instead.</p>
+</div>
+  
+  
+  <a id="Kinstrife_FSM_StateMachine_2_TrySetState_" data-uid="Kinstrife.FSM.StateMachine`2.TrySetState*"></a>
+  <h4 id="Kinstrife_FSM_StateMachine_2_TrySetState__0_" data-uid="Kinstrife.FSM.StateMachine`2.TrySetState(`0)">TrySetState(TKey)</h4>
+  <div class="markdown level1 summary"><p>Attempts to enter the state registered with the specified <code>key</code> and returns it if successful.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TState TrySetState(TKey key)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">TKey</span></td>
+        <td><span class="parametername">key</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">TState</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Kinstrife_FSM_StateMachine_2_TrySetState__0__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>This method returns true immediately if the specified <code>key</code> is already the <a class="xref" href="Kinstrife.FSM.StateMachine-2.html#Kinstrife_FSM_StateMachine_2_CurrentKey">CurrentKey</a>. To
+allow directly re-entering the same state, use <a class="xref" href="Kinstrife.FSM.StateMachine-2.html#Kinstrife_FSM_StateMachine_2_TryResetState__0_">TryResetState(TKey)</a> instead.</p>
+</div>
+  
+  
+  <a id="Kinstrife_FSM_StateMachine_2_TrySetState_" data-uid="Kinstrife.FSM.StateMachine`2.TrySetState*"></a>
+  <h4 id="Kinstrife_FSM_StateMachine_2_TrySetState__0__1_" data-uid="Kinstrife.FSM.StateMachine`2.TrySetState(`0,`1)">TrySetState(TKey, TState)</h4>
+  <div class="markdown level1 summary"><p>Attempts to enter the specified <code>state</code> and returns true if successful.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool TrySetState(TKey key, TState state)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">TKey</span></td>
+        <td><span class="parametername">key</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">TState</span></td>
+        <td><span class="parametername">state</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Kinstrife_FSM_StateMachine_2_TrySetState__0__1__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>This method returns true immediately if the specified <code>state</code> is already the
+<a class="xref" href="Kinstrife.FSM.StateMachine-1.html#Kinstrife_FSM_StateMachine_1_CurrentState">CurrentState</a>. To allow directly re-entering the same state, use
+<a class="xref" href="Kinstrife.FSM.StateMachine-2.html#Kinstrife_FSM_StateMachine_2_TryResetState__0__1_">TryResetState(TKey, TState)</a> instead.</p>
+</div>
+  <h3 id="eii">Explicit Interface Implementations
+  </h3>
+  
+  
+  <a id="Kinstrife_FSM_StateMachine_2_Kinstrife_FSM_IKeyedStateMachine_TKey__ForceSetState_" data-uid="Kinstrife.FSM.StateMachine`2.Kinstrife#FSM#IKeyedStateMachine{TKey}#ForceSetState*"></a>
+  <h4 id="Kinstrife_FSM_StateMachine_2_Kinstrife_FSM_IKeyedStateMachine_TKey__ForceSetState__0_" data-uid="Kinstrife.FSM.StateMachine`2.Kinstrife#FSM#IKeyedStateMachine{TKey}#ForceSetState(`0)">IKeyedStateMachine&lt;TKey&gt;.ForceSetState(TKey)</h4>
+  <div class="markdown level1 summary"><p>Uses <a class="xref" href="Kinstrife.FSM.StateMachine-2.html#Kinstrife_FSM_StateMachine_2_ForceSetState__0__1_">ForceSetState(TKey, TState)</a> to change to the state registered
+with the <code>key</code>. If nothing is registered, it changes to <code>default(TState)</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">object IKeyedStateMachine&lt;TKey&gt;.ForceSetState(TKey key)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">TKey</span></td>
+        <td><span class="parametername">key</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Object</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Kinstrife_FSM_StateMachine_2_Kinstrife_FSM_IKeyedStateMachine_TKey__TryResetState_" data-uid="Kinstrife.FSM.StateMachine`2.Kinstrife#FSM#IKeyedStateMachine{TKey}#TryResetState*"></a>
+  <h4 id="Kinstrife_FSM_StateMachine_2_Kinstrife_FSM_IKeyedStateMachine_TKey__TryResetState__0_" data-uid="Kinstrife.FSM.StateMachine`2.Kinstrife#FSM#IKeyedStateMachine{TKey}#TryResetState(`0)">IKeyedStateMachine&lt;TKey&gt;.TryResetState(TKey)</h4>
+  <div class="markdown level1 summary"><p>Attempts to enter the state registered with the specified <code>key</code> and returns it if successful.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">object IKeyedStateMachine&lt;TKey&gt;.TryResetState(TKey key)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">TKey</span></td>
+        <td><span class="parametername">key</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Object</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Kinstrife_FSM_StateMachine_2_Kinstrife_FSM_IKeyedStateMachine_TKey__TryResetState__0__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>This method does not check if the <code>key</code> is already the <a class="xref" href="Kinstrife.FSM.IKeyedStateMachine-1.html#Kinstrife_FSM_IKeyedStateMachine_1_CurrentKey">CurrentKey</a>. To do so, use
+<a class="xref" href="Kinstrife.FSM.IKeyedStateMachine-1.html#Kinstrife_FSM_IKeyedStateMachine_1_TrySetState__0_">TrySetState(TKey)</a> instead.</p>
+</div>
+  
+  
+  <a id="Kinstrife_FSM_StateMachine_2_Kinstrife_FSM_IKeyedStateMachine_TKey__TrySetState_" data-uid="Kinstrife.FSM.StateMachine`2.Kinstrife#FSM#IKeyedStateMachine{TKey}#TrySetState*"></a>
+  <h4 id="Kinstrife_FSM_StateMachine_2_Kinstrife_FSM_IKeyedStateMachine_TKey__TrySetState__0_" data-uid="Kinstrife.FSM.StateMachine`2.Kinstrife#FSM#IKeyedStateMachine{TKey}#TrySetState(`0)">IKeyedStateMachine&lt;TKey&gt;.TrySetState(TKey)</h4>
+  <div class="markdown level1 summary"><p>Attempts to enter the state registered with the specified <code>key</code> and returns it if successful.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">object IKeyedStateMachine&lt;TKey&gt;.TrySetState(TKey key)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">TKey</span></td>
+        <td><span class="parametername">key</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Object</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Kinstrife_FSM_StateMachine_2_Kinstrife_FSM_IKeyedStateMachine_TKey__TrySetState__0__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>This method returns true immediately if the specified <code>key</code> is already the <a class="xref" href="Kinstrife.FSM.IKeyedStateMachine-1.html#Kinstrife_FSM_IKeyedStateMachine_1_CurrentKey">CurrentKey</a>. To
+allow directly re-entering the same state, use <a class="xref" href="Kinstrife.FSM.IKeyedStateMachine-1.html#Kinstrife_FSM_IKeyedStateMachine_1_TryResetState__0_">TryResetState(TKey)</a> instead.</p>
+</div>
+  
+  
+  <a id="Kinstrife_FSM_StateMachine_2_System_Collections_Generic_ICollection_System_Collections_Generic_KeyValuePair_TKey_TState___IsReadOnly_" data-uid="Kinstrife.FSM.StateMachine`2.System#Collections#Generic#ICollection{System#Collections#Generic#KeyValuePair{TKey,TState}}#IsReadOnly*"></a>
+  <h4 id="Kinstrife_FSM_StateMachine_2_System_Collections_Generic_ICollection_System_Collections_Generic_KeyValuePair_TKey_TState___IsReadOnly" data-uid="Kinstrife.FSM.StateMachine`2.System#Collections#Generic#ICollection{System#Collections#Generic#KeyValuePair{TKey,TState}}#IsReadOnly">ICollection&lt;KeyValuePair&lt;TKey, TState&gt;&gt;.IsReadOnly</h4>
+  <div class="markdown level1 summary"><p>Indicates whether the <a class="xref" href="Kinstrife.FSM.StateMachine-2.html#Kinstrife_FSM_StateMachine_2_Dictionary">Dictionary</a> is read-only.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">bool ICollection&lt;KeyValuePair&lt;TKey, TState&gt;&gt;.IsReadOnly { get; }</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Kinstrife_FSM_StateMachine_2_System_Collections_IEnumerable_GetEnumerator_" data-uid="Kinstrife.FSM.StateMachine`2.System#Collections#IEnumerable#GetEnumerator*"></a>
+  <h4 id="Kinstrife_FSM_StateMachine_2_System_Collections_IEnumerable_GetEnumerator" data-uid="Kinstrife.FSM.StateMachine`2.System#Collections#IEnumerable#GetEnumerator">IEnumerable.GetEnumerator()</h4>
+  <div class="markdown level1 summary"><p>Returns an enumerator that iterates through the <a class="xref" href="Kinstrife.FSM.StateMachine-2.html#Kinstrife_FSM_StateMachine_2_Dictionary">Dictionary</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IEnumerator IEnumerable.GetEnumerator()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.IEnumerator</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <a class="xref" href="Kinstrife.FSM.IStateMachine.html">IStateMachine</a>
+  </div>
+  <div>
+      <a class="xref" href="Kinstrife.FSM.IKeyedStateMachine-1.html">IKeyedStateMachine&lt;TKey&gt;</a>
+  </div>
+  <div>
+      <span class="xref">System.Collections.Generic.IDictionary&lt;TKey, TValue&gt;</span>
+  </div>
+  <div>
+      <span class="xref">System.Collections.Generic.ICollection&lt;T&gt;</span>
+  </div>
+  <div>
+      <span class="xref">System.Collections.Generic.IEnumerable&lt;T&gt;</span>
+  </div>
+  <div>
+      <span class="xref">System.Collections.IEnumerable</span>
+  </div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+  </body>
+</html>
