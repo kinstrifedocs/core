@@ -86,8 +86,9 @@
   <div class="implements">
     <h5>Implements</h5>
     <div><a class="xref" href="Kinstrife.DataContainers.IScriptableObjectDataContainer-1.html">IScriptableObjectDataContainer</a>&lt;<a class="xref" href="Kinstrife.Procedures.ProcedureComponent.html">ProcedureComponent</a>&gt;</div>
+    <div><a class="xref" href="Kinstrife.Procedures.IProcedure.html">IProcedure</a></div>
+    <div><a class="xref" href="Kinstrife.Procedures.IWeighted.html">IWeighted</a></div>
     <div><a class="xref" href="Kinstrife.Procedures.IHasClient.html">IHasClient</a></div>
-    <div><a class="xref" href="Kinstrife.Core.DependencyInjection.IInitializable.html">IInitializable</a></div>
     <div><a class="xref" href="Kinstrife.Procedures.IProcedureEventsSource.html">IProcedureEventsSource</a></div>
     <div><a class="xref" href="Kinstrife.Procedures.IHasReferencedProcedures.html">IHasReferencedProcedures</a></div>
     <div><a class="xref" href="Kinstrife.Core.DependencyInjection.IInjectable.html">IInjectable</a></div>
@@ -111,6 +112,9 @@
       <a class="xref" href="Kinstrife.Procedures.Procedure.html#Kinstrife_Procedures_Procedure_Weight">Procedure.Weight</a>
     </div>
     <div>
+      <a class="xref" href="Kinstrife.Procedures.Procedure.html#Kinstrife_Procedures_Procedure_Kinstrife_Procedures_IWeighted_Weight">Procedure.IWeighted.Weight</a>
+    </div>
+    <div>
       <a class="xref" href="Kinstrife.Procedures.Procedure.html#Kinstrife_Procedures_Procedure_Name">Procedure.Name</a>
     </div>
     <div>
@@ -121,6 +125,9 @@
     </div>
     <div>
       <a class="xref" href="Kinstrife.Procedures.Procedure.html#Kinstrife_Procedures_Procedure_StopTimestamp">Procedure.StopTimestamp</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.Procedures.Procedure.html#Kinstrife_Procedures_Procedure_TimeActive_System_Double_">Procedure.TimeActive(Double)</a>
     </div>
     <div>
       <a class="xref" href="Kinstrife.Procedures.Procedure.html#Kinstrife_Procedures_Procedure_IsActive">Procedure.IsActive</a>
@@ -153,9 +160,6 @@
       <a class="xref" href="Kinstrife.Procedures.Procedure.html#Kinstrife_Procedures_Procedure_Manager">Procedure.Manager</a>
     </div>
     <div>
-      <a class="xref" href="Kinstrife.Procedures.Procedure.html#Kinstrife_Procedures_Procedure_Initialize">Procedure.Initialize()</a>
-    </div>
-    <div>
       <a class="xref" href="Kinstrife.Procedures.Procedure.html#Kinstrife_Procedures_Procedure_OnDestroy">Procedure.OnDestroy()</a>
     </div>
     <div>
@@ -171,10 +175,10 @@
       <a class="xref" href="Kinstrife.Procedures.Procedure.html#Kinstrife_Procedures_Procedure_CanStop">Procedure.CanStop()</a>
     </div>
     <div>
-      <a class="xref" href="Kinstrife.Procedures.Procedure.html#Kinstrife_Procedures_Procedure_TryStartClient_Kinstrife_Procedures_ClientId_">Procedure.TryStartClient(ClientId)</a>
+      <a class="xref" href="Kinstrife.Procedures.Procedure.html#Kinstrife_Procedures_Procedure_ForceStart">Procedure.ForceStart()</a>
     </div>
     <div>
-      <a class="xref" href="Kinstrife.Procedures.Procedure.html#Kinstrife_Procedures_Procedure_TryStopClient_Kinstrife_Procedures_ClientId_">Procedure.TryStopClient(ClientId)</a>
+      <a class="xref" href="Kinstrife.Procedures.Procedure.html#Kinstrife_Procedures_Procedure_ForceStop">Procedure.ForceStop()</a>
     </div>
     <div>
       <a class="xref" href="Kinstrife.Procedures.Procedure.html#Kinstrife_Procedures_Procedure_TrySetEnabled_System_Boolean_">Procedure.TrySetEnabled(Boolean)</a>
@@ -249,6 +253,9 @@
       <a class="xref" href="Kinstrife.DataContainers.ScriptableObjectComponent.html#Kinstrife_DataContainers_ScriptableObjectComponent_IsInstance">ScriptableObjectComponent.IsInstance</a>
     </div>
     <div>
+      <a class="xref" href="Kinstrife.DataContainers.ScriptableObjectComponent.html#Kinstrife_DataContainers_ScriptableObjectComponent_enabled">ScriptableObjectComponent.enabled</a>
+    </div>
+    <div>
       <a class="xref" href="Kinstrife.DataContainers.ScriptableObjectComponent.html#Kinstrife_DataContainers_ScriptableObjectComponent_IsEnabled">ScriptableObjectComponent.IsEnabled</a>
     </div>
     <div>
@@ -283,7 +290,7 @@
   <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
   <h5 id="Kinstrife_Actor_MoveProcedure_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class MoveProcedure : Procedure, IScriptableObjectDataContainer&lt;ProcedureComponent&gt;, IHasClient, IInitializable, IProcedureEventsSource, IHasReferencedProcedures, IInjectable, IDependent</code></pre>
+    <pre><code class="lang-csharp hljs">public class MoveProcedure : Procedure, IScriptableObjectDataContainer&lt;ProcedureComponent&gt;, IProcedure, IWeighted, IHasClient, IProcedureEventsSource, IHasReferencedProcedures, IInjectable, IDependent</code></pre>
   </div>
   <h3 id="fields">Fields
   </h3>
@@ -449,10 +456,13 @@
       <a class="xref" href="Kinstrife.DataContainers.IScriptableObjectDataContainer-1.html">IScriptableObjectDataContainer&lt;TComponentType&gt;</a>
   </div>
   <div>
-      <a class="xref" href="Kinstrife.Procedures.IHasClient.html">IHasClient</a>
+      <a class="xref" href="Kinstrife.Procedures.IProcedure.html">IProcedure</a>
   </div>
   <div>
-      <a class="xref" href="Kinstrife.Core.DependencyInjection.IInitializable.html">IInitializable</a>
+      <a class="xref" href="Kinstrife.Procedures.IWeighted.html">IWeighted</a>
+  </div>
+  <div>
+      <a class="xref" href="Kinstrife.Procedures.IHasClient.html">IHasClient</a>
   </div>
   <div>
       <a class="xref" href="Kinstrife.Procedures.IProcedureEventsSource.html">IProcedureEventsSource</a>

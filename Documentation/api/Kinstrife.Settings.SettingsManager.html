@@ -389,6 +389,54 @@
   </table>
   
   
+  <a id="Kinstrife_Settings_SettingsManager_ApplyChanges_" data-uid="Kinstrife.Settings.SettingsManager.ApplyChanges*"></a>
+  <h4 id="Kinstrife_Settings_SettingsManager_ApplyChanges__1___0___0_" data-uid="Kinstrife.Settings.SettingsManager.ApplyChanges``1(``0,``0)">ApplyChanges&lt;T&gt;(T, T)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void ApplyChanges&lt;T&gt;(T original, T workingCopy)
+    where T : SettingsData</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">T</span></td>
+        <td><span class="parametername">original</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">T</span></td>
+        <td><span class="parametername">workingCopy</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
   <a id="Kinstrife_Settings_SettingsManager_ApplySettings_" data-uid="Kinstrife.Settings.SettingsManager.ApplySettings*"></a>
   <h4 id="Kinstrife_Settings_SettingsManager_ApplySettings" data-uid="Kinstrife.Settings.SettingsManager.ApplySettings">ApplySettings()</h4>
   <div class="markdown level1 summary"></div>
@@ -469,7 +517,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void RestoreOriginal(SettingsData settingsData)</code></pre>
+    <pre><code class="lang-csharp hljs">public void RestoreOriginal(SettingsData workingCopy)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -483,7 +531,7 @@
     <tbody>
       <tr>
         <td><a class="xref" href="Kinstrife.Settings.SettingsData.html">SettingsData</a></td>
-        <td><span class="parametername">settingsData</span></td>
+        <td><span class="parametername">workingCopy</span></td>
         <td></td>
       </tr>
     </tbody>

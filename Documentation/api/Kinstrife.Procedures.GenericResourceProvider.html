@@ -85,18 +85,28 @@
   <div class="implements">
     <h5>Implements</h5>
     <div><a class="xref" href="Kinstrife.Procedures.IConsumableResourceProvider-1.html">IConsumableResourceProvider</a>&lt;<span class="xref">ScriptableObject</span>&gt;</div>
+    <div><a class="xref" href="Kinstrife.Procedures.IResourceProvider-1.html">IResourceProvider</a>&lt;<span class="xref">ScriptableObject</span>&gt;</div>
   </div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
     <div>
       <a class="xref" href="Kinstrife.Procedures.ResourceProvider-1.html#Kinstrife_Procedures_ResourceProvider_1_ResourceType">ResourceProvider&lt;ScriptableObject&gt;.ResourceType</a>
     </div>
+    <div>
+      <a class="xref" href="Kinstrife.Procedures.ResourceProvider.html#Kinstrife_Procedures_ResourceProvider_manager">ResourceProvider.manager</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.Procedures.ResourceProvider.html#Kinstrife_Procedures_ResourceProvider_Context">ResourceProvider.Context</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.Procedures.ResourceProvider.html#Kinstrife_Procedures_ResourceProvider_Inject_Kinstrife_Procedures_ResourceManager_">ResourceProvider.Inject(ResourceManager)</a>
+    </div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Kinstrife.Procedures.html">Kinstrife.Procedures</a></h6>
   <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
   <h5 id="Kinstrife_Procedures_GenericResourceProvider_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class GenericResourceProvider : ResourceProvider&lt;ScriptableObject&gt;, IConsumableResourceProvider&lt;ScriptableObject&gt;</code></pre>
+    <pre><code class="lang-csharp hljs">public class GenericResourceProvider : ResourceProvider&lt;ScriptableObject&gt;, IConsumableResourceProvider&lt;ScriptableObject&gt;, IResourceProvider&lt;ScriptableObject&gt;</code></pre>
   </div>
   <h3 id="methods">Methods
   </h3>
@@ -108,7 +118,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public override void ConsumeResource(ScriptableObject resource, uint amount)</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual void ConsumeResource(ScriptableObject resource, uint amount)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -132,8 +142,6 @@
       </tr>
     </tbody>
   </table>
-  <h5 class="overrides">Overrides</h5>
-  <div><span class="xref">Kinstrife.Procedures.ResourceProvider&lt;ScriptableObject&gt;.ConsumeResource(ScriptableObject, System.UInt32)</span></div>
   
   
   <a id="Kinstrife_Procedures_GenericResourceProvider_HasAnyOfResource_" data-uid="Kinstrife.Procedures.GenericResourceProvider.HasAnyOfResource*"></a>
@@ -235,7 +243,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public override bool TryConsumeResource(ScriptableObject resource, uint amount, bool allOrNothing)</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual bool TryConsumeResource(ScriptableObject resource, uint amount, bool allOrNothing)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -279,11 +287,12 @@
       </tr>
     </tbody>
   </table>
-  <h5 class="overrides">Overrides</h5>
-  <div><span class="xref">Kinstrife.Procedures.ResourceProvider&lt;ScriptableObject&gt;.TryConsumeResource(ScriptableObject, System.UInt32, System.Boolean)</span></div>
   <h3 id="implements">Implements</h3>
   <div>
       <a class="xref" href="Kinstrife.Procedures.IConsumableResourceProvider-1.html">IConsumableResourceProvider&lt;T&gt;</a>
+  </div>
+  <div>
+      <a class="xref" href="Kinstrife.Procedures.IResourceProvider-1.html">IResourceProvider&lt;T&gt;</a>
   </div>
 </article>
           </div>

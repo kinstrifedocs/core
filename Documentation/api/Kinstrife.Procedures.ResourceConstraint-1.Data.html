@@ -82,10 +82,16 @@
     <div class="level2"><span class="xref">ResourceConstraint&lt;T&gt;.Data</span></div>
       <div class="level3"><a class="xref" href="Kinstrife.Procedures.GenericResourceConstraint.Data.html">GenericResourceConstraint.Data</a></div>
   </div>
+  <div class="implements">
+    <h5>Implements</h5>
+    <div><a class="xref" href="Kinstrife.Procedures.IConstraintAuthoring.html">IConstraintAuthoring</a></div>
+    <div><a class="xref" href="Kinstrife.Procedures.IInstructionAuthoring-1.html">IInstructionAuthoring</a>&lt;<a class="xref" href="Kinstrife.Procedures.IConstraint.html">IConstraint</a>&gt;</div>
+    <div><a class="xref" href="Kinstrife.Procedures.IInstructionAuthoring.html">IInstructionAuthoring</a></div>
+  </div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
     <div>
-      <a class="xref" href="Kinstrife.Procedures.ConstraintAuthoring.html#Kinstrife_Procedures_ConstraintAuthoring_Mode">ConstraintAuthoring.Mode</a>
+      <a class="xref" href="Kinstrife.Procedures.ConstraintAuthoring.html#Kinstrife_Procedures_ConstraintAuthoring_ConstraintMode">ConstraintAuthoring.ConstraintMode</a>
     </div>
     <div>
       <span class="xref">System.Object.ToString()</span>
@@ -113,7 +119,7 @@
   <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
   <h5 id="Kinstrife_Procedures_ResourceConstraint_1_Data_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public abstract class Data : ConstraintAuthoring</code></pre>
+    <pre><code class="lang-csharp hljs">public abstract class Data : ConstraintAuthoring, IConstraintAuthoring, IInstructionAuthoring&lt;IConstraint&gt;, IInstructionAuthoring</code></pre>
   </div>
   <h3 id="properties">Properties
   </h3>
@@ -192,6 +198,43 @@
       </tr>
     </tbody>
   </table>
+  <h3 id="methods">Methods
+  </h3>
+  
+  
+  <a id="Kinstrife_Procedures_ResourceConstraint_1_Data_ToRuntimeInstruction_" data-uid="Kinstrife.Procedures.ResourceConstraint`1.Data.ToRuntimeInstruction*"></a>
+  <h4 id="Kinstrife_Procedures_ResourceConstraint_1_Data_ToRuntimeInstruction" data-uid="Kinstrife.Procedures.ResourceConstraint`1.Data.ToRuntimeInstruction">ToRuntimeInstruction()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public abstract IConstraint ToRuntimeInstruction()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Kinstrife.Procedures.IConstraint.html">IConstraint</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <a class="xref" href="Kinstrife.Procedures.IConstraintAuthoring.html">IConstraintAuthoring</a>
+  </div>
+  <div>
+      <a class="xref" href="Kinstrife.Procedures.IInstructionAuthoring-1.html">IInstructionAuthoring&lt;T&gt;</a>
+  </div>
+  <div>
+      <a class="xref" href="Kinstrife.Procedures.IInstructionAuthoring.html">IInstructionAuthoring</a>
+  </div>
 </article>
           </div>
           

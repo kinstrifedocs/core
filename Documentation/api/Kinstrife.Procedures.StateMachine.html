@@ -90,16 +90,16 @@
   <div class="implements">
     <h5>Implements</h5>
     <div><a class="xref" href="Kinstrife.Procedures.IProcedureComponent.html">IProcedureComponent</a></div>
-    <div><a class="xref" href="Kinstrife.Core.DependencyInjection.IInitializable.html">IInitializable</a></div>
     <div><a class="xref" href="Kinstrife.Procedures.IInstructions-1.html">IInstructions</a>&lt;<a class="xref" href="Kinstrife.Procedures.ISubStateInstruction.html">ISubStateInstruction</a>&gt;</div>
     <div><a class="xref" href="Kinstrife.Procedures.IInstructionsAuthoring-2.html">IInstructionsAuthoring</a>&lt;<a class="xref" href="Kinstrife.Procedures.ISubStateInstruction.html">ISubStateInstruction</a>, <a class="xref" href="Kinstrife.Procedures.ProcedureStateAsset.html">ProcedureStateAsset</a>&gt;</div>
     <div><a class="xref" href="Kinstrife.Core.DependencyInjection.IProvideDependents.html">IProvideDependents</a></div>
     <div><a class="xref" href="Kinstrife.Core.DependencyInjection.IDependent.html">IDependent</a></div>
     <div><a class="xref" href="Kinstrife.Procedures.IUpdateable.html">IUpdateable</a></div>
-    <div><a class="xref" href="Kinstrife.Procedures.IHasReferencedProcedures.html">IHasReferencedProcedures</a></div>
+    <div><span class="xref">System.IDisposable</span></div>
     <div><a class="xref" href="Kinstrife.Procedures.IConstraint.html">IConstraint</a></div>
     <div><a class="xref" href="Kinstrife.Procedures.IInstruction.html">IInstruction</a></div>
     <div><a class="xref" href="Kinstrife.Procedures.IConditionEvaluator.html">IConditionEvaluator</a></div>
+    <div><a class="xref" href="Kinstrife.Procedures.IHasReferencedProcedures.html">IHasReferencedProcedures</a></div>
     <div><a class="xref" href="Kinstrife.DataContainers.IScriptableObjectDataContainer-1.html">IScriptableObjectDataContainer</a>&lt;<a class="xref" href="Kinstrife.Procedures.ProcedureStateAsset.html">ProcedureStateAsset</a>&gt;</div>
   </div>
   <div class="inheritedMembers">
@@ -186,6 +186,9 @@
       <a class="xref" href="Kinstrife.Procedures.SubStates-3.html#Kinstrife_Procedures_SubStates_3_Initialize_Kinstrife_Procedures_ProceduresManager_Kinstrife_Procedures_IEvaluateConstraints_">SubStates&lt;ProcedureStateAsset, ISubStateInstruction, ProcedureStateAsset&gt;.Initialize(ProceduresManager, IEvaluateConstraints)</a>
     </div>
     <div>
+      <a class="xref" href="Kinstrife.Procedures.SubStates-3.html#Kinstrife_Procedures_SubStates_3_Initialize_Kinstrife_Procedures_ProceduresManager_Kinstrife_Procedures_Procedure_">SubStates&lt;ProcedureStateAsset, ISubStateInstruction, ProcedureStateAsset&gt;.Initialize(ProceduresManager, Procedure)</a>
+    </div>
+    <div>
       <a class="xref" href="Kinstrife.Procedures.SubStates-3.html#Kinstrife_Procedures_SubStates_3_Execute_Kinstrife_Procedures_Operation_">SubStates&lt;ProcedureStateAsset, ISubStateInstruction, ProcedureStateAsset&gt;.Execute(Operation)</a>
     </div>
     <div>
@@ -237,9 +240,6 @@
       <a class="xref" href="Kinstrife.Procedures.ProcedureModule-2.html#Kinstrife_Procedures_ProcedureModule_2_OnRuntimeDuplicate_Kinstrife_DataContainers_ScriptableObjectComponent_">ProcedureModule&lt;ISubStateInstruction, ProcedureStateAsset&gt;.OnRuntimeDuplicate(ScriptableObjectComponent)</a>
     </div>
     <div>
-      <a class="xref" href="Kinstrife.Procedures.ProcedureModule-2.html#Kinstrife_Procedures_ProcedureModule_2_Initialize">ProcedureModule&lt;ISubStateInstruction, ProcedureStateAsset&gt;.Initialize()</a>
-    </div>
-    <div>
       <a class="xref" href="Kinstrife.Procedures.ProcedureModule-2.html#Kinstrife_Procedures_ProcedureModule_2_InitializeInstructions">ProcedureModule&lt;ISubStateInstruction, ProcedureStateAsset&gt;.InitializeInstructions()</a>
     </div>
     <div>
@@ -261,6 +261,9 @@
       <a class="xref" href="Kinstrife.Procedures.ProcedureModule-2.html#Kinstrife_Procedures_ProcedureModule_2_OnUpdate_System_Single_">ProcedureModule&lt;ISubStateInstruction, ProcedureStateAsset&gt;.OnUpdate(Single)</a>
     </div>
     <div>
+      <a class="xref" href="Kinstrife.Procedures.ProcedureModule-2.html#Kinstrife_Procedures_ProcedureModule_2_Dispose">ProcedureModule&lt;ISubStateInstruction, ProcedureStateAsset&gt;.Dispose()</a>
+    </div>
+    <div>
       <a class="xref" href="Kinstrife.Procedures.ProcedureModule-2.html#Kinstrife_Procedures_ProcedureModule_2_DrawTitleBarGUI">ProcedureModule&lt;ISubStateInstruction, ProcedureStateAsset&gt;.DrawTitleBarGUI()</a>
     </div>
     <div>
@@ -274,6 +277,9 @@
     </div>
     <div>
       <a class="xref" href="Kinstrife.Procedures.ProcedureComponent.html#Kinstrife_Procedures_ProcedureComponent_IsInvalid">ProcedureComponent.IsInvalid</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.Procedures.ProcedureComponent.html#Kinstrife_Procedures_ProcedureComponent_Name">ProcedureComponent.Name</a>
     </div>
     <div>
       <a class="xref" href="Kinstrife.Procedures.ProcedureComponent.html#Kinstrife_Procedures_ProcedureComponent_manager">ProcedureComponent.manager</a>
@@ -294,13 +300,13 @@
       <a class="xref" href="Kinstrife.Procedures.ProcedureComponent.html#Kinstrife_Procedures_ProcedureComponent_ValidateInstance_Kinstrife_DataContainers_ScriptableObjectComponent_">ProcedureComponent.ValidateInstance(ScriptableObjectComponent)</a>
     </div>
     <div>
-      <a class="xref" href="Kinstrife.DataContainers.ScriptableObjectComponent.html#Kinstrife_DataContainers_ScriptableObjectComponent_Name">ScriptableObjectComponent.Name</a>
-    </div>
-    <div>
       <a class="xref" href="Kinstrife.DataContainers.ScriptableObjectComponent.html#Kinstrife_DataContainers_ScriptableObjectComponent_isInstance">ScriptableObjectComponent.isInstance</a>
     </div>
     <div>
       <a class="xref" href="Kinstrife.DataContainers.ScriptableObjectComponent.html#Kinstrife_DataContainers_ScriptableObjectComponent_IsInstance">ScriptableObjectComponent.IsInstance</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.DataContainers.ScriptableObjectComponent.html#Kinstrife_DataContainers_ScriptableObjectComponent_enabled">ScriptableObjectComponent.enabled</a>
     </div>
     <div>
       <a class="xref" href="Kinstrife.DataContainers.ScriptableObjectComponent.html#Kinstrife_DataContainers_ScriptableObjectComponent_IsEnabled">ScriptableObjectComponent.IsEnabled</a>
@@ -340,14 +346,11 @@
   <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
   <h5 id="Kinstrife_Procedures_StateMachine_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class StateMachine : StateMachine&lt;ProcedureStateAsset&gt;, IProcedureComponent, IInitializable, IInstructions&lt;ISubStateInstruction&gt;, IInstructionsAuthoring&lt;ISubStateInstruction, ProcedureStateAsset&gt;, IProvideDependents, IDependent, IUpdateable, IHasReferencedProcedures, IConstraint, IInstruction, IConditionEvaluator, IScriptableObjectDataContainer&lt;ProcedureStateAsset&gt;</code></pre>
+    <pre><code class="lang-csharp hljs">public class StateMachine : StateMachine&lt;ProcedureStateAsset&gt;, IProcedureComponent, IInstructions&lt;ISubStateInstruction&gt;, IInstructionsAuthoring&lt;ISubStateInstruction, ProcedureStateAsset&gt;, IProvideDependents, IDependent, IUpdateable, IDisposable, IConstraint, IInstruction, IConditionEvaluator, IHasReferencedProcedures, IScriptableObjectDataContainer&lt;ProcedureStateAsset&gt;</code></pre>
   </div>
   <h3 id="implements">Implements</h3>
   <div>
       <a class="xref" href="Kinstrife.Procedures.IProcedureComponent.html">IProcedureComponent</a>
-  </div>
-  <div>
-      <a class="xref" href="Kinstrife.Core.DependencyInjection.IInitializable.html">IInitializable</a>
   </div>
   <div>
       <a class="xref" href="Kinstrife.Procedures.IInstructions-1.html">IInstructions&lt;T&gt;</a>
@@ -365,7 +368,7 @@
       <a class="xref" href="Kinstrife.Procedures.IUpdateable.html">IUpdateable</a>
   </div>
   <div>
-      <a class="xref" href="Kinstrife.Procedures.IHasReferencedProcedures.html">IHasReferencedProcedures</a>
+      <span class="xref">System.IDisposable</span>
   </div>
   <div>
       <a class="xref" href="Kinstrife.Procedures.IConstraint.html">IConstraint</a>
@@ -375,6 +378,9 @@
   </div>
   <div>
       <a class="xref" href="Kinstrife.Procedures.IConditionEvaluator.html">IConditionEvaluator</a>
+  </div>
+  <div>
+      <a class="xref" href="Kinstrife.Procedures.IHasReferencedProcedures.html">IHasReferencedProcedures</a>
   </div>
   <div>
       <a class="xref" href="Kinstrife.DataContainers.IScriptableObjectDataContainer-1.html">IScriptableObjectDataContainer&lt;TComponentType&gt;</a>

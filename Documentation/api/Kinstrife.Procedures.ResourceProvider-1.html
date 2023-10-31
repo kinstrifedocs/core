@@ -80,18 +80,31 @@
     <div class="level0"><span class="xref">System.Object</span></div>
     <div class="level1"><a class="xref" href="Kinstrife.Procedures.ResourceProvider.html">ResourceProvider</a></div>
     <div class="level2"><span class="xref">ResourceProvider&lt;T&gt;</span></div>
+      <div class="level3"><a class="xref" href="Kinstrife.Procedures.DeferredResourceProvider-2.html">DeferredResourceProvider&lt;T, U&gt;</a></div>
       <div class="level3"><a class="xref" href="Kinstrife.Procedures.GenericResourceProvider.html">GenericResourceProvider</a></div>
       <div class="level3"><a class="xref" href="Kinstrife.Procedures.ResourceProvider-2.html">ResourceProvider&lt;T, U&gt;</a></div>
   </div>
   <div class="implements">
     <h5>Implements</h5>
-    <div><a class="xref" href="Kinstrife.Procedures.IConsumableResourceProvider-1.html">IConsumableResourceProvider</a>&lt;T&gt;</div>
+    <div><a class="xref" href="Kinstrife.Procedures.IResourceProvider-1.html">IResourceProvider</a>&lt;T&gt;</div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="Kinstrife.Procedures.ResourceProvider.html#Kinstrife_Procedures_ResourceProvider_manager">ResourceProvider.manager</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.Procedures.ResourceProvider.html#Kinstrife_Procedures_ResourceProvider_Context">ResourceProvider.Context</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.Procedures.ResourceProvider.html#Kinstrife_Procedures_ResourceProvider_Inject_Kinstrife_Procedures_ResourceManager_">ResourceProvider.Inject(ResourceManager)</a>
+    </div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Kinstrife.Procedures.html">Kinstrife.Procedures</a></h6>
   <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
   <h5 id="Kinstrife_Procedures_ResourceProvider_1_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public abstract class ResourceProvider&lt;T&gt; : ResourceProvider, IConsumableResourceProvider&lt;T&gt;</code></pre>
+    <pre><code class="lang-csharp hljs">public abstract class ResourceProvider&lt;T&gt; : ResourceProvider, IResourceProvider&lt;T&gt;</code></pre>
   </div>
   <h5 class="typeParameters">Type Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -139,38 +152,6 @@
   <div><a class="xref" href="Kinstrife.Procedures.ResourceProvider.html#Kinstrife_Procedures_ResourceProvider_ResourceType">ResourceProvider.ResourceType</a></div>
   <h3 id="methods">Methods
   </h3>
-  
-  
-  <a id="Kinstrife_Procedures_ResourceProvider_1_ConsumeResource_" data-uid="Kinstrife.Procedures.ResourceProvider`1.ConsumeResource*"></a>
-  <h4 id="Kinstrife_Procedures_ResourceProvider_1_ConsumeResource__0_System_UInt32_" data-uid="Kinstrife.Procedures.ResourceProvider`1.ConsumeResource(`0,System.UInt32)">ConsumeResource(T, UInt32)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public abstract void ConsumeResource(T resource, uint amount)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">T</span></td>
-        <td><span class="parametername">resource</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><span class="xref">System.UInt32</span></td>
-        <td><span class="parametername">amount</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
   
   
   <a id="Kinstrife_Procedures_ResourceProvider_1_HasAnyOfResource_" data-uid="Kinstrife.Procedures.ResourceProvider`1.HasAnyOfResource*"></a>
@@ -260,61 +241,9 @@
       </tr>
     </tbody>
   </table>
-  
-  
-  <a id="Kinstrife_Procedures_ResourceProvider_1_TryConsumeResource_" data-uid="Kinstrife.Procedures.ResourceProvider`1.TryConsumeResource*"></a>
-  <h4 id="Kinstrife_Procedures_ResourceProvider_1_TryConsumeResource__0_System_UInt32_System_Boolean_" data-uid="Kinstrife.Procedures.ResourceProvider`1.TryConsumeResource(`0,System.UInt32,System.Boolean)">TryConsumeResource(T, UInt32, Boolean)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public abstract bool TryConsumeResource(T resource, uint amount, bool allOrNothing)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">T</span></td>
-        <td><span class="parametername">resource</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><span class="xref">System.UInt32</span></td>
-        <td><span class="parametername">amount</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><span class="xref">System.Boolean</span></td>
-        <td><span class="parametername">allOrNothing</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Boolean</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
   <h3 id="implements">Implements</h3>
   <div>
-      <a class="xref" href="Kinstrife.Procedures.IConsumableResourceProvider-1.html">IConsumableResourceProvider&lt;T&gt;</a>
+      <a class="xref" href="Kinstrife.Procedures.IResourceProvider-1.html">IResourceProvider&lt;T&gt;</a>
   </div>
 </article>
           </div>

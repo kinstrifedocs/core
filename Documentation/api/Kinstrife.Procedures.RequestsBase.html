@@ -100,6 +100,9 @@
       <a class="xref" href="Kinstrife.Procedures.ProcedureComponent.html#Kinstrife_Procedures_ProcedureComponent_IsInvalid">ProcedureComponent.IsInvalid</a>
     </div>
     <div>
+      <a class="xref" href="Kinstrife.Procedures.ProcedureComponent.html#Kinstrife_Procedures_ProcedureComponent_Name">ProcedureComponent.Name</a>
+    </div>
+    <div>
       <a class="xref" href="Kinstrife.Procedures.ProcedureComponent.html#Kinstrife_Procedures_ProcedureComponent_manager">ProcedureComponent.manager</a>
     </div>
     <div>
@@ -118,13 +121,13 @@
       <a class="xref" href="Kinstrife.Procedures.ProcedureComponent.html#Kinstrife_Procedures_ProcedureComponent_ValidateInstance_Kinstrife_DataContainers_ScriptableObjectComponent_">ProcedureComponent.ValidateInstance(ScriptableObjectComponent)</a>
     </div>
     <div>
-      <a class="xref" href="Kinstrife.DataContainers.ScriptableObjectComponent.html#Kinstrife_DataContainers_ScriptableObjectComponent_Name">ScriptableObjectComponent.Name</a>
-    </div>
-    <div>
       <a class="xref" href="Kinstrife.DataContainers.ScriptableObjectComponent.html#Kinstrife_DataContainers_ScriptableObjectComponent_isInstance">ScriptableObjectComponent.isInstance</a>
     </div>
     <div>
       <a class="xref" href="Kinstrife.DataContainers.ScriptableObjectComponent.html#Kinstrife_DataContainers_ScriptableObjectComponent_IsInstance">ScriptableObjectComponent.IsInstance</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.DataContainers.ScriptableObjectComponent.html#Kinstrife_DataContainers_ScriptableObjectComponent_enabled">ScriptableObjectComponent.enabled</a>
     </div>
     <div>
       <a class="xref" href="Kinstrife.DataContainers.ScriptableObjectComponent.html#Kinstrife_DataContainers_ScriptableObjectComponent_IsEnabled">ScriptableObjectComponent.IsEnabled</a>
@@ -419,12 +422,12 @@
   
   
   <a id="Kinstrife_Procedures_RequestsBase_TryReleaseRequest_" data-uid="Kinstrife.Procedures.RequestsBase.TryReleaseRequest*"></a>
-  <h4 id="Kinstrife_Procedures_RequestsBase_TryReleaseRequest_Kinstrife_Procedures_RequestArgs__" data-uid="Kinstrife.Procedures.RequestsBase.TryReleaseRequest(Kinstrife.Procedures.RequestArgs@)">TryReleaseRequest(in RequestArgs)</h4>
+  <h4 id="Kinstrife_Procedures_RequestsBase_TryReleaseRequest_Kinstrife_Procedures_RequestArgs__System_Boolean__" data-uid="Kinstrife.Procedures.RequestsBase.TryReleaseRequest(Kinstrife.Procedures.RequestArgs@,System.Boolean@)">TryReleaseRequest(in RequestArgs, out Boolean)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual bool TryReleaseRequest(in RequestArgs args)</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual bool TryReleaseRequest(in RequestArgs args, out bool wasHighestPrio)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -439,6 +442,11 @@
       <tr>
         <td><a class="xref" href="Kinstrife.Procedures.RequestArgs.html">RequestArgs</a></td>
         <td><span class="parametername">args</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">wasHighestPrio</span></td>
         <td></td>
       </tr>
     </tbody>

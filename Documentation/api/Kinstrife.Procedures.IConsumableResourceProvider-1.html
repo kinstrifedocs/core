@@ -75,11 +75,23 @@
   </h1>
   <div class="markdown level0 summary"></div>
   <div class="markdown level0 conceptual"></div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="Kinstrife.Procedures.IResourceProvider-1.html#Kinstrife_Procedures_IResourceProvider_1_ResourceType">IResourceProvider&lt;T&gt;.ResourceType</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.Procedures.IResourceProvider-1.html#Kinstrife_Procedures_IResourceProvider_1_HasResource__0_System_UInt32_">IResourceProvider&lt;T&gt;.HasResource(T, UInt32)</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.Procedures.IResourceProvider-1.html#Kinstrife_Procedures_IResourceProvider_1_HasAnyOfResource__0_">IResourceProvider&lt;T&gt;.HasAnyOfResource(T)</a>
+    </div>
+  </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Kinstrife.Procedures.html">Kinstrife.Procedures</a></h6>
   <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
   <h5 id="Kinstrife_Procedures_IConsumableResourceProvider_1_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public interface IConsumableResourceProvider&lt;T&gt;</code></pre>
+    <pre><code class="lang-csharp hljs">public interface IConsumableResourceProvider&lt;T&gt; : IResourceProvider&lt;T&gt;</code></pre>
   </div>
   <h5 class="typeParameters">Type Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -92,33 +104,6 @@
     <tbody>
       <tr>
         <td><span class="parametername">T</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h3 id="properties">Properties
-  </h3>
-  
-  
-  <a id="Kinstrife_Procedures_IConsumableResourceProvider_1_ResourceType_" data-uid="Kinstrife.Procedures.IConsumableResourceProvider`1.ResourceType*"></a>
-  <h4 id="Kinstrife_Procedures_IConsumableResourceProvider_1_ResourceType" data-uid="Kinstrife.Procedures.IConsumableResourceProvider`1.ResourceType">ResourceType</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">Type ResourceType { get; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Type</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -153,96 +138,6 @@
       <tr>
         <td><span class="xref">System.UInt32</span></td>
         <td><span class="parametername">amount</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="Kinstrife_Procedures_IConsumableResourceProvider_1_HasAnyOfResource_" data-uid="Kinstrife.Procedures.IConsumableResourceProvider`1.HasAnyOfResource*"></a>
-  <h4 id="Kinstrife_Procedures_IConsumableResourceProvider_1_HasAnyOfResource__0_" data-uid="Kinstrife.Procedures.IConsumableResourceProvider`1.HasAnyOfResource(`0)">HasAnyOfResource(T)</h4>
-  <div class="markdown level1 summary"><p>Checks if the provider has a resource that is not zero</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">bool HasAnyOfResource(T resource)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">T</span></td>
-        <td><span class="parametername">resource</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Boolean</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="Kinstrife_Procedures_IConsumableResourceProvider_1_HasResource_" data-uid="Kinstrife.Procedures.IConsumableResourceProvider`1.HasResource*"></a>
-  <h4 id="Kinstrife_Procedures_IConsumableResourceProvider_1_HasResource__0_System_UInt32_" data-uid="Kinstrife.Procedures.IConsumableResourceProvider`1.HasResource(`0,System.UInt32)">HasResource(T, UInt32)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">bool HasResource(T resource, uint amount)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">T</span></td>
-        <td><span class="parametername">resource</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><span class="xref">System.UInt32</span></td>
-        <td><span class="parametername">amount</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Boolean</span></td>
         <td></td>
       </tr>
     </tbody>

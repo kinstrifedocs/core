@@ -82,9 +82,11 @@
       <div class="level2"><a class="xref" href="Kinstrife.Actor.Procedures.ActorStatusConstraint.html">ActorStatusConstraint</a></div>
       <div class="level2"><a class="xref" href="Kinstrife.Actor.Procedures.MotorInstruction.html">MotorInstruction</a></div>
       <div class="level2"><a class="xref" href="Kinstrife.Procedures.CooldownConstraint.html">CooldownConstraint</a></div>
+      <div class="level2"><a class="xref" href="Kinstrife.Procedures.DeferredResourceConstraint-2.html">DeferredResourceConstraint&lt;TKey, TResource&gt;</a></div>
       <div class="level2"><a class="xref" href="Kinstrife.Procedures.GenericConstraint.html">GenericConstraint</a></div>
       <div class="level2"><a class="xref" href="Kinstrife.Procedures.ProcedureConstraint.html">ProcedureConstraint</a></div>
       <div class="level2"><a class="xref" href="Kinstrife.Procedures.ResourceConstraint-1.html">ResourceConstraint&lt;T&gt;</a></div>
+      <div class="level2"><a class="xref" href="Kinstrife.Procedures.VariableCondition-3.html">VariableCondition&lt;TKey, TValueType, TAuthoring&gt;</a></div>
   </div>
   <div class="implements">
     <h5>Implements</h5>
@@ -120,7 +122,7 @@
   <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
   <h5 id="Kinstrife_Procedures_Constraint_1_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public abstract class Constraint&lt;T&gt; : IConstraint, IInstruction, IConditionEvaluator where T : ConstraintAuthoring</code></pre>
+    <pre><code class="lang-csharp hljs">public abstract class Constraint&lt;T&gt; : IConstraint, IInstruction, IConditionEvaluator where T : IConstraintAuthoring</code></pre>
   </div>
   <h5 class="typeParameters">Type Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -146,7 +148,8 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected IEvaluateConstraints evaluator</code></pre>
+    <pre><code class="lang-csharp hljs">[Obsolete]
+protected IEvaluateConstraints evaluator</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -222,7 +225,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public ConstraintMode Mode { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual ConstraintMode Mode { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -362,6 +365,38 @@
       </tr>
       <tr>
         <td><a class="xref" href="Kinstrife.Procedures.IEvaluateConstraints.html">IEvaluateConstraints</a></td>
+        <td><span class="parametername">context</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Kinstrife_Procedures_Constraint_1_Initialize_" data-uid="Kinstrife.Procedures.Constraint`1.Initialize*"></a>
+  <h4 id="Kinstrife_Procedures_Constraint_1_Initialize_Kinstrife_Procedures_ProceduresManager_Kinstrife_Procedures_Procedure_" data-uid="Kinstrife.Procedures.Constraint`1.Initialize(Kinstrife.Procedures.ProceduresManager,Kinstrife.Procedures.Procedure)">Initialize(ProceduresManager, Procedure)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void Initialize(ProceduresManager manager, Procedure context)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Kinstrife.Procedures.ProceduresManager.html">ProceduresManager</a></td>
+        <td><span class="parametername">manager</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Kinstrife.Procedures.Procedure.html">Procedure</a></td>
         <td><span class="parametername">context</span></td>
         <td></td>
       </tr>

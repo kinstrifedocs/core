@@ -79,8 +79,7 @@
   <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
   <h5 id="Kinstrife_Procedures_IResourceProvider_1_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public interface IResourceProvider&lt;T&gt;
-    where T : ScriptableObject</code></pre>
+    <pre><code class="lang-csharp hljs">public interface IResourceProvider&lt;T&gt;</code></pre>
   </div>
   <h5 class="typeParameters">Type Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -128,13 +127,14 @@
   </h3>
   
   
-  <a id="Kinstrife_Procedures_IResourceProvider_1_ConsumeResource_" data-uid="Kinstrife.Procedures.IResourceProvider`1.ConsumeResource*"></a>
-  <h4 id="Kinstrife_Procedures_IResourceProvider_1_ConsumeResource__0_System_UInt32_" data-uid="Kinstrife.Procedures.IResourceProvider`1.ConsumeResource(`0,System.UInt32)">ConsumeResource(T, UInt32)</h4>
-  <div class="markdown level1 summary"></div>
+  <a id="Kinstrife_Procedures_IResourceProvider_1_HasAnyOfResource_" data-uid="Kinstrife.Procedures.IResourceProvider`1.HasAnyOfResource*"></a>
+  <h4 id="Kinstrife_Procedures_IResourceProvider_1_HasAnyOfResource__0_" data-uid="Kinstrife.Procedures.IResourceProvider`1.HasAnyOfResource(`0)">HasAnyOfResource(T)</h4>
+  <div class="markdown level1 summary"><p>Checks if the provider has a resource that is not zero</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">void ConsumeResource(T resource, uint amount)</code></pre>
+    <pre><code class="lang-csharp hljs">bool HasAnyOfResource(T resource)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -149,43 +149,6 @@
       <tr>
         <td><span class="xref">T</span></td>
         <td><span class="parametername">resource</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><span class="xref">System.UInt32</span></td>
-        <td><span class="parametername">amount</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="Kinstrife_Procedures_IResourceProvider_1_HasResource_" data-uid="Kinstrife.Procedures.IResourceProvider`1.HasResource*"></a>
-  <h4 id="Kinstrife_Procedures_IResourceProvider_1_HasResource__0_System_UInt32_" data-uid="Kinstrife.Procedures.IResourceProvider`1.HasResource(`0,System.UInt32)">HasResource(T, UInt32)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">bool HasResource(T resource, uint amount)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">T</span></td>
-        <td><span class="parametername">resource</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><span class="xref">System.UInt32</span></td>
-        <td><span class="parametername">amount</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -207,13 +170,13 @@
   </table>
   
   
-  <a id="Kinstrife_Procedures_IResourceProvider_1_TryConsumeResource_" data-uid="Kinstrife.Procedures.IResourceProvider`1.TryConsumeResource*"></a>
-  <h4 id="Kinstrife_Procedures_IResourceProvider_1_TryConsumeResource__0_System_UInt32_" data-uid="Kinstrife.Procedures.IResourceProvider`1.TryConsumeResource(`0,System.UInt32)">TryConsumeResource(T, UInt32)</h4>
+  <a id="Kinstrife_Procedures_IResourceProvider_1_HasResource_" data-uid="Kinstrife.Procedures.IResourceProvider`1.HasResource*"></a>
+  <h4 id="Kinstrife_Procedures_IResourceProvider_1_HasResource__0_System_UInt32_" data-uid="Kinstrife.Procedures.IResourceProvider`1.HasResource(`0,System.UInt32)">HasResource(T, UInt32)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">bool TryConsumeResource(T resource, uint amount)</code></pre>
+    <pre><code class="lang-csharp hljs">bool HasResource(T resource, uint amount)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">

@@ -1,0 +1,474 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class LocationSelectViewModel
+   | Kinstrife </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class LocationSelectViewModel
+   | Kinstrife ">
+    <meta name="generator" content="docfx 2.59.4.0">
+    
+    <link rel="shortcut icon" href="../../favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet"> 
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../index.html">
+                <img id="logo" class="svg" src="../../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Kinstrife.UI.LocationSelectViewModel">
+  
+  
+  <h1 id="Kinstrife_UI_LocationSelectViewModel" data-uid="Kinstrife.UI.LocationSelectViewModel" class="text-break">Class LocationSelectViewModel
+  </h1>
+  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><a class="xref" href="Kinstrife.UI.AssetSelectViewModel.html">AssetSelectViewModel</a></div>
+    <div class="level2"><a class="xref" href="Kinstrife.UI.AssetSelectViewModel-1.html">AssetSelectViewModel</a>&lt;<a class="xref" href="Kinstrife.Application.Location.html">Location</a>&gt;</div>
+    <div class="level3"><a class="xref" href="Kinstrife.UI.ListSelectViewModel-1.html">ListSelectViewModel</a>&lt;<a class="xref" href="Kinstrife.Application.Location.html">Location</a>&gt;</div>
+    <div class="level4"><a class="xref" href="Kinstrife.UI.AssetSelectViewModelAddressable-1.html">AssetSelectViewModelAddressable</a>&lt;<a class="xref" href="Kinstrife.Application.Location.html">Location</a>&gt;</div>
+    <div class="level5"><span class="xref">LocationSelectViewModel</span></div>
+  </div>
+  <div class="implements">
+    <h5>Implements</h5>
+    <div><span class="xref">IModel</span></div>
+    <div><a class="xref" href="Kinstrife.Core.DependencyInjection.IInitializable.html">IInitializable</a></div>
+    <div><a class="xref" href="Kinstrife.Core.DependencyInjection.IInjectable.html">IInjectable</a></div>
+    <div><a class="xref" href="Kinstrife.Core.DependencyInjection.IDependent.html">IDependent</a></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="Kinstrife.UI.AssetSelectViewModelAddressable-1.html#Kinstrife_UI_AssetSelectViewModelAddressable_1_label">AssetSelectViewModelAddressable&lt;Location&gt;.label</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.UI.AssetSelectViewModelAddressable-1.html#Kinstrife_UI_AssetSelectViewModelAddressable_1_isAsync">AssetSelectViewModelAddressable&lt;Location&gt;.isAsync</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.UI.AssetSelectViewModelAddressable-1.html#Kinstrife_UI_AssetSelectViewModelAddressable_1_LoadSourceDataAsync">AssetSelectViewModelAddressable&lt;Location&gt;.LoadSourceDataAsync()</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.UI.AssetSelectViewModelAddressable-1.html#Kinstrife_UI_AssetSelectViewModelAddressable_1_LoadSourceData">AssetSelectViewModelAddressable&lt;Location&gt;.LoadSourceData()</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.UI.ListSelectViewModel-1.html#Kinstrife_UI_ListSelectViewModel_1_data">ListSelectViewModel&lt;Location&gt;.data</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.UI.ListSelectViewModel-1.html#Kinstrife_UI_ListSelectViewModel_1_bindableData">ListSelectViewModel&lt;Location&gt;.bindableData</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.UI.ListSelectViewModel-1.html#Kinstrife_UI_ListSelectViewModel_1_DefaultControlType">ListSelectViewModel&lt;Location&gt;.DefaultControlType</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.UI.ListSelectViewModel-1.html#Kinstrife_UI_ListSelectViewModel_1_HasListView">ListSelectViewModel&lt;Location&gt;.HasListView</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.UI.ListSelectViewModel-1.html#Kinstrife_UI_ListSelectViewModel_1_Rebuild">ListSelectViewModel&lt;Location&gt;.Rebuild()</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.UI.ListSelectViewModel-1.html#Kinstrife_UI_ListSelectViewModel_1_ClearSelection">ListSelectViewModel&lt;Location&gt;.ClearSelection()</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.UI.ListSelectViewModel-1.html#Kinstrife_UI_ListSelectViewModel_1_ClearData">ListSelectViewModel&lt;Location&gt;.ClearData()</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.UI.ListSelectViewModel-1.html#Kinstrife_UI_ListSelectViewModel_1_SelectedIndices">ListSelectViewModel&lt;Location&gt;.SelectedIndices</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.UI.AssetSelectViewModel-1.html#Kinstrife_UI_AssetSelectViewModel_1_SourceData">AssetSelectViewModel&lt;Location&gt;.SourceData</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.UI.AssetSelectViewModel-1.html#Kinstrife_UI_AssetSelectViewModel_1_loadMode">AssetSelectViewModel&lt;Location&gt;.loadMode</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.UI.AssetSelectViewModel-1.html#Kinstrife_UI_AssetSelectViewModel_1_hasActiveState">AssetSelectViewModel&lt;Location&gt;.hasActiveState</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.UI.AssetSelectViewModel-1.html#Kinstrife_UI_AssetSelectViewModel_1_hardRefresh">AssetSelectViewModel&lt;Location&gt;.hardRefresh</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.UI.AssetSelectViewModel-1.html#Kinstrife_UI_AssetSelectViewModel_1_onSelectItem">AssetSelectViewModel&lt;Location&gt;.onSelectItem</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.UI.AssetSelectViewModel-1.html#Kinstrife_UI_AssetSelectViewModel_1_Initialize">AssetSelectViewModel&lt;Location&gt;.Initialize()</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.UI.AssetSelectViewModel-1.html#Kinstrife_UI_AssetSelectViewModel_1_Initialize_VisualElement_Plate_">AssetSelectViewModel&lt;Location&gt;.Initialize(VisualElement, Plate)</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.UI.AssetSelectViewModel-1.html#Kinstrife_UI_AssetSelectViewModel_1_RefreshSourceData">AssetSelectViewModel&lt;Location&gt;.RefreshSourceData()</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.UI.AssetSelectViewModel-1.html#Kinstrife_UI_AssetSelectViewModel_1_lastSelectedIndex">AssetSelectViewModel&lt;Location&gt;.lastSelectedIndex</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.UI.AssetSelectViewModel-1.html#Kinstrife_UI_AssetSelectViewModel_1_SelectedIndex">AssetSelectViewModel&lt;Location&gt;.SelectedIndex</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.UI.AssetSelectViewModel-1.html#Kinstrife_UI_AssetSelectViewModel_1_lastSelectedEntry">AssetSelectViewModel&lt;Location&gt;.lastSelectedEntry</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.UI.AssetSelectViewModel-1.html#Kinstrife_UI_AssetSelectViewModel_1_SelectedEntry">AssetSelectViewModel&lt;Location&gt;.SelectedEntry</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.UI.AssetSelectViewModel-1.html#Kinstrife_UI_AssetSelectViewModel_1_SelectEntryAt_System_Int32_MouseButton_">AssetSelectViewModel&lt;Location&gt;.SelectEntryAt(Int32, MouseButton)</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.UI.AssetSelectViewModel-1.html#Kinstrife_UI_AssetSelectViewModel_1_LoadSourceData_System_Boolean_">AssetSelectViewModel&lt;Location&gt;.LoadSourceData(Boolean)</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.UI.AssetSelectViewModel-1.html#Kinstrife_UI_AssetSelectViewModel_1_TryAddSourceData_System_Int32__0_">AssetSelectViewModel&lt;Location&gt;.TryAddSourceData(Int32, Location)</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.UI.AssetSelectViewModel-1.html#Kinstrife_UI_AssetSelectViewModel_1_RefreshActiveState">AssetSelectViewModel&lt;Location&gt;.RefreshActiveState()</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.UI.AssetSelectViewModel-1.html#Kinstrife_UI_AssetSelectViewModel_1_EntryIsActive_System_Int32__0_">AssetSelectViewModel&lt;Location&gt;.EntryIsActive(Int32, Location)</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.UI.AssetSelectViewModel-1.html#Kinstrife_UI_AssetSelectViewModel_1_PostInitializeItems">AssetSelectViewModel&lt;Location&gt;.PostInitializeItems()</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.UI.AssetSelectViewModel.html#Kinstrife_UI_AssetSelectViewModel_DisableIfEmpty">AssetSelectViewModel.DisableIfEmpty</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.UI.AssetSelectViewModel.html#Kinstrife_UI_AssetSelectViewModel_onSelectObject">AssetSelectViewModel.onSelectObject</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.UI.AssetSelectViewModel.html#Kinstrife_UI_AssetSelectViewModel_AddData_ContextBindableObject_">AssetSelectViewModel.AddData(ContextBindableObject)</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.UI.AssetSelectViewModel.html#Kinstrife_UI_AssetSelectViewModel_IsEmpty">AssetSelectViewModel.IsEmpty</a>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Kinstrife.UI.html">Kinstrife.UI</a></h6>
+  <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
+  <h5 id="Kinstrife_UI_LocationSelectViewModel_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class LocationSelectViewModel : AssetSelectViewModelAddressable&lt;Location&gt;, IInitializable, IInjectable, IDependent</code></pre>
+  </div>
+  <h3 id="constructors">Constructors
+  </h3>
+  
+  
+  <a id="Kinstrife_UI_LocationSelectViewModel__ctor_" data-uid="Kinstrife.UI.LocationSelectViewModel.#ctor*"></a>
+  <h4 id="Kinstrife_UI_LocationSelectViewModel__ctor" data-uid="Kinstrife.UI.LocationSelectViewModel.#ctor">LocationSelectViewModel()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public LocationSelectViewModel()</code></pre>
+  </div>
+  <h3 id="properties">Properties
+  </h3>
+  
+  
+  <a id="Kinstrife_UI_LocationSelectViewModel_Preload_" data-uid="Kinstrife.UI.LocationSelectViewModel.Preload*"></a>
+  <h4 id="Kinstrife_UI_LocationSelectViewModel_Preload" data-uid="Kinstrife.UI.LocationSelectViewModel.Preload">Preload</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool Preload { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Kinstrife_UI_LocationSelectViewModel_ScheduleSwitch_" data-uid="Kinstrife.UI.LocationSelectViewModel.ScheduleSwitch*"></a>
+  <h4 id="Kinstrife_UI_LocationSelectViewModel_ScheduleSwitch" data-uid="Kinstrife.UI.LocationSelectViewModel.ScheduleSwitch">ScheduleSwitch</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool ScheduleSwitch { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  
+  
+  <a id="Kinstrife_UI_LocationSelectViewModel_InitItem_" data-uid="Kinstrife.UI.LocationSelectViewModel.InitItem*"></a>
+  <h4 id="Kinstrife_UI_LocationSelectViewModel_InitItem_System_Int32_Kinstrife_Application_Location_ContextBindableObject_" data-uid="Kinstrife.UI.LocationSelectViewModel.InitItem(System.Int32,Kinstrife.Application.Location,ContextBindableObject)">InitItem(Int32, Location, ContextBindableObject)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override void InitItem(int i, Location source, ContextBindableObject bindable)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">i</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Kinstrife.Application.Location.html">Location</a></td>
+        <td><span class="parametername">source</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">ContextBindableObject</span></td>
+        <td><span class="parametername">bindable</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">Kinstrife.UI.AssetSelectViewModel&lt;Kinstrife.Application.Location&gt;.InitItem(System.Int32, Kinstrife.Application.Location, ContextBindableObject)</span></div>
+  
+  
+  <a id="Kinstrife_UI_LocationSelectViewModel_Inject_" data-uid="Kinstrife.UI.LocationSelectViewModel.Inject*"></a>
+  <h4 id="Kinstrife_UI_LocationSelectViewModel_Inject_Kinstrife_Application_ApplicationFlow_Kinstrife_Application_Module_" data-uid="Kinstrife.UI.LocationSelectViewModel.Inject(Kinstrife.Application.ApplicationFlow,Kinstrife.Application.Module)">Inject(ApplicationFlow, Module)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Inject(ApplicationFlow flow, Module module)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Kinstrife.Application.ApplicationFlow.html">ApplicationFlow</a></td>
+        <td><span class="parametername">flow</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Kinstrife.Application.Module.html">Module</a></td>
+        <td><span class="parametername">module</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Kinstrife_UI_LocationSelectViewModel_OnSelectEntry_" data-uid="Kinstrife.UI.LocationSelectViewModel.OnSelectEntry*"></a>
+  <h4 id="Kinstrife_UI_LocationSelectViewModel_OnSelectEntry_System_Int32_Kinstrife_Application_Location_MouseButton_" data-uid="Kinstrife.UI.LocationSelectViewModel.OnSelectEntry(System.Int32,Kinstrife.Application.Location,MouseButton)">OnSelectEntry(Int32, Location, MouseButton)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override void OnSelectEntry(int index, Location item, MouseButton btn)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">index</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Kinstrife.Application.Location.html">Location</a></td>
+        <td><span class="parametername">item</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">MouseButton</span></td>
+        <td><span class="parametername">btn</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">Kinstrife.UI.AssetSelectViewModel&lt;Kinstrife.Application.Location&gt;.OnSelectEntry(System.Int32, Kinstrife.Application.Location, MouseButton)</span></div>
+  
+  
+  <a id="Kinstrife_UI_LocationSelectViewModel_ValidateItem_" data-uid="Kinstrife.UI.LocationSelectViewModel.ValidateItem*"></a>
+  <h4 id="Kinstrife_UI_LocationSelectViewModel_ValidateItem_Kinstrife_Application_Location_" data-uid="Kinstrife.UI.LocationSelectViewModel.ValidateItem(Kinstrife.Application.Location)">ValidateItem(Location)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override bool ValidateItem(Location source)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Kinstrife.Application.Location.html">Location</a></td>
+        <td><span class="parametername">source</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">Kinstrife.UI.AssetSelectViewModel&lt;Kinstrife.Application.Location&gt;.ValidateItem(Kinstrife.Application.Location)</span></div>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <span class="xref">IModel</span>
+  </div>
+  <div>
+      <a class="xref" href="Kinstrife.Core.DependencyInjection.IInitializable.html">IInitializable</a>
+  </div>
+  <div>
+      <a class="xref" href="Kinstrife.Core.DependencyInjection.IInjectable.html">IInjectable</a>
+  </div>
+  <div>
+      <a class="xref" href="Kinstrife.Core.DependencyInjection.IDependent.html">IDependent</a>
+  </div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+  </body>
+</html>

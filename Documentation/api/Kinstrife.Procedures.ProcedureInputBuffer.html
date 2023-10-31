@@ -85,12 +85,13 @@
     <div><a class="xref" href="Kinstrife.Core.DependencyInjection.IInstall-1.html">IInstall</a>&lt;<a class="xref" href="Kinstrife.Procedures.ProcedureInputBuffer.html">ProcedureInputBuffer</a>&gt;</div>
     <div><a class="xref" href="Kinstrife.Core.DependencyInjection.IInstall.html">IInstall</a></div>
     <div><a class="xref" href="Kinstrife.Core.DependencyInjection.IDependent.html">IDependent</a></div>
+    <div><a class="xref" href="Kinstrife.Procedures.IHasClient.html">IHasClient</a></div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Kinstrife.Procedures.html">Kinstrife.Procedures</a></h6>
   <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
   <h5 id="Kinstrife_Procedures_ProcedureInputBuffer_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class ProcedureInputBuffer : MonoBehaviour, IInstall&lt;ProcedureInputBuffer&gt;, IInstall, IDependent</code></pre>
+    <pre><code class="lang-csharp hljs">public class ProcedureInputBuffer : MonoBehaviour, IInstall&lt;ProcedureInputBuffer&gt;, IInstall, IDependent, IHasClient</code></pre>
   </div>
   <h3 id="fields">Fields
   </h3>
@@ -114,6 +115,33 @@
     <tbody>
       <tr>
         <td><span class="xref">System.Collections.Generic.Dictionary</span>&lt;<a class="xref" href="Kinstrife.Procedures.Procedure.html">Procedure</a>, <a class="xref" href="Kinstrife.Procedures.ProcedureInputBufferElement.html">ProcedureInputBufferElement</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="properties">Properties
+  </h3>
+  
+  
+  <a id="Kinstrife_Procedures_ProcedureInputBuffer_ClientId_" data-uid="Kinstrife.Procedures.ProcedureInputBuffer.ClientId*"></a>
+  <h4 id="Kinstrife_Procedures_ProcedureInputBuffer_ClientId" data-uid="Kinstrife.Procedures.ProcedureInputBuffer.ClientId">ClientId</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ClientId ClientId { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Kinstrife.Procedures.ClientId.html">ClientId</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -280,6 +308,9 @@
   </div>
   <div>
       <a class="xref" href="Kinstrife.Core.DependencyInjection.IDependent.html">IDependent</a>
+  </div>
+  <div>
+      <a class="xref" href="Kinstrife.Procedures.IHasClient.html">IHasClient</a>
   </div>
 </article>
           </div>

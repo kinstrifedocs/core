@@ -90,6 +90,31 @@
   </h3>
   
   
+  <a id="Kinstrife_Procedures_ResourceManager_Context_" data-uid="Kinstrife.Procedures.ResourceManager.Context*"></a>
+  <h4 id="Kinstrife_Procedures_ResourceManager_Context" data-uid="Kinstrife.Procedures.ResourceManager.Context">Context</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ResourceContext Context { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Kinstrife.Procedures.ResourceContext.html">ResourceContext</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
   <a id="Kinstrife_Procedures_ResourceManager_Providers_" data-uid="Kinstrife.Procedures.ResourceManager.Providers*"></a>
   <h4 id="Kinstrife_Procedures_ResourceManager_Providers" data-uid="Kinstrife.Procedures.ResourceManager.Providers">Providers</h4>
   <div class="markdown level1 summary"></div>
@@ -115,6 +140,51 @@
   </table>
   <h3 id="methods">Methods
   </h3>
+  
+  
+  <a id="Kinstrife_Procedures_ResourceManager_GetResourceProviders_" data-uid="Kinstrife.Procedures.ResourceManager.GetResourceProviders*"></a>
+  <h4 id="Kinstrife_Procedures_ResourceManager_GetResourceProviders__2" data-uid="Kinstrife.Procedures.ResourceManager.GetResourceProviders``2">GetResourceProviders&lt;T, U&gt;()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IEnumerable&lt;T&gt; GetResourceProviders&lt;T, U&gt;()
+    where T : IResourceProvider&lt;U&gt;</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;T&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="parametername">U</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   
   
   <a id="Kinstrife_Procedures_ResourceManager_TryGetResourceProvider_" data-uid="Kinstrife.Procedures.ResourceManager.TryGetResourceProvider*"></a>
@@ -158,6 +228,68 @@
     <tbody>
       <tr>
         <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Kinstrife_Procedures_ResourceManager_TryGetResourceProvider_" data-uid="Kinstrife.Procedures.ResourceManager.TryGetResourceProvider*"></a>
+  <h4 id="Kinstrife_Procedures_ResourceManager_TryGetResourceProvider__2___0__" data-uid="Kinstrife.Procedures.ResourceManager.TryGetResourceProvider``2(``0@)">TryGetResourceProvider&lt;T, U&gt;(out T)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool TryGetResourceProvider&lt;T, U&gt;(out T resourceProvider)
+    where T : class, IResourceProvider&lt;U&gt;</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">T</span></td>
+        <td><span class="parametername">resourceProvider</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="parametername">U</span></td>
         <td></td>
       </tr>
     </tbody>

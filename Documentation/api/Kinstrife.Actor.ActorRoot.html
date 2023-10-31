@@ -88,13 +88,14 @@
     <div><a class="xref" href="Kinstrife.Core.DependencyInjection.IInstall-1.html">IInstall</a>&lt;<a class="xref" href="Kinstrife.Actor.ActorRoot.html">ActorRoot</a>&gt;</div>
     <div><a class="xref" href="Kinstrife.Core.DependencyInjection.IInstall-1.html">IInstall</a>&lt;<a class="xref" href="Kinstrife.Actor.Interfaces.IActor.html">IActor</a>&gt;</div>
     <div><a class="xref" href="Kinstrife.Core.DependencyInjection.IInstall.html">IInstall</a></div>
+    <div><a class="xref" href="Kinstrife.Core.DependencyInjection.IConvertible.html">IConvertible</a></div>
     <div><a class="xref" href="Kinstrife.Core.DependencyInjection.IDependent.html">IDependent</a></div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Kinstrife.Actor.html">Kinstrife.Actor</a></h6>
   <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
   <h5 id="Kinstrife_Actor_ActorRoot_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public sealed class ActorRoot : MonoBehaviour, ICacheReferences, IActor, ITeleportable, IInstall&lt;ActorRoot&gt;, IInstall&lt;IActor&gt;, IInstall, IDependent</code></pre>
+    <pre><code class="lang-csharp hljs">public sealed class ActorRoot : MonoBehaviour, ICacheReferences, IActor, ITeleportable, IInstall&lt;ActorRoot&gt;, IInstall&lt;IActor&gt;, IInstall, IConvertible, IDependent</code></pre>
   </div>
   <h3 id="fields">Fields
   </h3>
@@ -446,6 +447,56 @@
   </table>
   
   
+  <a id="Kinstrife_Actor_ActorRoot_IsPlayer_" data-uid="Kinstrife.Actor.ActorRoot.IsPlayer*"></a>
+  <h4 id="Kinstrife_Actor_ActorRoot_IsPlayer" data-uid="Kinstrife.Actor.ActorRoot.IsPlayer">IsPlayer</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsPlayer { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Kinstrife_Actor_ActorRoot_IsSynchronized_" data-uid="Kinstrife.Actor.ActorRoot.IsSynchronized*"></a>
+  <h4 id="Kinstrife_Actor_ActorRoot_IsSynchronized" data-uid="Kinstrife.Actor.ActorRoot.IsSynchronized">IsSynchronized</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Func&lt;bool&gt; IsSynchronized { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Func</span>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
   <a id="Kinstrife_Actor_ActorRoot_IsUnavailable_" data-uid="Kinstrife.Actor.ActorRoot.IsUnavailable*"></a>
   <h4 id="Kinstrife_Actor_ActorRoot_IsUnavailable" data-uid="Kinstrife.Actor.ActorRoot.IsUnavailable">IsUnavailable</h4>
   <div class="markdown level1 summary"></div>
@@ -505,6 +556,36 @@
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public void CacheReferences()</code></pre>
+  </div>
+  
+  
+  <a id="Kinstrife_Actor_ActorRoot_Convert_" data-uid="Kinstrife.Actor.ActorRoot.Convert*"></a>
+  <h4 id="Kinstrife_Actor_ActorRoot_Convert" data-uid="Kinstrife.Actor.ActorRoot.Convert">Convert()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Convert()</code></pre>
+  </div>
+  
+  
+  <a id="Kinstrife_Actor_ActorRoot_FinalizeProcessing_" data-uid="Kinstrife.Actor.ActorRoot.FinalizeProcessing*"></a>
+  <h4 id="Kinstrife_Actor_ActorRoot_FinalizeProcessing" data-uid="Kinstrife.Actor.ActorRoot.FinalizeProcessing">FinalizeProcessing()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void FinalizeProcessing()</code></pre>
+  </div>
+  
+  
+  <a id="Kinstrife_Actor_ActorRoot_MakePlayer_" data-uid="Kinstrife.Actor.ActorRoot.MakePlayer*"></a>
+  <h4 id="Kinstrife_Actor_ActorRoot_MakePlayer" data-uid="Kinstrife.Actor.ActorRoot.MakePlayer">MakePlayer()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void MakePlayer()</code></pre>
   </div>
   
   
@@ -588,6 +669,31 @@
       <tr>
         <td><span class="xref">Quaternion</span></td>
         <td><span class="parametername">rotation</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Kinstrife_Actor_ActorRoot_TryGround_" data-uid="Kinstrife.Actor.ActorRoot.TryGround*"></a>
+  <h4 id="Kinstrife_Actor_ActorRoot_TryGround" data-uid="Kinstrife.Actor.ActorRoot.TryGround">TryGround()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool TryGround()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -756,6 +862,9 @@
   </div>
   <div>
       <a class="xref" href="Kinstrife.Core.DependencyInjection.IInstall.html">IInstall</a>
+  </div>
+  <div>
+      <a class="xref" href="Kinstrife.Core.DependencyInjection.IConvertible.html">IConvertible</a>
   </div>
   <div>
       <a class="xref" href="Kinstrife.Core.DependencyInjection.IDependent.html">IDependent</a>
