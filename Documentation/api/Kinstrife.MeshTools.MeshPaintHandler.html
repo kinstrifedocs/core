@@ -1,0 +1,465 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class MeshPaintHandler
+   | Kinstrife </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class MeshPaintHandler
+   | Kinstrife ">
+    <meta name="generator" content="docfx 2.59.4.0">
+    
+    <link rel="shortcut icon" href="../../favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet"> 
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../index.html">
+                <img id="logo" class="svg" src="../../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Kinstrife.MeshTools.MeshPaintHandler">
+  
+  
+  <h1 id="Kinstrife_MeshTools_MeshPaintHandler" data-uid="Kinstrife.MeshTools.MeshPaintHandler" class="text-break">Class MeshPaintHandler
+  </h1>
+  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">MeshPaintHandler</span></div>
+  </div>
+  <div class="implements">
+    <h5>Implements</h5>
+    <div><a class="xref" href="Kinstrife.Core.DependencyInjection.IInjectable.html">IInjectable</a></div>
+    <div><a class="xref" href="Kinstrife.Core.DependencyInjection.IDependent.html">IDependent</a></div>
+    <div><span class="xref">IDisposable</span></div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Kinstrife.MeshTools.html">Kinstrife.MeshTools</a></h6>
+  <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
+  <h5 id="Kinstrife_MeshTools_MeshPaintHandler_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class MeshPaintHandler : MonoBehaviour, IInjectable, IDependent</code></pre>
+  </div>
+  <h3 id="fields">Fields
+  </h3>
+  
+  
+  <h4 id="Kinstrife_MeshTools_MeshPaintHandler_bindposes" data-uid="Kinstrife.MeshTools.MeshPaintHandler.bindposes">bindposes</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected NativeArray&lt;Matrix4x4&gt; bindposes</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">NativeArray</span>&lt;<span class="xref">Matrix4x4</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="Kinstrife_MeshTools_MeshPaintHandler_renderers" data-uid="Kinstrife.MeshTools.MeshPaintHandler.renderers">renderers</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected RendererComponents renderers</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Kinstrife.Renderers.RendererComponents.html">RendererComponents</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="Kinstrife_MeshTools_MeshPaintHandler_Settings" data-uid="Kinstrife.MeshTools.MeshPaintHandler.Settings">Settings</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected PaintSettings Settings</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Kinstrife.MeshTools.PaintSettings.html">PaintSettings</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="Kinstrife_MeshTools_MeshPaintHandler_shapes" data-uid="Kinstrife.MeshTools.MeshPaintHandler.shapes">shapes</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected List&lt;ColliderShape&gt; shapes</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.List</span>&lt;<a class="xref" href="Kinstrife.MeshTools.ColliderShape.html">ColliderShape</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="Kinstrife_MeshTools_MeshPaintHandler_skeleton" data-uid="Kinstrife.MeshTools.MeshPaintHandler.skeleton">skeleton</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected Skeleton skeleton</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Kinstrife.Rigging.Skeleton.html">Skeleton</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  
+  
+  <a id="Kinstrife_MeshTools_MeshPaintHandler_ApplyToRenderers_" data-uid="Kinstrife.MeshTools.MeshPaintHandler.ApplyToRenderers*"></a>
+  <h4 id="Kinstrife_MeshTools_MeshPaintHandler_ApplyToRenderers" data-uid="Kinstrife.MeshTools.MeshPaintHandler.ApplyToRenderers">ApplyToRenderers()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected void ApplyToRenderers()</code></pre>
+  </div>
+  
+  
+  <a id="Kinstrife_MeshTools_MeshPaintHandler_CreateCollision_" data-uid="Kinstrife.MeshTools.MeshPaintHandler.CreateCollision*"></a>
+  <h4 id="Kinstrife_MeshTools_MeshPaintHandler_CreateCollision_Kinstrife_MeshTools_ColliderShape__" data-uid="Kinstrife.MeshTools.MeshPaintHandler.CreateCollision(Kinstrife.MeshTools.ColliderShape@)">CreateCollision(in ColliderShape)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void CreateCollision(in ColliderShape collider)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Kinstrife.MeshTools.ColliderShape.html">ColliderShape</a></td>
+        <td><span class="parametername">collider</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Kinstrife_MeshTools_MeshPaintHandler_Dispose_" data-uid="Kinstrife.MeshTools.MeshPaintHandler.Dispose*"></a>
+  <h4 id="Kinstrife_MeshTools_MeshPaintHandler_Dispose" data-uid="Kinstrife.MeshTools.MeshPaintHandler.Dispose">Dispose()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Dispose()</code></pre>
+  </div>
+  
+  
+  <a id="Kinstrife_MeshTools_MeshPaintHandler_GetCandidateTargetTransforms_" data-uid="Kinstrife.MeshTools.MeshPaintHandler.GetCandidateTargetTransforms*"></a>
+  <h4 id="Kinstrife_MeshTools_MeshPaintHandler_GetCandidateTargetTransforms" data-uid="Kinstrife.MeshTools.MeshPaintHandler.GetCandidateTargetTransforms">GetCandidateTargetTransforms()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual IEnumerable&lt;Transform&gt; GetCandidateTargetTransforms()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<span class="xref">Transform</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Kinstrife_MeshTools_MeshPaintHandler_Inject_" data-uid="Kinstrife.MeshTools.MeshPaintHandler.Inject*"></a>
+  <h4 id="Kinstrife_MeshTools_MeshPaintHandler_Inject_Kinstrife_Renderers_RendererComponents_Kinstrife_Rigging_Skeleton_" data-uid="Kinstrife.MeshTools.MeshPaintHandler.Inject(Kinstrife.Renderers.RendererComponents,Kinstrife.Rigging.Skeleton)">Inject(RendererComponents, Skeleton)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Inject(RendererComponents renderers, Skeleton skeleton)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Kinstrife.Renderers.RendererComponents.html">RendererComponents</a></td>
+        <td><span class="parametername">renderers</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Kinstrife.Rigging.Skeleton.html">Skeleton</a></td>
+        <td><span class="parametername">skeleton</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Kinstrife_MeshTools_MeshPaintHandler_OnDestroy_" data-uid="Kinstrife.MeshTools.MeshPaintHandler.OnDestroy*"></a>
+  <h4 id="Kinstrife_MeshTools_MeshPaintHandler_OnDestroy" data-uid="Kinstrife.MeshTools.MeshPaintHandler.OnDestroy">OnDestroy()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void OnDestroy()</code></pre>
+  </div>
+  
+  
+  <a id="Kinstrife_MeshTools_MeshPaintHandler_Process_" data-uid="Kinstrife.MeshTools.MeshPaintHandler.Process*"></a>
+  <h4 id="Kinstrife_MeshTools_MeshPaintHandler_Process_System_Int32_System_Single_" data-uid="Kinstrife.MeshTools.MeshPaintHandler.Process(System.Int32,System.Single)">Process(Int32, Single)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Process(int index, float progressive = -1F)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">index</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><span class="parametername">progressive</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Kinstrife_MeshTools_MeshPaintHandler_SetProfile_" data-uid="Kinstrife.MeshTools.MeshPaintHandler.SetProfile*"></a>
+  <h4 id="Kinstrife_MeshTools_MeshPaintHandler_SetProfile_Kinstrife_MeshTools_MeshPaintProfile_" data-uid="Kinstrife.MeshTools.MeshPaintHandler.SetProfile(Kinstrife.MeshTools.MeshPaintProfile)">SetProfile(MeshPaintProfile)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetProfile(MeshPaintProfile profile)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Kinstrife.MeshTools.MeshPaintProfile.html">MeshPaintProfile</a></td>
+        <td><span class="parametername">profile</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Kinstrife_MeshTools_MeshPaintHandler_SetSettings_" data-uid="Kinstrife.MeshTools.MeshPaintHandler.SetSettings*"></a>
+  <h4 id="Kinstrife_MeshTools_MeshPaintHandler_SetSettings_Kinstrife_MeshTools_PaintSettings__" data-uid="Kinstrife.MeshTools.MeshPaintHandler.SetSettings(Kinstrife.MeshTools.PaintSettings@)">SetSettings(in PaintSettings)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetSettings(in PaintSettings settings)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Kinstrife.MeshTools.PaintSettings.html">PaintSettings</a></td>
+        <td><span class="parametername">settings</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <a class="xref" href="Kinstrife.Core.DependencyInjection.IInjectable.html">IInjectable</a>
+  </div>
+  <div>
+      <a class="xref" href="Kinstrife.Core.DependencyInjection.IDependent.html">IDependent</a>
+  </div>
+  <div>
+      <span class="xref">IDisposable</span>
+  </div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+  </body>
+</html>

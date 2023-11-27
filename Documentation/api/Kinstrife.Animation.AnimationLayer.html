@@ -147,7 +147,7 @@ public class AnimationLayer</code></pre>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public AnimationComponent ActiveAnimator { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public ILayerAnimator ActiveAnimator { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -159,7 +159,7 @@ public class AnimationLayer</code></pre>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="Kinstrife.Animation.AnimationComponent.html">AnimationComponent</a></td>
+        <td><a class="xref" href="Kinstrife.Animation.ILayerAnimator.html">ILayerAnimator</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -275,7 +275,7 @@ public class AnimationLayer</code></pre>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public bool TryAdd&lt;T&gt;(T component, out bool highestPrio)
-    where T : AnimationComponent, ILayerAnimator</code></pre>
+    where T : ILayerAnimator</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -338,7 +338,7 @@ public class AnimationLayer</code></pre>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public bool TryPromote&lt;T&gt;(T component)
-    where T : AnimationComponent, ILayerAnimator</code></pre>
+    where T : ILayerAnimator</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -396,7 +396,7 @@ public class AnimationLayer</code></pre>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public bool TryRemove&lt;T&gt;(T component, out bool highestPrio)
-    where T : AnimationComponent, ILayerAnimator</code></pre>
+    where T : ILayerAnimator</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -453,12 +453,12 @@ public class AnimationLayer</code></pre>
   
   
   <a id="Kinstrife_Animation_AnimationLayer_WillBeHighestPrio_" data-uid="Kinstrife.Animation.AnimationLayer.WillBeHighestPrio*"></a>
-  <h4 id="Kinstrife_Animation_AnimationLayer_WillBeHighestPrio_Kinstrife_Animation_AnimationComponent_" data-uid="Kinstrife.Animation.AnimationLayer.WillBeHighestPrio(Kinstrife.Animation.AnimationComponent)">WillBeHighestPrio(AnimationComponent)</h4>
+  <h4 id="Kinstrife_Animation_AnimationLayer_WillBeHighestPrio_Kinstrife_Animation_ILayerAnimator_" data-uid="Kinstrife.Animation.AnimationLayer.WillBeHighestPrio(Kinstrife.Animation.ILayerAnimator)">WillBeHighestPrio(ILayerAnimator)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public bool WillBeHighestPrio(AnimationComponent component)</code></pre>
+    <pre><code class="lang-csharp hljs">public bool WillBeHighestPrio(ILayerAnimator component)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -471,7 +471,7 @@ public class AnimationLayer</code></pre>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="Kinstrife.Animation.AnimationComponent.html">AnimationComponent</a></td>
+        <td><a class="xref" href="Kinstrife.Animation.ILayerAnimator.html">ILayerAnimator</a></td>
         <td><span class="parametername">component</span></td>
         <td></td>
       </tr>

@@ -82,6 +82,7 @@
     <div class="level2"><a class="xref" href="Kinstrife.Procedures.ProcedureComponent.html">ProcedureComponent</a></div>
     <div class="level3"><a class="xref" href="Kinstrife.Procedures.ProcedureModule-2.html">ProcedureModule</a>&lt;TState, TAuthoring&gt;</div>
     <div class="level4"><span class="xref">ProcedureFSM&lt;TKey, TState, TAuthoring&gt;</span></div>
+      <div class="level5"><a class="xref" href="Kinstrife.Procedures.KeyedProcedureFSM-3.html">KeyedProcedureFSM&lt;TKey, TState, TAuthoring&gt;</a></div>
       <div class="level5"><a class="xref" href="Kinstrife.Procedures.ProcedureFSM-2.html">ProcedureFSM&lt;TState, TAuthoring&gt;</a></div>
   </div>
   <div class="implements">
@@ -143,6 +144,9 @@
       <a class="xref" href="Kinstrife.Procedures.ProcedureModule-2.html#Kinstrife_Procedures_ProcedureModule_2_OnRuntimeDuplicate_Kinstrife_DataContainers_ScriptableObjectComponent_">ProcedureModule&lt;TState, TAuthoring&gt;.OnRuntimeDuplicate(ScriptableObjectComponent)</a>
     </div>
     <div>
+      <a class="xref" href="Kinstrife.Procedures.ProcedureModule-2.html#Kinstrife_Procedures_ProcedureModule_2_OnInternalInitialize">ProcedureModule&lt;TState, TAuthoring&gt;.OnInternalInitialize()</a>
+    </div>
+    <div>
       <a class="xref" href="Kinstrife.Procedures.ProcedureModule-2.html#Kinstrife_Procedures_ProcedureModule_2_InitializeInstructions">ProcedureModule&lt;TState, TAuthoring&gt;.InitializeInstructions()</a>
     </div>
     <div>
@@ -195,6 +199,9 @@
     </div>
     <div>
       <a class="xref" href="Kinstrife.Procedures.ProcedureComponent.html#Kinstrife_Procedures_ProcedureComponent_OnRuntimeDisable">ProcedureComponent.OnRuntimeDisable()</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.Procedures.ProcedureComponent.html#Kinstrife_Procedures_ProcedureComponent_OnInternalInitialize">ProcedureComponent.OnInternalInitialize()</a>
     </div>
     <div>
       <a class="xref" href="Kinstrife.Procedures.ProcedureComponent.html#Kinstrife_Procedures_ProcedureComponent_ValidateInstance">ProcedureComponent.ValidateInstance()</a>
@@ -430,6 +437,31 @@
   </table>
   
   
+  <a id="Kinstrife_Procedures_ProcedureFSM_3_FSM_" data-uid="Kinstrife.Procedures.ProcedureFSM`3.FSM*"></a>
+  <h4 id="Kinstrife_Procedures_ProcedureFSM_3_FSM" data-uid="Kinstrife.Procedures.ProcedureFSM`3.FSM">FSM</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IReadOnlyDictionary&lt;TKey, TState&gt; FSM { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IReadOnlyDictionary</span>&lt;TKey, TState&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
   <a id="Kinstrife_Procedures_ProcedureFSM_3_IsTransitioning_" data-uid="Kinstrife.Procedures.ProcedureFSM`3.IsTransitioning*"></a>
   <h4 id="Kinstrife_Procedures_ProcedureFSM_3_IsTransitioning" data-uid="Kinstrife.Procedures.ProcedureFSM`3.IsTransitioning">IsTransitioning</h4>
   <div class="markdown level1 summary"></div>
@@ -511,7 +543,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public TKey StartingState { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public TKey StartingState { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -710,6 +742,100 @@
       <tr>
         <td><span class="xref">TState</span></td>
         <td><span class="parametername">to</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Kinstrife_Procedures_ProcedureFSM_3_CompareKey_" data-uid="Kinstrife.Procedures.ProcedureFSM`3.CompareKey*"></a>
+  <h4 id="Kinstrife_Procedures_ProcedureFSM_3_CompareKey__0__0_" data-uid="Kinstrife.Procedures.ProcedureFSM`3.CompareKey(`0,`0)">CompareKey(TKey, TKey)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual bool CompareKey(TKey a, TKey b)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">TKey</span></td>
+        <td><span class="parametername">a</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">TKey</span></td>
+        <td><span class="parametername">b</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Kinstrife_Procedures_ProcedureFSM_3_CompareState_" data-uid="Kinstrife.Procedures.ProcedureFSM`3.CompareState*"></a>
+  <h4 id="Kinstrife_Procedures_ProcedureFSM_3_CompareState__1__1_" data-uid="Kinstrife.Procedures.ProcedureFSM`3.CompareState(`1,`1)">CompareState(TState, TState)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual bool CompareState(TState a, TState b)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">TState</span></td>
+        <td><span class="parametername">a</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">TState</span></td>
+        <td><span class="parametername">b</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -1346,7 +1472,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected void OnUpdateTransitions(float deltaTime, bool crossfade)</code></pre>
+    <pre><code class="lang-csharp hljs">public void OnUpdateTransitions(float deltaTime, bool crossfade)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1554,6 +1680,152 @@
     <tbody>
       <tr>
         <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="events">Events
+  </h3>
+  
+  
+  <h4 id="Kinstrife_Procedures_ProcedureFSM_3_onBeforeEnterState" data-uid="Kinstrife.Procedures.ProcedureFSM`3.onBeforeEnterState">onBeforeEnterState</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public event Action&lt;TKey, TState&gt; onBeforeEnterState</code></pre>
+  </div>
+  <h5 class="eventType">Event Type</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Action</span>&lt;TKey, TState&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="Kinstrife_Procedures_ProcedureFSM_3_onBeforeExitState" data-uid="Kinstrife.Procedures.ProcedureFSM`3.onBeforeExitState">onBeforeExitState</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public event Action&lt;TKey, TState&gt; onBeforeExitState</code></pre>
+  </div>
+  <h5 class="eventType">Event Type</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Action</span>&lt;TKey, TState&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="Kinstrife_Procedures_ProcedureFSM_3_onBeginTransition" data-uid="Kinstrife.Procedures.ProcedureFSM`3.onBeginTransition">onBeginTransition</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public event Action&lt;TState, TState&gt; onBeginTransition</code></pre>
+  </div>
+  <h5 class="eventType">Event Type</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Action</span>&lt;TState, TState&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="Kinstrife_Procedures_ProcedureFSM_3_onEnterState" data-uid="Kinstrife.Procedures.ProcedureFSM`3.onEnterState">onEnterState</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public event Action&lt;TKey, TState&gt; onEnterState</code></pre>
+  </div>
+  <h5 class="eventType">Event Type</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Action</span>&lt;TKey, TState&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="Kinstrife_Procedures_ProcedureFSM_3_onExitState" data-uid="Kinstrife.Procedures.ProcedureFSM`3.onExitState">onExitState</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public event Action&lt;TKey, TState&gt; onExitState</code></pre>
+  </div>
+  <h5 class="eventType">Event Type</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Action</span>&lt;TKey, TState&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="Kinstrife_Procedures_ProcedureFSM_3_onTransition" data-uid="Kinstrife.Procedures.ProcedureFSM`3.onTransition">onTransition</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public event Action&lt;TState, TState&gt; onTransition</code></pre>
+  </div>
+  <h5 class="eventType">Event Type</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Action</span>&lt;TState, TState&gt;</td>
         <td></td>
       </tr>
     </tbody>

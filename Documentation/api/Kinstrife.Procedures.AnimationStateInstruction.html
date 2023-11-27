@@ -87,6 +87,8 @@
     <div><a class="xref" href="Kinstrife.Procedures.IInstruction.html">IInstruction</a></div>
     <div><a class="xref" href="Kinstrife.Core.DependencyInjection.IInjectable.html">IInjectable</a></div>
     <div><a class="xref" href="Kinstrife.Core.DependencyInjection.IDependent.html">IDependent</a></div>
+    <div><a class="xref" href="Kinstrife.Animation.ILayerAnimator.html">ILayerAnimator</a></div>
+    <div><span class="xref">IComparable</span>&lt;<a class="xref" href="Kinstrife.Animation.ILayerAnimator.html">ILayerAnimator</a>&gt;</div>
   </div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
@@ -138,7 +140,7 @@
   <h5 id="Kinstrife_Procedures_AnimationStateInstruction_syntax">Syntax</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">[Serializable]
-public class AnimationStateInstruction : AnimationInstruction&lt;AnimationStateInstruction.Data&gt;, IOutputInstruction, IInstruction, IInjectable, IDependent</code></pre>
+public class AnimationStateInstruction : AnimationInstruction&lt;AnimationStateInstruction.Data&gt;, IOutputInstruction, IInstruction, IInjectable, IDependent, ILayerAnimator</code></pre>
   </div>
   <h3 id="constructors">Constructors
   </h3>
@@ -197,6 +199,30 @@ public class AnimationStateInstruction : AnimationInstruction&lt;AnimationStateI
   </table>
   
   
+  <h4 id="Kinstrife_Procedures_AnimationStateInstruction_layers" data-uid="Kinstrife.Procedures.AnimationStateInstruction.layers">layers</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected AnimationLayers layers</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Kinstrife.Animation.AnimationLayers.html">AnimationLayers</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
   <h4 id="Kinstrife_Procedures_AnimationStateInstruction_state" data-uid="Kinstrife.Procedures.AnimationStateInstruction.state">state</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
@@ -221,6 +247,106 @@ public class AnimationStateInstruction : AnimationInstruction&lt;AnimationStateI
   </table>
   <h3 id="properties">Properties
   </h3>
+  
+  
+  <a id="Kinstrife_Procedures_AnimationStateInstruction_AnimancerState_" data-uid="Kinstrife.Procedures.AnimationStateInstruction.AnimancerState*"></a>
+  <h4 id="Kinstrife_Procedures_AnimationStateInstruction_AnimancerState" data-uid="Kinstrife.Procedures.AnimationStateInstruction.AnimancerState">AnimancerState</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public AnimancerState AnimancerState { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">AnimancerState</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Kinstrife_Procedures_AnimationStateInstruction_FadeDuration_" data-uid="Kinstrife.Procedures.AnimationStateInstruction.FadeDuration*"></a>
+  <h4 id="Kinstrife_Procedures_AnimationStateInstruction_FadeDuration" data-uid="Kinstrife.Procedures.AnimationStateInstruction.FadeDuration">FadeDuration</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float FadeDuration { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Kinstrife_Procedures_AnimationStateInstruction_FallbackLayer_" data-uid="Kinstrife.Procedures.AnimationStateInstruction.FallbackLayer*"></a>
+  <h4 id="Kinstrife_Procedures_AnimationStateInstruction_FallbackLayer" data-uid="Kinstrife.Procedures.AnimationStateInstruction.FallbackLayer">FallbackLayer</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int FallbackLayer { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Kinstrife_Procedures_AnimationStateInstruction_HasEndEvent_" data-uid="Kinstrife.Procedures.AnimationStateInstruction.HasEndEvent*"></a>
+  <h4 id="Kinstrife_Procedures_AnimationStateInstruction_HasEndEvent" data-uid="Kinstrife.Procedures.AnimationStateInstruction.HasEndEvent">HasEndEvent</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool HasEndEvent { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   
   
   <a id="Kinstrife_Procedures_AnimationStateInstruction_IsActive_" data-uid="Kinstrife.Procedures.AnimationStateInstruction.IsActive*"></a>
@@ -250,6 +376,31 @@ public class AnimationStateInstruction : AnimationInstruction&lt;AnimationStateI
   <div><span class="xref">Kinstrife.Procedures.AnimationInstruction&lt;Kinstrife.Procedures.AnimationStateInstruction.Data&gt;.IsActive</span></div>
   
   
+  <a id="Kinstrife_Procedures_AnimationStateInstruction_IsTopPriority_" data-uid="Kinstrife.Procedures.AnimationStateInstruction.IsTopPriority*"></a>
+  <h4 id="Kinstrife_Procedures_AnimationStateInstruction_IsTopPriority" data-uid="Kinstrife.Procedures.AnimationStateInstruction.IsTopPriority">IsTopPriority</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsTopPriority { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
   <a id="Kinstrife_Procedures_AnimationStateInstruction_IsValid_" data-uid="Kinstrife.Procedures.AnimationStateInstruction.IsValid*"></a>
   <h4 id="Kinstrife_Procedures_AnimationStateInstruction_IsValid" data-uid="Kinstrife.Procedures.AnimationStateInstruction.IsValid">IsValid</h4>
   <div class="markdown level1 summary"></div>
@@ -275,8 +426,160 @@ public class AnimationStateInstruction : AnimationInstruction&lt;AnimationStateI
   </table>
   <h5 class="overrides">Overrides</h5>
   <div><span class="xref">Kinstrife.Procedures.AnimationInstruction&lt;Kinstrife.Procedures.AnimationStateInstruction.Data&gt;.IsValid</span></div>
+  
+  
+  <a id="Kinstrife_Procedures_AnimationStateInstruction_Layer_" data-uid="Kinstrife.Procedures.AnimationStateInstruction.Layer*"></a>
+  <h4 id="Kinstrife_Procedures_AnimationStateInstruction_Layer" data-uid="Kinstrife.Procedures.AnimationStateInstruction.Layer">Layer</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public AnimationLayer Layer { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Kinstrife.Animation.AnimationLayer.html">AnimationLayer</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Kinstrife_Procedures_AnimationStateInstruction_PrimaryLayer_" data-uid="Kinstrife.Procedures.AnimationStateInstruction.PrimaryLayer*"></a>
+  <h4 id="Kinstrife_Procedures_AnimationStateInstruction_PrimaryLayer" data-uid="Kinstrife.Procedures.AnimationStateInstruction.PrimaryLayer">PrimaryLayer</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int PrimaryLayer { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Kinstrife_Procedures_AnimationStateInstruction_PriorityInLayer_" data-uid="Kinstrife.Procedures.AnimationStateInstruction.PriorityInLayer*"></a>
+  <h4 id="Kinstrife_Procedures_AnimationStateInstruction_PriorityInLayer" data-uid="Kinstrife.Procedures.AnimationStateInstruction.PriorityInLayer">PriorityInLayer</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int PriorityInLayer { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Kinstrife_Procedures_AnimationStateInstruction_Transition_" data-uid="Kinstrife.Procedures.AnimationStateInstruction.Transition*"></a>
+  <h4 id="Kinstrife_Procedures_AnimationStateInstruction_Transition" data-uid="Kinstrife.Procedures.AnimationStateInstruction.Transition">Transition</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ITransition Transition { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">ITransition</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   <h3 id="methods">Methods
   </h3>
+  
+  
+  <a id="Kinstrife_Procedures_AnimationStateInstruction_CompareTo_" data-uid="Kinstrife.Procedures.AnimationStateInstruction.CompareTo*"></a>
+  <h4 id="Kinstrife_Procedures_AnimationStateInstruction_CompareTo_Kinstrife_Animation_ILayerAnimator_" data-uid="Kinstrife.Procedures.AnimationStateInstruction.CompareTo(Kinstrife.Animation.ILayerAnimator)">CompareTo(ILayerAnimator)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int CompareTo(ILayerAnimator other)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Kinstrife.Animation.ILayerAnimator.html">ILayerAnimator</a></td>
+        <td><span class="parametername">other</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Kinstrife_Procedures_AnimationStateInstruction_ForceStopFromLayer_" data-uid="Kinstrife.Procedures.AnimationStateInstruction.ForceStopFromLayer*"></a>
+  <h4 id="Kinstrife_Procedures_AnimationStateInstruction_ForceStopFromLayer" data-uid="Kinstrife.Procedures.AnimationStateInstruction.ForceStopFromLayer">ForceStopFromLayer()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void ForceStopFromLayer()</code></pre>
+  </div>
   
   
   <a id="Kinstrife_Procedures_AnimationStateInstruction_Initialize_" data-uid="Kinstrife.Procedures.AnimationStateInstruction.Initialize*"></a>
@@ -330,7 +633,7 @@ public class AnimationStateInstruction : AnimationInstruction&lt;AnimationStateI
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected override void Play(Procedure procedure)</code></pre>
+    <pre><code class="lang-csharp hljs">public override void Play(Procedure procedure)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -351,6 +654,33 @@ public class AnimationStateInstruction : AnimationInstruction&lt;AnimationStateI
   </table>
   <h5 class="overrides">Overrides</h5>
   <div><span class="xref">Kinstrife.Procedures.AnimationInstruction&lt;Kinstrife.Procedures.AnimationStateInstruction.Data&gt;.Play(Kinstrife.Procedures.Procedure)</span></div>
+  
+  
+  <a id="Kinstrife_Procedures_AnimationStateInstruction_PlayOnLayer_" data-uid="Kinstrife.Procedures.AnimationStateInstruction.PlayOnLayer*"></a>
+  <h4 id="Kinstrife_Procedures_AnimationStateInstruction_PlayOnLayer_Kinstrife_Animation_AnimationLayer_" data-uid="Kinstrife.Procedures.AnimationStateInstruction.PlayOnLayer(Kinstrife.Animation.AnimationLayer)">PlayOnLayer(AnimationLayer)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void PlayOnLayer(AnimationLayer layer)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Kinstrife.Animation.AnimationLayer.html">AnimationLayer</a></td>
+        <td><span class="parametername">layer</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   
   
   <a id="Kinstrife_Procedures_AnimationStateInstruction_SetTransition_" data-uid="Kinstrife.Procedures.AnimationStateInstruction.SetTransition*"></a>
@@ -386,7 +716,7 @@ public class AnimationStateInstruction : AnimationInstruction&lt;AnimationStateI
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected override void Stop(Procedure procedure)</code></pre>
+    <pre><code class="lang-csharp hljs">public override void Stop(Procedure procedure)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -407,6 +737,33 @@ public class AnimationStateInstruction : AnimationInstruction&lt;AnimationStateI
   </table>
   <h5 class="overrides">Overrides</h5>
   <div><span class="xref">Kinstrife.Procedures.AnimationInstruction&lt;Kinstrife.Procedures.AnimationStateInstruction.Data&gt;.Stop(Kinstrife.Procedures.Procedure)</span></div>
+  
+  
+  <a id="Kinstrife_Procedures_AnimationStateInstruction_StopOnLayer_" data-uid="Kinstrife.Procedures.AnimationStateInstruction.StopOnLayer*"></a>
+  <h4 id="Kinstrife_Procedures_AnimationStateInstruction_StopOnLayer_Kinstrife_Animation_AnimationLayer_" data-uid="Kinstrife.Procedures.AnimationStateInstruction.StopOnLayer(Kinstrife.Animation.AnimationLayer)">StopOnLayer(AnimationLayer)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void StopOnLayer(AnimationLayer layer)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Kinstrife.Animation.AnimationLayer.html">AnimationLayer</a></td>
+        <td><span class="parametername">layer</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   <h3 id="implements">Implements</h3>
   <div>
       <a class="xref" href="Kinstrife.Procedures.IOutputInstruction.html">IOutputInstruction</a>
@@ -419,6 +776,12 @@ public class AnimationStateInstruction : AnimationInstruction&lt;AnimationStateI
   </div>
   <div>
       <a class="xref" href="Kinstrife.Core.DependencyInjection.IDependent.html">IDependent</a>
+  </div>
+  <div>
+      <a class="xref" href="Kinstrife.Animation.ILayerAnimator.html">ILayerAnimator</a>
+  </div>
+  <div>
+      <span class="xref">IComparable&lt;&gt;</span>
   </div>
 </article>
           </div>
