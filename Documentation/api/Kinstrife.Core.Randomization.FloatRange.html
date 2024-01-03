@@ -82,7 +82,6 @@
   </div>
   <div class="implements">
     <h5>Implements</h5>
-    <div><a class="xref" href="Kinstrife.Core.Randomization.IContinuousDistribution.html">IContinuousDistribution</a></div>
     <div><a class="xref" href="Kinstrife.Core.Randomization.ISamplableRange-1.html">ISamplableRange</a>&lt;<span class="xref">System.Single</span>&gt;</div>
     <div><a class="xref" href="Kinstrife.Core.Randomization.IRange-1.html">IRange</a>&lt;<span class="xref">System.Single</span>&gt;</div>
   </div>
@@ -115,8 +114,52 @@
   <h5 id="Kinstrife_Core_Randomization_FloatRange_syntax">Syntax</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">[Serializable]
-public class FloatRange : IContinuousDistribution, ISamplableRange&lt;float&gt;, IRange&lt;float&gt;</code></pre>
+public class FloatRange : ISamplableRange&lt;float&gt;, IRange&lt;float&gt;</code></pre>
   </div>
+  <h3 id="constructors">Constructors
+  </h3>
+  
+  
+  <a id="Kinstrife_Core_Randomization_FloatRange__ctor_" data-uid="Kinstrife.Core.Randomization.FloatRange.#ctor*"></a>
+  <h4 id="Kinstrife_Core_Randomization_FloatRange__ctor" data-uid="Kinstrife.Core.Randomization.FloatRange.#ctor">FloatRange()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public FloatRange()</code></pre>
+  </div>
+  
+  
+  <a id="Kinstrife_Core_Randomization_FloatRange__ctor_" data-uid="Kinstrife.Core.Randomization.FloatRange.#ctor*"></a>
+  <h4 id="Kinstrife_Core_Randomization_FloatRange__ctor_System_Single_System_Single_" data-uid="Kinstrife.Core.Randomization.FloatRange.#ctor(System.Single,System.Single)">FloatRange(Single, Single)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public FloatRange(float min, float max)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><span class="parametername">min</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><span class="parametername">max</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   <h3 id="properties">Properties
   </h3>
   
@@ -194,17 +237,19 @@ public class FloatRange : IContinuousDistribution, ISamplableRange&lt;float&gt;,
       </tr>
     </tbody>
   </table>
+  <h3 id="methods">Methods
+  </h3>
   
   
-  <a id="Kinstrife_Core_Randomization_FloatRange_Random_" data-uid="Kinstrife.Core.Randomization.FloatRange.Random*"></a>
-  <h4 id="Kinstrife_Core_Randomization_FloatRange_Random" data-uid="Kinstrife.Core.Randomization.FloatRange.Random">Random</h4>
+  <a id="Kinstrife_Core_Randomization_FloatRange_GetNext_" data-uid="Kinstrife.Core.Randomization.FloatRange.GetNext*"></a>
+  <h4 id="Kinstrife_Core_Randomization_FloatRange_GetNext" data-uid="Kinstrife.Core.Randomization.FloatRange.GetNext">GetNext()</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public float Random { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public float GetNext()</code></pre>
   </div>
-  <h5 class="propertyValue">Property Value</h5>
+  <h5 class="returns">Returns</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
       <tr>
@@ -219,17 +264,15 @@ public class FloatRange : IContinuousDistribution, ISamplableRange&lt;float&gt;,
       </tr>
     </tbody>
   </table>
-  <h3 id="methods">Methods
-  </h3>
   
   
-  <a id="Kinstrife_Core_Randomization_FloatRange_RandomSeeded_" data-uid="Kinstrife.Core.Randomization.FloatRange.RandomSeeded*"></a>
-  <h4 id="Kinstrife_Core_Randomization_FloatRange_RandomSeeded_System_Random_" data-uid="Kinstrife.Core.Randomization.FloatRange.RandomSeeded(System.Random)">RandomSeeded(Random)</h4>
+  <a id="Kinstrife_Core_Randomization_FloatRange_GetNext_" data-uid="Kinstrife.Core.Randomization.FloatRange.GetNext*"></a>
+  <h4 id="Kinstrife_Core_Randomization_FloatRange_GetNext_System_Random_" data-uid="Kinstrife.Core.Randomization.FloatRange.GetNext(System.Random)">GetNext(Random)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public float RandomSeeded(Random random)</code></pre>
+    <pre><code class="lang-csharp hljs">public float GetNext(Random random)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -306,9 +349,6 @@ public class FloatRange : IContinuousDistribution, ISamplableRange&lt;float&gt;,
     </tbody>
   </table>
   <h3 id="implements">Implements</h3>
-  <div>
-      <a class="xref" href="Kinstrife.Core.Randomization.IContinuousDistribution.html">IContinuousDistribution</a>
-  </div>
   <div>
       <a class="xref" href="Kinstrife.Core.Randomization.ISamplableRange-1.html">ISamplableRange&lt;T&gt;</a>
   </div>
