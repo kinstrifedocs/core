@@ -5,10 +5,10 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Class AnimationSet
+    <title>Class SystemBase&lt;T&gt;
    | Kinstrife </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Class AnimationSet
+    <meta name="title" content="Class SystemBase&lt;T&gt;
    | Kinstrife ">
     <meta name="generator" content="docfx 2.59.4.0">
     
@@ -68,86 +68,62 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="Kinstrife.Animation.AnimationSet">
+            <article class="content wrap" id="_content" data-uid="Kinstrife.Core.Systems.SystemBase`1">
   
   
-  <h1 id="Kinstrife_Animation_AnimationSet" data-uid="Kinstrife.Animation.AnimationSet" class="text-break">Class AnimationSet
+  <h1 id="Kinstrife_Core_Systems_SystemBase_1" data-uid="Kinstrife.Core.Systems.SystemBase`1" class="text-break">Class SystemBase&lt;T&gt;
   </h1>
   <div class="markdown level0 summary"></div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><a class="xref" href="Kinstrife.Animation.AnimationAssetBase.html">AnimationAssetBase</a></div>
-    <div class="level2"><span class="xref">AnimationSet</span></div>
+    <div class="level1"><a class="xref" href="Kinstrife.Core.Systems.SystemBase.html">SystemBase</a></div>
+    <div class="level2"><span class="xref">SystemBase&lt;T&gt;</span></div>
+      <div class="level3"><a class="xref" href="Kinstrife.Actor.ActorSystem-1.html">ActorSystem&lt;T&gt;</a></div>
+  </div>
+  <div class="implements">
+    <h5>Implements</h5>
+    <div><a class="xref" href="Kinstrife.ICustomUpdateable.html">ICustomUpdateable</a></div>
+    <div><a class="xref" href="Kinstrife.Core.DependencyInjection.IDependent.html">IDependent</a></div>
   </div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
     <div>
-      <a class="xref" href="Kinstrife.Animation.AnimationAssetBase.html#Kinstrife_Animation_AnimationAssetBase_HumanAnimationLayer">AnimationAssetBase.HumanAnimationLayer</a>
-    </div>
-    <div>
-      <a class="xref" href="Kinstrife.Animation.AnimationAssetBase.html#Kinstrife_Animation_AnimationAssetBase_LayerWeight">AnimationAssetBase.LayerWeight</a>
-    </div>
-    <div>
-      <a class="xref" href="Kinstrife.Animation.AnimationAssetBase.html#Kinstrife_Animation_AnimationAssetBase_LeftHandIK">AnimationAssetBase.LeftHandIK</a>
-    </div>
-    <div>
-      <a class="xref" href="Kinstrife.Animation.AnimationAssetBase.html#Kinstrife_Animation_AnimationAssetBase_RightHandIK">AnimationAssetBase.RightHandIK</a>
-    </div>
-    <div>
-      <a class="xref" href="Kinstrife.Animation.AnimationAssetBase.html#Kinstrife_Animation_AnimationAssetBase_LeftFootIK">AnimationAssetBase.LeftFootIK</a>
-    </div>
-    <div>
-      <a class="xref" href="Kinstrife.Animation.AnimationAssetBase.html#Kinstrife_Animation_AnimationAssetBase_RightFootIK">AnimationAssetBase.RightFootIK</a>
-    </div>
-    <div>
-      <a class="xref" href="Kinstrife.Animation.AnimationAssetBase.html#Kinstrife_Animation_AnimationAssetBase_profile">AnimationAssetBase.profile</a>
-    </div>
-    <div>
-      <a class="xref" href="Kinstrife.Animation.AnimationAssetBase.html#Kinstrife_Animation_AnimationAssetBase_TryGetIkCurve_AvatarIKGoal_AnimationCurve__">AnimationAssetBase.TryGetIkCurve(AvatarIKGoal, AnimationCurve)</a>
+      <a class="xref" href="Kinstrife.Core.Systems.SystemBase.html#Kinstrife_Core_Systems_SystemBase_Kinstrife_ICustomUpdateable_ShouldUpdate">SystemBase.ICustomUpdateable.ShouldUpdate</a>
     </div>
   </div>
-  <h6><strong>Namespace</strong>: <a class="xref" href="Kinstrife.Animation.html">Kinstrife.Animation</a></h6>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Kinstrife.Core.Systems.html">Kinstrife.Core.Systems</a></h6>
   <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
-  <h5 id="Kinstrife_Animation_AnimationSet_syntax">Syntax</h5>
+  <h5 id="Kinstrife_Core_Systems_SystemBase_1_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class AnimationSet : AnimationAssetBase</code></pre>
+    <pre><code class="lang-csharp hljs">public class SystemBase&lt;T&gt; : SystemBase, ICustomUpdateable, IDependent where T : class, IEntity</code></pre>
   </div>
-  <h3 id="fields">Fields
-  </h3>
-  
-  
-  <h4 id="Kinstrife_Animation_AnimationSet_clips" data-uid="Kinstrife.Animation.AnimationSet.clips">clips</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public List&lt;WeightedAnimation&gt; clips</code></pre>
-  </div>
-  <h5 class="fieldValue">Field Value</h5>
+  <h5 class="typeParameters">Type Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
       <tr>
-        <th>Type</th>
+        <th>Name</th>
         <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Generic.List</span>&lt;<a class="xref" href="Kinstrife.Animation.WeightedAnimation.html">WeightedAnimation</a>&gt;</td>
+        <td><span class="parametername">T</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
+  <h3 id="fields">Fields
+  </h3>
   
   
-  <h4 id="Kinstrife_Animation_AnimationSet_tr" data-uid="Kinstrife.Animation.AnimationSet.tr">tr</h4>
+  <h4 id="Kinstrife_Core_Systems_SystemBase_1_runner" data-uid="Kinstrife.Core.Systems.SystemBase`1.runner">runner</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public ClipTransition tr</code></pre>
+    <pre><code class="lang-csharp hljs">public SystemBase&lt;T&gt;.Runner runner</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -159,7 +135,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">ClipTransition</span></td>
+        <td><a class="xref" href="Kinstrife.Core.Systems.SystemBase-1.Runner.html">SystemBase.Runner</a>&lt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -168,13 +144,13 @@
   </h3>
   
   
-  <a id="Kinstrife_Animation_AnimationSet_Transition_" data-uid="Kinstrife.Animation.AnimationSet.Transition*"></a>
-  <h4 id="Kinstrife_Animation_AnimationSet_Transition" data-uid="Kinstrife.Animation.AnimationSet.Transition">Transition</h4>
+  <a id="Kinstrife_Core_Systems_SystemBase_1_Entities_" data-uid="Kinstrife.Core.Systems.SystemBase`1.Entities*"></a>
+  <h4 id="Kinstrife_Core_Systems_SystemBase_1_Entities" data-uid="Kinstrife.Core.Systems.SystemBase`1.Entities">Entities</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public override ITransition Transition { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public IEnumerable&lt;T&gt; Entities { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -186,40 +162,101 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">ITransition</span></td>
+        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;T&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
-  <h5 class="overrides">Overrides</h5>
-  <div><a class="xref" href="Kinstrife.Animation.AnimationAssetBase.html#Kinstrife_Animation_AnimationAssetBase_Transition">AnimationAssetBase.Transition</a></div>
   <h3 id="methods">Methods
   </h3>
   
   
-  <a id="Kinstrife_Animation_AnimationSet_PickRandom_" data-uid="Kinstrife.Animation.AnimationSet.PickRandom*"></a>
-  <h4 id="Kinstrife_Animation_AnimationSet_PickRandom" data-uid="Kinstrife.Animation.AnimationSet.PickRandom">PickRandom()</h4>
+  <a id="Kinstrife_Core_Systems_SystemBase_1_AddEntity_" data-uid="Kinstrife.Core.Systems.SystemBase`1.AddEntity*"></a>
+  <h4 id="Kinstrife_Core_Systems_SystemBase_1_AddEntity__0_" data-uid="Kinstrife.Core.Systems.SystemBase`1.AddEntity(`0)">AddEntity(T)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public ITransition PickRandom()</code></pre>
+    <pre><code class="lang-csharp hljs">public void AddEntity(T entity)</code></pre>
   </div>
-  <h5 class="returns">Returns</h5>
+  <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
       <tr>
         <th>Type</th>
+        <th>Name</th>
         <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">ITransition</span></td>
+        <td><span class="xref">T</span></td>
+        <td><span class="parametername">entity</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
+  
+  
+  <a id="Kinstrife_Core_Systems_SystemBase_1_OnUpdate_" data-uid="Kinstrife.Core.Systems.SystemBase`1.OnUpdate*"></a>
+  <h4 id="Kinstrife_Core_Systems_SystemBase_1_OnUpdate_System_Single_" data-uid="Kinstrife.Core.Systems.SystemBase`1.OnUpdate(System.Single)">OnUpdate(Single)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void OnUpdate(float deltaTime)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><span class="parametername">deltaTime</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Kinstrife_Core_Systems_SystemBase_1_RemoveEntity_" data-uid="Kinstrife.Core.Systems.SystemBase`1.RemoveEntity*"></a>
+  <h4 id="Kinstrife_Core_Systems_SystemBase_1_RemoveEntity__0_" data-uid="Kinstrife.Core.Systems.SystemBase`1.RemoveEntity(`0)">RemoveEntity(T)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void RemoveEntity(T entity)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">T</span></td>
+        <td><span class="parametername">entity</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <a class="xref" href="Kinstrife.ICustomUpdateable.html">ICustomUpdateable</a>
+  </div>
+  <div>
+      <a class="xref" href="Kinstrife.Core.DependencyInjection.IDependent.html">IDependent</a>
+  </div>
 </article>
           </div>
           

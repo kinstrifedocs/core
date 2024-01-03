@@ -5,10 +5,10 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Class ActorsRegistry
+    <title>Class ActorMotorSystem
    | Kinstrife </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Class ActorsRegistry
+    <meta name="title" content="Class ActorMotorSystem
    | Kinstrife ">
     <meta name="generator" content="docfx 2.59.4.0">
     
@@ -68,44 +68,73 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="Kinstrife.Actor.Input.ActorsRegistry">
+            <article class="content wrap" id="_content" data-uid="Kinstrife.Actor.ActorMotorSystem">
   
   
-  <h1 id="Kinstrife_Actor_Input_ActorsRegistry" data-uid="Kinstrife.Actor.Input.ActorsRegistry" class="text-break">Class ActorsRegistry
+  <h1 id="Kinstrife_Actor_ActorMotorSystem" data-uid="Kinstrife.Actor.ActorMotorSystem" class="text-break">Class ActorMotorSystem
   </h1>
   <div class="markdown level0 summary"></div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><span class="xref">ActorsRegistry</span></div>
+    <div class="level1"><a class="xref" href="Kinstrife.Core.Systems.SystemBase.html">SystemBase</a></div>
+    <div class="level2"><a class="xref" href="Kinstrife.Core.Systems.SystemBase-1.html">SystemBase</a>&lt;<a class="xref" href="Kinstrife.Actor.ActorController.html">ActorController</a>&gt;</div>
+    <div class="level3"><a class="xref" href="Kinstrife.Actor.ActorSystem-1.html">ActorSystem</a>&lt;<a class="xref" href="Kinstrife.Actor.ActorController.html">ActorController</a>&gt;</div>
+    <div class="level4"><span class="xref">ActorMotorSystem</span></div>
   </div>
   <div class="implements">
     <h5>Implements</h5>
-    <div><a class="xref" href="Kinstrife.Core.DependencyInjection.IInjectable.html">IInjectable</a></div>
-    <div><a class="xref" href="Kinstrife.Core.DependencyInjection.IInstall-1.html">IInstall</a>&lt;<a class="xref" href="Kinstrife.Actor.Input.ActorsRegistry.html">ActorsRegistry</a>&gt;</div>
-    <div><a class="xref" href="Kinstrife.Core.DependencyInjection.IInstall.html">IInstall</a></div>
+    <div><span class="xref">IInjectable</span></div>
+    <div><a class="xref" href="Kinstrife.IPhysicsFixedUpdate.html">IPhysicsFixedUpdate</a></div>
+    <div><a class="xref" href="Kinstrife.ICustomUpdateable.html">ICustomUpdateable</a></div>
     <div><a class="xref" href="Kinstrife.Core.DependencyInjection.IDependent.html">IDependent</a></div>
   </div>
-  <h6><strong>Namespace</strong>: <a class="xref" href="Kinstrife.Actor.Input.html">Kinstrife.Actor.Input</a></h6>
-  <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
-  <h5 id="Kinstrife_Actor_Input_ActorsRegistry_syntax">Syntax</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class ActorsRegistry : MonoBehaviour, IInjectable, IInstall&lt;ActorsRegistry&gt;, IInstall, IDependent</code></pre>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="Kinstrife.Actor.ActorSystem-1.html#Kinstrife_Actor_ActorSystem_1_registry">ActorSystem&lt;ActorController&gt;.registry</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.Actor.ActorSystem-1.html#Kinstrife_Actor_ActorSystem_1_Inject_ActorsRegistry_">ActorSystem&lt;ActorController&gt;.Inject(ActorsRegistry)</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.Actor.ActorSystem-1.html#Kinstrife_Actor_ActorSystem_1_Awake">ActorSystem&lt;ActorController&gt;.Awake()</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.Core.Systems.SystemBase-1.html#Kinstrife_Core_Systems_SystemBase_1_runner">SystemBase&lt;ActorController&gt;.runner</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.Core.Systems.SystemBase-1.html#Kinstrife_Core_Systems_SystemBase_1_Entities">SystemBase&lt;ActorController&gt;.Entities</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.Core.Systems.SystemBase-1.html#Kinstrife_Core_Systems_SystemBase_1_AddEntity__0_">SystemBase&lt;ActorController&gt;.AddEntity(ActorController)</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.Core.Systems.SystemBase-1.html#Kinstrife_Core_Systems_SystemBase_1_RemoveEntity__0_">SystemBase&lt;ActorController&gt;.RemoveEntity(ActorController)</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.Core.Systems.SystemBase.html#Kinstrife_Core_Systems_SystemBase_Kinstrife_ICustomUpdateable_ShouldUpdate">SystemBase.ICustomUpdateable.ShouldUpdate</a>
+    </div>
   </div>
-  <h3 id="properties">Properties
+  <h6><strong>Namespace</strong>: <a class="xref" href="Kinstrife.Actor.html">Kinstrife.Actor</a></h6>
+  <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
+  <h5 id="Kinstrife_Actor_ActorMotorSystem_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class ActorMotorSystem : ActorSystem&lt;ActorController&gt;, IPhysicsFixedUpdate, ICustomUpdateable, IDependent</code></pre>
+  </div>
+  <h3 id="fields">Fields
   </h3>
   
   
-  <a id="Kinstrife_Actor_Input_ActorsRegistry_Actors_" data-uid="Kinstrife.Actor.Input.ActorsRegistry.Actors*"></a>
-  <h4 id="Kinstrife_Actor_Input_ActorsRegistry_Actors" data-uid="Kinstrife.Actor.Input.ActorsRegistry.Actors">Actors</h4>
+  <h4 id="Kinstrife_Actor_ActorMotorSystem_batchSize" data-uid="Kinstrife.Actor.ActorMotorSystem.batchSize">batchSize</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public IReadOnlyList&lt;ActorRoot&gt; Actors { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public int batchSize</code></pre>
   </div>
-  <h5 class="propertyValue">Property Value</h5>
+  <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
       <tr>
@@ -115,22 +144,22 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Generic.IReadOnlyList</span>&lt;<a class="xref" href="Kinstrife.Actor.ActorRoot.html">ActorRoot</a>&gt;</td>
+        <td><span class="xref">System.Int32</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   
   
-  <a id="Kinstrife_Actor_Input_ActorsRegistry_ActorsByStatus_" data-uid="Kinstrife.Actor.Input.ActorsRegistry.ActorsByStatus*"></a>
-  <h4 id="Kinstrife_Actor_Input_ActorsRegistry_ActorsByStatus" data-uid="Kinstrife.Actor.Input.ActorsRegistry.ActorsByStatus">ActorsByStatus</h4>
+  <h4 id="Kinstrife_Actor_ActorMotorSystem_currentSize" data-uid="Kinstrife.Actor.ActorMotorSystem.currentSize">currentSize</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public IReadOnlyDictionary&lt;ActorStatus, HashSet&lt;ActorRoot&gt;&gt; ActorsByStatus { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">[NonSerialized]
+public int currentSize</code></pre>
   </div>
-  <h5 class="propertyValue">Property Value</h5>
+  <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
       <tr>
@@ -140,23 +169,21 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Generic.IReadOnlyDictionary</span>&lt;<a class="xref" href="Kinstrife.Actor.Interfaces.ActorStatus.html">ActorStatus</a>, <span class="xref">HashSet</span>&lt;<a class="xref" href="Kinstrife.Actor.ActorRoot.html">ActorRoot</a>&gt;&gt;</td>
+        <td><span class="xref">System.Int32</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   
   
-  <a id="Kinstrife_Actor_Input_ActorsRegistry_Instance_" data-uid="Kinstrife.Actor.Input.ActorsRegistry.Instance*"></a>
-  <h4 id="Kinstrife_Actor_Input_ActorsRegistry_Instance" data-uid="Kinstrife.Actor.Input.ActorsRegistry.Instance">Instance</h4>
+  <h4 id="Kinstrife_Actor_ActorMotorSystem_MinArraySize" data-uid="Kinstrife.Actor.ActorMotorSystem.MinArraySize">MinArraySize</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[Obsolete(&quot;Find a better way to have a global registry within a module. Maybe this should be a globally installed thing.&quot;)]
-public static ActorsRegistry Instance { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public const int MinArraySize = 32</code></pre>
   </div>
-  <h5 class="propertyValue">Property Value</h5>
+  <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
       <tr>
@@ -166,7 +193,7 @@ public static ActorsRegistry Instance { get; }</code></pre>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="Kinstrife.Actor.Input.ActorsRegistry.html">ActorsRegistry</a></td>
+        <td><span class="xref">System.Int32</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -175,38 +202,13 @@ public static ActorsRegistry Instance { get; }</code></pre>
   </h3>
   
   
-  <a id="Kinstrife_Actor_Input_ActorsRegistry_FirstOrDefault_" data-uid="Kinstrife.Actor.Input.ActorsRegistry.FirstOrDefault*"></a>
-  <h4 id="Kinstrife_Actor_Input_ActorsRegistry_FirstOrDefault" data-uid="Kinstrife.Actor.Input.ActorsRegistry.FirstOrDefault">FirstOrDefault()</h4>
+  <a id="Kinstrife_Actor_ActorMotorSystem_AddActorEntity_" data-uid="Kinstrife.Actor.ActorMotorSystem.AddActorEntity*"></a>
+  <h4 id="Kinstrife_Actor_ActorMotorSystem_AddActorEntity_Kinstrife_Actor_ActorRoot_" data-uid="Kinstrife.Actor.ActorMotorSystem.AddActorEntity(Kinstrife.Actor.ActorRoot)">AddActorEntity(ActorRoot)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public ActorRoot FirstOrDefault()</code></pre>
-  </div>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Kinstrife.Actor.ActorRoot.html">ActorRoot</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="Kinstrife_Actor_Input_ActorsRegistry_FirstOrDefaultWithStatus_" data-uid="Kinstrife.Actor.Input.ActorsRegistry.FirstOrDefaultWithStatus*"></a>
-  <h4 id="Kinstrife_Actor_Input_ActorsRegistry_FirstOrDefaultWithStatus_Kinstrife_Actor_Interfaces_ActorStatus_" data-uid="Kinstrife.Actor.Input.ActorsRegistry.FirstOrDefaultWithStatus(Kinstrife.Actor.Interfaces.ActorStatus)">FirstOrDefaultWithStatus(ActorStatus)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public ActorRoot FirstOrDefaultWithStatus(ActorStatus status)</code></pre>
+    <pre><code class="lang-csharp hljs">protected override void AddActorEntity(ActorRoot actor)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -219,36 +221,35 @@ public static ActorsRegistry Instance { get; }</code></pre>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="Kinstrife.Actor.Interfaces.ActorStatus.html">ActorStatus</a></td>
-        <td><span class="parametername">status</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
         <td><a class="xref" href="Kinstrife.Actor.ActorRoot.html">ActorRoot</a></td>
+        <td><span class="parametername">actor</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">Kinstrife.Actor.ActorSystem&lt;Kinstrife.Actor.ActorController&gt;.AddActorEntity(Kinstrife.Actor.ActorRoot)</span></div>
   
   
-  <a id="Kinstrife_Actor_Input_ActorsRegistry_Inject_" data-uid="Kinstrife.Actor.Input.ActorsRegistry.Inject*"></a>
-  <h4 id="Kinstrife_Actor_Input_ActorsRegistry_Inject_Kinstrife_Application_ApplicationFlow_" data-uid="Kinstrife.Actor.Input.ActorsRegistry.Inject(Kinstrife.Application.ApplicationFlow)">Inject(ApplicationFlow)</h4>
+  <a id="Kinstrife_Actor_ActorMotorSystem_OnDestroy_" data-uid="Kinstrife.Actor.ActorMotorSystem.OnDestroy*"></a>
+  <h4 id="Kinstrife_Actor_ActorMotorSystem_OnDestroy" data-uid="Kinstrife.Actor.ActorMotorSystem.OnDestroy">OnDestroy()</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void Inject(ApplicationFlow flow)</code></pre>
+    <pre><code class="lang-csharp hljs">protected override void OnDestroy()</code></pre>
+  </div>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">Kinstrife.Actor.ActorSystem&lt;Kinstrife.Actor.ActorController&gt;.OnDestroy()</span></div>
+  
+  
+  <a id="Kinstrife_Actor_ActorMotorSystem_OnUpdate_" data-uid="Kinstrife.Actor.ActorMotorSystem.OnUpdate*"></a>
+  <h4 id="Kinstrife_Actor_ActorMotorSystem_OnUpdate_System_Single_" data-uid="Kinstrife.Actor.ActorMotorSystem.OnUpdate(System.Single)">OnUpdate(Single)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override void OnUpdate(float deltaTime)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -261,21 +262,52 @@ public static ActorsRegistry Instance { get; }</code></pre>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="Kinstrife.Application.ApplicationFlow.html">ApplicationFlow</a></td>
-        <td><span class="parametername">flow</span></td>
+        <td><span class="xref">System.Single</span></td>
+        <td><span class="parametername">deltaTime</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">Kinstrife.Core.Systems.SystemBase&lt;Kinstrife.Actor.ActorController&gt;.OnUpdate(System.Single)</span></div>
+  
+  
+  <a id="Kinstrife_Actor_ActorMotorSystem_RemoveActorEntity_" data-uid="Kinstrife.Actor.ActorMotorSystem.RemoveActorEntity*"></a>
+  <h4 id="Kinstrife_Actor_ActorMotorSystem_RemoveActorEntity_Kinstrife_Actor_ActorRoot_" data-uid="Kinstrife.Actor.ActorMotorSystem.RemoveActorEntity(Kinstrife.Actor.ActorRoot)">RemoveActorEntity(ActorRoot)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override void RemoveActorEntity(ActorRoot actor)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Kinstrife.Actor.ActorRoot.html">ActorRoot</a></td>
+        <td><span class="parametername">actor</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">Kinstrife.Actor.ActorSystem&lt;Kinstrife.Actor.ActorController&gt;.RemoveActorEntity(Kinstrife.Actor.ActorRoot)</span></div>
   <h3 id="implements">Implements</h3>
   <div>
-      <a class="xref" href="Kinstrife.Core.DependencyInjection.IInjectable.html">IInjectable</a>
+      <span class="xref">IInjectable</span>
   </div>
   <div>
-      <a class="xref" href="Kinstrife.Core.DependencyInjection.IInstall-1.html">IInstall&lt;T&gt;</a>
+      <a class="xref" href="Kinstrife.IPhysicsFixedUpdate.html">IPhysicsFixedUpdate</a>
   </div>
   <div>
-      <a class="xref" href="Kinstrife.Core.DependencyInjection.IInstall.html">IInstall</a>
+      <a class="xref" href="Kinstrife.ICustomUpdateable.html">ICustomUpdateable</a>
   </div>
   <div>
       <a class="xref" href="Kinstrife.Core.DependencyInjection.IDependent.html">IDependent</a>

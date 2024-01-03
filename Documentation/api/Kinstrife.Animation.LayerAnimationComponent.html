@@ -236,6 +236,30 @@
   </table>
   
   
+  <h4 id="Kinstrife_Animation_LayerAnimationComponent_DefaultEasing" data-uid="Kinstrife.Animation.LayerAnimationComponent.DefaultEasing">DefaultEasing</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const Easing.Function DefaultEasing = null</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Easing.Function</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
   <h4 id="Kinstrife_Animation_LayerAnimationComponent_layer" data-uid="Kinstrife.Animation.LayerAnimationComponent.layer">layer</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
@@ -255,6 +279,30 @@ protected AnimationLayer layer</code></pre>
     <tbody>
       <tr>
         <td><a class="xref" href="Kinstrife.Animation.AnimationLayer.html">AnimationLayer</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="Kinstrife_Animation_LayerAnimationComponent_state" data-uid="Kinstrife.Animation.LayerAnimationComponent.state">state</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected AnimancerState state</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">AnimancerState</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -389,6 +437,31 @@ protected AnimationLayer layer</code></pre>
   </table>
   <h5 class="overrides">Overrides</h5>
   <div><a class="xref" href="Kinstrife.Animation.AnimationComponent.html#Kinstrife_Animation_AnimationComponent_canStop">AnimationComponent.canStop</a></div>
+  
+  
+  <a id="Kinstrife_Animation_LayerAnimationComponent_EasingFunction_" data-uid="Kinstrife.Animation.LayerAnimationComponent.EasingFunction*"></a>
+  <h4 id="Kinstrife_Animation_LayerAnimationComponent_EasingFunction" data-uid="Kinstrife.Animation.LayerAnimationComponent.EasingFunction">EasingFunction</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual Easing.Function EasingFunction { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Easing.Function</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   
   
   <a id="Kinstrife_Animation_LayerAnimationComponent_FadeDuration_" data-uid="Kinstrife.Animation.LayerAnimationComponent.FadeDuration*"></a>
@@ -751,7 +824,7 @@ protected AnimationLayer layer</code></pre>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public AnimationSettings Settings { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public AnimationSettings Settings { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1059,6 +1132,16 @@ protected AnimationLayer layer</code></pre>
   </div>
   
   
+  <a id="Kinstrife_Animation_LayerAnimationComponent_OnEndCallback_" data-uid="Kinstrife.Animation.LayerAnimationComponent.OnEndCallback*"></a>
+  <h4 id="Kinstrife_Animation_LayerAnimationComponent_OnEndCallback" data-uid="Kinstrife.Animation.LayerAnimationComponent.OnEndCallback">OnEndCallback()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected void OnEndCallback()</code></pre>
+  </div>
+  
+  
   <a id="Kinstrife_Animation_LayerAnimationComponent_OnPlay_" data-uid="Kinstrife.Animation.LayerAnimationComponent.OnPlay*"></a>
   <h4 id="Kinstrife_Animation_LayerAnimationComponent_OnPlay" data-uid="Kinstrife.Animation.LayerAnimationComponent.OnPlay">OnPlay()</h4>
   <div class="markdown level1 summary"></div>
@@ -1255,6 +1338,38 @@ protected AnimationLayer layer</code></pre>
       <tr>
         <td><a class="xref" href="Kinstrife.Animation.AnimationLayer.html">AnimationLayer</a></td>
         <td><span class="parametername">layer</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Kinstrife_Animation_LayerAnimationComponent_PlayWithLayer_" data-uid="Kinstrife.Animation.LayerAnimationComponent.PlayWithLayer*"></a>
+  <h4 id="Kinstrife_Animation_LayerAnimationComponent_PlayWithLayer_ITransition_Kinstrife_Animation_HumanAnimationLayer_" data-uid="Kinstrife.Animation.LayerAnimationComponent.PlayWithLayer(ITransition,Kinstrife.Animation.HumanAnimationLayer)">PlayWithLayer(ITransition, HumanAnimationLayer)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void PlayWithLayer(ITransition transition, HumanAnimationLayer newLayerId)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">ITransition</span></td>
+        <td><span class="parametername">transition</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Kinstrife.Animation.HumanAnimationLayer.html">HumanAnimationLayer</a></td>
+        <td><span class="parametername">newLayerId</span></td>
         <td></td>
       </tr>
     </tbody>

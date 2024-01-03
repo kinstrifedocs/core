@@ -84,6 +84,9 @@
     <h5>Implements</h5>
     <div><a class="xref" href="Kinstrife.Core.DependencyInjection.IInstall-1.html">IInstall</a>&lt;<a class="xref" href="Kinstrife.Actor.ActorController.html">ActorController</a>&gt;</div>
     <div><a class="xref" href="Kinstrife.Core.DependencyInjection.IInstall.html">IInstall</a></div>
+    <div><a class="xref" href="Kinstrife.Core.Systems.IEntity.html">IEntity</a></div>
+    <div><a class="xref" href="Kinstrife.Core.Systems.IEntityBase.html">IEntityBase</a></div>
+    <div><a class="xref" href="Kinstrife.ICustomUpdateable.html">ICustomUpdateable</a></div>
     <div><a class="xref" href="Kinstrife.Core.DependencyInjection.IDependent.html">IDependent</a></div>
     <div><span class="xref">MonoBehaviour</span></div>
   </div>
@@ -91,7 +94,7 @@
   <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
   <h5 id="Kinstrife_Actor_ActorController_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class ActorController : MonoBehaviour, IInstall&lt;ActorController&gt;, IInstall, IDependent</code></pre>
+    <pre><code class="lang-csharp hljs">public class ActorController : MonoBehaviour, IInstall&lt;ActorController&gt;, IInstall, IEntity, IEntityBase, ICustomUpdateable, IDependent</code></pre>
   </div>
   <h3 id="fields">Fields
   </h3>
@@ -632,6 +635,31 @@
     <tbody>
       <tr>
         <td><a class="xref" href="Kinstrife.Actor.MotorState.html">MotorState</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Kinstrife_Actor_ActorController_Rigidbody_" data-uid="Kinstrife.Actor.ActorController.Rigidbody*"></a>
+  <h4 id="Kinstrife_Actor_ActorController_Rigidbody" data-uid="Kinstrife.Actor.ActorController.Rigidbody">Rigidbody</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Rigidbody Rigidbody { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Rigidbody</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -1516,12 +1544,75 @@ Useful for reorienting a direction on a slope without any lateral deviation in t
       </tr>
     </tbody>
   </table>
+  <h3 id="eii">Explicit Interface Implementations
+  </h3>
+  
+  
+  <a id="Kinstrife_Actor_ActorController_Kinstrife_Core_Systems_IEntity_OnUpdate_" data-uid="Kinstrife.Actor.ActorController.Kinstrife#Core#Systems#IEntity#OnUpdate*"></a>
+  <h4 id="Kinstrife_Actor_ActorController_Kinstrife_Core_Systems_IEntity_OnUpdate_System_Single_" data-uid="Kinstrife.Actor.ActorController.Kinstrife#Core#Systems#IEntity#OnUpdate(System.Single)">IEntity.OnUpdate(Single)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void IEntity.OnUpdate(float deltaTime)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><span class="parametername">deltaTime</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Kinstrife_Actor_ActorController_Kinstrife_ICustomUpdateable_ShouldUpdate_" data-uid="Kinstrife.Actor.ActorController.Kinstrife#ICustomUpdateable#ShouldUpdate*"></a>
+  <h4 id="Kinstrife_Actor_ActorController_Kinstrife_ICustomUpdateable_ShouldUpdate" data-uid="Kinstrife.Actor.ActorController.Kinstrife#ICustomUpdateable#ShouldUpdate">ICustomUpdateable.ShouldUpdate</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">bool ICustomUpdateable.ShouldUpdate { get; }</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   <h3 id="implements">Implements</h3>
   <div>
       <a class="xref" href="Kinstrife.Core.DependencyInjection.IInstall-1.html">IInstall&lt;T&gt;</a>
   </div>
   <div>
       <a class="xref" href="Kinstrife.Core.DependencyInjection.IInstall.html">IInstall</a>
+  </div>
+  <div>
+      <a class="xref" href="Kinstrife.Core.Systems.IEntity.html">IEntity</a>
+  </div>
+  <div>
+      <a class="xref" href="Kinstrife.Core.Systems.IEntityBase.html">IEntityBase</a>
+  </div>
+  <div>
+      <a class="xref" href="Kinstrife.ICustomUpdateable.html">ICustomUpdateable</a>
   </div>
   <div>
       <a class="xref" href="Kinstrife.Core.DependencyInjection.IDependent.html">IDependent</a>

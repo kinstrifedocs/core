@@ -5,10 +5,10 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Class CoverageProfile
+    <title>Class LODCullingSystem
    | Kinstrife </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Class CoverageProfile
+    <meta name="title" content="Class LODCullingSystem
    | Kinstrife ">
     <meta name="generator" content="docfx 2.59.4.0">
     
@@ -68,35 +68,39 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="Kinstrife.Renderers.CoverageProfile">
+            <article class="content wrap" id="_content" data-uid="Kinstrife.Core.Culling.LODCullingSystem">
   
   
-  <h1 id="Kinstrife_Renderers_CoverageProfile" data-uid="Kinstrife.Renderers.CoverageProfile" class="text-break">Class CoverageProfile
+  <h1 id="Kinstrife_Core_Culling_LODCullingSystem" data-uid="Kinstrife.Core.Culling.LODCullingSystem" class="text-break">Class LODCullingSystem
   </h1>
   <div class="markdown level0 summary"></div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><span class="xref">CoverageProfile</span></div>
+    <div class="level1"><span class="xref">LODCullingSystem</span></div>
   </div>
-  <h6><strong>Namespace</strong>: <a class="xref" href="Kinstrife.Renderers.html">Kinstrife.Renderers</a></h6>
+  <div class="implements">
+    <h5>Implements</h5>
+    <div><span class="xref">IInjectable</span></div>
+    <div><span class="xref">IInitializable</span></div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Kinstrife.Core.Culling.html">Kinstrife.Core.Culling</a></h6>
   <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
-  <h5 id="Kinstrife_Renderers_CoverageProfile_syntax">Syntax</h5>
+  <h5 id="Kinstrife_Core_Culling_LODCullingSystem_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class CoverageProfile : ScriptableObject</code></pre>
+    <pre><code class="lang-csharp hljs">public class LODCullingSystem : SystemBase&lt;LODController&gt;</code></pre>
   </div>
   <h3 id="fields">Fields
   </h3>
   
   
-  <h4 id="Kinstrife_Renderers_CoverageProfile_LUT" data-uid="Kinstrife.Renderers.CoverageProfile.LUT">LUT</h4>
+  <h4 id="Kinstrife_Core_Culling_LODCullingSystem_debugColors" data-uid="Kinstrife.Core.Culling.LODCullingSystem.debugColors">debugColors</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[NonSerialized]
-public CoverageProfile.Mapping LUT</code></pre>
+    <pre><code class="lang-csharp hljs">public Color[] debugColors</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -108,149 +112,21 @@ public CoverageProfile.Mapping LUT</code></pre>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="Kinstrife.Renderers.CoverageProfile.Mapping.html">CoverageProfile.Mapping</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h3 id="properties">Properties
-  </h3>
-  
-  
-  <a id="Kinstrife_Renderers_CoverageProfile_CompressHair_" data-uid="Kinstrife.Renderers.CoverageProfile.CompressHair*"></a>
-  <h4 id="Kinstrife_Renderers_CoverageProfile_CompressHair" data-uid="Kinstrife.Renderers.CoverageProfile.CompressHair">CompressHair</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public float CompressHair { get; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Single</span></td>
+        <td><span class="xref">Color</span>[]</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   
   
-  <a id="Kinstrife_Renderers_CoverageProfile_Coverage_" data-uid="Kinstrife.Renderers.CoverageProfile.Coverage*"></a>
-  <h4 id="Kinstrife_Renderers_CoverageProfile_Coverage" data-uid="Kinstrife.Renderers.CoverageProfile.Coverage">Coverage</h4>
+  <h4 id="Kinstrife_Core_Culling_LODCullingSystem_drawDebug" data-uid="Kinstrife.Core.Culling.LODCullingSystem.drawDebug">drawDebug</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public CoverageProfile.Mapping Coverage { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public bool drawDebug</code></pre>
   </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Kinstrife.Renderers.CoverageProfile.Mapping.html">CoverageProfile.Mapping</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="Kinstrife_Renderers_CoverageProfile_CoverSubmesh_" data-uid="Kinstrife.Renderers.CoverageProfile.CoverSubmesh*"></a>
-  <h4 id="Kinstrife_Renderers_CoverageProfile_CoverSubmesh" data-uid="Kinstrife.Renderers.CoverageProfile.CoverSubmesh">CoverSubmesh</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public BodySubmeshCoverage CoverSubmesh { get; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Kinstrife.Renderers.BodySubmeshCoverage.html">BodySubmeshCoverage</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="Kinstrife_Renderers_CoverageProfile_FullyOccludeRenderers_" data-uid="Kinstrife.Renderers.CoverageProfile.FullyOccludeRenderers*"></a>
-  <h4 id="Kinstrife_Renderers_CoverageProfile_FullyOccludeRenderers" data-uid="Kinstrife.Renderers.CoverageProfile.FullyOccludeRenderers">FullyOccludeRenderers</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public HumanRenderersLayerMask FullyOccludeRenderers { get; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Kinstrife.Renderers.HumanRenderersLayerMask.html">HumanRenderersLayerMask</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="Kinstrife_Renderers_CoverageProfile_Inflation_" data-uid="Kinstrife.Renderers.CoverageProfile.Inflation*"></a>
-  <h4 id="Kinstrife_Renderers_CoverageProfile_Inflation" data-uid="Kinstrife.Renderers.CoverageProfile.Inflation">Inflation</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public CoverageProfile.InflateMapping Inflation { get; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Kinstrife.Renderers.CoverageProfile.InflateMapping.html">CoverageProfile.InflateMapping</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="Kinstrife_Renderers_CoverageProfile_InheritInflation_" data-uid="Kinstrife.Renderers.CoverageProfile.InheritInflation*"></a>
-  <h4 id="Kinstrife_Renderers_CoverageProfile_InheritInflation" data-uid="Kinstrife.Renderers.CoverageProfile.InheritInflation">InheritInflation</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public bool InheritInflation { get; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
+  <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
       <tr>
@@ -267,15 +143,14 @@ public CoverageProfile.Mapping LUT</code></pre>
   </table>
   
   
-  <a id="Kinstrife_Renderers_CoverageProfile_OccludeBodySections_" data-uid="Kinstrife.Renderers.CoverageProfile.OccludeBodySections*"></a>
-  <h4 id="Kinstrife_Renderers_CoverageProfile_OccludeBodySections" data-uid="Kinstrife.Renderers.CoverageProfile.OccludeBodySections">OccludeBodySections</h4>
+  <h4 id="Kinstrife_Core_Culling_LODCullingSystem_minSpheres" data-uid="Kinstrife.Core.Culling.LODCullingSystem.minSpheres">minSpheres</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public BodyAttachmentCoverage OccludeBodySections { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public int minSpheres</code></pre>
   </div>
-  <h5 class="propertyValue">Property Value</h5>
+  <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
       <tr>
@@ -285,22 +160,22 @@ public CoverageProfile.Mapping LUT</code></pre>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="Kinstrife.Renderers.BodyAttachmentCoverage.html">BodyAttachmentCoverage</a></td>
+        <td><span class="xref">System.Int32</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   
   
-  <a id="Kinstrife_Renderers_CoverageProfile_Parent_" data-uid="Kinstrife.Renderers.CoverageProfile.Parent*"></a>
-  <h4 id="Kinstrife_Renderers_CoverageProfile_Parent" data-uid="Kinstrife.Renderers.CoverageProfile.Parent">Parent</h4>
+  <h4 id="Kinstrife_Core_Culling_LODCullingSystem_spheresInUse" data-uid="Kinstrife.Core.Culling.LODCullingSystem.spheresInUse">spheresInUse</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public CoverageProfile Parent { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">[NonSerialized]
+public int spheresInUse</code></pre>
   </div>
-  <h5 class="propertyValue">Property Value</h5>
+  <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
       <tr>
@@ -310,22 +185,21 @@ public CoverageProfile.Mapping LUT</code></pre>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="Kinstrife.Renderers.CoverageProfile.html">CoverageProfile</a></td>
+        <td><span class="xref">System.Int32</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   
   
-  <a id="Kinstrife_Renderers_CoverageProfile_Scale_" data-uid="Kinstrife.Renderers.CoverageProfile.Scale*"></a>
-  <h4 id="Kinstrife_Renderers_CoverageProfile_Scale" data-uid="Kinstrife.Renderers.CoverageProfile.Scale">Scale</h4>
+  <h4 id="Kinstrife_Core_Culling_LODCullingSystem_timer" data-uid="Kinstrife.Core.Culling.LODCullingSystem.timer">timer</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public float Scale { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Timer timer</code></pre>
   </div>
-  <h5 class="propertyValue">Property Value</h5>
+  <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
       <tr>
@@ -335,20 +209,22 @@ public CoverageProfile.Mapping LUT</code></pre>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Single</span></td>
+        <td><a class="xref" href="Kinstrife.Timer.html">Timer</a></td>
         <td></td>
       </tr>
     </tbody>
   </table>
+  <h3 id="properties">Properties
+  </h3>
   
   
-  <a id="Kinstrife_Renderers_CoverageProfile_Tapering_" data-uid="Kinstrife.Renderers.CoverageProfile.Tapering*"></a>
-  <h4 id="Kinstrife_Renderers_CoverageProfile_Tapering" data-uid="Kinstrife.Renderers.CoverageProfile.Tapering">Tapering</h4>
+  <a id="Kinstrife_Core_Culling_LODCullingSystem_NumEntities_" data-uid="Kinstrife.Core.Culling.LODCullingSystem.NumEntities*"></a>
+  <h4 id="Kinstrife_Core_Culling_LODCullingSystem_NumEntities" data-uid="Kinstrife.Core.Culling.LODCullingSystem.NumEntities">NumEntities</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public TaperingData Tapering { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public int NumEntities { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -360,7 +236,7 @@ public CoverageProfile.Mapping LUT</code></pre>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="Kinstrife.Renderers.TaperingData.html">TaperingData</a></td>
+        <td><span class="xref">System.Int32</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -369,29 +245,95 @@ public CoverageProfile.Mapping LUT</code></pre>
   </h3>
   
   
-  <a id="Kinstrife_Renderers_CoverageProfile_GetInflation_" data-uid="Kinstrife.Renderers.CoverageProfile.GetInflation*"></a>
-  <h4 id="Kinstrife_Renderers_CoverageProfile_GetInflation" data-uid="Kinstrife.Renderers.CoverageProfile.GetInflation">GetInflation()</h4>
+  <a id="Kinstrife_Core_Culling_LODCullingSystem_Initialize_" data-uid="Kinstrife.Core.Culling.LODCullingSystem.Initialize*"></a>
+  <h4 id="Kinstrife_Core_Culling_LODCullingSystem_Initialize" data-uid="Kinstrife.Core.Culling.LODCullingSystem.Initialize">Initialize()</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public CoverageProfile.InflateMapping GetInflation()</code></pre>
+    <pre><code class="lang-csharp hljs">public void Initialize()</code></pre>
   </div>
-  <h5 class="returns">Returns</h5>
+  
+  
+  <a id="Kinstrife_Core_Culling_LODCullingSystem_Inject_" data-uid="Kinstrife.Core.Culling.LODCullingSystem.Inject*"></a>
+  <h4 id="Kinstrife_Core_Culling_LODCullingSystem_Inject_CameraRig_" data-uid="Kinstrife.Core.Culling.LODCullingSystem.Inject(CameraRig)">Inject(CameraRig)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Inject(CameraRig rig)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
       <tr>
         <th>Type</th>
+        <th>Name</th>
         <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="Kinstrife.Renderers.CoverageProfile.InflateMapping.html">CoverageProfile.InflateMapping</a></td>
+        <td><span class="xref">CameraRig</span></td>
+        <td><span class="parametername">rig</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
+  
+  
+  <a id="Kinstrife_Core_Culling_LODCullingSystem_OnDisable_" data-uid="Kinstrife.Core.Culling.LODCullingSystem.OnDisable*"></a>
+  <h4 id="Kinstrife_Core_Culling_LODCullingSystem_OnDisable" data-uid="Kinstrife.Core.Culling.LODCullingSystem.OnDisable">OnDisable()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void OnDisable()</code></pre>
+  </div>
+  
+  
+  <a id="Kinstrife_Core_Culling_LODCullingSystem_OnEnable_" data-uid="Kinstrife.Core.Culling.LODCullingSystem.OnEnable*"></a>
+  <h4 id="Kinstrife_Core_Culling_LODCullingSystem_OnEnable" data-uid="Kinstrife.Core.Culling.LODCullingSystem.OnEnable">OnEnable()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void OnEnable()</code></pre>
+  </div>
+  
+  
+  <a id="Kinstrife_Core_Culling_LODCullingSystem_StateChanged_" data-uid="Kinstrife.Core.Culling.LODCullingSystem.StateChanged*"></a>
+  <h4 id="Kinstrife_Core_Culling_LODCullingSystem_StateChanged_CullingGroupEvent_" data-uid="Kinstrife.Core.Culling.LODCullingSystem.StateChanged(CullingGroupEvent)">StateChanged(CullingGroupEvent)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void StateChanged(CullingGroupEvent sphere)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">CullingGroupEvent</span></td>
+        <td><span class="parametername">sphere</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <span class="xref">IInjectable</span>
+  </div>
+  <div>
+      <span class="xref">IInitializable</span>
+  </div>
 </article>
           </div>
           
