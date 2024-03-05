@@ -89,6 +89,7 @@
     <div><a class="xref" href="Kinstrife.Animation.IAnimationPlayer.html">IAnimationPlayer</a></div>
     <div><a class="xref" href="Kinstrife.Core.DependencyInjection.ICacheReferences.html">ICacheReferences</a></div>
     <div><span class="xref">IUpdatable</span></div>
+    <div><a class="xref" href="Kinstrife.Core.DependencyInjection.IInjectable.html">IInjectable</a></div>
     <div><a class="xref" href="Kinstrife.Core.DependencyInjection.IInstall.html">IInstall</a></div>
     <div><a class="xref" href="Kinstrife.Core.DependencyInjection.IDependent.html">IDependent</a></div>
     <div><span class="xref">INotificationReceiver</span></div>
@@ -342,6 +343,9 @@
       <a class="xref" href="Kinstrife.Animation.AnimationComponent.html#Kinstrife_Animation_AnimationComponent_CacheReferences">AnimationComponent.CacheReferences()</a>
     </div>
     <div>
+      <a class="xref" href="Kinstrife.Animation.AnimationComponent.html#Kinstrife_Animation_AnimationComponent_Inject_Kinstrife_Animation_AnimationDirector_">AnimationComponent.Inject(AnimationDirector)</a>
+    </div>
+    <div>
       <a class="xref" href="Kinstrife.Animation.AnimationComponent.html#Kinstrife_Animation_AnimationComponent_OnEnable">AnimationComponent.OnEnable()</a>
     </div>
     <div>
@@ -400,7 +404,7 @@
   <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
   <h5 id="Kinstrife_Animation_RadialStateAnimator_2_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public abstract class RadialStateAnimator&lt;TFSMType, TFSMStateType&gt; : StateAnimator&lt;TFSMType, TFSMStateType&gt;, IAnimationPlayer, ICacheReferences, IInstall, IDependent, ILayerAnimator, IWeightedAnimator, IRadialStateAnimator, IAnimator where TFSMType : StateMachine&lt;TFSMStateType&gt;, new()
+    <pre><code class="lang-csharp hljs">public abstract class RadialStateAnimator&lt;TFSMType, TFSMStateType&gt; : StateAnimator&lt;TFSMType, TFSMStateType&gt;, IAnimationPlayer, ICacheReferences, IInjectable, IInstall, IDependent, ILayerAnimator, IWeightedAnimator, IRadialStateAnimator, IAnimator where TFSMType : StateMachine&lt;TFSMStateType&gt;, new()
     where TFSMStateType : FSMState</code></pre>
   </div>
   <h5 class="typeParameters">Type Parameters</h5>
@@ -979,6 +983,9 @@ public InputState inputState</code></pre>
   </div>
   <div>
       <span class="xref">IUpdatable</span>
+  </div>
+  <div>
+      <a class="xref" href="Kinstrife.Core.DependencyInjection.IInjectable.html">IInjectable</a>
   </div>
   <div>
       <a class="xref" href="Kinstrife.Core.DependencyInjection.IInstall.html">IInstall</a>

@@ -92,6 +92,7 @@
     <div><a class="xref" href="Kinstrife.Animation.IAnimationPlayer.html">IAnimationPlayer</a></div>
     <div><a class="xref" href="Kinstrife.Core.DependencyInjection.ICacheReferences.html">ICacheReferences</a></div>
     <div><span class="xref">IUpdatable</span></div>
+    <div><a class="xref" href="Kinstrife.Core.DependencyInjection.IInjectable.html">IInjectable</a></div>
     <div><a class="xref" href="Kinstrife.Core.DependencyInjection.IInstall.html">IInstall</a></div>
     <div><a class="xref" href="Kinstrife.Core.DependencyInjection.IDependent.html">IDependent</a></div>
     <div><span class="xref">INotificationReceiver</span></div>
@@ -101,7 +102,7 @@
   <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
   <h5 id="Kinstrife_Animation_AnimationComponent_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public abstract class AnimationComponent : MonoBehaviour, IAnimationPlayer, ICacheReferences, IInstall, IDependent</code></pre>
+    <pre><code class="lang-csharp hljs">public abstract class AnimationComponent : MonoBehaviour, IAnimationPlayer, ICacheReferences, IInjectable, IInstall, IDependent</code></pre>
   </div>
   <h3 id="fields">Fields
   </h3>
@@ -814,6 +815,33 @@
   </table>
   
   
+  <a id="Kinstrife_Animation_AnimationComponent_Inject_" data-uid="Kinstrife.Animation.AnimationComponent.Inject*"></a>
+  <h4 id="Kinstrife_Animation_AnimationComponent_Inject_Kinstrife_Animation_AnimationDirector_" data-uid="Kinstrife.Animation.AnimationComponent.Inject(Kinstrife.Animation.AnimationDirector)">Inject(AnimationDirector)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Inject(AnimationDirector director)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Kinstrife.Animation.AnimationDirector.html">AnimationDirector</a></td>
+        <td><span class="parametername">director</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
   <a id="Kinstrife_Animation_AnimationComponent_InjectDependencies_" data-uid="Kinstrife.Animation.AnimationComponent.InjectDependencies*"></a>
   <h4 id="Kinstrife_Animation_AnimationComponent_InjectDependencies_Kinstrife_Animation_AnimationDirector_" data-uid="Kinstrife.Animation.AnimationComponent.InjectDependencies(Kinstrife.Animation.AnimationDirector)">InjectDependencies(AnimationDirector)</h4>
   <div class="markdown level1 summary"></div>
@@ -1151,6 +1179,9 @@
   </div>
   <div>
       <span class="xref">IUpdatable</span>
+  </div>
+  <div>
+      <a class="xref" href="Kinstrife.Core.DependencyInjection.IInjectable.html">IInjectable</a>
   </div>
   <div>
       <a class="xref" href="Kinstrife.Core.DependencyInjection.IInstall.html">IInstall</a>

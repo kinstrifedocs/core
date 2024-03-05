@@ -90,9 +90,6 @@
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
     <div>
-      <a class="xref" href="Kinstrife.Messaging.PublisherBehaviour-1.html#Kinstrife_Messaging_PublisherBehaviour_1_channelDescriptor">PublisherBehaviour&lt;CameraState&gt;.channelDescriptor</a>
-    </div>
-    <div>
       <a class="xref" href="Kinstrife.Messaging.PublisherBehaviour-1.html#Kinstrife_Messaging_PublisherBehaviour_1_lastMessage">PublisherBehaviour&lt;CameraState&gt;.lastMessage</a>
     </div>
     <div>
@@ -114,18 +111,35 @@
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public class CameraStatePublisher : PublisherBehaviour&lt;CameraState&gt;, IInjectable, IInitializable, IDependent</code></pre>
   </div>
-  <h3 id="constructors">Constructors
+  <h3 id="properties">Properties
   </h3>
   
   
-  <a id="Kinstrife_Core_Camera_CameraStatePublisher__ctor_" data-uid="Kinstrife.Core.Camera.CameraStatePublisher.#ctor*"></a>
-  <h4 id="Kinstrife_Core_Camera_CameraStatePublisher__ctor" data-uid="Kinstrife.Core.Camera.CameraStatePublisher.#ctor">CameraStatePublisher()</h4>
+  <a id="Kinstrife_Core_Camera_CameraStatePublisher_channelDescriptor_" data-uid="Kinstrife.Core.Camera.CameraStatePublisher.channelDescriptor*"></a>
+  <h4 id="Kinstrife_Core_Camera_CameraStatePublisher_channelDescriptor" data-uid="Kinstrife.Core.Camera.CameraStatePublisher.channelDescriptor">channelDescriptor</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public CameraStatePublisher()</code></pre>
+    <pre><code class="lang-csharp hljs">protected override ChannelDescriptor channelDescriptor { get; }</code></pre>
   </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Kinstrife.Messaging.ChannelDescriptor.html">ChannelDescriptor</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">Kinstrife.Messaging.PublisherBehaviour&lt;Kinstrife.Camera.CameraState&gt;.channelDescriptor</span></div>
   <h3 id="implements">Implements</h3>
   <div>
       <a class="xref" href="Kinstrife.Core.DependencyInjection.IInjectable.html">IInjectable</a>

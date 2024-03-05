@@ -86,6 +86,7 @@
     <div><a class="xref" href="Kinstrife.Animation.IAnimationPlayer.html">IAnimationPlayer</a></div>
     <div><a class="xref" href="Kinstrife.Core.DependencyInjection.ICacheReferences.html">ICacheReferences</a></div>
     <div><span class="xref">IUpdatable</span></div>
+    <div><a class="xref" href="Kinstrife.Core.DependencyInjection.IInjectable.html">IInjectable</a></div>
     <div><a class="xref" href="Kinstrife.Core.DependencyInjection.IInstall.html">IInstall</a></div>
     <div><a class="xref" href="Kinstrife.Core.DependencyInjection.IDependent.html">IDependent</a></div>
     <div><span class="xref">INotificationReceiver</span></div>
@@ -137,6 +138,9 @@
     </div>
     <div>
       <a class="xref" href="Kinstrife.Animation.AnimationComponent.html#Kinstrife_Animation_AnimationComponent_CacheReferences">AnimationComponent.CacheReferences()</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.Animation.AnimationComponent.html#Kinstrife_Animation_AnimationComponent_Inject_Kinstrife_Animation_AnimationDirector_">AnimationComponent.Inject(AnimationDirector)</a>
     </div>
     <div>
       <a class="xref" href="Kinstrife.Animation.AnimationComponent.html#Kinstrife_Animation_AnimationComponent_OnEnable">AnimationComponent.OnEnable()</a>
@@ -221,7 +225,7 @@
   <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
   <h5 id="Kinstrife_Animation_JobAnimationComponent_2_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public abstract class JobAnimationComponent&lt;TJobWrapper, TJobType&gt; : AnimationComponent, IAnimationPlayer, ICacheReferences, IInstall, IDependent where TJobWrapper : JobAnimationComponent&lt;TJobWrapper, TJobType&gt;.JobState where TJobType : struct, IAnimationJob, IDisposable</code></pre>
+    <pre><code class="lang-csharp hljs">public abstract class JobAnimationComponent&lt;TJobWrapper, TJobType&gt; : AnimationComponent, IAnimationPlayer, ICacheReferences, IInjectable, IInstall, IDependent where TJobWrapper : JobAnimationComponent&lt;TJobWrapper, TJobType&gt;.JobState where TJobType : struct, IAnimationJob, IDisposable</code></pre>
   </div>
   <h5 class="typeParameters">Type Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -441,6 +445,9 @@
   </div>
   <div>
       <span class="xref">IUpdatable</span>
+  </div>
+  <div>
+      <a class="xref" href="Kinstrife.Core.DependencyInjection.IInjectable.html">IInjectable</a>
   </div>
   <div>
       <a class="xref" href="Kinstrife.Core.DependencyInjection.IInstall.html">IInstall</a>
