@@ -1,0 +1,612 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class TutorialStateMachine
+   | Kinstrife </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class TutorialStateMachine
+   | Kinstrife ">
+    <meta name="generator" content="docfx 2.59.4.0">
+    
+    <link rel="shortcut icon" href="../../favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet"> 
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../index.html">
+                <img id="logo" class="svg" src="../../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Kinstrife.Tutorial.TutorialStateMachine">
+  
+  
+  <h1 id="Kinstrife_Tutorial_TutorialStateMachine" data-uid="Kinstrife.Tutorial.TutorialStateMachine" class="text-break">Class TutorialStateMachine
+  </h1>
+  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><a class="xref" href="Kinstrife.DataContainers.ScriptableObjectComponent.html">ScriptableObjectComponent</a></div>
+    <div class="level2"><a class="xref" href="Kinstrife.Procedures.ProcedureComponent.html">ProcedureComponent</a></div>
+    <div class="level3"><a class="xref" href="Kinstrife.Procedures.ProcedureModule-2.html">ProcedureModule</a>&lt;<a class="xref" href="Kinstrife.Tutorial.TutorialStateProcedure.html">TutorialStateProcedure</a>, <a class="xref" href="Kinstrife.Tutorial.TutorialStateProcedure.html">TutorialStateProcedure</a>&gt;</div>
+    <div class="level4"><a class="xref" href="Kinstrife.Procedures.ProcedureFSM-3.html">ProcedureFSM</a>&lt;<a class="xref" href="Kinstrife.Tutorial.TutorialStateProcedure.html">TutorialStateProcedure</a>, <a class="xref" href="Kinstrife.Tutorial.TutorialStateProcedure.html">TutorialStateProcedure</a>, <a class="xref" href="Kinstrife.Tutorial.TutorialStateProcedure.html">TutorialStateProcedure</a>&gt;</div>
+    <div class="level5"><a class="xref" href="Kinstrife.Procedures.ProcedureFSM-2.html">ProcedureFSM</a>&lt;<a class="xref" href="Kinstrife.Tutorial.TutorialStateProcedure.html">TutorialStateProcedure</a>, <a class="xref" href="Kinstrife.Tutorial.TutorialStateProcedure.html">TutorialStateProcedure</a>&gt;</div>
+    <div class="level6"><span class="xref">TutorialStateMachine</span></div>
+  </div>
+  <div class="implements">
+    <h5>Implements</h5>
+    <div><a class="xref" href="Kinstrife.Procedures.IProcedureComponent.html">IProcedureComponent</a></div>
+    <div><a class="xref" href="Kinstrife.Procedures.IInstructions-1.html">IInstructions</a>&lt;<a class="xref" href="Kinstrife.Tutorial.TutorialStateProcedure.html">TutorialStateProcedure</a>&gt;</div>
+    <div><a class="xref" href="Kinstrife.Procedures.IInstructionsAuthoring-2.html">IInstructionsAuthoring</a>&lt;<a class="xref" href="Kinstrife.Tutorial.TutorialStateProcedure.html">TutorialStateProcedure</a>, <a class="xref" href="Kinstrife.Tutorial.TutorialStateProcedure.html">TutorialStateProcedure</a>&gt;</div>
+    <div><a class="xref" href="Kinstrife.Core.DependencyInjection.IProvideDependents.html">IProvideDependents</a></div>
+    <div><a class="xref" href="Kinstrife.Core.DependencyInjection.IDependent.html">IDependent</a></div>
+    <div><span class="xref">System.IDisposable</span></div>
+    <div><a class="xref" href="Kinstrife.Procedures.IConstraint.html">IConstraint</a></div>
+    <div><a class="xref" href="Kinstrife.Procedures.IInstruction.html">IInstruction</a></div>
+    <div><a class="xref" href="Kinstrife.Procedures.IConditionEvaluator.html">IConditionEvaluator</a></div>
+    <div><a class="xref" href="Kinstrife.Procedures.IHasReferencedProcedures.html">IHasReferencedProcedures</a></div>
+    <div><a class="xref" href="Kinstrife.Procedures.IUpdateable.html">IUpdateable</a></div>
+    <div><a class="xref" href="Kinstrife.ITImer.html">ITImer</a></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="Kinstrife.Procedures.ProcedureFSM-2.html#Kinstrife_Procedures_ProcedureFSM_2_GetKeys">ProcedureFSM&lt;TutorialStateProcedure, TutorialStateProcedure&gt;.GetKeys()</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.Procedures.ProcedureFSM-2.html#Kinstrife_Procedures_ProcedureFSM_2_TryTransition_System_Int32_">ProcedureFSM&lt;TutorialStateProcedure, TutorialStateProcedure&gt;.TryTransition(Int32)</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.Procedures.ProcedureFSM-2.html#Kinstrife_Procedures_ProcedureFSM_2_InitializeInstructions">ProcedureFSM&lt;TutorialStateProcedure, TutorialStateProcedure&gt;.InitializeInstructions()</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.Procedures.ProcedureFSM-2.html#Kinstrife_Procedures_ProcedureFSM_2_State_onStart__0_">ProcedureFSM&lt;TutorialStateProcedure, TutorialStateProcedure&gt;.State_onStart(TutorialStateProcedure)</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.Procedures.ProcedureFSM-3.html#Kinstrife_Procedures_ProcedureFSM_3_startingState">ProcedureFSM&lt;TutorialStateProcedure, TutorialStateProcedure, TutorialStateProcedure&gt;.startingState</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.Procedures.ProcedureFSM-3.html#Kinstrife_Procedures_ProcedureFSM_3_StartingState">ProcedureFSM&lt;TutorialStateProcedure, TutorialStateProcedure, TutorialStateProcedure&gt;.StartingState</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.Procedures.ProcedureFSM-3.html#Kinstrife_Procedures_ProcedureFSM_3_ActiveKey">ProcedureFSM&lt;TutorialStateProcedure, TutorialStateProcedure, TutorialStateProcedure&gt;.ActiveKey</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.Procedures.ProcedureFSM-3.html#Kinstrife_Procedures_ProcedureFSM_3_ActiveState">ProcedureFSM&lt;TutorialStateProcedure, TutorialStateProcedure, TutorialStateProcedure&gt;.ActiveState</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.Procedures.ProcedureFSM-3.html#Kinstrife_Procedures_ProcedureFSM_3_fsm">ProcedureFSM&lt;TutorialStateProcedure, TutorialStateProcedure, TutorialStateProcedure&gt;.fsm</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.Procedures.ProcedureFSM-3.html#Kinstrife_Procedures_ProcedureFSM_3_FSM">ProcedureFSM&lt;TutorialStateProcedure, TutorialStateProcedure, TutorialStateProcedure&gt;.FSM</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.Procedures.ProcedureFSM-3.html#Kinstrife_Procedures_ProcedureFSM_3_Item__0_">ProcedureFSM&lt;TutorialStateProcedure, TutorialStateProcedure, TutorialStateProcedure&gt;.Item[TutorialStateProcedure]</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.Procedures.ProcedureFSM-3.html#Kinstrife_Procedures_ProcedureFSM_3_onBeforeEnterState">ProcedureFSM&lt;TutorialStateProcedure, TutorialStateProcedure, TutorialStateProcedure&gt;.onBeforeEnterState</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.Procedures.ProcedureFSM-3.html#Kinstrife_Procedures_ProcedureFSM_3_onEnterState">ProcedureFSM&lt;TutorialStateProcedure, TutorialStateProcedure, TutorialStateProcedure&gt;.onEnterState</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.Procedures.ProcedureFSM-3.html#Kinstrife_Procedures_ProcedureFSM_3_onBeforeExitState">ProcedureFSM&lt;TutorialStateProcedure, TutorialStateProcedure, TutorialStateProcedure&gt;.onBeforeExitState</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.Procedures.ProcedureFSM-3.html#Kinstrife_Procedures_ProcedureFSM_3_onExitState">ProcedureFSM&lt;TutorialStateProcedure, TutorialStateProcedure, TutorialStateProcedure&gt;.onExitState</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.Procedures.ProcedureFSM-3.html#Kinstrife_Procedures_ProcedureFSM_3_onBeginTransition">ProcedureFSM&lt;TutorialStateProcedure, TutorialStateProcedure, TutorialStateProcedure&gt;.onBeginTransition</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.Procedures.ProcedureFSM-3.html#Kinstrife_Procedures_ProcedureFSM_3_onTransition">ProcedureFSM&lt;TutorialStateProcedure, TutorialStateProcedure, TutorialStateProcedure&gt;.onTransition</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.Procedures.ProcedureFSM-3.html#Kinstrife_Procedures_ProcedureFSM_3_TryTransition_System_Int32_">ProcedureFSM&lt;TutorialStateProcedure, TutorialStateProcedure, TutorialStateProcedure&gt;.TryTransition(Int32)</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.Procedures.ProcedureFSM-3.html#Kinstrife_Procedures_ProcedureFSM_3_TryTransition__0_">ProcedureFSM&lt;TutorialStateProcedure, TutorialStateProcedure, TutorialStateProcedure&gt;.TryTransition(TutorialStateProcedure)</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.Procedures.ProcedureFSM-3.html#Kinstrife_Procedures_ProcedureFSM_3_TryTransition__0__1__">ProcedureFSM&lt;TutorialStateProcedure, TutorialStateProcedure, TutorialStateProcedure&gt;.TryTransition(TutorialStateProcedure, TutorialStateProcedure)</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.Procedures.ProcedureFSM-3.html#Kinstrife_Procedures_ProcedureFSM_3_CancelProcess">ProcedureFSM&lt;TutorialStateProcedure, TutorialStateProcedure, TutorialStateProcedure&gt;.CancelProcess()</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.Procedures.ProcedureFSM-3.html#Kinstrife_Procedures_ProcedureFSM_3_CanTransitionToKeys__0__0__1__">ProcedureFSM&lt;TutorialStateProcedure, TutorialStateProcedure, TutorialStateProcedure&gt;.CanTransitionToKeys(TutorialStateProcedure, TutorialStateProcedure, TutorialStateProcedure)</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.Procedures.ProcedureFSM-3.html#Kinstrife_Procedures_ProcedureFSM_3_CanTransitionToStates__1__1_">ProcedureFSM&lt;TutorialStateProcedure, TutorialStateProcedure, TutorialStateProcedure&gt;.CanTransitionToStates(TutorialStateProcedure, TutorialStateProcedure)</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.Procedures.ProcedureFSM-3.html#Kinstrife_Procedures_ProcedureFSM_3_ForceTransition__0__1__System_Boolean_">ProcedureFSM&lt;TutorialStateProcedure, TutorialStateProcedure, TutorialStateProcedure&gt;.ForceTransition(TutorialStateProcedure, TutorialStateProcedure, Boolean)</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.Procedures.ProcedureFSM-3.html#Kinstrife_Procedures_ProcedureFSM_3_InternalForceTransition__0__1_System_Boolean_">ProcedureFSM&lt;TutorialStateProcedure, TutorialStateProcedure, TutorialStateProcedure&gt;.InternalForceTransition(TutorialStateProcedure, TutorialStateProcedure, Boolean)</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.Procedures.ProcedureFSM-3.html#Kinstrife_Procedures_ProcedureFSM_3_HasAnyEnterableStates">ProcedureFSM&lt;TutorialStateProcedure, TutorialStateProcedure, TutorialStateProcedure&gt;.HasAnyEnterableStates()</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.Procedures.ProcedureFSM-3.html#Kinstrife_Procedures_ProcedureFSM_3_CanExitCurrentState">ProcedureFSM&lt;TutorialStateProcedure, TutorialStateProcedure, TutorialStateProcedure&gt;.CanExitCurrentState()</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.Procedures.ProcedureFSM-3.html#Kinstrife_Procedures_ProcedureFSM_3_ShouldExitCurrentState">ProcedureFSM&lt;TutorialStateProcedure, TutorialStateProcedure, TutorialStateProcedure&gt;.ShouldExitCurrentState()</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.Procedures.ProcedureFSM-3.html#Kinstrife_Procedures_ProcedureFSM_3_IsValidKey__0_">ProcedureFSM&lt;TutorialStateProcedure, TutorialStateProcedure, TutorialStateProcedure&gt;.IsValidKey(TutorialStateProcedure)</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.Procedures.ProcedureFSM-3.html#Kinstrife_Procedures_ProcedureFSM_3_IsValidState__1_">ProcedureFSM&lt;TutorialStateProcedure, TutorialStateProcedure, TutorialStateProcedure&gt;.IsValidState(TutorialStateProcedure)</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.Procedures.ProcedureFSM-3.html#Kinstrife_Procedures_ProcedureFSM_3_CompareKey__0__0_">ProcedureFSM&lt;TutorialStateProcedure, TutorialStateProcedure, TutorialStateProcedure&gt;.CompareKey(TutorialStateProcedure, TutorialStateProcedure)</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.Procedures.ProcedureFSM-3.html#Kinstrife_Procedures_ProcedureFSM_3_CompareState__1__1_">ProcedureFSM&lt;TutorialStateProcedure, TutorialStateProcedure, TutorialStateProcedure&gt;.CompareState(TutorialStateProcedure, TutorialStateProcedure)</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.Procedures.ProcedureFSM-3.html#Kinstrife_Procedures_ProcedureFSM_3_IsActiveKey__0_">ProcedureFSM&lt;TutorialStateProcedure, TutorialStateProcedure, TutorialStateProcedure&gt;.IsActiveKey(TutorialStateProcedure)</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.Procedures.ProcedureFSM-3.html#Kinstrife_Procedures_ProcedureFSM_3_IsActiveState__1_">ProcedureFSM&lt;TutorialStateProcedure, TutorialStateProcedure, TutorialStateProcedure&gt;.IsActiveState(TutorialStateProcedure)</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.Procedures.ProcedureFSM-3.html#Kinstrife_Procedures_ProcedureFSM_3_Mode">ProcedureFSM&lt;TutorialStateProcedure, TutorialStateProcedure, TutorialStateProcedure&gt;.Mode</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.Procedures.ProcedureFSM-3.html#Kinstrife_Procedures_ProcedureFSM_3_IsValid">ProcedureFSM&lt;TutorialStateProcedure, TutorialStateProcedure, TutorialStateProcedure&gt;.IsValid</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.Procedures.ProcedureFSM-3.html#Kinstrife_Procedures_ProcedureFSM_3_Evaluate_Kinstrife_Procedures_Operation_">ProcedureFSM&lt;TutorialStateProcedure, TutorialStateProcedure, TutorialStateProcedure&gt;.Evaluate(Operation)</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.Procedures.ProcedureFSM-3.html#Kinstrife_Procedures_ProcedureFSM_3_Initialize_Kinstrife_Procedures_ProceduresManager_Kinstrife_Procedures_IEvaluateConstraints_">ProcedureFSM&lt;TutorialStateProcedure, TutorialStateProcedure, TutorialStateProcedure&gt;.Initialize(ProceduresManager, IEvaluateConstraints)</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.Procedures.ProcedureFSM-3.html#Kinstrife_Procedures_ProcedureFSM_3_Initialize_Kinstrife_Procedures_ProceduresManager_Kinstrife_Procedures_Procedure_">ProcedureFSM&lt;TutorialStateProcedure, TutorialStateProcedure, TutorialStateProcedure&gt;.Initialize(ProceduresManager, Procedure)</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.Procedures.ProcedureFSM-3.html#Kinstrife_Procedures_ProcedureFSM_3_Execute_Kinstrife_Procedures_Operation_">ProcedureFSM&lt;TutorialStateProcedure, TutorialStateProcedure, TutorialStateProcedure&gt;.Execute(Operation)</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.Procedures.ProcedureFSM-3.html#Kinstrife_Procedures_ProcedureFSM_3_InitializeInstruction__1_">ProcedureFSM&lt;TutorialStateProcedure, TutorialStateProcedure, TutorialStateProcedure&gt;.InitializeInstruction(TutorialStateProcedure)</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.Procedures.ProcedureFSM-3.html#Kinstrife_Procedures_ProcedureFSM_3_OnPerformOperation_Kinstrife_Procedures_Operation_">ProcedureFSM&lt;TutorialStateProcedure, TutorialStateProcedure, TutorialStateProcedure&gt;.OnPerformOperation(Operation)</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.Procedures.ProcedureFSM-3.html#Kinstrife_Procedures_ProcedureFSM_3_State_onStart__1_">ProcedureFSM&lt;TutorialStateProcedure, TutorialStateProcedure, TutorialStateProcedure&gt;.State_onStart(TutorialStateProcedure)</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.Procedures.ProcedureFSM-3.html#Kinstrife_Procedures_ProcedureFSM_3_InitializeInstructions">ProcedureFSM&lt;TutorialStateProcedure, TutorialStateProcedure, TutorialStateProcedure&gt;.InitializeInstructions()</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.Procedures.ProcedureFSM-3.html#Kinstrife_Procedures_ProcedureFSM_3_GetKeys">ProcedureFSM&lt;TutorialStateProcedure, TutorialStateProcedure, TutorialStateProcedure&gt;.GetKeys()</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.Procedures.ProcedureFSM-3.html#Kinstrife_Procedures_ProcedureFSM_3_Transitions">ProcedureFSM&lt;TutorialStateProcedure, TutorialStateProcedure, TutorialStateProcedure&gt;.Transitions</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.Procedures.ProcedureFSM-3.html#Kinstrife_Procedures_ProcedureFSM_3_AddTransition">ProcedureFSM&lt;TutorialStateProcedure, TutorialStateProcedure, TutorialStateProcedure&gt;.AddTransition()</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.Procedures.ProcedureFSM-3.html#Kinstrife_Procedures_ProcedureFSM_3_currentTransition">ProcedureFSM&lt;TutorialStateProcedure, TutorialStateProcedure, TutorialStateProcedure&gt;.currentTransition</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.Procedures.ProcedureFSM-3.html#Kinstrife_Procedures_ProcedureFSM_3_CurrentTransition">ProcedureFSM&lt;TutorialStateProcedure, TutorialStateProcedure, TutorialStateProcedure&gt;.CurrentTransition</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.Procedures.ProcedureFSM-3.html#Kinstrife_Procedures_ProcedureFSM_3_IsTransitioning">ProcedureFSM&lt;TutorialStateProcedure, TutorialStateProcedure, TutorialStateProcedure&gt;.IsTransitioning</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.Procedures.ProcedureFSM-3.html#Kinstrife_Procedures_ProcedureFSM_3_TryGetAnyTransition__0_Kinstrife_Procedures_ProcedureFSM__0__1__2__Transition__">ProcedureFSM&lt;TutorialStateProcedure, TutorialStateProcedure, TutorialStateProcedure&gt;.TryGetAnyTransition(TutorialStateProcedure, ProcedureFSM.Transition&lt;&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.Procedures.ProcedureFSM-3.html#Kinstrife_Procedures_ProcedureFSM_3_OnUpdateTransitions_System_Single_System_Boolean_">ProcedureFSM&lt;TutorialStateProcedure, TutorialStateProcedure, TutorialStateProcedure&gt;.OnUpdateTransitions(Single, Boolean)</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.Procedures.ProcedureFSM-3.html#Kinstrife_Procedures_ProcedureFSM_3_SetTransitionTarget__1__0_Kinstrife_Procedures_ProcedureFSM__0__1__2__Transition_">ProcedureFSM&lt;TutorialStateProcedure, TutorialStateProcedure, TutorialStateProcedure&gt;.SetTransitionTarget(TutorialStateProcedure, TutorialStateProcedure, ProcedureFSM.Transition&lt;&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.Procedures.ProcedureFSM-3.html#Kinstrife_Procedures_ProcedureFSM_3_Crossfade_System_Single_System_Single_System_Boolean__">ProcedureFSM&lt;TutorialStateProcedure, TutorialStateProcedure, TutorialStateProcedure&gt;.Crossfade(Single, Single, Boolean)</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.Procedures.ProcedureFSM-3.html#Kinstrife_Procedures_ProcedureFSM_3_InitializeTransitions">ProcedureFSM&lt;TutorialStateProcedure, TutorialStateProcedure, TutorialStateProcedure&gt;.InitializeTransitions()</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.Procedures.ProcedureModule-2.html#Kinstrife_Procedures_ProcedureModule_2_elements">ProcedureModule&lt;TutorialStateProcedure, TutorialStateProcedure&gt;.elements</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.Procedures.ProcedureModule-2.html#Kinstrife_Procedures_ProcedureModule_2_AuthoringElements">ProcedureModule&lt;TutorialStateProcedure, TutorialStateProcedure&gt;.AuthoringElements</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.Procedures.ProcedureModule-2.html#Kinstrife_Procedures_ProcedureModule_2_instructions">ProcedureModule&lt;TutorialStateProcedure, TutorialStateProcedure&gt;.instructions</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.Procedures.ProcedureModule-2.html#Kinstrife_Procedures_ProcedureModule_2_Instructions">ProcedureModule&lt;TutorialStateProcedure, TutorialStateProcedure&gt;.Instructions</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.Procedures.ProcedureModule-2.html#Kinstrife_Procedures_ProcedureModule_2_componentElements">ProcedureModule&lt;TutorialStateProcedure, TutorialStateProcedure&gt;.componentElements</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.Procedures.ProcedureModule-2.html#Kinstrife_Procedures_ProcedureModule_2_HasElements">ProcedureModule&lt;TutorialStateProcedure, TutorialStateProcedure&gt;.HasElements</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.Procedures.ProcedureModule-2.html#Kinstrife_Procedures_ProcedureModule_2_HasComponentElements">ProcedureModule&lt;TutorialStateProcedure, TutorialStateProcedure&gt;.HasComponentElements</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.Procedures.ProcedureModule-2.html#Kinstrife_Procedures_ProcedureModule_2_HasInstructions">ProcedureModule&lt;TutorialStateProcedure, TutorialStateProcedure&gt;.HasInstructions</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.Procedures.ProcedureModule-2.html#Kinstrife_Procedures_ProcedureModule_2_InstructionsCount">ProcedureModule&lt;TutorialStateProcedure, TutorialStateProcedure&gt;.InstructionsCount</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.Procedures.ProcedureModule-2.html#Kinstrife_Procedures_ProcedureModule_2_OnRuntimeEnable">ProcedureModule&lt;TutorialStateProcedure, TutorialStateProcedure&gt;.OnRuntimeEnable()</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.Procedures.ProcedureModule-2.html#Kinstrife_Procedures_ProcedureModule_2_OnRuntimeDisable">ProcedureModule&lt;TutorialStateProcedure, TutorialStateProcedure&gt;.OnRuntimeDisable()</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.Procedures.ProcedureModule-2.html#Kinstrife_Procedures_ProcedureModule_2_RegisterEvents">ProcedureModule&lt;TutorialStateProcedure, TutorialStateProcedure&gt;.RegisterEvents()</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.Procedures.ProcedureModule-2.html#Kinstrife_Procedures_ProcedureModule_2_UnregisterEvents">ProcedureModule&lt;TutorialStateProcedure, TutorialStateProcedure&gt;.UnregisterEvents()</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.Procedures.ProcedureModule-2.html#Kinstrife_Procedures_ProcedureModule_2_OnRuntimeDuplicate_Kinstrife_DataContainers_ScriptableObjectComponent_">ProcedureModule&lt;TutorialStateProcedure, TutorialStateProcedure&gt;.OnRuntimeDuplicate(ScriptableObjectComponent)</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.Procedures.ProcedureModule-2.html#Kinstrife_Procedures_ProcedureModule_2_OnInternalInitialize">ProcedureModule&lt;TutorialStateProcedure, TutorialStateProcedure&gt;.OnInternalInitialize()</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.Procedures.ProcedureModule-2.html#Kinstrife_Procedures_ProcedureModule_2_InitializeInstruction__0_">ProcedureModule&lt;TutorialStateProcedure, TutorialStateProcedure&gt;.InitializeInstruction(TutorialStateProcedure)</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.Procedures.ProcedureModule-2.html#Kinstrife_Procedures_ProcedureModule_2_ProvideDependents">ProcedureModule&lt;TutorialStateProcedure, TutorialStateProcedure&gt;.ProvideDependents()</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.Procedures.ProcedureModule-2.html#Kinstrife_Procedures_ProcedureModule_2_GetReferencedProcedures">ProcedureModule&lt;TutorialStateProcedure, TutorialStateProcedure&gt;.GetReferencedProcedures()</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.Procedures.ProcedureModule-2.html#Kinstrife_Procedures_ProcedureModule_2_OnPerformOperation_Kinstrife_Procedures_Operation_">ProcedureModule&lt;TutorialStateProcedure, TutorialStateProcedure&gt;.OnPerformOperation(Operation)</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.Procedures.ProcedureModule-2.html#Kinstrife_Procedures_ProcedureModule_2_ShouldUpdate">ProcedureModule&lt;TutorialStateProcedure, TutorialStateProcedure&gt;.ShouldUpdate</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.Procedures.ProcedureModule-2.html#Kinstrife_Procedures_ProcedureModule_2_OnUpdate_System_Single_">ProcedureModule&lt;TutorialStateProcedure, TutorialStateProcedure&gt;.OnUpdate(Single)</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.Procedures.ProcedureModule-2.html#Kinstrife_Procedures_ProcedureModule_2_Dispose">ProcedureModule&lt;TutorialStateProcedure, TutorialStateProcedure&gt;.Dispose()</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.Procedures.ProcedureModule-2.html#Kinstrife_Procedures_ProcedureModule_2_DrawTitleBarGUI">ProcedureModule&lt;TutorialStateProcedure, TutorialStateProcedure&gt;.DrawTitleBarGUI()</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.Procedures.ProcedureModule-2.html#Kinstrife_Procedures_ProcedureModule_2_RemoveElementInspector__1_">ProcedureModule&lt;TutorialStateProcedure, TutorialStateProcedure&gt;.RemoveElementInspector(TutorialStateProcedure)</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.Procedures.ProcedureComponent.html#Kinstrife_Procedures_ProcedureComponent_procedure">ProcedureComponent.procedure</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.Procedures.ProcedureComponent.html#Kinstrife_Procedures_ProcedureComponent_Procedure">ProcedureComponent.Procedure</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.Procedures.ProcedureComponent.html#Kinstrife_Procedures_ProcedureComponent_IsInvalid">ProcedureComponent.IsInvalid</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.Procedures.ProcedureComponent.html#Kinstrife_Procedures_ProcedureComponent_Name">ProcedureComponent.Name</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.Procedures.ProcedureComponent.html#Kinstrife_Procedures_ProcedureComponent_manager">ProcedureComponent.manager</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.Procedures.ProcedureComponent.html#Kinstrife_Procedures_ProcedureComponent_RuntimeCacheReferences">ProcedureComponent.RuntimeCacheReferences()</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.Procedures.ProcedureComponent.html#Kinstrife_Procedures_ProcedureComponent_OnRuntimeEnable">ProcedureComponent.OnRuntimeEnable()</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.Procedures.ProcedureComponent.html#Kinstrife_Procedures_ProcedureComponent_OnRuntimeDisable">ProcedureComponent.OnRuntimeDisable()</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.Procedures.ProcedureComponent.html#Kinstrife_Procedures_ProcedureComponent_OnInternalInitialize">ProcedureComponent.OnInternalInitialize()</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.Procedures.ProcedureComponent.html#Kinstrife_Procedures_ProcedureComponent_ValidateInstance">ProcedureComponent.ValidateInstance()</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.Procedures.ProcedureComponent.html#Kinstrife_Procedures_ProcedureComponent_ValidateInstance_Kinstrife_DataContainers_ScriptableObjectComponent_">ProcedureComponent.ValidateInstance(ScriptableObjectComponent)</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.DataContainers.ScriptableObjectComponent.html#Kinstrife_DataContainers_ScriptableObjectComponent_RequiresDuplication">ScriptableObjectComponent.RequiresDuplication</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.DataContainers.ScriptableObjectComponent.html#Kinstrife_DataContainers_ScriptableObjectComponent_isInstance">ScriptableObjectComponent.isInstance</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.DataContainers.ScriptableObjectComponent.html#Kinstrife_DataContainers_ScriptableObjectComponent_IsInstance">ScriptableObjectComponent.IsInstance</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.DataContainers.ScriptableObjectComponent.html#Kinstrife_DataContainers_ScriptableObjectComponent_enabled">ScriptableObjectComponent.enabled</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.DataContainers.ScriptableObjectComponent.html#Kinstrife_DataContainers_ScriptableObjectComponent_IsEnabled">ScriptableObjectComponent.IsEnabled</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.DataContainers.ScriptableObjectComponent.html#Kinstrife_DataContainers_ScriptableObjectComponent_IsInitialized">ScriptableObjectComponent.IsInitialized</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.DataContainers.ScriptableObjectComponent.html#Kinstrife_DataContainers_ScriptableObjectComponent_SetEnabled_System_Boolean_">ScriptableObjectComponent.SetEnabled(Boolean)</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.DataContainers.ScriptableObjectComponent.html#Kinstrife_DataContainers_ScriptableObjectComponent_TrySetEnabled_System_Boolean_">ScriptableObjectComponent.TrySetEnabled(Boolean)</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.DataContainers.ScriptableObjectComponent.html#Kinstrife_DataContainers_ScriptableObjectComponent_OnAddComponent__1_Kinstrife_DataContainers_IScriptableObjectDataContainer___0__">ScriptableObjectComponent.OnAddComponent&lt;T&gt;(IScriptableObjectDataContainer&lt;T&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.DataContainers.ScriptableObjectComponent.html#Kinstrife_DataContainers_ScriptableObjectComponent_OnRuntimeDuplicate_Kinstrife_DataContainers_ScriptableObjectComponent_">ScriptableObjectComponent.OnRuntimeDuplicate(ScriptableObjectComponent)</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.DataContainers.ScriptableObjectComponent.html#Kinstrife_DataContainers_ScriptableObjectComponent_AuthoringTab">ScriptableObjectComponent.AuthoringTab</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.DataContainers.ScriptableObjectComponent.html#Kinstrife_DataContainers_ScriptableObjectComponent_RuntimeTab">ScriptableObjectComponent.RuntimeTab</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.DataContainers.ScriptableObjectComponent.html#Kinstrife_DataContainers_ScriptableObjectComponent_DebugTab">ScriptableObjectComponent.DebugTab</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.DataContainers.ScriptableObjectComponent.html#Kinstrife_DataContainers_ScriptableObjectComponent_AuthoringTabActions">ScriptableObjectComponent.AuthoringTabActions</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.DataContainers.ScriptableObjectComponent.html#Kinstrife_DataContainers_ScriptableObjectComponent_RuntimeTabActions">ScriptableObjectComponent.RuntimeTabActions</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.DataContainers.ScriptableObjectComponent.html#Kinstrife_DataContainers_ScriptableObjectComponent_DebugTabActions">ScriptableObjectComponent.DebugTabActions</a>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Kinstrife.Tutorial.html">Kinstrife.Tutorial</a></h6>
+  <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
+  <h5 id="Kinstrife_Tutorial_TutorialStateMachine_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class TutorialStateMachine : ProcedureFSM&lt;TutorialStateProcedure, TutorialStateProcedure&gt;, IProcedureComponent, IInstructions&lt;TutorialStateProcedure&gt;, IInstructionsAuthoring&lt;TutorialStateProcedure, TutorialStateProcedure&gt;, IProvideDependents, IDependent, IDisposable, IConstraint, IInstruction, IConditionEvaluator, IHasReferencedProcedures, IUpdateable, ITImer</code></pre>
+  </div>
+  <h3 id="fields">Fields
+  </h3>
+  
+  
+  <h4 id="Kinstrife_Tutorial_TutorialStateMachine_crossFadeTime" data-uid="Kinstrife.Tutorial.TutorialStateMachine.crossFadeTime">crossFadeTime</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float crossFadeTime</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="properties">Properties
+  </h3>
+  
+  
+  <a id="Kinstrife_Tutorial_TutorialStateMachine_crossfade_" data-uid="Kinstrife.Tutorial.TutorialStateMachine.crossfade*"></a>
+  <h4 id="Kinstrife_Tutorial_TutorialStateMachine_crossfade" data-uid="Kinstrife.Tutorial.TutorialStateMachine.crossfade">crossfade</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool crossfade { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Kinstrife_Tutorial_TutorialStateMachine_Timer_" data-uid="Kinstrife.Tutorial.TutorialStateMachine.Timer*"></a>
+  <h4 id="Kinstrife_Tutorial_TutorialStateMachine_Timer" data-uid="Kinstrife.Tutorial.TutorialStateMachine.Timer">Timer</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ref Timer Timer { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Kinstrife.Timer.html">Timer</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  
+  
+  <a id="Kinstrife_Tutorial_TutorialStateMachine_OnUpdate_" data-uid="Kinstrife.Tutorial.TutorialStateMachine.OnUpdate*"></a>
+  <h4 id="Kinstrife_Tutorial_TutorialStateMachine_OnUpdate_System_Single_" data-uid="Kinstrife.Tutorial.TutorialStateMachine.OnUpdate(System.Single)">OnUpdate(Single)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override void OnUpdate(float deltaTime)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><span class="parametername">deltaTime</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">Kinstrife.Procedures.ProcedureModule&lt;Kinstrife.Tutorial.TutorialStateProcedure, Kinstrife.Tutorial.TutorialStateProcedure&gt;.OnUpdate(System.Single)</span></div>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <a class="xref" href="Kinstrife.Procedures.IProcedureComponent.html">IProcedureComponent</a>
+  </div>
+  <div>
+      <a class="xref" href="Kinstrife.Procedures.IInstructions-1.html">IInstructions&lt;T&gt;</a>
+  </div>
+  <div>
+      <a class="xref" href="Kinstrife.Procedures.IInstructionsAuthoring-2.html">IInstructionsAuthoring&lt;T, U&gt;</a>
+  </div>
+  <div>
+      <a class="xref" href="Kinstrife.Core.DependencyInjection.IProvideDependents.html">IProvideDependents</a>
+  </div>
+  <div>
+      <a class="xref" href="Kinstrife.Core.DependencyInjection.IDependent.html">IDependent</a>
+  </div>
+  <div>
+      <span class="xref">System.IDisposable</span>
+  </div>
+  <div>
+      <a class="xref" href="Kinstrife.Procedures.IConstraint.html">IConstraint</a>
+  </div>
+  <div>
+      <a class="xref" href="Kinstrife.Procedures.IInstruction.html">IInstruction</a>
+  </div>
+  <div>
+      <a class="xref" href="Kinstrife.Procedures.IConditionEvaluator.html">IConditionEvaluator</a>
+  </div>
+  <div>
+      <a class="xref" href="Kinstrife.Procedures.IHasReferencedProcedures.html">IHasReferencedProcedures</a>
+  </div>
+  <div>
+      <a class="xref" href="Kinstrife.Procedures.IUpdateable.html">IUpdateable</a>
+  </div>
+  <div>
+      <a class="xref" href="Kinstrife.ITImer.html">ITImer</a>
+  </div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+  </body>
+</html>

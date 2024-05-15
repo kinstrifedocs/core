@@ -1,0 +1,479 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class PopupViewModel
+   | Kinstrife </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class PopupViewModel
+   | Kinstrife ">
+    <meta name="generator" content="docfx 2.59.4.0">
+    
+    <link rel="shortcut icon" href="../../favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet"> 
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../index.html">
+                <img id="logo" class="svg" src="../../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Kinstrife.UI.PopupViewModel">
+  
+  
+  <h1 id="Kinstrife_UI_PopupViewModel" data-uid="Kinstrife.UI.PopupViewModel" class="text-break">Class PopupViewModel
+  </h1>
+  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><a class="xref" href="Kinstrife.UI.ModuleViewModel.html">ModuleViewModel</a></div>
+    <div class="level2"><a class="xref" href="Kinstrife.UI.DialogViewModel.html">DialogViewModel</a></div>
+    <div class="level3"><span class="xref">PopupViewModel</span></div>
+  </div>
+  <div class="implements">
+    <h5>Implements</h5>
+    <div><a class="xref" href="Kinstrife.Core.DependencyInjection.IInjectable.html">IInjectable</a></div>
+    <div><a class="xref" href="Kinstrife.Core.DependencyInjection.IInitializable.html">IInitializable</a></div>
+    <div><a class="xref" href="Kinstrife.Core.DependencyInjection.IDependent.html">IDependent</a></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="Kinstrife.UI.DialogViewModel.html#Kinstrife_UI_DialogViewModel_message">DialogViewModel.message</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.UI.DialogViewModel.html#Kinstrife_UI_DialogViewModel_model">DialogViewModel.model</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.UI.DialogViewModel.html#Kinstrife_UI_DialogViewModel_HasChoice">DialogViewModel.HasChoice</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.UI.DialogViewModel.html#Kinstrife_UI_DialogViewModel_ShowCloseButton">DialogViewModel.ShowCloseButton</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.UI.DialogViewModel.html#Kinstrife_UI_DialogViewModel_closeAction">DialogViewModel.closeAction</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.UI.DialogViewModel.html#Kinstrife_UI_DialogViewModel_Padding">DialogViewModel.Padding</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.UI.DialogViewModel.html#Kinstrife_UI_DialogViewModel_Initialized">DialogViewModel.Initialized</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.UI.DialogViewModel.html#Kinstrife_UI_DialogViewModel_CloseModal">DialogViewModel.CloseModal()</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.UI.DialogViewModel.html#Kinstrife_UI_DialogViewModel_SetMessage_System_String_System_String_">DialogViewModel.SetMessage(String, String)</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.UI.DialogViewModel.html#Kinstrife_UI_DialogViewModel_SetCloseButtonText_System_String_">DialogViewModel.SetCloseButtonText(String)</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.UI.DialogViewModel.html#Kinstrife_UI_DialogViewModel_SetChoices_System_Collections_Generic_List_Kinstrife_UI_DialogViewModel_Option__">DialogViewModel.SetChoices(List&lt;DialogViewModel.Option&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.UI.DialogViewModel.html#Kinstrife_UI_DialogViewModel_isCloseRequested">DialogViewModel.isCloseRequested</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.UI.DialogViewModel.html#Kinstrife_UI_DialogViewModel_RequestClose">DialogViewModel.RequestClose()</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.UI.DialogViewModel.html#Kinstrife_UI_DialogViewModel_ResetInternalState">DialogViewModel.ResetInternalState()</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.UI.DialogViewModel.html#Kinstrife_UI_DialogViewModel_ApplyPopupSettings_Kinstrife_UI_PopupSettings_">DialogViewModel.ApplyPopupSettings(PopupSettings)</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.UI.DialogViewModel.html#Kinstrife_UI_DialogViewModel_PositionAtCursor_Vector2_">DialogViewModel.PositionAtCursor(Vector2)</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.UI.DialogViewModel.html#Kinstrife_UI_DialogViewModel_elBounds">DialogViewModel.elBounds</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.UI.DialogViewModel.html#Kinstrife_UI_DialogViewModel_rootBounds">DialogViewModel.rootBounds</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.UI.ModuleViewModel.html#Kinstrife_UI_ModuleViewModel_flow">ModuleViewModel.flow</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.UI.ModuleViewModel.html#Kinstrife_UI_ModuleViewModel_module">ModuleViewModel.module</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.UI.ModuleViewModel.html#Kinstrife_UI_ModuleViewModel_Inject_Kinstrife_Application_ApplicationFlow_Kinstrife_Application_Module_">ModuleViewModel.Inject(ApplicationFlow, Module)</a>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Kinstrife.UI.html">Kinstrife.UI</a></h6>
+  <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
+  <h5 id="Kinstrife_UI_PopupViewModel_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class PopupViewModel : DialogViewModel, IInjectable, IInitializable, IDependent</code></pre>
+  </div>
+  <h3 id="properties">Properties
+  </h3>
+  
+  
+  <a id="Kinstrife_UI_PopupViewModel_Delay_" data-uid="Kinstrife.UI.PopupViewModel.Delay*"></a>
+  <h4 id="Kinstrife_UI_PopupViewModel_Delay" data-uid="Kinstrife.UI.PopupViewModel.Delay">Delay</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float Delay { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Kinstrife_UI_PopupViewModel_HasChildren_" data-uid="Kinstrife.UI.PopupViewModel.HasChildren*"></a>
+  <h4 id="Kinstrife_UI_PopupViewModel_HasChildren" data-uid="Kinstrife.UI.PopupViewModel.HasChildren">HasChildren</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool HasChildren { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Kinstrife_UI_PopupViewModel_HasContent_" data-uid="Kinstrife.UI.PopupViewModel.HasContent*"></a>
+  <h4 id="Kinstrife_UI_PopupViewModel_HasContent" data-uid="Kinstrife.UI.PopupViewModel.HasContent">HasContent</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override bool HasContent { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Kinstrife_UI_PopupViewModel_Hide_" data-uid="Kinstrife.UI.PopupViewModel.Hide*"></a>
+  <h4 id="Kinstrife_UI_PopupViewModel_Hide" data-uid="Kinstrife.UI.PopupViewModel.Hide">Hide</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public BindableBool Hide { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">BindableBool</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Kinstrife_UI_PopupViewModel_PlayerPrefsKey_" data-uid="Kinstrife.UI.PopupViewModel.PlayerPrefsKey*"></a>
+  <h4 id="Kinstrife_UI_PopupViewModel_PlayerPrefsKey" data-uid="Kinstrife.UI.PopupViewModel.PlayerPrefsKey">PlayerPrefsKey</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string PlayerPrefsKey { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Kinstrife_UI_PopupViewModel_PlayerPrefsValue_" data-uid="Kinstrife.UI.PopupViewModel.PlayerPrefsValue*"></a>
+  <h4 id="Kinstrife_UI_PopupViewModel_PlayerPrefsValue" data-uid="Kinstrife.UI.PopupViewModel.PlayerPrefsValue">PlayerPrefsValue</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool PlayerPrefsValue { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  
+  
+  <a id="Kinstrife_UI_PopupViewModel_HideInfoBox_" data-uid="Kinstrife.UI.PopupViewModel.HideInfoBox*"></a>
+  <h4 id="Kinstrife_UI_PopupViewModel_HideInfoBox" data-uid="Kinstrife.UI.PopupViewModel.HideInfoBox">HideInfoBox()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void HideInfoBox()</code></pre>
+  </div>
+  
+  
+  <a id="Kinstrife_UI_PopupViewModel_Initialize_" data-uid="Kinstrife.UI.PopupViewModel.Initialize*"></a>
+  <h4 id="Kinstrife_UI_PopupViewModel_Initialize" data-uid="Kinstrife.UI.PopupViewModel.Initialize">Initialize()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Initialize()</code></pre>
+  </div>
+  
+  
+  <a id="Kinstrife_UI_PopupViewModel_Initialize_" data-uid="Kinstrife.UI.PopupViewModel.Initialize*"></a>
+  <h4 id="Kinstrife_UI_PopupViewModel_Initialize_VisualElement_Plate_" data-uid="Kinstrife.UI.PopupViewModel.Initialize(VisualElement,Plate)">Initialize(VisualElement, Plate)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override void Initialize(VisualElement container, Plate plate)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">VisualElement</span></td>
+        <td><span class="parametername">container</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">Plate</span></td>
+        <td><span class="parametername">plate</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Kinstrife.UI.DialogViewModel.html#Kinstrife_UI_DialogViewModel_Initialize_VisualElement_Plate_">DialogViewModel.Initialize(VisualElement, Plate)</a></div>
+  
+  
+  <a id="Kinstrife_UI_PopupViewModel_ResetKey_" data-uid="Kinstrife.UI.PopupViewModel.ResetKey*"></a>
+  <h4 id="Kinstrife_UI_PopupViewModel_ResetKey" data-uid="Kinstrife.UI.PopupViewModel.ResetKey">ResetKey()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void ResetKey()</code></pre>
+  </div>
+  
+  
+  <a id="Kinstrife_UI_PopupViewModel_SetKey_" data-uid="Kinstrife.UI.PopupViewModel.SetKey*"></a>
+  <h4 id="Kinstrife_UI_PopupViewModel_SetKey_System_Boolean_" data-uid="Kinstrife.UI.PopupViewModel.SetKey(System.Boolean)">SetKey(Boolean)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetKey(bool enable)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">enable</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Kinstrife_UI_PopupViewModel_SkipShow_" data-uid="Kinstrife.UI.PopupViewModel.SkipShow*"></a>
+  <h4 id="Kinstrife_UI_PopupViewModel_SkipShow" data-uid="Kinstrife.UI.PopupViewModel.SkipShow">SkipShow()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool SkipShow()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <a class="xref" href="Kinstrife.Core.DependencyInjection.IInjectable.html">IInjectable</a>
+  </div>
+  <div>
+      <a class="xref" href="Kinstrife.Core.DependencyInjection.IInitializable.html">IInitializable</a>
+  </div>
+  <div>
+      <a class="xref" href="Kinstrife.Core.DependencyInjection.IDependent.html">IDependent</a>
+  </div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+  </body>
+</html>

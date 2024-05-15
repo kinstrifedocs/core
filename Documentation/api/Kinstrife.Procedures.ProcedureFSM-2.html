@@ -83,6 +83,7 @@
     <div class="level3"><a class="xref" href="Kinstrife.Procedures.ProcedureModule-2.html">ProcedureModule</a>&lt;TState, TAuthoring&gt;</div>
     <div class="level4"><a class="xref" href="Kinstrife.Procedures.ProcedureFSM-3.html">ProcedureFSM</a>&lt;TAuthoring, TState, TAuthoring&gt;</div>
     <div class="level5"><span class="xref">ProcedureFSM&lt;TState, TAuthoring&gt;</span></div>
+      <div class="level6"><a class="xref" href="Kinstrife.Tutorial.TutorialStateMachine.html">TutorialStateMachine</a></div>
   </div>
   <div class="implements">
     <h5>Implements</h5>
@@ -119,6 +120,9 @@
       <a class="xref" href="Kinstrife.Procedures.ProcedureFSM-3.html#Kinstrife_Procedures_ProcedureFSM_3_FSM">ProcedureFSM&lt;TAuthoring, TState, TAuthoring&gt;.FSM</a>
     </div>
     <div>
+      <a class="xref" href="Kinstrife.Procedures.ProcedureFSM-3.html#Kinstrife_Procedures_ProcedureFSM_3_Item__0_">ProcedureFSM&lt;TAuthoring, TState, TAuthoring&gt;.Item[TAuthoring]</a>
+    </div>
+    <div>
       <a class="xref" href="Kinstrife.Procedures.ProcedureFSM-3.html#Kinstrife_Procedures_ProcedureFSM_3_onBeforeEnterState">ProcedureFSM&lt;TAuthoring, TState, TAuthoring&gt;.onBeforeEnterState</a>
     </div>
     <div>
@@ -135,6 +139,9 @@
     </div>
     <div>
       <a class="xref" href="Kinstrife.Procedures.ProcedureFSM-3.html#Kinstrife_Procedures_ProcedureFSM_3_onTransition">ProcedureFSM&lt;TAuthoring, TState, TAuthoring&gt;.onTransition</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.Procedures.ProcedureFSM-3.html#Kinstrife_Procedures_ProcedureFSM_3_TryTransition_System_Int32_">ProcedureFSM&lt;TAuthoring, TState, TAuthoring&gt;.TryTransition(Int32)</a>
     </div>
     <div>
       <a class="xref" href="Kinstrife.Procedures.ProcedureFSM-3.html#Kinstrife_Procedures_ProcedureFSM_3_TryTransition__0_">ProcedureFSM&lt;TAuthoring, TState, TAuthoring&gt;.TryTransition(TAuthoring)</a>
@@ -236,13 +243,13 @@
       <a class="xref" href="Kinstrife.Procedures.ProcedureFSM-3.html#Kinstrife_Procedures_ProcedureFSM_3_TryGetAnyTransition__0_Kinstrife_Procedures_ProcedureFSM__0__1__2__Transition__">ProcedureFSM&lt;TAuthoring, TState, TAuthoring&gt;.TryGetAnyTransition(TAuthoring, ProcedureFSM.Transition&lt;&gt;)</a>
     </div>
     <div>
-      <a class="xref" href="Kinstrife.Procedures.ProcedureFSM-3.html#Kinstrife_Procedures_ProcedureFSM_3_GetTransitions__0_">ProcedureFSM&lt;TAuthoring, TState, TAuthoring&gt;.GetTransitions(TAuthoring)</a>
-    </div>
-    <div>
       <a class="xref" href="Kinstrife.Procedures.ProcedureFSM-3.html#Kinstrife_Procedures_ProcedureFSM_3_OnUpdateTransitions_System_Single_System_Boolean_">ProcedureFSM&lt;TAuthoring, TState, TAuthoring&gt;.OnUpdateTransitions(Single, Boolean)</a>
     </div>
     <div>
-      <a class="xref" href="Kinstrife.Procedures.ProcedureFSM-3.html#Kinstrife_Procedures_ProcedureFSM_3_Crossfade_System_Single_System_Single_">ProcedureFSM&lt;TAuthoring, TState, TAuthoring&gt;.Crossfade(Single, Single)</a>
+      <a class="xref" href="Kinstrife.Procedures.ProcedureFSM-3.html#Kinstrife_Procedures_ProcedureFSM_3_SetTransitionTarget__1__0_Kinstrife_Procedures_ProcedureFSM__0__1__2__Transition_">ProcedureFSM&lt;TAuthoring, TState, TAuthoring&gt;.SetTransitionTarget(TState, TAuthoring, ProcedureFSM.Transition&lt;&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.Procedures.ProcedureFSM-3.html#Kinstrife_Procedures_ProcedureFSM_3_Crossfade_System_Single_System_Single_System_Boolean__">ProcedureFSM&lt;TAuthoring, TState, TAuthoring&gt;.Crossfade(Single, Single, Boolean)</a>
     </div>
     <div>
       <a class="xref" href="Kinstrife.Procedures.ProcedureFSM-3.html#Kinstrife_Procedures_ProcedureFSM_3_InitializeTransitions">ProcedureFSM&lt;TAuthoring, TState, TAuthoring&gt;.InitializeTransitions()</a>
@@ -354,6 +361,9 @@
     </div>
     <div>
       <a class="xref" href="Kinstrife.Procedures.ProcedureComponent.html#Kinstrife_Procedures_ProcedureComponent_ValidateInstance_Kinstrife_DataContainers_ScriptableObjectComponent_">ProcedureComponent.ValidateInstance(ScriptableObjectComponent)</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.DataContainers.ScriptableObjectComponent.html#Kinstrife_DataContainers_ScriptableObjectComponent_RequiresDuplication">ScriptableObjectComponent.RequiresDuplication</a>
     </div>
     <div>
       <a class="xref" href="Kinstrife.DataContainers.ScriptableObjectComponent.html#Kinstrife_DataContainers_ScriptableObjectComponent_isInstance">ScriptableObjectComponent.isInstance</a>
@@ -496,6 +506,50 @@
   </table>
   <h5 class="overrides">Overrides</h5>
   <div><span class="xref">Kinstrife.Procedures.ProcedureFSM&lt;TAuthoring, TState, TAuthoring&gt;.State_onStart(TState)</span></div>
+  
+  
+  <a id="Kinstrife_Procedures_ProcedureFSM_2_TryTransition_" data-uid="Kinstrife.Procedures.ProcedureFSM`2.TryTransition*"></a>
+  <h4 id="Kinstrife_Procedures_ProcedureFSM_2_TryTransition_System_Int32_" data-uid="Kinstrife.Procedures.ProcedureFSM`2.TryTransition(System.Int32)">TryTransition(Int32)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override bool TryTransition(int index)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">index</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">Kinstrife.Procedures.ProcedureFSM&lt;TAuthoring, TState, TAuthoring&gt;.TryTransition(System.Int32)</span></div>
   <h3 id="implements">Implements</h3>
   <div>
       <a class="xref" href="Kinstrife.Procedures.IProcedureComponent.html">IProcedureComponent</a>

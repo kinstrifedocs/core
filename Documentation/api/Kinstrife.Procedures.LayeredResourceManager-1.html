@@ -79,10 +79,21 @@
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
     <div class="level1"><a class="xref" href="Kinstrife.Procedures.ResourceProvider.html">ResourceProvider</a></div>
-    <div class="level2"><span class="xref">LayeredResourceManager&lt;T&gt;</span></div>
+    <div class="level2"><a class="xref" href="Kinstrife.Procedures.ResourceProvider-1.html">ResourceProvider</a>&lt;T&gt;</div>
+    <div class="level3"><span class="xref">LayeredResourceManager&lt;T&gt;</span></div>
+  </div>
+  <div class="implements">
+    <h5>Implements</h5>
+    <div><a class="xref" href="Kinstrife.Procedures.IResourceProvider-1.html">IResourceProvider</a>&lt;T&gt;</div>
   </div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="Kinstrife.Procedures.ResourceProvider-1.html#Kinstrife_Procedures_ResourceProvider_1_HasResource__0_System_UInt32_">ResourceProvider&lt;T&gt;.HasResource(T, UInt32)</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.Procedures.ResourceProvider-1.html#Kinstrife_Procedures_ResourceProvider_1_HasAnyOfResource__0_">ResourceProvider&lt;T&gt;.HasAnyOfResource(T)</a>
+    </div>
     <div>
       <a class="xref" href="Kinstrife.Procedures.ResourceProvider.html#Kinstrife_Procedures_ResourceProvider_manager">ResourceProvider.manager</a>
     </div>
@@ -97,7 +108,7 @@
   <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
   <h5 id="Kinstrife_Procedures_LayeredResourceManager_1_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public abstract class LayeredResourceManager&lt;T&gt; : ResourceProvider</code></pre>
+    <pre><code class="lang-csharp hljs">public abstract class LayeredResourceManager&lt;T&gt; : ResourceProvider&lt;T&gt;, IResourceProvider&lt;T&gt;</code></pre>
   </div>
   <h5 class="typeParameters">Type Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -116,6 +127,30 @@
   </table>
   <h3 id="fields">Fields
   </h3>
+  
+  
+  <h4 id="Kinstrife_Procedures_LayeredResourceManager_1_authoring" data-uid="Kinstrife.Procedures.LayeredResourceManager`1.authoring">authoring</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected T[] authoring</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>T[]</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   
   
   <h4 id="Kinstrife_Procedures_LayeredResourceManager_1_layers" data-uid="Kinstrife.Procedures.LayeredResourceManager`1.layers">layers</h4>
@@ -168,7 +203,7 @@
     </tbody>
   </table>
   <h5 class="overrides">Overrides</h5>
-  <div><a class="xref" href="Kinstrife.Procedures.ResourceProvider.html#Kinstrife_Procedures_ResourceProvider_ResourceType">ResourceProvider.ResourceType</a></div>
+  <div><span class="xref">Kinstrife.Procedures.ResourceProvider&lt;T&gt;.ResourceType</span></div>
   <h3 id="methods">Methods
   </h3>
   
@@ -213,6 +248,49 @@
       </tr>
     </tbody>
   </table>
+  
+  
+  <a id="Kinstrife_Procedures_LayeredResourceManager_1_InitializeProviderAwake_" data-uid="Kinstrife.Procedures.LayeredResourceManager`1.InitializeProviderAwake*"></a>
+  <h4 id="Kinstrife_Procedures_LayeredResourceManager_1_InitializeProviderAwake" data-uid="Kinstrife.Procedures.LayeredResourceManager`1.InitializeProviderAwake">InitializeProviderAwake()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override void InitializeProviderAwake()</code></pre>
+  </div>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Kinstrife.Procedures.ResourceProvider.html#Kinstrife_Procedures_ResourceProvider_InitializeProviderAwake">ResourceProvider.InitializeProviderAwake()</a></div>
+  
+  
+  <a id="Kinstrife_Procedures_LayeredResourceManager_1_OnInitializeLayer_" data-uid="Kinstrife.Procedures.LayeredResourceManager`1.OnInitializeLayer*"></a>
+  <h4 id="Kinstrife_Procedures_LayeredResourceManager_1_OnInitializeLayer_Kinstrife_Procedures_ResourceLayer__0__" data-uid="Kinstrife.Procedures.LayeredResourceManager`1.OnInitializeLayer(Kinstrife.Procedures.ResourceLayer{`0})">OnInitializeLayer(ResourceLayer&lt;T&gt;)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void OnInitializeLayer(ResourceLayer&lt;T&gt; layer)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Kinstrife.Procedures.ResourceLayer-1.html">ResourceLayer</a>&lt;T&gt;</td>
+        <td><span class="parametername">layer</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <a class="xref" href="Kinstrife.Procedures.IResourceProvider-1.html">IResourceProvider&lt;T&gt;</a>
+  </div>
 </article>
           </div>
           

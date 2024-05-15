@@ -1,0 +1,991 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class TutorialControllerProcedure
+   | Kinstrife </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class TutorialControllerProcedure
+   | Kinstrife ">
+    <meta name="generator" content="docfx 2.59.4.0">
+    
+    <link rel="shortcut icon" href="../../favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet"> 
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../index.html">
+                <img id="logo" class="svg" src="../../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Kinstrife.Tutorial.TutorialControllerProcedure">
+  
+  
+  <h1 id="Kinstrife_Tutorial_TutorialControllerProcedure" data-uid="Kinstrife.Tutorial.TutorialControllerProcedure" class="text-break">Class TutorialControllerProcedure
+  </h1>
+  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><a class="xref" href="Kinstrife.DataContainers.ScriptableObjectComponent.html">ScriptableObjectComponent</a></div>
+    <div class="level2"><a class="xref" href="Kinstrife.DataContainers.ScriptableObjectDataContainer-1.html">ScriptableObjectDataContainer</a>&lt;<a class="xref" href="Kinstrife.Procedures.ProcedureComponent.html">ProcedureComponent</a>&gt;</div>
+    <div class="level3"><a class="xref" href="Kinstrife.Procedures.Procedure.html">Procedure</a></div>
+    <div class="level4"><span class="xref">TutorialControllerProcedure</span></div>
+  </div>
+  <div class="implements">
+    <h5>Implements</h5>
+    <div><a class="xref" href="Kinstrife.DataContainers.IScriptableObjectDataContainer-1.html">IScriptableObjectDataContainer</a>&lt;<a class="xref" href="Kinstrife.Procedures.ProcedureComponent.html">ProcedureComponent</a>&gt;</div>
+    <div><a class="xref" href="Kinstrife.Procedures.IProcedure.html">IProcedure</a></div>
+    <div><a class="xref" href="Kinstrife.Procedures.IWeighted.html">IWeighted</a></div>
+    <div><a class="xref" href="Kinstrife.Procedures.IHasClient.html">IHasClient</a></div>
+    <div><a class="xref" href="Kinstrife.Procedures.IProcedureEventsSource.html">IProcedureEventsSource</a></div>
+    <div><a class="xref" href="Kinstrife.Procedures.IHasReferencedProcedures.html">IHasReferencedProcedures</a></div>
+    <div><a class="xref" href="Kinstrife.Procedures.IUpdateable.html">IUpdateable</a></div>
+    <div><a class="xref" href="Kinstrife.Core.DependencyInjection.IInjectable.html">IInjectable</a></div>
+    <div><a class="xref" href="Kinstrife.Core.DependencyInjection.IDependent.html">IDependent</a></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="Kinstrife.Procedures.Procedure.html#Kinstrife_Procedures_Procedure_key">Procedure.key</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.Procedures.Procedure.html#Kinstrife_Procedures_Procedure_Key">Procedure.Key</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.Procedures.Procedure.html#Kinstrife_Procedures_Procedure_ClientId">Procedure.ClientId</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.Procedures.Procedure.html#Kinstrife_Procedures_Procedure_weight">Procedure.weight</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.Procedures.Procedure.html#Kinstrife_Procedures_Procedure_Weight">Procedure.Weight</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.Procedures.Procedure.html#Kinstrife_Procedures_Procedure_Kinstrife_Procedures_IWeighted_Weight">Procedure.IWeighted.Weight</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.Procedures.Procedure.html#Kinstrife_Procedures_Procedure_GameObject">Procedure.GameObject</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.Procedures.Procedure.html#Kinstrife_Procedures_Procedure_StartTimestamp">Procedure.StartTimestamp</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.Procedures.Procedure.html#Kinstrife_Procedures_Procedure_StopTimestamp">Procedure.StopTimestamp</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.Procedures.Procedure.html#Kinstrife_Procedures_Procedure_TimeActive_System_Double_">Procedure.TimeActive(Double)</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.Procedures.Procedure.html#Kinstrife_Procedures_Procedure_IsActive">Procedure.IsActive</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.Procedures.Procedure.html#Kinstrife_Procedures_Procedure_IsInitialized">Procedure.IsInitialized</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.Procedures.Procedure.html#Kinstrife_Procedures_Procedure_canStart">Procedure.canStart</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.Procedures.Procedure.html#Kinstrife_Procedures_Procedure_canStop">Procedure.canStop</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.Procedures.Procedure.html#Kinstrife_Procedures_Procedure_ShouldUpdate">Procedure.ShouldUpdate</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.Procedures.Procedure.html#Kinstrife_Procedures_Procedure_IsPaused">Procedure.IsPaused</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.Procedures.Procedure.html#Kinstrife_Procedures_Procedure_subRoutine">Procedure.subRoutine</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.Procedures.Procedure.html#Kinstrife_Procedures_Procedure_onStart">Procedure.onStart</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.Procedures.Procedure.html#Kinstrife_Procedures_Procedure_onStop">Procedure.onStop</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.Procedures.Procedure.html#Kinstrife_Procedures_Procedure_manager">Procedure.manager</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.Procedures.Procedure.html#Kinstrife_Procedures_Procedure_Manager">Procedure.Manager</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.Procedures.Procedure.html#Kinstrife_Procedures_Procedure_InjectManager_Kinstrife_Procedures_ProceduresManager_">Procedure.InjectManager(ProceduresManager)</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.Procedures.Procedure.html#Kinstrife_Procedures_Procedure_OnDestroy">Procedure.OnDestroy()</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.Procedures.Procedure.html#Kinstrife_Procedures_Procedure_OnRuntimeDuplicate_Kinstrife_DataContainers_ScriptableObjectComponent_">Procedure.OnRuntimeDuplicate(ScriptableObjectComponent)</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.Procedures.Procedure.html#Kinstrife_Procedures_Procedure_OnInternalInitialize">Procedure.OnInternalInitialize()</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.Procedures.Procedure.html#Kinstrife_Procedures_Procedure_PostAddComponent_Kinstrife_Procedures_ProcedureComponent_">Procedure.PostAddComponent(ProcedureComponent)</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.Procedures.Procedure.html#Kinstrife_Procedures_Procedure_TryStart">Procedure.TryStart()</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.Procedures.Procedure.html#Kinstrife_Procedures_Procedure_TryStop">Procedure.TryStop()</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.Procedures.Procedure.html#Kinstrife_Procedures_Procedure_CanStop">Procedure.CanStop()</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.Procedures.Procedure.html#Kinstrife_Procedures_Procedure_ForceStart">Procedure.ForceStart()</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.Procedures.Procedure.html#Kinstrife_Procedures_Procedure_ForceStop">Procedure.ForceStop()</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.Procedures.Procedure.html#Kinstrife_Procedures_Procedure_TrySetEnabled_System_Boolean_">Procedure.TrySetEnabled(Boolean)</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.Procedures.Procedure.html#Kinstrife_Procedures_Procedure_TrySetWeight_System_Single_">Procedure.TrySetWeight(Single)</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.Procedures.Procedure.html#Kinstrife_Procedures_Procedure_RegisterListener_Kinstrife_Procedures_IProcedureEventsListener_">Procedure.RegisterListener(IProcedureEventsListener)</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.Procedures.Procedure.html#Kinstrife_Procedures_Procedure_UnregisterListener_Kinstrife_Procedures_IProcedureEventsListener_">Procedure.UnregisterListener(IProcedureEventsListener)</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.Procedures.Procedure.html#Kinstrife_Procedures_Procedure_GetReferencedProcedures">Procedure.GetReferencedProcedures()</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.Procedures.Procedure.html#Kinstrife_Procedures_Procedure_IsOwner_Kinstrife_Procedures_ProcedureComponent_">Procedure.IsOwner(ProcedureComponent)</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.Procedures.Procedure.html#Kinstrife_Procedures_Procedure_OnStartFadeOut">Procedure.OnStartFadeOut()</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.Procedures.Procedure.html#Kinstrife_Procedures_Procedure_OnStartFadeIn">Procedure.OnStartFadeIn()</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.DataContainers.ScriptableObjectDataContainer-1.html#Kinstrife_DataContainers_ScriptableObjectDataContainer_1_components">ScriptableObjectDataContainer&lt;ProcedureComponent&gt;.components</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.DataContainers.ScriptableObjectDataContainer-1.html#Kinstrife_DataContainers_ScriptableObjectDataContainer_1_Components">ScriptableObjectDataContainer&lt;ProcedureComponent&gt;.Components</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.DataContainers.ScriptableObjectDataContainer-1.html#Kinstrife_DataContainers_ScriptableObjectDataContainer_1_Kinstrife_DataContainers_IScriptableObjectDataContainer_TComponentType__Components">ScriptableObjectDataContainer&lt;ProcedureComponent&gt;.IScriptableObjectDataContainer&lt;ProcedureComponent&gt;.Components</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.DataContainers.ScriptableObjectDataContainer-1.html#Kinstrife_DataContainers_ScriptableObjectDataContainer_1_TryGetComponent__1___0__">ScriptableObjectDataContainer&lt;ProcedureComponent&gt;.TryGetComponent&lt;U&gt;(U)</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.DataContainers.ScriptableObjectDataContainer-1.html#Kinstrife_DataContainers_ScriptableObjectDataContainer_1_TryGetComponent_System_Type_Kinstrife_DataContainers_ScriptableObjectComponent__">ScriptableObjectDataContainer&lt;ProcedureComponent&gt;.TryGetComponent(Type, ScriptableObjectComponent)</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.DataContainers.ScriptableObjectDataContainer-1.html#Kinstrife_DataContainers_ScriptableObjectDataContainer_1_GetComponents__1">ScriptableObjectDataContainer&lt;ProcedureComponent&gt;.GetComponents&lt;U&gt;()</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.DataContainers.ScriptableObjectDataContainer-1.html#Kinstrife_DataContainers_ScriptableObjectDataContainer_1_FilterGetter_System_Type_System_Boolean_System_Collections_Generic_IList__0__">ScriptableObjectDataContainer&lt;ProcedureComponent&gt;.FilterGetter(Type, Boolean, IList&lt;ProcedureComponent&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.DataContainers.ScriptableObjectDataContainer-1.html#Kinstrife_DataContainers_ScriptableObjectDataContainer_1_GetLoadableTypes_Assembly_">ScriptableObjectDataContainer&lt;ProcedureComponent&gt;.GetLoadableTypes(Assembly)</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.DataContainers.ScriptableObjectDataContainer-1.html#Kinstrife_DataContainers_ScriptableObjectDataContainer_1_HasComponentOfType_System_Type_System_Collections_Generic_IList__0__">ScriptableObjectDataContainer&lt;ProcedureComponent&gt;.HasComponentOfType(Type, IList&lt;ProcedureComponent&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.DataContainers.ScriptableObjectDataContainer-1.html#Kinstrife_DataContainers_ScriptableObjectDataContainer_1_IsCompatibleWith_System_Type_System_Type_">ScriptableObjectDataContainer&lt;ProcedureComponent&gt;.IsCompatibleWith(Type, Type)</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.DataContainers.ScriptableObjectDataContainer-1.html#Kinstrife_DataContainers_ScriptableObjectDataContainer_1_RemoveComponentInspector__0_">ScriptableObjectDataContainer&lt;ProcedureComponent&gt;.RemoveComponentInspector(ProcedureComponent)</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.DataContainers.ScriptableObjectComponent.html#Kinstrife_DataContainers_ScriptableObjectComponent_RequiresDuplication">ScriptableObjectComponent.RequiresDuplication</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.DataContainers.ScriptableObjectComponent.html#Kinstrife_DataContainers_ScriptableObjectComponent_isInstance">ScriptableObjectComponent.isInstance</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.DataContainers.ScriptableObjectComponent.html#Kinstrife_DataContainers_ScriptableObjectComponent_IsInstance">ScriptableObjectComponent.IsInstance</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.DataContainers.ScriptableObjectComponent.html#Kinstrife_DataContainers_ScriptableObjectComponent_enabled">ScriptableObjectComponent.enabled</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.DataContainers.ScriptableObjectComponent.html#Kinstrife_DataContainers_ScriptableObjectComponent_IsEnabled">ScriptableObjectComponent.IsEnabled</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.DataContainers.ScriptableObjectComponent.html#Kinstrife_DataContainers_ScriptableObjectComponent_IsInvalid">ScriptableObjectComponent.IsInvalid</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.DataContainers.ScriptableObjectComponent.html#Kinstrife_DataContainers_ScriptableObjectComponent_SetEnabled_System_Boolean_">ScriptableObjectComponent.SetEnabled(Boolean)</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.DataContainers.ScriptableObjectComponent.html#Kinstrife_DataContainers_ScriptableObjectComponent_OnAddComponent__1_Kinstrife_DataContainers_IScriptableObjectDataContainer___0__">ScriptableObjectComponent.OnAddComponent&lt;T&gt;(IScriptableObjectDataContainer&lt;T&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.DataContainers.ScriptableObjectComponent.html#Kinstrife_DataContainers_ScriptableObjectComponent_AuthoringTab">ScriptableObjectComponent.AuthoringTab</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.DataContainers.ScriptableObjectComponent.html#Kinstrife_DataContainers_ScriptableObjectComponent_RuntimeTab">ScriptableObjectComponent.RuntimeTab</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.DataContainers.ScriptableObjectComponent.html#Kinstrife_DataContainers_ScriptableObjectComponent_DebugTab">ScriptableObjectComponent.DebugTab</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.DataContainers.ScriptableObjectComponent.html#Kinstrife_DataContainers_ScriptableObjectComponent_AuthoringTabActions">ScriptableObjectComponent.AuthoringTabActions</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.DataContainers.ScriptableObjectComponent.html#Kinstrife_DataContainers_ScriptableObjectComponent_RuntimeTabActions">ScriptableObjectComponent.RuntimeTabActions</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.DataContainers.ScriptableObjectComponent.html#Kinstrife_DataContainers_ScriptableObjectComponent_DebugTabActions">ScriptableObjectComponent.DebugTabActions</a>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Kinstrife.Tutorial.html">Kinstrife.Tutorial</a></h6>
+  <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
+  <h5 id="Kinstrife_Tutorial_TutorialControllerProcedure_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class TutorialControllerProcedure : Procedure, IScriptableObjectDataContainer&lt;ProcedureComponent&gt;, IProcedure, IWeighted, IHasClient, IProcedureEventsSource, IHasReferencedProcedures, IUpdateable, IInjectable, IDependent</code></pre>
+  </div>
+  <h3 id="fields">Fields
+  </h3>
+  
+  
+  <h4 id="Kinstrife_Tutorial_TutorialControllerProcedure_conditionMetEvent" data-uid="Kinstrife.Tutorial.TutorialControllerProcedure.conditionMetEvent">conditionMetEvent</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public AudioRequestAuthoring conditionMetEvent</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Kinstrife.Audio.AudioRequestAuthoring.html">AudioRequestAuthoring</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="Kinstrife_Tutorial_TutorialControllerProcedure_IsCompleted" data-uid="Kinstrife.Tutorial.TutorialControllerProcedure.IsCompleted">IsCompleted</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsCompleted</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="Kinstrife_Tutorial_TutorialControllerProcedure_stepCompleteEvent" data-uid="Kinstrife.Tutorial.TutorialControllerProcedure.stepCompleteEvent">stepCompleteEvent</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public AudioRequestAuthoring stepCompleteEvent</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Kinstrife.Audio.AudioRequestAuthoring.html">AudioRequestAuthoring</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="properties">Properties
+  </h3>
+  
+  
+  <a id="Kinstrife_Tutorial_TutorialControllerProcedure_ActiveTutorial_" data-uid="Kinstrife.Tutorial.TutorialControllerProcedure.ActiveTutorial*"></a>
+  <h4 id="Kinstrife_Tutorial_TutorialControllerProcedure_ActiveTutorial" data-uid="Kinstrife.Tutorial.TutorialControllerProcedure.ActiveTutorial">ActiveTutorial</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static TutorialControllerProcedure ActiveTutorial { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Kinstrife.Tutorial.TutorialControllerProcedure.html">TutorialControllerProcedure</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Kinstrife_Tutorial_TutorialControllerProcedure_Config_" data-uid="Kinstrife.Tutorial.TutorialControllerProcedure.Config*"></a>
+  <h4 id="Kinstrife_Tutorial_TutorialControllerProcedure_Config" data-uid="Kinstrife.Tutorial.TutorialControllerProcedure.Config">Config</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TutorialsConfig Config { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Kinstrife.Tutorial.TutorialsConfig.html">TutorialsConfig</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Kinstrife_Tutorial_TutorialControllerProcedure_DeferredResources_" data-uid="Kinstrife.Tutorial.TutorialControllerProcedure.DeferredResources*"></a>
+  <h4 id="Kinstrife_Tutorial_TutorialControllerProcedure_DeferredResources" data-uid="Kinstrife.Tutorial.TutorialControllerProcedure.DeferredResources">DeferredResources</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public DeferredResources DeferredResources { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Kinstrife.Procedures.DeferredResources.html">DeferredResources</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Kinstrife_Tutorial_TutorialControllerProcedure_FSM_" data-uid="Kinstrife.Tutorial.TutorialControllerProcedure.FSM*"></a>
+  <h4 id="Kinstrife_Tutorial_TutorialControllerProcedure_FSM" data-uid="Kinstrife.Tutorial.TutorialControllerProcedure.FSM">FSM</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TutorialStateMachine FSM { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Kinstrife.Tutorial.TutorialStateMachine.html">TutorialStateMachine</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Kinstrife_Tutorial_TutorialControllerProcedure_Name_" data-uid="Kinstrife.Tutorial.TutorialControllerProcedure.Name*"></a>
+  <h4 id="Kinstrife_Tutorial_TutorialControllerProcedure_Name" data-uid="Kinstrife.Tutorial.TutorialControllerProcedure.Name">Name</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override string Name { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Kinstrife.Procedures.Procedure.html#Kinstrife_Procedures_Procedure_Name">Procedure.Name</a></div>
+  
+  
+  <a id="Kinstrife_Tutorial_TutorialControllerProcedure_Title_" data-uid="Kinstrife.Tutorial.TutorialControllerProcedure.Title*"></a>
+  <h4 id="Kinstrife_Tutorial_TutorialControllerProcedure_Title" data-uid="Kinstrife.Tutorial.TutorialControllerProcedure.Title">Title</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string Title { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  
+  
+  <a id="Kinstrife_Tutorial_TutorialControllerProcedure_CanStart_" data-uid="Kinstrife.Tutorial.TutorialControllerProcedure.CanStart*"></a>
+  <h4 id="Kinstrife_Tutorial_TutorialControllerProcedure_CanStart" data-uid="Kinstrife.Tutorial.TutorialControllerProcedure.CanStart">CanStart()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override bool CanStart()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Kinstrife.Procedures.Procedure.html#Kinstrife_Procedures_Procedure_CanStart">Procedure.CanStart()</a></div>
+  
+  
+  <a id="Kinstrife_Tutorial_TutorialControllerProcedure_GetByIndex_" data-uid="Kinstrife.Tutorial.TutorialControllerProcedure.GetByIndex*"></a>
+  <h4 id="Kinstrife_Tutorial_TutorialControllerProcedure_GetByIndex_System_Int32_" data-uid="Kinstrife.Tutorial.TutorialControllerProcedure.GetByIndex(System.Int32)">GetByIndex(Int32)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TutorialStateProcedure GetByIndex(int index)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">index</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Kinstrife.Tutorial.TutorialStateProcedure.html">TutorialStateProcedure</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Kinstrife_Tutorial_TutorialControllerProcedure_GetCurrentIndex_" data-uid="Kinstrife.Tutorial.TutorialControllerProcedure.GetCurrentIndex*"></a>
+  <h4 id="Kinstrife_Tutorial_TutorialControllerProcedure_GetCurrentIndex" data-uid="Kinstrife.Tutorial.TutorialControllerProcedure.GetCurrentIndex">GetCurrentIndex()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int GetCurrentIndex()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Kinstrife_Tutorial_TutorialControllerProcedure_IndexOf_" data-uid="Kinstrife.Tutorial.TutorialControllerProcedure.IndexOf*"></a>
+  <h4 id="Kinstrife_Tutorial_TutorialControllerProcedure_IndexOf_Kinstrife_Tutorial_TutorialStateProcedure_" data-uid="Kinstrife.Tutorial.TutorialControllerProcedure.IndexOf(Kinstrife.Tutorial.TutorialStateProcedure)">IndexOf(TutorialStateProcedure)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int IndexOf(TutorialStateProcedure stateProcedure)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Kinstrife.Tutorial.TutorialStateProcedure.html">TutorialStateProcedure</a></td>
+        <td><span class="parametername">stateProcedure</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Kinstrife_Tutorial_TutorialControllerProcedure_Inject_" data-uid="Kinstrife.Tutorial.TutorialControllerProcedure.Inject*"></a>
+  <h4 id="Kinstrife_Tutorial_TutorialControllerProcedure_Inject_Kinstrife_Tutorial_TutorialsConfig_" data-uid="Kinstrife.Tutorial.TutorialControllerProcedure.Inject(Kinstrife.Tutorial.TutorialsConfig)">Inject(TutorialsConfig)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Inject(TutorialsConfig config)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Kinstrife.Tutorial.TutorialsConfig.html">TutorialsConfig</a></td>
+        <td><span class="parametername">config</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Kinstrife_Tutorial_TutorialControllerProcedure_NextState_" data-uid="Kinstrife.Tutorial.TutorialControllerProcedure.NextState*"></a>
+  <h4 id="Kinstrife_Tutorial_TutorialControllerProcedure_NextState" data-uid="Kinstrife.Tutorial.TutorialControllerProcedure.NextState">NextState()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void NextState()</code></pre>
+  </div>
+  
+  
+  <a id="Kinstrife_Tutorial_TutorialControllerProcedure_OnLateInternalInitialize_" data-uid="Kinstrife.Tutorial.TutorialControllerProcedure.OnLateInternalInitialize*"></a>
+  <h4 id="Kinstrife_Tutorial_TutorialControllerProcedure_OnLateInternalInitialize" data-uid="Kinstrife.Tutorial.TutorialControllerProcedure.OnLateInternalInitialize">OnLateInternalInitialize()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override void OnLateInternalInitialize()</code></pre>
+  </div>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Kinstrife.Procedures.Procedure.html#Kinstrife_Procedures_Procedure_OnLateInternalInitialize">Procedure.OnLateInternalInitialize()</a></div>
+  
+  
+  <a id="Kinstrife_Tutorial_TutorialControllerProcedure_OnStart_" data-uid="Kinstrife.Tutorial.TutorialControllerProcedure.OnStart*"></a>
+  <h4 id="Kinstrife_Tutorial_TutorialControllerProcedure_OnStart" data-uid="Kinstrife.Tutorial.TutorialControllerProcedure.OnStart">OnStart()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override void OnStart()</code></pre>
+  </div>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Kinstrife.Procedures.Procedure.html#Kinstrife_Procedures_Procedure_OnStart">Procedure.OnStart()</a></div>
+  
+  
+  <a id="Kinstrife_Tutorial_TutorialControllerProcedure_OnStop_" data-uid="Kinstrife.Tutorial.TutorialControllerProcedure.OnStop*"></a>
+  <h4 id="Kinstrife_Tutorial_TutorialControllerProcedure_OnStop" data-uid="Kinstrife.Tutorial.TutorialControllerProcedure.OnStop">OnStop()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override void OnStop()</code></pre>
+  </div>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Kinstrife.Procedures.Procedure.html#Kinstrife_Procedures_Procedure_OnStop">Procedure.OnStop()</a></div>
+  
+  
+  <a id="Kinstrife_Tutorial_TutorialControllerProcedure_OnUpdate_" data-uid="Kinstrife.Tutorial.TutorialControllerProcedure.OnUpdate*"></a>
+  <h4 id="Kinstrife_Tutorial_TutorialControllerProcedure_OnUpdate_System_Single_" data-uid="Kinstrife.Tutorial.TutorialControllerProcedure.OnUpdate(System.Single)">OnUpdate(Single)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void OnUpdate(float deltaTime)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><span class="parametername">deltaTime</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Kinstrife_Tutorial_TutorialControllerProcedure_PreviousState_" data-uid="Kinstrife.Tutorial.TutorialControllerProcedure.PreviousState*"></a>
+  <h4 id="Kinstrife_Tutorial_TutorialControllerProcedure_PreviousState" data-uid="Kinstrife.Tutorial.TutorialControllerProcedure.PreviousState">PreviousState()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void PreviousState()</code></pre>
+  </div>
+  
+  
+  <a id="Kinstrife_Tutorial_TutorialControllerProcedure_RuntimeCacheReferences_" data-uid="Kinstrife.Tutorial.TutorialControllerProcedure.RuntimeCacheReferences*"></a>
+  <h4 id="Kinstrife_Tutorial_TutorialControllerProcedure_RuntimeCacheReferences" data-uid="Kinstrife.Tutorial.TutorialControllerProcedure.RuntimeCacheReferences">RuntimeCacheReferences()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override void RuntimeCacheReferences()</code></pre>
+  </div>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Kinstrife.Procedures.Procedure.html#Kinstrife_Procedures_Procedure_RuntimeCacheReferences">Procedure.RuntimeCacheReferences()</a></div>
+  
+  
+  <a id="Kinstrife_Tutorial_TutorialControllerProcedure_StepIsAvailableCompleted_" data-uid="Kinstrife.Tutorial.TutorialControllerProcedure.StepIsAvailableCompleted*"></a>
+  <h4 id="Kinstrife_Tutorial_TutorialControllerProcedure_StepIsAvailableCompleted_System_Int32_" data-uid="Kinstrife.Tutorial.TutorialControllerProcedure.StepIsAvailableCompleted(System.Int32)">StepIsAvailableCompleted(Int32)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool StepIsAvailableCompleted(int index)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">index</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="events">Events
+  </h3>
+  
+  
+  <h4 id="Kinstrife_Tutorial_TutorialControllerProcedure_OnActiveTutorialChanged" data-uid="Kinstrife.Tutorial.TutorialControllerProcedure.OnActiveTutorialChanged">OnActiveTutorialChanged</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static event Action&lt;TutorialControllerProcedure&gt; OnActiveTutorialChanged</code></pre>
+  </div>
+  <h5 class="eventType">Event Type</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Action</span>&lt;<a class="xref" href="Kinstrife.Tutorial.TutorialControllerProcedure.html">TutorialControllerProcedure</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="Kinstrife_Tutorial_TutorialControllerProcedure_onProgressChanged" data-uid="Kinstrife.Tutorial.TutorialControllerProcedure.onProgressChanged">onProgressChanged</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public event Action&lt;TutorialStateProcedure, float&gt; onProgressChanged</code></pre>
+  </div>
+  <h5 class="eventType">Event Type</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Action</span>&lt;<a class="xref" href="Kinstrife.Tutorial.TutorialStateProcedure.html">TutorialStateProcedure</a>, <span class="xref">System.Single</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="Kinstrife_Tutorial_TutorialControllerProcedure_onStepCompleted" data-uid="Kinstrife.Tutorial.TutorialControllerProcedure.onStepCompleted">onStepCompleted</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public event Action&lt;TutorialStateProcedure&gt; onStepCompleted</code></pre>
+  </div>
+  <h5 class="eventType">Event Type</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Action</span>&lt;<a class="xref" href="Kinstrife.Tutorial.TutorialStateProcedure.html">TutorialStateProcedure</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="Kinstrife_Tutorial_TutorialControllerProcedure_onTutorialCompleted" data-uid="Kinstrife.Tutorial.TutorialControllerProcedure.onTutorialCompleted">onTutorialCompleted</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public event Action onTutorialCompleted</code></pre>
+  </div>
+  <h5 class="eventType">Event Type</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Action</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <a class="xref" href="Kinstrife.DataContainers.IScriptableObjectDataContainer-1.html">IScriptableObjectDataContainer&lt;TComponentType&gt;</a>
+  </div>
+  <div>
+      <a class="xref" href="Kinstrife.Procedures.IProcedure.html">IProcedure</a>
+  </div>
+  <div>
+      <a class="xref" href="Kinstrife.Procedures.IWeighted.html">IWeighted</a>
+  </div>
+  <div>
+      <a class="xref" href="Kinstrife.Procedures.IHasClient.html">IHasClient</a>
+  </div>
+  <div>
+      <a class="xref" href="Kinstrife.Procedures.IProcedureEventsSource.html">IProcedureEventsSource</a>
+  </div>
+  <div>
+      <a class="xref" href="Kinstrife.Procedures.IHasReferencedProcedures.html">IHasReferencedProcedures</a>
+  </div>
+  <div>
+      <a class="xref" href="Kinstrife.Procedures.IUpdateable.html">IUpdateable</a>
+  </div>
+  <div>
+      <a class="xref" href="Kinstrife.Core.DependencyInjection.IInjectable.html">IInjectable</a>
+  </div>
+  <div>
+      <a class="xref" href="Kinstrife.Core.DependencyInjection.IDependent.html">IDependent</a>
+  </div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+  </body>
+</html>

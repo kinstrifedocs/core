@@ -79,13 +79,21 @@
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
     <div class="level1"><a class="xref" href="Kinstrife.Core.InspectorSerializables.OptionalProperty.html">OptionalProperty</a></div>
-    <div class="level2"><span class="xref">OptionalProperty&lt;TValueType&gt;</span></div>
-      <div class="level3"><a class="xref" href="Kinstrife.Animation.EndEventProperty.html">EndEventProperty</a></div>
-      <div class="level3"><a class="xref" href="Kinstrife.Core.InspectorSerializables.AnimationCurveProperty.html">AnimationCurveProperty</a></div>
-      <div class="level3"><a class="xref" href="Kinstrife.Core.InspectorSerializables.WeightProperty.html">WeightProperty</a></div>
+    <div class="level2"><a class="xref" href="Kinstrife.Core.InspectorSerializables.OptionalPropertyBase-1.html">OptionalPropertyBase</a>&lt;TValueType&gt;</div>
+    <div class="level3"><span class="xref">OptionalProperty&lt;TValueType&gt;</span></div>
+      <div class="level4"><a class="xref" href="Kinstrife.Core.InspectorSerializables.AnimationCurveProperty.html">AnimationCurveProperty</a></div>
   </div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="Kinstrife.Core.InspectorSerializables.OptionalPropertyBase-1.html#Kinstrife_Core_InspectorSerializables_OptionalPropertyBase_1_value">OptionalPropertyBase&lt;TValueType&gt;.value</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.Core.InspectorSerializables.OptionalPropertyBase-1.html#Kinstrife_Core_InspectorSerializables_OptionalPropertyBase_1_Value">OptionalPropertyBase&lt;TValueType&gt;.Value</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.Core.InspectorSerializables.OptionalPropertyBase-1.html#Kinstrife_Core_InspectorSerializables_OptionalPropertyBase_1_CustomDrawer">OptionalPropertyBase&lt;TValueType&gt;.CustomDrawer</a>
+    </div>
     <div>
       <a class="xref" href="Kinstrife.Core.InspectorSerializables.OptionalProperty.html#Kinstrife_Core_InspectorSerializables_OptionalProperty_enabled">OptionalProperty.enabled</a>
     </div>
@@ -116,7 +124,7 @@
   <h5 id="Kinstrife_Core_InspectorSerializables_OptionalProperty_1_syntax">Syntax</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">[Serializable]
-public class OptionalProperty&lt;TValueType&gt; : OptionalProperty</code></pre>
+public class OptionalProperty&lt;TValueType&gt; : OptionalPropertyBase&lt;TValueType&gt; where TValueType : class</code></pre>
   </div>
   <h5 class="typeParameters">Type Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -231,84 +239,6 @@ public class OptionalProperty&lt;TValueType&gt; : OptionalProperty</code></pre>
       </tr>
     </tbody>
   </table>
-  <h3 id="fields">Fields
-  </h3>
-  
-  
-  <h4 id="Kinstrife_Core_InspectorSerializables_OptionalProperty_1_value" data-uid="Kinstrife.Core.InspectorSerializables.OptionalProperty`1.value">value</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected TValueType value</code></pre>
-  </div>
-  <h5 class="fieldValue">Field Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">TValueType</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h3 id="properties">Properties
-  </h3>
-  
-  
-  <a id="Kinstrife_Core_InspectorSerializables_OptionalProperty_1_CustomDrawer_" data-uid="Kinstrife.Core.InspectorSerializables.OptionalProperty`1.CustomDrawer*"></a>
-  <h4 id="Kinstrife_Core_InspectorSerializables_OptionalProperty_1_CustomDrawer" data-uid="Kinstrife.Core.InspectorSerializables.OptionalProperty`1.CustomDrawer">CustomDrawer</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual bool CustomDrawer { get; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Boolean</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="Kinstrife_Core_InspectorSerializables_OptionalProperty_1_Value_" data-uid="Kinstrife.Core.InspectorSerializables.OptionalProperty`1.Value*"></a>
-  <h4 id="Kinstrife_Core_InspectorSerializables_OptionalProperty_1_Value" data-uid="Kinstrife.Core.InspectorSerializables.OptionalProperty`1.Value">Value</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual TValueType Value { get; set; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">TValueType</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
   <h3 id="operators">Operators
   </h3>
   
@@ -349,48 +279,6 @@ public class OptionalProperty&lt;TValueType&gt; : OptionalProperty</code></pre>
     <tbody>
       <tr>
         <td><a class="xref" href="Kinstrife.Core.InspectorSerializables.OptionalProperty-1.html">OptionalProperty</a>&lt;TValueType&gt;</td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="Kinstrife_Core_InspectorSerializables_OptionalProperty_1_op_Implicit_" data-uid="Kinstrife.Core.InspectorSerializables.OptionalProperty`1.op_Implicit*"></a>
-  <h4 id="Kinstrife_Core_InspectorSerializables_OptionalProperty_1_op_Implicit_Kinstrife_Core_InspectorSerializables_OptionalProperty__0____0" data-uid="Kinstrife.Core.InspectorSerializables.OptionalProperty`1.op_Implicit(Kinstrife.Core.InspectorSerializables.OptionalProperty{`0})~`0">Implicit(OptionalProperty&lt;TValueType&gt; to TValueType)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static implicit operator TValueType(OptionalProperty&lt;TValueType&gt; prop)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Kinstrife.Core.InspectorSerializables.OptionalProperty-1.html">OptionalProperty</a>&lt;TValueType&gt;</td>
-        <td><span class="parametername">prop</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">TValueType</span></td>
         <td></td>
       </tr>
     </tbody>

@@ -78,17 +78,24 @@
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><span class="xref">SettingsData</span></div>
-      <div class="level2"><a class="xref" href="Kinstrife.Settings.AudioSettingsData.html">AudioSettingsData</a></div>
-      <div class="level2"><a class="xref" href="Kinstrife.Settings.CameraSettingsData.html">CameraSettingsData</a></div>
-      <div class="level2"><a class="xref" href="Kinstrife.Settings.GraphicsSettingsData.html">GraphicsSettingsData</a></div>
-      <div class="level2"><a class="xref" href="Kinstrife.Settings.VideoSettingsData.html">VideoSettingsData</a></div>
+    <div class="level1"><a class="xref" href="Kinstrife.Settings.VersionedScriptableObject.html">VersionedScriptableObject</a></div>
+    <div class="level2"><span class="xref">SettingsData</span></div>
+      <div class="level3"><a class="xref" href="Kinstrife.Settings.AudioSettingsData.html">AudioSettingsData</a></div>
+      <div class="level3"><a class="xref" href="Kinstrife.Settings.CameraSettingsData.html">CameraSettingsData</a></div>
+      <div class="level3"><a class="xref" href="Kinstrife.Settings.GraphicsSettingsData.html">GraphicsSettingsData</a></div>
+      <div class="level3"><a class="xref" href="Kinstrife.Settings.VideoSettingsData.html">VideoSettingsData</a></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="Kinstrife.Settings.VersionedScriptableObject.html#Kinstrife_Settings_VersionedScriptableObject_Version">VersionedScriptableObject.Version</a>
+    </div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Kinstrife.Settings.html">Kinstrife.Settings</a></h6>
   <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
   <h5 id="Kinstrife_Settings_SettingsData_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public abstract class SettingsData : ScriptableObject</code></pre>
+    <pre><code class="lang-csharp hljs">public abstract class SettingsData : VersionedScriptableObject</code></pre>
   </div>
   <h3 id="fields">Fields
   </h3>
@@ -230,6 +237,53 @@
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public abstract void ApplySettings()</code></pre>
   </div>
+  
+  
+  <a id="Kinstrife_Settings_SettingsData_CombineProperty_" data-uid="Kinstrife.Settings.SettingsData.CombineProperty*"></a>
+  <h4 id="Kinstrife_Settings_SettingsData_CombineProperty__1___0___0_" data-uid="Kinstrife.Settings.SettingsData.CombineProperty``1(``0,``0)">CombineProperty&lt;T&gt;(T, T)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected void CombineProperty&lt;T&gt;(T source, T target)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">T</span></td>
+        <td><span class="parametername">source</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">T</span></td>
+        <td><span class="parametername">target</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   
   
   <a id="Kinstrife_Settings_SettingsData_FlagDirty_" data-uid="Kinstrife.Settings.SettingsData.FlagDirty*"></a>

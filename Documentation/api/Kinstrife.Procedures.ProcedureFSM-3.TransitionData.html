@@ -77,7 +77,7 @@
   <div class="markdown level0 conceptual"></div>
   <div class="implements">
     <h5>Implements</h5>
-    <div><span class="xref">System.IDisposable</span></div>
+    <div><span class="xref">IDisposable</span></div>
   </div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
@@ -105,19 +105,19 @@
   <h5 id="Kinstrife_Procedures_ProcedureFSM_3_TransitionData_syntax">Syntax</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">[Serializable]
-public struct TransitionData : IDisposable</code></pre>
+public struct TransitionData</code></pre>
   </div>
   <h3 id="constructors">Constructors
   </h3>
   
   
   <a id="Kinstrife_Procedures_ProcedureFSM_3_TransitionData__ctor_" data-uid="Kinstrife.Procedures.ProcedureFSM`3.TransitionData.#ctor*"></a>
-  <h4 id="Kinstrife_Procedures_ProcedureFSM_3_TransitionData__ctor_Kinstrife_Procedures_ProcedureFSM__0__1__2__Transition__1__0__1_" data-uid="Kinstrife.Procedures.ProcedureFSM`3.TransitionData.#ctor(Kinstrife.Procedures.ProcedureFSM{`0,`1,`2}.Transition,`1,`0,`1)">TransitionData(ProcedureFSM&lt;TKey, TState, TAuthoring&gt;.Transition, TState, TKey, TState)</h4>
+  <h4 id="Kinstrife_Procedures_ProcedureFSM_3_TransitionData__ctor__1__0__1_Kinstrife_Procedures_ProcedureFSM__0__1__2__Transition_" data-uid="Kinstrife.Procedures.ProcedureFSM`3.TransitionData.#ctor(`1,`0,`1,Kinstrife.Procedures.ProcedureFSM{`0,`1,`2}.Transition)">TransitionData(TState, TKey, TState, ProcedureFSM&lt;TKey, TState, TAuthoring&gt;.Transition)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public TransitionData(ProcedureFSM&lt;TKey, TState, TAuthoring&gt;.Transition transition, TState fromState, TKey toKey, TState toState)</code></pre>
+    <pre><code class="lang-csharp hljs">public TransitionData(TState fromState, TKey toKey, TState toState, ProcedureFSM&lt;TKey, TState, TAuthoring&gt;.Transition transition = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -129,11 +129,6 @@ public struct TransitionData : IDisposable</code></pre>
       </tr>
     </thead>
     <tbody>
-      <tr>
-        <td><a class="xref" href="Kinstrife.Procedures.ProcedureFSM-3.Transition.html">ProcedureFSM.Transition</a>&lt;&gt;</td>
-        <td><span class="parametername">transition</span></td>
-        <td></td>
-      </tr>
       <tr>
         <td><span class="xref">TState</span></td>
         <td><span class="parametername">fromState</span></td>
@@ -147,6 +142,11 @@ public struct TransitionData : IDisposable</code></pre>
       <tr>
         <td><span class="xref">TState</span></td>
         <td><span class="parametername">toState</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Kinstrife.Procedures.ProcedureFSM-3.Transition.html">ProcedureFSM.Transition</a>&lt;&gt;</td>
+        <td><span class="parametername">transition</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -173,6 +173,30 @@ public struct TransitionData : IDisposable</code></pre>
     <tbody>
       <tr>
         <td><span class="xref">TState</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="Kinstrife_Procedures_ProcedureFSM_3_TransitionData_Progress" data-uid="Kinstrife.Procedures.ProcedureFSM`3.TransitionData.Progress">Progress</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float Progress</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -291,7 +315,7 @@ public ProcedureFSM&lt;TKey, TState, TAuthoring&gt;.Transition Transition</code>
   </div>
   <h3 id="implements">Implements</h3>
   <div>
-      <span class="xref">System.IDisposable</span>
+      <span class="xref">IDisposable</span>
   </div>
 </article>
           </div>

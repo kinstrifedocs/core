@@ -118,6 +118,12 @@
       <a class="xref" href="Kinstrife.Application.Module.html#Kinstrife_Application_Module_source">Module.source</a>
     </div>
     <div>
+      <a class="xref" href="Kinstrife.Application.Module.html#Kinstrife_Application_Module_Context">Module.Context</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.Application.Module.html#Kinstrife_Application_Module_Source">Module.Source</a>
+    </div>
+    <div>
       <a class="xref" href="Kinstrife.Application.Module.html#Kinstrife_Application_Module_applicationFlow">Module.applicationFlow</a>
     </div>
     <div>
@@ -140,6 +146,9 @@
     </div>
     <div>
       <a class="xref" href="Kinstrife.Application.Module.html#Kinstrife_Application_Module_OnPauseChanged">Module.OnPauseChanged</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.Application.Module.html#Kinstrife_Application_Module_OnLoadingChanged">Module.OnLoadingChanged</a>
     </div>
     <div>
       <a class="xref" href="Kinstrife.Application.Module.html#Kinstrife_Application_Module_RunInstallation">Module.RunInstallation()</a>
@@ -214,6 +223,56 @@
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public class UIModule : PrimaryModule, IInstall&lt;UIModule&gt;, IInstall, IInjectable, IDependent</code></pre>
   </div>
+  <h3 id="fields">Fields
+  </h3>
+  
+  
+  <h4 id="Kinstrife_UI_UIModule_interaction" data-uid="Kinstrife.UI.UIModule.interaction">interaction</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected UIInteraction interaction</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Kinstrife.UI.UIInteraction.html">UIInteraction</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="Kinstrife_UI_UIModule_uiScreen" data-uid="Kinstrife.UI.UIModule.uiScreen">uiScreen</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected UIScreen uiScreen</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Kinstrife.UI.UIScreen.html">UIScreen</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   <h3 id="properties">Properties
   </h3>
   
@@ -293,6 +352,33 @@
   </table>
   <h3 id="methods">Methods
   </h3>
+  
+  
+  <a id="Kinstrife_UI_UIModule_CanReleasePrimary_" data-uid="Kinstrife.UI.UIModule.CanReleasePrimary*"></a>
+  <h4 id="Kinstrife_UI_UIModule_CanReleasePrimary" data-uid="Kinstrife.UI.UIModule.CanReleasePrimary">CanReleasePrimary()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override bool CanReleasePrimary()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Kinstrife.Application.Module.html#Kinstrife_Application_Module_CanReleasePrimary">Module.CanReleasePrimary()</a></div>
   
   
   <a id="Kinstrife_UI_UIModule_Inject_" data-uid="Kinstrife.UI.UIModule.Inject*"></a>
@@ -378,6 +464,33 @@
   </table>
   <h5 class="overrides">Overrides</h5>
   <div><a class="xref" href="Kinstrife.Application.Module.html#Kinstrife_Application_Module_OnPrimary_System_Boolean_">Module.OnPrimary(Boolean)</a></div>
+  
+  
+  <a id="Kinstrife_UI_UIModule_RegisterForm_" data-uid="Kinstrife.UI.UIModule.RegisterForm*"></a>
+  <h4 id="Kinstrife_UI_UIModule_RegisterForm_IFormViewModel_" data-uid="Kinstrife.UI.UIModule.RegisterForm(IFormViewModel)">RegisterForm(IFormViewModel)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void RegisterForm(IFormViewModel form)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">IFormViewModel</span></td>
+        <td><span class="parametername">form</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   <h3 id="implements">Implements</h3>
   <div>
       <a class="xref" href="Kinstrife.Core.DependencyInjection.IInstall-1.html">IInstall&lt;T&gt;</a>

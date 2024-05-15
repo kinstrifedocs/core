@@ -78,8 +78,9 @@
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><a class="xref" href="Kinstrife.Settings.SettingsData.html">SettingsData</a></div>
-    <div class="level2"><span class="xref">CameraSettingsData</span></div>
+    <div class="level1"><a class="xref" href="Kinstrife.Settings.VersionedScriptableObject.html">VersionedScriptableObject</a></div>
+    <div class="level2"><a class="xref" href="Kinstrife.Settings.SettingsData.html">SettingsData</a></div>
+    <div class="level3"><span class="xref">CameraSettingsData</span></div>
   </div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
@@ -104,6 +105,12 @@
     <div>
       <a class="xref" href="Kinstrife.Settings.SettingsData.html#Kinstrife_Settings_SettingsData_ValueChangeCallback__1_System_Object___0_System_Action_System_Object___0__">SettingsData.ValueChangeCallback&lt;T&gt;(Object, T, Action&lt;Object, T&gt;)</a>
     </div>
+    <div>
+      <a class="xref" href="Kinstrife.Settings.SettingsData.html#Kinstrife_Settings_SettingsData_CombineProperty__1___0___0_">SettingsData.CombineProperty&lt;T&gt;(T, T)</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.Settings.VersionedScriptableObject.html#Kinstrife_Settings_VersionedScriptableObject_Version">VersionedScriptableObject.Version</a>
+    </div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Kinstrife.Settings.html">Kinstrife.Settings</a></h6>
   <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
@@ -115,12 +122,12 @@
   </h3>
   
   
-  <h4 id="Kinstrife_Settings_CameraSettingsData_Distance" data-uid="Kinstrife.Settings.CameraSettingsData.Distance">Distance</h4>
+  <h4 id="Kinstrife_Settings_CameraSettingsData_DamageFatigueEffect" data-uid="Kinstrife.Settings.CameraSettingsData.DamageFatigueEffect">DamageFatigueEffect</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public BindableFloat Distance</code></pre>
+    <pre><code class="lang-csharp hljs">public BindableFloat DamageFatigueEffect</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -331,12 +338,12 @@
   </table>
   
   
-  <h4 id="Kinstrife_Settings_CameraSettingsData_PerspectiveShiftHorizontal" data-uid="Kinstrife.Settings.CameraSettingsData.PerspectiveShiftHorizontal">PerspectiveShiftHorizontal</h4>
+  <h4 id="Kinstrife_Settings_CameraSettingsData_Presets" data-uid="Kinstrife.Settings.CameraSettingsData.Presets">Presets</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public BindableFloat PerspectiveShiftHorizontal</code></pre>
+    <pre><code class="lang-csharp hljs">public BindableStringSelect Presets</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -348,91 +355,19 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">BindableFloat</span></td>
+        <td><span class="xref">BindableStringSelect</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   
   
-  <h4 id="Kinstrife_Settings_CameraSettingsData_PerspectiveShiftVertical" data-uid="Kinstrife.Settings.CameraSettingsData.PerspectiveShiftVertical">PerspectiveShiftVertical</h4>
+  <h4 id="Kinstrife_Settings_CameraSettingsData_ScreenEffects" data-uid="Kinstrife.Settings.CameraSettingsData.ScreenEffects">ScreenEffects</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public BindableFloat PerspectiveShiftVertical</code></pre>
-  </div>
-  <h5 class="fieldValue">Field Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">BindableFloat</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <h4 id="Kinstrife_Settings_CameraSettingsData_ShoulderOffset" data-uid="Kinstrife.Settings.CameraSettingsData.ShoulderOffset">ShoulderOffset</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public BindableFloat ShoulderOffset</code></pre>
-  </div>
-  <h5 class="fieldValue">Field Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">BindableFloat</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <h4 id="Kinstrife_Settings_CameraSettingsData_SmoothFollow" data-uid="Kinstrife.Settings.CameraSettingsData.SmoothFollow">SmoothFollow</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public BindableFloat SmoothFollow</code></pre>
-  </div>
-  <h5 class="fieldValue">Field Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">BindableFloat</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <h4 id="Kinstrife_Settings_CameraSettingsData_ThirdPerson" data-uid="Kinstrife.Settings.CameraSettingsData.ThirdPerson">ThirdPerson</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public string ThirdPerson</code></pre>
+    <pre><code class="lang-csharp hljs">public string ScreenEffects</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -451,12 +386,12 @@
   </table>
   
   
-  <h4 id="Kinstrife_Settings_CameraSettingsData_VerticalOffset" data-uid="Kinstrife.Settings.CameraSettingsData.VerticalOffset">VerticalOffset</h4>
+  <h4 id="Kinstrife_Settings_CameraSettingsData_ThirdPersonSettings" data-uid="Kinstrife.Settings.CameraSettingsData.ThirdPersonSettings">ThirdPersonSettings</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public BindableFloat VerticalOffset</code></pre>
+    <pre><code class="lang-csharp hljs">public CameraSettingsData.ThirdPerson ThirdPersonSettings</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -468,13 +403,62 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">BindableFloat</span></td>
+        <td><a class="xref" href="Kinstrife.Settings.CameraSettingsData.ThirdPerson.html">CameraSettingsData.ThirdPerson</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="Kinstrife_Settings_CameraSettingsData_ThirdPersonTitle" data-uid="Kinstrife.Settings.CameraSettingsData.ThirdPersonTitle">ThirdPersonTitle</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string ThirdPersonTitle</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <h3 id="properties">Properties
   </h3>
+  
+  
+  <a id="Kinstrife_Settings_CameraSettingsData_DamageFatigueEffectValue_" data-uid="Kinstrife.Settings.CameraSettingsData.DamageFatigueEffectValue*"></a>
+  <h4 id="Kinstrife_Settings_CameraSettingsData_DamageFatigueEffectValue" data-uid="Kinstrife.Settings.CameraSettingsData.DamageFatigueEffectValue">DamageFatigueEffectValue</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float DamageFatigueEffectValue { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   
   
   <a id="Kinstrife_Settings_CameraSettingsData_DistanceValue_" data-uid="Kinstrife.Settings.CameraSettingsData.DistanceValue*"></a>
@@ -496,31 +480,6 @@
     <tbody>
       <tr>
         <td><span class="xref">System.Single</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="Kinstrife_Settings_CameraSettingsData_FieldOfViewValue_" data-uid="Kinstrife.Settings.CameraSettingsData.FieldOfViewValue*"></a>
-  <h4 id="Kinstrife_Settings_CameraSettingsData_FieldOfViewValue" data-uid="Kinstrife.Settings.CameraSettingsData.FieldOfViewValue">FieldOfViewValue</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public int FieldOfViewValue { get; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Int32</span></td>
         <td></td>
       </tr>
     </tbody>

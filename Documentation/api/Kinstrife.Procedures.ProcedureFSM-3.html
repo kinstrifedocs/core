@@ -210,6 +210,9 @@
       <a class="xref" href="Kinstrife.Procedures.ProcedureComponent.html#Kinstrife_Procedures_ProcedureComponent_ValidateInstance_Kinstrife_DataContainers_ScriptableObjectComponent_">ProcedureComponent.ValidateInstance(ScriptableObjectComponent)</a>
     </div>
     <div>
+      <a class="xref" href="Kinstrife.DataContainers.ScriptableObjectComponent.html#Kinstrife_DataContainers_ScriptableObjectComponent_RequiresDuplication">ScriptableObjectComponent.RequiresDuplication</a>
+    </div>
+    <div>
       <a class="xref" href="Kinstrife.DataContainers.ScriptableObjectComponent.html#Kinstrife_DataContainers_ScriptableObjectComponent_isInstance">ScriptableObjectComponent.isInstance</a>
     </div>
     <div>
@@ -506,6 +509,48 @@
     <tbody>
       <tr>
         <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Kinstrife_Procedures_ProcedureFSM_3_Item_" data-uid="Kinstrife.Procedures.ProcedureFSM`3.Item*"></a>
+  <h4 id="Kinstrife_Procedures_ProcedureFSM_3_Item__0_" data-uid="Kinstrife.Procedures.ProcedureFSM`3.Item(`0)">Item[TKey]</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TState this[TKey key] { get; }</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">TKey</span></td>
+        <td><span class="parametername">key</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">TState</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -858,12 +903,12 @@
   
   
   <a id="Kinstrife_Procedures_ProcedureFSM_3_Crossfade_" data-uid="Kinstrife.Procedures.ProcedureFSM`3.Crossfade*"></a>
-  <h4 id="Kinstrife_Procedures_ProcedureFSM_3_Crossfade_System_Single_System_Single_" data-uid="Kinstrife.Procedures.ProcedureFSM`3.Crossfade(System.Single,System.Single)">Crossfade(Single, Single)</h4>
+  <h4 id="Kinstrife_Procedures_ProcedureFSM_3_Crossfade_System_Single_System_Single_System_Boolean__" data-uid="Kinstrife.Procedures.ProcedureFSM`3.Crossfade(System.Single,System.Single,System.Boolean@)">Crossfade(Single, Single, out Boolean)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected bool Crossfade(float deltaTime, float crossFadeTime)</code></pre>
+    <pre><code class="lang-csharp hljs">protected bool Crossfade(float deltaTime, float crossFadeTime, out bool didTransition)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -883,6 +928,11 @@
       <tr>
         <td><span class="xref">System.Single</span></td>
         <td><span class="parametername">crossFadeTime</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">didTransition</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -1044,48 +1094,6 @@
     <tbody>
       <tr>
         <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;TKey&gt;</td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="Kinstrife_Procedures_ProcedureFSM_3_GetTransitions_" data-uid="Kinstrife.Procedures.ProcedureFSM`3.GetTransitions*"></a>
-  <h4 id="Kinstrife_Procedures_ProcedureFSM_3_GetTransitions__0_" data-uid="Kinstrife.Procedures.ProcedureFSM`3.GetTransitions(`0)">GetTransitions(TKey)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public IEnumerable&lt;ProcedureFSM&lt;TKey, TState, TAuthoring&gt;.Transition&gt; GetTransitions(TKey fromKey)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">TKey</span></td>
-        <td><span class="parametername">fromKey</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="Kinstrife.Procedures.ProcedureFSM-3.Transition.html">ProcedureFSM.Transition</a>&lt;&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -1498,6 +1506,43 @@
   </table>
   
   
+  <a id="Kinstrife_Procedures_ProcedureFSM_3_SetTransitionTarget_" data-uid="Kinstrife.Procedures.ProcedureFSM`3.SetTransitionTarget*"></a>
+  <h4 id="Kinstrife_Procedures_ProcedureFSM_3_SetTransitionTarget__1__0_Kinstrife_Procedures_ProcedureFSM__0__1__2__Transition_" data-uid="Kinstrife.Procedures.ProcedureFSM`3.SetTransitionTarget(`1,`0,Kinstrife.Procedures.ProcedureFSM{`0,`1,`2}.Transition)">SetTransitionTarget(TState, TKey, ProcedureFSM&lt;TKey, TState, TAuthoring&gt;.Transition)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected void SetTransitionTarget(TState fromState, TKey toKey, ProcedureFSM&lt;TKey, TState, TAuthoring&gt;.Transition transition = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">TState</span></td>
+        <td><span class="parametername">fromState</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">TKey</span></td>
+        <td><span class="parametername">toKey</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Kinstrife.Procedures.ProcedureFSM-3.Transition.html">ProcedureFSM.Transition</a>&lt;&gt;</td>
+        <td><span class="parametername">transition</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
   <a id="Kinstrife_Procedures_ProcedureFSM_3_ShouldExitCurrentState_" data-uid="Kinstrife.Procedures.ProcedureFSM`3.ShouldExitCurrentState*"></a>
   <h4 id="Kinstrife_Procedures_ProcedureFSM_3_ShouldExitCurrentState" data-uid="Kinstrife.Procedures.ProcedureFSM`3.ShouldExitCurrentState">ShouldExitCurrentState()</h4>
   <div class="markdown level1 summary"></div>
@@ -1603,7 +1648,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public bool TryTransition(TKey key)</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual bool TryTransition(TKey key)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1665,6 +1710,48 @@
       <tr>
         <td><span class="xref">TState</span></td>
         <td><span class="parametername">state</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Kinstrife_Procedures_ProcedureFSM_3_TryTransition_" data-uid="Kinstrife.Procedures.ProcedureFSM`3.TryTransition*"></a>
+  <h4 id="Kinstrife_Procedures_ProcedureFSM_3_TryTransition_System_Int32_" data-uid="Kinstrife.Procedures.ProcedureFSM`3.TryTransition(System.Int32)">TryTransition(Int32)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual bool TryTransition(int index)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">index</span></td>
         <td></td>
       </tr>
     </tbody>
