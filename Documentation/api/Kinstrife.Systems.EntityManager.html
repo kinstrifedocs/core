@@ -1,0 +1,1125 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class EntityManager
+   | Kinstrife </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class EntityManager
+   | Kinstrife ">
+    <meta name="generator" content="docfx 2.59.4.0">
+    
+    <link rel="shortcut icon" href="../../favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet"> 
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../index.html">
+                <img id="logo" class="svg" src="../../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Kinstrife.Systems.EntityManager">
+  
+  
+  <h1 id="Kinstrife_Systems_EntityManager" data-uid="Kinstrife.Systems.EntityManager" class="text-break">Class EntityManager
+  </h1>
+  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">EntityManager</span></div>
+      <div class="level2"><a class="xref" href="Kinstrife.Systems.EntityManager-1.html">EntityManager&lt;T&gt;</a></div>
+  </div>
+  <div class="implements">
+    <h5>Implements</h5>
+    <div><span class="xref">IInstall</span>&lt;<a class="xref" href="Kinstrife.Systems.EntityManager.html">EntityManager</a>&gt;</div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Kinstrife.Systems.html">Kinstrife.Systems</a></h6>
+  <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
+  <h5 id="Kinstrife_Systems_EntityManager_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public abstract class EntityManager : MonoBehaviour</code></pre>
+  </div>
+  <h3 id="fields">Fields
+  </h3>
+  
+  
+  <h4 id="Kinstrife_Systems_EntityManager_entities2" data-uid="Kinstrife.Systems.EntityManager.entities2">entities2</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected EntityHandle[] entities2</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Kinstrife.Systems.EntityHandle.html">EntityHandle</a>[]</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="Kinstrife_Systems_EntityManager_MinBufferSize" data-uid="Kinstrife.Systems.EntityManager.MinBufferSize">MinBufferSize</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const int MinBufferSize = 64</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="Kinstrife_Systems_EntityManager_numAgents" data-uid="Kinstrife.Systems.EntityManager.numAgents">numAgents</h4>
+  <div class="markdown level1 summary"><p>Number of agents in this simulation</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected int numAgents</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="Kinstrife_Systems_EntityManager_onRegisterEntity" data-uid="Kinstrife.Systems.EntityManager.onRegisterEntity">onRegisterEntity</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Action&lt;int, EntityHandle&gt; onRegisterEntity</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Action</span>&lt;<span class="xref">System.Int32</span>, <a class="xref" href="Kinstrife.Systems.EntityHandle.html">EntityHandle</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="Kinstrife_Systems_EntityManager_onUnregisterEntity" data-uid="Kinstrife.Systems.EntityManager.onUnregisterEntity">onUnregisterEntity</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Action&lt;int, EntityHandle&gt; onUnregisterEntity</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Action</span>&lt;<span class="xref">System.Int32</span>, <a class="xref" href="Kinstrife.Systems.EntityHandle.html">EntityHandle</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="Kinstrife_Systems_EntityManager_simulationData" data-uid="Kinstrife.Systems.EntityManager.simulationData">simulationData</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public EntityData simulationData</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Kinstrife.Systems.EntityData.html">EntityData</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="Kinstrife_Systems_EntityManager_transformAccess" data-uid="Kinstrife.Systems.EntityManager.transformAccess">transformAccess</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected TransformAccessArray transformAccess</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">TransformAccessArray</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="Kinstrife_Systems_EntityManager_transforms" data-uid="Kinstrife.Systems.EntityManager.transforms">transforms</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected Transform[] transforms</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Transform</span>[]</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="Kinstrife_Systems_EntityManager_usedIndices" data-uid="Kinstrife.Systems.EntityManager.usedIndices">usedIndices</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int[] usedIndices</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span>[]</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="properties">Properties
+  </h3>
+  
+  
+  <a id="Kinstrife_Systems_EntityManager_bufferSize_" data-uid="Kinstrife.Systems.EntityManager.bufferSize*"></a>
+  <h4 id="Kinstrife_Systems_EntityManager_bufferSize" data-uid="Kinstrife.Systems.EntityManager.bufferSize">bufferSize</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected int bufferSize { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Kinstrife_Systems_EntityManager_BufferSize_" data-uid="Kinstrife.Systems.EntityManager.BufferSize*"></a>
+  <h4 id="Kinstrife_Systems_EntityManager_BufferSize" data-uid="Kinstrife.Systems.EntityManager.BufferSize">BufferSize</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int BufferSize { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Kinstrife_Systems_EntityManager_lastJob_" data-uid="Kinstrife.Systems.EntityManager.lastJob*"></a>
+  <h4 id="Kinstrife_Systems_EntityManager_lastJob" data-uid="Kinstrife.Systems.EntityManager.lastJob">lastJob</h4>
+  <div class="markdown level1 summary"><p>Job handle for the last update</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public JobHandle lastJob { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">JobHandle</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Kinstrife_Systems_EntityManager_NumActiveEntities_" data-uid="Kinstrife.Systems.EntityManager.NumActiveEntities*"></a>
+  <h4 id="Kinstrife_Systems_EntityManager_NumActiveEntities" data-uid="Kinstrife.Systems.EntityManager.NumActiveEntities">NumActiveEntities</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int NumActiveEntities { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Kinstrife_Systems_EntityManager_NumEntities_" data-uid="Kinstrife.Systems.EntityManager.NumEntities*"></a>
+  <h4 id="Kinstrife_Systems_EntityManager_NumEntities" data-uid="Kinstrife.Systems.EntityManager.NumEntities">NumEntities</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int NumEntities { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Kinstrife_Systems_EntityManager_SystemsManager_" data-uid="Kinstrife.Systems.EntityManager.SystemsManager*"></a>
+  <h4 id="Kinstrife_Systems_EntityManager_SystemsManager" data-uid="Kinstrife.Systems.EntityManager.SystemsManager">SystemsManager</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public SystemsManager SystemsManager { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Kinstrife.Systems.SystemsManager.html">SystemsManager</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Kinstrife_Systems_EntityManager_TransformAccessArray_" data-uid="Kinstrife.Systems.EntityManager.TransformAccessArray*"></a>
+  <h4 id="Kinstrife_Systems_EntityManager_TransformAccessArray" data-uid="Kinstrife.Systems.EntityManager.TransformAccessArray">TransformAccessArray</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TransformAccessArray TransformAccessArray { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">TransformAccessArray</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Kinstrife_Systems_EntityManager_Transforms_" data-uid="Kinstrife.Systems.EntityManager.Transforms*"></a>
+  <h4 id="Kinstrife_Systems_EntityManager_Transforms" data-uid="Kinstrife.Systems.EntityManager.Transforms">Transforms</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Transform[] Transforms { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Transform</span>[]</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  
+  
+  <a id="Kinstrife_Systems_EntityManager_AddComponentData_" data-uid="Kinstrife.Systems.EntityManager.AddComponentData*"></a>
+  <h4 id="Kinstrife_Systems_EntityManager_AddComponentData__1" data-uid="Kinstrife.Systems.EntityManager.AddComponentData``1">AddComponentData&lt;T&gt;()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void AddComponentData&lt;T&gt;()
+    where T : Object</code></pre>
+  </div>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Kinstrife_Systems_EntityManager_AddComponentDataForEntity_" data-uid="Kinstrife.Systems.EntityManager.AddComponentDataForEntity*"></a>
+  <h4 id="Kinstrife_Systems_EntityManager_AddComponentDataForEntity_Kinstrife_Systems_EntityHandle_System_Int32_" data-uid="Kinstrife.Systems.EntityManager.AddComponentDataForEntity(Kinstrife.Systems.EntityHandle,System.Int32)">AddComponentDataForEntity(EntityHandle, Int32)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected void AddComponentDataForEntity(EntityHandle e, int index)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Kinstrife.Systems.EntityHandle.html">EntityHandle</a></td>
+        <td><span class="parametername">e</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">index</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Kinstrife_Systems_EntityManager_AddEntityBurst_" data-uid="Kinstrife.Systems.EntityManager.AddEntityBurst*"></a>
+  <h4 id="Kinstrife_Systems_EntityManager_AddEntityBurst" data-uid="Kinstrife.Systems.EntityManager.AddEntityBurst">AddEntityBurst()</h4>
+  <div class="markdown level1 summary"><p>Add an agent at the specified position.
+You can use the returned index to read and write parameters
+and set for example radius and desired point to move to.</p>
+<p>See: <a class="xref" href="Kinstrife.Systems.EntityManager.html#Kinstrife_Systems_EntityManager_RemoveAgent_Kinstrife_Systems_IEntity3D_">RemoveAgent(IEntity3D)</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public EntityIndex AddEntityBurst()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Kinstrife.Systems.EntityIndex.html">EntityIndex</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Kinstrife_Systems_EntityManager_AgentExists_" data-uid="Kinstrife.Systems.EntityManager.AgentExists*"></a>
+  <h4 id="Kinstrife_Systems_EntityManager_AgentExists_Kinstrife_Systems_EntityIndex_" data-uid="Kinstrife.Systems.EntityManager.AgentExists(Kinstrife.Systems.EntityIndex)">AgentExists(EntityIndex)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool AgentExists(EntityIndex agent)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Kinstrife.Systems.EntityIndex.html">EntityIndex</a></td>
+        <td><span class="parametername">agent</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Kinstrife_Systems_EntityManager_AllocateComponentData_" data-uid="Kinstrife.Systems.EntityManager.AllocateComponentData*"></a>
+  <h4 id="Kinstrife_Systems_EntityManager_AllocateComponentData__1___0___System_Int32_" data-uid="Kinstrife.Systems.EntityManager.AllocateComponentData``1(``0[],System.Int32)">AllocateComponentData&lt;T&gt;(T[], Int32)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public T[] AllocateComponentData&lt;T&gt;(T[] buffer, int bufferSize)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>T[]</td>
+        <td><span class="parametername">buffer</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">bufferSize</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>T[]</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Kinstrife_Systems_EntityManager_Awake_" data-uid="Kinstrife.Systems.EntityManager.Awake*"></a>
+  <h4 id="Kinstrife_Systems_EntityManager_Awake" data-uid="Kinstrife.Systems.EntityManager.Awake">Awake()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void Awake()</code></pre>
+  </div>
+  
+  
+  <a id="Kinstrife_Systems_EntityManager_BlockUntilSimulationStepDone_" data-uid="Kinstrife.Systems.EntityManager.BlockUntilSimulationStepDone*"></a>
+  <h4 id="Kinstrife_Systems_EntityManager_BlockUntilSimulationStepDone" data-uid="Kinstrife.Systems.EntityManager.BlockUntilSimulationStepDone">BlockUntilSimulationStepDone()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void BlockUntilSimulationStepDone()</code></pre>
+  </div>
+  
+  
+  <a id="Kinstrife_Systems_EntityManager_ClearAgents_" data-uid="Kinstrife.Systems.EntityManager.ClearAgents*"></a>
+  <h4 id="Kinstrife_Systems_EntityManager_ClearAgents" data-uid="Kinstrife.Systems.EntityManager.ClearAgents">ClearAgents()</h4>
+  <div class="markdown level1 summary"><p>Removes all agents from the simulation</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void ClearAgents()</code></pre>
+  </div>
+  
+  
+  <a id="Kinstrife_Systems_EntityManager_EarlyUpdateJob_" data-uid="Kinstrife.Systems.EntityManager.EarlyUpdateJob*"></a>
+  <h4 id="Kinstrife_Systems_EntityManager_EarlyUpdateJob_Kinstrife_Systems_SystemState__" data-uid="Kinstrife.Systems.EntityManager.EarlyUpdateJob(Kinstrife.Systems.SystemState@)">EarlyUpdateJob(ref SystemState)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void EarlyUpdateJob(ref SystemState systemState)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Kinstrife.Systems.SystemState.html">SystemState</a></td>
+        <td><span class="parametername">systemState</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Kinstrife_Systems_EntityManager_GetBurstEntityComponentData_" data-uid="Kinstrife.Systems.EntityManager.GetBurstEntityComponentData*"></a>
+  <h4 id="Kinstrife_Systems_EntityManager_GetBurstEntityComponentData__1" data-uid="Kinstrife.Systems.EntityManager.GetBurstEntityComponentData``1">GetBurstEntityComponentData&lt;T&gt;()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ref T GetBurstEntityComponentData&lt;T&gt;()
+    where T : struct, IAllocatable</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">T</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Kinstrife_Systems_EntityManager_GetComponentData_" data-uid="Kinstrife.Systems.EntityManager.GetComponentData*"></a>
+  <h4 id="Kinstrife_Systems_EntityManager_GetComponentData__1" data-uid="Kinstrife.Systems.EntityManager.GetComponentData``1">GetComponentData&lt;T&gt;()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public T[] GetComponentData&lt;T&gt;()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>T[]</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Kinstrife_Systems_EntityManager_GetComponentTypes_" data-uid="Kinstrife.Systems.EntityManager.GetComponentTypes*"></a>
+  <h4 id="Kinstrife_Systems_EntityManager_GetComponentTypes" data-uid="Kinstrife.Systems.EntityManager.GetComponentTypes">GetComponentTypes()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected abstract IEnumerable&lt;Type&gt; GetComponentTypes()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<span class="xref">Type</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Kinstrife_Systems_EntityManager_OnDestroy_" data-uid="Kinstrife.Systems.EntityManager.OnDestroy*"></a>
+  <h4 id="Kinstrife_Systems_EntityManager_OnDestroy" data-uid="Kinstrife.Systems.EntityManager.OnDestroy">OnDestroy()</h4>
+  <div class="markdown level1 summary"><p>Frees all used memory.
+Warning: You must call this when you are done with the simulator, otherwise some resources can linger and lead to memory leaks.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void OnDestroy()</code></pre>
+  </div>
+  
+  
+  <a id="Kinstrife_Systems_EntityManager_RemoveAgent_" data-uid="Kinstrife.Systems.EntityManager.RemoveAgent*"></a>
+  <h4 id="Kinstrife_Systems_EntityManager_RemoveAgent_Kinstrife_Systems_EntityIndex_" data-uid="Kinstrife.Systems.EntityManager.RemoveAgent(Kinstrife.Systems.EntityIndex)">RemoveAgent(EntityIndex)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void RemoveAgent(EntityIndex agent)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Kinstrife.Systems.EntityIndex.html">EntityIndex</a></td>
+        <td><span class="parametername">agent</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Kinstrife_Systems_EntityManager_RemoveAgent_" data-uid="Kinstrife.Systems.EntityManager.RemoveAgent*"></a>
+  <h4 id="Kinstrife_Systems_EntityManager_RemoveAgent_Kinstrife_Systems_IEntity3D_" data-uid="Kinstrife.Systems.EntityManager.RemoveAgent(Kinstrife.Systems.IEntity3D)">RemoveAgent(IEntity3D)</h4>
+  <div class="markdown level1 summary"><p>Removes a specified agent from this simulation.
+The agent can be added again later by using AddAgent.</p>
+<p>See: AddAgent(IAgent)
+See: ClearAgents</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void RemoveAgent(IEntity3D agent)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Kinstrife.Systems.IEntity3D.html">IEntity3D</a></td>
+        <td><span class="parametername">agent</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Kinstrife_Systems_EntityManager_TryGetBurstComponentDataStore_" data-uid="Kinstrife.Systems.EntityManager.TryGetBurstComponentDataStore*"></a>
+  <h4 id="Kinstrife_Systems_EntityManager_TryGetBurstComponentDataStore__1___0__" data-uid="Kinstrife.Systems.EntityManager.TryGetBurstComponentDataStore``1(``0@)">TryGetBurstComponentDataStore&lt;T&gt;(out T)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool TryGetBurstComponentDataStore&lt;T&gt;(out T data)
+    where T : BurstEntityComponentDataStore</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">T</span></td>
+        <td><span class="parametername">data</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Kinstrife_Systems_EntityManager_TryGetBurstComponentDataStore_" data-uid="Kinstrife.Systems.EntityManager.TryGetBurstComponentDataStore*"></a>
+  <h4 id="Kinstrife_Systems_EntityManager_TryGetBurstComponentDataStore__1_Kinstrife_Systems_BurstEntityComponentDataStore___0___" data-uid="Kinstrife.Systems.EntityManager.TryGetBurstComponentDataStore``1(Kinstrife.Systems.BurstEntityComponentDataStore{``0}@)">TryGetBurstComponentDataStore&lt;T&gt;(out BurstEntityComponentDataStore&lt;T&gt;)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool TryGetBurstComponentDataStore&lt;T&gt;(out BurstEntityComponentDataStore&lt;T&gt; data)
+    where T : struct, IAllocatable</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Kinstrife.Systems.BurstEntityComponentDataStore-1.html">BurstEntityComponentDataStore</a>&lt;T&gt;</td>
+        <td><span class="parametername">data</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="events">Events
+  </h3>
+  
+  
+  <h4 id="Kinstrife_Systems_EntityManager_onReallocate" data-uid="Kinstrife.Systems.EntityManager.onReallocate">onReallocate</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public event Action&lt;int&gt; onReallocate</code></pre>
+  </div>
+  <h5 class="eventType">Event Type</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Action</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <span class="xref">IInstall&lt;&gt;</span>
+  </div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+  </body>
+</html>

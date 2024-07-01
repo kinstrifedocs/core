@@ -88,6 +88,7 @@
     <div><span class="xref">IAnimationWindowPreview</span></div>
     <div><a class="xref" href="Kinstrife.Core.DependencyInjection.ICacheReferences.html">ICacheReferences</a></div>
     <div><a class="xref" href="Kinstrife.Core.DependencyInjection.IDependent.html">IDependent</a></div>
+    <div><span class="xref">IUpdatable</span></div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Kinstrife.Animation.html">Kinstrife.Animation</a></h6>
   <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
@@ -97,6 +98,56 @@
   </div>
   <h3 id="fields">Fields
   </h3>
+  
+  
+  <h4 id="Kinstrife_Animation_AnimationDirector_bodyPosition" data-uid="Kinstrife.Animation.AnimationDirector.bodyPosition">bodyPosition</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[NonSerialized]
+public Vector3 bodyPosition</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Vector3</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="Kinstrife_Animation_AnimationDirector_bodyRotation" data-uid="Kinstrife.Animation.AnimationDirector.bodyRotation">bodyRotation</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[NonSerialized]
+public Quaternion bodyRotation</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Quaternion</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   
   
   <h4 id="Kinstrife_Animation_AnimationDirector_debug" data-uid="Kinstrife.Animation.AnimationDirector.debug">debug</h4>
@@ -248,6 +299,56 @@ public bool debug</code></pre>
   </table>
   
   
+  <a id="Kinstrife_Animation_AnimationDirector_AnimatorSpeed_" data-uid="Kinstrife.Animation.AnimationDirector.AnimatorSpeed*"></a>
+  <h4 id="Kinstrife_Animation_AnimationDirector_AnimatorSpeed" data-uid="Kinstrife.Animation.AnimationDirector.AnimatorSpeed">AnimatorSpeed</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float AnimatorSpeed { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Kinstrife_Animation_AnimationDirector_AnimatorState_" data-uid="Kinstrife.Animation.AnimationDirector.AnimatorState*"></a>
+  <h4 id="Kinstrife_Animation_AnimationDirector_AnimatorState" data-uid="Kinstrife.Animation.AnimationDirector.AnimatorState">AnimatorState</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ref AnimatorState AnimatorState { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Kinstrife.Animation.AnimatorState.html">AnimatorState</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
   <a id="Kinstrife_Animation_AnimationDirector_Components_" data-uid="Kinstrife.Animation.AnimationDirector.Components*"></a>
   <h4 id="Kinstrife_Animation_AnimationDirector_Components" data-uid="Kinstrife.Animation.AnimationDirector.Components">Components</h4>
   <div class="markdown level1 summary"></div>
@@ -373,6 +474,31 @@ public bool debug</code></pre>
   </table>
   
   
+  <a id="Kinstrife_Animation_AnimationDirector_FloatCurves_" data-uid="Kinstrife.Animation.AnimationDirector.FloatCurves*"></a>
+  <h4 id="Kinstrife_Animation_AnimationDirector_FloatCurves" data-uid="Kinstrife.Animation.AnimationDirector.FloatCurves">FloatCurves</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public AnimatedFloat FloatCurves { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">AnimatedFloat</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
   <a id="Kinstrife_Animation_AnimationDirector_Initialized_" data-uid="Kinstrife.Animation.AnimationDirector.Initialized*"></a>
   <h4 id="Kinstrife_Animation_AnimationDirector_Initialized" data-uid="Kinstrife.Animation.AnimationDirector.Initialized">Initialized</h4>
   <div class="markdown level1 summary"></div>
@@ -423,6 +549,31 @@ public bool debug</code></pre>
   </table>
   
   
+  <a id="Kinstrife_Animation_AnimationDirector_Key_" data-uid="Kinstrife.Animation.AnimationDirector.Key*"></a>
+  <h4 id="Kinstrife_Animation_AnimationDirector_Key" data-uid="Kinstrife.Animation.AnimationDirector.Key">Key</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Key Key { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Key</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
   <a id="Kinstrife_Animation_AnimationDirector_Layers_" data-uid="Kinstrife.Animation.AnimationDirector.Layers*"></a>
   <h4 id="Kinstrife_Animation_AnimationDirector_Layers" data-uid="Kinstrife.Animation.AnimationDirector.Layers">Layers</h4>
   <div class="markdown level1 summary"></div>
@@ -442,6 +593,31 @@ public bool debug</code></pre>
     <tbody>
       <tr>
         <td><a class="xref" href="Kinstrife.Animation.AnimationLayers.html">AnimationLayers</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Kinstrife_Animation_AnimationDirector_PlayableSpeed_" data-uid="Kinstrife.Animation.AnimationDirector.PlayableSpeed*"></a>
+  <h4 id="Kinstrife_Animation_AnimationDirector_PlayableSpeed" data-uid="Kinstrife.Animation.AnimationDirector.PlayableSpeed">PlayableSpeed</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float PlayableSpeed { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -923,6 +1099,33 @@ public bool debug</code></pre>
   </table>
   
   
+  <a id="Kinstrife_Animation_AnimationDirector_OnLODStateChanged_" data-uid="Kinstrife.Animation.AnimationDirector.OnLODStateChanged*"></a>
+  <h4 id="Kinstrife_Animation_AnimationDirector_OnLODStateChanged_CullingGroupEvent__" data-uid="Kinstrife.Animation.AnimationDirector.OnLODStateChanged(CullingGroupEvent@)">OnLODStateChanged(in CullingGroupEvent)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void OnLODStateChanged(in CullingGroupEvent evt)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">CullingGroupEvent</span></td>
+        <td><span class="parametername">evt</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
   <a id="Kinstrife_Animation_AnimationDirector_Pause_" data-uid="Kinstrife.Animation.AnimationDirector.Pause*"></a>
   <h4 id="Kinstrife_Animation_AnimationDirector_Pause_System_Boolean_" data-uid="Kinstrife.Animation.AnimationDirector.Pause(System.Boolean)">Pause(Boolean)</h4>
   <div class="markdown level1 summary"></div>
@@ -1002,6 +1205,60 @@ public bool debug</code></pre>
     <tbody>
       <tr>
         <td><span class="parametername">TDataType</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Kinstrife_Animation_AnimationDirector_SetCreatureSize_" data-uid="Kinstrife.Animation.AnimationDirector.SetCreatureSize*"></a>
+  <h4 id="Kinstrife_Animation_AnimationDirector_SetCreatureSize_System_Single_" data-uid="Kinstrife.Animation.AnimationDirector.SetCreatureSize(System.Single)">SetCreatureSize(Single)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetCreatureSize(float size)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><span class="parametername">size</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Kinstrife_Animation_AnimationDirector_SetLODSpeed_" data-uid="Kinstrife.Animation.AnimationDirector.SetLODSpeed*"></a>
+  <h4 id="Kinstrife_Animation_AnimationDirector_SetLODSpeed_System_Single_" data-uid="Kinstrife.Animation.AnimationDirector.SetLODSpeed(System.Single)">SetLODSpeed(Single)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetLODSpeed(float speed)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><span class="parametername">speed</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -1389,30 +1646,6 @@ public bool debug</code></pre>
       </tr>
     </tbody>
   </table>
-  
-  
-  <h4 id="Kinstrife_Animation_AnimationDirector_onAnimatorMove" data-uid="Kinstrife.Animation.AnimationDirector.onAnimatorMove">onAnimatorMove</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public event Action onAnimatorMove</code></pre>
-  </div>
-  <h5 class="eventType">Event Type</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Action</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
   <h3 id="implements">Implements</h3>
   <div>
       <a class="xref" href="Kinstrife.Core.DependencyInjection.IInstaller.html">IInstaller</a>
@@ -1428,6 +1661,9 @@ public bool debug</code></pre>
   </div>
   <div>
       <a class="xref" href="Kinstrife.Core.DependencyInjection.IDependent.html">IDependent</a>
+  </div>
+  <div>
+      <span class="xref">IUpdatable</span>
   </div>
 </article>
           </div>

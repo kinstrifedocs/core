@@ -79,7 +79,8 @@
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
     <div class="level1"><a class="xref" href="Kinstrife.Animation.AnimationComponent.html">AnimationComponent</a></div>
-    <div class="level2"><span class="xref">SpringTransformsAnimator</span></div>
+    <div class="level2"><a class="xref" href="Kinstrife.Animation.JobAnimationComponent-2.html">JobAnimationComponent</a>&lt;<a class="xref" href="Kinstrife.Animation.SpringTransformsAnimator.State.html">SpringTransformsAnimator.State</a>, <a class="xref" href="Kinstrife.Animation.SpringTransformsJob.html">SpringTransformsJob</a>&gt;</div>
+    <div class="level3"><span class="xref">SpringTransformsAnimator</span></div>
   </div>
   <div class="implements">
     <h5>Implements</h5>
@@ -95,6 +96,36 @@
   </div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="Kinstrife.Animation.JobAnimationComponent-2.html#Kinstrife_Animation_JobAnimationComponent_2_jobState">JobAnimationComponent&lt;SpringTransformsAnimator.State, SpringTransformsJob&gt;.jobState</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.Animation.JobAnimationComponent-2.html#Kinstrife_Animation_JobAnimationComponent_2_isActiveAndPlaying">JobAnimationComponent&lt;SpringTransformsAnimator.State, SpringTransformsJob&gt;.isActiveAndPlaying</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.Animation.JobAnimationComponent-2.html#Kinstrife_Animation_JobAnimationComponent_2_isPlayableInitialized">JobAnimationComponent&lt;SpringTransformsAnimator.State, SpringTransformsJob&gt;.isPlayableInitialized</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.Animation.JobAnimationComponent-2.html#Kinstrife_Animation_JobAnimationComponent_2_SyncJobData__1__">JobAnimationComponent&lt;SpringTransformsAnimator.State, SpringTransformsJob&gt;.SyncJobData(SpringTransformsJob)</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.Animation.JobAnimationComponent-2.html#Kinstrife_Animation_JobAnimationComponent_2_Create">JobAnimationComponent&lt;SpringTransformsAnimator.State, SpringTransformsJob&gt;.Create()</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.Animation.JobAnimationComponent-2.html#Kinstrife_Animation_JobAnimationComponent_2_CreateJobState">JobAnimationComponent&lt;SpringTransformsAnimator.State, SpringTransformsJob&gt;.CreateJobState()</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.Animation.JobAnimationComponent-2.html#Kinstrife_Animation_JobAnimationComponent_2_PostCreate">JobAnimationComponent&lt;SpringTransformsAnimator.State, SpringTransformsJob&gt;.PostCreate()</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.Animation.JobAnimationComponent-2.html#Kinstrife_Animation_JobAnimationComponent_2_Destroy">JobAnimationComponent&lt;SpringTransformsAnimator.State, SpringTransformsJob&gt;.Destroy()</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.Animation.JobAnimationComponent-2.html#Kinstrife_Animation_JobAnimationComponent_2_OnPlay">JobAnimationComponent&lt;SpringTransformsAnimator.State, SpringTransformsJob&gt;.OnPlay()</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.Animation.JobAnimationComponent-2.html#Kinstrife_Animation_JobAnimationComponent_2_Stop">JobAnimationComponent&lt;SpringTransformsAnimator.State, SpringTransformsJob&gt;.Stop()</a>
+    </div>
     <div>
       <a class="xref" href="Kinstrife.Animation.AnimationComponent.html#Kinstrife_Animation_AnimationComponent_animancer">AnimationComponent.animancer</a>
     </div>
@@ -183,6 +214,9 @@
       <a class="xref" href="Kinstrife.Animation.AnimationComponent.html#Kinstrife_Animation_AnimationComponent_updateMode">AnimationComponent.updateMode</a>
     </div>
     <div>
+      <a class="xref" href="Kinstrife.Animation.AnimationComponent.html#Kinstrife_Animation_AnimationComponent_OnUpdate_System_Single_">AnimationComponent.OnUpdate(Single)</a>
+    </div>
+    <div>
       <a class="xref" href="Kinstrife.Animation.AnimationComponent.html#Kinstrife_Animation_AnimationComponent_RefreshUpdateMode">AnimationComponent.RefreshUpdateMode()</a>
     </div>
     <div>
@@ -229,7 +263,7 @@
   <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
   <h5 id="Kinstrife_Animation_SpringTransformsAnimator_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class SpringTransformsAnimator : AnimationComponent, IAnimationPlayer, ICacheReferences, IInjectable, IInstall, IDependent</code></pre>
+    <pre><code class="lang-csharp hljs">public class SpringTransformsAnimator : JobAnimationComponent&lt;SpringTransformsAnimator.State, SpringTransformsJob&gt;, IAnimationPlayer, ICacheReferences, IInjectable, IInstall, IDependent</code></pre>
   </div>
   <h3 id="fields">Fields
   </h3>
@@ -457,6 +491,33 @@
   </h3>
   
   
+  <a id="Kinstrife_Animation_SpringTransformsAnimator_CreateJobState_" data-uid="Kinstrife.Animation.SpringTransformsAnimator.CreateJobState*"></a>
+  <h4 id="Kinstrife_Animation_SpringTransformsAnimator_CreateJobState" data-uid="Kinstrife.Animation.SpringTransformsAnimator.CreateJobState">CreateJobState()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override SpringTransformsAnimator.State CreateJobState()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Kinstrife.Animation.SpringTransformsAnimator.State.html">SpringTransformsAnimator.State</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">Kinstrife.Animation.JobAnimationComponent&lt;Kinstrife.Animation.SpringTransformsAnimator.State, Kinstrife.Animation.SpringTransformsJob&gt;.CreateJobState()</span></div>
+  
+  
   <a id="Kinstrife_Animation_SpringTransformsAnimator_Dispose_" data-uid="Kinstrife.Animation.SpringTransformsAnimator.Dispose*"></a>
   <h4 id="Kinstrife_Animation_SpringTransformsAnimator_Dispose" data-uid="Kinstrife.Animation.SpringTransformsAnimator.Dispose">Dispose()</h4>
   <div class="markdown level1 summary"></div>
@@ -516,35 +577,6 @@
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public void OnDestroy()</code></pre>
   </div>
-  
-  
-  <a id="Kinstrife_Animation_SpringTransformsAnimator_OnUpdate_" data-uid="Kinstrife.Animation.SpringTransformsAnimator.OnUpdate*"></a>
-  <h4 id="Kinstrife_Animation_SpringTransformsAnimator_OnUpdate_System_Single_" data-uid="Kinstrife.Animation.SpringTransformsAnimator.OnUpdate(System.Single)">OnUpdate(Single)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public override void OnUpdate(float deltaTime)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Single</span></td>
-        <td><span class="parametername">deltaTime</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="overrides">Overrides</h5>
-  <div><a class="xref" href="Kinstrife.Animation.AnimationComponent.html#Kinstrife_Animation_AnimationComponent_OnUpdate_System_Single_">AnimationComponent.OnUpdate(Single)</a></div>
   <h3 id="implements">Implements</h3>
   <div>
       <a class="xref" href="Kinstrife.Animation.IAnimationPlayer.html">IAnimationPlayer</a>

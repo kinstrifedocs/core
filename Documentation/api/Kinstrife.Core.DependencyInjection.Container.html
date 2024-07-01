@@ -531,12 +531,12 @@ public class Container</code></pre>
   
   
   <a id="Kinstrife_Core_DependencyInjection_Container_GetInstance_" data-uid="Kinstrife.Core.DependencyInjection.Container.GetInstance*"></a>
-  <h4 id="Kinstrife_Core_DependencyInjection_Container_GetInstance_Type_Kinstrife_Core_DependencyInjection_IInjectable_" data-uid="Kinstrife.Core.DependencyInjection.Container.GetInstance(Type,Kinstrife.Core.DependencyInjection.IInjectable)">GetInstance(Type, IInjectable)</h4>
+  <h4 id="Kinstrife_Core_DependencyInjection_Container_GetInstance_Type_Kinstrife_Core_DependencyInjection_IInjectable_System_Boolean_" data-uid="Kinstrife.Core.DependencyInjection.Container.GetInstance(Type,Kinstrife.Core.DependencyInjection.IInjectable,System.Boolean)">GetInstance(Type, IInjectable, Boolean)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public object GetInstance(Type input, IInjectable caller)</code></pre>
+    <pre><code class="lang-csharp hljs">public object GetInstance(Type input, IInjectable caller, bool reportMissing = true)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -556,6 +556,11 @@ public class Container</code></pre>
       <tr>
         <td><a class="xref" href="Kinstrife.Core.DependencyInjection.IInjectable.html">IInjectable</a></td>
         <td><span class="parametername">caller</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">reportMissing</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -682,12 +687,12 @@ public class Container</code></pre>
   
   
   <a id="Kinstrife_Core_DependencyInjection_Container_TryGetInstance_" data-uid="Kinstrife.Core.DependencyInjection.Container.TryGetInstance*"></a>
-  <h4 id="Kinstrife_Core_DependencyInjection_Container_TryGetInstance__1___0__Kinstrife_Core_DependencyInjection_IInjectable_" data-uid="Kinstrife.Core.DependencyInjection.Container.TryGetInstance``1(``0@,Kinstrife.Core.DependencyInjection.IInjectable)">TryGetInstance&lt;T&gt;(out T, IInjectable)</h4>
+  <h4 id="Kinstrife_Core_DependencyInjection_Container_TryGetInstance__1___0__Kinstrife_Core_DependencyInjection_IInjectable_System_Boolean_" data-uid="Kinstrife.Core.DependencyInjection.Container.TryGetInstance``1(``0@,Kinstrife.Core.DependencyInjection.IInjectable,System.Boolean)">TryGetInstance&lt;T&gt;(out T, IInjectable, Boolean)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public bool TryGetInstance&lt;T&gt;(out T instance, IInjectable caller = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public bool TryGetInstance&lt;T&gt;(out T instance, IInjectable caller = null, bool reportMissing = true)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -707,6 +712,11 @@ public class Container</code></pre>
       <tr>
         <td><a class="xref" href="Kinstrife.Core.DependencyInjection.IInjectable.html">IInjectable</a></td>
         <td><span class="parametername">caller</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">reportMissing</span></td>
         <td></td>
       </tr>
     </tbody>

@@ -82,14 +82,16 @@
   </div>
   <div class="implements">
     <h5>Implements</h5>
-    <div><span class="xref">IEntity</span></div>
-    <div><span class="xref">ILateInitializable</span></div>
+    <div><a class="xref" href="Kinstrife.Systems.IEntity.html">IEntity</a></div>
+    <div><a class="xref" href="Kinstrife.ICustomUpdateable.html">ICustomUpdateable</a></div>
+    <div><a class="xref" href="Kinstrife.Core.DependencyInjection.ILateInitializable.html">ILateInitializable</a></div>
+    <div><a class="xref" href="Kinstrife.Core.DependencyInjection.IDependent.html">IDependent</a></div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Kinstrife.Core.Culling.html">Kinstrife.Core.Culling</a></h6>
   <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
   <h5 id="Kinstrife_Core_Culling_LODController_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public sealed class LODController : MonoBehaviour</code></pre>
+    <pre><code class="lang-csharp hljs">public sealed class LODController : MonoBehaviour, IEntity, ICustomUpdateable, ILateInitializable, IDependent</code></pre>
   </div>
   <h3 id="fields">Fields
   </h3>
@@ -137,6 +139,30 @@
     <tbody>
       <tr>
         <td><span class="xref">GameObject</span>[]</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="Kinstrife_Core_Culling_LODController_distance" data-uid="Kinstrife.Core.Culling.LODController.distance">distance</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public LODDistance distance</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Kinstrife.Core.Culling.LODDistance.html">LODDistance</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -305,6 +331,33 @@
   </table>
   
   
+  <a id="Kinstrife_Core_Culling_LODController_SetActive_" data-uid="Kinstrife.Core.Culling.LODController.SetActive*"></a>
+  <h4 id="Kinstrife_Core_Culling_LODController_SetActive_System_Boolean_" data-uid="Kinstrife.Core.Culling.LODController.SetActive(System.Boolean)">SetActive(Boolean)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetActive(bool enabled)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">enabled</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
   <a id="Kinstrife_Core_Culling_LODController_StateChanged_" data-uid="Kinstrife.Core.Culling.LODController.StateChanged*"></a>
   <h4 id="Kinstrife_Core_Culling_LODController_StateChanged_CullingGroupEvent__" data-uid="Kinstrife.Core.Culling.LODController.StateChanged(CullingGroupEvent@)">StateChanged(in CullingGroupEvent)</h4>
   <div class="markdown level1 summary"></div>
@@ -430,10 +483,16 @@
   </table>
   <h3 id="implements">Implements</h3>
   <div>
-      <span class="xref">IEntity</span>
+      <a class="xref" href="Kinstrife.Systems.IEntity.html">IEntity</a>
   </div>
   <div>
-      <span class="xref">ILateInitializable</span>
+      <a class="xref" href="Kinstrife.ICustomUpdateable.html">ICustomUpdateable</a>
+  </div>
+  <div>
+      <a class="xref" href="Kinstrife.Core.DependencyInjection.ILateInitializable.html">ILateInitializable</a>
+  </div>
+  <div>
+      <a class="xref" href="Kinstrife.Core.DependencyInjection.IDependent.html">IDependent</a>
   </div>
 </article>
           </div>

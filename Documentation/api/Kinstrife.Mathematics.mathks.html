@@ -355,6 +355,48 @@
   </table>
   
   
+  <a id="Kinstrife_Mathematics_mathks_angleaxis_" data-uid="Kinstrife.Mathematics.mathks.angleaxis*"></a>
+  <h4 id="Kinstrife_Mathematics_mathks_angleaxis_quaternion_quaternion_System_Single__Vector3__" data-uid="Kinstrife.Mathematics.mathks.angleaxis(quaternion,quaternion,System.Single@,Vector3@)">angleaxis(quaternion, quaternion, out Single, out Vector3)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void angleaxis(quaternion desired, quaternion current, out float errorMagnitude, out Vector3 error)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">quaternion</span></td>
+        <td><span class="parametername">desired</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">quaternion</span></td>
+        <td><span class="parametername">current</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><span class="parametername">errorMagnitude</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">Vector3</span></td>
+        <td><span class="parametername">error</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
   <a id="Kinstrife_Mathematics_mathks_AngleError_" data-uid="Kinstrife.Mathematics.mathks.AngleError*"></a>
   <h4 id="Kinstrife_Mathematics_mathks_AngleError_Quaternion_Quaternion_System_Single__Vector3__" data-uid="Kinstrife.Mathematics.mathks.AngleError(Quaternion,Quaternion,System.Single@,Vector3@)">AngleError(Quaternion, Quaternion, out Single, out Vector3)</h4>
   <div class="markdown level1 summary"></div>
@@ -574,6 +616,53 @@
     <tbody>
       <tr>
         <td><span class="xref">System.Single</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Kinstrife_Mathematics_mathks_ClampMagnitude_" data-uid="Kinstrife.Mathematics.mathks.ClampMagnitude*"></a>
+  <h4 id="Kinstrife_Mathematics_mathks_ClampMagnitude_float3_System_Single_" data-uid="Kinstrife.Mathematics.mathks.ClampMagnitude(float3,System.Single)">ClampMagnitude(float3, Single)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static float3 ClampMagnitude(this float3 vector, float maxLength)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">float3</span></td>
+        <td><span class="parametername">vector</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><span class="parametername">maxLength</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">float3</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -1047,6 +1136,53 @@
     <tbody>
       <tr>
         <td><span class="xref">System.Single</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Kinstrife_Mathematics_mathks_Multiply_" data-uid="Kinstrife.Mathematics.mathks.Multiply*"></a>
+  <h4 id="Kinstrife_Mathematics_mathks_Multiply_quaternion_System_Single_" data-uid="Kinstrife.Mathematics.mathks.Multiply(quaternion,System.Single)">Multiply(quaternion, Single)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static quaternion Multiply(this quaternion current, float value)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">quaternion</span></td>
+        <td><span class="parametername">current</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><span class="parametername">value</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">quaternion</span></td>
         <td></td>
       </tr>
     </tbody>

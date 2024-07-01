@@ -110,6 +110,83 @@
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static class MeshDataManager</code></pre>
   </div>
+  <h3 id="properties">Properties
+  </h3>
+  
+  
+  <a id="Kinstrife_MeshTools_MeshDataManager_Cache_" data-uid="Kinstrife.MeshTools.MeshDataManager.Cache*"></a>
+  <h4 id="Kinstrife_MeshTools_MeshDataManager_Cache" data-uid="Kinstrife.MeshTools.MeshDataManager.Cache">Cache</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IReadOnlyDictionary&lt;Mesh, StaticMeshData&gt; Cache { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IReadOnlyDictionary</span>&lt;<span class="xref">Mesh</span>, <a class="xref" href="Kinstrife.MeshTools.StaticMeshData.html">StaticMeshData</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Kinstrife_MeshTools_MeshDataManager_CacheNative_" data-uid="Kinstrife.MeshTools.MeshDataManager.CacheNative*"></a>
+  <h4 id="Kinstrife_MeshTools_MeshDataManager_CacheNative" data-uid="Kinstrife.MeshTools.MeshDataManager.CacheNative">CacheNative</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IReadOnlyDictionary&lt;Mesh, NativeMeshData&gt; CacheNative { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IReadOnlyDictionary</span>&lt;<span class="xref">Mesh</span>, <a class="xref" href="Kinstrife.MeshTools.NativeMeshData.html">NativeMeshData</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Kinstrife_MeshTools_MeshDataManager_CacheNativeSkinned_" data-uid="Kinstrife.MeshTools.MeshDataManager.CacheNativeSkinned*"></a>
+  <h4 id="Kinstrife_MeshTools_MeshDataManager_CacheNativeSkinned" data-uid="Kinstrife.MeshTools.MeshDataManager.CacheNativeSkinned">CacheNativeSkinned</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IReadOnlyDictionary&lt;Mesh, NativeSkinnedStaticMeshData&gt; CacheNativeSkinned { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IReadOnlyDictionary</span>&lt;<span class="xref">Mesh</span>, <a class="xref" href="Kinstrife.MeshTools.NativeSkinnedStaticMeshData.html">NativeSkinnedStaticMeshData</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   <h3 id="methods">Methods
   </h3>
   
@@ -156,53 +233,6 @@
   </table>
   
   
-  <a id="Kinstrife_MeshTools_MeshDataManager_CreateNative_" data-uid="Kinstrife.MeshTools.MeshDataManager.CreateNative*"></a>
-  <h4 id="Kinstrife_MeshTools_MeshDataManager_CreateNative_Kinstrife_MeshTools_MeshDataCache_Skeleton_" data-uid="Kinstrife.MeshTools.MeshDataManager.CreateNative(Kinstrife.MeshTools.MeshDataCache,Skeleton)">CreateNative(MeshDataCache, Skeleton)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static NativeStaticMeshData CreateNative(MeshDataCache cachedData, Skeleton skeleton)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Kinstrife.MeshTools.MeshDataCache.html">MeshDataCache</a></td>
-        <td><span class="parametername">cachedData</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><span class="xref">Skeleton</span></td>
-        <td><span class="parametername">skeleton</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Kinstrife.MeshTools.NativeStaticMeshData.html">NativeStaticMeshData</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
   <a id="Kinstrife_MeshTools_MeshDataManager_Dispose_" data-uid="Kinstrife.MeshTools.MeshDataManager.Dispose*"></a>
   <h4 id="Kinstrife_MeshTools_MeshDataManager_Dispose" data-uid="Kinstrife.MeshTools.MeshDataManager.Dispose">Dispose()</h4>
   <div class="markdown level1 summary"></div>
@@ -219,7 +249,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static NativeStaticMeshData Get(Mesh mesh)</code></pre>
+    <pre><code class="lang-csharp hljs">public static NativeSkinnedStaticMeshData Get(Mesh mesh)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -248,7 +278,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="Kinstrife.MeshTools.NativeStaticMeshData.html">NativeStaticMeshData</a></td>
+        <td><a class="xref" href="Kinstrife.MeshTools.NativeSkinnedStaticMeshData.html">NativeSkinnedStaticMeshData</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -298,12 +328,54 @@
   
   
   <a id="Kinstrife_MeshTools_MeshDataManager_GetOrCreateNative_" data-uid="Kinstrife.MeshTools.MeshDataManager.GetOrCreateNative*"></a>
-  <h4 id="Kinstrife_MeshTools_MeshDataManager_GetOrCreateNative_Kinstrife_MeshTools_MeshDataCache_Skeleton_" data-uid="Kinstrife.MeshTools.MeshDataManager.GetOrCreateNative(Kinstrife.MeshTools.MeshDataCache,Skeleton)">GetOrCreateNative(MeshDataCache, Skeleton)</h4>
+  <h4 id="Kinstrife_MeshTools_MeshDataManager_GetOrCreateNative_Mesh_" data-uid="Kinstrife.MeshTools.MeshDataManager.GetOrCreateNative(Mesh)">GetOrCreateNative(Mesh)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static NativeStaticMeshData GetOrCreateNative(MeshDataCache cachedData, Skeleton skeleton)</code></pre>
+    <pre><code class="lang-csharp hljs">public static NativeMeshData GetOrCreateNative(Mesh sourceMesh)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Mesh</span></td>
+        <td><span class="parametername">sourceMesh</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Kinstrife.MeshTools.NativeMeshData.html">NativeMeshData</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Kinstrife_MeshTools_MeshDataManager_GetOrCreateNativeSkinned_" data-uid="Kinstrife.MeshTools.MeshDataManager.GetOrCreateNativeSkinned*"></a>
+  <h4 id="Kinstrife_MeshTools_MeshDataManager_GetOrCreateNativeSkinned_Kinstrife_MeshTools_MeshDataCache_Skeleton_" data-uid="Kinstrife.MeshTools.MeshDataManager.GetOrCreateNativeSkinned(Kinstrife.MeshTools.MeshDataCache,Skeleton)">GetOrCreateNativeSkinned(MeshDataCache, Skeleton)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static NativeSkinnedStaticMeshData GetOrCreateNativeSkinned(MeshDataCache cachedData, Skeleton skeleton)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -337,7 +409,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="Kinstrife.MeshTools.NativeStaticMeshData.html">NativeStaticMeshData</a></td>
+        <td><a class="xref" href="Kinstrife.MeshTools.NativeSkinnedStaticMeshData.html">NativeSkinnedStaticMeshData</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -345,12 +417,12 @@
   
   
   <a id="Kinstrife_MeshTools_MeshDataManager_TryGet_" data-uid="Kinstrife.MeshTools.MeshDataManager.TryGet*"></a>
-  <h4 id="Kinstrife_MeshTools_MeshDataManager_TryGet_Mesh_Kinstrife_MeshTools_NativeStaticMeshData__" data-uid="Kinstrife.MeshTools.MeshDataManager.TryGet(Mesh,Kinstrife.MeshTools.NativeStaticMeshData@)">TryGet(Mesh, out NativeStaticMeshData)</h4>
+  <h4 id="Kinstrife_MeshTools_MeshDataManager_TryGet_Mesh_Kinstrife_MeshTools_NativeSkinnedStaticMeshData__" data-uid="Kinstrife.MeshTools.MeshDataManager.TryGet(Mesh,Kinstrife.MeshTools.NativeSkinnedStaticMeshData@)">TryGet(Mesh, out NativeSkinnedStaticMeshData)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static bool TryGet(Mesh mesh, out NativeStaticMeshData data)</code></pre>
+    <pre><code class="lang-csharp hljs">public static bool TryGet(Mesh mesh, out NativeSkinnedStaticMeshData data)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -368,7 +440,7 @@
         <td></td>
       </tr>
       <tr>
-        <td><a class="xref" href="Kinstrife.MeshTools.NativeStaticMeshData.html">NativeStaticMeshData</a></td>
+        <td><a class="xref" href="Kinstrife.MeshTools.NativeSkinnedStaticMeshData.html">NativeSkinnedStaticMeshData</a></td>
         <td><span class="parametername">data</span></td>
         <td></td>
       </tr>

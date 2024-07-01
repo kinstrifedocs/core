@@ -78,14 +78,14 @@
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><a class="xref" href="Kinstrife.Core.Systems.SystemBase.html">SystemBase</a></div>
-    <div class="level2"><a class="xref" href="Kinstrife.Core.Systems.SystemBase-1.html">SystemBase</a>&lt;<a class="xref" href="Kinstrife.Actor.ActorController.html">ActorController</a>&gt;</div>
+    <div class="level1"><a class="xref" href="Kinstrife.Systems.SystemBase.html">SystemBase</a></div>
+    <div class="level2"><a class="xref" href="Kinstrife.Systems.SystemBase-1.html">SystemBase</a>&lt;<a class="xref" href="Kinstrife.Actor.ActorController.html">ActorController</a>&gt;</div>
     <div class="level3"><a class="xref" href="Kinstrife.Actor.ActorSystem-1.html">ActorSystem</a>&lt;<a class="xref" href="Kinstrife.Actor.ActorController.html">ActorController</a>&gt;</div>
     <div class="level4"><span class="xref">ActorMotorSystem</span></div>
   </div>
   <div class="implements">
     <h5>Implements</h5>
-    <div><span class="xref">IInjectable</span></div>
+    <div><a class="xref" href="Kinstrife.Core.DependencyInjection.IInjectable.html">IInjectable</a></div>
     <div><a class="xref" href="Kinstrife.IPhysicsFixedUpdate.html">IPhysicsFixedUpdate</a></div>
     <div><a class="xref" href="Kinstrife.ICustomUpdateable.html">ICustomUpdateable</a></div>
     <div><a class="xref" href="Kinstrife.Core.DependencyInjection.IDependent.html">IDependent</a></div>
@@ -96,32 +96,77 @@
       <a class="xref" href="Kinstrife.Actor.ActorSystem-1.html#Kinstrife_Actor_ActorSystem_1_registry">ActorSystem&lt;ActorController&gt;.registry</a>
     </div>
     <div>
-      <a class="xref" href="Kinstrife.Actor.ActorSystem-1.html#Kinstrife_Actor_ActorSystem_1_Inject_ActorsRegistry_">ActorSystem&lt;ActorController&gt;.Inject(ActorsRegistry)</a>
+      <a class="xref" href="Kinstrife.Actor.ActorSystem-1.html#Kinstrife_Actor_ActorSystem_1_Inject_Kinstrife_Actor_Input_ActorsRegistry_">ActorSystem&lt;ActorController&gt;.Inject(ActorsRegistry)</a>
     </div>
     <div>
       <a class="xref" href="Kinstrife.Actor.ActorSystem-1.html#Kinstrife_Actor_ActorSystem_1_Awake">ActorSystem&lt;ActorController&gt;.Awake()</a>
     </div>
     <div>
-      <a class="xref" href="Kinstrife.Core.Systems.SystemBase-1.html#Kinstrife_Core_Systems_SystemBase_1_runner">SystemBase&lt;ActorController&gt;.runner</a>
+      <a class="xref" href="Kinstrife.Systems.SystemBase-1.html#Kinstrife_Systems_SystemBase_1_Kinstrife_ICustomUpdateable_ShouldUpdate">SystemBase&lt;ActorController&gt;.ICustomUpdateable.ShouldUpdate</a>
     </div>
     <div>
-      <a class="xref" href="Kinstrife.Core.Systems.SystemBase-1.html#Kinstrife_Core_Systems_SystemBase_1_Entities">SystemBase&lt;ActorController&gt;.Entities</a>
+      <a class="xref" href="Kinstrife.Systems.SystemBase-1.html#Kinstrife_Systems_SystemBase_1_runner">SystemBase&lt;ActorController&gt;.runner</a>
     </div>
     <div>
-      <a class="xref" href="Kinstrife.Core.Systems.SystemBase-1.html#Kinstrife_Core_Systems_SystemBase_1_AddEntity__0_">SystemBase&lt;ActorController&gt;.AddEntity(ActorController)</a>
+      <a class="xref" href="Kinstrife.Systems.SystemBase-1.html#Kinstrife_Systems_SystemBase_1_Entities">SystemBase&lt;ActorController&gt;.Entities</a>
     </div>
     <div>
-      <a class="xref" href="Kinstrife.Core.Systems.SystemBase-1.html#Kinstrife_Core_Systems_SystemBase_1_RemoveEntity__0_">SystemBase&lt;ActorController&gt;.RemoveEntity(ActorController)</a>
+      <a class="xref" href="Kinstrife.Systems.SystemBase-1.html#Kinstrife_Systems_SystemBase_1_AddEntity__0_">SystemBase&lt;ActorController&gt;.AddEntity(ActorController)</a>
     </div>
     <div>
-      <a class="xref" href="Kinstrife.Core.Systems.SystemBase.html#Kinstrife_Core_Systems_SystemBase_Kinstrife_ICustomUpdateable_ShouldUpdate">SystemBase.ICustomUpdateable.ShouldUpdate</a>
+      <a class="xref" href="Kinstrife.Systems.SystemBase-1.html#Kinstrife_Systems_SystemBase_1_RemoveEntity__0_">SystemBase&lt;ActorController&gt;.RemoveEntity(ActorController)</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.Systems.SystemBase.html#Kinstrife_Systems_SystemBase_jobTiming">SystemBase.jobTiming</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.Systems.SystemBase.html#Kinstrife_Systems_SystemBase_JobTiming">SystemBase.JobTiming</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.Systems.SystemBase.html#Kinstrife_Systems_SystemBase_SystemsManager">SystemBase.SystemsManager</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.Systems.SystemBase.html#Kinstrife_Systems_SystemBase_EntityManager">SystemBase.EntityManager</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.Systems.SystemBase.html#Kinstrife_Systems_SystemBase_OnEnable">SystemBase.OnEnable()</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.Systems.SystemBase.html#Kinstrife_Systems_SystemBase_OnDisable">SystemBase.OnDisable()</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.Systems.SystemBase.html#Kinstrife_Systems_SystemBase_OnSystemCreate">SystemBase.OnSystemCreate()</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.Systems.SystemBase.html#Kinstrife_Systems_SystemBase_OnReallocate_System_Int32_">SystemBase.OnReallocate(Int32)</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.Systems.SystemBase.html#Kinstrife_Systems_SystemBase_OnUpdate_Kinstrife_Systems_SystemState__">SystemBase.OnUpdate(SystemState)</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.Systems.SystemBase.html#Kinstrife_Systems_SystemBase_OnAfterEarlyUpdate_Kinstrife_Systems_SystemState__">SystemBase.OnAfterEarlyUpdate(SystemState)</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.Systems.SystemBase.html#Kinstrife_Systems_SystemBase_OnBeforeFixedUpdate_Kinstrife_Systems_SystemState__">SystemBase.OnBeforeFixedUpdate(SystemState)</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.Systems.SystemBase.html#Kinstrife_Systems_SystemBase_OnAfterFixedUpdate_Kinstrife_Systems_SystemState__">SystemBase.OnAfterFixedUpdate(SystemState)</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.Systems.SystemBase.html#Kinstrife_Systems_SystemBase_OnFixedUpdate_Kinstrife_Systems_SystemState__">SystemBase.OnFixedUpdate(SystemState)</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.Systems.SystemBase.html#Kinstrife_Systems_SystemBase_OnBeforeUpdate_Kinstrife_Systems_SystemState__">SystemBase.OnBeforeUpdate(SystemState)</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.Systems.SystemBase.html#Kinstrife_Systems_SystemBase_OnAfterUpdate_Kinstrife_Systems_SystemState__">SystemBase.OnAfterUpdate(SystemState)</a>
     </div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Kinstrife.Actor.html">Kinstrife.Actor</a></h6>
   <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
   <h5 id="Kinstrife_Actor_ActorMotorSystem_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class ActorMotorSystem : ActorSystem&lt;ActorController&gt;, IPhysicsFixedUpdate, ICustomUpdateable, IDependent</code></pre>
+    <pre><code class="lang-csharp hljs">public class ActorMotorSystem : ActorSystem&lt;ActorController&gt;, IInjectable, IPhysicsFixedUpdate, ICustomUpdateable, IDependent</code></pre>
   </div>
   <h3 id="fields">Fields
   </h3>
@@ -269,7 +314,7 @@ public int currentSize</code></pre>
     </tbody>
   </table>
   <h5 class="overrides">Overrides</h5>
-  <div><span class="xref">Kinstrife.Core.Systems.SystemBase&lt;Kinstrife.Actor.ActorController&gt;.OnUpdate(System.Single)</span></div>
+  <div><span class="xref">Kinstrife.Systems.SystemBase&lt;Kinstrife.Actor.ActorController&gt;.OnUpdate(System.Single)</span></div>
   
   
   <a id="Kinstrife_Actor_ActorMotorSystem_RemoveActorEntity_" data-uid="Kinstrife.Actor.ActorMotorSystem.RemoveActorEntity*"></a>
@@ -301,7 +346,7 @@ public int currentSize</code></pre>
   <div><span class="xref">Kinstrife.Actor.ActorSystem&lt;Kinstrife.Actor.ActorController&gt;.RemoveActorEntity(Kinstrife.Actor.ActorRoot)</span></div>
   <h3 id="implements">Implements</h3>
   <div>
-      <span class="xref">IInjectable</span>
+      <a class="xref" href="Kinstrife.Core.DependencyInjection.IInjectable.html">IInjectable</a>
   </div>
   <div>
       <a class="xref" href="Kinstrife.IPhysicsFixedUpdate.html">IPhysicsFixedUpdate</a>

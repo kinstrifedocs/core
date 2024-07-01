@@ -78,21 +78,108 @@
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><span class="xref">LODCullingSystem</span></div>
+    <div class="level1"><a class="xref" href="Kinstrife.Systems.SystemBase.html">SystemBase</a></div>
+    <div class="level2"><a class="xref" href="Kinstrife.Systems.SystemBase-1.html">SystemBase</a>&lt;<a class="xref" href="Kinstrife.Core.Culling.LODController.html">LODController</a>&gt;</div>
+    <div class="level3"><span class="xref">LODCullingSystem</span></div>
   </div>
   <div class="implements">
     <h5>Implements</h5>
-    <div><span class="xref">IInjectable</span></div>
-    <div><span class="xref">IInitializable</span></div>
+    <div><a class="xref" href="Kinstrife.ICustomUpdateable.html">ICustomUpdateable</a></div>
+    <div><a class="xref" href="Kinstrife.Core.DependencyInjection.IInjectable.html">IInjectable</a></div>
+    <div><a class="xref" href="Kinstrife.Core.DependencyInjection.IDependent.html">IDependent</a></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="Kinstrife.Systems.SystemBase-1.html#Kinstrife_Systems_SystemBase_1_Kinstrife_ICustomUpdateable_ShouldUpdate">SystemBase&lt;LODController&gt;.ICustomUpdateable.ShouldUpdate</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.Systems.SystemBase-1.html#Kinstrife_Systems_SystemBase_1_runner">SystemBase&lt;LODController&gt;.runner</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.Systems.SystemBase-1.html#Kinstrife_Systems_SystemBase_1_Entities">SystemBase&lt;LODController&gt;.Entities</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.Systems.SystemBase-1.html#Kinstrife_Systems_SystemBase_1_AddEntity__0_">SystemBase&lt;LODController&gt;.AddEntity(LODController)</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.Systems.SystemBase-1.html#Kinstrife_Systems_SystemBase_1_RemoveEntity__0_">SystemBase&lt;LODController&gt;.RemoveEntity(LODController)</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.Systems.SystemBase-1.html#Kinstrife_Systems_SystemBase_1_OnUpdate_System_Single_">SystemBase&lt;LODController&gt;.OnUpdate(Single)</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.Systems.SystemBase.html#Kinstrife_Systems_SystemBase_jobTiming">SystemBase.jobTiming</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.Systems.SystemBase.html#Kinstrife_Systems_SystemBase_JobTiming">SystemBase.JobTiming</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.Systems.SystemBase.html#Kinstrife_Systems_SystemBase_SystemsManager">SystemBase.SystemsManager</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.Systems.SystemBase.html#Kinstrife_Systems_SystemBase_EntityManager">SystemBase.EntityManager</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.Systems.SystemBase.html#Kinstrife_Systems_SystemBase_OnEnable">SystemBase.OnEnable()</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.Systems.SystemBase.html#Kinstrife_Systems_SystemBase_OnDisable">SystemBase.OnDisable()</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.Systems.SystemBase.html#Kinstrife_Systems_SystemBase_OnUpdate_Kinstrife_Systems_SystemState__">SystemBase.OnUpdate(SystemState)</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.Systems.SystemBase.html#Kinstrife_Systems_SystemBase_OnAfterEarlyUpdate_Kinstrife_Systems_SystemState__">SystemBase.OnAfterEarlyUpdate(SystemState)</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.Systems.SystemBase.html#Kinstrife_Systems_SystemBase_OnBeforeFixedUpdate_Kinstrife_Systems_SystemState__">SystemBase.OnBeforeFixedUpdate(SystemState)</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.Systems.SystemBase.html#Kinstrife_Systems_SystemBase_OnAfterFixedUpdate_Kinstrife_Systems_SystemState__">SystemBase.OnAfterFixedUpdate(SystemState)</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.Systems.SystemBase.html#Kinstrife_Systems_SystemBase_OnFixedUpdate_Kinstrife_Systems_SystemState__">SystemBase.OnFixedUpdate(SystemState)</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.Systems.SystemBase.html#Kinstrife_Systems_SystemBase_OnBeforeUpdate_Kinstrife_Systems_SystemState__">SystemBase.OnBeforeUpdate(SystemState)</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.Systems.SystemBase.html#Kinstrife_Systems_SystemBase_OnAfterUpdate_Kinstrife_Systems_SystemState__">SystemBase.OnAfterUpdate(SystemState)</a>
+    </div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Kinstrife.Core.Culling.html">Kinstrife.Core.Culling</a></h6>
   <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
   <h5 id="Kinstrife_Core_Culling_LODCullingSystem_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class LODCullingSystem : SystemBase&lt;LODController&gt;</code></pre>
+    <pre><code class="lang-csharp hljs">public class LODCullingSystem : SystemBase&lt;LODController&gt;, ICustomUpdateable, IInjectable, IDependent</code></pre>
   </div>
   <h3 id="fields">Fields
   </h3>
+  
+  
+  <h4 id="Kinstrife_Core_Culling_LODCullingSystem_addedThisFrame" data-uid="Kinstrife.Core.Culling.LODCullingSystem.addedThisFrame">addedThisFrame</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int addedThisFrame</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   
   
   <h4 id="Kinstrife_Core_Culling_LODCullingSystem_debugColors" data-uid="Kinstrife.Core.Culling.LODCullingSystem.debugColors">debugColors</h4>
@@ -167,6 +254,30 @@
   </table>
   
   
+  <h4 id="Kinstrife_Core_Culling_LODCullingSystem_removedThisFrame" data-uid="Kinstrife.Core.Culling.LODCullingSystem.removedThisFrame">removedThisFrame</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int removedThisFrame</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
   <h4 id="Kinstrife_Core_Culling_LODCullingSystem_spheresInUse" data-uid="Kinstrife.Core.Culling.LODCullingSystem.spheresInUse">spheresInUse</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
@@ -218,6 +329,31 @@ public int spheresInUse</code></pre>
   </h3>
   
   
+  <a id="Kinstrife_Core_Culling_LODCullingSystem_didChangeThisFrame_" data-uid="Kinstrife.Core.Culling.LODCullingSystem.didChangeThisFrame*"></a>
+  <h4 id="Kinstrife_Core_Culling_LODCullingSystem_didChangeThisFrame" data-uid="Kinstrife.Core.Culling.LODCullingSystem.didChangeThisFrame">didChangeThisFrame</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool didChangeThisFrame { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
   <a id="Kinstrife_Core_Culling_LODCullingSystem_NumEntities_" data-uid="Kinstrife.Core.Culling.LODCullingSystem.NumEntities*"></a>
   <h4 id="Kinstrife_Core_Culling_LODCullingSystem_NumEntities" data-uid="Kinstrife.Core.Culling.LODCullingSystem.NumEntities">NumEntities</h4>
   <div class="markdown level1 summary"></div>
@@ -241,27 +377,54 @@ public int spheresInUse</code></pre>
       </tr>
     </tbody>
   </table>
+  
+  
+  <a id="Kinstrife_Core_Culling_LODCullingSystem_TransformData_" data-uid="Kinstrife.Core.Culling.LODCullingSystem.TransformData*"></a>
+  <h4 id="Kinstrife_Core_Culling_LODCullingSystem_TransformData" data-uid="Kinstrife.Core.Culling.LODCullingSystem.TransformData">TransformData</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TransformComponentData TransformData { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Kinstrife.Systems.TransformComponentData.html">TransformComponentData</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   <h3 id="methods">Methods
   </h3>
   
   
-  <a id="Kinstrife_Core_Culling_LODCullingSystem_Initialize_" data-uid="Kinstrife.Core.Culling.LODCullingSystem.Initialize*"></a>
-  <h4 id="Kinstrife_Core_Culling_LODCullingSystem_Initialize" data-uid="Kinstrife.Core.Culling.LODCullingSystem.Initialize">Initialize()</h4>
+  <a id="Kinstrife_Core_Culling_LODCullingSystem_Awake_" data-uid="Kinstrife.Core.Culling.LODCullingSystem.Awake*"></a>
+  <h4 id="Kinstrife_Core_Culling_LODCullingSystem_Awake" data-uid="Kinstrife.Core.Culling.LODCullingSystem.Awake">Awake()</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void Initialize()</code></pre>
+    <pre><code class="lang-csharp hljs">protected override void Awake()</code></pre>
   </div>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Kinstrife.Systems.SystemBase.html#Kinstrife_Systems_SystemBase_Awake">SystemBase.Awake()</a></div>
   
   
   <a id="Kinstrife_Core_Culling_LODCullingSystem_Inject_" data-uid="Kinstrife.Core.Culling.LODCullingSystem.Inject*"></a>
-  <h4 id="Kinstrife_Core_Culling_LODCullingSystem_Inject_CameraRig_" data-uid="Kinstrife.Core.Culling.LODCullingSystem.Inject(CameraRig)">Inject(CameraRig)</h4>
+  <h4 id="Kinstrife_Core_Culling_LODCullingSystem_Inject_UnityEngine_Camera_" data-uid="Kinstrife.Core.Culling.LODCullingSystem.Inject(UnityEngine.Camera)">Inject(Camera)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void Inject(CameraRig rig)</code></pre>
+    <pre><code class="lang-csharp hljs">public void Inject(Camera cam)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -274,32 +437,92 @@ public int spheresInUse</code></pre>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">CameraRig</span></td>
-        <td><span class="parametername">rig</span></td>
+        <td><span class="xref">UnityEngine.Camera</span></td>
+        <td><span class="parametername">cam</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   
   
-  <a id="Kinstrife_Core_Culling_LODCullingSystem_OnDisable_" data-uid="Kinstrife.Core.Culling.LODCullingSystem.OnDisable*"></a>
-  <h4 id="Kinstrife_Core_Culling_LODCullingSystem_OnDisable" data-uid="Kinstrife.Core.Culling.LODCullingSystem.OnDisable">OnDisable()</h4>
+  <a id="Kinstrife_Core_Culling_LODCullingSystem_OnDestroy_" data-uid="Kinstrife.Core.Culling.LODCullingSystem.OnDestroy*"></a>
+  <h4 id="Kinstrife_Core_Culling_LODCullingSystem_OnDestroy" data-uid="Kinstrife.Core.Culling.LODCullingSystem.OnDestroy">OnDestroy()</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected virtual void OnDisable()</code></pre>
+    <pre><code class="lang-csharp hljs">protected override void OnDestroy()</code></pre>
   </div>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Kinstrife.Systems.SystemBase.html#Kinstrife_Systems_SystemBase_OnDestroy">SystemBase.OnDestroy()</a></div>
   
   
-  <a id="Kinstrife_Core_Culling_LODCullingSystem_OnEnable_" data-uid="Kinstrife.Core.Culling.LODCullingSystem.OnEnable*"></a>
-  <h4 id="Kinstrife_Core_Culling_LODCullingSystem_OnEnable" data-uid="Kinstrife.Core.Culling.LODCullingSystem.OnEnable">OnEnable()</h4>
+  <a id="Kinstrife_Core_Culling_LODCullingSystem_OnReallocate_" data-uid="Kinstrife.Core.Culling.LODCullingSystem.OnReallocate*"></a>
+  <h4 id="Kinstrife_Core_Culling_LODCullingSystem_OnReallocate_System_Int32_" data-uid="Kinstrife.Core.Culling.LODCullingSystem.OnReallocate(System.Int32)">OnReallocate(Int32)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected virtual void OnEnable()</code></pre>
+    <pre><code class="lang-csharp hljs">protected override void OnReallocate(int size)</code></pre>
   </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">size</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Kinstrife.Systems.SystemBase.html#Kinstrife_Systems_SystemBase_OnReallocate_System_Int32_">SystemBase.OnReallocate(Int32)</a></div>
+  
+  
+  <a id="Kinstrife_Core_Culling_LODCullingSystem_OnSystemCreate_" data-uid="Kinstrife.Core.Culling.LODCullingSystem.OnSystemCreate*"></a>
+  <h4 id="Kinstrife_Core_Culling_LODCullingSystem_OnSystemCreate" data-uid="Kinstrife.Core.Culling.LODCullingSystem.OnSystemCreate">OnSystemCreate()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override void OnSystemCreate()</code></pre>
+  </div>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Kinstrife.Systems.SystemBase.html#Kinstrife_Systems_SystemBase_OnSystemCreate">SystemBase.OnSystemCreate()</a></div>
+  
+  
+  <a id="Kinstrife_Core_Culling_LODCullingSystem_SetDrawDebug_" data-uid="Kinstrife.Core.Culling.LODCullingSystem.SetDrawDebug*"></a>
+  <h4 id="Kinstrife_Core_Culling_LODCullingSystem_SetDrawDebug_System_Boolean_" data-uid="Kinstrife.Core.Culling.LODCullingSystem.SetDrawDebug(System.Boolean)">SetDrawDebug(Boolean)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetDrawDebug(bool debug)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">debug</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   
   
   <a id="Kinstrife_Core_Culling_LODCullingSystem_StateChanged_" data-uid="Kinstrife.Core.Culling.LODCullingSystem.StateChanged*"></a>
@@ -308,7 +531,7 @@ public int spheresInUse</code></pre>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void StateChanged(CullingGroupEvent sphere)</code></pre>
+    <pre><code class="lang-csharp hljs">public void StateChanged(CullingGroupEvent evt)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -322,17 +545,20 @@ public int spheresInUse</code></pre>
     <tbody>
       <tr>
         <td><span class="xref">CullingGroupEvent</span></td>
-        <td><span class="parametername">sphere</span></td>
+        <td><span class="parametername">evt</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <h3 id="implements">Implements</h3>
   <div>
-      <span class="xref">IInjectable</span>
+      <a class="xref" href="Kinstrife.ICustomUpdateable.html">ICustomUpdateable</a>
   </div>
   <div>
-      <span class="xref">IInitializable</span>
+      <a class="xref" href="Kinstrife.Core.DependencyInjection.IInjectable.html">IInjectable</a>
+  </div>
+  <div>
+      <a class="xref" href="Kinstrife.Core.DependencyInjection.IDependent.html">IDependent</a>
   </div>
 </article>
           </div>

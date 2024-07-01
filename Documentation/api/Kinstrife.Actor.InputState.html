@@ -73,7 +73,7 @@
   
   <h1 id="Kinstrife_Actor_InputState" data-uid="Kinstrife.Actor.InputState" class="text-break">Struct InputState
   </h1>
-  <div class="markdown level0 summary"><p>Basic state for input, movement, velocity</p>
+  <div class="markdown level0 summary"><p>Basic state for input, movement, velocity, computed.</p>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritedMembers">
@@ -156,6 +156,30 @@ public struct InputState</code></pre>
   </table>
   
   
+  <h4 id="Kinstrife_Actor_InputState_desiredVelocityLocal" data-uid="Kinstrife.Actor.InputState.desiredVelocityLocal">desiredVelocityLocal</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Vector3 desiredVelocityLocal</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Vector3</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
   <h4 id="Kinstrife_Actor_InputState_disableMoveInput" data-uid="Kinstrife.Actor.InputState.disableMoveInput">disableMoveInput</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
@@ -180,12 +204,12 @@ public struct InputState</code></pre>
   </table>
   
   
-  <h4 id="Kinstrife_Actor_InputState_lookTargetPoint" data-uid="Kinstrife.Actor.InputState.lookTargetPoint">lookTargetPoint</h4>
+  <h4 id="Kinstrife_Actor_InputState_inhibitMovement" data-uid="Kinstrife.Actor.InputState.inhibitMovement">inhibitMovement</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Vector3 lookTargetPoint</code></pre>
+    <pre><code class="lang-csharp hljs">public float inhibitMovement</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -197,19 +221,44 @@ public struct InputState</code></pre>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Vector3</span></td>
+        <td><span class="xref">System.Single</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   
   
-  <h4 id="Kinstrife_Actor_InputState_moveInput" data-uid="Kinstrife.Actor.InputState.moveInput">moveInput</h4>
+  <h4 id="Kinstrife_Actor_InputState_maxSpeed" data-uid="Kinstrife.Actor.InputState.maxSpeed">maxSpeed</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Vector2 moveInput</code></pre>
+    <pre><code class="lang-csharp hljs">[NonSerialized]
+public float maxSpeed</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="Kinstrife_Actor_InputState_moveInputLocal" data-uid="Kinstrife.Actor.InputState.moveInputLocal">moveInputLocal</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Vector2 moveInputLocal</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -228,12 +277,12 @@ public struct InputState</code></pre>
   </table>
   
   
-  <h4 id="Kinstrife_Actor_InputState_moveTarget" data-uid="Kinstrife.Actor.InputState.moveTarget">moveTarget</h4>
+  <h4 id="Kinstrife_Actor_InputState_moveInputWorld" data-uid="Kinstrife.Actor.InputState.moveInputWorld">moveInputWorld</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Vector3 moveTarget</code></pre>
+    <pre><code class="lang-csharp hljs">public Vector3 moveInputWorld</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -260,6 +309,106 @@ public struct InputState</code></pre>
     <pre><code class="lang-csharp hljs">public float orientation</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="Kinstrife_Actor_InputState_rootMotion" data-uid="Kinstrife.Actor.InputState.rootMotion">rootMotion</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float rootMotion</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="Kinstrife_Actor_InputState_targetWorldVelocity" data-uid="Kinstrife.Actor.InputState.targetWorldVelocity">targetWorldVelocity</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Vector3 targetWorldVelocity</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Vector3</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="properties">Properties
+  </h3>
+  
+  
+  <a id="Kinstrife_Actor_InputState_MoveHorizontal_" data-uid="Kinstrife.Actor.InputState.MoveHorizontal*"></a>
+  <h4 id="Kinstrife_Actor_InputState_MoveHorizontal" data-uid="Kinstrife.Actor.InputState.MoveHorizontal">MoveHorizontal</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public readonly float MoveHorizontal { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Kinstrife_Actor_InputState_MoveVertical_" data-uid="Kinstrife.Actor.InputState.MoveVertical*"></a>
+  <h4 id="Kinstrife_Actor_InputState_MoveVertical" data-uid="Kinstrife.Actor.InputState.MoveVertical">MoveVertical</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public readonly float MoveVertical { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
       <tr>
