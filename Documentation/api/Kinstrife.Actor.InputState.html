@@ -73,7 +73,7 @@
   
   <h1 id="Kinstrife_Actor_InputState" data-uid="Kinstrife.Actor.InputState" class="text-break">Struct InputState
   </h1>
-  <div class="markdown level0 summary"><p>Basic state for input, movement, velocity, computed.</p>
+  <div class="markdown level0 summary"><p>Process smoothed input state</p>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritedMembers">
@@ -132,12 +132,12 @@ public struct InputState</code></pre>
   </table>
   
   
-  <h4 id="Kinstrife_Actor_InputState_desiredSpeed" data-uid="Kinstrife.Actor.InputState.desiredSpeed">desiredSpeed</h4>
+  <h4 id="Kinstrife_Actor_InputState_desiredSpeedNormalized" data-uid="Kinstrife.Actor.InputState.desiredSpeedNormalized">desiredSpeedNormalized</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public float desiredSpeed</code></pre>
+    <pre><code class="lang-csharp hljs">public float desiredSpeedNormalized</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -180,12 +180,12 @@ public struct InputState</code></pre>
   </table>
   
   
-  <h4 id="Kinstrife_Actor_InputState_disableMoveInput" data-uid="Kinstrife.Actor.InputState.disableMoveInput">disableMoveInput</h4>
+  <h4 id="Kinstrife_Actor_InputState_desiredVelocityWorld" data-uid="Kinstrife.Actor.InputState.desiredVelocityWorld">desiredVelocityWorld</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public bool disableMoveInput</code></pre>
+    <pre><code class="lang-csharp hljs">public Vector3 desiredVelocityWorld</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -197,7 +197,7 @@ public struct InputState</code></pre>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="xref">Vector3</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -233,8 +233,7 @@ public struct InputState</code></pre>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[NonSerialized]
-public float maxSpeed</code></pre>
+    <pre><code class="lang-csharp hljs">public float maxSpeed</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -247,54 +246,6 @@ public float maxSpeed</code></pre>
     <tbody>
       <tr>
         <td><span class="xref">System.Single</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <h4 id="Kinstrife_Actor_InputState_moveInputLocal" data-uid="Kinstrife.Actor.InputState.moveInputLocal">moveInputLocal</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Vector2 moveInputLocal</code></pre>
-  </div>
-  <h5 class="fieldValue">Field Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">Vector2</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <h4 id="Kinstrife_Actor_InputState_moveInputWorld" data-uid="Kinstrife.Actor.InputState.moveInputWorld">moveInputWorld</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Vector3 moveInputWorld</code></pre>
-  </div>
-  <h5 class="fieldValue">Field Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">Vector3</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -325,90 +276,14 @@ public float maxSpeed</code></pre>
   </table>
   
   
-  <h4 id="Kinstrife_Actor_InputState_rootMotion" data-uid="Kinstrife.Actor.InputState.rootMotion">rootMotion</h4>
+  <h4 id="Kinstrife_Actor_InputState_rootMotionOverride" data-uid="Kinstrife.Actor.InputState.rootMotionOverride">rootMotionOverride</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public float rootMotion</code></pre>
+    <pre><code class="lang-csharp hljs">public float rootMotionOverride</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Single</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <h4 id="Kinstrife_Actor_InputState_targetWorldVelocity" data-uid="Kinstrife.Actor.InputState.targetWorldVelocity">targetWorldVelocity</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Vector3 targetWorldVelocity</code></pre>
-  </div>
-  <h5 class="fieldValue">Field Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">Vector3</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h3 id="properties">Properties
-  </h3>
-  
-  
-  <a id="Kinstrife_Actor_InputState_MoveHorizontal_" data-uid="Kinstrife.Actor.InputState.MoveHorizontal*"></a>
-  <h4 id="Kinstrife_Actor_InputState_MoveHorizontal" data-uid="Kinstrife.Actor.InputState.MoveHorizontal">MoveHorizontal</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly float MoveHorizontal { get; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Single</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="Kinstrife_Actor_InputState_MoveVertical_" data-uid="Kinstrife.Actor.InputState.MoveVertical*"></a>
-  <h4 id="Kinstrife_Actor_InputState_MoveVertical" data-uid="Kinstrife.Actor.InputState.MoveVertical">MoveVertical</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly float MoveVertical { get; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
       <tr>
@@ -448,6 +323,33 @@ public float maxSpeed</code></pre>
       <tr>
         <td><span class="xref">System.Single</span></td>
         <td><span class="parametername">orientation</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Kinstrife_Actor_InputState_SetMaxInhibitMovement_" data-uid="Kinstrife.Actor.InputState.SetMaxInhibitMovement*"></a>
+  <h4 id="Kinstrife_Actor_InputState_SetMaxInhibitMovement_System_Single_" data-uid="Kinstrife.Actor.InputState.SetMaxInhibitMovement(System.Single)">SetMaxInhibitMovement(Single)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetMaxInhibitMovement(float inhibit)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><span class="parametername">inhibit</span></td>
         <td></td>
       </tr>
     </tbody>

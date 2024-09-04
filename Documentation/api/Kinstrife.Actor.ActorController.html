@@ -84,8 +84,6 @@
     <h5>Implements</h5>
     <div><a class="xref" href="Kinstrife.Core.DependencyInjection.IInstall-1.html">IInstall</a>&lt;<a class="xref" href="Kinstrife.Actor.ActorController.html">ActorController</a>&gt;</div>
     <div><a class="xref" href="Kinstrife.Core.DependencyInjection.IInstall.html">IInstall</a></div>
-    <div><a class="xref" href="Kinstrife.Systems.IEntity.html">IEntity</a></div>
-    <div><a class="xref" href="Kinstrife.ICustomUpdateable.html">ICustomUpdateable</a></div>
     <div><a class="xref" href="Kinstrife.Core.DependencyInjection.IDependent.html">IDependent</a></div>
     <div><span class="xref">MonoBehaviour</span></div>
   </div>
@@ -93,58 +91,10 @@
   <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
   <h5 id="Kinstrife_Actor_ActorController_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class ActorController : MonoBehaviour, IInstall&lt;ActorController&gt;, IInstall, IEntity, ICustomUpdateable, IDependent</code></pre>
+    <pre><code class="lang-csharp hljs">public class ActorController : MonoBehaviour, IInstall&lt;ActorController&gt;, IInstall, IDependent</code></pre>
   </div>
   <h3 id="fields">Fields
   </h3>
-  
-  
-  <h4 id="Kinstrife_Actor_ActorController_FallTimeout" data-uid="Kinstrife.Actor.ActorController.FallTimeout">FallTimeout</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public float FallTimeout</code></pre>
-  </div>
-  <h5 class="fieldValue">Field Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Single</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <h4 id="Kinstrife_Actor_ActorController_Gravity" data-uid="Kinstrife.Actor.ActorController.Gravity">Gravity</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public float Gravity</code></pre>
-  </div>
-  <h5 class="fieldValue">Field Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Single</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
   
   
   <h4 id="Kinstrife_Actor_ActorController_GroundedOffset" data-uid="Kinstrife.Actor.ActorController.GroundedOffset">GroundedOffset</h4>
@@ -195,132 +145,12 @@
   </table>
   
   
-  <h4 id="Kinstrife_Actor_ActorController_GroundLayers" data-uid="Kinstrife.Actor.ActorController.GroundLayers">GroundLayers</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public LayerMask GroundLayers</code></pre>
-  </div>
-  <h5 class="fieldValue">Field Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">LayerMask</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
   <h4 id="Kinstrife_Actor_ActorController_Height" data-uid="Kinstrife.Actor.ActorController.Height">Height</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public Vector2 Height</code></pre>
-  </div>
-  <h5 class="fieldValue">Field Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">Vector2</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <h4 id="Kinstrife_Actor_ActorController_JumpHeight" data-uid="Kinstrife.Actor.ActorController.JumpHeight">JumpHeight</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public float JumpHeight</code></pre>
-  </div>
-  <h5 class="fieldValue">Field Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Single</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <h4 id="Kinstrife_Actor_ActorController_JumpTimeout" data-uid="Kinstrife.Actor.ActorController.JumpTimeout">JumpTimeout</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public float JumpTimeout</code></pre>
-  </div>
-  <h5 class="fieldValue">Field Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Single</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <h4 id="Kinstrife_Actor_ActorController_RotationSmoothTime" data-uid="Kinstrife.Actor.ActorController.RotationSmoothTime">RotationSmoothTime</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public float RotationSmoothTime</code></pre>
-  </div>
-  <h5 class="fieldValue">Field Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Single</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <h4 id="Kinstrife_Actor_ActorController_Speed" data-uid="Kinstrife.Actor.ActorController.Speed">Speed</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Vector2 Speed</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -715,31 +545,6 @@
   </table>
   
   
-  <a id="Kinstrife_Actor_ActorController_MoveComponentDataArrays_" data-uid="Kinstrife.Actor.ActorController.MoveComponentDataArrays*"></a>
-  <h4 id="Kinstrife_Actor_ActorController_MoveComponentDataArrays" data-uid="Kinstrife.Actor.ActorController.MoveComponentDataArrays">MoveComponentDataArrays</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public ref MoveData MoveComponentDataArrays { get; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Kinstrife.Actor.MoveData.html">MoveData</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
   <a id="Kinstrife_Actor_ActorController_MoveInput_" data-uid="Kinstrife.Actor.ActorController.MoveInput*"></a>
   <h4 id="Kinstrife_Actor_ActorController_MoveInput" data-uid="Kinstrife.Actor.ActorController.MoveInput">MoveInput</h4>
   <div class="markdown level1 summary"></div>
@@ -943,60 +748,6 @@
   </table>
   
   
-  <a id="Kinstrife_Actor_ActorController_GetDirectionTangentToSurface_" data-uid="Kinstrife.Actor.ActorController.GetDirectionTangentToSurface*"></a>
-  <h4 id="Kinstrife_Actor_ActorController_GetDirectionTangentToSurface_Vector3_Vector3_Vector3_" data-uid="Kinstrife.Actor.ActorController.GetDirectionTangentToSurface(Vector3,Vector3,Vector3)">GetDirectionTangentToSurface(Vector3, Vector3, Vector3)</h4>
-  <div class="markdown level1 summary"><p>Returns the direction adjusted to be tangent to a specified surface normal relatively to the character's up direction.
-Useful for reorienting a direction on a slope without any lateral deviation in trajectory</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static Vector3 GetDirectionTangentToSurface(Vector3 direction, Vector3 surfaceNormal, Vector3 actorUp)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">Vector3</span></td>
-        <td><span class="parametername">direction</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><span class="xref">Vector3</span></td>
-        <td><span class="parametername">surfaceNormal</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><span class="xref">Vector3</span></td>
-        <td><span class="parametername">actorUp</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">Vector3</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
   <a id="Kinstrife_Actor_ActorController_Ground_" data-uid="Kinstrife.Actor.ActorController.Ground*"></a>
   <h4 id="Kinstrife_Actor_ActorController_Ground_Vector3_Vector3_" data-uid="Kinstrife.Actor.ActorController.Ground(Vector3,Vector3)">Ground(Vector3, Vector3)</h4>
   <div class="markdown level1 summary"></div>
@@ -1119,33 +870,6 @@ Useful for reorienting a direction on a slope without any lateral deviation in t
       <tr>
         <td><span class="xref">System.Boolean</span></td>
         <td><span class="parametername">value</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="Kinstrife_Actor_ActorController_LinkToController_" data-uid="Kinstrife.Actor.ActorController.LinkToController*"></a>
-  <h4 id="Kinstrife_Actor_ActorController_LinkToController_Kinstrife_Actor_ActorController_" data-uid="Kinstrife.Actor.ActorController.LinkToController(Kinstrife.Actor.ActorController)">LinkToController(ActorController)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void LinkToController(ActorController other)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Kinstrife.Actor.ActorController.html">ActorController</a></td>
-        <td><span class="parametername">other</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -1286,6 +1010,33 @@ Useful for reorienting a direction on a slope without any lateral deviation in t
       <tr>
         <td><span class="xref">System.Boolean</span></td>
         <td><span class="parametername">value</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Kinstrife_Actor_ActorController_SetPosition_" data-uid="Kinstrife.Actor.ActorController.SetPosition*"></a>
+  <h4 id="Kinstrife_Actor_ActorController_SetPosition_float3_" data-uid="Kinstrife.Actor.ActorController.SetPosition(float3)">SetPosition(float3)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetPosition(float3 position)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">float3</span></td>
+        <td><span class="parametername">position</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -1614,72 +1365,12 @@ Useful for reorienting a direction on a slope without any lateral deviation in t
       </tr>
     </tbody>
   </table>
-  <h3 id="eii">Explicit Interface Implementations
-  </h3>
-  
-  
-  <a id="Kinstrife_Actor_ActorController_Kinstrife_ICustomUpdateable_ShouldUpdate_" data-uid="Kinstrife.Actor.ActorController.Kinstrife#ICustomUpdateable#ShouldUpdate*"></a>
-  <h4 id="Kinstrife_Actor_ActorController_Kinstrife_ICustomUpdateable_ShouldUpdate" data-uid="Kinstrife.Actor.ActorController.Kinstrife#ICustomUpdateable#ShouldUpdate">ICustomUpdateable.ShouldUpdate</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">bool ICustomUpdateable.ShouldUpdate { get; }</code></pre>
-  </div>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Boolean</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="Kinstrife_Actor_ActorController_Kinstrife_Systems_IEntity_OnUpdate_" data-uid="Kinstrife.Actor.ActorController.Kinstrife#Systems#IEntity#OnUpdate*"></a>
-  <h4 id="Kinstrife_Actor_ActorController_Kinstrife_Systems_IEntity_OnUpdate_System_Single_" data-uid="Kinstrife.Actor.ActorController.Kinstrife#Systems#IEntity#OnUpdate(System.Single)">IEntity.OnUpdate(Single)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">void IEntity.OnUpdate(float deltaTime)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Single</span></td>
-        <td><span class="parametername">deltaTime</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
   <h3 id="implements">Implements</h3>
   <div>
       <a class="xref" href="Kinstrife.Core.DependencyInjection.IInstall-1.html">IInstall&lt;T&gt;</a>
   </div>
   <div>
       <a class="xref" href="Kinstrife.Core.DependencyInjection.IInstall.html">IInstall</a>
-  </div>
-  <div>
-      <a class="xref" href="Kinstrife.Systems.IEntity.html">IEntity</a>
-  </div>
-  <div>
-      <a class="xref" href="Kinstrife.ICustomUpdateable.html">ICustomUpdateable</a>
   </div>
   <div>
       <a class="xref" href="Kinstrife.Core.DependencyInjection.IDependent.html">IDependent</a>

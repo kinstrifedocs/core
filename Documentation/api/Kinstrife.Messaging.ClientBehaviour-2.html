@@ -79,9 +79,10 @@
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><span class="xref">ClientBehaviour&lt;TResponse, TPayload&gt;</span></div>
-      <div class="level2"><a class="xref" href="Kinstrife.Camera.CinematicCameraClient.html">CinematicCameraClient</a></div>
-      <div class="level2"><a class="xref" href="Kinstrife.Messaging.AddressableClient-2.html">AddressableClient&lt;TResponse, TPayload&gt;</a></div>
+    <div class="level1"><a class="xref" href="Kinstrife.Messaging.ClientBehaviourBase.html">ClientBehaviourBase</a></div>
+    <div class="level2"><span class="xref">ClientBehaviour&lt;TResponse, TPayload&gt;</span></div>
+      <div class="level3"><a class="xref" href="Kinstrife.Camera.CinematicCameraClient.html">CinematicCameraClient</a></div>
+      <div class="level3"><a class="xref" href="Kinstrife.Messaging.AddressableClient-2.html">AddressableClient&lt;TResponse, TPayload&gt;</a></div>
   </div>
   <div class="implements">
     <h5>Implements</h5>
@@ -93,7 +94,7 @@
   <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
   <h5 id="Kinstrife_Messaging_ClientBehaviour_2_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public abstract class ClientBehaviour&lt;TResponse, TPayload&gt; : MonoBehaviour, IInjectable, IInitializable, IDependent</code></pre>
+    <pre><code class="lang-csharp hljs">public abstract class ClientBehaviour&lt;TResponse, TPayload&gt; : ClientBehaviourBase, IInjectable, IInitializable, IDependent</code></pre>
   </div>
   <h5 class="typeParameters">Type Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -342,6 +343,33 @@
   </table>
   
   
+  <a id="Kinstrife_Messaging_ClientBehaviour_2_IsInProgress_" data-uid="Kinstrife.Messaging.ClientBehaviour`2.IsInProgress*"></a>
+  <h4 id="Kinstrife_Messaging_ClientBehaviour_2_IsInProgress" data-uid="Kinstrife.Messaging.ClientBehaviour`2.IsInProgress">IsInProgress</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override bool IsInProgress { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Kinstrife.Messaging.ClientBehaviourBase.html#Kinstrife_Messaging_ClientBehaviourBase_IsInProgress">ClientBehaviourBase.IsInProgress</a></div>
+  
+  
   <a id="Kinstrife_Messaging_ClientBehaviour_2_RequestPayload_" data-uid="Kinstrife.Messaging.ClientBehaviour`2.RequestPayload*"></a>
   <h4 id="Kinstrife_Messaging_ClientBehaviour_2_RequestPayload" data-uid="Kinstrife.Messaging.ClientBehaviour`2.RequestPayload">RequestPayload</h4>
   <div class="markdown level1 summary"></div>
@@ -464,8 +492,10 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual void PostRequest()</code></pre>
+    <pre><code class="lang-csharp hljs">public override void PostRequest()</code></pre>
   </div>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Kinstrife.Messaging.ClientBehaviourBase.html#Kinstrife_Messaging_ClientBehaviourBase_PostRequest">ClientBehaviourBase.PostRequest()</a></div>
   
   
   <a id="Kinstrife_Messaging_ClientBehaviour_2_PostRequest_" data-uid="Kinstrife.Messaging.ClientBehaviour`2.PostRequest*"></a>

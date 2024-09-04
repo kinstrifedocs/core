@@ -5,10 +5,10 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Interface IMoveEntity
+    <title>Struct Version
    | Kinstrife </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Interface IMoveEntity
+    <meta name="title" content="Struct Version
    | Kinstrife ">
     <meta name="generator" content="docfx 2.59.4.0">
     
@@ -68,38 +68,92 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="Kinstrife.Actor.IMoveEntity">
+            <article class="content wrap" id="_content" data-uid="Kinstrife.Version">
   
   
-  <h1 id="Kinstrife_Actor_IMoveEntity" data-uid="Kinstrife.Actor.IMoveEntity" class="text-break">Interface IMoveEntity
+  <h1 id="Kinstrife_Version" data-uid="Kinstrife.Version" class="text-break">Struct Version
   </h1>
   <div class="markdown level0 summary"></div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
     <div>
-      <a class="xref" href="Kinstrife.Systems.IEntityBase.html#Kinstrife_Systems_IEntityBase_AgentIndex">IEntityBase.AgentIndex</a>
+      <span class="xref">System.ValueType.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.ValueType.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.ValueType.ToString()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
     </div>
   </div>
-  <h6><strong>Namespace</strong>: <a class="xref" href="Kinstrife.Actor.html">Kinstrife.Actor</a></h6>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Kinstrife.html">Kinstrife</a></h6>
   <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
-  <h5 id="Kinstrife_Actor_IMoveEntity_syntax">Syntax</h5>
+  <h5 id="Kinstrife_Version_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public interface IMoveEntity : IEntityBase</code></pre>
+    <pre><code class="lang-csharp hljs">[Serializable]
+public struct Version</code></pre>
   </div>
-  <h3 id="properties">Properties
+  <h3 id="constructors">Constructors
   </h3>
   
   
-  <a id="Kinstrife_Actor_IMoveEntity_InputState_" data-uid="Kinstrife.Actor.IMoveEntity.InputState*"></a>
-  <h4 id="Kinstrife_Actor_IMoveEntity_InputState" data-uid="Kinstrife.Actor.IMoveEntity.InputState">InputState</h4>
+  <a id="Kinstrife_Version__ctor_" data-uid="Kinstrife.Version.#ctor*"></a>
+  <h4 id="Kinstrife_Version__ctor_System_Int32_System_Int32_System_Int32_" data-uid="Kinstrife.Version.#ctor(System.Int32,System.Int32,System.Int32)">Version(Int32, Int32, Int32)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">ref InputState InputState { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Version(int major, int minor, int build)</code></pre>
   </div>
-  <h5 class="propertyValue">Property Value</h5>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">major</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">minor</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">build</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="fields">Fields
+  </h3>
+  
+  
+  <h4 id="Kinstrife_Version_Build" data-uid="Kinstrife.Version.Build">Build</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int Build</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
       <tr>
@@ -109,22 +163,21 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="Kinstrife.Actor.InputState.html">InputState</a></td>
+        <td><span class="xref">System.Int32</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   
   
-  <a id="Kinstrife_Actor_IMoveEntity_Motor_" data-uid="Kinstrife.Actor.IMoveEntity.Motor*"></a>
-  <h4 id="Kinstrife_Actor_IMoveEntity_Motor" data-uid="Kinstrife.Actor.IMoveEntity.Motor">Motor</h4>
+  <h4 id="Kinstrife_Version_Major" data-uid="Kinstrife.Version.Major">Major</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">ref MotorState Motor { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public int Major</code></pre>
   </div>
-  <h5 class="propertyValue">Property Value</h5>
+  <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
       <tr>
@@ -134,22 +187,21 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="Kinstrife.Actor.MotorState.html">MotorState</a></td>
+        <td><span class="xref">System.Int32</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   
   
-  <a id="Kinstrife_Actor_IMoveEntity_MoveInput_" data-uid="Kinstrife.Actor.IMoveEntity.MoveInput*"></a>
-  <h4 id="Kinstrife_Actor_IMoveEntity_MoveInput" data-uid="Kinstrife.Actor.IMoveEntity.MoveInput">MoveInput</h4>
+  <h4 id="Kinstrife_Version_Minor" data-uid="Kinstrife.Version.Minor">Minor</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">ref MoveInput MoveInput { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public int Minor</code></pre>
   </div>
-  <h5 class="propertyValue">Property Value</h5>
+  <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
       <tr>
@@ -159,32 +211,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="Kinstrife.Actor.MoveInput.html">MoveInput</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="Kinstrife_Actor_IMoveEntity_RootMotion_" data-uid="Kinstrife.Actor.IMoveEntity.RootMotion*"></a>
-  <h4 id="Kinstrife_Actor_IMoveEntity_RootMotion" data-uid="Kinstrife.Actor.IMoveEntity.RootMotion">RootMotion</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">ref RootMotionData RootMotion { get; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Kinstrife.Actor.RootMotionData.html">RootMotionData</a></td>
+        <td><span class="xref">System.Int32</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -193,13 +220,13 @@
   </h3>
   
   
-  <a id="Kinstrife_Actor_IMoveEntity_SetPosition_" data-uid="Kinstrife.Actor.IMoveEntity.SetPosition*"></a>
-  <h4 id="Kinstrife_Actor_IMoveEntity_SetPosition_float3_" data-uid="Kinstrife.Actor.IMoveEntity.SetPosition(float3)">SetPosition(float3)</h4>
+  <a id="Kinstrife_Version_FromSystemVersion_" data-uid="Kinstrife.Version.FromSystemVersion*"></a>
+  <h4 id="Kinstrife_Version_FromSystemVersion_System_Version_" data-uid="Kinstrife.Version.FromSystemVersion(System.Version)">FromSystemVersion(Version)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">void SetPosition(float3 newPosition)</code></pre>
+    <pre><code class="lang-csharp hljs">public static Version FromSystemVersion(Version version)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -212,21 +239,36 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">float3</span></td>
-        <td><span class="parametername">newPosition</span></td>
+        <td><span class="xref">System.Version</span></td>
+        <td><span class="parametername">version</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Kinstrife.Version.html">Version</a></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   
   
-  <a id="Kinstrife_Actor_IMoveEntity_SetVelocity_" data-uid="Kinstrife.Actor.IMoveEntity.SetVelocity*"></a>
-  <h4 id="Kinstrife_Actor_IMoveEntity_SetVelocity_float3_" data-uid="Kinstrife.Actor.IMoveEntity.SetVelocity(float3)">SetVelocity(float3)</h4>
+  <a id="Kinstrife_Version_ToSystemVersion_" data-uid="Kinstrife.Version.ToSystemVersion*"></a>
+  <h4 id="Kinstrife_Version_ToSystemVersion_Kinstrife_Version_" data-uid="Kinstrife.Version.ToSystemVersion(Kinstrife.Version)">ToSystemVersion(Version)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">void SetVelocity(float3 newPosition)</code></pre>
+    <pre><code class="lang-csharp hljs">public static Version ToSystemVersion(Version version)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -239,8 +281,23 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">float3</span></td>
-        <td><span class="parametername">newPosition</span></td>
+        <td><a class="xref" href="Kinstrife.Version.html">Version</a></td>
+        <td><span class="parametername">version</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Version</span></td>
         <td></td>
       </tr>
     </tbody>
