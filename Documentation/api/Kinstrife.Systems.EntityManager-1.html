@@ -84,7 +84,6 @@
   </div>
   <div class="implements">
     <h5>Implements</h5>
-    <div><span class="xref">IInstall</span>&lt;<a class="xref" href="Kinstrife.Systems.EntityManager.html">EntityManager</a>&gt;</div>
     <div><span class="xref">IInstall</span>&lt;<a class="xref" href="Kinstrife.Systems.EntityManager-1.html">EntityManager</a>&lt;T&gt;&gt;</div>
   </div>
   <div class="inheritedMembers">
@@ -120,6 +119,9 @@
       <a class="xref" href="Kinstrife.Systems.EntityManager.html#Kinstrife_Systems_EntityManager_BufferSize">EntityManager.BufferSize</a>
     </div>
     <div>
+      <a class="xref" href="Kinstrife.Systems.EntityManager.html#Kinstrife_Systems_EntityManager_MaxEntities">EntityManager.MaxEntities</a>
+    </div>
+    <div>
       <a class="xref" href="Kinstrife.Systems.EntityManager.html#Kinstrife_Systems_EntityManager_numAgents">EntityManager.numAgents</a>
     </div>
     <div>
@@ -127,6 +129,9 @@
     </div>
     <div>
       <a class="xref" href="Kinstrife.Systems.EntityManager.html#Kinstrife_Systems_EntityManager_NumActiveEntities">EntityManager.NumActiveEntities</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.Systems.EntityManager.html#Kinstrife_Systems_EntityManager_CanExpandEntities">EntityManager.CanExpandEntities</a>
     </div>
     <div>
       <a class="xref" href="Kinstrife.Systems.EntityManager.html#Kinstrife_Systems_EntityManager_SystemsManager">EntityManager.SystemsManager</a>
@@ -144,16 +149,13 @@
       <a class="xref" href="Kinstrife.Systems.EntityManager.html#Kinstrife_Systems_EntityManager_simulationData">EntityManager.simulationData</a>
     </div>
     <div>
-      <a class="xref" href="Kinstrife.Systems.EntityManager.html#Kinstrife_Systems_EntityManager_usedIndices">EntityManager.usedIndices</a>
-    </div>
-    <div>
       <a class="xref" href="Kinstrife.Systems.EntityManager.html#Kinstrife_Systems_EntityManager_transformAccess">EntityManager.transformAccess</a>
     </div>
     <div>
       <a class="xref" href="Kinstrife.Systems.EntityManager.html#Kinstrife_Systems_EntityManager_TransformAccessArray">EntityManager.TransformAccessArray</a>
     </div>
     <div>
-      <a class="xref" href="Kinstrife.Systems.EntityManager.html#Kinstrife_Systems_EntityManager_onReallocate">EntityManager.onReallocate</a>
+      <a class="xref" href="Kinstrife.Systems.EntityManager.html#Kinstrife_Systems_EntityManager_onReallocateComplete">EntityManager.onReallocateComplete</a>
     </div>
     <div>
       <a class="xref" href="Kinstrife.Systems.EntityManager.html#Kinstrife_Systems_EntityManager_onRegisterEntity">EntityManager.onRegisterEntity</a>
@@ -174,9 +176,6 @@
       <a class="xref" href="Kinstrife.Systems.EntityManager.html#Kinstrife_Systems_EntityManager_ClearAgents">EntityManager.ClearAgents()</a>
     </div>
     <div>
-      <a class="xref" href="Kinstrife.Systems.EntityManager.html#Kinstrife_Systems_EntityManager_OnDestroy">EntityManager.OnDestroy()</a>
-    </div>
-    <div>
       <a class="xref" href="Kinstrife.Systems.EntityManager.html#Kinstrife_Systems_EntityManager_AddEntityBurst">EntityManager.AddEntityBurst()</a>
     </div>
     <div>
@@ -190,6 +189,9 @@
     </div>
     <div>
       <a class="xref" href="Kinstrife.Systems.EntityManager.html#Kinstrife_Systems_EntityManager_EarlyUpdateJob_Kinstrife_Systems_SystemState__">EntityManager.EarlyUpdateJob(SystemState)</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.Systems.EntityManager.html#Kinstrife_Systems_EntityManager_OnReallocate_System_Int32_">EntityManager.OnReallocate(Int32)</a>
     </div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Kinstrife.Systems.html">Kinstrife.Systems</a></h6>
@@ -256,6 +258,18 @@
   <div><a class="xref" href="Kinstrife.Systems.EntityManager.html#Kinstrife_Systems_EntityManager_Awake">EntityManager.Awake()</a></div>
   
   
+  <a id="Kinstrife_Systems_EntityManager_1_OnDestroy_" data-uid="Kinstrife.Systems.EntityManager`1.OnDestroy*"></a>
+  <h4 id="Kinstrife_Systems_EntityManager_1_OnDestroy" data-uid="Kinstrife.Systems.EntityManager`1.OnDestroy">OnDestroy()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override void OnDestroy()</code></pre>
+  </div>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Kinstrife.Systems.EntityManager.html#Kinstrife_Systems_EntityManager_OnDestroy">EntityManager.OnDestroy()</a></div>
+  
+  
   <a id="Kinstrife_Systems_EntityManager_1_RegisterEntity_" data-uid="Kinstrife.Systems.EntityManager`1.RegisterEntity*"></a>
   <h4 id="Kinstrife_Systems_EntityManager_1_RegisterEntity__0_" data-uid="Kinstrife.Systems.EntityManager`1.RegisterEntity(`0)">RegisterEntity(T)</h4>
   <div class="markdown level1 summary"></div>
@@ -309,9 +323,6 @@
     </tbody>
   </table>
   <h3 id="implements">Implements</h3>
-  <div>
-      <span class="xref">IInstall&lt;&gt;</span>
-  </div>
   <div>
       <span class="xref">IInstall&lt;&gt;</span>
   </div>

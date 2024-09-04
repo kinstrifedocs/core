@@ -81,10 +81,6 @@
     <div class="level1"><span class="xref">EntityManager</span></div>
       <div class="level2"><a class="xref" href="Kinstrife.Systems.EntityManager-1.html">EntityManager&lt;T&gt;</a></div>
   </div>
-  <div class="implements">
-    <h5>Implements</h5>
-    <div><span class="xref">IInstall</span>&lt;<a class="xref" href="Kinstrife.Systems.EntityManager.html">EntityManager</a>&gt;</div>
-  </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Kinstrife.Systems.html">Kinstrife.Systems</a></h6>
   <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
   <h5 id="Kinstrife_Systems_EntityManager_syntax">Syntax</h5>
@@ -286,30 +282,6 @@
       </tr>
     </tbody>
   </table>
-  
-  
-  <h4 id="Kinstrife_Systems_EntityManager_usedIndices" data-uid="Kinstrife.Systems.EntityManager.usedIndices">usedIndices</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public int[] usedIndices</code></pre>
-  </div>
-  <h5 class="fieldValue">Field Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Int32</span>[]</td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
   <h3 id="properties">Properties
   </h3>
   
@@ -364,6 +336,31 @@
   </table>
   
   
+  <a id="Kinstrife_Systems_EntityManager_CanExpandEntities_" data-uid="Kinstrife.Systems.EntityManager.CanExpandEntities*"></a>
+  <h4 id="Kinstrife_Systems_EntityManager_CanExpandEntities" data-uid="Kinstrife.Systems.EntityManager.CanExpandEntities">CanExpandEntities</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool CanExpandEntities { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
   <a id="Kinstrife_Systems_EntityManager_lastJob_" data-uid="Kinstrife.Systems.EntityManager.lastJob*"></a>
   <h4 id="Kinstrife_Systems_EntityManager_lastJob" data-uid="Kinstrife.Systems.EntityManager.lastJob">lastJob</h4>
   <div class="markdown level1 summary"><p>Job handle for the last update</p>
@@ -384,6 +381,31 @@
     <tbody>
       <tr>
         <td><span class="xref">JobHandle</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Kinstrife_Systems_EntityManager_MaxEntities_" data-uid="Kinstrife.Systems.EntityManager.MaxEntities*"></a>
+  <h4 id="Kinstrife_Systems_EntityManager_MaxEntities" data-uid="Kinstrife.Systems.EntityManager.MaxEntities">MaxEntities</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int MaxEntities { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -585,7 +607,7 @@ and set for example radius and desired point to move to.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public EntityIndex AddEntityBurst()</code></pre>
+    <pre><code class="lang-csharp hljs">protected EntityIndex AddEntityBurst()</code></pre>
   </div>
   <h5 class="returns">Returns</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -880,8 +902,35 @@ Warning: You must call this when you are done with the simulator, otherwise some
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void OnDestroy()</code></pre>
+    <pre><code class="lang-csharp hljs">protected virtual void OnDestroy()</code></pre>
   </div>
+  
+  
+  <a id="Kinstrife_Systems_EntityManager_OnReallocate_" data-uid="Kinstrife.Systems.EntityManager.OnReallocate*"></a>
+  <h4 id="Kinstrife_Systems_EntityManager_OnReallocate_System_Int32_" data-uid="Kinstrife.Systems.EntityManager.OnReallocate(System.Int32)">OnReallocate(Int32)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void OnReallocate(int bufferSize)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">bufferSize</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   
   
   <a id="Kinstrife_Systems_EntityManager_RemoveAgent_" data-uid="Kinstrife.Systems.EntityManager.RemoveAgent*"></a>
@@ -921,7 +970,7 @@ See: ClearAgents</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void RemoveAgent(IEntity3D agent)</code></pre>
+    <pre><code class="lang-csharp hljs">protected void RemoveAgent(IEntity3D agent)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1060,12 +1109,12 @@ See: ClearAgents</p>
   </h3>
   
   
-  <h4 id="Kinstrife_Systems_EntityManager_onReallocate" data-uid="Kinstrife.Systems.EntityManager.onReallocate">onReallocate</h4>
+  <h4 id="Kinstrife_Systems_EntityManager_onReallocateComplete" data-uid="Kinstrife.Systems.EntityManager.onReallocateComplete">onReallocateComplete</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public event Action&lt;int&gt; onReallocate</code></pre>
+    <pre><code class="lang-csharp hljs">public event Action onReallocateComplete</code></pre>
   </div>
   <h5 class="eventType">Event Type</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1077,15 +1126,11 @@ See: ClearAgents</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Action</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td><span class="xref">System.Action</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
-  <h3 id="implements">Implements</h3>
-  <div>
-      <span class="xref">IInstall&lt;&gt;</span>
-  </div>
 </article>
           </div>
           

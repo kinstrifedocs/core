@@ -73,7 +73,7 @@
   
   <h1 id="Kinstrife_Systems_EntityData" data-uid="Kinstrife.Systems.EntityData" class="text-break">Struct EntityData
   </h1>
-  <div class="markdown level0 summary"><p>Holds internal entity data for the local avoidance simulation</p>
+  <div class="markdown level0 summary"><p>Holds internal entity data for the simulation</p>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="implements">
@@ -113,12 +113,12 @@
   
   
   <h4 id="Kinstrife_Systems_EntityData_enabled" data-uid="Kinstrife.Systems.EntityData.enabled">enabled</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Whether this entity index is currently in use or not</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[Obsolete(&quot;Enabled is LOD &lt; 0&quot;)]
-public NativeArray&lt;bool&gt; enabled</code></pre>
+    <pre><code class="lang-csharp hljs">public NativeArray&lt;bool&gt; enabled</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -135,10 +135,14 @@ public NativeArray&lt;bool&gt; enabled</code></pre>
       </tr>
     </tbody>
   </table>
+  <h5 id="Kinstrife_Systems_EntityData_enabled_examples">Examples</h5>
+  <p>When pooling entities, by disabling their GameObjects, we will keep the entity registered to avoid doing registration work</p>
+
   
   
   <h4 id="Kinstrife_Systems_EntityData_lod" data-uid="Kinstrife.Systems.EntityData.lod">lod</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Level of Detail band as fed into the <see cref="!:UnityEngine.CullingGroup"></see></p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -159,10 +163,17 @@ public NativeArray&lt;bool&gt; enabled</code></pre>
       </tr>
     </tbody>
   </table>
+  <h5 id="Kinstrife_Systems_EntityData_lod_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>Negative values means that the entity is invisible. Bands configured by the main <a class="xref" href="Kinstrife.Culling.LODProfile.html">LODProfile</a></p>
+</div>
+  <h5 id="Kinstrife_Systems_EntityData_lod_seealso">See Also</h5>
+  <div class="seealso">
+      <div><a class="xref" href="Kinstrife.Culling.LODSystemBase.html">LODSystemBase</a></div>
+  </div>
   
   
   <h4 id="Kinstrife_Systems_EntityData_usedIndices" data-uid="Kinstrife.Systems.EntityData.usedIndices">usedIndices</h4>
-  <div class="markdown level1 summary"><p>Active and enabled entities</p>
+  <div class="markdown level1 summary"><p>List of all active and enabled entities for convenient access</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>

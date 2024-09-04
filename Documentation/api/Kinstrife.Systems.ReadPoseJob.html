@@ -78,6 +78,8 @@
   <div class="implements">
     <h5>Implements</h5>
     <div><span class="xref">IJobParallelForTransform</span></div>
+    <div><a class="xref" href="Kinstrife.Systems.ISystemJob-1.html">ISystemJob</a>&lt;<a class="xref" href="Kinstrife.Systems.KinematicsEntityData.html">KinematicsEntityData</a>&gt;</div>
+    <div><a class="xref" href="Kinstrife.Systems.ISystemJob-1.html">ISystemJob</a>&lt;<a class="xref" href="Kinstrife.Systems.TransformEntityData.html">TransformEntityData</a>&gt;</div>
   </div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
@@ -104,7 +106,7 @@
   <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
   <h5 id="Kinstrife_Systems_ReadPoseJob_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public struct ReadPoseJob</code></pre>
+    <pre><code class="lang-csharp hljs">public struct ReadPoseJob : ISystemJob&lt;KinematicsEntityData&gt;, ISystemJob&lt;TransformEntityData&gt;</code></pre>
   </div>
   <h3 id="fields">Fields
   </h3>
@@ -184,6 +186,70 @@
   </h3>
   
   
+  <a id="Kinstrife_Systems_ReadPoseJob_Apply_" data-uid="Kinstrife.Systems.ReadPoseJob.Apply*"></a>
+  <h4 id="Kinstrife_Systems_ReadPoseJob_Apply_Kinstrife_Systems_KinematicsEntityData__Kinstrife_Systems_EntityManager_" data-uid="Kinstrife.Systems.ReadPoseJob.Apply(Kinstrife.Systems.KinematicsEntityData@,Kinstrife.Systems.EntityManager)">Apply(in KinematicsEntityData, EntityManager)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Apply(in KinematicsEntityData data, EntityManager entityManager)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Kinstrife.Systems.KinematicsEntityData.html">KinematicsEntityData</a></td>
+        <td><span class="parametername">data</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Kinstrife.Systems.EntityManager.html">EntityManager</a></td>
+        <td><span class="parametername">entityManager</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Kinstrife_Systems_ReadPoseJob_Apply_" data-uid="Kinstrife.Systems.ReadPoseJob.Apply*"></a>
+  <h4 id="Kinstrife_Systems_ReadPoseJob_Apply_Kinstrife_Systems_TransformEntityData__Kinstrife_Systems_EntityManager_" data-uid="Kinstrife.Systems.ReadPoseJob.Apply(Kinstrife.Systems.TransformEntityData@,Kinstrife.Systems.EntityManager)">Apply(in TransformEntityData, EntityManager)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Apply(in TransformEntityData data, EntityManager entityManager)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Kinstrife.Systems.TransformEntityData.html">TransformEntityData</a></td>
+        <td><span class="parametername">data</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Kinstrife.Systems.EntityManager.html">EntityManager</a></td>
+        <td><span class="parametername">entityManager</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
   <a id="Kinstrife_Systems_ReadPoseJob_Execute_" data-uid="Kinstrife.Systems.ReadPoseJob.Execute*"></a>
   <h4 id="Kinstrife_Systems_ReadPoseJob_Execute_System_Int32_TransformAccess_" data-uid="Kinstrife.Systems.ReadPoseJob.Execute(System.Int32,TransformAccess)">Execute(Int32, TransformAccess)</h4>
   <div class="markdown level1 summary"></div>
@@ -217,6 +283,12 @@
   <h3 id="implements">Implements</h3>
   <div>
       <span class="xref">IJobParallelForTransform</span>
+  </div>
+  <div>
+      <a class="xref" href="Kinstrife.Systems.ISystemJob-1.html">ISystemJob&lt;T&gt;</a>
+  </div>
+  <div>
+      <a class="xref" href="Kinstrife.Systems.ISystemJob-1.html">ISystemJob&lt;T&gt;</a>
   </div>
 </article>
           </div>

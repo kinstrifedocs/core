@@ -162,6 +162,64 @@
   
   
   <a id="Kinstrife_Systems_Util_Memory_Realloc_" data-uid="Kinstrife.Systems.Util.Memory.Realloc*"></a>
+  <h4 id="Kinstrife_Systems_Util_Memory_Realloc__1_NativeArray___0_____0___Allocator_NativeArrayOptions_" data-uid="Kinstrife.Systems.Util.Memory.Realloc``1(NativeArray{``0}@,``0[],Allocator,NativeArrayOptions)">Realloc&lt;T&gt;(ref NativeArray&lt;T&gt;, T[], Allocator, NativeArrayOptions)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void Realloc&lt;T&gt;(ref NativeArray&lt;T&gt; arr, T[] copyFrom, Allocator allocator, NativeArrayOptions options = null)
+    where T : struct</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">NativeArray</span>&lt;T&gt;</td>
+        <td><span class="parametername">arr</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>T[]</td>
+        <td><span class="parametername">copyFrom</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">Allocator</span></td>
+        <td><span class="parametername">allocator</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">NativeArrayOptions</span></td>
+        <td><span class="parametername">options</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Kinstrife_Systems_Util_Memory_Realloc_" data-uid="Kinstrife.Systems.Util.Memory.Realloc*"></a>
   <h4 id="Kinstrife_Systems_Util_Memory_Realloc__1_NativeArray___0___System_Int32_Allocator_NativeArrayOptions_" data-uid="Kinstrife.Systems.Util.Memory.Realloc``1(NativeArray{``0}@,System.Int32,Allocator,NativeArrayOptions)">Realloc&lt;T&gt;(ref NativeArray&lt;T&gt;, Int32, Allocator, NativeArrayOptions)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
@@ -271,6 +329,188 @@
     <tbody>
       <tr>
         <td><span class="parametername">T</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Kinstrife_Systems_Util_Memory_Realloc_" data-uid="Kinstrife.Systems.Util.Memory.Realloc*"></a>
+  <h4 id="Kinstrife_Systems_Util_Memory_Realloc__1_NativeParallelHashSet___0___System_Int32_Allocator_NativeArrayOptions_" data-uid="Kinstrife.Systems.Util.Memory.Realloc``1(NativeParallelHashSet{``0}@,System.Int32,Allocator,NativeArrayOptions)">Realloc&lt;T&gt;(ref NativeParallelHashSet&lt;T&gt;, Int32, Allocator, NativeArrayOptions)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void Realloc&lt;T&gt;(ref NativeParallelHashSet&lt;T&gt; arr, int newSize, Allocator allocator, NativeArrayOptions options = null)
+    where T : struct, IEquatable&lt;T&gt;</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">NativeParallelHashSet</span>&lt;T&gt;</td>
+        <td><span class="parametername">arr</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">newSize</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">Allocator</span></td>
+        <td><span class="parametername">allocator</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">NativeArrayOptions</span></td>
+        <td><span class="parametername">options</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Kinstrife_Systems_Util_Memory_Realloc_" data-uid="Kinstrife.Systems.Util.Memory.Realloc*"></a>
+  <h4 id="Kinstrife_Systems_Util_Memory_Realloc__2_NativeParallelHashMap___0___1___System_Int32_Allocator_NativeArrayOptions_" data-uid="Kinstrife.Systems.Util.Memory.Realloc``2(NativeParallelHashMap{``0,``1}@,System.Int32,Allocator,NativeArrayOptions)">Realloc&lt;T, U&gt;(ref NativeParallelHashMap&lt;T, U&gt;, Int32, Allocator, NativeArrayOptions)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void Realloc&lt;T, U&gt;(ref NativeParallelHashMap&lt;T, U&gt; arr, int newSize, Allocator allocator, NativeArrayOptions options = null)
+    where T : struct, IEquatable&lt;T&gt; where U : struct</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">NativeParallelHashMap</span>&lt;T, U&gt;</td>
+        <td><span class="parametername">arr</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">newSize</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">Allocator</span></td>
+        <td><span class="parametername">allocator</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">NativeArrayOptions</span></td>
+        <td><span class="parametername">options</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="parametername">U</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Kinstrife_Systems_Util_Memory_Realloc_" data-uid="Kinstrife.Systems.Util.Memory.Realloc*"></a>
+  <h4 id="Kinstrife_Systems_Util_Memory_Realloc__2_NativeParallelMultiHashMap___0___1___System_Int32_Allocator_NativeArrayOptions_" data-uid="Kinstrife.Systems.Util.Memory.Realloc``2(NativeParallelMultiHashMap{``0,``1}@,System.Int32,Allocator,NativeArrayOptions)">Realloc&lt;T, U&gt;(ref NativeParallelMultiHashMap&lt;T, U&gt;, Int32, Allocator, NativeArrayOptions)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void Realloc&lt;T, U&gt;(ref NativeParallelMultiHashMap&lt;T, U&gt; arr, int newSize, Allocator allocator, NativeArrayOptions options = null)
+    where T : struct, IEquatable&lt;T&gt; where U : struct</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">NativeParallelMultiHashMap</span>&lt;T, U&gt;</td>
+        <td><span class="parametername">arr</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">newSize</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">Allocator</span></td>
+        <td><span class="parametername">allocator</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">NativeArrayOptions</span></td>
+        <td><span class="parametername">options</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="parametername">U</span></td>
         <td></td>
       </tr>
     </tbody>
