@@ -220,7 +220,8 @@ public sealed class CircularBuffer&lt;T&gt; : IReadOnlyList&lt;T&gt;, IReadOnlyC
   
   <a id="Kinstrife_Core_DataStructures_CircularBuffer_1_Item_" data-uid="Kinstrife.Core.DataStructures.CircularBuffer`1.Item*"></a>
   <h4 id="Kinstrife_Core_DataStructures_CircularBuffer_1_Item_System_Int32_" data-uid="Kinstrife.Core.DataStructures.CircularBuffer`1.Item(System.Int32)">Item[Int32]</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Access the buffer by recentness. 0 is the latest item, 1 is the second latest, etc.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -239,7 +240,8 @@ public sealed class CircularBuffer&lt;T&gt; : IReadOnlyList&lt;T&gt;, IReadOnlyC
       <tr>
         <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">index</span></td>
-        <td></td>
+        <td><p>0 is latest item, 1 is the second latest etc.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -331,6 +333,31 @@ public sealed class CircularBuffer&lt;T&gt; : IReadOnlyList&lt;T&gt;, IReadOnlyC
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public T GetLatest()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">T</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Kinstrife_Core_DataStructures_CircularBuffer_1_GetOldest_" data-uid="Kinstrife.Core.DataStructures.CircularBuffer`1.GetOldest*"></a>
+  <h4 id="Kinstrife_Core_DataStructures_CircularBuffer_1_GetOldest" data-uid="Kinstrife.Core.DataStructures.CircularBuffer`1.GetOldest">GetOldest()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public T GetOldest()</code></pre>
   </div>
   <h5 class="returns">Returns</h5>
   <table class="table table-bordered table-striped table-condensed">
