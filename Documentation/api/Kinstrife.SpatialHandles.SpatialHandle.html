@@ -79,16 +79,12 @@
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
     <div class="level1"><span class="xref">SpatialHandle</span></div>
-      <div class="level2"><a class="xref" href="Kinstrife.SpatialHandles.LevelBoundary.html">LevelBoundary</a></div>
-      <div class="level2"><a class="xref" href="Kinstrife.SpatialHandles.Path.html">Path</a></div>
-      <div class="level2"><a class="xref" href="Kinstrife.SpatialHandles.Point.html">Point</a></div>
-      <div class="level2"><a class="xref" href="Kinstrife.SpatialHandles.SpatialContainer.html">SpatialContainer</a></div>
   </div>
   <div class="implements">
     <h5>Implements</h5>
-    <div><a class="xref" href="Kinstrife.Identifier.ISortable.html">ISortable</a></div>
-    <div><a class="xref" href="Kinstrife.Identifier.IPrimarySortable.html">IPrimarySortable</a></div>
-    <div><a class="xref" href="Kinstrife.Identifier.ISecondarySortable.html">ISecondarySortable</a></div>
+    <div><span class="xref">Kinstrife.Identifier.ICategorized</span>&lt;<a class="xref" href="Kinstrife.SpatialHandles.MarkupCategory.html">MarkupCategory</a>&gt;</div>
+    <div><span class="xref">Kinstrife.Identifier.ITagged</span>&lt;<a class="xref" href="Kinstrife.SpatialHandles.MarkupTag.html">MarkupTag</a>&gt;</div>
+    <div><a class="xref" href="Kinstrife.Gizmos.ICustomGizmo.html">ICustomGizmo</a></div>
     <div><a class="xref" href="Kinstrife.Identifier.ICategorized.html">ICategorized</a></div>
     <div><a class="xref" href="Kinstrife.Identifier.ITagged.html">ITagged</a></div>
   </div>
@@ -96,86 +92,10 @@
   <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
   <h5 id="Kinstrife_SpatialHandles_SpatialHandle_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public abstract class SpatialHandle : MonoBehaviour, ISortable, IPrimarySortable, ISecondarySortable, ICategorized, ITagged</code></pre>
+    <pre><code class="lang-csharp hljs">public sealed class SpatialHandle : MonoBehaviour, ICustomGizmo, ICategorized, ITagged</code></pre>
   </div>
-  <h3 id="fields">Fields
-  </h3>
-  
-  
-  <h4 id="Kinstrife_SpatialHandles_SpatialHandle_childCount" data-uid="Kinstrife.SpatialHandles.SpatialHandle.childCount">childCount</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public int childCount</code></pre>
-  </div>
-  <h5 class="fieldValue">Field Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Int32</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
   <h3 id="properties">Properties
   </h3>
-  
-  
-  <a id="Kinstrife_SpatialHandles_SpatialHandle_Capacity_" data-uid="Kinstrife.SpatialHandles.SpatialHandle.Capacity*"></a>
-  <h4 id="Kinstrife_SpatialHandles_SpatialHandle_Capacity" data-uid="Kinstrife.SpatialHandles.SpatialHandle.Capacity">Capacity</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual int Capacity { get; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Int32</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="Kinstrife_SpatialHandles_SpatialHandle_CapacityStatus_" data-uid="Kinstrife.SpatialHandles.SpatialHandle.CapacityStatus*"></a>
-  <h4 id="Kinstrife_SpatialHandles_SpatialHandle_CapacityStatus" data-uid="Kinstrife.SpatialHandles.SpatialHandle.CapacityStatus">CapacityStatus</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public CapacityStatus CapacityStatus { get; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Kinstrife.SpatialHandles.CapacityStatus.html">CapacityStatus</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
   
   
   <a id="Kinstrife_SpatialHandles_SpatialHandle_Category_" data-uid="Kinstrife.SpatialHandles.SpatialHandle.Category*"></a>
@@ -184,7 +104,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public SceneCategory Category { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public MarkupCategory Category { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -196,20 +116,20 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="Kinstrife.SpatialHandles.SceneCategory.html">SceneCategory</a></td>
+        <td><a class="xref" href="Kinstrife.SpatialHandles.MarkupCategory.html">MarkupCategory</a></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   
   
-  <a id="Kinstrife_SpatialHandles_SpatialHandle_FreeCapacity_" data-uid="Kinstrife.SpatialHandles.SpatialHandle.FreeCapacity*"></a>
-  <h4 id="Kinstrife_SpatialHandles_SpatialHandle_FreeCapacity" data-uid="Kinstrife.SpatialHandles.SpatialHandle.FreeCapacity">FreeCapacity</h4>
+  <a id="Kinstrife_SpatialHandles_SpatialHandle_Children_" data-uid="Kinstrife.SpatialHandles.SpatialHandle.Children*"></a>
+  <h4 id="Kinstrife_SpatialHandles_SpatialHandle_Children" data-uid="Kinstrife.SpatialHandles.SpatialHandle.Children">Children</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual int FreeCapacity { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public IReadOnlyList&lt;SpatialHandle&gt; Children { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -221,7 +141,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Int32</span></td>
+        <td><span class="xref">System.Collections.Generic.IReadOnlyList</span>&lt;<a class="xref" href="Kinstrife.SpatialHandles.SpatialHandle.html">SpatialHandle</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -253,13 +173,13 @@
   </table>
   
   
-  <a id="Kinstrife_SpatialHandles_SpatialHandle_OrderByPrimary_" data-uid="Kinstrife.SpatialHandles.SpatialHandle.OrderByPrimary*"></a>
-  <h4 id="Kinstrife_SpatialHandles_SpatialHandle_OrderByPrimary" data-uid="Kinstrife.SpatialHandles.SpatialHandle.OrderByPrimary">OrderByPrimary</h4>
+  <a id="Kinstrife_SpatialHandles_SpatialHandle_HasAnyShapes_" data-uid="Kinstrife.SpatialHandles.SpatialHandle.HasAnyShapes*"></a>
+  <h4 id="Kinstrife_SpatialHandles_SpatialHandle_HasAnyShapes" data-uid="Kinstrife.SpatialHandles.SpatialHandle.HasAnyShapes">HasAnyShapes</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public int OrderByPrimary { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public bool HasAnyShapes { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -271,20 +191,20 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Int32</span></td>
+        <td><span class="xref">System.Boolean</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   
   
-  <a id="Kinstrife_SpatialHandles_SpatialHandle_OrderBySecondary_" data-uid="Kinstrife.SpatialHandles.SpatialHandle.OrderBySecondary*"></a>
-  <h4 id="Kinstrife_SpatialHandles_SpatialHandle_OrderBySecondary" data-uid="Kinstrife.SpatialHandles.SpatialHandle.OrderBySecondary">OrderBySecondary</h4>
+  <a id="Kinstrife_SpatialHandles_SpatialHandle_HasChildren_" data-uid="Kinstrife.SpatialHandles.SpatialHandle.HasChildren*"></a>
+  <h4 id="Kinstrife_SpatialHandles_SpatialHandle_HasChildren" data-uid="Kinstrife.SpatialHandles.SpatialHandle.HasChildren">HasChildren</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public int OrderBySecondary { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public bool HasChildren { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -296,20 +216,20 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Int32</span></td>
+        <td><span class="xref">System.Boolean</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   
   
-  <a id="Kinstrife_SpatialHandles_SpatialHandle_Prio_" data-uid="Kinstrife.SpatialHandles.SpatialHandle.Prio*"></a>
-  <h4 id="Kinstrife_SpatialHandles_SpatialHandle_Prio" data-uid="Kinstrife.SpatialHandles.SpatialHandle.Prio">Prio</h4>
+  <a id="Kinstrife_SpatialHandles_SpatialHandle_Markers_" data-uid="Kinstrife.SpatialHandles.SpatialHandle.Markers*"></a>
+  <h4 id="Kinstrife_SpatialHandles_SpatialHandle_Markers" data-uid="Kinstrife.SpatialHandles.SpatialHandle.Markers">Markers</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual int Prio { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Marker[] Markers { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -321,7 +241,32 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Int32</span></td>
+        <td><a class="xref" href="Kinstrife.SpatialHandles.Marker.html">Marker</a>[]</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Kinstrife_SpatialHandles_SpatialHandle_Shapes_" data-uid="Kinstrife.SpatialHandles.SpatialHandle.Shapes*"></a>
+  <h4 id="Kinstrife_SpatialHandles_SpatialHandle_Shapes" data-uid="Kinstrife.SpatialHandles.SpatialHandle.Shapes">Shapes</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IReadOnlyList&lt;Shape&gt; Shapes { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IReadOnlyList</span>&lt;<a class="xref" href="Kinstrife.SpatialHandles.Shape.html">Shape</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -334,7 +279,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public IReadOnlyList&lt;SceneTag&gt; Tags { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public MarkupTag Tags { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -346,7 +291,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Generic.IReadOnlyList</span>&lt;<a class="xref" href="Kinstrife.SpatialHandles.SceneTag.html">SceneTag</a>&gt;</td>
+        <td><a class="xref" href="Kinstrife.SpatialHandles.MarkupTag.html">MarkupTag</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -361,42 +306,17 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual void CacheReferences()</code></pre>
+    <pre><code class="lang-csharp hljs">public void CacheReferences()</code></pre>
   </div>
   
   
-  <a id="Kinstrife_SpatialHandles_SpatialHandle_GetCapacityStatus_" data-uid="Kinstrife.SpatialHandles.SpatialHandle.GetCapacityStatus*"></a>
-  <h4 id="Kinstrife_SpatialHandles_SpatialHandle_GetCapacityStatus" data-uid="Kinstrife.SpatialHandles.SpatialHandle.GetCapacityStatus">GetCapacityStatus()</h4>
+  <a id="Kinstrife_SpatialHandles_SpatialHandle_GetRandomPosition_" data-uid="Kinstrife.SpatialHandles.SpatialHandle.GetRandomPosition*"></a>
+  <h4 id="Kinstrife_SpatialHandles_SpatialHandle_GetRandomPosition" data-uid="Kinstrife.SpatialHandles.SpatialHandle.GetRandomPosition">GetRandomPosition()</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual CapacityStatus GetCapacityStatus()</code></pre>
-  </div>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Kinstrife.SpatialHandles.CapacityStatus.html">CapacityStatus</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="Kinstrife_SpatialHandles_SpatialHandle_GetPosition_" data-uid="Kinstrife.SpatialHandles.SpatialHandle.GetPosition*"></a>
-  <h4 id="Kinstrife_SpatialHandles_SpatialHandle_GetPosition" data-uid="Kinstrife.SpatialHandles.SpatialHandle.GetPosition">GetPosition()</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual Vector3 GetPosition()</code></pre>
+    <pre><code class="lang-csharp hljs">public Vector3 GetRandomPosition()</code></pre>
   </div>
   <h5 class="returns">Returns</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -421,7 +341,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual void GetRandomPositionAndRotation(out Vector3 pos, out Quaternion rot)</code></pre>
+    <pre><code class="lang-csharp hljs">public void GetRandomPositionAndRotation(out Vector3 pos, out Quaternion rot)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -453,7 +373,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual Quaternion GetRotation()</code></pre>
+    <pre><code class="lang-csharp hljs">public Quaternion GetRotation()</code></pre>
   </div>
   <h5 class="returns">Returns</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -472,24 +392,45 @@
   </table>
   
   
-  <a id="Kinstrife_SpatialHandles_SpatialHandle_OnDestroy_" data-uid="Kinstrife.SpatialHandles.SpatialHandle.OnDestroy*"></a>
-  <h4 id="Kinstrife_SpatialHandles_SpatialHandle_OnDestroy" data-uid="Kinstrife.SpatialHandles.SpatialHandle.OnDestroy">OnDestroy()</h4>
+  <a id="Kinstrife_SpatialHandles_SpatialHandle_HasMarker_" data-uid="Kinstrife.SpatialHandles.SpatialHandle.HasMarker*"></a>
+  <h4 id="Kinstrife_SpatialHandles_SpatialHandle_HasMarker__1" data-uid="Kinstrife.SpatialHandles.SpatialHandle.HasMarker``1">HasMarker&lt;T&gt;()</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected virtual void OnDestroy()</code></pre>
+    <pre><code class="lang-csharp hljs">public bool HasMarker&lt;T&gt;()
+    where T : Marker</code></pre>
   </div>
-  
-  
-  <a id="Kinstrife_SpatialHandles_SpatialHandle_OnEnable_" data-uid="Kinstrife.SpatialHandles.SpatialHandle.OnEnable*"></a>
-  <h4 id="Kinstrife_SpatialHandles_SpatialHandle_OnEnable" data-uid="Kinstrife.SpatialHandles.SpatialHandle.OnEnable">OnEnable()</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected virtual void OnEnable()</code></pre>
-  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   
   
   <a id="Kinstrife_SpatialHandles_SpatialHandle_Rebuild_" data-uid="Kinstrife.SpatialHandles.SpatialHandle.Rebuild*"></a>
@@ -498,17 +439,18 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual void Rebuild()</code></pre>
+    <pre><code class="lang-csharp hljs">public void Rebuild()</code></pre>
   </div>
   
   
-  <a id="Kinstrife_SpatialHandles_SpatialHandle_ReleaseChild_" data-uid="Kinstrife.SpatialHandles.SpatialHandle.ReleaseChild*"></a>
-  <h4 id="Kinstrife_SpatialHandles_SpatialHandle_ReleaseChild_Transform_" data-uid="Kinstrife.SpatialHandles.SpatialHandle.ReleaseChild(Transform)">ReleaseChild(Transform)</h4>
+  <a id="Kinstrife_SpatialHandles_SpatialHandle_TryGetMarker_" data-uid="Kinstrife.SpatialHandles.SpatialHandle.TryGetMarker*"></a>
+  <h4 id="Kinstrife_SpatialHandles_SpatialHandle_TryGetMarker__1___0__" data-uid="Kinstrife.SpatialHandles.SpatialHandle.TryGetMarker``1(``0@)">TryGetMarker&lt;T&gt;(out T)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void ReleaseChild(Transform child)</code></pre>
+    <pre><code class="lang-csharp hljs">public bool TryGetMarker&lt;T&gt;(out T marker)
+    where T : Marker</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -521,21 +463,51 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Transform</span></td>
-        <td><span class="parametername">child</span></td>
+        <td><span class="xref">T</span></td>
+        <td><span class="parametername">marker</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   
   
-  <a id="Kinstrife_SpatialHandles_SpatialHandle_SetChild_" data-uid="Kinstrife.SpatialHandles.SpatialHandle.SetChild*"></a>
-  <h4 id="Kinstrife_SpatialHandles_SpatialHandle_SetChild_Transform_" data-uid="Kinstrife.SpatialHandles.SpatialHandle.SetChild(Transform)">SetChild(Transform)</h4>
+  <a id="Kinstrife_SpatialHandles_SpatialHandle_TryGetRandomShape_" data-uid="Kinstrife.SpatialHandles.SpatialHandle.TryGetRandomShape*"></a>
+  <h4 id="Kinstrife_SpatialHandles_SpatialHandle_TryGetRandomShape_Kinstrife_SpatialHandles_Shape__" data-uid="Kinstrife.SpatialHandles.SpatialHandle.TryGetRandomShape(Kinstrife.SpatialHandles.Shape@)">TryGetRandomShape(out Shape)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void SetChild(Transform child)</code></pre>
+    <pre><code class="lang-csharp hljs">public bool TryGetRandomShape(out Shape shape)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -548,24 +520,141 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Transform</span></td>
-        <td><span class="parametername">child</span></td>
+        <td><a class="xref" href="Kinstrife.SpatialHandles.Shape.html">Shape</a></td>
+        <td><span class="parametername">shape</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   
   
-  <a id="Kinstrife_SpatialHandles_SpatialHandle_TransformChanged_" data-uid="Kinstrife.SpatialHandles.SpatialHandle.TransformChanged*"></a>
-  <h4 id="Kinstrife_SpatialHandles_SpatialHandle_TransformChanged" data-uid="Kinstrife.SpatialHandles.SpatialHandle.TransformChanged">TransformChanged()</h4>
+  <a id="Kinstrife_SpatialHandles_SpatialHandle_TryGetShape_" data-uid="Kinstrife.SpatialHandles.SpatialHandle.TryGetShape*"></a>
+  <h4 id="Kinstrife_SpatialHandles_SpatialHandle_TryGetShape__1___0__" data-uid="Kinstrife.SpatialHandles.SpatialHandle.TryGetShape``1(``0@)">TryGetShape&lt;T&gt;(out T)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual void TransformChanged()</code></pre>
+    <pre><code class="lang-csharp hljs">public bool TryGetShape&lt;T&gt;(out T shape)
+    where T : Shape</code></pre>
   </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">T</span></td>
+        <td><span class="parametername">shape</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   <h3 id="eii">Explicit Interface Implementations
   </h3>
+  
+  
+  <a id="Kinstrife_SpatialHandles_SpatialHandle_Kinstrife_Gizmos_ICustomGizmo_CustomDrawingAction_" data-uid="Kinstrife.SpatialHandles.SpatialHandle.Kinstrife#Gizmos#ICustomGizmo#CustomDrawingAction*"></a>
+  <h4 id="Kinstrife_SpatialHandles_SpatialHandle_Kinstrife_Gizmos_ICustomGizmo_CustomDrawingAction_Kinstrife_Gizmos_Gizmo_" data-uid="Kinstrife.SpatialHandles.SpatialHandle.Kinstrife#Gizmos#ICustomGizmo#CustomDrawingAction(Kinstrife.Gizmos.Gizmo)">ICustomGizmo.CustomDrawingAction(Gizmo)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void ICustomGizmo.CustomDrawingAction(Gizmo gizmo)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Kinstrife.Gizmos.Gizmo.html">Gizmo</a></td>
+        <td><span class="parametername">gizmo</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Kinstrife_SpatialHandles_SpatialHandle_Kinstrife_Gizmos_ICustomGizmo_InitializeGizmoSettings_" data-uid="Kinstrife.SpatialHandles.SpatialHandle.Kinstrife#Gizmos#ICustomGizmo#InitializeGizmoSettings*"></a>
+  <h4 id="Kinstrife_SpatialHandles_SpatialHandle_Kinstrife_Gizmos_ICustomGizmo_InitializeGizmoSettings_Kinstrife_Gizmos_Gizmo_" data-uid="Kinstrife.SpatialHandles.SpatialHandle.Kinstrife#Gizmos#ICustomGizmo#InitializeGizmoSettings(Kinstrife.Gizmos.Gizmo)">ICustomGizmo.InitializeGizmoSettings(Gizmo)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void ICustomGizmo.InitializeGizmoSettings(Gizmo gizmo)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Kinstrife.Gizmos.Gizmo.html">Gizmo</a></td>
+        <td><span class="parametername">gizmo</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   
   
   <a id="Kinstrife_SpatialHandles_SpatialHandle_Kinstrife_Identifier_ICategorized_Category_" data-uid="Kinstrife.SpatialHandles.SpatialHandle.Kinstrife#Identifier#ICategorized#Category*"></a>
@@ -618,13 +707,13 @@
   </table>
   <h3 id="implements">Implements</h3>
   <div>
-      <a class="xref" href="Kinstrife.Identifier.ISortable.html">ISortable</a>
+      <span class="xref">Kinstrife.Identifier.ICategorized&lt;&gt;</span>
   </div>
   <div>
-      <a class="xref" href="Kinstrife.Identifier.IPrimarySortable.html">IPrimarySortable</a>
+      <span class="xref">Kinstrife.Identifier.ITagged&lt;&gt;</span>
   </div>
   <div>
-      <a class="xref" href="Kinstrife.Identifier.ISecondarySortable.html">ISecondarySortable</a>
+      <a class="xref" href="Kinstrife.Gizmos.ICustomGizmo.html">ICustomGizmo</a>
   </div>
   <div>
       <a class="xref" href="Kinstrife.Identifier.ICategorized.html">ICategorized</a>

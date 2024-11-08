@@ -5,10 +5,10 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Class LevelBoundary
+    <title>Class ShapeInspector&lt;T&gt;
    | Kinstrife </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Class LevelBoundary
+    <meta name="title" content="Class ShapeInspector&lt;T&gt;
    | Kinstrife ">
     <meta name="generator" content="docfx 2.59.4.0">
     
@@ -68,53 +68,52 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="Kinstrife.SpatialHandles.LevelBoundary">
+            <article class="content wrap" id="_content" data-uid="Kinstrife.SpatialHandles.Editor.ShapeInspector`1">
   
   
-  <h1 id="Kinstrife_SpatialHandles_LevelBoundary" data-uid="Kinstrife.SpatialHandles.LevelBoundary" class="text-break">Class LevelBoundary
+  <h1 id="Kinstrife_SpatialHandles_Editor_ShapeInspector_1" data-uid="Kinstrife.SpatialHandles.Editor.ShapeInspector`1" class="text-break">Class ShapeInspector&lt;T&gt;
   </h1>
   <div class="markdown level0 summary"></div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><a class="xref" href="Kinstrife.SpatialHandles.Shape.html">Shape</a></div>
-    <div class="level2"><span class="xref">LevelBoundary</span></div>
+    <div class="level1"><span class="xref">ShapeInspector&lt;T&gt;</span></div>
+      <div class="level2"><a class="xref" href="Kinstrife.SpatialHandles.Editor.LevelBoundsInspector.html">LevelBoundsInspector</a></div>
   </div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
-    <div>
-      <a class="xref" href="Kinstrife.SpatialHandles.Shape.html#Kinstrife_SpatialHandles_Shape_CacheReferences">Shape.CacheReferences()</a>
-    </div>
-    <div>
-      <a class="xref" href="Kinstrife.SpatialHandles.Shape.html#Kinstrife_SpatialHandles_Shape_Rebuild">Shape.Rebuild()</a>
-    </div>
-    <div>
-      <a class="xref" href="Kinstrife.SpatialHandles.Shape.html#Kinstrife_SpatialHandles_Shape_GetRandomPosition">Shape.GetRandomPosition()</a>
-    </div>
-    <div>
-      <a class="xref" href="Kinstrife.SpatialHandles.Shape.html#Kinstrife_SpatialHandles_Shape_GetRotation">Shape.GetRotation()</a>
-    </div>
-  </div>
-  <h6><strong>Namespace</strong>: <a class="xref" href="Kinstrife.SpatialHandles.html">Kinstrife.SpatialHandles</a></h6>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Kinstrife.SpatialHandles.Editor.html">Kinstrife.SpatialHandles.Editor</a></h6>
   <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
-  <h5 id="Kinstrife_SpatialHandles_LevelBoundary_syntax">Syntax</h5>
+  <h5 id="Kinstrife_SpatialHandles_Editor_ShapeInspector_1_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class LevelBoundary : Shape</code></pre>
+    <pre><code class="lang-csharp hljs">public class ShapeInspector&lt;T&gt; : OdinEditor where T : Shape</code></pre>
   </div>
-  <h3 id="properties">Properties
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="fields">Fields
   </h3>
   
   
-  <a id="Kinstrife_SpatialHandles_LevelBoundary_EntryZone_" data-uid="Kinstrife.SpatialHandles.LevelBoundary.EntryZone*"></a>
-  <h4 id="Kinstrife_SpatialHandles_LevelBoundary_EntryZone" data-uid="Kinstrife.SpatialHandles.LevelBoundary.EntryZone">EntryZone</h4>
+  <h4 id="Kinstrife_SpatialHandles_Editor_ShapeInspector_1_component" data-uid="Kinstrife.SpatialHandles.Editor.ShapeInspector`1.component">component</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Area EntryZone { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">protected T component</code></pre>
   </div>
-  <h5 class="propertyValue">Property Value</h5>
+  <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
       <tr>
@@ -124,107 +123,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="Kinstrife.SpatialHandles.Area.html">Area</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="Kinstrife_SpatialHandles_LevelBoundary_ExitZone_" data-uid="Kinstrife.SpatialHandles.LevelBoundary.ExitZone*"></a>
-  <h4 id="Kinstrife_SpatialHandles_LevelBoundary_ExitZone" data-uid="Kinstrife.SpatialHandles.LevelBoundary.ExitZone">ExitZone</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Area ExitZone { get; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Kinstrife.SpatialHandles.Area.html">Area</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="Kinstrife_SpatialHandles_LevelBoundary_ExitZoneTrigger_" data-uid="Kinstrife.SpatialHandles.LevelBoundary.ExitZoneTrigger*"></a>
-  <h4 id="Kinstrife_SpatialHandles_LevelBoundary_ExitZoneTrigger" data-uid="Kinstrife.SpatialHandles.LevelBoundary.ExitZoneTrigger">ExitZoneTrigger</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public BoxCollider ExitZoneTrigger { get; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">BoxCollider</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="Kinstrife_SpatialHandles_LevelBoundary_Viz_" data-uid="Kinstrife.SpatialHandles.LevelBoundary.Viz*"></a>
-  <h4 id="Kinstrife_SpatialHandles_LevelBoundary_Viz" data-uid="Kinstrife.SpatialHandles.LevelBoundary.Viz">Viz</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Renderer Viz { get; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">Renderer</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="Kinstrife_SpatialHandles_LevelBoundary_Wall_" data-uid="Kinstrife.SpatialHandles.LevelBoundary.Wall*"></a>
-  <h4 id="Kinstrife_SpatialHandles_LevelBoundary_Wall" data-uid="Kinstrife.SpatialHandles.LevelBoundary.Wall">Wall</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public BoxCollider Wall { get; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">BoxCollider</span></td>
+        <td><span class="xref">T</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -233,31 +132,44 @@
   </h3>
   
   
-  <a id="Kinstrife_SpatialHandles_LevelBoundary_Contains_" data-uid="Kinstrife.SpatialHandles.LevelBoundary.Contains*"></a>
-  <h4 id="Kinstrife_SpatialHandles_LevelBoundary_Contains_Vector3_" data-uid="Kinstrife.SpatialHandles.LevelBoundary.Contains(Vector3)">Contains(Vector3)</h4>
+  <a id="Kinstrife_SpatialHandles_Editor_ShapeInspector_1_HandleTransformChanged_" data-uid="Kinstrife.SpatialHandles.Editor.ShapeInspector`1.HandleTransformChanged*"></a>
+  <h4 id="Kinstrife_SpatialHandles_Editor_ShapeInspector_1_HandleTransformChanged" data-uid="Kinstrife.SpatialHandles.Editor.ShapeInspector`1.HandleTransformChanged">HandleTransformChanged()</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public override bool Contains(Vector3 point)</code></pre>
+    <pre><code class="lang-csharp hljs">protected virtual void HandleTransformChanged()</code></pre>
   </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">Vector3</span></td>
-        <td><span class="parametername">point</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
+  
+  
+  <a id="Kinstrife_SpatialHandles_Editor_ShapeInspector_1_OnEnable_" data-uid="Kinstrife.SpatialHandles.Editor.ShapeInspector`1.OnEnable*"></a>
+  <h4 id="Kinstrife_SpatialHandles_Editor_ShapeInspector_1_OnEnable" data-uid="Kinstrife.SpatialHandles.Editor.ShapeInspector`1.OnEnable">OnEnable()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override void OnEnable()</code></pre>
+  </div>
+  
+  
+  <a id="Kinstrife_SpatialHandles_Editor_ShapeInspector_1_OnSceneGUI_" data-uid="Kinstrife.SpatialHandles.Editor.ShapeInspector`1.OnSceneGUI*"></a>
+  <h4 id="Kinstrife_SpatialHandles_Editor_ShapeInspector_1_OnSceneGUI" data-uid="Kinstrife.SpatialHandles.Editor.ShapeInspector`1.OnSceneGUI">OnSceneGUI()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void OnSceneGUI()</code></pre>
+  </div>
+  
+  
+  <a id="Kinstrife_SpatialHandles_Editor_ShapeInspector_1_RequiresConstantRepaint_" data-uid="Kinstrife.SpatialHandles.Editor.ShapeInspector`1.RequiresConstantRepaint*"></a>
+  <h4 id="Kinstrife_SpatialHandles_Editor_ShapeInspector_1_RequiresConstantRepaint" data-uid="Kinstrife.SpatialHandles.Editor.ShapeInspector`1.RequiresConstantRepaint">RequiresConstantRepaint()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override bool RequiresConstantRepaint()</code></pre>
+  </div>
   <h5 class="returns">Returns</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
@@ -273,8 +185,6 @@
       </tr>
     </tbody>
   </table>
-  <h5 class="overrides">Overrides</h5>
-  <div><a class="xref" href="Kinstrife.SpatialHandles.Shape.html#Kinstrife_SpatialHandles_Shape_Contains_Vector3_">Shape.Contains(Vector3)</a></div>
 </article>
           </div>
           
