@@ -82,17 +82,17 @@
   </div>
   <div class="implements">
     <h5>Implements</h5>
-    <div><span class="xref">Kinstrife.Identifier.ICategorized</span>&lt;<a class="xref" href="Kinstrife.SpatialHandles.MarkupCategory.html">MarkupCategory</a>&gt;</div>
-    <div><span class="xref">Kinstrife.Identifier.ITagged</span>&lt;<a class="xref" href="Kinstrife.SpatialHandles.MarkupTag.html">MarkupTag</a>&gt;</div>
+    <div><a class="xref" href="Kinstrife.Database.ICategorized-1.html">ICategorized</a>&lt;<a class="xref" href="Kinstrife.SpatialHandles.MarkupCategory.html">MarkupCategory</a>&gt;</div>
+    <div><a class="xref" href="Kinstrife.Database.ITagged-1.html">ITagged</a>&lt;<a class="xref" href="Kinstrife.SpatialHandles.MarkupTag.html">MarkupTag</a>&gt;</div>
     <div><a class="xref" href="Kinstrife.Gizmos.ICustomGizmo.html">ICustomGizmo</a></div>
-    <div><a class="xref" href="Kinstrife.Identifier.ICategorized.html">ICategorized</a></div>
-    <div><a class="xref" href="Kinstrife.Identifier.ITagged.html">ITagged</a></div>
+    <div><a class="xref" href="Kinstrife.Database.ICategorized.html">ICategorized</a></div>
+    <div><a class="xref" href="Kinstrife.Database.ITagged.html">ITagged</a></div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Kinstrife.SpatialHandles.html">Kinstrife.SpatialHandles</a></h6>
   <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
   <h5 id="Kinstrife_SpatialHandles_SpatialHandle_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public sealed class SpatialHandle : MonoBehaviour, ICustomGizmo, ICategorized, ITagged</code></pre>
+    <pre><code class="lang-csharp hljs">public sealed class SpatialHandle : MonoBehaviour, ICategorized&lt;MarkupCategory&gt;, ITagged&lt;MarkupTag&gt;, ICustomGizmo, ICategorized, ITagged</code></pre>
   </div>
   <h3 id="properties">Properties
   </h3>
@@ -603,6 +603,56 @@
   </h3>
   
   
+  <a id="Kinstrife_SpatialHandles_SpatialHandle_Kinstrife_Database_ICategorized_Category_" data-uid="Kinstrife.SpatialHandles.SpatialHandle.Kinstrife#Database#ICategorized#Category*"></a>
+  <h4 id="Kinstrife_SpatialHandles_SpatialHandle_Kinstrife_Database_ICategorized_Category" data-uid="Kinstrife.SpatialHandles.SpatialHandle.Kinstrife#Database#ICategorized#Category">ICategorized.Category</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">ICategory ICategorized.Category { get; }</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Kinstrife.Database.ICategory.html">ICategory</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Kinstrife_SpatialHandles_SpatialHandle_Kinstrife_Database_ITagged_Tags_" data-uid="Kinstrife.SpatialHandles.SpatialHandle.Kinstrife#Database#ITagged#Tags*"></a>
+  <h4 id="Kinstrife_SpatialHandles_SpatialHandle_Kinstrife_Database_ITagged_Tags" data-uid="Kinstrife.SpatialHandles.SpatialHandle.Kinstrife#Database#ITagged#Tags">ITagged.Tags</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IReadOnlyList&lt;ITag&gt; ITagged.Tags { get; }</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IReadOnlyList</span>&lt;<a class="xref" href="Kinstrife.Database.ITag.html">ITag</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
   <a id="Kinstrife_SpatialHandles_SpatialHandle_Kinstrife_Gizmos_ICustomGizmo_CustomDrawingAction_" data-uid="Kinstrife.SpatialHandles.SpatialHandle.Kinstrife#Gizmos#ICustomGizmo#CustomDrawingAction*"></a>
   <h4 id="Kinstrife_SpatialHandles_SpatialHandle_Kinstrife_Gizmos_ICustomGizmo_CustomDrawingAction_Kinstrife_Gizmos_Gizmo_" data-uid="Kinstrife.SpatialHandles.SpatialHandle.Kinstrife#Gizmos#ICustomGizmo#CustomDrawingAction(Kinstrife.Gizmos.Gizmo)">ICustomGizmo.CustomDrawingAction(Gizmo)</h4>
   <div class="markdown level1 summary"></div>
@@ -655,71 +705,21 @@
       </tr>
     </tbody>
   </table>
-  
-  
-  <a id="Kinstrife_SpatialHandles_SpatialHandle_Kinstrife_Identifier_ICategorized_Category_" data-uid="Kinstrife.SpatialHandles.SpatialHandle.Kinstrife#Identifier#ICategorized#Category*"></a>
-  <h4 id="Kinstrife_SpatialHandles_SpatialHandle_Kinstrife_Identifier_ICategorized_Category" data-uid="Kinstrife.SpatialHandles.SpatialHandle.Kinstrife#Identifier#ICategorized#Category">ICategorized.Category</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">ICategory ICategorized.Category { get; }</code></pre>
-  </div>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Kinstrife.Identifier.ICategory.html">ICategory</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="Kinstrife_SpatialHandles_SpatialHandle_Kinstrife_Identifier_ITagged_Tags_" data-uid="Kinstrife.SpatialHandles.SpatialHandle.Kinstrife#Identifier#ITagged#Tags*"></a>
-  <h4 id="Kinstrife_SpatialHandles_SpatialHandle_Kinstrife_Identifier_ITagged_Tags" data-uid="Kinstrife.SpatialHandles.SpatialHandle.Kinstrife#Identifier#ITagged#Tags">ITagged.Tags</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">IReadOnlyList&lt;ITag&gt; ITagged.Tags { get; }</code></pre>
-  </div>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Collections.Generic.IReadOnlyList</span>&lt;<a class="xref" href="Kinstrife.Identifier.ITag.html">ITag</a>&gt;</td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
   <h3 id="implements">Implements</h3>
   <div>
-      <span class="xref">Kinstrife.Identifier.ICategorized&lt;&gt;</span>
+      <a class="xref" href="Kinstrife.Database.ICategorized-1.html">ICategorized&lt;T&gt;</a>
   </div>
   <div>
-      <span class="xref">Kinstrife.Identifier.ITagged&lt;&gt;</span>
+      <a class="xref" href="Kinstrife.Database.ITagged-1.html">ITagged&lt;T&gt;</a>
   </div>
   <div>
       <a class="xref" href="Kinstrife.Gizmos.ICustomGizmo.html">ICustomGizmo</a>
   </div>
   <div>
-      <a class="xref" href="Kinstrife.Identifier.ICategorized.html">ICategorized</a>
+      <a class="xref" href="Kinstrife.Database.ICategorized.html">ICategorized</a>
   </div>
   <div>
-      <a class="xref" href="Kinstrife.Identifier.ITagged.html">ITagged</a>
+      <a class="xref" href="Kinstrife.Database.ITagged.html">ITagged</a>
   </div>
 </article>
           </div>

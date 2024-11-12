@@ -120,6 +120,30 @@
   </table>
   
   
+  <h4 id="Kinstrife_MeshTools_MeshPaintHandler_outputs" data-uid="Kinstrife.MeshTools.MeshPaintHandler.outputs">outputs</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected Dictionary&lt;Mesh, NativeArray&lt;Vector2&gt;&gt; outputs</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.Dictionary</span>&lt;<span class="xref">Mesh</span>, <span class="xref">NativeArray</span>&lt;<span class="xref">Vector2</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
   <h4 id="Kinstrife_MeshTools_MeshPaintHandler_renderers" data-uid="Kinstrife.MeshTools.MeshPaintHandler.renderers">renderers</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
@@ -138,6 +162,30 @@
     <tbody>
       <tr>
         <td><a class="xref" href="Kinstrife.Renderers.RendererComponents.html">RendererComponents</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="Kinstrife_MeshTools_MeshPaintHandler_setMaterialParam" data-uid="Kinstrife.MeshTools.MeshPaintHandler.setMaterialParam">setMaterialParam</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected BoolMaterialParam setMaterialParam</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Kinstrife.Renderers.BoolMaterialParam.html">BoolMaterialParam</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -224,8 +272,85 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected void ApplyToRenderers()</code></pre>
+    <pre><code class="lang-csharp hljs">protected virtual void ApplyToRenderers()</code></pre>
   </div>
+  
+  
+  <a id="Kinstrife_MeshTools_MeshPaintHandler_Create_" data-uid="Kinstrife.MeshTools.MeshPaintHandler.Create*"></a>
+  <h4 id="Kinstrife_MeshTools_MeshPaintHandler_Create_Mesh_NativeArray_Vector3___NativeArray_Vector2__System_Int32_Kinstrife_MeshTools_ColliderShape__Kinstrife_Renderers_MeshDefinition__System_Single_JobHandle_" data-uid="Kinstrife.MeshTools.MeshPaintHandler.Create(Mesh,NativeArray{Vector3}@,NativeArray{Vector2},System.Int32,Kinstrife.MeshTools.ColliderShape@,Kinstrife.Renderers.MeshDefinition@,System.Single,JobHandle)">Create(Mesh, in NativeArray&lt;Vector3&gt;, NativeArray&lt;Vector2&gt;, Int32, in ColliderShape, in MeshDefinition, Single, JobHandle)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected JobHandle Create(Mesh mesh, in NativeArray&lt;Vector3&gt; vertices, NativeArray&lt;Vector2&gt; buffer, int index, in ColliderShape shape, in MeshDefinition meshDefinition, float progressive, JobHandle inputDeps)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Mesh</span></td>
+        <td><span class="parametername">mesh</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">NativeArray</span>&lt;<span class="xref">Vector3</span>&gt;</td>
+        <td><span class="parametername">vertices</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">NativeArray</span>&lt;<span class="xref">Vector2</span>&gt;</td>
+        <td><span class="parametername">buffer</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">index</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Kinstrife.MeshTools.ColliderShape.html">ColliderShape</a></td>
+        <td><span class="parametername">shape</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Kinstrife.Renderers.MeshDefinition.html">MeshDefinition</a></td>
+        <td><span class="parametername">meshDefinition</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><span class="parametername">progressive</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">JobHandle</span></td>
+        <td><span class="parametername">inputDeps</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">JobHandle</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   
   
   <a id="Kinstrife_MeshTools_MeshPaintHandler_CreateCollision_" data-uid="Kinstrife.MeshTools.MeshPaintHandler.CreateCollision*"></a>
@@ -261,7 +386,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void Dispose()</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual void Dispose()</code></pre>
   </div>
   
   
@@ -284,6 +409,38 @@
     <tbody>
       <tr>
         <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<span class="xref">Transform</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Kinstrife_MeshTools_MeshPaintHandler_GetOrCreateBufferForRenderer_" data-uid="Kinstrife.MeshTools.MeshPaintHandler.GetOrCreateBufferForRenderer*"></a>
+  <h4 id="Kinstrife_MeshTools_MeshPaintHandler_GetOrCreateBufferForRenderer_Kinstrife_Renderers_RendererComponent_NativeArray_Vector2___" data-uid="Kinstrife.MeshTools.MeshPaintHandler.GetOrCreateBufferForRenderer(Kinstrife.Renderers.RendererComponent,NativeArray{Vector2}@)">GetOrCreateBufferForRenderer(RendererComponent, out NativeArray&lt;Vector2&gt;)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected void GetOrCreateBufferForRenderer(RendererComponent el, out NativeArray&lt;Vector2&gt; buffer)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Kinstrife.Renderers.RendererComponent.html">RendererComponent</a></td>
+        <td><span class="parametername">el</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">NativeArray</span>&lt;<span class="xref">Vector2</span>&gt;</td>
+        <td><span class="parametername">buffer</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -338,7 +495,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void Process(int index, float progressive = -1F)</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual void Process(int index, float progressive = -1F)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">

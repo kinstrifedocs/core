@@ -96,9 +96,10 @@
     <div><a class="xref" href="Kinstrife.Procedures.IInstructionsAuthoring-2.html">IInstructionsAuthoring</a>&lt;TInstruction, TAuthoring&gt;</div>
     <div><a class="xref" href="Kinstrife.Core.DependencyInjection.IProvideDependents.html">IProvideDependents</a></div>
     <div><a class="xref" href="Kinstrife.Core.DependencyInjection.IDependent.html">IDependent</a></div>
-    <div><a class="xref" href="Kinstrife.Procedures.IUpdateable.html">IUpdateable</a></div>
     <div><a class="xref" href="Kinstrife.Procedures.IHasReferencedProcedures.html">IHasReferencedProcedures</a></div>
     <div><span class="xref">System.IDisposable</span></div>
+    <div><a class="xref" href="Kinstrife.Procedures.IPossibleUpdateable.html">IPossibleUpdateable</a></div>
+    <div><a class="xref" href="Kinstrife.Procedures.IUpdateable.html">IUpdateable</a></div>
   </div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
@@ -177,7 +178,7 @@
   <h5 id="Kinstrife_Procedures_ProcedureModule_2_syntax">Syntax</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">[Obsolete(&quot;Decide on Module, Handler, Runner, Component, BuildingBlock naming for optional additive components :). Elements that enable certain abilities and/or correspond to a Feature within the Procedure may be Modules, and other parts may be Component&quot;)]
-public abstract class ProcedureModule&lt;TInstruction, TAuthoring&gt; : ProcedureComponent, IProcedureComponent, IInstructions&lt;TInstruction&gt;, IInstructionsAuthoring&lt;TInstruction, TAuthoring&gt;, IProvideDependents, IDependent, IUpdateable, IHasReferencedProcedures, IDisposable where TInstruction : IInstruction where TAuthoring : IInstructionAuthoring&lt;TInstruction&gt;</code></pre>
+public abstract class ProcedureModule&lt;TInstruction, TAuthoring&gt; : ProcedureComponent, IProcedureComponent, IInstructions&lt;TInstruction&gt;, IInstructionsAuthoring&lt;TInstruction, TAuthoring&gt;, IProvideDependents, IDependent, IHasReferencedProcedures, IDisposable, IPossibleUpdateable, IUpdateable where TInstruction : IInstruction where TAuthoring : IInstructionAuthoring&lt;TInstruction&gt;</code></pre>
   </div>
   <h5 class="typeParameters">Type Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -500,6 +501,31 @@ public abstract class ProcedureModule&lt;TInstruction, TAuthoring&gt; : Procedur
   </table>
   
   
+  <a id="Kinstrife_Procedures_ProcedureModule_2_HasUpdateables_" data-uid="Kinstrife.Procedures.ProcedureModule`2.HasUpdateables*"></a>
+  <h4 id="Kinstrife_Procedures_ProcedureModule_2_HasUpdateables" data-uid="Kinstrife.Procedures.ProcedureModule`2.HasUpdateables">HasUpdateables()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual bool HasUpdateables()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
   <a id="Kinstrife_Procedures_ProcedureModule_2_InitializeInstruction_" data-uid="Kinstrife.Procedures.ProcedureModule`2.InitializeInstruction*"></a>
   <h4 id="Kinstrife_Procedures_ProcedureModule_2_InitializeInstruction__0_" data-uid="Kinstrife.Procedures.ProcedureModule`2.InitializeInstruction(`0)">InitializeInstruction(TInstruction)</h4>
   <div class="markdown level1 summary"></div>
@@ -743,13 +769,16 @@ public abstract class ProcedureModule&lt;TInstruction, TAuthoring&gt; : Procedur
       <a class="xref" href="Kinstrife.Core.DependencyInjection.IDependent.html">IDependent</a>
   </div>
   <div>
-      <a class="xref" href="Kinstrife.Procedures.IUpdateable.html">IUpdateable</a>
-  </div>
-  <div>
       <a class="xref" href="Kinstrife.Procedures.IHasReferencedProcedures.html">IHasReferencedProcedures</a>
   </div>
   <div>
       <span class="xref">System.IDisposable</span>
+  </div>
+  <div>
+      <a class="xref" href="Kinstrife.Procedures.IPossibleUpdateable.html">IPossibleUpdateable</a>
+  </div>
+  <div>
+      <a class="xref" href="Kinstrife.Procedures.IUpdateable.html">IUpdateable</a>
   </div>
 </article>
           </div>

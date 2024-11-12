@@ -82,6 +82,11 @@
     <div class="level2"><a class="xref" href="Kinstrife.Systems.TickingSystem.html">TickingSystem</a></div>
     <div class="level3"><span class="xref">TickingSystemLOD</span></div>
   </div>
+  <div class="implements">
+    <h5>Implements</h5>
+    <div><a class="xref" href="Kinstrife.Systems.IJobSystem-1.html">IJobSystem</a>&lt;<span class="xref">EarlyUpdate</span>&gt;</div>
+    <div><a class="xref" href="Kinstrife.Systems.IJobSystem.html">IJobSystem</a></div>
+  </div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
     <div>
@@ -115,6 +120,12 @@
       <a class="xref" href="Kinstrife.Systems.SystemBase.html#Kinstrife_Systems_SystemBase_JobTiming">SystemBase.JobTiming</a>
     </div>
     <div>
+      <a class="xref" href="Kinstrife.Systems.SystemBase.html#Kinstrife_Systems_SystemBase_systemTiming">SystemBase.systemTiming</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.Systems.SystemBase.html#Kinstrife_Systems_SystemBase_SystemTiming">SystemBase.SystemTiming</a>
+    </div>
+    <div>
       <a class="xref" href="Kinstrife.Systems.SystemBase.html#Kinstrife_Systems_SystemBase_SystemsManager">SystemBase.SystemsManager</a>
     </div>
     <div>
@@ -132,30 +143,12 @@
     <div>
       <a class="xref" href="Kinstrife.Systems.SystemBase.html#Kinstrife_Systems_SystemBase_OnUpdate_Kinstrife_Systems_SystemState__">SystemBase.OnUpdate(SystemState)</a>
     </div>
-    <div>
-      <a class="xref" href="Kinstrife.Systems.SystemBase.html#Kinstrife_Systems_SystemBase_OnAfterEarlyUpdate_Kinstrife_Systems_SystemState__">SystemBase.OnAfterEarlyUpdate(SystemState)</a>
-    </div>
-    <div>
-      <a class="xref" href="Kinstrife.Systems.SystemBase.html#Kinstrife_Systems_SystemBase_OnBeforeFixedUpdate_Kinstrife_Systems_SystemState__">SystemBase.OnBeforeFixedUpdate(SystemState)</a>
-    </div>
-    <div>
-      <a class="xref" href="Kinstrife.Systems.SystemBase.html#Kinstrife_Systems_SystemBase_OnAfterFixedUpdate_Kinstrife_Systems_SystemState__">SystemBase.OnAfterFixedUpdate(SystemState)</a>
-    </div>
-    <div>
-      <a class="xref" href="Kinstrife.Systems.SystemBase.html#Kinstrife_Systems_SystemBase_OnFixedUpdate_Kinstrife_Systems_SystemState__">SystemBase.OnFixedUpdate(SystemState)</a>
-    </div>
-    <div>
-      <a class="xref" href="Kinstrife.Systems.SystemBase.html#Kinstrife_Systems_SystemBase_OnBeforeUpdate_Kinstrife_Systems_SystemState__">SystemBase.OnBeforeUpdate(SystemState)</a>
-    </div>
-    <div>
-      <a class="xref" href="Kinstrife.Systems.SystemBase.html#Kinstrife_Systems_SystemBase_OnAfterUpdate_Kinstrife_Systems_SystemState__">SystemBase.OnAfterUpdate(SystemState)</a>
-    </div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Kinstrife.Systems.html">Kinstrife.Systems</a></h6>
   <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
   <h5 id="Kinstrife_Systems_TickingSystemLOD_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class TickingSystemLOD : TickingSystem</code></pre>
+    <pre><code class="lang-csharp hljs">public class TickingSystemLOD : TickingSystem, IJobSystem&lt;EarlyUpdate&gt;, IJobSystem</code></pre>
   </div>
   <h3 id="fields">Fields
   </h3>
@@ -338,6 +331,94 @@
       </tr>
     </tbody>
   </table>
+  
+  
+  <a id="Kinstrife_Systems_TickingSystemLOD_SetLODBiasFromQualitySetting_" data-uid="Kinstrife.Systems.TickingSystemLOD.SetLODBiasFromQualitySetting*"></a>
+  <h4 id="Kinstrife_Systems_TickingSystemLOD_SetLODBiasFromQualitySetting_System_Int32_" data-uid="Kinstrife.Systems.TickingSystemLOD.SetLODBiasFromQualitySetting(System.Int32)">SetLODBiasFromQualitySetting(Int32)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetLODBiasFromQualitySetting(int bias)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">bias</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="eii">Explicit Interface Implementations
+  </h3>
+  
+  
+  <a id="Kinstrife_Systems_TickingSystemLOD_Kinstrife_Systems_IJobSystem_EarlyUpdate__OnUpdate_" data-uid="Kinstrife.Systems.TickingSystemLOD.Kinstrife#Systems#IJobSystem{EarlyUpdate}#OnUpdate*"></a>
+  <h4 id="Kinstrife_Systems_TickingSystemLOD_Kinstrife_Systems_IJobSystem_EarlyUpdate__OnUpdate_Kinstrife_Systems_SystemState__" data-uid="Kinstrife.Systems.TickingSystemLOD.Kinstrife#Systems#IJobSystem{EarlyUpdate}#OnUpdate(Kinstrife.Systems.SystemState@)">IJobSystem&lt;EarlyUpdate&gt;.OnUpdate(ref SystemState)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void IJobSystem&lt;EarlyUpdate&gt;.OnUpdate(ref SystemState systemState)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Kinstrife.Systems.SystemState.html">SystemState</a></td>
+        <td><span class="parametername">systemState</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Kinstrife_Systems_TickingSystemLOD_Kinstrife_Systems_IJobSystem_EarlyUpdate__Timing_" data-uid="Kinstrife.Systems.TickingSystemLOD.Kinstrife#Systems#IJobSystem{EarlyUpdate}#Timing*"></a>
+  <h4 id="Kinstrife_Systems_TickingSystemLOD_Kinstrife_Systems_IJobSystem_EarlyUpdate__Timing" data-uid="Kinstrife.Systems.TickingSystemLOD.Kinstrife#Systems#IJobSystem{EarlyUpdate}#Timing">IJobSystem&lt;EarlyUpdate&gt;.Timing</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Timing IJobSystem&lt;EarlyUpdate&gt;.Timing { get; }</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Kinstrife.Systems.Timing.html">Timing</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <a class="xref" href="Kinstrife.Systems.IJobSystem-1.html">IJobSystem&lt;TPlayerloopTiming&gt;</a>
+  </div>
+  <div>
+      <a class="xref" href="Kinstrife.Systems.IJobSystem.html">IJobSystem</a>
+  </div>
 </article>
           </div>
           

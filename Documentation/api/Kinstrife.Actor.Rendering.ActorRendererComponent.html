@@ -91,7 +91,13 @@
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
     <div>
+      <a class="xref" href="Kinstrife.Renderers.RendererComponent.html#Kinstrife_Renderers_RendererComponent_root">RendererComponent.root</a>
+    </div>
+    <div>
       <a class="xref" href="Kinstrife.Renderers.RendererComponent.html#Kinstrife_Renderers_RendererComponent_HasRoot">RendererComponent.HasRoot</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.Renderers.RendererComponent.html#Kinstrife_Renderers_RendererComponent_children">RendererComponent.children</a>
     </div>
     <div>
       <a class="xref" href="Kinstrife.Renderers.RendererComponent.html#Kinstrife_Renderers_RendererComponent_renderer">RendererComponent.renderer</a>
@@ -110,6 +116,9 @@
     </div>
     <div>
       <a class="xref" href="Kinstrife.Renderers.RendererComponent.html#Kinstrife_Renderers_RendererComponent_meshDefinition">RendererComponent.meshDefinition</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.Renderers.RendererComponent.html#Kinstrife_Renderers_RendererComponent_LOD">RendererComponent.LOD</a>
     </div>
     <div>
       <a class="xref" href="Kinstrife.Renderers.RendererComponent.html#Kinstrife_Renderers_RendererComponent_LevelOfDetail">RendererComponent.LevelOfDetail</a>
@@ -151,10 +160,7 @@
       <a class="xref" href="Kinstrife.Renderers.RendererComponent.html#Kinstrife_Renderers_RendererComponent_onRemoveFromRenderers">RendererComponent.onRemoveFromRenderers</a>
     </div>
     <div>
-      <a class="xref" href="Kinstrife.Renderers.RendererComponent.html#Kinstrife_Renderers_RendererComponent_InstantiateMaterial">RendererComponent.InstantiateMaterial()</a>
-    </div>
-    <div>
-      <a class="xref" href="Kinstrife.Renderers.RendererComponent.html#Kinstrife_Renderers_RendererComponent_RefreshProperties">RendererComponent.RefreshProperties()</a>
+      <a class="xref" href="Kinstrife.Renderers.RendererComponent.html#Kinstrife_Renderers_RendererComponent_CacheReferences">RendererComponent.CacheReferences()</a>
     </div>
     <div>
       <a class="xref" href="Kinstrife.Renderers.RendererComponent.html#Kinstrife_Renderers_RendererComponent_Refresh">RendererComponent.Refresh()</a>
@@ -167,6 +173,9 @@
     </div>
     <div>
       <a class="xref" href="Kinstrife.Renderers.RendererComponent.html#Kinstrife_Renderers_RendererComponent_IsMeshInstance">RendererComponent.IsMeshInstance()</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.Renderers.RendererComponent.html#Kinstrife_Renderers_RendererComponent_RefreshBoneNames">RendererComponent.RefreshBoneNames()</a>
     </div>
     <div>
       <a class="xref" href="Kinstrife.Renderers.RendererComponent.html#Kinstrife_Renderers_RendererComponent_ApplyMaterialParametersInstance_Kinstrife_Renderers_IMaterialParameterInstance_">RendererComponent.ApplyMaterialParametersInstance(IMaterialParameterInstance)</a>
@@ -226,7 +235,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public HumanRenderersLayer Layer { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public HumanRenderersLayer Layer { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -268,17 +277,19 @@
       </tr>
     </tbody>
   </table>
+  <h3 id="methods">Methods
+  </h3>
   
   
-  <a id="Kinstrife_Actor_Rendering_ActorRendererComponent_root_" data-uid="Kinstrife.Actor.Rendering.ActorRendererComponent.root*"></a>
-  <h4 id="Kinstrife_Actor_Rendering_ActorRendererComponent_root" data-uid="Kinstrife.Actor.Rendering.ActorRendererComponent.root">root</h4>
+  <a id="Kinstrife_Actor_Rendering_ActorRendererComponent_GetRoot_" data-uid="Kinstrife.Actor.Rendering.ActorRendererComponent.GetRoot*"></a>
+  <h4 id="Kinstrife_Actor_Rendering_ActorRendererComponent_GetRoot" data-uid="Kinstrife.Actor.Rendering.ActorRendererComponent.GetRoot">GetRoot()</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public ActorRenderers root { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public ActorRenderers GetRoot()</code></pre>
   </div>
-  <h5 class="propertyValue">Property Value</h5>
+  <h5 class="returns">Returns</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
       <tr>
@@ -293,20 +304,6 @@
       </tr>
     </tbody>
   </table>
-  <h3 id="methods">Methods
-  </h3>
-  
-  
-  <a id="Kinstrife_Actor_Rendering_ActorRendererComponent_CacheReferences_" data-uid="Kinstrife.Actor.Rendering.ActorRendererComponent.CacheReferences*"></a>
-  <h4 id="Kinstrife_Actor_Rendering_ActorRendererComponent_CacheReferences" data-uid="Kinstrife.Actor.Rendering.ActorRendererComponent.CacheReferences">CacheReferences()</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public override void CacheReferences()</code></pre>
-  </div>
-  <h5 class="overrides">Overrides</h5>
-  <div><a class="xref" href="Kinstrife.Renderers.RendererComponent.html#Kinstrife_Renderers_RendererComponent_CacheReferences">RendererComponent.CacheReferences()</a></div>
   
   
   <a id="Kinstrife_Actor_Rendering_ActorRendererComponent_TransferMesh_" data-uid="Kinstrife.Actor.Rendering.ActorRendererComponent.TransferMesh*"></a>
@@ -315,10 +312,18 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public override void TransferMesh()</code></pre>
+    <pre><code class="lang-csharp hljs">public void TransferMesh()</code></pre>
   </div>
-  <h5 class="overrides">Overrides</h5>
-  <div><a class="xref" href="Kinstrife.Renderers.RendererComponent.html#Kinstrife_Renderers_RendererComponent_TransferMesh">RendererComponent.TransferMesh()</a></div>
+  
+  
+  <a id="Kinstrife_Actor_Rendering_ActorRendererComponent_UpdateBounds_" data-uid="Kinstrife.Actor.Rendering.ActorRendererComponent.UpdateBounds*"></a>
+  <h4 id="Kinstrife_Actor_Rendering_ActorRendererComponent_UpdateBounds" data-uid="Kinstrife.Actor.Rendering.ActorRendererComponent.UpdateBounds">UpdateBounds()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void UpdateBounds()</code></pre>
+  </div>
   <h3 id="implements">Implements</h3>
   <div>
       <a class="xref" href="Kinstrife.Core.DependencyInjection.ICacheReferences.html">ICacheReferences</a>

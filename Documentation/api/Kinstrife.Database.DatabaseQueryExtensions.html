@@ -114,8 +114,60 @@
   </h3>
   
   
+  <a id="Kinstrife_Database_DatabaseQueryExtensions_MatchEnumTags_" data-uid="Kinstrife.Database.DatabaseQueryExtensions.MatchEnumTags*"></a>
+  <h4 id="Kinstrife_Database_DatabaseQueryExtensions_MatchEnumTags_System_Int32_System_Int32_Kinstrife_Database_TagFilterMode_" data-uid="Kinstrife.Database.DatabaseQueryExtensions.MatchEnumTags(System.Int32,System.Int32,Kinstrife.Database.TagFilterMode)">MatchEnumTags(Int32, Int32, TagFilterMode)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool MatchEnumTags(int entry, int tags, TagFilterMode mode)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">entry</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">tags</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Kinstrife.Database.TagFilterMode.html">TagFilterMode</a></td>
+        <td><span class="parametername">mode</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
   <a id="Kinstrife_Database_DatabaseQueryExtensions_MatchTags_" data-uid="Kinstrife.Database.DatabaseQueryExtensions.MatchTags*"></a>
-  <h4 id="Kinstrife_Database_DatabaseQueryExtensions_MatchTags_Kinstrife_Identifier_ITagged_System_Collections_Generic_IReadOnlyList_Kinstrife_Identifier_ITag__Kinstrife_Database_TagFilterMode_" data-uid="Kinstrife.Database.DatabaseQueryExtensions.MatchTags(Kinstrife.Identifier.ITagged,System.Collections.Generic.IReadOnlyList{Kinstrife.Identifier.ITag},Kinstrife.Database.TagFilterMode)">MatchTags(ITagged, IReadOnlyList&lt;ITag&gt;, TagFilterMode)</h4>
+  <h4 id="Kinstrife_Database_DatabaseQueryExtensions_MatchTags_Kinstrife_Database_ITagged_System_Collections_Generic_IReadOnlyList_Kinstrife_Database_ITag__Kinstrife_Database_TagFilterMode_" data-uid="Kinstrife.Database.DatabaseQueryExtensions.MatchTags(Kinstrife.Database.ITagged,System.Collections.Generic.IReadOnlyList{Kinstrife.Database.ITag},Kinstrife.Database.TagFilterMode)">MatchTags(ITagged, IReadOnlyList&lt;ITag&gt;, TagFilterMode)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -133,12 +185,12 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="Kinstrife.Identifier.ITagged.html">ITagged</a></td>
+        <td><a class="xref" href="Kinstrife.Database.ITagged.html">ITagged</a></td>
         <td><span class="parametername">entry</span></td>
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">System.Collections.Generic.IReadOnlyList</span>&lt;<a class="xref" href="Kinstrife.Identifier.ITag.html">ITag</a>&gt;</td>
+        <td><span class="xref">System.Collections.Generic.IReadOnlyList</span>&lt;<a class="xref" href="Kinstrife.Database.ITag.html">ITag</a>&gt;</td>
         <td><span class="parametername">tags</span></td>
         <td></td>
       </tr>
@@ -228,14 +280,16 @@
   </table>
   
   
-  <a id="Kinstrife_Database_DatabaseQueryExtensions_SortBy_" data-uid="Kinstrife.Database.DatabaseQueryExtensions.SortBy*"></a>
-  <h4 id="Kinstrife_Database_DatabaseQueryExtensions_SortBy__1_System_Collections_Generic_IEnumerable___0__Kinstrife_Database_SortMode_System_Boolean_" data-uid="Kinstrife.Database.DatabaseQueryExtensions.SortBy``1(System.Collections.Generic.IEnumerable{``0},Kinstrife.Database.SortMode,System.Boolean)">SortBy&lt;T&gt;(IEnumerable&lt;T&gt;, SortMode, Boolean)</h4>
-  <div class="markdown level1 summary"></div>
+  <a id="Kinstrife_Database_DatabaseQueryExtensions_Unsafe_As_" data-uid="Kinstrife.Database.DatabaseQueryExtensions.Unsafe_As*"></a>
+  <h4 id="Kinstrife_Database_DatabaseQueryExtensions_Unsafe_As__1___0_" data-uid="Kinstrife.Database.DatabaseQueryExtensions.Unsafe_As``1(``0)">Unsafe_As&lt;TEnum&gt;(TEnum)</h4>
+  <div class="markdown level1 summary"><p>Fast way to cast enum to int
+<a href="https://stackoverflow.com/a/72838343/24928160">https://stackoverflow.com/a/72838343/24928160</a></p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static IEnumerable&lt;T&gt; SortBy&lt;T&gt;(this IEnumerable&lt;T&gt; entries, SortMode mode, bool ascending = false)
-    where T : ISortable</code></pre>
+    <pre><code class="lang-csharp hljs">public static int Unsafe_As&lt;TEnum&gt;(TEnum enumValue)
+    where TEnum : struct, Enum</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -248,18 +302,8 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;T&gt;</td>
-        <td><span class="parametername">entries</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="Kinstrife.Database.SortMode.html">SortMode</a></td>
-        <td><span class="parametername">mode</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><span class="xref">System.Boolean</span></td>
-        <td><span class="parametername">ascending</span></td>
+        <td><span class="xref">TEnum</span></td>
+        <td><span class="parametername">enumValue</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -274,7 +318,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;T&gt;</td>
+        <td><span class="xref">System.Int32</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -289,259 +333,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="parametername">T</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="Kinstrife_Database_DatabaseQueryExtensions_SortByPrimary_" data-uid="Kinstrife.Database.DatabaseQueryExtensions.SortByPrimary*"></a>
-  <h4 id="Kinstrife_Database_DatabaseQueryExtensions_SortByPrimary__1_System_Collections_Generic_IEnumerable___0__System_Boolean_" data-uid="Kinstrife.Database.DatabaseQueryExtensions.SortByPrimary``1(System.Collections.Generic.IEnumerable{``0},System.Boolean)">SortByPrimary&lt;T&gt;(IEnumerable&lt;T&gt;, Boolean)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static IEnumerable&lt;T&gt; SortByPrimary&lt;T&gt;(this IEnumerable&lt;T&gt; entries, bool ascending = false)
-    where T : IPrimarySortable</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;T&gt;</td>
-        <td><span class="parametername">entries</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><span class="xref">System.Boolean</span></td>
-        <td><span class="parametername">ascending</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;T&gt;</td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="typeParameters">Type Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="parametername">T</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="Kinstrife_Database_DatabaseQueryExtensions_SortByPrimaryThenSecondary_" data-uid="Kinstrife.Database.DatabaseQueryExtensions.SortByPrimaryThenSecondary*"></a>
-  <h4 id="Kinstrife_Database_DatabaseQueryExtensions_SortByPrimaryThenSecondary__1_System_Collections_Generic_IEnumerable___0__System_Boolean_" data-uid="Kinstrife.Database.DatabaseQueryExtensions.SortByPrimaryThenSecondary``1(System.Collections.Generic.IEnumerable{``0},System.Boolean)">SortByPrimaryThenSecondary&lt;T&gt;(IEnumerable&lt;T&gt;, Boolean)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static IEnumerable&lt;T&gt; SortByPrimaryThenSecondary&lt;T&gt;(this IEnumerable&lt;T&gt; entries, bool ascending = false)
-    where T : ISortable</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;T&gt;</td>
-        <td><span class="parametername">entries</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><span class="xref">System.Boolean</span></td>
-        <td><span class="parametername">ascending</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;T&gt;</td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="typeParameters">Type Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="parametername">T</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="Kinstrife_Database_DatabaseQueryExtensions_SortBySecondary_" data-uid="Kinstrife.Database.DatabaseQueryExtensions.SortBySecondary*"></a>
-  <h4 id="Kinstrife_Database_DatabaseQueryExtensions_SortBySecondary__1_System_Collections_Generic_IEnumerable___0__System_Boolean_" data-uid="Kinstrife.Database.DatabaseQueryExtensions.SortBySecondary``1(System.Collections.Generic.IEnumerable{``0},System.Boolean)">SortBySecondary&lt;T&gt;(IEnumerable&lt;T&gt;, Boolean)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static IEnumerable&lt;T&gt; SortBySecondary&lt;T&gt;(this IEnumerable&lt;T&gt; entries, bool ascending = false)
-    where T : ISecondarySortable</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;T&gt;</td>
-        <td><span class="parametername">entries</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><span class="xref">System.Boolean</span></td>
-        <td><span class="parametername">ascending</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;T&gt;</td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="typeParameters">Type Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="parametername">T</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="Kinstrife_Database_DatabaseQueryExtensions_SortBySecondaryThenPrimary_" data-uid="Kinstrife.Database.DatabaseQueryExtensions.SortBySecondaryThenPrimary*"></a>
-  <h4 id="Kinstrife_Database_DatabaseQueryExtensions_SortBySecondaryThenPrimary__1_System_Collections_Generic_IEnumerable___0__System_Boolean_" data-uid="Kinstrife.Database.DatabaseQueryExtensions.SortBySecondaryThenPrimary``1(System.Collections.Generic.IEnumerable{``0},System.Boolean)">SortBySecondaryThenPrimary&lt;T&gt;(IEnumerable&lt;T&gt;, Boolean)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static IEnumerable&lt;T&gt; SortBySecondaryThenPrimary&lt;T&gt;(this IEnumerable&lt;T&gt; entries, bool ascending = false)
-    where T : ISortable</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;T&gt;</td>
-        <td><span class="parametername">entries</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><span class="xref">System.Boolean</span></td>
-        <td><span class="parametername">ascending</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;T&gt;</td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="typeParameters">Type Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="parametername">T</span></td>
+        <td><span class="parametername">TEnum</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -549,7 +341,7 @@
   
   
   <a id="Kinstrife_Database_DatabaseQueryExtensions_WithCategory_" data-uid="Kinstrife.Database.DatabaseQueryExtensions.WithCategory*"></a>
-  <h4 id="Kinstrife_Database_DatabaseQueryExtensions_WithCategory__1_System_Collections_Generic_IEnumerable___0__Kinstrife_Identifier_ICategory_" data-uid="Kinstrife.Database.DatabaseQueryExtensions.WithCategory``1(System.Collections.Generic.IEnumerable{``0},Kinstrife.Identifier.ICategory)">WithCategory&lt;T&gt;(IEnumerable&lt;T&gt;, ICategory)</h4>
+  <h4 id="Kinstrife_Database_DatabaseQueryExtensions_WithCategory__1_System_Collections_Generic_IEnumerable___0__Kinstrife_Database_ICategory_" data-uid="Kinstrife.Database.DatabaseQueryExtensions.WithCategory``1(System.Collections.Generic.IEnumerable{``0},Kinstrife.Database.ICategory)">WithCategory&lt;T&gt;(IEnumerable&lt;T&gt;, ICategory)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -573,7 +365,7 @@
         <td></td>
       </tr>
       <tr>
-        <td><a class="xref" href="Kinstrife.Identifier.ICategory.html">ICategory</a></td>
+        <td><a class="xref" href="Kinstrife.Database.ICategory.html">ICategory</a></td>
         <td><span class="parametername">category</span></td>
         <td></td>
       </tr>
@@ -611,8 +403,80 @@
   </table>
   
   
+  <a id="Kinstrife_Database_DatabaseQueryExtensions_WithEnumTagFilter_" data-uid="Kinstrife.Database.DatabaseQueryExtensions.WithEnumTagFilter*"></a>
+  <h4 id="Kinstrife_Database_DatabaseQueryExtensions_WithEnumTagFilter__2_System_Collections_Generic_IEnumerable___0____1_Kinstrife_Database_TagFilterMode_" data-uid="Kinstrife.Database.DatabaseQueryExtensions.WithEnumTagFilter``2(System.Collections.Generic.IEnumerable{``0},``1,Kinstrife.Database.TagFilterMode)">WithEnumTagFilter&lt;T, U&gt;(IEnumerable&lt;T&gt;, U, TagFilterMode)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IEnumerable&lt;T&gt; WithEnumTagFilter&lt;T, U&gt;(this IEnumerable&lt;T&gt; entries, U tags, TagFilterMode mode)
+    where T : ITagged&lt;U&gt; where U : struct, Enum</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;T&gt;</td>
+        <td><span class="parametername">entries</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">U</span></td>
+        <td><span class="parametername">tags</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Kinstrife.Database.TagFilterMode.html">TagFilterMode</a></td>
+        <td><span class="parametername">mode</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;T&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="parametername">U</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
   <a id="Kinstrife_Database_DatabaseQueryExtensions_WithTagFilter_" data-uid="Kinstrife.Database.DatabaseQueryExtensions.WithTagFilter*"></a>
-  <h4 id="Kinstrife_Database_DatabaseQueryExtensions_WithTagFilter__1_System_Collections_Generic_IEnumerable___0__System_Collections_Generic_IReadOnlyList_Kinstrife_Identifier_ITag__Kinstrife_Database_TagFilterMode_" data-uid="Kinstrife.Database.DatabaseQueryExtensions.WithTagFilter``1(System.Collections.Generic.IEnumerable{``0},System.Collections.Generic.IReadOnlyList{Kinstrife.Identifier.ITag},Kinstrife.Database.TagFilterMode)">WithTagFilter&lt;T&gt;(IEnumerable&lt;T&gt;, IReadOnlyList&lt;ITag&gt;, TagFilterMode)</h4>
+  <h4 id="Kinstrife_Database_DatabaseQueryExtensions_WithTagFilter__1_System_Collections_Generic_IEnumerable___0__System_Collections_Generic_IReadOnlyList_Kinstrife_Database_ITag__Kinstrife_Database_TagFilterMode_" data-uid="Kinstrife.Database.DatabaseQueryExtensions.WithTagFilter``1(System.Collections.Generic.IEnumerable{``0},System.Collections.Generic.IReadOnlyList{Kinstrife.Database.ITag},Kinstrife.Database.TagFilterMode)">WithTagFilter&lt;T&gt;(IEnumerable&lt;T&gt;, IReadOnlyList&lt;ITag&gt;, TagFilterMode)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -636,7 +500,7 @@
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">System.Collections.Generic.IReadOnlyList</span>&lt;<a class="xref" href="Kinstrife.Identifier.ITag.html">ITag</a>&gt;</td>
+        <td><span class="xref">System.Collections.Generic.IReadOnlyList</span>&lt;<a class="xref" href="Kinstrife.Database.ITag.html">ITag</a>&gt;</td>
         <td><span class="parametername">tags</span></td>
         <td></td>
       </tr>

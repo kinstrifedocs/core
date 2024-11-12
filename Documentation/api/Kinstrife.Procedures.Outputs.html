@@ -90,9 +90,10 @@
     <div><a class="xref" href="Kinstrife.Procedures.IInstructionsAuthoring-2.html">IInstructionsAuthoring</a>&lt;<a class="xref" href="Kinstrife.Procedures.IOutputInstruction.html">IOutputInstruction</a>, <a class="xref" href="Kinstrife.Procedures.IOutputAuthoring.html">IOutputAuthoring</a>&gt;</div>
     <div><a class="xref" href="Kinstrife.Core.DependencyInjection.IProvideDependents.html">IProvideDependents</a></div>
     <div><a class="xref" href="Kinstrife.Core.DependencyInjection.IDependent.html">IDependent</a></div>
-    <div><a class="xref" href="Kinstrife.Procedures.IUpdateable.html">IUpdateable</a></div>
     <div><a class="xref" href="Kinstrife.Procedures.IHasReferencedProcedures.html">IHasReferencedProcedures</a></div>
     <div><span class="xref">System.IDisposable</span></div>
+    <div><a class="xref" href="Kinstrife.Procedures.IPossibleUpdateable.html">IPossibleUpdateable</a></div>
+    <div><a class="xref" href="Kinstrife.Procedures.IUpdateable.html">IUpdateable</a></div>
   </div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
@@ -158,6 +159,9 @@
     </div>
     <div>
       <a class="xref" href="Kinstrife.Procedures.ProcedureModule-2.html#Kinstrife_Procedures_ProcedureModule_2_ShouldUpdate">ProcedureModule&lt;IOutputInstruction, IOutputAuthoring&gt;.ShouldUpdate</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.Procedures.ProcedureModule-2.html#Kinstrife_Procedures_ProcedureModule_2_HasUpdateables">ProcedureModule&lt;IOutputInstruction, IOutputAuthoring&gt;.HasUpdateables()</a>
     </div>
     <div>
       <a class="xref" href="Kinstrife.Procedures.ProcedureModule-2.html#Kinstrife_Procedures_ProcedureModule_2_OnUpdate_System_Single_">ProcedureModule&lt;IOutputInstruction, IOutputAuthoring&gt;.OnUpdate(Single)</a>
@@ -257,7 +261,7 @@
   <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
   <h5 id="Kinstrife_Procedures_Outputs_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class Outputs : ProcedureModule&lt;IOutputInstruction, IOutputAuthoring&gt;, IProcedureComponent, IInstructions&lt;IOutputInstruction&gt;, IInstructionsAuthoring&lt;IOutputInstruction, IOutputAuthoring&gt;, IProvideDependents, IDependent, IUpdateable, IHasReferencedProcedures, IDisposable</code></pre>
+    <pre><code class="lang-csharp hljs">public class Outputs : ProcedureModule&lt;IOutputInstruction, IOutputAuthoring&gt;, IProcedureComponent, IInstructions&lt;IOutputInstruction&gt;, IInstructionsAuthoring&lt;IOutputInstruction, IOutputAuthoring&gt;, IProvideDependents, IDependent, IHasReferencedProcedures, IDisposable, IPossibleUpdateable, IUpdateable</code></pre>
   </div>
   <h3 id="methods">Methods
   </h3>
@@ -336,13 +340,16 @@
       <a class="xref" href="Kinstrife.Core.DependencyInjection.IDependent.html">IDependent</a>
   </div>
   <div>
-      <a class="xref" href="Kinstrife.Procedures.IUpdateable.html">IUpdateable</a>
-  </div>
-  <div>
       <a class="xref" href="Kinstrife.Procedures.IHasReferencedProcedures.html">IHasReferencedProcedures</a>
   </div>
   <div>
       <span class="xref">System.IDisposable</span>
+  </div>
+  <div>
+      <a class="xref" href="Kinstrife.Procedures.IPossibleUpdateable.html">IPossibleUpdateable</a>
+  </div>
+  <div>
+      <a class="xref" href="Kinstrife.Procedures.IUpdateable.html">IUpdateable</a>
   </div>
 </article>
           </div>

@@ -79,6 +79,7 @@
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
     <div class="level1"><span class="xref">SystemBase</span></div>
+      <div class="level2"><a class="xref" href="Kinstrife.Actor.ActorTickingSystem.html">ActorTickingSystem</a></div>
       <div class="level2"><a class="xref" href="Kinstrife.Animation.AnimationTickingSystem.html">AnimationTickingSystem</a></div>
       <div class="level2"><a class="xref" href="Kinstrife.Culling.LODCallbacksSystem.html">LODCallbacksSystem</a></div>
       <div class="level2"><a class="xref" href="Kinstrife.Systems.JobSystem-1.html">JobSystem&lt;TDataType&gt;</a></div>
@@ -114,6 +115,30 @@
     <tbody>
       <tr>
         <td><a class="xref" href="Kinstrife.Systems.JobTiming.html">JobTiming</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="Kinstrife_Systems_SystemBase_systemTiming" data-uid="Kinstrife.Systems.SystemBase.systemTiming">systemTiming</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected PlayerloopTiming2 systemTiming</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Kinstrife.Systems.PlayerloopTiming2.html">PlayerloopTiming2</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -195,6 +220,31 @@
       </tr>
     </tbody>
   </table>
+  
+  
+  <a id="Kinstrife_Systems_SystemBase_SystemTiming_" data-uid="Kinstrife.Systems.SystemBase.SystemTiming*"></a>
+  <h4 id="Kinstrife_Systems_SystemBase_SystemTiming" data-uid="Kinstrife.Systems.SystemBase.SystemTiming">SystemTiming</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public PlayerloopTiming2 SystemTiming { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Kinstrife.Systems.PlayerloopTiming2.html">PlayerloopTiming2</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   <h3 id="methods">Methods
   </h3>
   
@@ -207,141 +257,6 @@
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">protected virtual void Awake()</code></pre>
   </div>
-  
-  
-  <a id="Kinstrife_Systems_SystemBase_OnAfterEarlyUpdate_" data-uid="Kinstrife.Systems.SystemBase.OnAfterEarlyUpdate*"></a>
-  <h4 id="Kinstrife_Systems_SystemBase_OnAfterEarlyUpdate_Kinstrife_Systems_SystemState__" data-uid="Kinstrife.Systems.SystemBase.OnAfterEarlyUpdate(Kinstrife.Systems.SystemState@)">OnAfterEarlyUpdate(ref SystemState)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual void OnAfterEarlyUpdate(ref SystemState systemState)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Kinstrife.Systems.SystemState.html">SystemState</a></td>
-        <td><span class="parametername">systemState</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="Kinstrife_Systems_SystemBase_OnAfterFixedUpdate_" data-uid="Kinstrife.Systems.SystemBase.OnAfterFixedUpdate*"></a>
-  <h4 id="Kinstrife_Systems_SystemBase_OnAfterFixedUpdate_Kinstrife_Systems_SystemState__" data-uid="Kinstrife.Systems.SystemBase.OnAfterFixedUpdate(Kinstrife.Systems.SystemState@)">OnAfterFixedUpdate(ref SystemState)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual void OnAfterFixedUpdate(ref SystemState systemState)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Kinstrife.Systems.SystemState.html">SystemState</a></td>
-        <td><span class="parametername">systemState</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="Kinstrife_Systems_SystemBase_OnAfterUpdate_" data-uid="Kinstrife.Systems.SystemBase.OnAfterUpdate*"></a>
-  <h4 id="Kinstrife_Systems_SystemBase_OnAfterUpdate_Kinstrife_Systems_SystemState__" data-uid="Kinstrife.Systems.SystemBase.OnAfterUpdate(Kinstrife.Systems.SystemState@)">OnAfterUpdate(ref SystemState)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual void OnAfterUpdate(ref SystemState systemState)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Kinstrife.Systems.SystemState.html">SystemState</a></td>
-        <td><span class="parametername">systemState</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="Kinstrife_Systems_SystemBase_OnBeforeFixedUpdate_" data-uid="Kinstrife.Systems.SystemBase.OnBeforeFixedUpdate*"></a>
-  <h4 id="Kinstrife_Systems_SystemBase_OnBeforeFixedUpdate_Kinstrife_Systems_SystemState__" data-uid="Kinstrife.Systems.SystemBase.OnBeforeFixedUpdate(Kinstrife.Systems.SystemState@)">OnBeforeFixedUpdate(ref SystemState)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual void OnBeforeFixedUpdate(ref SystemState systemState)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Kinstrife.Systems.SystemState.html">SystemState</a></td>
-        <td><span class="parametername">systemState</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="Kinstrife_Systems_SystemBase_OnBeforeUpdate_" data-uid="Kinstrife.Systems.SystemBase.OnBeforeUpdate*"></a>
-  <h4 id="Kinstrife_Systems_SystemBase_OnBeforeUpdate_Kinstrife_Systems_SystemState__" data-uid="Kinstrife.Systems.SystemBase.OnBeforeUpdate(Kinstrife.Systems.SystemState@)">OnBeforeUpdate(ref SystemState)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual void OnBeforeUpdate(ref SystemState systemState)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Kinstrife.Systems.SystemState.html">SystemState</a></td>
-        <td><span class="parametername">systemState</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
   
   
   <a id="Kinstrife_Systems_SystemBase_OnDestroy_" data-uid="Kinstrife.Systems.SystemBase.OnDestroy*"></a>
@@ -372,33 +287,6 @@
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">protected virtual void OnEnable()</code></pre>
   </div>
-  
-  
-  <a id="Kinstrife_Systems_SystemBase_OnFixedUpdate_" data-uid="Kinstrife.Systems.SystemBase.OnFixedUpdate*"></a>
-  <h4 id="Kinstrife_Systems_SystemBase_OnFixedUpdate_Kinstrife_Systems_SystemState__" data-uid="Kinstrife.Systems.SystemBase.OnFixedUpdate(Kinstrife.Systems.SystemState@)">OnFixedUpdate(ref SystemState)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual void OnFixedUpdate(ref SystemState systemState)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Kinstrife.Systems.SystemState.html">SystemState</a></td>
-        <td><span class="parametername">systemState</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
   
   
   <a id="Kinstrife_Systems_SystemBase_OnReallocate_" data-uid="Kinstrife.Systems.SystemBase.OnReallocate*"></a>

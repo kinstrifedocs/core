@@ -73,6 +73,43 @@
 <p><code>&quot;com.kinstrife.core.art-pipeline&quot;: &quot;file:/GameDev/Core/Packages/ArtPipeline&quot;</code></p>
 </blockquote>
 <p>TODO</p>
+<hr>
+<h2 id="assetpostprocessor">AssetPostprocessor</h2>
+<p>This package contains a system with which you can author your own custom <a href="https://docs.unity3d.com/ScriptReference/AssetPostprocessor.html">asset postprocessors</a>, using import rules based on <a href="https://blog.innogames.com/building-a-custom-asset-pipeline-for-a-unity-project/">this blog post</a>.</p>
+<h3 id="quickstart">Quickstart</h3>
+<ol>
+<li>Browse to the folder or parent folder of the asset(s) you want to target</li>
+<li>Create a <code>PostProcessAsset</code> (<code>Create/Kinstrife/PostProcessAsset</code>)</li>
+<li>Target specific assets by configuring the file filter (name and/or file type)</li>
+<li>Select an existing, or create your own <code>IPostProcessStep</code> processor and add it to the asset</li>
+<li>Reimport the asset(s)</li>
+</ol>
+<hr>
+<h3 id="how-it-works">How it works</h3>
+<p>Instead of writing custom <code>UnityEditor.AssetPostProcessor</code> scripts and hard-coding filters and processors, you can author what import processing using <code>PostProcessAsset</code> ScriptableObjects, each containing a configurable <code>FileFilter</code>, and a list of <code>IPostprocessStep</code> containing the actual processing you want to do.</p>
+<h4 id="filtering">Filtering</h4>
+<p>Upon a file's (re-)import, all <code>PostprocessAssets</code> between a file's folder and its root directory (<code>Assets</code>/<code>Packages</code>) are gathered. Then, starting with the topmost assets, we filter the file's <code>assetPath</code> on name and file type.</p>
+<blockquote>
+<p>ℹ️ Filtering is inclusive, meaning that partial name matches and case-insensitive are considered a match. If a name or file type are empty, we skip the check and default to a match.</p>
+</blockquote>
+<h4 id="ipostprocessstep">IPostprocessStep</h4>
+<p>Currently the <code>OnPostProcessMeshHierarchy</code> and <code>OnPostProcessModel</code> callbacks are supported through implementing <code>IPostprocessMeshHierarchyStep</code> and <code>IPostprocessModelStep</code>.</p>
+<pre><code>public class MyCustomPostprocessStep : IPostprocessModel, IPostProcessMeshHierarchy
+{
+	// This method gets called during the corresponding native callback
+	public void OnPostprocessMeshHierarchy(GameObject root, KinstrifePostProcessors context)
+	{
+		// My custom processing here
+	}
+
+	// We can implement multiple callbacks into a single type
+	public void OnPostprocessModel(GameObject root, KinstrifePostProcessors context)
+	{
+		// Custom processing here, we can keep state from any previous callback
+	}
+}
+</code></pre>
+<hr>
 <h2 id="skinned-mesh-combiner">Skinned Mesh Combiner</h2>
 <p>TODO</p>
 </article>

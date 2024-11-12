@@ -82,115 +82,20 @@
   </div>
   <div class="implements">
     <h5>Implements</h5>
-    <div><a class="xref" href="Kinstrife.Systems.IEntity.html">IEntity</a></div>
-    <div><a class="xref" href="Kinstrife.ICustomUpdateable.html">ICustomUpdateable</a></div>
-    <div><a class="xref" href="Kinstrife.Core.DependencyInjection.ILateInitializable.html">ILateInitializable</a></div>
+    <div><a class="xref" href="Kinstrife.Core.DependencyInjection.ICacheReferences.html">ICacheReferences</a></div>
+    <div><a class="xref" href="Kinstrife.Core.DependencyInjection.ILODController.html">ILODController</a></div>
+    <div><a class="xref" href="Kinstrife.Core.DependencyInjection.IInstall-1.html">IInstall</a>&lt;<a class="xref" href="Kinstrife.Core.DependencyInjection.ILODController.html">ILODController</a>&gt;</div>
+    <div><a class="xref" href="Kinstrife.Core.DependencyInjection.IInstall.html">IInstall</a></div>
     <div><a class="xref" href="Kinstrife.Core.DependencyInjection.IDependent.html">IDependent</a></div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Kinstrife.Culling.html">Kinstrife.Culling</a></h6>
   <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
   <h5 id="Kinstrife_Culling_LODController_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public sealed class LODController : MonoBehaviour, IEntity, ICustomUpdateable, ILateInitializable, IDependent</code></pre>
+    <pre><code class="lang-csharp hljs">public sealed class LODController : MonoBehaviour, ICacheReferences, ILODController, IInstall&lt;ILODController&gt;, IInstall, IDependent</code></pre>
   </div>
   <h3 id="fields">Fields
   </h3>
-  
-  
-  <h4 id="Kinstrife_Culling_LODController_behavioursToDisable" data-uid="Kinstrife.Culling.LODController.behavioursToDisable">behavioursToDisable</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Behaviour[] behavioursToDisable</code></pre>
-  </div>
-  <h5 class="fieldValue">Field Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">Behaviour</span>[]</td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <h4 id="Kinstrife_Culling_LODController_disableGameObjects" data-uid="Kinstrife.Culling.LODController.disableGameObjects">disableGameObjects</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public GameObject[] disableGameObjects</code></pre>
-  </div>
-  <h5 class="fieldValue">Field Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">GameObject</span>[]</td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <h4 id="Kinstrife_Culling_LODController_distance" data-uid="Kinstrife.Culling.LODController.distance">distance</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public LODDistance distance</code></pre>
-  </div>
-  <h5 class="fieldValue">Field Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Kinstrife.Culling.LODDistance.html">LODDistance</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <h4 id="Kinstrife_Culling_LODController_log" data-uid="Kinstrife.Culling.LODController.log">log</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public bool log</code></pre>
-  </div>
-  <h5 class="fieldValue">Field Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Boolean</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
   
   
   <h4 id="Kinstrife_Culling_LODController_radius" data-uid="Kinstrife.Culling.LODController.radius">radius</h4>
@@ -215,65 +120,42 @@
       </tr>
     </tbody>
   </table>
-  
-  
-  <h4 id="Kinstrife_Culling_LODController_renderersToDisableSkinning" data-uid="Kinstrife.Culling.LODController.renderersToDisableSkinning">renderersToDisableSkinning</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public SkinnedMeshRenderer[] renderersToDisableSkinning</code></pre>
-  </div>
-  <h5 class="fieldValue">Field Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">SkinnedMeshRenderer</span>[]</td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <h4 id="Kinstrife_Culling_LODController_skinQuality" data-uid="Kinstrife.Culling.LODController.skinQuality">skinQuality</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public SkinQuality skinQuality</code></pre>
-  </div>
-  <h5 class="fieldValue">Field Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">SkinQuality</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
   <h3 id="properties">Properties
   </h3>
   
   
-  <a id="Kinstrife_Culling_LODController_ShouldUpdate_" data-uid="Kinstrife.Culling.LODController.ShouldUpdate*"></a>
-  <h4 id="Kinstrife_Culling_LODController_ShouldUpdate" data-uid="Kinstrife.Culling.LODController.ShouldUpdate">ShouldUpdate</h4>
+  <a id="Kinstrife_Culling_LODController_Distance_" data-uid="Kinstrife.Culling.LODController.Distance*"></a>
+  <h4 id="Kinstrife_Culling_LODController_Distance" data-uid="Kinstrife.Culling.LODController.Distance">Distance</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public bool ShouldUpdate { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public int Distance { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Kinstrife_Culling_LODController_IsVisible_" data-uid="Kinstrife.Culling.LODController.IsVisible*"></a>
+  <h4 id="Kinstrife_Culling_LODController_IsVisible" data-uid="Kinstrife.Culling.LODController.IsVisible">IsVisible</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsVisible { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -294,23 +176,13 @@
   </h3>
   
   
-  <a id="Kinstrife_Culling_LODController_LateInitialize_" data-uid="Kinstrife.Culling.LODController.LateInitialize*"></a>
-  <h4 id="Kinstrife_Culling_LODController_LateInitialize" data-uid="Kinstrife.Culling.LODController.LateInitialize">LateInitialize()</h4>
+  <a id="Kinstrife_Culling_LODController_AddBehaviour_" data-uid="Kinstrife.Culling.LODController.AddBehaviour*"></a>
+  <h4 id="Kinstrife_Culling_LODController_AddBehaviour_System_Int32_Behaviour_" data-uid="Kinstrife.Culling.LODController.AddBehaviour(System.Int32,Behaviour)">AddBehaviour(Int32, Behaviour)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void LateInitialize()</code></pre>
-  </div>
-  
-  
-  <a id="Kinstrife_Culling_LODController_OnUpdate_" data-uid="Kinstrife.Culling.LODController.OnUpdate*"></a>
-  <h4 id="Kinstrife_Culling_LODController_OnUpdate_System_Single_" data-uid="Kinstrife.Culling.LODController.OnUpdate(System.Single)">OnUpdate(Single)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void OnUpdate(float deltaTime)</code></pre>
+    <pre><code class="lang-csharp hljs">public void AddBehaviour(int distance, Behaviour b)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -323,21 +195,36 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Single</span></td>
-        <td><span class="parametername">deltaTime</span></td>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">distance</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">Behaviour</span></td>
+        <td><span class="parametername">b</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   
   
-  <a id="Kinstrife_Culling_LODController_SetActive_" data-uid="Kinstrife.Culling.LODController.SetActive*"></a>
-  <h4 id="Kinstrife_Culling_LODController_SetActive_System_Boolean_" data-uid="Kinstrife.Culling.LODController.SetActive(System.Boolean)">SetActive(Boolean)</h4>
+  <a id="Kinstrife_Culling_LODController_CacheReferences_" data-uid="Kinstrife.Culling.LODController.CacheReferences*"></a>
+  <h4 id="Kinstrife_Culling_LODController_CacheReferences" data-uid="Kinstrife.Culling.LODController.CacheReferences">CacheReferences()</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void SetActive(bool enabled)</code></pre>
+    <pre><code class="lang-csharp hljs">public void CacheReferences()</code></pre>
+  </div>
+  
+  
+  <a id="Kinstrife_Culling_LODController_GetComponentsAtLODDistance_" data-uid="Kinstrife.Culling.LODController.GetComponentsAtLODDistance*"></a>
+  <h4 id="Kinstrife_Culling_LODController_GetComponentsAtLODDistance_System_Int32_" data-uid="Kinstrife.Culling.LODController.GetComponentsAtLODDistance(System.Int32)">GetComponentsAtLODDistance(Int32)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ILODComponents GetComponentsAtLODDistance(int distance)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -350,8 +237,23 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Boolean</span></td>
-        <td><span class="parametername">enabled</span></td>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">distance</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Kinstrife.Core.DependencyInjection.ILODComponents.html">ILODComponents</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -359,12 +261,12 @@
   
   
   <a id="Kinstrife_Culling_LODController_StateChanged_" data-uid="Kinstrife.Culling.LODController.StateChanged*"></a>
-  <h4 id="Kinstrife_Culling_LODController_StateChanged_CullingGroupEvent__" data-uid="Kinstrife.Culling.LODController.StateChanged(CullingGroupEvent@)">StateChanged(in CullingGroupEvent)</h4>
+  <h4 id="Kinstrife_Culling_LODController_StateChanged_CullingGroupEvent_" data-uid="Kinstrife.Culling.LODController.StateChanged(CullingGroupEvent)">StateChanged(CullingGroupEvent)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void StateChanged(in CullingGroupEvent sphere)</code></pre>
+    <pre><code class="lang-csharp hljs">public void StateChanged(CullingGroupEvent evt)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -378,7 +280,7 @@
     <tbody>
       <tr>
         <td><span class="xref">CullingGroupEvent</span></td>
-        <td><span class="parametername">sphere</span></td>
+        <td><span class="parametername">evt</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -387,12 +289,12 @@
   </h3>
   
   
-  <h4 id="Kinstrife_Culling_LODController_onBecomeVisible" data-uid="Kinstrife.Culling.LODController.onBecomeVisible">onBecomeVisible</h4>
+  <h4 id="Kinstrife_Culling_LODController_OnBecomeVisible" data-uid="Kinstrife.Culling.LODController.OnBecomeVisible">OnBecomeVisible</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public event Action&lt;bool&gt; onBecomeVisible</code></pre>
+    <pre><code class="lang-csharp hljs">public event Action&lt;bool&gt; OnBecomeVisible</code></pre>
   </div>
   <h5 class="eventType">Event Type</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -411,12 +313,12 @@
   </table>
   
   
-  <h4 id="Kinstrife_Culling_LODController_onDisable" data-uid="Kinstrife.Culling.LODController.onDisable">onDisable</h4>
+  <h4 id="Kinstrife_Culling_LODController_OnStateChange" data-uid="Kinstrife.Culling.LODController.OnStateChange">OnStateChange</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public event Action onDisable</code></pre>
+    <pre><code class="lang-csharp hljs">public event LODEvent OnStateChange</code></pre>
   </div>
   <h5 class="eventType">Event Type</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -428,68 +330,23 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Action</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <h4 id="Kinstrife_Culling_LODController_onEnable" data-uid="Kinstrife.Culling.LODController.onEnable">onEnable</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public event Action onEnable</code></pre>
-  </div>
-  <h5 class="eventType">Event Type</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Action</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <h4 id="Kinstrife_Culling_LODController_onStateChange" data-uid="Kinstrife.Culling.LODController.onStateChange">onStateChange</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public event Action&lt;bool&gt; onStateChange</code></pre>
-  </div>
-  <h5 class="eventType">Event Type</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Action</span>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+        <td><a class="xref" href="Kinstrife.Core.DependencyInjection.LODEvent.html">LODEvent</a></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <h3 id="implements">Implements</h3>
   <div>
-      <a class="xref" href="Kinstrife.Systems.IEntity.html">IEntity</a>
+      <a class="xref" href="Kinstrife.Core.DependencyInjection.ICacheReferences.html">ICacheReferences</a>
   </div>
   <div>
-      <a class="xref" href="Kinstrife.ICustomUpdateable.html">ICustomUpdateable</a>
+      <a class="xref" href="Kinstrife.Core.DependencyInjection.ILODController.html">ILODController</a>
   </div>
   <div>
-      <a class="xref" href="Kinstrife.Core.DependencyInjection.ILateInitializable.html">ILateInitializable</a>
+      <a class="xref" href="Kinstrife.Core.DependencyInjection.IInstall-1.html">IInstall&lt;T&gt;</a>
+  </div>
+  <div>
+      <a class="xref" href="Kinstrife.Core.DependencyInjection.IInstall.html">IInstall</a>
   </div>
   <div>
       <a class="xref" href="Kinstrife.Core.DependencyInjection.IDependent.html">IDependent</a>
