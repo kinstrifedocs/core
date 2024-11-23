@@ -353,33 +353,6 @@
   <div><a class="xref" href="Kinstrife.SpatialHandles.Shape.html#Kinstrife_SpatialHandles_Shape_Contains_Vector3_">Shape.Contains(Vector3)</a></div>
   
   
-  <a id="Kinstrife_SpatialHandles_LevelBounds_CustomDrawingAction_" data-uid="Kinstrife.SpatialHandles.LevelBounds.CustomDrawingAction*"></a>
-  <h4 id="Kinstrife_SpatialHandles_LevelBounds_CustomDrawingAction_Kinstrife_Gizmos_Gizmo_" data-uid="Kinstrife.SpatialHandles.LevelBounds.CustomDrawingAction(Kinstrife.Gizmos.Gizmo)">CustomDrawingAction(Gizmo)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void CustomDrawingAction(Gizmo gizmo)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Kinstrife.Gizmos.Gizmo.html">Gizmo</a></td>
-        <td><span class="parametername">gizmo</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
   <a id="Kinstrife_SpatialHandles_LevelBounds_Dirty_" data-uid="Kinstrife.SpatialHandles.LevelBounds.Dirty*"></a>
   <h4 id="Kinstrife_SpatialHandles_LevelBounds_Dirty" data-uid="Kinstrife.SpatialHandles.LevelBounds.Dirty">Dirty()</h4>
   <div class="markdown level1 summary"></div>
@@ -440,33 +413,6 @@
   </table>
   <h5 class="overrides">Overrides</h5>
   <div><a class="xref" href="Kinstrife.SpatialHandles.Shape.html#Kinstrife_SpatialHandles_Shape_GetRandomPosition">Shape.GetRandomPosition()</a></div>
-  
-  
-  <a id="Kinstrife_SpatialHandles_LevelBounds_InitializeGizmoSettings_" data-uid="Kinstrife.SpatialHandles.LevelBounds.InitializeGizmoSettings*"></a>
-  <h4 id="Kinstrife_SpatialHandles_LevelBounds_InitializeGizmoSettings_Kinstrife_Gizmos_Gizmo_" data-uid="Kinstrife.SpatialHandles.LevelBounds.InitializeGizmoSettings(Kinstrife.Gizmos.Gizmo)">InitializeGizmoSettings(Gizmo)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void InitializeGizmoSettings(Gizmo gizmo)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Kinstrife.Gizmos.Gizmo.html">Gizmo</a></td>
-        <td><span class="parametername">gizmo</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
   
   
   <a id="Kinstrife_SpatialHandles_LevelBounds_RandomPointInBounds_" data-uid="Kinstrife.SpatialHandles.LevelBounds.RandomPointInBounds*"></a>
@@ -546,6 +492,62 @@
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public void UpdateFromBoundaries()</code></pre>
   </div>
+  <h3 id="eii">Explicit Interface Implementations
+  </h3>
+  
+  
+  <a id="Kinstrife_SpatialHandles_LevelBounds_Kinstrife_Gizmos_ICustomGizmo_CustomDrawingAction_" data-uid="Kinstrife.SpatialHandles.LevelBounds.Kinstrife#Gizmos#ICustomGizmo#CustomDrawingAction*"></a>
+  <h4 id="Kinstrife_SpatialHandles_LevelBounds_Kinstrife_Gizmos_ICustomGizmo_CustomDrawingAction_Kinstrife_Gizmos_Gizmo_" data-uid="Kinstrife.SpatialHandles.LevelBounds.Kinstrife#Gizmos#ICustomGizmo#CustomDrawingAction(Kinstrife.Gizmos.Gizmo)">ICustomGizmo.CustomDrawingAction(Gizmo)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void ICustomGizmo.CustomDrawingAction(Gizmo gizmo)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Kinstrife.Gizmos.Gizmo.html">Gizmo</a></td>
+        <td><span class="parametername">gizmo</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Kinstrife_SpatialHandles_LevelBounds_Kinstrife_Gizmos_ICustomGizmo_InitializeGizmoSettings_" data-uid="Kinstrife.SpatialHandles.LevelBounds.Kinstrife#Gizmos#ICustomGizmo#InitializeGizmoSettings*"></a>
+  <h4 id="Kinstrife_SpatialHandles_LevelBounds_Kinstrife_Gizmos_ICustomGizmo_InitializeGizmoSettings_Kinstrife_Gizmos_Gizmo_" data-uid="Kinstrife.SpatialHandles.LevelBounds.Kinstrife#Gizmos#ICustomGizmo#InitializeGizmoSettings(Kinstrife.Gizmos.Gizmo)">ICustomGizmo.InitializeGizmoSettings(Gizmo)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void ICustomGizmo.InitializeGizmoSettings(Gizmo gizmo)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Kinstrife.Gizmos.Gizmo.html">Gizmo</a></td>
+        <td><span class="parametername">gizmo</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   <h3 id="implements">Implements</h3>
   <div>
       <a class="xref" href="Kinstrife.Gizmos.ICustomGizmo.html">ICustomGizmo</a>
