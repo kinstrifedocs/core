@@ -115,12 +115,12 @@
   
   
   <a id="Kinstrife_Gizmos_GizmoDrawing_DrawAnimation_" data-uid="Kinstrife.Gizmos.GizmoDrawing.DrawAnimation*"></a>
-  <h4 id="Kinstrife_Gizmos_GizmoDrawing_DrawAnimation_Kinstrife_Animation_System_Nullable_Color__System_Nullable_Color__System_Single_" data-uid="Kinstrife.Gizmos.GizmoDrawing.DrawAnimation(Kinstrife.Animation,System.Nullable{Color},System.Nullable{Color},System.Single)">DrawAnimation(Animation, Nullable&lt;Color&gt;, Nullable&lt;Color&gt;, Single)</h4>
+  <h4 id="Kinstrife_Gizmos_GizmoDrawing_DrawAnimation_CommandBuilder__Kinstrife_Animation_System_Nullable_Color__System_Nullable_Color__System_Single_" data-uid="Kinstrife.Gizmos.GizmoDrawing.DrawAnimation(CommandBuilder@,Kinstrife.Animation,System.Nullable{Color},System.Nullable{Color},System.Single)">DrawAnimation(ref CommandBuilder, Animation, Nullable&lt;Color&gt;, Nullable&lt;Color&gt;, Single)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static void DrawAnimation(Animation src, Color? fillColor, Color? lineColor, float opacity = 1F)</code></pre>
+    <pre><code class="lang-csharp hljs">public static void DrawAnimation(ref CommandBuilder draw, Animation src, Color? fillColor, Color? lineColor, float opacity = 1F)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -132,6 +132,11 @@
       </tr>
     </thead>
     <tbody>
+      <tr>
+        <td><span class="xref">CommandBuilder</span></td>
+        <td><span class="parametername">draw</span></td>
+        <td></td>
+      </tr>
       <tr>
         <td><a class="xref" href="Kinstrife.Animation.html">Kinstrife.Animation</a></td>
         <td><span class="parametername">src</span></td>
@@ -157,12 +162,12 @@
   
   
   <a id="Kinstrife_Gizmos_GizmoDrawing_DrawAudioSource_" data-uid="Kinstrife.Gizmos.GizmoDrawing.DrawAudioSource*"></a>
-  <h4 id="Kinstrife_Gizmos_GizmoDrawing_DrawAudioSource_Transform_AudioSource_System_Nullable_Color__System_Nullable_Color__System_Single_" data-uid="Kinstrife.Gizmos.GizmoDrawing.DrawAudioSource(Transform,AudioSource,System.Nullable{Color},System.Nullable{Color},System.Single)">DrawAudioSource(Transform, AudioSource, Nullable&lt;Color&gt;, Nullable&lt;Color&gt;, Single)</h4>
+  <h4 id="Kinstrife_Gizmos_GizmoDrawing_DrawAudioSource_CommandBuilder__Transform_AudioSource_System_Nullable_Color__System_Nullable_Color__System_Single_" data-uid="Kinstrife.Gizmos.GizmoDrawing.DrawAudioSource(CommandBuilder@,Transform,AudioSource,System.Nullable{Color},System.Nullable{Color},System.Single)">DrawAudioSource(ref CommandBuilder, Transform, AudioSource, Nullable&lt;Color&gt;, Nullable&lt;Color&gt;, Single)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static void DrawAudioSource(Transform reference, AudioSource src, Color? fillColor, Color? lineColor, float opacity = 1F)</code></pre>
+    <pre><code class="lang-csharp hljs">public static void DrawAudioSource(ref CommandBuilder draw, Transform reference, AudioSource src, Color? fillColor, Color? lineColor, float opacity = 1F)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -174,6 +179,11 @@
       </tr>
     </thead>
     <tbody>
+      <tr>
+        <td><span class="xref">CommandBuilder</span></td>
+        <td><span class="parametername">draw</span></td>
+        <td></td>
+      </tr>
       <tr>
         <td><span class="xref">Transform</span></td>
         <td><span class="parametername">reference</span></td>
@@ -204,12 +214,12 @@
   
   
   <a id="Kinstrife_Gizmos_GizmoDrawing_DrawBounds_" data-uid="Kinstrife.Gizmos.GizmoDrawing.DrawBounds*"></a>
-  <h4 id="Kinstrife_Gizmos_GizmoDrawing_DrawBounds_Bounds_Color_" data-uid="Kinstrife.Gizmos.GizmoDrawing.DrawBounds(Bounds,Color)">DrawBounds(Bounds, Color)</h4>
+  <h4 id="Kinstrife_Gizmos_GizmoDrawing_DrawBounds_CommandBuilder__Bounds_Color_" data-uid="Kinstrife.Gizmos.GizmoDrawing.DrawBounds(CommandBuilder@,Bounds,Color)">DrawBounds(ref CommandBuilder, Bounds, Color)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static void DrawBounds(Bounds bounds, Color lineColor)</code></pre>
+    <pre><code class="lang-csharp hljs">public static void DrawBounds(ref CommandBuilder draw, Bounds bounds, Color lineColor)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -221,6 +231,11 @@
       </tr>
     </thead>
     <tbody>
+      <tr>
+        <td><span class="xref">CommandBuilder</span></td>
+        <td><span class="parametername">draw</span></td>
+        <td></td>
+      </tr>
       <tr>
         <td><span class="xref">Bounds</span></td>
         <td><span class="parametername">bounds</span></td>
@@ -236,12 +251,12 @@
   
   
   <a id="Kinstrife_Gizmos_GizmoDrawing_DrawBox_" data-uid="Kinstrife.Gizmos.GizmoDrawing.DrawBox*"></a>
-  <h4 id="Kinstrife_Gizmos_GizmoDrawing_DrawBox_Bounds_Color_Color_" data-uid="Kinstrife.Gizmos.GizmoDrawing.DrawBox(Bounds,Color,Color)">DrawBox(Bounds, Color, Color)</h4>
+  <h4 id="Kinstrife_Gizmos_GizmoDrawing_DrawBox_CommandBuilder__Bounds_Color_Color_" data-uid="Kinstrife.Gizmos.GizmoDrawing.DrawBox(CommandBuilder@,Bounds,Color,Color)">DrawBox(ref CommandBuilder, Bounds, Color, Color)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static void DrawBox(Bounds bounds, Color fillColor, Color lineColor)</code></pre>
+    <pre><code class="lang-csharp hljs">public static void DrawBox(ref CommandBuilder draw, Bounds bounds, Color fillColor, Color lineColor)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -253,6 +268,11 @@
       </tr>
     </thead>
     <tbody>
+      <tr>
+        <td><span class="xref">CommandBuilder</span></td>
+        <td><span class="parametername">draw</span></td>
+        <td></td>
+      </tr>
       <tr>
         <td><span class="xref">Bounds</span></td>
         <td><span class="parametername">bounds</span></td>
@@ -273,12 +293,12 @@
   
   
   <a id="Kinstrife_Gizmos_GizmoDrawing_DrawBox_" data-uid="Kinstrife.Gizmos.GizmoDrawing.DrawBox*"></a>
-  <h4 id="Kinstrife_Gizmos_GizmoDrawing_DrawBox_Vector3_Quaternion_Vector3_Color_Color_" data-uid="Kinstrife.Gizmos.GizmoDrawing.DrawBox(Vector3,Quaternion,Vector3,Color,Color)">DrawBox(Vector3, Quaternion, Vector3, Color, Color)</h4>
+  <h4 id="Kinstrife_Gizmos_GizmoDrawing_DrawBox_CommandBuilder__Vector3_Quaternion_Vector3_Color_Color_" data-uid="Kinstrife.Gizmos.GizmoDrawing.DrawBox(CommandBuilder@,Vector3,Quaternion,Vector3,Color,Color)">DrawBox(ref CommandBuilder, Vector3, Quaternion, Vector3, Color, Color)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static void DrawBox(Vector3 position, Quaternion rotation, Vector3 scale, Color fillColor, Color lineColor)</code></pre>
+    <pre><code class="lang-csharp hljs">public static void DrawBox(ref CommandBuilder draw, Vector3 position, Quaternion rotation, Vector3 scale, Color fillColor, Color lineColor)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -290,6 +310,11 @@
       </tr>
     </thead>
     <tbody>
+      <tr>
+        <td><span class="xref">CommandBuilder</span></td>
+        <td><span class="parametername">draw</span></td>
+        <td></td>
+      </tr>
       <tr>
         <td><span class="xref">Vector3</span></td>
         <td><span class="parametername">position</span></td>
@@ -320,12 +345,12 @@
   
   
   <a id="Kinstrife_Gizmos_GizmoDrawing_DrawBoxCollider_" data-uid="Kinstrife.Gizmos.GizmoDrawing.DrawBoxCollider*"></a>
-  <h4 id="Kinstrife_Gizmos_GizmoDrawing_DrawBoxCollider_BoxCollider_System_Nullable_Color__System_Nullable_Color__System_Single_" data-uid="Kinstrife.Gizmos.GizmoDrawing.DrawBoxCollider(BoxCollider,System.Nullable{Color},System.Nullable{Color},System.Single)">DrawBoxCollider(BoxCollider, Nullable&lt;Color&gt;, Nullable&lt;Color&gt;, Single)</h4>
+  <h4 id="Kinstrife_Gizmos_GizmoDrawing_DrawBoxCollider_CommandBuilder__BoxCollider_System_Nullable_Color__System_Nullable_Color__System_Single_" data-uid="Kinstrife.Gizmos.GizmoDrawing.DrawBoxCollider(CommandBuilder@,BoxCollider,System.Nullable{Color},System.Nullable{Color},System.Single)">DrawBoxCollider(ref CommandBuilder, BoxCollider, Nullable&lt;Color&gt;, Nullable&lt;Color&gt;, Single)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static void DrawBoxCollider(BoxCollider col, Color? fillColor, Color? lineColor, float opacity = 1F)</code></pre>
+    <pre><code class="lang-csharp hljs">public static void DrawBoxCollider(ref CommandBuilder draw, BoxCollider col, Color? fillColor, Color? lineColor, float opacity = 1F)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -337,6 +362,11 @@
       </tr>
     </thead>
     <tbody>
+      <tr>
+        <td><span class="xref">CommandBuilder</span></td>
+        <td><span class="parametername">draw</span></td>
+        <td></td>
+      </tr>
       <tr>
         <td><span class="xref">BoxCollider</span></td>
         <td><span class="parametername">col</span></td>
@@ -362,12 +392,12 @@
   
   
   <a id="Kinstrife_Gizmos_GizmoDrawing_DrawCapsule_" data-uid="Kinstrife.Gizmos.GizmoDrawing.DrawCapsule*"></a>
-  <h4 id="Kinstrife_Gizmos_GizmoDrawing_DrawCapsule_Matrix4x4_System_Nullable_Vector3__System_Single_System_Single_Kinstrife_Gizmos_GizmoParams_Kinstrife_Gizmos_GizmoDrawStyleSettings_" data-uid="Kinstrife.Gizmos.GizmoDrawing.DrawCapsule(Matrix4x4,System.Nullable{Vector3},System.Single,System.Single,Kinstrife.Gizmos.GizmoParams,Kinstrife.Gizmos.GizmoDrawStyleSettings)">DrawCapsule(Matrix4x4, Nullable&lt;Vector3&gt;, Single, Single, GizmoParams, GizmoDrawStyleSettings)</h4>
+  <h4 id="Kinstrife_Gizmos_GizmoDrawing_DrawCapsule_CommandBuilder__Matrix4x4_System_Nullable_Vector3__System_Single_System_Single_Color_Color_" data-uid="Kinstrife.Gizmos.GizmoDrawing.DrawCapsule(CommandBuilder@,Matrix4x4,System.Nullable{Vector3},System.Single,System.Single,Color,Color)">DrawCapsule(ref CommandBuilder, Matrix4x4, Nullable&lt;Vector3&gt;, Single, Single, Color, Color)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static void DrawCapsule(Matrix4x4 matrix, Vector3? direction, float length, float radius, GizmoParams gizmoParams, GizmoDrawStyleSettings styleSettings)</code></pre>
+    <pre><code class="lang-csharp hljs">public static void DrawCapsule(ref CommandBuilder draw, Matrix4x4 matrix, Vector3? direction, float length, float radius, Color fillColor, Color lineColor)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -379,6 +409,11 @@
       </tr>
     </thead>
     <tbody>
+      <tr>
+        <td><span class="xref">CommandBuilder</span></td>
+        <td><span class="parametername">draw</span></td>
+        <td></td>
+      </tr>
       <tr>
         <td><span class="xref">Matrix4x4</span></td>
         <td><span class="parametername">matrix</span></td>
@@ -400,92 +435,13 @@
         <td></td>
       </tr>
       <tr>
-        <td><a class="xref" href="Kinstrife.Gizmos.GizmoParams.html">GizmoParams</a></td>
-        <td><span class="parametername">gizmoParams</span></td>
+        <td><span class="xref">Color</span></td>
+        <td><span class="parametername">fillColor</span></td>
         <td></td>
       </tr>
       <tr>
-        <td><a class="xref" href="Kinstrife.Gizmos.GizmoDrawStyleSettings.html">GizmoDrawStyleSettings</a></td>
-        <td><span class="parametername">styleSettings</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="Kinstrife_Gizmos_GizmoDrawing_DrawCatMulRom_" data-uid="Kinstrife.Gizmos.GizmoDrawing.DrawCatMulRom*"></a>
-  <h4 id="Kinstrife_Gizmos_GizmoDrawing_DrawCatMulRom_System_Collections_Generic_List_Vector3__Kinstrife_Gizmos_GizmoParams_Kinstrife_Gizmos_GizmoDrawStyleSettings_" data-uid="Kinstrife.Gizmos.GizmoDrawing.DrawCatMulRom(System.Collections.Generic.List{Vector3},Kinstrife.Gizmos.GizmoParams,Kinstrife.Gizmos.GizmoDrawStyleSettings)">DrawCatMulRom(List&lt;Vector3&gt;, GizmoParams, GizmoDrawStyleSettings)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static void DrawCatMulRom(List&lt;Vector3&gt; points, GizmoParams gizmoParams, GizmoDrawStyleSettings styleSettings)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Collections.Generic.List</span>&lt;<span class="xref">Vector3</span>&gt;</td>
-        <td><span class="parametername">points</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="Kinstrife.Gizmos.GizmoParams.html">GizmoParams</a></td>
-        <td><span class="parametername">gizmoParams</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="Kinstrife.Gizmos.GizmoDrawStyleSettings.html">GizmoDrawStyleSettings</a></td>
-        <td><span class="parametername">styleSettings</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="Kinstrife_Gizmos_GizmoDrawing_DrawCircle_" data-uid="Kinstrife.Gizmos.GizmoDrawing.DrawCircle*"></a>
-  <h4 id="Kinstrife_Gizmos_GizmoDrawing_DrawCircle_Transform_Kinstrife_Gizmos_GizmoParams_Kinstrife_Gizmos_GizmoDrawStyleSettings_System_Boolean_" data-uid="Kinstrife.Gizmos.GizmoDrawing.DrawCircle(Transform,Kinstrife.Gizmos.GizmoParams,Kinstrife.Gizmos.GizmoDrawStyleSettings,System.Boolean)">DrawCircle(Transform, GizmoParams, GizmoDrawStyleSettings, Boolean)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static void DrawCircle(Transform reference, GizmoParams gizmoParams, GizmoDrawStyleSettings styleSettings, bool withCross = true)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">Transform</span></td>
-        <td><span class="parametername">reference</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="Kinstrife.Gizmos.GizmoParams.html">GizmoParams</a></td>
-        <td><span class="parametername">gizmoParams</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="Kinstrife.Gizmos.GizmoDrawStyleSettings.html">GizmoDrawStyleSettings</a></td>
-        <td><span class="parametername">styleSettings</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><span class="xref">System.Boolean</span></td>
-        <td><span class="parametername">withCross</span></td>
+        <td><span class="xref">Color</span></td>
+        <td><span class="parametername">lineColor</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -493,12 +449,12 @@
   
   
   <a id="Kinstrife_Gizmos_GizmoDrawing_DrawCollider_" data-uid="Kinstrife.Gizmos.GizmoDrawing.DrawCollider*"></a>
-  <h4 id="Kinstrife_Gizmos_GizmoDrawing_DrawCollider_Collider_System_Nullable_Color__System_Nullable_Color__System_Single_" data-uid="Kinstrife.Gizmos.GizmoDrawing.DrawCollider(Collider,System.Nullable{Color},System.Nullable{Color},System.Single)">DrawCollider(Collider, Nullable&lt;Color&gt;, Nullable&lt;Color&gt;, Single)</h4>
+  <h4 id="Kinstrife_Gizmos_GizmoDrawing_DrawCollider_CommandBuilder__Collider_System_Nullable_Color__System_Nullable_Color__System_Single_" data-uid="Kinstrife.Gizmos.GizmoDrawing.DrawCollider(CommandBuilder@,Collider,System.Nullable{Color},System.Nullable{Color},System.Single)">DrawCollider(ref CommandBuilder, Collider, Nullable&lt;Color&gt;, Nullable&lt;Color&gt;, Single)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static void DrawCollider(Collider col, Color? fillColor, Color? lineColor, float opacity = 1F)</code></pre>
+    <pre><code class="lang-csharp hljs">public static void DrawCollider(ref CommandBuilder draw, Collider col, Color? fillColor, Color? lineColor, float opacity = 1F)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -510,6 +466,11 @@
       </tr>
     </thead>
     <tbody>
+      <tr>
+        <td><span class="xref">CommandBuilder</span></td>
+        <td><span class="parametername">draw</span></td>
+        <td></td>
+      </tr>
       <tr>
         <td><span class="xref">Collider</span></td>
         <td><span class="parametername">col</span></td>
@@ -535,12 +496,12 @@
   
   
   <a id="Kinstrife_Gizmos_GizmoDrawing_DrawMesh_" data-uid="Kinstrife.Gizmos.GizmoDrawing.DrawMesh*"></a>
-  <h4 id="Kinstrife_Gizmos_GizmoDrawing_DrawMesh_Transform_Mesh_System_Nullable_Color__System_Nullable_Color__System_Single_" data-uid="Kinstrife.Gizmos.GizmoDrawing.DrawMesh(Transform,Mesh,System.Nullable{Color},System.Nullable{Color},System.Single)">DrawMesh(Transform, Mesh, Nullable&lt;Color&gt;, Nullable&lt;Color&gt;, Single)</h4>
+  <h4 id="Kinstrife_Gizmos_GizmoDrawing_DrawMesh_CommandBuilder__Transform_Mesh_System_Nullable_Color__System_Nullable_Color__System_Single_" data-uid="Kinstrife.Gizmos.GizmoDrawing.DrawMesh(CommandBuilder@,Transform,Mesh,System.Nullable{Color},System.Nullable{Color},System.Single)">DrawMesh(ref CommandBuilder, Transform, Mesh, Nullable&lt;Color&gt;, Nullable&lt;Color&gt;, Single)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static void DrawMesh(Transform reference, Mesh mesh, Color? fillColor, Color? lineColor, float opacity = 1F)</code></pre>
+    <pre><code class="lang-csharp hljs">public static void DrawMesh(ref CommandBuilder draw, Transform reference, Mesh mesh, Color? fillColor, Color? lineColor, float opacity = 1F)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -552,6 +513,11 @@
       </tr>
     </thead>
     <tbody>
+      <tr>
+        <td><span class="xref">CommandBuilder</span></td>
+        <td><span class="parametername">draw</span></td>
+        <td></td>
+      </tr>
       <tr>
         <td><span class="xref">Transform</span></td>
         <td><span class="parametername">reference</span></td>
@@ -581,55 +547,13 @@
   </table>
   
   
-  <a id="Kinstrife_Gizmos_GizmoDrawing_DrawPolyline_" data-uid="Kinstrife.Gizmos.GizmoDrawing.DrawPolyline*"></a>
-  <h4 id="Kinstrife_Gizmos_GizmoDrawing_DrawPolyline_System_Collections_Generic_List_Vector3__Kinstrife_Gizmos_GizmoParams_Kinstrife_Gizmos_GizmoDrawStyleSettings_System_Boolean_" data-uid="Kinstrife.Gizmos.GizmoDrawing.DrawPolyline(System.Collections.Generic.List{Vector3},Kinstrife.Gizmos.GizmoParams,Kinstrife.Gizmos.GizmoDrawStyleSettings,System.Boolean)">DrawPolyline(List&lt;Vector3&gt;, GizmoParams, GizmoDrawStyleSettings, Boolean)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static void DrawPolyline(List&lt;Vector3&gt; points, GizmoParams gizmoParams, GizmoDrawStyleSettings styleSettings, bool cycle = true)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Collections.Generic.List</span>&lt;<span class="xref">Vector3</span>&gt;</td>
-        <td><span class="parametername">points</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="Kinstrife.Gizmos.GizmoParams.html">GizmoParams</a></td>
-        <td><span class="parametername">gizmoParams</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="Kinstrife.Gizmos.GizmoDrawStyleSettings.html">GizmoDrawStyleSettings</a></td>
-        <td><span class="parametername">styleSettings</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><span class="xref">System.Boolean</span></td>
-        <td><span class="parametername">cycle</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
   <a id="Kinstrife_Gizmos_GizmoDrawing_DrawRenderer_" data-uid="Kinstrife.Gizmos.GizmoDrawing.DrawRenderer*"></a>
-  <h4 id="Kinstrife_Gizmos_GizmoDrawing_DrawRenderer_Renderer_Mesh_System_Nullable_Color__System_Nullable_Color__System_Single_" data-uid="Kinstrife.Gizmos.GizmoDrawing.DrawRenderer(Renderer,Mesh,System.Nullable{Color},System.Nullable{Color},System.Single)">DrawRenderer(Renderer, Mesh, Nullable&lt;Color&gt;, Nullable&lt;Color&gt;, Single)</h4>
+  <h4 id="Kinstrife_Gizmos_GizmoDrawing_DrawRenderer_CommandBuilder__Renderer_Mesh_System_Nullable_Color__System_Nullable_Color__System_Single_" data-uid="Kinstrife.Gizmos.GizmoDrawing.DrawRenderer(CommandBuilder@,Renderer,Mesh,System.Nullable{Color},System.Nullable{Color},System.Single)">DrawRenderer(ref CommandBuilder, Renderer, Mesh, Nullable&lt;Color&gt;, Nullable&lt;Color&gt;, Single)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static void DrawRenderer(Renderer renderer, Mesh mesh, Color? fillColor, Color? lineColor, float opacity = 1F)</code></pre>
+    <pre><code class="lang-csharp hljs">public static void DrawRenderer(ref CommandBuilder draw, Renderer renderer, Mesh mesh, Color? fillColor, Color? lineColor, float opacity = 1F)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -641,6 +565,11 @@
       </tr>
     </thead>
     <tbody>
+      <tr>
+        <td><span class="xref">CommandBuilder</span></td>
+        <td><span class="parametername">draw</span></td>
+        <td></td>
+      </tr>
       <tr>
         <td><span class="xref">Renderer</span></td>
         <td><span class="parametername">renderer</span></td>
@@ -671,12 +600,12 @@
   
   
   <a id="Kinstrife_Gizmos_GizmoDrawing_DrawSphere_" data-uid="Kinstrife.Gizmos.GizmoDrawing.DrawSphere*"></a>
-  <h4 id="Kinstrife_Gizmos_GizmoDrawing_DrawSphere_Transform_System_Single_System_Single_Color_Color_" data-uid="Kinstrife.Gizmos.GizmoDrawing.DrawSphere(Transform,System.Single,System.Single,Color,Color)">DrawSphere(Transform, Single, Single, Color, Color)</h4>
+  <h4 id="Kinstrife_Gizmos_GizmoDrawing_DrawSphere_CommandBuilder__Transform_System_Single_System_Single_Color_Color_" data-uid="Kinstrife.Gizmos.GizmoDrawing.DrawSphere(CommandBuilder@,Transform,System.Single,System.Single,Color,Color)">DrawSphere(ref CommandBuilder, Transform, Single, Single, Color, Color)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static void DrawSphere(Transform reference, float innerRadius, float outerRadius, Color fillColor, Color lineColor)</code></pre>
+    <pre><code class="lang-csharp hljs">public static void DrawSphere(ref CommandBuilder draw, Transform reference, float innerRadius, float outerRadius, Color fillColor, Color lineColor)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -688,6 +617,11 @@
       </tr>
     </thead>
     <tbody>
+      <tr>
+        <td><span class="xref">CommandBuilder</span></td>
+        <td><span class="parametername">draw</span></td>
+        <td></td>
+      </tr>
       <tr>
         <td><span class="xref">Transform</span></td>
         <td><span class="parametername">reference</span></td>
@@ -718,12 +652,12 @@
   
   
   <a id="Kinstrife_Gizmos_GizmoDrawing_DrawSphereCollider_" data-uid="Kinstrife.Gizmos.GizmoDrawing.DrawSphereCollider*"></a>
-  <h4 id="Kinstrife_Gizmos_GizmoDrawing_DrawSphereCollider_SphereCollider_System_Nullable_Color__System_Nullable_Color__System_Single_" data-uid="Kinstrife.Gizmos.GizmoDrawing.DrawSphereCollider(SphereCollider,System.Nullable{Color},System.Nullable{Color},System.Single)">DrawSphereCollider(SphereCollider, Nullable&lt;Color&gt;, Nullable&lt;Color&gt;, Single)</h4>
+  <h4 id="Kinstrife_Gizmos_GizmoDrawing_DrawSphereCollider_CommandBuilder__SphereCollider_System_Nullable_Color__System_Nullable_Color__System_Single_" data-uid="Kinstrife.Gizmos.GizmoDrawing.DrawSphereCollider(CommandBuilder@,SphereCollider,System.Nullable{Color},System.Nullable{Color},System.Single)">DrawSphereCollider(ref CommandBuilder, SphereCollider, Nullable&lt;Color&gt;, Nullable&lt;Color&gt;, Single)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static void DrawSphereCollider(SphereCollider col, Color? fillColor, Color? lineColor, float opacity = 1F)</code></pre>
+    <pre><code class="lang-csharp hljs">public static void DrawSphereCollider(ref CommandBuilder draw, SphereCollider col, Color? fillColor, Color? lineColor, float opacity = 1F)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -735,6 +669,11 @@
       </tr>
     </thead>
     <tbody>
+      <tr>
+        <td><span class="xref">CommandBuilder</span></td>
+        <td><span class="parametername">draw</span></td>
+        <td></td>
+      </tr>
       <tr>
         <td><span class="xref">SphereCollider</span></td>
         <td><span class="parametername">col</span></td>
@@ -760,12 +699,12 @@
   
   
   <a id="Kinstrife_Gizmos_GizmoDrawing_DrawWireSphere_" data-uid="Kinstrife.Gizmos.GizmoDrawing.DrawWireSphere*"></a>
-  <h4 id="Kinstrife_Gizmos_GizmoDrawing_DrawWireSphere_Vector3_System_Single_Color_System_Single_" data-uid="Kinstrife.Gizmos.GizmoDrawing.DrawWireSphere(Vector3,System.Single,Color,System.Single)">DrawWireSphere(Vector3, Single, Color, Single)</h4>
+  <h4 id="Kinstrife_Gizmos_GizmoDrawing_DrawWireSphere_CommandBuilder__Vector3_System_Single_Color_System_Single_" data-uid="Kinstrife.Gizmos.GizmoDrawing.DrawWireSphere(CommandBuilder@,Vector3,System.Single,Color,System.Single)">DrawWireSphere(ref CommandBuilder, Vector3, Single, Color, Single)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static void DrawWireSphere(Vector3 position, float outerRadius, Color lineColor, float lineWidth = 1F)</code></pre>
+    <pre><code class="lang-csharp hljs">public static void DrawWireSphere(ref CommandBuilder draw, Vector3 position, float outerRadius, Color lineColor, float lineWidth = 1F)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -777,6 +716,11 @@
       </tr>
     </thead>
     <tbody>
+      <tr>
+        <td><span class="xref">CommandBuilder</span></td>
+        <td><span class="parametername">draw</span></td>
+        <td></td>
+      </tr>
       <tr>
         <td><span class="xref">Vector3</span></td>
         <td><span class="parametername">position</span></td>
@@ -802,12 +746,12 @@
   
   
   <a id="Kinstrife_Gizmos_GizmoDrawing_InternalDrawMesh_" data-uid="Kinstrife.Gizmos.GizmoDrawing.InternalDrawMesh*"></a>
-  <h4 id="Kinstrife_Gizmos_GizmoDrawing_InternalDrawMesh_Transform_Mesh_Color_Color_System_Nullable_System_Single__" data-uid="Kinstrife.Gizmos.GizmoDrawing.InternalDrawMesh(Transform,Mesh,Color,Color,System.Nullable{System.Single})">InternalDrawMesh(Transform, Mesh, Color, Color, Nullable&lt;Single&gt;)</h4>
+  <h4 id="Kinstrife_Gizmos_GizmoDrawing_InternalDrawMesh_CommandBuilder__Transform_Mesh_Color_Color_System_Nullable_System_Single__" data-uid="Kinstrife.Gizmos.GizmoDrawing.InternalDrawMesh(CommandBuilder@,Transform,Mesh,Color,Color,System.Nullable{System.Single})">InternalDrawMesh(ref CommandBuilder, Transform, Mesh, Color, Color, Nullable&lt;Single&gt;)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static void InternalDrawMesh(Transform reference, Mesh mesh, Color fillColor, Color lineColor, float? lineWidth = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public static void InternalDrawMesh(ref CommandBuilder draw, Transform reference, Mesh mesh, Color fillColor, Color lineColor, float? lineWidth = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -819,6 +763,11 @@
       </tr>
     </thead>
     <tbody>
+      <tr>
+        <td><span class="xref">CommandBuilder</span></td>
+        <td><span class="parametername">draw</span></td>
+        <td></td>
+      </tr>
       <tr>
         <td><span class="xref">Transform</span></td>
         <td><span class="parametername">reference</span></td>
