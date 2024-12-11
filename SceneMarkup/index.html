@@ -74,6 +74,114 @@
 </blockquote>
 <p> </p>
 <p>Scene authoring tools &amp; runtime spawning workflows.</p>
+<h1 id="installation">Installation</h1>
+<h2 id="required-packages">Required Packages</h2>
+<h3 id="scene-markup">Scene Markup</h3>
+<p><code>&quot;com.kinstrife.core.scene-markup&quot;: &quot;file:/GameDev/Core/Packages/SceneMarkup&quot;</code></p>
+<h2 id="recommended-packages">Recommended Packages</h2>
+<h3 id="prototyping-assets">Prototyping Assets</h3>
+<p>Has a location template and prefabs used in rapid prototyping.
+<code>&quot;com.kinstrife.prototyping-assets&quot;: &quot;file:/GameDev/KinstrifeSharedAssets/Packages/PrototypingAssets&quot;</code></p>
+<h3 id="prototyping-controller">Prototyping Controller</h3>
+<p>Lightweight character controller and camera for viewing locations at eye level.
+<code>&quot;com.kinstrife.core.prototype-controller&quot;: &quot;file:/GameDev/KinstrifeLogic/Packages/PrototypeController&quot;</code></p>
+<h3 id="medieval-game-flow-data">Medieval Game Flow Data</h3>
+<p>Contains additional prefabs required for fully finishing location setup, such as a <code>LocationHandle</code>
+<code>&quot;com.kinstrife.medieval.game-flow-data&quot;: &quot;file:/GameDev/KinstrifeSettingMedieval1300/Packages/GameFlowData&quot;</code></p>
+<h1 id="quickstart">Quickstart</h1>
+<p>After importing packages, open the <a href="D:%5CGameDev%5CKinstrifeSharedAssets%5CPackages%5CPrototypingAssets%5CAddressables%5CLocationTemplate">location template</a> scene.</p>
+<p>This scene consists of:</p>
+<ul>
+<li><strong>LocationHandle</strong>: referencing the (Application Flow) Location</li>
+<li><strong>TerrainPivot</strong>
+<ul>
+<li><strong>Terrain</strong>: Centered on terrain pivot</li>
+<li><strong>LevelBounds</strong>: Used to restrict player movement within bounds
+<ul>
+<li><strong>Center</strong>: Designates the 'focal point' of the location, e.g. a safe spot to spawn</li>
+<li><strong>Level boundaries</strong>: 'Hard' outer bounds, one per cardinal direction
+<ul>
+<li><strong>Exit Trigger</strong>: The 'soft' inner boundary, used to e.g. initiate travel</li>
+<li><strong>Entry Area</strong>: Marks appropriate entry for boundary</li>
+</ul>
+</li>
+<li><strong>Spawn points</strong>: Pre-authored 'fixed' points, e.g. trader</li>
+<li><strong>NavmeshSurface</strong>: Required for AI</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>A prototype character and camera</li>
+<li>Some visuals stuff (reflection probe, post processing)</li>
+</ul>
+<h2 id="setting-up-a-playable-location">Setting up a playable location</h2>
+<h3 id="prepare-terrain">Prepare Terrain</h3>
+<ul>
+<li>Finish authoring the terrain</li>
+<li>Parent the terrain to the pivot, and place the terrain such that it's centered</li>
+</ul>
+<h3 id="setting-up-level-bounds">Setting up Level Bounds</h3>
+<p>In the scene view:</p>
+<ul>
+<li>Select the <code>LevelBounds</code> GameObject, and move it to the desired position</li>
+<li>Drag the handles at the outer boundaries to encapsulate the playable area.
+<ul>
+<li>Make sure the inner colliders (<code>Exit Triggers</code>) don't overlap the playable area</li>
+</ul>
+</li>
+<li>Feel free to rotate <code>LevelBounds</code> so its boundaries better encapsulate the playable area, or point better towards potential exits</li>
+</ul>
+<h3 id="position-spawn-points-and-entry-zones">Position Spawn Points and Entry Zones</h3>
+<ul>
+<li>Select the <code>AreaCenter</code> GameObject, and position it roughly to where the center of the playable area should be. (This is used as the default spawn zone)
+<ul>
+<li>On the <code>LevelBounds</code> component inspector, move the <code>CenterRadiusPct</code> about so the</li>
+</ul>
+</li>
+<li>For each level boundary, position their <code>EntryArea</code> GameObjects to where you want the player to enter the location, when coming from that direction. Also make sure they face the direction you want the player to be facing when spawning in.</li>
+</ul>
+<h3 id="adding-more-boundaries">Adding more boundaries</h3>
+<p>If the level boundaries for the cardinal directions aren't sufficient, you can add more. Simply duplicate one, parent it to <code>LevelBounds</code>, and place it where needed.</p>
+<h3 id="setting-up-location-transitions">Setting up Location Transitions</h3>
+<p>TBD, currently this requires <code>Campaign logic</code> and <code>ObjectInteraction</code> packages. I'll add a component to <code>ApplicationFlow</code> that serves as a marker for just the <code>Location</code>.</p>
+<p>When done, your scene view should now look something like this:
+![[SceneMarkupSceneView.png]]</p>
+<h1 id="requirements-checklist">Requirements Checklist</h1>
+<p>The following setup is required for scenes to function in an actor setup.</p>
+<blockquote>
+<p>[!INFO] &quot;*&quot; = Optional</p>
+</blockquote>
+<ul>
+<li>[ ] <strong>Terrain</strong>
+<ul>
+<li>[ ] Layer: <code>Ground</code></li>
+<li>[ ] Static: <code>true</code></li>
+<li>[ ] <strong>Components:</strong> CollisionParticipant etc.*</li>
+</ul>
+</li>
+<li>[ ] Trees
+<ul>
+<li>[ ] Layer: <code>Vegetation</code></li>
+<li>[ ] Static: <code>~</code>(all except <code>Batching Static</code>)</li>
+</ul>
+</li>
+<li>[ ] <strong>Static Props</strong>
+<ul>
+<li>[ ] Layer: <code>StaticProps</code></li>
+<li>[ ] Static: <code>true</code></li>
+<li>[ ] Use: For large static props that are potentially walkable, like walls</li>
+<li>[ ] <strong>Components:</strong> CollisionParticipant etc.*</li>
+</ul>
+</li>
+<li>[ ] <strong>Dynamic Props:</strong>
+<ul>
+<li>[ ] Layer: <code>DynamicProps</code></li>
+<li>[ ] Static <code>~</code></li>
+<li>[ ] Use: For smaller and/or dynamic props that are <em>not</em> walkable. E.g. crates, sacks, parcels.</li>
+<li>[ ] <strong>Components:</strong> CollisionParticipant etc.*</li>
+</ul>
+</li>
+</ul>
 </article>
           </div>
           
