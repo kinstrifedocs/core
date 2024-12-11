@@ -80,11 +80,87 @@
     <div class="level0"><span class="xref">System.Object</span></div>
     <div class="level1"><span class="xref">InteractionActionsManager</span></div>
   </div>
+  <div class="implements">
+    <h5>Implements</h5>
+    <div><a class="xref" href="Kinstrife.Core.DependencyInjection.ICacheReferences.html">ICacheReferences</a></div>
+    <div><a class="xref" href="Kinstrife.Core.DependencyInjection.IDependent.html">IDependent</a></div>
+  </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Kinstrife.Interaction.html">Kinstrife.Interaction</a></h6>
   <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
   <h5 id="Kinstrife_Interaction_InteractionActionsManager_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class InteractionActionsManager : MonoBehaviour</code></pre>
+    <pre><code class="lang-csharp hljs">public class InteractionActionsManager : MonoBehaviour, ICacheReferences, IDependent</code></pre>
+  </div>
+  <h3 id="methods">Methods
+  </h3>
+  
+  
+  <a id="Kinstrife_Interaction_InteractionActionsManager_CacheReferences_" data-uid="Kinstrife.Interaction.InteractionActionsManager.CacheReferences*"></a>
+  <h4 id="Kinstrife_Interaction_InteractionActionsManager_CacheReferences" data-uid="Kinstrife.Interaction.InteractionActionsManager.CacheReferences">CacheReferences()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void CacheReferences()</code></pre>
+  </div>
+  
+  
+  <a id="Kinstrife_Interaction_InteractionActionsManager_TryGetActionForObject_" data-uid="Kinstrife.Interaction.InteractionActionsManager.TryGetActionForObject*"></a>
+  <h4 id="Kinstrife_Interaction_InteractionActionsManager_TryGetActionForObject_Kinstrife_Interaction_InteractiveObject_Kinstrife_Interaction_InteractionContext_Kinstrife_Interaction_InteractionAction__" data-uid="Kinstrife.Interaction.InteractionActionsManager.TryGetActionForObject(Kinstrife.Interaction.InteractiveObject,Kinstrife.Interaction.InteractionContext,Kinstrife.Interaction.InteractionAction@)">TryGetActionForObject(InteractiveObject, InteractionContext, out InteractionAction)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool TryGetActionForObject(InteractiveObject interactiveObject, InteractionContext interactionContext, out InteractionAction result)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Kinstrife.Interaction.InteractiveObject.html">InteractiveObject</a></td>
+        <td><span class="parametername">interactiveObject</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Kinstrife.Interaction.InteractionContext.html">InteractionContext</a></td>
+        <td><span class="parametername">interactionContext</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Kinstrife.Interaction.InteractionAction.html">InteractionAction</a></td>
+        <td><span class="parametername">result</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <a class="xref" href="Kinstrife.Core.DependencyInjection.ICacheReferences.html">ICacheReferences</a>
+  </div>
+  <div>
+      <a class="xref" href="Kinstrife.Core.DependencyInjection.IDependent.html">IDependent</a>
   </div>
 </article>
           </div>
