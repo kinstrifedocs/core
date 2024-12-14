@@ -81,11 +81,16 @@
     <div class="level0"><span class="xref">System.Object</span></div>
     <div class="level1"><span class="xref">ModuleDefinition</span></div>
   </div>
+  <div class="implements">
+    <h5>Implements</h5>
+    <div><a class="xref" href="Kinstrife.Application.IModule.html">IModule</a></div>
+    <div><a class="xref" href="Kinstrife.Application.ISceneDependency.html">ISceneDependency</a></div>
+  </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Kinstrife.Application.html">Kinstrife.Application</a></h6>
   <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
   <h5 id="Kinstrife_Application_ModuleDefinition_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class ModuleDefinition : ScriptableObject</code></pre>
+    <pre><code class="lang-csharp hljs">public class ModuleDefinition : ScriptableObject, IModule, ISceneDependency</code></pre>
   </div>
   <h3 id="fields">Fields
   </h3>
@@ -312,6 +317,31 @@ public bool HasRecursiveDependencies</code></pre>
     <tbody>
       <tr>
         <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Kinstrife_Application_ModuleDefinition_ModuleSettings_" data-uid="Kinstrife.Application.ModuleDefinition.ModuleSettings*"></a>
+  <h4 id="Kinstrife_Application_ModuleDefinition_ModuleSettings" data-uid="Kinstrife.Application.ModuleDefinition.ModuleSettings">ModuleSettings</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ModuleSettings ModuleSettings { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Kinstrife.Application.ModuleSettings.html">ModuleSettings</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -545,6 +575,13 @@ public bool HasRecursiveDependencies</code></pre>
       </tr>
     </tbody>
   </table>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <a class="xref" href="Kinstrife.Application.IModule.html">IModule</a>
+  </div>
+  <div>
+      <a class="xref" href="Kinstrife.Application.ISceneDependency.html">ISceneDependency</a>
+  </div>
 </article>
           </div>
           

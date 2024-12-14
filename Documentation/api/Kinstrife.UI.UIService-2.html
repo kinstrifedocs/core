@@ -85,7 +85,6 @@
   <div class="implements">
     <h5>Implements</h5>
     <div><a class="xref" href="Kinstrife.Core.DependencyInjection.IInjectable.html">IInjectable</a></div>
-    <div><a class="xref" href="Kinstrife.Core.DependencyInjection.IInitializable.html">IInitializable</a></div>
     <div><a class="xref" href="Kinstrife.Core.DependencyInjection.IDependent.html">IDependent</a></div>
   </div>
   <div class="inheritedMembers">
@@ -103,10 +102,7 @@
       <a class="xref" href="Kinstrife.Messaging.ServiceBehaviour-2.html#Kinstrife_Messaging_ServiceBehaviour_2_AllowConcurrency">ServiceBehaviour&lt;TResponse, TPayload&gt;.AllowConcurrency</a>
     </div>
     <div>
-      <a class="xref" href="Kinstrife.Messaging.ServiceBehaviour-2.html#Kinstrife_Messaging_ServiceBehaviour_2_Initialized">ServiceBehaviour&lt;TResponse, TPayload&gt;.Initialized</a>
-    </div>
-    <div>
-      <a class="xref" href="Kinstrife.Messaging.ServiceBehaviour-2.html#Kinstrife_Messaging_ServiceBehaviour_2_Initialize">ServiceBehaviour&lt;TResponse, TPayload&gt;.Initialize()</a>
+      <a class="xref" href="Kinstrife.Messaging.ServiceBehaviour-2.html#Kinstrife_Messaging_ServiceBehaviour_2_lastRequest">ServiceBehaviour&lt;TResponse, TPayload&gt;.lastRequest</a>
     </div>
     <div>
       <a class="xref" href="Kinstrife.Messaging.ServiceBehaviour-2.html#Kinstrife_Messaging_ServiceBehaviour_2_TryHandleRequest_Kinstrife_Messaging_Request__1__">ServiceBehaviour&lt;TResponse, TPayload&gt;.TryHandleRequest(Request&lt;TPayload&gt;)</a>
@@ -122,7 +118,7 @@
   <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
   <h5 id="Kinstrife_UI_UIService_2_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public abstract class UIService&lt;TResponse, TPayload&gt; : ServiceBehaviour&lt;TResponse, TPayload&gt;, IInjectable, IInitializable, IDependent where TPayload : PopupData</code></pre>
+    <pre><code class="lang-csharp hljs">public abstract class UIService&lt;TResponse, TPayload&gt; : ServiceBehaviour&lt;TResponse, TPayload&gt;, IInjectable, IDependent where TPayload : PopupData</code></pre>
   </div>
   <h5 class="typeParameters">Type Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -257,9 +253,6 @@
   <h3 id="implements">Implements</h3>
   <div>
       <a class="xref" href="Kinstrife.Core.DependencyInjection.IInjectable.html">IInjectable</a>
-  </div>
-  <div>
-      <a class="xref" href="Kinstrife.Core.DependencyInjection.IInitializable.html">IInitializable</a>
   </div>
   <div>
       <a class="xref" href="Kinstrife.Core.DependencyInjection.IDependent.html">IDependent</a>

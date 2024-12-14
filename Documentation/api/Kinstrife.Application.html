@@ -94,8 +94,6 @@ The only reason why this is currently a MonoBehaviour is because it requires Sta
       <section></section>
       <h4><a class="xref" href="Kinstrife.Application.Bootstrapper.html">Bootstrapper</a></h4>
       <section></section>
-      <h4><a class="xref" href="Kinstrife.Application.EnvironmentOverrides-1.html">EnvironmentOverrides&lt;T&gt;</a></h4>
-      <section></section>
       <h4><a class="xref" href="Kinstrife.Application.FixedUpdateStepper.html">FixedUpdateStepper</a></h4>
       <section></section>
       <h4><a class="xref" href="Kinstrife.Application.GameMode.html">GameMode</a></h4>
@@ -110,6 +108,8 @@ is composed from one or multiple <a class="xref" href="Kinstrife.Application.Mod
       <h4><a class="xref" href="Kinstrife.Application.LocationHandle.html">LocationHandle</a></h4>
       <section><p>Scene handle for location</p>
 </section>
+      <h4><a class="xref" href="Kinstrife.Application.LocationTransition.html">LocationTransition</a></h4>
+      <section></section>
       <h4><a class="xref" href="Kinstrife.Application.Module.html">Module</a></h4>
       <section><p>Handles application flow / flow of control in a single module. Should abstract away anything from application flow so that other
 scripts in a module do not depend on it, i. e. requesting a change of GameMode, changing the timescale (including pausing/unpausing)
@@ -121,13 +121,21 @@ e. g. for the actor module, where unneeded actors for the next mode/scene can be
       <h4><a class="xref" href="Kinstrife.Application.ModuleDefinition.html">ModuleDefinition</a></h4>
       <section><p>Metadata for modules, including the reference to the scene containing the functionality.</p>
 </section>
+      <h4><a class="xref" href="Kinstrife.Application.ModuleDependency.html">ModuleDependency</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Kinstrife.Application.ModuleSettings.html">ModuleSettings</a></h4>
+      <section></section>
       <h4><a class="xref" href="Kinstrife.Application.OnPrimaryModuleChange.html">OnPrimaryModuleChange</a></h4>
       <section></section>
       <h4><a class="xref" href="Kinstrife.Application.PrimaryModule.html">PrimaryModule</a></h4>
       <section></section>
+      <h4><a class="xref" href="Kinstrife.Application.SceneDependency-1.html">SceneDependency&lt;T&gt;</a></h4>
+      <section></section>
       <h4><a class="xref" href="Kinstrife.Application.SceneLoader.html">SceneLoader</a></h4>
       <section><p>Should not be used by non-applicationflow classes</p>
 </section>
+      <h4><a class="xref" href="Kinstrife.Application.SceneLoadSettings.html">SceneLoadSettings</a></h4>
+      <section></section>
       <h4><a class="xref" href="Kinstrife.Application.SceneReference.html">SceneReference</a></h4>
       <section><p>TODO: Replace with scene AssetReferences?</p>
 </section>
@@ -143,6 +151,18 @@ the time scale (can't set breakpoints in unity code, right?)</p>
       <h4><a class="xref" href="Kinstrife.Application.UniqueBehaviour.html">UniqueBehaviour</a></h4>
       <section></section>
       <h4><a class="xref" href="Kinstrife.Application.UniqueComponentManager.html">UniqueComponentManager</a></h4>
+      <section></section>
+    <h3 id="interfaces">Interfaces
+  </h3>
+      <h4><a class="xref" href="Kinstrife.Application.ICampaignManager.html">ICampaignManager</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Kinstrife.Application.IHasModuleDependencies.html">IHasModuleDependencies</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Kinstrife.Application.IHasSceneDependencies.html">IHasSceneDependencies</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Kinstrife.Application.IModule.html">IModule</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Kinstrife.Application.ISceneDependency.html">ISceneDependency</a></h4>
       <section></section>
     <h3 id="enums">Enums
   </h3>

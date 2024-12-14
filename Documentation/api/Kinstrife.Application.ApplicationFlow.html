@@ -152,7 +152,8 @@ The only reason why this is currently a MonoBehaviour is because it requires Sta
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public float preLoadDelay</code></pre>
+    <pre><code class="lang-csharp hljs">[NonSerialized]
+public float preLoadDelay</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -305,6 +306,31 @@ The only reason why this is currently a MonoBehaviour is because it requires Sta
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public bool DebugLog { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Kinstrife_Application_ApplicationFlow_IsModePrimaryModule_" data-uid="Kinstrife.Application.ApplicationFlow.IsModePrimaryModule*"></a>
+  <h4 id="Kinstrife_Application_ApplicationFlow_IsModePrimaryModule" data-uid="Kinstrife.Application.ApplicationFlow.IsModePrimaryModule">IsModePrimaryModule</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsModePrimaryModule { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -551,12 +577,12 @@ The only reason why this is currently a MonoBehaviour is because it requires Sta
   
   
   <a id="Kinstrife_Application_ApplicationFlow_InitializeAsync_" data-uid="Kinstrife.Application.ApplicationFlow.InitializeAsync*"></a>
-  <h4 id="Kinstrife_Application_ApplicationFlow_InitializeAsync_System_Boolean_Kinstrife_Application_GameMode_" data-uid="Kinstrife.Application.ApplicationFlow.InitializeAsync(System.Boolean,Kinstrife.Application.GameMode)">InitializeAsync(Boolean, GameMode)</h4>
+  <h4 id="Kinstrife_Application_ApplicationFlow_InitializeAsync_Kinstrife_Application_GameMode_Kinstrife_Core_Campaign_CampaignDefinition_" data-uid="Kinstrife.Application.ApplicationFlow.InitializeAsync(Kinstrife.Application.GameMode,Kinstrife.Core.Campaign.CampaignDefinition)">InitializeAsync(GameMode, CampaignDefinition)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public async UniTask InitializeAsync(bool loadStartState, GameMode modeToStartIn = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public async UniTask InitializeAsync(GameMode modeToStartIn = null, CampaignDefinition campaign = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -569,13 +595,13 @@ The only reason why this is currently a MonoBehaviour is because it requires Sta
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Boolean</span></td>
-        <td><span class="parametername">loadStartState</span></td>
+        <td><a class="xref" href="Kinstrife.Application.GameMode.html">GameMode</a></td>
+        <td><span class="parametername">modeToStartIn</span></td>
         <td></td>
       </tr>
       <tr>
-        <td><a class="xref" href="Kinstrife.Application.GameMode.html">GameMode</a></td>
-        <td><span class="parametername">modeToStartIn</span></td>
+        <td><a class="xref" href="Kinstrife.Core.Campaign.CampaignDefinition.html">CampaignDefinition</a></td>
+        <td><span class="parametername">campaign</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -991,6 +1017,31 @@ The only reason why this is currently a MonoBehaviour is because it requires Sta
     <tbody>
       <tr>
         <td><span class="xref">UniTask</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Kinstrife_Application_ApplicationFlow_TryActivatePreloadedLocation_" data-uid="Kinstrife.Application.ApplicationFlow.TryActivatePreloadedLocation*"></a>
+  <h4 id="Kinstrife_Application_ApplicationFlow_TryActivatePreloadedLocation" data-uid="Kinstrife.Application.ApplicationFlow.TryActivatePreloadedLocation">TryActivatePreloadedLocation()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public async UniTask&lt;bool&gt; TryActivatePreloadedLocation()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">UniTask</span>&lt;<span class="xref">System.Boolean</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -1544,6 +1595,30 @@ The only reason why this is currently a MonoBehaviour is because it requires Sta
   </table>
   
   
+  <h4 id="Kinstrife_Application_ApplicationFlow_LoadingScreenStarted" data-uid="Kinstrife.Application.ApplicationFlow.LoadingScreenStarted">LoadingScreenStarted</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public event Action LoadingScreenStarted</code></pre>
+  </div>
+  <h5 class="eventType">Event Type</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Action</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
   <h4 id="Kinstrife_Application_ApplicationFlow_LoadingStarted" data-uid="Kinstrife.Application.ApplicationFlow.LoadingStarted">LoadingStarted</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
@@ -1592,30 +1667,6 @@ The only reason why this is currently a MonoBehaviour is because it requires Sta
   </table>
   
   
-  <h4 id="Kinstrife_Application_ApplicationFlow_OnEndCampaign" data-uid="Kinstrife.Application.ApplicationFlow.OnEndCampaign">OnEndCampaign</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public event Action&lt;CampaignDefinition&gt; OnEndCampaign</code></pre>
-  </div>
-  <h5 class="eventType">Event Type</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Action</span>&lt;<span class="xref">CampaignDefinition</span>&gt;</td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
   <h4 id="Kinstrife_Application_ApplicationFlow_OnFinishLoadGameMode" data-uid="Kinstrife.Application.ApplicationFlow.OnFinishLoadGameMode">OnFinishLoadGameMode</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
@@ -1658,30 +1709,6 @@ The only reason why this is currently a MonoBehaviour is because it requires Sta
     <tbody>
       <tr>
         <td><span class="xref">System.Action</span>&lt;<a class="xref" href="Kinstrife.Application.LocationHandle.html">LocationHandle</a>&gt;</td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <h4 id="Kinstrife_Application_ApplicationFlow_OnStartCampaign" data-uid="Kinstrife.Application.ApplicationFlow.OnStartCampaign">OnStartCampaign</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public event Action&lt;CampaignDefinition&gt; OnStartCampaign</code></pre>
-  </div>
-  <h5 class="eventType">Event Type</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Action</span>&lt;<span class="xref">CampaignDefinition</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>

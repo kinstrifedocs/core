@@ -86,6 +86,7 @@
     <h5>Implements</h5>
     <div><a class="xref" href="Kinstrife.Identifier.IIdentifiable.html">IIdentifiable</a></div>
     <div><span class="xref">System.IEquatable</span>&lt;<a class="xref" href="Kinstrife.Identifier.IdentifiableObject.html">IdentifiableObject</a>&gt;</div>
+    <div><a class="xref" href="Kinstrife.Application.ISceneDependency.html">ISceneDependency</a></div>
   </div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
@@ -115,10 +116,36 @@
   <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
   <h5 id="Kinstrife_Application_Location_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class Location : IdentifiableObject, IIdentifiable, IEquatable&lt;IdentifiableObject&gt;</code></pre>
+    <pre><code class="lang-csharp hljs">public class Location : IdentifiableObject, IIdentifiable, IEquatable&lt;IdentifiableObject&gt;, ISceneDependency</code></pre>
   </div>
   <h3 id="properties">Properties
   </h3>
+  
+  
+  <a id="Kinstrife_Application_Location_Description_" data-uid="Kinstrife.Application.Location.Description*"></a>
+  <h4 id="Kinstrife_Application_Location_Description" data-uid="Kinstrife.Application.Location.Description">Description</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Bindable(BindableSupport.Yes, BindingDirection.OneWay)]
+public string Description { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   
   
   <a id="Kinstrife_Application_Location_ForceReload_" data-uid="Kinstrife.Application.Location.ForceReload*"></a>
@@ -140,6 +167,31 @@
     <tbody>
       <tr>
         <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Kinstrife_Application_Location_Name_" data-uid="Kinstrife.Application.Location.Name*"></a>
+  <h4 id="Kinstrife_Application_Location_Name" data-uid="Kinstrife.Application.Location.Name">Name</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string Name { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -169,12 +221,40 @@
       </tr>
     </tbody>
   </table>
+  
+  
+  <a id="Kinstrife_Application_Location_SceneLoadSettings_" data-uid="Kinstrife.Application.Location.SceneLoadSettings*"></a>
+  <h4 id="Kinstrife_Application_Location_SceneLoadSettings" data-uid="Kinstrife.Application.Location.SceneLoadSettings">SceneLoadSettings</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public SceneLoadSettings SceneLoadSettings { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Kinstrife.Application.SceneLoadSettings.html">SceneLoadSettings</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   <h3 id="implements">Implements</h3>
   <div>
       <a class="xref" href="Kinstrife.Identifier.IIdentifiable.html">IIdentifiable</a>
   </div>
   <div>
       <span class="xref">System.IEquatable&lt;T&gt;</span>
+  </div>
+  <div>
+      <a class="xref" href="Kinstrife.Application.ISceneDependency.html">ISceneDependency</a>
   </div>
 </article>
           </div>
