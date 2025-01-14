@@ -5,10 +5,10 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Interface IRadialStateAnimator
+    <title>Struct Springs.VirtualTarget
    | Kinstrife </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Interface IRadialStateAnimator
+    <meta name="title" content="Struct Springs.VirtualTarget
    | Kinstrife ">
     <meta name="generator" content="docfx 2.59.4.0">
     
@@ -68,41 +68,56 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="Kinstrife.Animation.IRadialStateAnimator">
+            <article class="content wrap" id="_content" data-uid="Kinstrife.Mathematics.Springs.VirtualTarget">
   
   
-  <h1 id="Kinstrife_Animation_IRadialStateAnimator" data-uid="Kinstrife.Animation.IRadialStateAnimator" class="text-break">Interface IRadialStateAnimator
+  <h1 id="Kinstrife_Mathematics_Springs_VirtualTarget" data-uid="Kinstrife.Mathematics.Springs.VirtualTarget" class="text-break">Struct Springs.VirtualTarget
   </h1>
   <div class="markdown level0 summary"></div>
   <div class="markdown level0 conceptual"></div>
+  <div class="implements">
+    <h5>Implements</h5>
+    <div><a class="xref" href="Kinstrife.Mathematics.IVirtualTarget-1.html">IVirtualTarget</a>&lt;<span class="xref">Vector2</span>&gt;</div>
+  </div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
     <div>
-      <a class="xref" href="Kinstrife.Animation.IAnimator.html#Kinstrife_Animation_IAnimator_OnPlayEvent">IAnimator.OnPlayEvent</a>
+      <span class="xref">System.ValueType.Equals(System.Object)</span>
     </div>
     <div>
-      <a class="xref" href="Kinstrife.Animation.IAnimator.html#Kinstrife_Animation_IAnimator_OnStopEvent">IAnimator.OnStopEvent</a>
+      <span class="xref">System.ValueType.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.ValueType.ToString()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
     </div>
   </div>
-  <h6><strong>Namespace</strong>: <a class="xref" href="Kinstrife.Animation.html">Kinstrife.Animation</a></h6>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Kinstrife.Mathematics.html">Kinstrife.Mathematics</a></h6>
   <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
-  <h5 id="Kinstrife_Animation_IRadialStateAnimator_syntax">Syntax</h5>
+  <h5 id="Kinstrife_Mathematics_Springs_VirtualTarget_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public interface IRadialStateAnimator : IAnimator</code></pre>
+    <pre><code class="lang-csharp hljs">public struct VirtualTarget : IVirtualTarget&lt;Vector2&gt;</code></pre>
   </div>
-  <h3 id="properties">Properties
+  <h3 id="fields">Fields
   </h3>
   
   
-  <a id="Kinstrife_Animation_IRadialStateAnimator_DebugDrawOffset_" data-uid="Kinstrife.Animation.IRadialStateAnimator.DebugDrawOffset*"></a>
-  <h4 id="Kinstrife_Animation_IRadialStateAnimator_DebugDrawOffset" data-uid="Kinstrife.Animation.IRadialStateAnimator.DebugDrawOffset">DebugDrawOffset</h4>
+  <h4 id="Kinstrife_Mathematics_Springs_VirtualTarget_value" data-uid="Kinstrife.Mathematics.Springs.VirtualTarget.value">value</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">Vector3 DebugDrawOffset { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Vector2 value</code></pre>
   </div>
-  <h5 class="propertyValue">Property Value</h5>
+  <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
       <tr>
@@ -112,20 +127,46 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Vector3</span></td>
+        <td><span class="xref">Vector2</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   
   
-  <a id="Kinstrife_Animation_IRadialStateAnimator_InputRaw_" data-uid="Kinstrife.Animation.IRadialStateAnimator.InputRaw*"></a>
-  <h4 id="Kinstrife_Animation_IRadialStateAnimator_InputRaw" data-uid="Kinstrife.Animation.IRadialStateAnimator.InputRaw">InputRaw</h4>
+  <h4 id="Kinstrife_Mathematics_Springs_VirtualTarget_velocity" data-uid="Kinstrife.Mathematics.Springs.VirtualTarget.velocity">velocity</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">ref Vector2 InputRaw { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Vector2 velocity</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Vector2</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="properties">Properties
+  </h3>
+  
+  
+  <a id="Kinstrife_Mathematics_Springs_VirtualTarget_Value_" data-uid="Kinstrife.Mathematics.Springs.VirtualTarget.Value*"></a>
+  <h4 id="Kinstrife_Mathematics_Springs_VirtualTarget_Value" data-uid="Kinstrife.Mathematics.Springs.VirtualTarget.Value">Value</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Vector2 Value { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -144,13 +185,13 @@
   </table>
   
   
-  <a id="Kinstrife_Animation_IRadialStateAnimator_InputState_" data-uid="Kinstrife.Animation.IRadialStateAnimator.InputState*"></a>
-  <h4 id="Kinstrife_Animation_IRadialStateAnimator_InputState" data-uid="Kinstrife.Animation.IRadialStateAnimator.InputState">InputState</h4>
+  <a id="Kinstrife_Mathematics_Springs_VirtualTarget_Velocity_" data-uid="Kinstrife.Mathematics.Springs.VirtualTarget.Velocity*"></a>
+  <h4 id="Kinstrife_Mathematics_Springs_VirtualTarget_Velocity" data-uid="Kinstrife.Mathematics.Springs.VirtualTarget.Velocity">Velocity</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">ref InputState InputState { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Vector2 Velocity { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -162,86 +203,111 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="Kinstrife.Animation.InputState.html">InputState</a></td>
+        <td><span class="xref">Vector2</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
+  <h3 id="methods">Methods
+  </h3>
   
   
-  <a id="Kinstrife_Animation_IRadialStateAnimator_Radial_" data-uid="Kinstrife.Animation.IRadialStateAnimator.Radial*"></a>
-  <h4 id="Kinstrife_Animation_IRadialStateAnimator_Radial" data-uid="Kinstrife.Animation.IRadialStateAnimator.Radial">Radial</h4>
+  <a id="Kinstrife_Mathematics_Springs_VirtualTarget_Reset_" data-uid="Kinstrife.Mathematics.Springs.VirtualTarget.Reset*"></a>
+  <h4 id="Kinstrife_Mathematics_Springs_VirtualTarget_Reset" data-uid="Kinstrife.Mathematics.Springs.VirtualTarget.Reset">Reset()</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">ref RadialParameters Radial { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public void Reset()</code></pre>
   </div>
-  <h5 class="propertyValue">Property Value</h5>
+  
+  
+  <a id="Kinstrife_Mathematics_Springs_VirtualTarget_Step_" data-uid="Kinstrife.Mathematics.Springs.VirtualTarget.Step*"></a>
+  <h4 id="Kinstrife_Mathematics_Springs_VirtualTarget_Step_Vector2_System_Single_System_Single_System_Single_" data-uid="Kinstrife.Mathematics.Springs.VirtualTarget.Step(Vector2,System.Single,System.Single,System.Single)">Step(Vector2, Single, Single, Single)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Step(Vector2 target, float halflife, float inertia, float deltaTime)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
       <tr>
         <th>Type</th>
+        <th>Name</th>
         <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="Kinstrife.Animation.RadialParameters.html">RadialParameters</a></td>
+        <td><span class="xref">Vector2</span></td>
+        <td><span class="parametername">target</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><span class="parametername">halflife</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><span class="parametername">inertia</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><span class="parametername">deltaTime</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   
   
-  <a id="Kinstrife_Animation_IRadialStateAnimator_transform_" data-uid="Kinstrife.Animation.IRadialStateAnimator.transform*"></a>
-  <h4 id="Kinstrife_Animation_IRadialStateAnimator_transform" data-uid="Kinstrife.Animation.IRadialStateAnimator.transform">transform</h4>
+  <a id="Kinstrife_Mathematics_Springs_VirtualTarget_Step_" data-uid="Kinstrife.Mathematics.Springs.VirtualTarget.Step*"></a>
+  <h4 id="Kinstrife_Mathematics_Springs_VirtualTarget_Step_Vector2_Vector2_System_Single_System_Single_" data-uid="Kinstrife.Mathematics.Springs.VirtualTarget.Step(Vector2,Vector2,System.Single,System.Single)">Step(Vector2, Vector2, Single, Single)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">Transform transform { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public void Step(Vector2 target, Vector2 velocityTarget, float halflife, float deltaTime)</code></pre>
   </div>
-  <h5 class="propertyValue">Property Value</h5>
+  <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
       <tr>
         <th>Type</th>
+        <th>Name</th>
         <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Transform</span></td>
+        <td><span class="xref">Vector2</span></td>
+        <td><span class="parametername">target</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">Vector2</span></td>
+        <td><span class="parametername">velocityTarget</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><span class="parametername">halflife</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><span class="parametername">deltaTime</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
-  
-  
-  <a id="Kinstrife_Animation_IRadialStateAnimator_VirtualTarget_" data-uid="Kinstrife.Animation.IRadialStateAnimator.VirtualTarget*"></a>
-  <h4 id="Kinstrife_Animation_IRadialStateAnimator_VirtualTarget" data-uid="Kinstrife.Animation.IRadialStateAnimator.VirtualTarget">VirtualTarget</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">ref Springs.VirtualTarget VirtualTarget { get; }</code></pre>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <a class="xref" href="Kinstrife.Mathematics.IVirtualTarget-1.html">IVirtualTarget&lt;T&gt;</a>
   </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Kinstrife.Mathematics.Springs.VirtualTarget.html">Springs.VirtualTarget</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
 </article>
           </div>
           
