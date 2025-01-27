@@ -80,6 +80,11 @@
     <div class="level0"><span class="xref">System.Object</span></div>
     <div class="level1"><span class="xref">TileQuadTree</span></div>
   </div>
+  <div class="implements">
+    <h5>Implements</h5>
+    <div><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="Kinstrife.Core.WebMercator.TileQuadTree.TileQuadTreeNode.html">TileQuadTree.TileQuadTreeNode</a>&gt;</div>
+    <div><span class="xref">System.Collections.IEnumerable</span></div>
+  </div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
     <div>
@@ -109,7 +114,7 @@
   <h5 id="Kinstrife_Core_WebMercator_TileQuadTree_syntax">Syntax</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">[Serializable]
-public class TileQuadTree</code></pre>
+public class TileQuadTree : IEnumerable&lt;TileQuadTree.TileQuadTreeNode&gt;, IEnumerable</code></pre>
   </div>
   <h3 id="constructors">Constructors
   </h3>
@@ -310,6 +315,31 @@ public class TileQuadTree</code></pre>
   </table>
   
   
+  <a id="Kinstrife_Core_WebMercator_TileQuadTree_GetEnumerator_" data-uid="Kinstrife.Core.WebMercator.TileQuadTree.GetEnumerator*"></a>
+  <h4 id="Kinstrife_Core_WebMercator_TileQuadTree_GetEnumerator" data-uid="Kinstrife.Core.WebMercator.TileQuadTree.GetEnumerator">GetEnumerator()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IEnumerator&lt;TileQuadTree.TileQuadTreeNode&gt; GetEnumerator()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IEnumerator</span>&lt;<a class="xref" href="Kinstrife.Core.WebMercator.TileQuadTree.TileQuadTreeNode.html">TileQuadTree.TileQuadTreeNode</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
   <a id="Kinstrife_Core_WebMercator_TileQuadTree_GetSmallestContainingNode_" data-uid="Kinstrife.Core.WebMercator.TileQuadTree.GetSmallestContainingNode*"></a>
   <h4 id="Kinstrife_Core_WebMercator_TileQuadTree_GetSmallestContainingNode_Kinstrife_Core_WebMercator_Tile_" data-uid="Kinstrife.Core.WebMercator.TileQuadTree.GetSmallestContainingNode(Kinstrife.Core.WebMercator.Tile)">GetSmallestContainingNode(Tile)</h4>
   <div class="markdown level1 summary"></div>
@@ -429,6 +459,40 @@ public class TileQuadTree</code></pre>
       </tr>
     </tbody>
   </table>
+  <h3 id="eii">Explicit Interface Implementations
+  </h3>
+  
+  
+  <a id="Kinstrife_Core_WebMercator_TileQuadTree_System_Collections_IEnumerable_GetEnumerator_" data-uid="Kinstrife.Core.WebMercator.TileQuadTree.System#Collections#IEnumerable#GetEnumerator*"></a>
+  <h4 id="Kinstrife_Core_WebMercator_TileQuadTree_System_Collections_IEnumerable_GetEnumerator" data-uid="Kinstrife.Core.WebMercator.TileQuadTree.System#Collections#IEnumerable#GetEnumerator">IEnumerable.GetEnumerator()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IEnumerator IEnumerable.GetEnumerator()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.IEnumerator</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <span class="xref">System.Collections.Generic.IEnumerable&lt;T&gt;</span>
+  </div>
+  <div>
+      <span class="xref">System.Collections.IEnumerable</span>
+  </div>
 </article>
           </div>
           
