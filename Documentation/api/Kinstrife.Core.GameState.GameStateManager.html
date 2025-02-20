@@ -193,13 +193,13 @@
   
   
   <a id="Kinstrife_Core_GameState_GameStateManager_DeserializeMetaData_" data-uid="Kinstrife.Core.GameState.GameStateManager.DeserializeMetaData*"></a>
-  <h4 id="Kinstrife_Core_GameState_GameStateManager_DeserializeMetaData_System_String_Kinstrife_Database_DatabaseAccessor_" data-uid="Kinstrife.Core.GameState.GameStateManager.DeserializeMetaData(System.String,Kinstrife.Database.DatabaseAccessor)">DeserializeMetaData(String, DatabaseAccessor)</h4>
+  <h4 id="Kinstrife_Core_GameState_GameStateManager_DeserializeMetaData_System_String_System_String_Kinstrife_Database_DatabaseAccessor_" data-uid="Kinstrife.Core.GameState.GameStateManager.DeserializeMetaData(System.String,System.String,Kinstrife.Database.DatabaseAccessor)">DeserializeMetaData(String, String, DatabaseAccessor)</h4>
   <div class="markdown level1 summary"><p>Deserialize meta data of a save game, which might contain interesting data to display in a loading menu.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static GameStateMetaData DeserializeMetaData(string saveGameName, DatabaseAccessor database)</code></pre>
+    <pre><code class="lang-csharp hljs">public static GameStateMetaData DeserializeMetaData(string saveGameName, string saveDirectory, DatabaseAccessor database)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -214,8 +214,13 @@
       <tr>
         <td><span class="xref">System.String</span></td>
         <td><span class="parametername">saveGameName</span></td>
-        <td><p>File name of save game, same as with <a class="xref" href="Kinstrife.Core.GameState.GameStateManager.html#Kinstrife_Core_GameState_GameStateManager_Load_System_String_Kinstrife_Database_DatabaseAccessor_">Load(String, DatabaseAccessor)</a></p>
+        <td><p>File name of save game, same as with <see cref="!:Load(string, DatabaseAccessor)"></see></p>
 </td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">saveDirectory</span></td>
+        <td></td>
       </tr>
       <tr>
         <td><a class="xref" href="Kinstrife.Database.DatabaseAccessor.html">DatabaseAccessor</a></td>
@@ -242,12 +247,12 @@
   
   
   <a id="Kinstrife_Core_GameState_GameStateManager_DestroySave_" data-uid="Kinstrife.Core.GameState.GameStateManager.DestroySave*"></a>
-  <h4 id="Kinstrife_Core_GameState_GameStateManager_DestroySave_System_String_" data-uid="Kinstrife.Core.GameState.GameStateManager.DestroySave(System.String)">DestroySave(String)</h4>
+  <h4 id="Kinstrife_Core_GameState_GameStateManager_DestroySave_System_String_System_String_" data-uid="Kinstrife.Core.GameState.GameStateManager.DestroySave(System.String,System.String)">DestroySave(String, String)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void DestroySave(string saveName)</code></pre>
+    <pre><code class="lang-csharp hljs">public void DestroySave(string saveName, string saveDirectory)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -262,6 +267,38 @@
       <tr>
         <td><span class="xref">System.String</span></td>
         <td><span class="parametername">saveName</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">saveDirectory</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Kinstrife_Core_GameState_GameStateManager_DestroySaveDirectory_" data-uid="Kinstrife.Core.GameState.GameStateManager.DestroySaveDirectory*"></a>
+  <h4 id="Kinstrife_Core_GameState_GameStateManager_DestroySaveDirectory_System_String_" data-uid="Kinstrife.Core.GameState.GameStateManager.DestroySaveDirectory(System.String)">DestroySaveDirectory(String)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void DestroySaveDirectory(string saveDirectory)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">saveDirectory</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -335,14 +372,14 @@
   </table>
   
   
-  <a id="Kinstrife_Core_GameState_GameStateManager_GetExistingSaves_" data-uid="Kinstrife.Core.GameState.GameStateManager.GetExistingSaves*"></a>
-  <h4 id="Kinstrife_Core_GameState_GameStateManager_GetExistingSaves" data-uid="Kinstrife.Core.GameState.GameStateManager.GetExistingSaves">GetExistingSaves()</h4>
+  <a id="Kinstrife_Core_GameState_GameStateManager_GetExistingSaveFolders_" data-uid="Kinstrife.Core.GameState.GameStateManager.GetExistingSaveFolders*"></a>
+  <h4 id="Kinstrife_Core_GameState_GameStateManager_GetExistingSaveFolders" data-uid="Kinstrife.Core.GameState.GameStateManager.GetExistingSaveFolders">GetExistingSaveFolders()</h4>
   <div class="markdown level1 summary"><p>Return a list of savegame file names located in the save game directory</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static IList&lt;string&gt; GetExistingSaves()</code></pre>
+    <pre><code class="lang-csharp hljs">public static IList&lt;string&gt; GetExistingSaveFolders()</code></pre>
   </div>
   <h5 class="returns">Returns</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -355,6 +392,96 @@
     <tbody>
       <tr>
         <td><span class="xref">System.Collections.Generic.IList</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Kinstrife_Core_GameState_GameStateManager_GetExistingSaves_" data-uid="Kinstrife.Core.GameState.GameStateManager.GetExistingSaves*"></a>
+  <h4 id="Kinstrife_Core_GameState_GameStateManager_GetExistingSaves_System_String_" data-uid="Kinstrife.Core.GameState.GameStateManager.GetExistingSaves(System.String)">GetExistingSaves(String)</h4>
+  <div class="markdown level1 summary"><p>Return a list of savegame file names located in the save game directory</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IList&lt;string&gt; GetExistingSaves(string saveDirectory)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">saveDirectory</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IList</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Kinstrife_Core_GameState_GameStateManager_GetSaveDirectorName_" data-uid="Kinstrife.Core.GameState.GameStateManager.GetSaveDirectorName*"></a>
+  <h4 id="Kinstrife_Core_GameState_GameStateManager_GetSaveDirectorName_System_String_System_String_" data-uid="Kinstrife.Core.GameState.GameStateManager.GetSaveDirectorName(System.String,System.String)">GetSaveDirectorName(String, String)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static string GetSaveDirectorName(string name, string guid)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">name</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">guid</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -406,13 +533,13 @@
   
   
   <a id="Kinstrife_Core_GameState_GameStateManager_Load_" data-uid="Kinstrife.Core.GameState.GameStateManager.Load*"></a>
-  <h4 id="Kinstrife_Core_GameState_GameStateManager_Load_System_String_Kinstrife_Database_DatabaseAccessor_" data-uid="Kinstrife.Core.GameState.GameStateManager.Load(System.String,Kinstrife.Database.DatabaseAccessor)">Load(String, DatabaseAccessor)</h4>
+  <h4 id="Kinstrife_Core_GameState_GameStateManager_Load_System_String_System_String_Kinstrife_Database_DatabaseAccessor_" data-uid="Kinstrife.Core.GameState.GameStateManager.Load(System.String,System.String,Kinstrife.Database.DatabaseAccessor)">Load(String, String, DatabaseAccessor)</h4>
   <div class="markdown level1 summary"><p>Load game state with name. Probably should be made async.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void Load(string saveName, DatabaseAccessor database)</code></pre>
+    <pre><code class="lang-csharp hljs">public void Load(string saveName, string saveDirectory, DatabaseAccessor database)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -431,6 +558,11 @@
 </td>
       </tr>
       <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">saveDirectory</span></td>
+        <td></td>
+      </tr>
+      <tr>
         <td><a class="xref" href="Kinstrife.Database.DatabaseAccessor.html">DatabaseAccessor</a></td>
         <td><span class="parametername">database</span></td>
         <td></td>
@@ -439,14 +571,13 @@
   </table>
   
   
-  <a id="Kinstrife_Core_GameState_GameStateManager_Save_" data-uid="Kinstrife.Core.GameState.GameStateManager.Save*"></a>
-  <h4 id="Kinstrife_Core_GameState_GameStateManager_Save_System_String_" data-uid="Kinstrife.Core.GameState.GameStateManager.Save(System.String)">Save(String)</h4>
-  <div class="markdown level1 summary"><p>Save game state with specified name. Probably should be made async.</p>
-</div>
+  <a id="Kinstrife_Core_GameState_GameStateManager_SaveDirectoryExistsAlready_" data-uid="Kinstrife.Core.GameState.GameStateManager.SaveDirectoryExistsAlready*"></a>
+  <h4 id="Kinstrife_Core_GameState_GameStateManager_SaveDirectoryExistsAlready_System_String_" data-uid="Kinstrife.Core.GameState.GameStateManager.SaveDirectoryExistsAlready(System.String)">SaveDirectoryExistsAlready(String)</h4>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void Save(string saveName)</code></pre>
+    <pre><code class="lang-csharp hljs">public static bool SaveDirectoryExistsAlready(string saveDirectory)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -460,22 +591,36 @@
     <tbody>
       <tr>
         <td><span class="xref">System.String</span></td>
-        <td><span class="parametername">saveName</span></td>
-        <td><p>Name of file to be created. If that file exists already it will be overwritten!</p>
-</td>
+        <td><span class="parametername">saveDirectory</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
       </tr>
     </tbody>
   </table>
   
   
   <a id="Kinstrife_Core_GameState_GameStateManager_SaveExistsAlready_" data-uid="Kinstrife.Core.GameState.GameStateManager.SaveExistsAlready*"></a>
-  <h4 id="Kinstrife_Core_GameState_GameStateManager_SaveExistsAlready_System_String_" data-uid="Kinstrife.Core.GameState.GameStateManager.SaveExistsAlready(System.String)">SaveExistsAlready(String)</h4>
+  <h4 id="Kinstrife_Core_GameState_GameStateManager_SaveExistsAlready_System_String_System_String_" data-uid="Kinstrife.Core.GameState.GameStateManager.SaveExistsAlready(System.String,System.String)">SaveExistsAlready(String, String)</h4>
   <div class="markdown level1 summary"><p>Determine whether file name is composed of valid characters (no slashes etc.)</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static bool SaveExistsAlready(string saveName)</code></pre>
+    <pre><code class="lang-csharp hljs">public static bool SaveExistsAlready(string saveName, string saveDirectory)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -492,6 +637,11 @@
         <td><span class="parametername">saveName</span></td>
         <td><p>Intended save game file name (without file extension)</p>
 </td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">saveDirectory</span></td>
+        <td></td>
       </tr>
     </tbody>
   </table>

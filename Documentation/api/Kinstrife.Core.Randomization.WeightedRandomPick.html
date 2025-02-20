@@ -116,13 +116,13 @@ public static class WeightedRandomPick</code></pre>
   
   
   <a id="Kinstrife_Core_Randomization_WeightedRandomPick_Pick_" data-uid="Kinstrife.Core.Randomization.WeightedRandomPick.Pick*"></a>
-  <h4 id="Kinstrife_Core_Randomization_WeightedRandomPick_Pick__1_System_Collections_Generic_IEnumerable___0__System_Single_" data-uid="Kinstrife.Core.Randomization.WeightedRandomPick.Pick``1(System.Collections.Generic.IEnumerable{``0},System.Single)">Pick&lt;T&gt;(IEnumerable&lt;T&gt;, Single)</h4>
+  <h4 id="Kinstrife_Core_Randomization_WeightedRandomPick_Pick__1_System_Collections_Generic_IEnumerable___0__System_Single_System_Single_" data-uid="Kinstrife.Core.Randomization.WeightedRandomPick.Pick``1(System.Collections.Generic.IEnumerable{``0},System.Single,System.Single)">Pick&lt;T&gt;(IEnumerable&lt;T&gt;, Single, Single)</h4>
   <div class="markdown level1 summary"><p>Pick randomly from a list of weighted items.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static T Pick&lt;T&gt;(IEnumerable&lt;T&gt; weightedItems, float randomValueBetween01)
+    <pre><code class="lang-csharp hljs">public static T Pick&lt;T&gt;(IEnumerable&lt;T&gt; weightedItems, float randomValueBetween01, float modifier = 1F)
     where T : IWeighted</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -145,6 +145,12 @@ public static class WeightedRandomPick</code></pre>
         <td><span class="xref">System.Single</span></td>
         <td><span class="parametername">randomValueBetween01</span></td>
         <td><p>Value between 0 and 1.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><span class="parametername">modifier</span></td>
+        <td><p>Modifier to scale randomness. Values greater than 1 increase variance, while values less than 1 reduce variance.</p>
 </td>
       </tr>
     </tbody>

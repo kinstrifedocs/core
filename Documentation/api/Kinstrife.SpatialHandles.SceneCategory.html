@@ -86,6 +86,7 @@
     <h5>Implements</h5>
     <div><a class="xref" href="Kinstrife.Identifier.IIdentifiable.html">IIdentifiable</a></div>
     <div><span class="xref">System.IEquatable</span>&lt;<a class="xref" href="Kinstrife.Identifier.IdentifiableObject.html">IdentifiableObject</a>&gt;</div>
+    <div><a class="xref" href="Kinstrife.Database.IParentCategory.html">IParentCategory</a></div>
     <div><a class="xref" href="Kinstrife.Database.ICategory.html">ICategory</a></div>
   </div>
   <div class="inheritedMembers">
@@ -116,14 +117,96 @@
   <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
   <h5 id="Kinstrife_SpatialHandles_SceneCategory_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class SceneCategory : IdentifiableObject, IIdentifiable, IEquatable&lt;IdentifiableObject&gt;, ICategory</code></pre>
+    <pre><code class="lang-csharp hljs">public class SceneCategory : IdentifiableObject, IIdentifiable, IEquatable&lt;IdentifiableObject&gt;, IParentCategory, ICategory</code></pre>
   </div>
+  <h3 id="properties">Properties
+  </h3>
+  
+  
+  <a id="Kinstrife_SpatialHandles_SceneCategory_Parent_" data-uid="Kinstrife.SpatialHandles.SceneCategory.Parent*"></a>
+  <h4 id="Kinstrife_SpatialHandles_SceneCategory_Parent" data-uid="Kinstrife.SpatialHandles.SceneCategory.Parent">Parent</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public SceneCategory Parent { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Kinstrife.SpatialHandles.SceneCategory.html">SceneCategory</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Kinstrife_SpatialHandles_SceneCategory_ParentCategory_" data-uid="Kinstrife.SpatialHandles.SceneCategory.ParentCategory*"></a>
+  <h4 id="Kinstrife_SpatialHandles_SceneCategory_ParentCategory" data-uid="Kinstrife.SpatialHandles.SceneCategory.ParentCategory">ParentCategory</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IParentCategory ParentCategory { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Kinstrife.Database.IParentCategory.html">IParentCategory</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  
+  
+  <a id="Kinstrife_SpatialHandles_SceneCategory_GetParentCategories_" data-uid="Kinstrife.SpatialHandles.SceneCategory.GetParentCategories*"></a>
+  <h4 id="Kinstrife_SpatialHandles_SceneCategory_GetParentCategories" data-uid="Kinstrife.SpatialHandles.SceneCategory.GetParentCategories">GetParentCategories()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IEnumerable&lt;SceneCategory&gt; GetParentCategories()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="Kinstrife.SpatialHandles.SceneCategory.html">SceneCategory</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   <h3 id="implements">Implements</h3>
   <div>
       <a class="xref" href="Kinstrife.Identifier.IIdentifiable.html">IIdentifiable</a>
   </div>
   <div>
       <span class="xref">System.IEquatable&lt;T&gt;</span>
+  </div>
+  <div>
+      <a class="xref" href="Kinstrife.Database.IParentCategory.html">IParentCategory</a>
   </div>
   <div>
       <a class="xref" href="Kinstrife.Database.ICategory.html">ICategory</a>

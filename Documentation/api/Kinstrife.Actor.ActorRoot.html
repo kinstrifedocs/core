@@ -88,14 +88,16 @@
     <div><a class="xref" href="Kinstrife.Core.DependencyInjection.IInstall-1.html">IInstall</a>&lt;<a class="xref" href="Kinstrife.Actor.ActorRoot.html">ActorRoot</a>&gt;</div>
     <div><a class="xref" href="Kinstrife.Core.DependencyInjection.IInstall-1.html">IInstall</a>&lt;<a class="xref" href="Kinstrife.Actor.Interfaces.IActor.html">IActor</a>&gt;</div>
     <div><a class="xref" href="Kinstrife.Core.DependencyInjection.IInstall.html">IInstall</a></div>
-    <div><a class="xref" href="Kinstrife.Core.DependencyInjection.IConvertible.html">IConvertible</a></div>
+    <div><a class="xref" href="Kinstrife.Core.DependencyInjection.IReset.html">IReset</a></div>
+    <div><a class="xref" href="Kinstrife.Core.DependencyInjection.IInitializable.html">IInitializable</a></div>
     <div><a class="xref" href="Kinstrife.Core.DependencyInjection.IDependent.html">IDependent</a></div>
+    <div><a class="xref" href="Kinstrife.Procedures.IHasProceduresManager.html">IHasProceduresManager</a></div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Kinstrife.Actor.html">Kinstrife.Actor</a></h6>
   <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
   <h5 id="Kinstrife_Actor_ActorRoot_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public sealed class ActorRoot : MonoBehaviour, ICacheReferences, IActor, ITeleportable, IInstall&lt;ActorRoot&gt;, IInstall&lt;IActor&gt;, IInstall, IConvertible, IDependent</code></pre>
+    <pre><code class="lang-csharp hljs">public sealed class ActorRoot : MonoBehaviour, ICacheReferences, IActor, ITeleportable, IInstall&lt;ActorRoot&gt;, IInstall&lt;IActor&gt;, IInstall, IReset, IInitializable, IDependent, IHasProceduresManager</code></pre>
   </div>
   <h3 id="fields">Fields
   </h3>
@@ -173,12 +175,12 @@
   </table>
   
   
-  <h4 id="Kinstrife_Actor_ActorRoot_moveTarget" data-uid="Kinstrife.Actor.ActorRoot.moveTarget">moveTarget</h4>
+  <h4 id="Kinstrife_Actor_ActorRoot_physicsRigRootBody" data-uid="Kinstrife.Actor.ActorRoot.physicsRigRootBody">physicsRigRootBody</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Transform moveTarget</code></pre>
+    <pre><code class="lang-csharp hljs">public Rigidbody physicsRigRootBody</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -190,7 +192,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Transform</span></td>
+        <td><span class="xref">Rigidbody</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -645,6 +647,31 @@
   </table>
   
   
+  <a id="Kinstrife_Actor_ActorRoot_ProceduresManager_" data-uid="Kinstrife.Actor.ActorRoot.ProceduresManager*"></a>
+  <h4 id="Kinstrife_Actor_ActorRoot_ProceduresManager" data-uid="Kinstrife.Actor.ActorRoot.ProceduresManager">ProceduresManager</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ProceduresManager ProceduresManager { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Kinstrife.Procedures.ProceduresManager.html">ProceduresManager</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
   <a id="Kinstrife_Actor_ActorRoot_Status_" data-uid="Kinstrife.Actor.ActorRoot.Status*"></a>
   <h4 id="Kinstrife_Actor_ActorRoot_Status" data-uid="Kinstrife.Actor.ActorRoot.Status">Status</h4>
   <div class="markdown level1 summary"></div>
@@ -739,16 +766,6 @@
   </div>
   
   
-  <a id="Kinstrife_Actor_ActorRoot_Convert_" data-uid="Kinstrife.Actor.ActorRoot.Convert*"></a>
-  <h4 id="Kinstrife_Actor_ActorRoot_Convert" data-uid="Kinstrife.Actor.ActorRoot.Convert">Convert()</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void Convert()</code></pre>
-  </div>
-  
-  
   <a id="Kinstrife_Actor_ActorRoot_FinalizeProcessing_" data-uid="Kinstrife.Actor.ActorRoot.FinalizeProcessing*"></a>
   <h4 id="Kinstrife_Actor_ActorRoot_FinalizeProcessing" data-uid="Kinstrife.Actor.ActorRoot.FinalizeProcessing">FinalizeProcessing()</h4>
   <div class="markdown level1 summary"></div>
@@ -756,6 +773,100 @@
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public void FinalizeProcessing()</code></pre>
+  </div>
+  
+  
+  <a id="Kinstrife_Actor_ActorRoot_HandleTask_" data-uid="Kinstrife.Actor.ActorRoot.HandleTask*"></a>
+  <h4 id="Kinstrife_Actor_ActorRoot_HandleTask__1___0_" data-uid="Kinstrife.Actor.ActorRoot.HandleTask``1(``0)">HandleTask&lt;T&gt;(T)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void HandleTask&lt;T&gt;(T arguments)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">T</span></td>
+        <td><span class="parametername">arguments</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Kinstrife_Actor_ActorRoot_HasVisibility_" data-uid="Kinstrife.Actor.ActorRoot.HasVisibility*"></a>
+  <h4 id="Kinstrife_Actor_ActorRoot_HasVisibility_Vector3_" data-uid="Kinstrife.Actor.ActorRoot.HasVisibility(Vector3)">HasVisibility(Vector3)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool HasVisibility(Vector3 point)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Vector3</span></td>
+        <td><span class="parametername">point</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Kinstrife_Actor_ActorRoot_Initialize_" data-uid="Kinstrife.Actor.ActorRoot.Initialize*"></a>
+  <h4 id="Kinstrife_Actor_ActorRoot_Initialize" data-uid="Kinstrife.Actor.ActorRoot.Initialize">Initialize()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Initialize()</code></pre>
   </div>
   
   
@@ -794,6 +905,16 @@
       </tr>
     </tbody>
   </table>
+  
+  
+  <a id="Kinstrife_Actor_ActorRoot_Reset_" data-uid="Kinstrife.Actor.ActorRoot.Reset*"></a>
+  <h4 id="Kinstrife_Actor_ActorRoot_Reset" data-uid="Kinstrife.Actor.ActorRoot.Reset">Reset()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Reset()</code></pre>
+  </div>
   
   
   <a id="Kinstrife_Actor_ActorRoot_SameTeam_" data-uid="Kinstrife.Actor.ActorRoot.SameTeam*"></a>
@@ -1020,6 +1141,30 @@
   </table>
   
   
+  <h4 id="Kinstrife_Actor_ActorRoot_onPoolGet" data-uid="Kinstrife.Actor.ActorRoot.onPoolGet">onPoolGet</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public event Action onPoolGet</code></pre>
+  </div>
+  <h5 class="eventType">Event Type</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Kinstrife.Action.html">Kinstrife.Action</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
   <h4 id="Kinstrife_Actor_ActorRoot_OnReceiveDamage" data-uid="Kinstrife.Actor.ActorRoot.OnReceiveDamage">OnReceiveDamage</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
@@ -1038,6 +1183,30 @@
     <tbody>
       <tr>
         <td><span class="xref">Kinstrife.Action</span>&lt;<a class="xref" href="Kinstrife.Actor.Interfaces.IActor.html">IActor</a>, <span class="xref">System.Single</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="Kinstrife_Actor_ActorRoot_onReset" data-uid="Kinstrife.Actor.ActorRoot.onReset">onReset</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public event Action onReset</code></pre>
+  </div>
+  <h5 class="eventType">Event Type</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Kinstrife.Action.html">Kinstrife.Action</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -1110,10 +1279,16 @@
       <a class="xref" href="Kinstrife.Core.DependencyInjection.IInstall.html">IInstall</a>
   </div>
   <div>
-      <a class="xref" href="Kinstrife.Core.DependencyInjection.IConvertible.html">IConvertible</a>
+      <a class="xref" href="Kinstrife.Core.DependencyInjection.IReset.html">IReset</a>
+  </div>
+  <div>
+      <a class="xref" href="Kinstrife.Core.DependencyInjection.IInitializable.html">IInitializable</a>
   </div>
   <div>
       <a class="xref" href="Kinstrife.Core.DependencyInjection.IDependent.html">IDependent</a>
+  </div>
+  <div>
+      <a class="xref" href="Kinstrife.Procedures.IHasProceduresManager.html">IHasProceduresManager</a>
   </div>
 </article>
           </div>

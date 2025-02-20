@@ -93,6 +93,7 @@
     <div><a class="xref" href="Kinstrife.Core.DependencyInjection.IInstall-1.html">IInstall</a>&lt;<a class="xref" href="Kinstrife.Rigging.Skeleton.html">Skeleton</a>&gt;</div>
     <div><a class="xref" href="Kinstrife.Core.DependencyInjection.IInstall-1.html">IInstall</a>&lt;<a class="xref" href="Kinstrife.DataContainers.ITransformsProviderString.html">ITransformsProviderString</a>&gt;</div>
     <div><a class="xref" href="Kinstrife.Core.DependencyInjection.IInstall.html">IInstall</a></div>
+    <div><a class="xref" href="Kinstrife.Core.DependencyInjection.IReset.html">IReset</a></div>
     <div><a class="xref" href="Kinstrife.Core.DependencyInjection.IDependent.html">IDependent</a></div>
   </div>
   <div class="inheritedMembers">
@@ -177,7 +178,7 @@
   <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
   <h5 id="Kinstrife_Rigging_Skeleton_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class Skeleton : TransformsContainer&lt;SkeletonDefinitionAsset, string, BoneId, BoneTransform&gt;, IInitializable, ITransformsProviderString, ITransformsProvider&lt;string&gt;, IInstall&lt;Skeleton&gt;, IInstall&lt;ITransformsProviderString&gt;, IInstall, IDependent</code></pre>
+    <pre><code class="lang-csharp hljs">public class Skeleton : TransformsContainer&lt;SkeletonDefinitionAsset, string, BoneId, BoneTransform&gt;, IInitializable, ITransformsProviderString, ITransformsProvider&lt;string&gt;, IInstall&lt;Skeleton&gt;, IInstall&lt;ITransformsProviderString&gt;, IInstall, IReset, IDependent</code></pre>
   </div>
   <h3 id="fields">Fields
   </h3>
@@ -225,6 +226,30 @@
     <tbody>
       <tr>
         <td><a class="xref" href="Kinstrife.Rigging.RuntimeData.html">RuntimeData</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="Kinstrife_Rigging_Skeleton_humanPoseHandler" data-uid="Kinstrife.Rigging.Skeleton.humanPoseHandler">humanPoseHandler</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public HumanPoseHandler humanPoseHandler</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">HumanPoseHandler</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -301,31 +326,6 @@
     <tbody>
       <tr>
         <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="Kinstrife.Rigging.BoneTransform.html">BoneTransform</a>&gt;</td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="Kinstrife_Rigging_Skeleton_Initialized_" data-uid="Kinstrife.Rigging.Skeleton.Initialized*"></a>
-  <h4 id="Kinstrife_Rigging_Skeleton_Initialized" data-uid="Kinstrife.Rigging.Skeleton.Initialized">Initialized</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public bool Initialized { get; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Boolean</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -820,6 +820,16 @@
   </div>
   
   
+  <a id="Kinstrife_Rigging_Skeleton_Reset_" data-uid="Kinstrife.Rigging.Skeleton.Reset*"></a>
+  <h4 id="Kinstrife_Rigging_Skeleton_Reset" data-uid="Kinstrife.Rigging.Skeleton.Reset">Reset()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Reset()</code></pre>
+  </div>
+  
+  
   <a id="Kinstrife_Rigging_Skeleton_ResetPose_" data-uid="Kinstrife.Rigging.Skeleton.ResetPose*"></a>
   <h4 id="Kinstrife_Rigging_Skeleton_ResetPose" data-uid="Kinstrife.Rigging.Skeleton.ResetPose">ResetPose()</h4>
   <div class="markdown level1 summary"></div>
@@ -1195,6 +1205,30 @@
   </h3>
   
   
+  <h4 id="Kinstrife_Rigging_Skeleton_onReset" data-uid="Kinstrife.Rigging.Skeleton.onReset">onReset</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public event Action onReset</code></pre>
+  </div>
+  <h5 class="eventType">Event Type</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Action</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
   <h4 id="Kinstrife_Rigging_Skeleton_onStructuralChange" data-uid="Kinstrife.Rigging.Skeleton.onStructuralChange">onStructuralChange</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
@@ -1235,6 +1269,9 @@
   </div>
   <div>
       <a class="xref" href="Kinstrife.Core.DependencyInjection.IInstall.html">IInstall</a>
+  </div>
+  <div>
+      <a class="xref" href="Kinstrife.Core.DependencyInjection.IReset.html">IReset</a>
   </div>
   <div>
       <a class="xref" href="Kinstrife.Core.DependencyInjection.IDependent.html">IDependent</a>

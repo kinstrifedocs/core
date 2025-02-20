@@ -90,6 +90,7 @@
     <div><a class="xref" href="Kinstrife.DataContainers.ITransformsProvider-1.html">ITransformsProvider</a>&lt;<a class="xref" href="Kinstrife.Rigging.EffectorTag.html">EffectorTag</a>&gt;</div>
     <div><a class="xref" href="Kinstrife.Core.DependencyInjection.IInstall-1.html">IInstall</a>&lt;<a class="xref" href="Kinstrife.Rigging.IKRig.html">IKRig</a>&gt;</div>
     <div><a class="xref" href="Kinstrife.Core.DependencyInjection.IInstall.html">IInstall</a></div>
+    <div><a class="xref" href="Kinstrife.Core.DependencyInjection.IReset.html">IReset</a></div>
     <div><a class="xref" href="Kinstrife.Core.DependencyInjection.IDependent.html">IDependent</a></div>
   </div>
   <div class="inheritedMembers">
@@ -174,7 +175,7 @@
   <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
   <h5 id="Kinstrife_Rigging_IKRig_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class IKRig : TransformsContainer&lt;EffectorsDefinition, EffectorTag, EffectorId, EffectorHandle&gt;, ITransformsProvider&lt;EffectorTag&gt;, IInstall&lt;IKRig&gt;, IInstall, IDependent</code></pre>
+    <pre><code class="lang-csharp hljs">public class IKRig : TransformsContainer&lt;EffectorsDefinition, EffectorTag, EffectorId, EffectorHandle&gt;, ITransformsProvider&lt;EffectorTag&gt;, IInstall&lt;IKRig&gt;, IInstall, IReset, IDependent</code></pre>
   </div>
   <h3 id="methods">Methods
   </h3>
@@ -246,18 +247,6 @@
   </table>
   <h5 class="overrides">Overrides</h5>
   <div><span class="xref">Kinstrife.DataContainers.ContainerBehaviour&lt;Kinstrife.Rigging.EffectorsDefinition, Kinstrife.Rigging.EffectorTag, Kinstrife.Rigging.EffectorId, Kinstrife.Rigging.EffectorHandle, Transform&gt;.CreateInstanceFromSourceObject(Transform)</span></div>
-  
-  
-  <a id="Kinstrife_Rigging_IKRig_DoPostProcess_" data-uid="Kinstrife.Rigging.IKRig.DoPostProcess*"></a>
-  <h4 id="Kinstrife_Rigging_IKRig_DoPostProcess" data-uid="Kinstrife.Rigging.IKRig.DoPostProcess">DoPostProcess()</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected override void DoPostProcess()</code></pre>
-  </div>
-  <h5 class="overrides">Overrides</h5>
-  <div><span class="xref">Kinstrife.DataContainers.ContainerBehaviour&lt;Kinstrife.Rigging.EffectorsDefinition, Kinstrife.Rigging.EffectorTag, Kinstrife.Rigging.EffectorId, Kinstrife.Rigging.EffectorHandle, Transform&gt;.DoPostProcess()</span></div>
   
   
   <a id="Kinstrife_Rigging_IKRig_GetAssociatedObject_" data-uid="Kinstrife.Rigging.IKRig.GetAssociatedObject*"></a>
@@ -463,6 +452,16 @@
   <div><span class="xref">Kinstrife.DataContainers.ContainerBehaviour&lt;Kinstrife.Rigging.EffectorsDefinition, Kinstrife.Rigging.EffectorTag, Kinstrife.Rigging.EffectorId, Kinstrife.Rigging.EffectorHandle, Transform&gt;.OnClearInstance(Kinstrife.Rigging.EffectorHandle)</span></div>
   
   
+  <a id="Kinstrife_Rigging_IKRig_Reset_" data-uid="Kinstrife.Rigging.IKRig.Reset*"></a>
+  <h4 id="Kinstrife_Rigging_IKRig_Reset" data-uid="Kinstrife.Rigging.IKRig.Reset">Reset()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Reset()</code></pre>
+  </div>
+  
+  
   <a id="Kinstrife_Rigging_IKRig_TryGetEffector_" data-uid="Kinstrife.Rigging.IKRig.TryGetEffector*"></a>
   <h4 id="Kinstrife_Rigging_IKRig_TryGetEffector_Kinstrife_Rigging_EffectorTag_Kinstrife_Rigging_EffectorHandle__" data-uid="Kinstrife.Rigging.IKRig.TryGetEffector(Kinstrife.Rigging.EffectorTag,Kinstrife.Rigging.EffectorHandle@)">TryGetEffector(EffectorTag, out EffectorHandle)</h4>
   <div class="markdown level1 summary"></div>
@@ -566,6 +565,9 @@
   </div>
   <div>
       <a class="xref" href="Kinstrife.Core.DependencyInjection.IInstall.html">IInstall</a>
+  </div>
+  <div>
+      <a class="xref" href="Kinstrife.Core.DependencyInjection.IReset.html">IReset</a>
   </div>
   <div>
       <a class="xref" href="Kinstrife.Core.DependencyInjection.IDependent.html">IDependent</a>

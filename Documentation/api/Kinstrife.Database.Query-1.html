@@ -78,26 +78,16 @@
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><a class="xref" href="Kinstrife.Database.QueryBase-1.html">QueryBase</a>&lt;T&gt;</div>
-    <div class="level2"><span class="xref">Query&lt;T&gt;</span></div>
+    <div class="level1"><span class="xref">Query&lt;T&gt;</span></div>
+  </div>
+  <div class="implements">
+    <h5>Implements</h5>
+    <div><a class="xref" href="Kinstrife.Database.IQuery-1.html">IQuery</a>&lt;T&gt;</div>
+    <div><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;T&gt;</div>
+    <div><span class="xref">System.Collections.IEnumerable</span></div>
   </div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
-    <div>
-      <a class="xref" href="Kinstrife.Database.QueryBase-1.html#Kinstrife_Database_QueryBase_1_results">QueryBase&lt;T&gt;.results</a>
-    </div>
-    <div>
-      <a class="xref" href="Kinstrife.Database.QueryBase-1.html#Kinstrife_Database_QueryBase_1_Results">QueryBase&lt;T&gt;.Results</a>
-    </div>
-    <div>
-      <a class="xref" href="Kinstrife.Database.QueryBase-1.html#Kinstrife_Database_QueryBase_1_FirstOrDefault">QueryBase&lt;T&gt;.FirstOrDefault</a>
-    </div>
-    <div>
-      <a class="xref" href="Kinstrife.Database.QueryBase-1.html#Kinstrife_Database_QueryBase_1_Count">QueryBase&lt;T&gt;.Count</a>
-    </div>
-    <div>
-      <a class="xref" href="Kinstrife.Database.QueryBase-1.html#Kinstrife_Database_QueryBase_1_ResultsToList">QueryBase&lt;T&gt;.ResultsToList()</a>
-    </div>
     <div>
       <span class="xref">System.Object.ToString()</span>
     </div>
@@ -124,7 +114,7 @@
   <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
   <h5 id="Kinstrife_Database_Query_1_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class Query&lt;T&gt; : QueryBase&lt;T&gt; where T : ICategorized, ITagged</code></pre>
+    <pre><code class="lang-csharp hljs">public class Query&lt;T&gt; : IQuery&lt;T&gt;, IEnumerable&lt;T&gt;, IEnumerable where T : ICategorized, ITagged</code></pre>
   </div>
   <h5 class="typeParameters">Type Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -170,40 +160,97 @@
       </tr>
     </tbody>
   </table>
-  <h3 id="methods">Methods
+  <h3 id="fields">Fields
   </h3>
   
   
-  <a id="Kinstrife_Database_Query_1_Where_" data-uid="Kinstrife.Database.Query`1.Where*"></a>
-  <h4 id="Kinstrife_Database_Query_1_Where_Type_UnityEngine_Object_" data-uid="Kinstrife.Database.Query`1.Where(Type,UnityEngine.Object)">Where(Type, Object)</h4>
+  <h4 id="Kinstrife_Database_Query_1_results" data-uid="Kinstrife.Database.Query`1.results">results</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected Query&lt;T&gt; Where(Type type, Object caller = null)</code></pre>
+    <pre><code class="lang-csharp hljs">[NonSerialized]
+public IEnumerable&lt;T&gt; results</code></pre>
   </div>
-  <h5 class="parameters">Parameters</h5>
+  <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
       <tr>
         <th>Type</th>
-        <th>Name</th>
         <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Type</span></td>
-        <td><span class="parametername">type</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><span class="xref">UnityEngine.Object</span></td>
-        <td><span class="parametername">caller</span></td>
+        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;T&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
+  <h3 id="properties">Properties
+  </h3>
+  
+  
+  <a id="Kinstrife_Database_Query_1_Count_" data-uid="Kinstrife.Database.Query`1.Count*"></a>
+  <h4 id="Kinstrife_Database_Query_1_Count" data-uid="Kinstrife.Database.Query`1.Count">Count</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int Count { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Kinstrife_Database_Query_1_Results_" data-uid="Kinstrife.Database.Query`1.Results*"></a>
+  <h4 id="Kinstrife_Database_Query_1_Results" data-uid="Kinstrife.Database.Query`1.Results">Results</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IEnumerable&lt;T&gt; Results { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;T&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  
+  
+  <a id="Kinstrife_Database_Query_1_FirstOrDefault_" data-uid="Kinstrife.Database.Query`1.FirstOrDefault*"></a>
+  <h4 id="Kinstrife_Database_Query_1_FirstOrDefault" data-uid="Kinstrife.Database.Query`1.FirstOrDefault">FirstOrDefault()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public T FirstOrDefault()</code></pre>
+  </div>
   <h5 class="returns">Returns</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
@@ -214,11 +261,98 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="Kinstrife.Database.Query-1.html">Query</a>&lt;T&gt;</td>
+        <td><span class="xref">T</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
+  
+  
+  <a id="Kinstrife_Database_Query_1_GetEnumerator_" data-uid="Kinstrife.Database.Query`1.GetEnumerator*"></a>
+  <h4 id="Kinstrife_Database_Query_1_GetEnumerator" data-uid="Kinstrife.Database.Query`1.GetEnumerator">GetEnumerator()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IEnumerator&lt;T&gt; GetEnumerator()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IEnumerator</span>&lt;T&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Kinstrife_Database_Query_1_ToList_" data-uid="Kinstrife.Database.Query`1.ToList*"></a>
+  <h4 id="Kinstrife_Database_Query_1_ToList" data-uid="Kinstrife.Database.Query`1.ToList">ToList()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public List&lt;T&gt; ToList()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.List</span>&lt;T&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="eii">Explicit Interface Implementations
+  </h3>
+  
+  
+  <a id="Kinstrife_Database_Query_1_System_Collections_IEnumerable_GetEnumerator_" data-uid="Kinstrife.Database.Query`1.System#Collections#IEnumerable#GetEnumerator*"></a>
+  <h4 id="Kinstrife_Database_Query_1_System_Collections_IEnumerable_GetEnumerator" data-uid="Kinstrife.Database.Query`1.System#Collections#IEnumerable#GetEnumerator">IEnumerable.GetEnumerator()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IEnumerator IEnumerable.GetEnumerator()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.IEnumerator</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <a class="xref" href="Kinstrife.Database.IQuery-1.html">IQuery&lt;T&gt;</a>
+  </div>
+  <div>
+      <span class="xref">System.Collections.Generic.IEnumerable&lt;T&gt;</span>
+  </div>
+  <div>
+      <span class="xref">System.Collections.IEnumerable</span>
+  </div>
 </article>
           </div>
           
