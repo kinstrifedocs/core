@@ -104,7 +104,8 @@
   <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
   <h5 id="Kinstrife_Procedures_ProcedureClient_1_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[Serializable]
+    <pre><code class="lang-csharp hljs">[Obsolete(&quot;Rename to RequestClient, ProcedureRequestClient or IORequestClient&quot;)]
+[Serializable]
 public struct ProcedureClient&lt;T&gt; : IHasReferencedProcedure</code></pre>
   </div>
   <h5 class="typeParameters">Type Parameters</h5>
@@ -118,6 +119,35 @@ public struct ProcedureClient&lt;T&gt; : IHasReferencedProcedure</code></pre>
     <tbody>
       <tr>
         <td><span class="parametername">T</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="constructors">Constructors
+  </h3>
+  
+  
+  <a id="Kinstrife_Procedures_ProcedureClient_1__ctor_" data-uid="Kinstrife.Procedures.ProcedureClient`1.#ctor*"></a>
+  <h4 id="Kinstrife_Procedures_ProcedureClient_1__ctor_Kinstrife_Procedures_RequestPriority_" data-uid="Kinstrife.Procedures.ProcedureClient`1.#ctor(Kinstrife.Procedures.RequestPriority)">ProcedureClient(RequestPriority)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ProcedureClient(RequestPriority requestPriority)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Kinstrife.Procedures.RequestPriority.html">RequestPriority</a></td>
+        <td><span class="parametername">requestPriority</span></td>
         <td></td>
       </tr>
     </tbody>

@@ -85,12 +85,13 @@
     <h5>Implements</h5>
     <div><a class="xref" href="Kinstrife.Application.IModule.html">IModule</a></div>
     <div><a class="xref" href="Kinstrife.Application.ISceneDependency.html">ISceneDependency</a></div>
+    <div><span class="xref">System.IComparable</span>&lt;<a class="xref" href="Kinstrife.Application.ModuleDefinition.html">ModuleDefinition</a>&gt;</div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Kinstrife.Application.html">Kinstrife.Application</a></h6>
   <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
   <h5 id="Kinstrife_Application_ModuleDefinition_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class ModuleDefinition : ScriptableObject, IModule, ISceneDependency</code></pre>
+    <pre><code class="lang-csharp hljs">public class ModuleDefinition : ScriptableObject, IModule, ISceneDependency, IComparable&lt;ModuleDefinition&gt;</code></pre>
   </div>
   <h3 id="fields">Fields
   </h3>
@@ -205,6 +206,31 @@ public bool HasRecursiveDependencies</code></pre>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public bool CanBePrimary { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Kinstrife_Application_ModuleDefinition_CannotStack_" data-uid="Kinstrife.Application.ModuleDefinition.CannotStack*"></a>
+  <h4 id="Kinstrife_Application_ModuleDefinition_CannotStack" data-uid="Kinstrife.Application.ModuleDefinition.CannotStack">CannotStack</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool CannotStack { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -500,6 +526,48 @@ public bool HasRecursiveDependencies</code></pre>
   </h3>
   
   
+  <a id="Kinstrife_Application_ModuleDefinition_CompareTo_" data-uid="Kinstrife.Application.ModuleDefinition.CompareTo*"></a>
+  <h4 id="Kinstrife_Application_ModuleDefinition_CompareTo_Kinstrife_Application_ModuleDefinition_" data-uid="Kinstrife.Application.ModuleDefinition.CompareTo(Kinstrife.Application.ModuleDefinition)">CompareTo(ModuleDefinition)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int CompareTo(ModuleDefinition other)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Kinstrife.Application.ModuleDefinition.html">ModuleDefinition</a></td>
+        <td><span class="parametername">other</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
   <a id="Kinstrife_Application_ModuleDefinition_HasMissingDependencies_" data-uid="Kinstrife.Application.ModuleDefinition.HasMissingDependencies*"></a>
   <h4 id="Kinstrife_Application_ModuleDefinition_HasMissingDependencies" data-uid="Kinstrife.Application.ModuleDefinition.HasMissingDependencies">HasMissingDependencies()</h4>
   <div class="markdown level1 summary"></div>
@@ -581,6 +649,9 @@ public bool HasRecursiveDependencies</code></pre>
   </div>
   <div>
       <a class="xref" href="Kinstrife.Application.ISceneDependency.html">ISceneDependency</a>
+  </div>
+  <div>
+      <span class="xref">System.IComparable&lt;T&gt;</span>
   </div>
 </article>
           </div>

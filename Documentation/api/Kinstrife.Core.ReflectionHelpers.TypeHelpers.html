@@ -116,14 +116,35 @@
   
   
   <a id="Kinstrife_Core_ReflectionHelpers_TypeHelpers_GetImplementingTypes_" data-uid="Kinstrife.Core.ReflectionHelpers.TypeHelpers.GetImplementingTypes*"></a>
-  <h4 id="Kinstrife_Core_ReflectionHelpers_TypeHelpers_GetImplementingTypes__1" data-uid="Kinstrife.Core.ReflectionHelpers.TypeHelpers.GetImplementingTypes``1">GetImplementingTypes&lt;T&gt;()</h4>
-  <div class="markdown level1 summary"><p>Get all types that implement <code data-dev-comment-type="typeparamref" class="typeparamref">T</code> from all currently loaded assemblies.</p>
-</div>
+  <h4 id="Kinstrife_Core_ReflectionHelpers_TypeHelpers_GetImplementingTypes__1_System_Boolean_System_Boolean_" data-uid="Kinstrife.Core.ReflectionHelpers.TypeHelpers.GetImplementingTypes``1(System.Boolean,System.Boolean)">GetImplementingTypes&lt;T&gt;(Boolean, Boolean)</h4>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static IEnumerable&lt;Type&gt; GetImplementingTypes&lt;T&gt;()</code></pre>
+    <pre><code class="lang-csharp hljs">public static IEnumerable&lt;Type&gt; GetImplementingTypes&lt;T&gt;(bool includeInternalAssemblies = false, bool includeEditor = false)</code></pre>
   </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">includeInternalAssemblies</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">includeEditor</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   <h5 class="returns">Returns</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
@@ -280,6 +301,53 @@
     <tbody>
       <tr>
         <td><span class="xref">Type</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Kinstrife_Core_ReflectionHelpers_TypeHelpers_GetUserCreatedAssemblies_" data-uid="Kinstrife.Core.ReflectionHelpers.TypeHelpers.GetUserCreatedAssemblies*"></a>
+  <h4 id="Kinstrife_Core_ReflectionHelpers_TypeHelpers_GetUserCreatedAssemblies_AppDomain_System_Boolean_" data-uid="Kinstrife.Core.ReflectionHelpers.TypeHelpers.GetUserCreatedAssemblies(AppDomain,System.Boolean)">GetUserCreatedAssemblies(AppDomain, Boolean)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IEnumerable&lt;Assembly&gt; GetUserCreatedAssemblies(this AppDomain appDomain, bool includeEditor = false)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">AppDomain</span></td>
+        <td><span class="parametername">appDomain</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">includeEditor</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<span class="xref">Assembly</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>

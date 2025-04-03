@@ -84,11 +84,16 @@
   </div>
   <div class="implements">
     <h5>Implements</h5>
-    <div><span class="xref">IInjectable</span></div>
-    <div><span class="xref">IInstall</span>&lt;<a class="xref" href="Kinstrife.CommandModule.DPadView.html">DPadView</a>&gt;</div>
+    <div><a class="xref" href="Kinstrife.Core.DependencyInjection.IInjectable.html">IInjectable</a></div>
+    <div><a class="xref" href="Kinstrife.Core.DependencyInjection.IInstall-1.html">IInstall</a>&lt;<a class="xref" href="Kinstrife.CommandModule.DPadView.html">DPadView</a>&gt;</div>
+    <div><a class="xref" href="Kinstrife.Core.DependencyInjection.IInstall.html">IInstall</a></div>
+    <div><a class="xref" href="Kinstrife.Core.DependencyInjection.IDependent.html">IDependent</a></div>
   </div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="Kinstrife.CommandModule.FixedInputView-1.html#Kinstrife_CommandModule_FixedInputView_1_FixedInputCount">FixedInputView&lt;DPadView.Direction&gt;.FixedInputCount</a>
+    </div>
     <div>
       <a class="xref" href="Kinstrife.CommandModule.FixedInputView-1.html#Kinstrife_CommandModule_FixedInputView_1_interactionSize">FixedInputView&lt;DPadView.Direction&gt;.interactionSize</a>
     </div>
@@ -120,6 +125,9 @@
       <a class="xref" href="Kinstrife.CommandModule.FixedInputView-1.html#Kinstrife_CommandModule_FixedInputView_1_IsPressed_Vector2_System_Int32_">FixedInputView&lt;DPadView.Direction&gt;.IsPressed(Vector2, Int32)</a>
     </div>
     <div>
+      <a class="xref" href="Kinstrife.CommandModule.FixedInputView-1.html#Kinstrife_CommandModule_FixedInputView_1_DirectionToIndex_Vector2_">FixedInputView&lt;DPadView.Direction&gt;.DirectionToIndex(Vector2)</a>
+    </div>
+    <div>
       <a class="xref" href="Kinstrife.CommandModule.CommandViewModelBase.html#Kinstrife_CommandModule_CommandViewModelBase_menu">CommandViewModelBase.menu</a>
     </div>
     <div>
@@ -139,7 +147,7 @@
   <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
   <h5 id="Kinstrife_CommandModule_DPadView_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class DPadView : FixedInputView&lt;DPadView.Direction&gt;</code></pre>
+    <pre><code class="lang-csharp hljs">public class DPadView : FixedInputView&lt;DPadView.Direction&gt;, IInjectable, IInstall&lt;DPadView&gt;, IInstall, IDependent</code></pre>
   </div>
   <h3 id="properties">Properties
   </h3>
@@ -399,10 +407,16 @@
   </table>
   <h3 id="implements">Implements</h3>
   <div>
-      <span class="xref">IInjectable</span>
+      <a class="xref" href="Kinstrife.Core.DependencyInjection.IInjectable.html">IInjectable</a>
   </div>
   <div>
-      <span class="xref">IInstall&lt;&gt;</span>
+      <a class="xref" href="Kinstrife.Core.DependencyInjection.IInstall-1.html">IInstall&lt;T&gt;</a>
+  </div>
+  <div>
+      <a class="xref" href="Kinstrife.Core.DependencyInjection.IInstall.html">IInstall</a>
+  </div>
+  <div>
+      <a class="xref" href="Kinstrife.Core.DependencyInjection.IDependent.html">IDependent</a>
   </div>
 </article>
           </div>

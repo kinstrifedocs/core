@@ -85,12 +85,14 @@
     <div><a class="xref" href="Kinstrife.Core.Camera.ICameraTargetsProvider.html">ICameraTargetsProvider</a></div>
     <div><a class="xref" href="Kinstrife.Core.Camera.ICameraFollowTargetProvider.html">ICameraFollowTargetProvider</a></div>
     <div><a class="xref" href="Kinstrife.Core.Camera.ICameraLookTargetProvider.html">ICameraLookTargetProvider</a></div>
+    <div><a class="xref" href="Kinstrife.Core.DependencyInjection.IInjectable.html">IInjectable</a></div>
+    <div><a class="xref" href="Kinstrife.Core.DependencyInjection.IDependent.html">IDependent</a></div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Kinstrife.Actor.html">Kinstrife.Actor</a></h6>
   <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
   <h5 id="Kinstrife_Actor_ActorCameraTargets_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class ActorCameraTargets : MonoBehaviour, ICameraTargetsProvider, ICameraFollowTargetProvider, ICameraLookTargetProvider</code></pre>
+    <pre><code class="lang-csharp hljs">public class ActorCameraTargets : MonoBehaviour, ICameraTargetsProvider, ICameraFollowTargetProvider, ICameraLookTargetProvider, IInjectable, IDependent</code></pre>
   </div>
   <h3 id="properties">Properties
   </h3>
@@ -319,6 +321,31 @@
       </tr>
     </tbody>
   </table>
+  
+  
+  <a id="Kinstrife_Actor_ActorCameraTargets_SetPlayer_" data-uid="Kinstrife.Actor.ActorCameraTargets.SetPlayer*"></a>
+  <h4 id="Kinstrife_Actor_ActorCameraTargets_SetPlayer" data-uid="Kinstrife.Actor.ActorCameraTargets.SetPlayer">SetPlayer</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool SetPlayer { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   <h3 id="methods">Methods
   </h3>
   
@@ -331,6 +358,33 @@
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public void Apply()</code></pre>
   </div>
+  
+  
+  <a id="Kinstrife_Actor_ActorCameraTargets_Inject_" data-uid="Kinstrife.Actor.ActorCameraTargets.Inject*"></a>
+  <h4 id="Kinstrife_Actor_ActorCameraTargets_Inject_Kinstrife_Actor_Input_PlayerActorManager_" data-uid="Kinstrife.Actor.ActorCameraTargets.Inject(Kinstrife.Actor.Input.PlayerActorManager)">Inject(PlayerActorManager)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Inject(PlayerActorManager playerActorManager)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Kinstrife.Actor.Input.PlayerActorManager.html">PlayerActorManager</a></td>
+        <td><span class="parametername">playerActorManager</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   
   
   <a id="Kinstrife_Actor_ActorCameraTargets_SetSource_" data-uid="Kinstrife.Actor.ActorCameraTargets.SetSource*"></a>
@@ -367,6 +421,12 @@
   </div>
   <div>
       <a class="xref" href="Kinstrife.Core.Camera.ICameraLookTargetProvider.html">ICameraLookTargetProvider</a>
+  </div>
+  <div>
+      <a class="xref" href="Kinstrife.Core.DependencyInjection.IInjectable.html">IInjectable</a>
+  </div>
+  <div>
+      <a class="xref" href="Kinstrife.Core.DependencyInjection.IDependent.html">IDependent</a>
   </div>
 </article>
           </div>

@@ -80,6 +80,7 @@
     <div class="level0"><span class="xref">System.Object</span></div>
     <div class="level1"><span class="xref">CommandHandler</span></div>
       <div class="level2"><a class="xref" href="Kinstrife.CommandModule.ClientCommandHandler.html">ClientCommandHandler</a></div>
+      <div class="level2"><a class="xref" href="Kinstrife.CommandModule.CommandHandler-1.html">CommandHandler&lt;T&gt;</a></div>
   </div>
   <div class="implements">
     <h5>Implements</h5>
@@ -91,6 +92,32 @@
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public abstract class CommandHandler : MonoBehaviour</code></pre>
   </div>
+  <h3 id="fields">Fields
+  </h3>
+  
+  
+  <h4 id="Kinstrife_CommandModule_CommandHandler_menu" data-uid="Kinstrife.CommandModule.CommandHandler.menu">menu</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected CommandsMenu menu</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Kinstrife.CommandModule.CommandsMenu.html">CommandsMenu</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   <h3 id="properties">Properties
   </h3>
   
@@ -148,12 +175,12 @@
   
   
   <a id="Kinstrife_CommandModule_CommandHandler_HandleCommand_" data-uid="Kinstrife.CommandModule.CommandHandler.HandleCommand*"></a>
-  <h4 id="Kinstrife_CommandModule_CommandHandler_HandleCommand_Kinstrife_CommandModule_CommandDefinition_System_Boolean__" data-uid="Kinstrife.CommandModule.CommandHandler.HandleCommand(Kinstrife.CommandModule.CommandDefinition,System.Boolean@)">HandleCommand(CommandDefinition, out Boolean)</h4>
+  <h4 id="Kinstrife_CommandModule_CommandHandler_HandleCommand_Kinstrife_CommandModule_CommandDefinition_System_Boolean_System_Boolean__" data-uid="Kinstrife.CommandModule.CommandHandler.HandleCommand(Kinstrife.CommandModule.CommandDefinition,System.Boolean,System.Boolean@)">HandleCommand(CommandDefinition, Boolean, out Boolean)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public abstract bool HandleCommand(CommandDefinition command, out bool consumed)</code></pre>
+    <pre><code class="lang-csharp hljs">public abstract bool HandleCommand(CommandDefinition command, bool isAlt, out bool consumed)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -168,6 +195,11 @@
       <tr>
         <td><a class="xref" href="Kinstrife.CommandModule.CommandDefinition.html">CommandDefinition</a></td>
         <td><span class="parametername">command</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">isAlt</span></td>
         <td></td>
       </tr>
       <tr>
@@ -217,6 +249,53 @@
       <tr>
         <td><a class="xref" href="Kinstrife.CommandModule.CommandsMenu.html">CommandsMenu</a></td>
         <td><span class="parametername">menu</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Kinstrife_CommandModule_CommandHandler_IsCommandActive_" data-uid="Kinstrife.CommandModule.CommandHandler.IsCommandActive*"></a>
+  <h4 id="Kinstrife_CommandModule_CommandHandler_IsCommandActive_Kinstrife_CommandModule_CommandDefinition_System_Boolean__" data-uid="Kinstrife.CommandModule.CommandHandler.IsCommandActive(Kinstrife.CommandModule.CommandDefinition,System.Boolean@)">IsCommandActive(CommandDefinition, out Boolean)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public abstract bool IsCommandActive(CommandDefinition command, out bool consumed)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Kinstrife.CommandModule.CommandDefinition.html">CommandDefinition</a></td>
+        <td><span class="parametername">command</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">consumed</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
         <td></td>
       </tr>
     </tbody>

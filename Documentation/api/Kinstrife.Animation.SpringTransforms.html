@@ -110,6 +110,56 @@
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static class SpringTransforms</code></pre>
   </div>
+  <h3 id="fields">Fields
+  </h3>
+  
+  
+  <h4 id="Kinstrife_Animation_SpringTransforms_nElements" data-uid="Kinstrife.Animation.SpringTransforms.nElements">nElements</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const int nElements = 36</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="Kinstrife_Animation_SpringTransforms_nZones" data-uid="Kinstrife.Animation.SpringTransforms.nZones">nZones</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const int nZones = 12</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   <h3 id="methods">Methods
   </h3>
   
@@ -187,6 +237,73 @@ Transform data into the target renderer's coordinate system.</p>
         <td><span class="parametername">torsionMagnitude</span></td>
         <td><p>(Unscaled) magnitude of softbody torsion</p>
 </td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Kinstrife_Animation_SpringTransforms_PackForGPUNative_" data-uid="Kinstrife.Animation.SpringTransforms.PackForGPUNative*"></a>
+  <h4 id="Kinstrife_Animation_SpringTransforms_PackForGPUNative_System_Int32__NativeSlice_Vector4___Matrix4x4__Vector3__Vector3__System_Single_Vector3_System_Single_System_Single_" data-uid="Kinstrife.Animation.SpringTransforms.PackForGPUNative(System.Int32@,NativeSlice{Vector4}@,Matrix4x4@,Vector3@,Vector3@,System.Single,Vector3,System.Single,System.Single)">PackForGPUNative(in Int32, ref NativeSlice&lt;Vector4&gt;, in Matrix4x4, in Vector3, in Vector3, Single, Vector3, Single, Single)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void PackForGPUNative(in int index, ref NativeSlice&lt;Vector4&gt; packTarget, in Matrix4x4 rendererOriginInverse, in Vector3 zoneOrigin, in Vector3 linearOffsetDirection, float linearOffsetMagnitude, Vector3 axisOfRotation, float angularVelocityMagnitude, float torsionMagnitude)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">index</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">NativeSlice</span>&lt;<span class="xref">Vector4</span>&gt;</td>
+        <td><span class="parametername">packTarget</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">Matrix4x4</span></td>
+        <td><span class="parametername">rendererOriginInverse</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">Vector3</span></td>
+        <td><span class="parametername">zoneOrigin</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">Vector3</span></td>
+        <td><span class="parametername">linearOffsetDirection</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><span class="parametername">linearOffsetMagnitude</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">Vector3</span></td>
+        <td><span class="parametername">axisOfRotation</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><span class="parametername">angularVelocityMagnitude</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><span class="parametername">torsionMagnitude</span></td>
+        <td></td>
       </tr>
     </tbody>
   </table>
