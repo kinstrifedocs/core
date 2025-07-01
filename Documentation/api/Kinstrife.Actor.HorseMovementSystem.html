@@ -1,0 +1,1318 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class HorseMovementSystem
+   | Kinstrife </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class HorseMovementSystem
+   | Kinstrife ">
+    <meta name="generator" content="docfx 2.59.4.0">
+    
+    <link rel="shortcut icon" href="../../favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet"> 
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../index.html">
+                <img id="logo" class="svg" src="../../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Kinstrife.Actor.HorseMovementSystem">
+  
+  
+  <h1 id="Kinstrife_Actor_HorseMovementSystem" data-uid="Kinstrife.Actor.HorseMovementSystem" class="text-break">Class HorseMovementSystem
+  </h1>
+  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><a class="xref" href="Kinstrife.Systems.SystemBase.html">SystemBase</a></div>
+    <div class="level2"><a class="xref" href="Kinstrife.Systems.JobSystem-1.html">JobSystem</a>&lt;<a class="xref" href="Kinstrife.Actor.MoveData.html">MoveData</a>&gt;</div>
+    <div class="level3"><a class="xref" href="Kinstrife.Systems.JobSystem-2.html">JobSystem</a>&lt;<a class="xref" href="Kinstrife.Actor.MoveData.html">MoveData</a>, <a class="xref" href="Kinstrife.Actor.MovementJob.html">MovementJob</a>&gt;</div>
+    <div class="level4"><span class="xref">HorseMovementSystem</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="Kinstrife.Systems.JobSystem-2.html#Kinstrife_Systems_JobSystem_2_jobData">JobSystem&lt;MoveData, MovementJob&gt;.jobData</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.Systems.JobSystem-2.html#Kinstrife_Systems_JobSystem_2_JobData">JobSystem&lt;MoveData, MovementJob&gt;.JobData</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.Systems.JobSystem-2.html#Kinstrife_Systems_JobSystem_2_batchSize">JobSystem&lt;MoveData, MovementJob&gt;.batchSize</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.Systems.JobSystem-2.html#Kinstrife_Systems_JobSystem_2_OnSystemCreate">JobSystem&lt;MoveData, MovementJob&gt;.OnSystemCreate()</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.Systems.JobSystem-2.html#Kinstrife_Systems_JobSystem_2_OnReallocate_System_Int32_">JobSystem&lt;MoveData, MovementJob&gt;.OnReallocate(Int32)</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.Systems.JobSystem-2.html#Kinstrife_Systems_JobSystem_2_OnUpdate_Kinstrife_Systems_SystemState__">JobSystem&lt;MoveData, MovementJob&gt;.OnUpdate(SystemState)</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.Systems.JobSystem-2.html#Kinstrife_Systems_JobSystem_2_Schedule_Kinstrife_Systems_SystemState__">JobSystem&lt;MoveData, MovementJob&gt;.Schedule(SystemState)</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.Systems.JobSystem-2.html#Kinstrife_Systems_JobSystem_2_UpdateJobData">JobSystem&lt;MoveData, MovementJob&gt;.UpdateJobData()</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.Systems.JobSystem-1.html#Kinstrife_Systems_JobSystem_1_DataStore">JobSystem&lt;MoveData&gt;.DataStore</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.Systems.JobSystem-1.html#Kinstrife_Systems_JobSystem_1_Data">JobSystem&lt;MoveData&gt;.Data</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.Systems.SystemBase.html#Kinstrife_Systems_SystemBase_jobTiming">SystemBase.jobTiming</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.Systems.SystemBase.html#Kinstrife_Systems_SystemBase_JobTiming">SystemBase.JobTiming</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.Systems.SystemBase.html#Kinstrife_Systems_SystemBase_systemTiming">SystemBase.systemTiming</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.Systems.SystemBase.html#Kinstrife_Systems_SystemBase_SystemTiming">SystemBase.SystemTiming</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.Systems.SystemBase.html#Kinstrife_Systems_SystemBase_SystemsManager">SystemBase.SystemsManager</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.Systems.SystemBase.html#Kinstrife_Systems_SystemBase_EntityManager">SystemBase.EntityManager</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.Systems.SystemBase.html#Kinstrife_Systems_SystemBase_Awake">SystemBase.Awake()</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.Systems.SystemBase.html#Kinstrife_Systems_SystemBase_OnEnable">SystemBase.OnEnable()</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.Systems.SystemBase.html#Kinstrife_Systems_SystemBase_OnDisable">SystemBase.OnDisable()</a>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Kinstrife.Actor.html">Kinstrife.Actor</a></h6>
+  <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
+  <h5 id="Kinstrife_Actor_HorseMovementSystem_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class HorseMovementSystem : JobSystem&lt;MoveData, MovementJob&gt;</code></pre>
+  </div>
+  <h3 id="fields">Fields
+  </h3>
+  
+  
+  <h4 id="Kinstrife_Actor_HorseMovementSystem_groundSettings" data-uid="Kinstrife.Actor.HorseMovementSystem.groundSettings">groundSettings</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public GroundSettings groundSettings</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Kinstrife.Actor.GroundSettings.html">GroundSettings</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="Kinstrife_Actor_HorseMovementSystem_moveDynamicsSettings" data-uid="Kinstrife.Actor.HorseMovementSystem.moveDynamicsSettings">moveDynamicsSettings</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public MoveDynamicsSettings moveDynamicsSettings</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Kinstrife.Actor.MoveDynamicsSettings.html">MoveDynamicsSettings</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="Kinstrife_Actor_HorseMovementSystem_pidSettings" data-uid="Kinstrife.Actor.HorseMovementSystem.pidSettings">pidSettings</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public PIDSettings pidSettings</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Kinstrife.Actor.PIDSettings.html">PIDSettings</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="Kinstrife_Actor_HorseMovementSystem_pidSettingsPitch" data-uid="Kinstrife.Actor.HorseMovementSystem.pidSettingsPitch">pidSettingsPitch</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public PIDSettings pidSettingsPitch</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Kinstrife.Actor.PIDSettings.html">PIDSettings</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="Kinstrife_Actor_HorseMovementSystem_pidSettingsRoll" data-uid="Kinstrife.Actor.HorseMovementSystem.pidSettingsRoll">pidSettingsRoll</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public PIDSettings pidSettingsRoll</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Kinstrife.Actor.PIDSettings.html">PIDSettings</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="Kinstrife_Actor_HorseMovementSystem_pidSettingsYaw" data-uid="Kinstrife.Actor.HorseMovementSystem.pidSettingsYaw">pidSettingsYaw</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public PIDSettings pidSettingsYaw</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Kinstrife.Actor.PIDSettings.html">PIDSettings</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="Kinstrife_Actor_HorseMovementSystem_settings" data-uid="Kinstrife.Actor.HorseMovementSystem.settings">settings</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public MoveSettings settings</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Kinstrife.Actor.MoveSettings.html">MoveSettings</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="Kinstrife_Actor_HorseMovementSystem_tiltSettings" data-uid="Kinstrife.Actor.HorseMovementSystem.tiltSettings">tiltSettings</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TiltSettings tiltSettings</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Kinstrife.Actor.TiltSettings.html">TiltSettings</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="properties">Properties
+  </h3>
+  
+  
+  <a id="Kinstrife_Actor_HorseMovementSystem_IsAllocated_" data-uid="Kinstrife.Actor.HorseMovementSystem.IsAllocated*"></a>
+  <h4 id="Kinstrife_Actor_HorseMovementSystem_IsAllocated" data-uid="Kinstrife.Actor.HorseMovementSystem.IsAllocated">IsAllocated</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsAllocated { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Kinstrife_Actor_HorseMovementSystem_KinematicsData_" data-uid="Kinstrife.Actor.HorseMovementSystem.KinematicsData*"></a>
+  <h4 id="Kinstrife_Actor_HorseMovementSystem_KinematicsData" data-uid="Kinstrife.Actor.HorseMovementSystem.KinematicsData">KinematicsData</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ref KinematicsEntityData KinematicsData { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Kinstrife.Systems.KinematicsEntityData.html">KinematicsEntityData</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  
+  
+  <a id="Kinstrife_Actor_HorseMovementSystem_ComputeDampingTorque_" data-uid="Kinstrife.Actor.HorseMovementSystem.ComputeDampingTorque*"></a>
+  <h4 id="Kinstrife_Actor_HorseMovementSystem_ComputeDampingTorque_quaternion_float3_System_Single_System_Single_float3_System_Single_System_Single_" data-uid="Kinstrife.Actor.HorseMovementSystem.ComputeDampingTorque(quaternion,float3,System.Single,System.Single,float3,System.Single,System.Single)">ComputeDampingTorque(quaternion, float3, Single, Single, float3, Single, Single)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static float ComputeDampingTorque(quaternion currentRotation, float3 angularVelocity, float kp, float kd, float3 axis, float degreesMin, float degreesMax)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">quaternion</span></td>
+        <td><span class="parametername">currentRotation</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">float3</span></td>
+        <td><span class="parametername">angularVelocity</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><span class="parametername">kp</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><span class="parametername">kd</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">float3</span></td>
+        <td><span class="parametername">axis</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><span class="parametername">degreesMin</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><span class="parametername">degreesMax</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Kinstrife_Actor_HorseMovementSystem_ComputeForce_" data-uid="Kinstrife.Actor.HorseMovementSystem.ComputeForce*"></a>
+  <h4 id="Kinstrife_Actor_HorseMovementSystem_ComputeForce_System_Single_System_Single_System_Single_System_Single_System_Single_System_Single_" data-uid="Kinstrife.Actor.HorseMovementSystem.ComputeForce(System.Single,System.Single,System.Single,System.Single,System.Single,System.Single)">ComputeForce(Single, Single, Single, Single, Single, Single)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static float ComputeForce(float deltaTime, float kp, float kd, float posError, float velocityError, float mass)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><span class="parametername">deltaTime</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><span class="parametername">kp</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><span class="parametername">kd</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><span class="parametername">posError</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><span class="parametername">velocityError</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><span class="parametername">mass</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Kinstrife_Actor_HorseMovementSystem_ComputeMaxGroundReactionForce_" data-uid="Kinstrife.Actor.HorseMovementSystem.ComputeMaxGroundReactionForce*"></a>
+  <h4 id="Kinstrife_Actor_HorseMovementSystem_ComputeMaxGroundReactionForce_System_Single_System_Single_Vector3_" data-uid="Kinstrife.Actor.HorseMovementSystem.ComputeMaxGroundReactionForce(System.Single,System.Single,Vector3)">ComputeMaxGroundReactionForce(Single, Single, Vector3)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Vector3 ComputeMaxGroundReactionForce(float deltaTime, float bodyMass, Vector3 velocityDelta)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><span class="parametername">deltaTime</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><span class="parametername">bodyMass</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">Vector3</span></td>
+        <td><span class="parametername">velocityDelta</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Vector3</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Kinstrife_Actor_HorseMovementSystem_ComputeMaxGroundReactionForceMagnitude_" data-uid="Kinstrife.Actor.HorseMovementSystem.ComputeMaxGroundReactionForceMagnitude*"></a>
+  <h4 id="Kinstrife_Actor_HorseMovementSystem_ComputeMaxGroundReactionForceMagnitude_System_Single_Vector3_" data-uid="Kinstrife.Actor.HorseMovementSystem.ComputeMaxGroundReactionForceMagnitude(System.Single,Vector3)">ComputeMaxGroundReactionForceMagnitude(Single, Vector3)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static float ComputeMaxGroundReactionForceMagnitude(float bodyMass, Vector3 velocityDelta)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><span class="parametername">bodyMass</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">Vector3</span></td>
+        <td><span class="parametername">velocityDelta</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Kinstrife_Actor_HorseMovementSystem_ComputeMoveAccelerationImpulse_" data-uid="Kinstrife.Actor.HorseMovementSystem.ComputeMoveAccelerationImpulse*"></a>
+  <h4 id="Kinstrife_Actor_HorseMovementSystem_ComputeMoveAccelerationImpulse_Transform_System_Single_Vector3_Vector3_System_Single_System_Single_System_Single_Kinstrife_Actor_MoveDynamicsSettings__" data-uid="Kinstrife.Actor.HorseMovementSystem.ComputeMoveAccelerationImpulse(Transform,System.Single,Vector3,Vector3,System.Single,System.Single,System.Single,Kinstrife.Actor.MoveDynamicsSettings@)">ComputeMoveAccelerationImpulse(Transform, Single, Vector3, Vector3, Single, Single, Single, in MoveDynamicsSettings)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Vector3 ComputeMoveAccelerationImpulse(Transform tr, float dt, Vector3 velocity, Vector3 targetVelocity, float mass, float accelerationFactor, float strafingFactor, in MoveDynamicsSettings settings)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Transform</span></td>
+        <td><span class="parametername">tr</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><span class="parametername">dt</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">Vector3</span></td>
+        <td><span class="parametername">velocity</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">Vector3</span></td>
+        <td><span class="parametername">targetVelocity</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><span class="parametername">mass</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><span class="parametername">accelerationFactor</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><span class="parametername">strafingFactor</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Kinstrife.Actor.MoveDynamicsSettings.html">MoveDynamicsSettings</a></td>
+        <td><span class="parametername">settings</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Vector3</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Kinstrife_Actor_HorseMovementSystem_ComputeRollDampingTorque_" data-uid="Kinstrife.Actor.HorseMovementSystem.ComputeRollDampingTorque*"></a>
+  <h4 id="Kinstrife_Actor_HorseMovementSystem_ComputeRollDampingTorque_quaternion_float3_System_Single_System_Single_System_Single_System_Single_" data-uid="Kinstrife.Actor.HorseMovementSystem.ComputeRollDampingTorque(quaternion,float3,System.Single,System.Single,System.Single,System.Single)">ComputeRollDampingTorque(quaternion, float3, Single, Single, Single, Single)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static float ComputeRollDampingTorque(quaternion currentRotation, float3 angularVelocity, float kp, float kd, float currentAngle, float desiredAngle)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">quaternion</span></td>
+        <td><span class="parametername">currentRotation</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">float3</span></td>
+        <td><span class="parametername">angularVelocity</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><span class="parametername">kp</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><span class="parametername">kd</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><span class="parametername">currentAngle</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><span class="parametername">desiredAngle</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Kinstrife_Actor_HorseMovementSystem_ComputeRollTorque_" data-uid="Kinstrife.Actor.HorseMovementSystem.ComputeRollTorque*"></a>
+  <h4 id="Kinstrife_Actor_HorseMovementSystem_ComputeRollTorque_quaternion_float3_System_Single_System_Single_System_Single_System_Single_System_Single_" data-uid="Kinstrife.Actor.HorseMovementSystem.ComputeRollTorque(quaternion,float3,System.Single,System.Single,System.Single,System.Single,System.Single)">ComputeRollTorque(quaternion, float3, Single, Single, Single, Single, Single)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static float ComputeRollTorque(quaternion currentRotation, float3 angularVelocity, float kp, float kd, float degreesMin, float degreesMax, float angleAdd = 0F)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">quaternion</span></td>
+        <td><span class="parametername">currentRotation</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">float3</span></td>
+        <td><span class="parametername">angularVelocity</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><span class="parametername">kp</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><span class="parametername">kd</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><span class="parametername">degreesMin</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><span class="parametername">degreesMax</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><span class="parametername">angleAdd</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Kinstrife_Actor_HorseMovementSystem_ComputeYawTorque_" data-uid="Kinstrife.Actor.HorseMovementSystem.ComputeYawTorque*"></a>
+  <h4 id="Kinstrife_Actor_HorseMovementSystem_ComputeYawTorque_Rigidbody_System_Single_System_Single_System_Single_System_Single_System_Single_System_Single_System_Single_Kinstrife_Actor_PIDSettings__" data-uid="Kinstrife.Actor.HorseMovementSystem.ComputeYawTorque(Rigidbody,System.Single,System.Single,System.Single,System.Single,System.Single,System.Single,System.Single,Kinstrife.Actor.PIDSettings@)">ComputeYawTorque(Rigidbody, Single, Single, Single, Single, Single, Single, Single, in PIDSettings)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static float ComputeYawTorque(Rigidbody rb, float currentYaw, float desiredYaw, float angularVelocityY, float targetAngularVelocityY, float kp, float kd, float mass, in PIDSettings settings)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Rigidbody</span></td>
+        <td><span class="parametername">rb</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><span class="parametername">currentYaw</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><span class="parametername">desiredYaw</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><span class="parametername">angularVelocityY</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><span class="parametername">targetAngularVelocityY</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><span class="parametername">kp</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><span class="parametername">kd</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><span class="parametername">mass</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Kinstrife.Actor.PIDSettings.html">PIDSettings</a></td>
+        <td><span class="parametername">settings</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Kinstrife_Actor_HorseMovementSystem_GetDimensions_" data-uid="Kinstrife.Actor.HorseMovementSystem.GetDimensions*"></a>
+  <h4 id="Kinstrife_Actor_HorseMovementSystem_GetDimensions_float3_quaternion_Vector3_float3__float3__float3__float3__" data-uid="Kinstrife.Actor.HorseMovementSystem.GetDimensions(float3,quaternion,Vector3,float3@,float3@,float3@,float3@)">GetDimensions(float3, quaternion, Vector3, out float3, out float3, out float3, out float3)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void GetDimensions(float3 pos, quaternion rot, Vector3 dimensions, out float3 backLeft, out float3 backRight, out float3 frontLeft, out float3 frontRight)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">float3</span></td>
+        <td><span class="parametername">pos</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">quaternion</span></td>
+        <td><span class="parametername">rot</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">Vector3</span></td>
+        <td><span class="parametername">dimensions</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">float3</span></td>
+        <td><span class="parametername">backLeft</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">float3</span></td>
+        <td><span class="parametername">backRight</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">float3</span></td>
+        <td><span class="parametername">frontLeft</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">float3</span></td>
+        <td><span class="parametername">frontRight</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Kinstrife_Actor_HorseMovementSystem_GetDimensions_" data-uid="Kinstrife.Actor.HorseMovementSystem.GetDimensions*"></a>
+  <h4 id="Kinstrife_Actor_HorseMovementSystem_GetDimensions_float4x4_Vector3_float3__float3__float3__float3__" data-uid="Kinstrife.Actor.HorseMovementSystem.GetDimensions(float4x4,Vector3,float3@,float3@,float3@,float3@)">GetDimensions(float4x4, Vector3, out float3, out float3, out float3, out float3)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void GetDimensions(float4x4 mat, Vector3 dimensions, out float3 backLeft, out float3 backRight, out float3 frontLeft, out float3 frontRight)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">float4x4</span></td>
+        <td><span class="parametername">mat</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">Vector3</span></td>
+        <td><span class="parametername">dimensions</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">float3</span></td>
+        <td><span class="parametername">backLeft</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">float3</span></td>
+        <td><span class="parametername">backRight</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">float3</span></td>
+        <td><span class="parametername">frontLeft</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">float3</span></td>
+        <td><span class="parametername">frontRight</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Kinstrife_Actor_HorseMovementSystem_GetDimensions_" data-uid="Kinstrife.Actor.HorseMovementSystem.GetDimensions*"></a>
+  <h4 id="Kinstrife_Actor_HorseMovementSystem_GetDimensions_Vector3_float3__float3__float3__float3__" data-uid="Kinstrife.Actor.HorseMovementSystem.GetDimensions(Vector3,float3@,float3@,float3@,float3@)">GetDimensions(Vector3, out float3, out float3, out float3, out float3)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void GetDimensions(Vector3 dimensions, out float3 backLeft, out float3 backRight, out float3 frontLeft, out float3 frontRight)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Vector3</span></td>
+        <td><span class="parametername">dimensions</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">float3</span></td>
+        <td><span class="parametername">backLeft</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">float3</span></td>
+        <td><span class="parametername">backRight</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">float3</span></td>
+        <td><span class="parametername">frontLeft</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">float3</span></td>
+        <td><span class="parametername">frontRight</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Kinstrife_Actor_HorseMovementSystem_GetRays_" data-uid="Kinstrife.Actor.HorseMovementSystem.GetRays*"></a>
+  <h4 id="Kinstrife_Actor_HorseMovementSystem_GetRays_float4x4_Vector3_Ray__Ray__Ray__Ray__" data-uid="Kinstrife.Actor.HorseMovementSystem.GetRays(float4x4,Vector3,Ray@,Ray@,Ray@,Ray@)">GetRays(float4x4, Vector3, out Ray, out Ray, out Ray, out Ray)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void GetRays(float4x4 mat, Vector3 dimensions, out Ray backLeft, out Ray backRight, out Ray frontLeft, out Ray frontRight)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">float4x4</span></td>
+        <td><span class="parametername">mat</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">Vector3</span></td>
+        <td><span class="parametername">dimensions</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">Ray</span></td>
+        <td><span class="parametername">backLeft</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">Ray</span></td>
+        <td><span class="parametername">backRight</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">Ray</span></td>
+        <td><span class="parametername">frontLeft</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">Ray</span></td>
+        <td><span class="parametername">frontRight</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Kinstrife_Actor_HorseMovementSystem_OnDestroy_" data-uid="Kinstrife.Actor.HorseMovementSystem.OnDestroy*"></a>
+  <h4 id="Kinstrife_Actor_HorseMovementSystem_OnDestroy" data-uid="Kinstrife.Actor.HorseMovementSystem.OnDestroy">OnDestroy()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override void OnDestroy()</code></pre>
+  </div>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Kinstrife.Systems.SystemBase.html#Kinstrife_Systems_SystemBase_OnDestroy">SystemBase.OnDestroy()</a></div>
+  
+  
+  <a id="Kinstrife_Actor_HorseMovementSystem_OnReallocate_" data-uid="Kinstrife.Actor.HorseMovementSystem.OnReallocate*"></a>
+  <h4 id="Kinstrife_Actor_HorseMovementSystem_OnReallocate_System_Int32_" data-uid="Kinstrife.Actor.HorseMovementSystem.OnReallocate(System.Int32)">OnReallocate(Int32)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override void OnReallocate(int bufferSize)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">bufferSize</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">Kinstrife.Systems.JobSystem&lt;Kinstrife.Actor.MoveData, Kinstrife.Actor.MovementJob&gt;.OnReallocate(System.Int32)</span></div>
+  
+  
+  <a id="Kinstrife_Actor_HorseMovementSystem_OnSystemCreate_" data-uid="Kinstrife.Actor.HorseMovementSystem.OnSystemCreate*"></a>
+  <h4 id="Kinstrife_Actor_HorseMovementSystem_OnSystemCreate" data-uid="Kinstrife.Actor.HorseMovementSystem.OnSystemCreate">OnSystemCreate()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override void OnSystemCreate()</code></pre>
+  </div>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">Kinstrife.Systems.JobSystem&lt;Kinstrife.Actor.MoveData, Kinstrife.Actor.MovementJob&gt;.OnSystemCreate()</span></div>
+  
+  
+  <a id="Kinstrife_Actor_HorseMovementSystem_OnUpdate_" data-uid="Kinstrife.Actor.HorseMovementSystem.OnUpdate*"></a>
+  <h4 id="Kinstrife_Actor_HorseMovementSystem_OnUpdate_Kinstrife_Systems_SystemState__" data-uid="Kinstrife.Actor.HorseMovementSystem.OnUpdate(Kinstrife.Systems.SystemState@)">OnUpdate(ref SystemState)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override void OnUpdate(ref SystemState systemState)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Kinstrife.Systems.SystemState.html">SystemState</a></td>
+        <td><span class="parametername">systemState</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">Kinstrife.Systems.JobSystem&lt;Kinstrife.Actor.MoveData, Kinstrife.Actor.MovementJob&gt;.OnUpdate(Kinstrife.Systems.SystemState)</span></div>
+  
+  
+  <a id="Kinstrife_Actor_HorseMovementSystem_Schedule_" data-uid="Kinstrife.Actor.HorseMovementSystem.Schedule*"></a>
+  <h4 id="Kinstrife_Actor_HorseMovementSystem_Schedule_Kinstrife_Systems_SystemState__" data-uid="Kinstrife.Actor.HorseMovementSystem.Schedule(Kinstrife.Systems.SystemState@)">Schedule(ref SystemState)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override JobHandle Schedule(ref SystemState systemState)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Kinstrife.Systems.SystemState.html">SystemState</a></td>
+        <td><span class="parametername">systemState</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">JobHandle</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">Kinstrife.Systems.JobSystem&lt;Kinstrife.Actor.MoveData, Kinstrife.Actor.MovementJob&gt;.Schedule(Kinstrife.Systems.SystemState)</span></div>
+  
+  
+  <a id="Kinstrife_Actor_HorseMovementSystem_UpdateJobData_" data-uid="Kinstrife.Actor.HorseMovementSystem.UpdateJobData*"></a>
+  <h4 id="Kinstrife_Actor_HorseMovementSystem_UpdateJobData" data-uid="Kinstrife.Actor.HorseMovementSystem.UpdateJobData">UpdateJobData()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override void UpdateJobData()</code></pre>
+  </div>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">Kinstrife.Systems.JobSystem&lt;Kinstrife.Actor.MoveData, Kinstrife.Actor.MovementJob&gt;.UpdateJobData()</span></div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+  </body>
+</html>
