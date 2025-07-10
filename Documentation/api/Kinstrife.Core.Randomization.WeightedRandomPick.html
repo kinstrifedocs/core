@@ -300,6 +300,79 @@ public static class WeightedRandomPick</code></pre>
       </tr>
     </tbody>
   </table>
+  
+  
+  <a id="Kinstrife_Core_Randomization_WeightedRandomPick_PickIndex_" data-uid="Kinstrife.Core.Randomization.WeightedRandomPick.PickIndex*"></a>
+  <h4 id="Kinstrife_Core_Randomization_WeightedRandomPick_PickIndex__1_System_Collections_Generic_IList___0__System_Single_System_Single_" data-uid="Kinstrife.Core.Randomization.WeightedRandomPick.PickIndex``1(System.Collections.Generic.IList{``0},System.Single,System.Single)">PickIndex&lt;T&gt;(IList&lt;T&gt;, Single, Single)</h4>
+  <div class="markdown level1 summary"><p>Pick randomly from a list of weighted items.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static int PickIndex&lt;T&gt;(IList&lt;T&gt; weightedItems, float randomValueBetween01, float weightInfluence = 1F)
+    where T : IWeighted</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IList</span>&lt;T&gt;</td>
+        <td><span class="parametername">weightedItems</span></td>
+        <td><p>Collection to pick from. Must be ordered to guarantee replicable behaviour.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><span class="parametername">randomValueBetween01</span></td>
+        <td><p>Value between 0 and 1.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><span class="parametername">weightInfluence</span></td>
+        <td><p>Modifier to scale randomness. Values greater than 1 increase variance, while values less than 1 reduce variance.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T</span></td>
+        <td><p>Weighted type to pick</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
 </article>
           </div>
           

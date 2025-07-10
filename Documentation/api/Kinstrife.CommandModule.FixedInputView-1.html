@@ -83,6 +83,11 @@
       <div class="level3"><a class="xref" href="Kinstrife.CommandModule.CommandsView.html">CommandsView</a></div>
       <div class="level3"><a class="xref" href="Kinstrife.CommandModule.DPadView.html">DPadView</a></div>
   </div>
+  <div class="implements">
+    <h5>Implements</h5>
+    <div><a class="xref" href="Kinstrife.Core.DependencyInjection.IInjectable.html">IInjectable</a></div>
+    <div><a class="xref" href="Kinstrife.Core.DependencyInjection.IDependent.html">IDependent</a></div>
+  </div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
     <div>
@@ -95,17 +100,23 @@
       <a class="xref" href="Kinstrife.CommandModule.CommandViewModelBase.html#Kinstrife_CommandModule_CommandViewModelBase_config">CommandViewModelBase.config</a>
     </div>
     <div>
-      <a class="xref" href="Kinstrife.CommandModule.CommandViewModelBase.html#Kinstrife_CommandModule_CommandViewModelBase_Awake">CommandViewModelBase.Awake()</a>
+      <a class="xref" href="Kinstrife.CommandModule.CommandViewModelBase.html#Kinstrife_CommandModule_CommandViewModelBase_tooltip">CommandViewModelBase.tooltip</a>
     </div>
     <div>
       <a class="xref" href="Kinstrife.CommandModule.CommandViewModelBase.html#Kinstrife_CommandModule_CommandViewModelBase_Inject_Kinstrife_CommandModule_CommandsMenu_Kinstrife_UI_UIInteraction_Kinstrife_Core_Input_InputConfig_">CommandViewModelBase.Inject(CommandsMenu, UIInteraction, InputConfig)</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.CommandModule.CommandViewModelBase.html#Kinstrife_CommandModule_CommandViewModelBase_OnCommandCompleted_Kinstrife_Input_CommandDefinition_System_Boolean_">CommandViewModelBase.OnCommandCompleted(CommandDefinition, Boolean)</a>
+    </div>
+    <div>
+      <a class="xref" href="Kinstrife.CommandModule.CommandViewModelBase.html#Kinstrife_CommandModule_CommandViewModelBase_OnCommandPerformed_Kinstrife_Input_CommandDefinition_">CommandViewModelBase.OnCommandPerformed(CommandDefinition)</a>
     </div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Kinstrife.CommandModule.html">Kinstrife.CommandModule</a></h6>
   <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
   <h5 id="Kinstrife_CommandModule_FixedInputView_1_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public abstract class FixedInputView&lt;TInput&gt; : CommandViewModelBase where TInput : Enum</code></pre>
+    <pre><code class="lang-csharp hljs">public abstract class FixedInputView&lt;TInput&gt; : CommandViewModelBase, IInjectable, IDependent where TInput : Enum</code></pre>
   </div>
   <h5 class="typeParameters">Type Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -124,6 +135,30 @@
   </table>
   <h3 id="fields">Fields
   </h3>
+  
+  
+  <h4 id="Kinstrife_CommandModule_FixedInputView_1_commandDescriptions" data-uid="Kinstrife.CommandModule.FixedInputView`1.commandDescriptions">commandDescriptions</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected List&lt;string&gt; commandDescriptions</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.List</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   
   
   <h4 id="Kinstrife_CommandModule_FixedInputView_1_commandElements" data-uid="Kinstrife.CommandModule.FixedInputView`1.commandElements">commandElements</h4>
@@ -246,30 +281,6 @@
   </table>
   
   
-  <h4 id="Kinstrife_CommandModule_FixedInputView_1_isActionPressed" data-uid="Kinstrife.CommandModule.FixedInputView`1.isActionPressed">isActionPressed</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected float[] isActionPressed</code></pre>
-  </div>
-  <h5 class="fieldValue">Field Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Single</span>[]</td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
   <h4 id="Kinstrife_CommandModule_FixedInputView_1_largeInteractionSize" data-uid="Kinstrife.CommandModule.FixedInputView`1.largeInteractionSize">largeInteractionSize</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
@@ -368,6 +379,53 @@
   </h3>
   
   
+  <a id="Kinstrife_CommandModule_FixedInputView_1_CanPerformCommand_" data-uid="Kinstrife.CommandModule.FixedInputView`1.CanPerformCommand*"></a>
+  <h4 id="Kinstrife_CommandModule_FixedInputView_1_CanPerformCommand_System_Int32_CommandDefinition_" data-uid="Kinstrife.CommandModule.FixedInputView`1.CanPerformCommand(System.Int32,CommandDefinition)">CanPerformCommand(Int32, CommandDefinition)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual bool CanPerformCommand(int i, CommandDefinition command)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">i</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">CommandDefinition</span></td>
+        <td><span class="parametername">command</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
   <a id="Kinstrife_CommandModule_FixedInputView_1_DirectionToIndex_" data-uid="Kinstrife.CommandModule.FixedInputView`1.DirectionToIndex*"></a>
   <h4 id="Kinstrife_CommandModule_FixedInputView_1_DirectionToIndex_Vector2_" data-uid="Kinstrife.CommandModule.FixedInputView`1.DirectionToIndex(Vector2)">DirectionToIndex(Vector2)</h4>
   <div class="markdown level1 summary"></div>
@@ -452,6 +510,38 @@
   </table>
   
   
+  <a id="Kinstrife_CommandModule_FixedInputView_1_HighlightElement_" data-uid="Kinstrife.CommandModule.FixedInputView`1.HighlightElement*"></a>
+  <h4 id="Kinstrife_CommandModule_FixedInputView_1_HighlightElement_System_Int32_System_Boolean_" data-uid="Kinstrife.CommandModule.FixedInputView`1.HighlightElement(System.Int32,System.Boolean)">HighlightElement(Int32, Boolean)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void HighlightElement(int i, bool isPressed)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">i</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">isPressed</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
   <a id="Kinstrife_CommandModule_FixedInputView_1_IsPressed_" data-uid="Kinstrife.CommandModule.FixedInputView`1.IsPressed*"></a>
   <h4 id="Kinstrife_CommandModule_FixedInputView_1_IsPressed_Vector2_System_Int32_" data-uid="Kinstrife.CommandModule.FixedInputView`1.IsPressed(Vector2,System.Int32)">IsPressed(Vector2, Int32)</h4>
   <div class="markdown level1 summary"></div>
@@ -524,14 +614,95 @@
   </table>
   
   
-  <a id="Kinstrife_CommandModule_FixedInputView_1_OnLargeAction_" data-uid="Kinstrife.CommandModule.FixedInputView`1.OnLargeAction*"></a>
-  <h4 id="Kinstrife_CommandModule_FixedInputView_1_OnLargeAction" data-uid="Kinstrife.CommandModule.FixedInputView`1.OnLargeAction">OnLargeAction()</h4>
+  <a id="Kinstrife_CommandModule_FixedInputView_1_OnCommandCompleted_" data-uid="Kinstrife.CommandModule.FixedInputView`1.OnCommandCompleted*"></a>
+  <h4 id="Kinstrife_CommandModule_FixedInputView_1_OnCommandCompleted_CommandDefinition_System_Boolean_" data-uid="Kinstrife.CommandModule.FixedInputView`1.OnCommandCompleted(CommandDefinition,System.Boolean)">OnCommandCompleted(CommandDefinition, Boolean)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected abstract void OnLargeAction()</code></pre>
+    <pre><code class="lang-csharp hljs">protected override void OnCommandCompleted(CommandDefinition obj, bool success)</code></pre>
   </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">CommandDefinition</span></td>
+        <td><span class="parametername">obj</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">success</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Kinstrife_CommandModule_FixedInputView_1_OnCommandPerformed_" data-uid="Kinstrife.CommandModule.FixedInputView`1.OnCommandPerformed*"></a>
+  <h4 id="Kinstrife_CommandModule_FixedInputView_1_OnCommandPerformed_CommandDefinition_" data-uid="Kinstrife.CommandModule.FixedInputView`1.OnCommandPerformed(CommandDefinition)">OnCommandPerformed(CommandDefinition)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override void OnCommandPerformed(CommandDefinition obj)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">CommandDefinition</span></td>
+        <td><span class="parametername">obj</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Kinstrife_CommandModule_FixedInputView_1_OnLargeAction_" data-uid="Kinstrife.CommandModule.FixedInputView`1.OnLargeAction*"></a>
+  <h4 id="Kinstrife_CommandModule_FixedInputView_1_OnLargeAction_System_Int32_System_Boolean_" data-uid="Kinstrife.CommandModule.FixedInputView`1.OnLargeAction(System.Int32,System.Boolean)">OnLargeAction(Int32, Boolean)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void OnLargeAction(int i, bool wasSuccess)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">i</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">wasSuccess</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   
   
   <a id="Kinstrife_CommandModule_FixedInputView_1_OnNewCategory_" data-uid="Kinstrife.CommandModule.FixedInputView`1.OnNewCategory*"></a>
@@ -564,12 +735,39 @@
   
   
   <a id="Kinstrife_CommandModule_FixedInputView_1_OnRegularAction_" data-uid="Kinstrife.CommandModule.FixedInputView`1.OnRegularAction*"></a>
-  <h4 id="Kinstrife_CommandModule_FixedInputView_1_OnRegularAction" data-uid="Kinstrife.CommandModule.FixedInputView`1.OnRegularAction">OnRegularAction()</h4>
+  <h4 id="Kinstrife_CommandModule_FixedInputView_1_OnRegularAction_System_Boolean_" data-uid="Kinstrife.CommandModule.FixedInputView`1.OnRegularAction(System.Boolean)">OnRegularAction(Boolean)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected abstract void OnRegularAction()</code></pre>
+    <pre><code class="lang-csharp hljs">protected virtual void OnRegularAction(bool wasSuccess)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">wasSuccess</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Kinstrife_CommandModule_FixedInputView_1_RefreshViewState_" data-uid="Kinstrife.CommandModule.FixedInputView`1.RefreshViewState*"></a>
+  <h4 id="Kinstrife_CommandModule_FixedInputView_1_RefreshViewState" data-uid="Kinstrife.CommandModule.FixedInputView`1.RefreshViewState">RefreshViewState()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void RefreshViewState()</code></pre>
   </div>
   
   
@@ -580,6 +778,13 @@
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public abstract void ResetOption()</code></pre>
+  </div>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <a class="xref" href="Kinstrife.Core.DependencyInjection.IInjectable.html">IInjectable</a>
+  </div>
+  <div>
+      <a class="xref" href="Kinstrife.Core.DependencyInjection.IDependent.html">IDependent</a>
   </div>
 </article>
           </div>

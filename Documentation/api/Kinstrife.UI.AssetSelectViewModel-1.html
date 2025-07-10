@@ -586,12 +586,12 @@ public IEnumerable&lt;T&gt; SourceData</code></pre>
   
   
   <a id="Kinstrife_UI_AssetSelectViewModel_1_OnSelectEntry_" data-uid="Kinstrife.UI.AssetSelectViewModel`1.OnSelectEntry*"></a>
-  <h4 id="Kinstrife_UI_AssetSelectViewModel_1_OnSelectEntry_System_Int32__0_MouseButton_" data-uid="Kinstrife.UI.AssetSelectViewModel`1.OnSelectEntry(System.Int32,`0,MouseButton)">OnSelectEntry(Int32, T, MouseButton)</h4>
+  <h4 id="Kinstrife_UI_AssetSelectViewModel_1_OnSelectEntry_System_Int32__0_MouseButton_System_Int32_" data-uid="Kinstrife.UI.AssetSelectViewModel`1.OnSelectEntry(System.Int32,`0,MouseButton,System.Int32)">OnSelectEntry(Int32, T, MouseButton, Int32)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected virtual void OnSelectEntry(int index, T item, MouseButton btn)</code></pre>
+    <pre><code class="lang-csharp hljs">protected virtual void OnSelectEntry(int index, T item, MouseButton btn, int clickCount = 1)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -616,6 +616,11 @@ public IEnumerable&lt;T&gt; SourceData</code></pre>
       <tr>
         <td><span class="xref">MouseButton</span></td>
         <td><span class="parametername">btn</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">clickCount</span></td>
         <td></td>
       </tr>
     </tbody>

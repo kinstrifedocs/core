@@ -207,6 +207,31 @@
   </h3>
   
   
+  <a id="Kinstrife_UI_DialogViewModel_Choice_" data-uid="Kinstrife.UI.DialogViewModel.Choice*"></a>
+  <h4 id="Kinstrife_UI_DialogViewModel_Choice" data-uid="Kinstrife.UI.DialogViewModel.Choice">Choice</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int Choice { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
   <a id="Kinstrife_UI_DialogViewModel_HasChoice_" data-uid="Kinstrife.UI.DialogViewModel.HasChoice*"></a>
   <h4 id="Kinstrife_UI_DialogViewModel_HasChoice" data-uid="Kinstrife.UI.DialogViewModel.HasChoice">HasChoice</h4>
   <div class="markdown level1 summary"></div>
@@ -226,6 +251,56 @@
     <tbody>
       <tr>
         <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Kinstrife_UI_DialogViewModel_icon_" data-uid="Kinstrife.UI.DialogViewModel.icon*"></a>
+  <h4 id="Kinstrife_UI_DialogViewModel_icon" data-uid="Kinstrife.UI.DialogViewModel.icon">icon</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Sprite icon { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Sprite</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Kinstrife_UI_DialogViewModel_image_" data-uid="Kinstrife.UI.DialogViewModel.image*"></a>
+  <h4 id="Kinstrife_UI_DialogViewModel_image" data-uid="Kinstrife.UI.DialogViewModel.image">image</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Texture2D image { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Texture2D</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -360,12 +435,12 @@
   
   
   <a id="Kinstrife_UI_DialogViewModel_ApplyPopupSettings_" data-uid="Kinstrife.UI.DialogViewModel.ApplyPopupSettings*"></a>
-  <h4 id="Kinstrife_UI_DialogViewModel_ApplyPopupSettings_Kinstrife_UI_PopupSettings_" data-uid="Kinstrife.UI.DialogViewModel.ApplyPopupSettings(Kinstrife.UI.PopupSettings)">ApplyPopupSettings(PopupSettings)</h4>
+  <h4 id="Kinstrife_UI_DialogViewModel_ApplyPopupSettings_Kinstrife_UI_PopupSettings_Kinstrife_UI_PopupData_" data-uid="Kinstrife.UI.DialogViewModel.ApplyPopupSettings(Kinstrife.UI.PopupSettings,Kinstrife.UI.PopupData)">ApplyPopupSettings(PopupSettings, PopupData)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void ApplyPopupSettings(PopupSettings settings)</code></pre>
+    <pre><code class="lang-csharp hljs">public void ApplyPopupSettings(PopupSettings settings, PopupData data)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -380,6 +455,11 @@
       <tr>
         <td><a class="xref" href="Kinstrife.UI.PopupSettings.html">PopupSettings</a></td>
         <td><span class="parametername">settings</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Kinstrife.UI.PopupData.html">PopupData</a></td>
+        <td><span class="parametername">data</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -532,12 +612,12 @@
   
   
   <a id="Kinstrife_UI_DialogViewModel_SetMessage_" data-uid="Kinstrife.UI.DialogViewModel.SetMessage*"></a>
-  <h4 id="Kinstrife_UI_DialogViewModel_SetMessage_System_String_System_String_" data-uid="Kinstrife.UI.DialogViewModel.SetMessage(System.String,System.String)">SetMessage(String, String)</h4>
+  <h4 id="Kinstrife_UI_DialogViewModel_SetMessage_System_String_System_String_Sprite_" data-uid="Kinstrife.UI.DialogViewModel.SetMessage(System.String,System.String,Sprite)">SetMessage(String, String, Sprite)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void SetMessage(string title, string body)</code></pre>
+    <pre><code class="lang-csharp hljs">public void SetMessage(string title, string body, Sprite icon)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -557,6 +637,11 @@
       <tr>
         <td><span class="xref">System.String</span></td>
         <td><span class="parametername">body</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">Sprite</span></td>
+        <td><span class="parametername">icon</span></td>
         <td></td>
       </tr>
     </tbody>
