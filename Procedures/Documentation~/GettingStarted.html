@@ -1,0 +1,196 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Getting Started Guide | Kinstrife </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Getting Started Guide | Kinstrife ">
+    <meta name="generator" content="docfx 2.59.4.0">
+    
+    <link rel="shortcut icon" href="../../favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet"> 
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="../../articles/packages/toc.html">
+    
+    
+    
+  </head>  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../index.html">
+                <img id="logo" class="svg" src="../../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="getting-started-guide">Getting Started Guide</h1>
+
+<p>A <code>Procedure</code> is a building block you can use to author short-lived, interdependent behaviors in a standardized way. For example, a character combat stance, equipping an item, opening a door for 5 seconds, or entering a tutorial state.</p>
+<h2 id="1-create-the-context">1. Create the Context</h2>
+<p>Create a new <code>GameObject</code> and add the <code>ProceduresManager</code> component to it.</p>
+<div class="TIP">
+<h5>Tip</h5>
+</div>
+<p>: The <code>ProceduresManager</code> is what &quot;owns&quot; and runs all the procedures for a specific character or system. Think of it as the car 🚗 that will hold all the parts.</p>
+<h2 id="2-create-the-procedure-asset">2. Create the Procedure Asset</h2>
+<ol>
+<li>In the project window, navigate to the folder you want to store the asset.</li>
+<li>Right click and select <code>Create/Procedures/Procedure</code></li>
+<li>Give your <code>Procedure</code> a name, like <em>&quot;Jump&quot;</em>.</li>
+</ol>
+<div class="TIP">
+<h5>Tip</h5>
+<p>This asset is like a <strong>blueprint</strong>📜 for a part, such as an engine.</p>
+</div>
+<h2 id="3-connect-the-procedure-to-the-manager">3. Connect the Procedure to the Manager</h2>
+<ol>
+<li>Select the <code>ProceduresManager</code> GameObject in the hierarchy.</li>
+<li>In the inspector, find the <code>Source Data</code> list.</li>
+<li>Drag your newly created <code>Procedure</code> asset into this list.</li>
+</ol>
+<div class="TIP">
+<h5>Tip</h5>
+<p>We can only add each <code>Procedure</code> asset once. The <code>ProceduresManager</code> will create a unique <strong>instance</strong> of this <code>Procedure</code> at runtime. Think of the instance as the <strong>engine</strong>⚙️ built from the blueprint.</p>
+</div>
+<h2 id="4-manually-control-a-procedure-at-runtime">4. Manually Control a Procedure at Runtime</h2>
+<p>The <code>Weight</code> determines if a procedure is active (starts) or inactive (stops). A weight greater than <code>0</code> makes it active, while a weight of <code>0</code> makes it inactive.</p>
+<h3 id="test-the-procedures-state">Test the Procedure's State</h3>
+<ol>
+<li>In the hierarchy, select the <code>ProceduresManager</code> GameObject.</li>
+<li>Enter Play Mode (<code>Ctrl+P</code>).</li>
+<li>In the inspector, find your <code>Jump</code> procedure. Notice its status icon is <strong>green</strong> 🟢, meaning it's active by default.</li>
+<li>Drag the <code>Weight</code> slider to <code>0</code>. The status icon should turn <strong>grey</strong> ⚪️ (inactive).</li>
+<li>Drag the <code>Weight</code> slider back to <code>1</code>. The status icon will turn <strong>green</strong> 🟢 again (active).</li>
+</ol>
+<div class="IMPORTANT">
+<h5>Important</h5>
+<p><strong>Instance vs. Asset</strong>: When modifying a <code>Procedure</code> at runtime, make sure you have selected its <strong>instance</strong> in the <code>ProceduresManager</code>. The instance is the running engine ⚙️ in your car. The <code>Procedure</code> asset in your Project folder is the blueprint 📜; changing the blueprint will affect all future engines built from it.</p>
+</div>
+<details>
+    <summary>
+        Create a new `GameObject` and add the `ProceduresManager` component to it.
+    </summary>
+<div class="TIP">
+<h5>Tip</h5>
+</div>
+<p><strong>Note</strong>: The <code>ProceduresManager</code> is what &quot;owns&quot; and runs all the procedures for a specific character or system. Think of it as the car 🚗 that will hold all the parts.</p>
+</details>
+<pre><code class="lang-mermaid">timeline
+    title Procedure Operations Lifecycle
+    section Inactive
+        Activator : Listens to events to start procedure
+        LinkedProcedure : Links procedure lifecycle start/stop        
+    section Starting
+        Constraint : Gates the Starting operation
+        Output : Outputs  instructions on Start
+    section Active
+        Output : Outputs instructions on Update
+    section Stopping
+        Constraint : Gates the Stopping operation
+        Output : Outputs various instructions on Stop
+
+</code></pre>
+<pre><code class="lang-mermaid">sequenceDiagram
+  participant SystemsManager
+  participant ProceduresManager
+  participant ProcedureInstances
+  participant Updatables
+
+  SystemsManager-&gt;&gt;ProceduresManager: LateInitialize / ConvertRuntime
+  ProceduresManager-&gt;&gt;ProcedureInstances: Duplicate sourceData -&gt; instantiate
+  ProceduresManager-&gt;&gt;ProcedureInstances: RuntimeCacheReferences (InjectManager, cache)
+  ProceduresManager-&gt;&gt;ProcedureInstances: RunInitialization (OnInternalInitialize)
+  SystemsManager-&gt;&gt;ProceduresManager: OnUpdate(time, delta)
+  ProceduresManager-&gt;&gt;Updatables: For each active procedure -&gt; call OnUpdate
+  Updatables--&gt;&gt;ProceduresManager: Update complete
+</code></pre>
+<pre><code class="lang-mermaid">graph TD;
+    A--&gt;B;
+    A--&gt;C;
+    B--&gt;D;
+    C--&gt;D;
+</code></pre>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://kinstrife.visualstudio.com/Core/_git/Core?path=Packages/Procedures/Documentation~/GettingStarted.md&amp;version=GBmaster&amp;line=1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+  </body>
+</html>
