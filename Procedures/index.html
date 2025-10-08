@@ -74,10 +74,10 @@
 </blockquote>
 <hr>
 <p>This package offers a toolkit for the authoring and runtime execution of low-level logical units called <code>Procedures</code>.</p>
-<p>It was created out of the need to cut down on boilerplate and bugs in common game logic, and to progetvide a predictable, consistent lifecycle and architecture for the authoring and execution of interactive or reactive systems.</p>
+<p>It was created out of the need to cut down on boilerplate and bugs in common game logic, and to provide a predictable, consistent lifecycle and architecture for the authoring and execution of interactive or reactive systems.</p>
 <h2 id="overview">Overview</h2>
 <p><code>Procedures</code> are discrete, stateful (start/stop) units of behaviour, that can be composed from reusable modules (constraints, outputs, activation) and managed centrally by a <code>ProceduresManager</code>.</p>
-<p>Procedures are authored as <code>ScriptableObjects</code> and instantiated at runtime; building on the <code>ScriptableObjectComponent</code> pattern, they expose a modular instruction system, constraints/requests for start/stop control, resource providers/consumers, and editor tooling for authoring and debugging.</p>
+<p>Procedures are authored as <code>ScriptableObjects</code> and instantiated at runtime; building on a <code>ScriptableObjectComponent</code> pattern for its composition and modularity.</p>
 <h4 id="gameobject--monobehaviour-analogy">GameObject + MonoBehaviour Analogy</h4>
 <p>In this way, it is analogous to <code>GameObject</code> + <code>MonoBehaviour</code>, where a <code>Procedure</code> takes the place of a <code>GameObject</code> (a data container that can be instantiated) and <code>ProcedureComponent</code> take the place of <code>MonoBehaviour</code> (the behaviour logic attached to the data container).</p>
 <p>We then strip away the <code>GameObject</code>/spatial/hierarchical aspect, and instead add a <code>Weight</code> property to enable more flexible behaviours than a simple on/off state.</p>
@@ -109,7 +109,8 @@
 <h5>Note</h5>
 <p>It fills the space between hand-coding and a full visual scripting system, in that it allows non-programmers to compose and iterate on logic without code, but for specific use cases still requires programming to implement the game logic.</p>
 </div>
-<p>The idea was to slice a larger feature into its identifiable component parts (e.g. an engine to a car), and identify and extract common interactions and patterns into reusable modules, which can then be composed to enhance the functionality of the part.</p>
+<!-- 
+The idea was to slice a larger feature into its identifiable component parts (e.g. an engine to a car), and identify and extract common interactions and patterns into reusable modules, which can then be composed to enhance the functionality of the part. -->
 <h2 id="key-features">Key features</h2>
 <ul>
 <li><strong>Designer-first authoring</strong>: lets non-programmers compose high-level behaviour and express logic without code.</li>
@@ -121,7 +122,7 @@
 <li><strong>Task-messaging system</strong>: standardized way to send/receive messages and data between procedures and outside systems.</li>
 <li><strong>Thread-compatible</strong>: can run on worker-threads since no Unity API calls are made during runtime execution.</li>
 <li><strong>Easily testable</strong>: its modular nature allows for easy unit testing and debugging, improving overall code quality and maintainability.</li>
-<li><strong>Debugging tools (WIP)</strong>: Odin-enhanced inspectors and runtime UI make it easy to inspect and debug procedures in-editor.</li>
+<li><strong>Debugging tools (WIP)</strong>: Odin-window and runtime UI make it easy to inspect and debug procedures in-editor.</li>
 </ul>
 <div class="TIP">
 <h5>Tip</h5>
