@@ -72,8 +72,148 @@
 <blockquote>
 <p><code>&quot;com.kinstrife.core.procedures&quot;: &quot;file:/GameDev/Core/Packages/Procedures&quot;</code></p>
 </blockquote>
+<hr>
+<p>This package offers a toolkit for the authoring and runtime execution of low-level logical units called <code>Procedures</code>.</p>
+<p>It was created out of the need to cut down on boilerplate and bugs in common game logic, and to progetvide a predictable, consistent lifecycle and architecture for the authoring and execution of interactive or reactive systems.</p>
+<h2 id="overview">Overview</h2>
+<p><code>Procedures</code> are discrete, stateful (start/stop) units of behaviour, that can be composed from reusable modules (constraints, outputs, activation) and managed centrally by a <code>ProceduresManager</code>.</p>
+<p>Procedures are authored as <code>ScriptableObjects</code> and instantiated at runtime; building on the <code>ScriptableObjectComponent</code> pattern, they expose a modular instruction system, constraints/requests for start/stop control, resource providers/consumers, and editor tooling for authoring and debugging.</p>
+<h4 id="gameobject--monobehaviour-analogy">GameObject + MonoBehaviour Analogy</h4>
+<p>In this way, it is analogous to <code>GameObject</code> + <code>MonoBehaviour</code>, where a <code>Procedure</code> takes the place of a <code>GameObject</code> (a data container that can be instantiated) and <code>ProcedureComponent</code> take the place of <code>MonoBehaviour</code> (the behaviour logic attached to the data container).</p>
+<p>We then strip away the <code>GameObject</code>/spatial/hierarchical aspect, and instead add a <code>Weight</code> property to enable more flexible behaviours than a simple on/off state.</p>
+<h2 id="when-to-use-procedures">When to use Procedures</h2>
+<p>The following checklist can help you decide if <code>Procedures</code> are a good fit for your use case.</p>
+<p>I should use Procedures if:</p>
+<ul>
+<li>[] I want to expose my system to <strong>designers</strong> so they can author and tweak logic with no or <strong>minimal code</strong>.</li>
+<li>[] I want to be able to <strong>compose</strong> my system from smaller, <strong>reusable pieces</strong>.</li>
+<li>[] I want to be able to <strong>iterate</strong> and <strong>prototype</strong> before writing code.</li>
+<li>[] I'm creating a <strong>reactive</strong> or <strong>interactive</strong> system</li>
+<li>[] My feature has lots of <strong>moving parts</strong> that <strong>depend</strong> on each other.</li>
+<li>[] My feature has a clear <strong>start/stop lifecycle</strong></li>
+<li>[] My system has <strong>constraints</strong> or <strong>gating</strong> logic</li>
+<li>[] My system requires <strong>arbitration</strong> between multiple <strong>requesters</strong></li>
+<li>[] My system could be chopped into smaller, <strong>reusable pieces</strong></li>
+<li>[] My system deals with <strong>side effects</strong> (animation, audio, motor control, status flags)</li>
+<li>[] My feature deals with a <strong>closed system</strong> (character, tutorial)</li>
+<li>[] I find myself/want to avoid writing similar <strong>boilerplate code</strong> for common tasks</li>
+<li>[] I find myself/want to avoid fixing similar <strong>bugs</strong> for common logic</li>
+</ul>
+<div class="NOTE">
+<h5>Note</h5>
+<p>If more than a few of these points apply, then <code>Procedures</code> are likely a good choice.</p>
+</div>
+<h2 id="architecture-and-philosophy">Architecture and Philosophy</h2>
+<p><code>Procedures</code> is an opinionated, data-first framework that removes boilerplate and makes small, reactive behaviors easy to author, test, and reuse. Its goals are simple: let designers compose behavior as assets, give engineers a stable architecture to implement low-level systems.</p>
+<div class="NOTE">
+<h5>Note</h5>
+<p>It fills the space between hand-coding and a full visual scripting system, in that it allows non-programmers to compose and iterate on logic without code, but for specific use cases still requires programming to implement the game logic.</p>
+</div>
+<p>The idea was to slice a larger feature into its identifiable component parts (e.g. an engine to a car), and identify and extract common interactions and patterns into reusable modules, which can then be composed to enhance the functionality of the part.</p>
+<h2 id="key-features">Key features</h2>
+<ul>
+<li><strong>Designer-first authoring</strong>: lets non-programmers compose high-level behaviour and express logic without code.</li>
+<li><strong>Modularity</strong>: encourages developers to compose small, reusable pieces that can be assembled into larger behaviours.</li>
+<li><strong>Centralized management</strong>: a manager handles initialization, update, and outside queries; simplifying wiring across systems.</li>
+<li><strong>Consistent lifecycle</strong>: gives every behavior a uniform activation model and events, so modules behave predictably and integrate cleanly.</li>
+<li><strong>Referenceable</strong>: procedures can be easily referenced by other systems or authoring data, enabling loose coupling and modularity.</li>
+<li><strong>Safe arbitration</strong>: multiple systems can request the same procedure; the request/client pattern ensures predictable activation and cancellation.</li>
+<li><strong>Task-messaging system</strong>: standardized way to send/receive messages and data between procedures and outside systems.</li>
+<li><strong>Thread-compatible</strong>: can run on worker-threads since no Unity API calls are made during runtime execution.</li>
+<li><strong>Easily testable</strong>: its modular nature allows for easy unit testing and debugging, improving overall code quality and maintainability.</li>
+<li><strong>Debugging tools (WIP)</strong>: Odin-enhanced inspectors and runtime UI make it easy to inspect and debug procedures in-editor.</li>
+</ul>
+<div class="TIP">
+<h5>Tip</h5>
+<p><strong>GameObject-free</strong>:  designed to work without a spatial or hierarchical model, cutting away the overhead of <code>GameObject</code> management, and focusing on the logical/behavioral aspect of game systems.</p>
+</div>
+<h2 id="concrete-benefits-for-different-roles">Concrete benefits for different roles</h2>
+<ul>
+<li><strong>Designers</strong>: rapidly iterate on behaviours without code</li>
+<li><strong>Engineers</strong>: work with stable architecture to skip common boilerplate and focus on game logic</li>
+<li><strong>Tech leads</strong>: ensure consistency and maintainability across systems with clear contracts and modular design.</li>
+</ul>
 <p> </p>
-<p>Toolkit providing buildings blocks with which to develop behaviours that are state-based, require resource management, input and are identifiable by other systems.</p>
+<h1 id="component-overview">Component Overview</h1>
+<h2 id="the-proceduresmanager">The ProceduresManager</h2>
+<p>A <code>ProceduresManager</code> component is typically placed on a context (such as an actor or similar higher-level object). It holds a list of <code>Procedure</code> assets as source data, which are the templates for runtime instances. The <code>ProceduresManager</code> duplicates those assets into instance objects and maintains a mapping (asset → runtime instance) so references can be retrieved efficiently.</p>
+<div class="NOTE">
+<h5>Note</h5>
+<p>Each <code>Procedure</code> asset can only be added once to a <code>ProceduresManager</code>'s source data. If you need multiple instances of the same behaviour, create separate assets.</p>
+</div>
+<h2 id="procedure">Procedure</h2>
+<h3 id="lifecycle-startstopupdate">Lifecycle (Start/Stop/Update)</h3>
+<p><code>Procedures</code> have a basic lifecycle, with an <code>Active</code> state controlled by <code>TryStart</code> and <code>TryStop</code> methods.</p>
+<p>The lifecycle consists of three main operations <code>Start</code>, <code>Stop</code>, and <code>Update</code>.
+Modules can hook into these lifecycle events to provide constraints that gate the operations, terminate the procedure, or perform specific actions when they occur.</p>
+<div class="NOTE">
+<h5>Note</h5>
+<p>See the <a href="Documentation~/LifeCycle.html">Lifecycle documentation</a> for a detailed overview of the procedure lifecycle.</p>
+</div>
+<h4 id="the-weight-property">The Weight Property</h4>
+<p>Procedures have a <code>Weight</code> property that in its default form act as a binary on/off switch (<code>0</code> = stopped, <code>1</code> = active). The active state is synchronized to the weight property, so that starting or stopping a procedure sets the weight accordingly, and vice versa.</p>
+<p>In more complex scenarios, the weight can feed into timed behaviours or weighted outputs, allowing for extensive functionality and flexibility without complicating the core lifecycle.</p>
+<div class="TIP">
+<h5>Tip</h5>
+<p>An example of this could be a character ability that has a weight-based cooldown. The ability could start with a weight of <code>1</code> (active), and then gradually decrease to <code>0</code> (inactive) over time, allowing for a built-in cooldown effect.</p>
+</div>
+<p>See the <a href="Documentation~/CarSample.html">Car Sample</a> for an example of using weight in a more complex scenario.</p>
+<!-- 
+> [!Tip]
+> For example, an animation output module could use the weight to control the influence of an animation layer. -->
+<h3 id="referencing-procedures">Referencing Procedures</h3>
+<p>Since they are <code>ScriptableObjects</code>, procedures can be referenced (their assets as identifiers) in other authoring data, or during runtime from outside systems. The referencing system lies at the heart of the authoring-centric design of the package.</p>
+<div class="TIP">
+<h5>Tip</h5>
+<p>Referencing enables loose coupling between systems: for example, an input handler can reference a <code>Procedure</code> asset to trigger an ability on an actor without needing to know about the actor's internal structure or code.</p>
+</div>
+<h2 id="modules-and-instructions">Modules and Instructions</h2>
+<p><code>Modules</code> are core components that extend key functionality of procedures, by hooking into the lifecycle and providing specific behaviours. <code>Modules</code> contain a list of <code>Instructions</code>, which are small pieces data and logic that execute at a specified time in the procedure's lifecycle.</p>
+<div class="TIP">
+<h5>Tip</h5>
+<p>Think of playing a sound effect when a procedure starts, or checking a condition before allowing it to start or stop.</p>
+</div>
+<p>Provided in this package are several built-in <code>Modules</code>, based on common use cases.</p>
+<p>See the <a href="Documentation~/CarSample.html">Car Sample</a> for an example of using modules and instructions.</p>
+<h3 id="built-in-modules">Built-in Modules</h3>
+<ul>
+<li><h4 id="outputmodule">OutputModule</h4>
+The <code>OutputModule</code> is designed to handle side effects that occur when a procedure starts, stops or updates.
+An example use case could be playing an animation when a procedure starts, or a sound effect when it stops.</li>
+<li><h4 id="2-constraintmodule">2. ConstraintModule</h4>
+The <code>ConstraintModule</code> allows you to define conditions that must be met for a procedure to start or continue running. This can be useful for implementing prerequisites or gating logic, such as cooldowns or resource checks.</li>
+<li><h4 id="3-linkedproceduremodule">3. LinkedProcedureModule</h4>
+The <code>LinkedProcedureModule</code> enables you to link the lifecycle of one procedure to another. For example, you might want one procedure to automatically start when another starts, or to stop when another stops. This is useful for creating complex behaviours that depend on multiple procedures, without being tightly coupled or strictly hierarchical.</li>
+<li><h4 id="4-statemachinemodule">4. StateMachineModule</h4>
+The <code>StateMachineModule</code> provides a way to manage states within a procedure by defining different states (and optionally) transitions between them. A common use case is to use other procedures as states, allowing for nested procedure execution.
+<ul>
+<li><a href="Documentation~/Modules/StateMachine.html">See the State Machine documentation</a> for more details.</li>
+</ul>
+</li>
+<li><h4 id="5-activatormodule">5. ActivatorModule</h4>
+The <code>ActivatorModule</code> listens for external events to automatically start or stop a procedure. This is useful for triggering procedures based on game events, messages, or other dynamic conditions, such as stamina depletions.</li>
+</ul>
+<h3 id="common-components--patterns">Common Components &amp; Patterns</h3>
+<p>In addition to the built-in modules, there are several common components that can be added to procedures to extend their functionality.</p>
+<ul>
+<li>Tasks</li>
+<li>Requests
+etc. TODO: Compelte</li>
+</ul>
+<h2 id="variables">Variables</h2>
+<p><code>Procedures</code> support a simple <code>Variable</code> system that allows you to define and use variables within your procedures. <code>Variables</code> can be used to store data that can be referenced by modules and instructions, enabling dynamic behaviour based on the procedure's state or external inputs.</p>
+<h3 id="defining-variables">Defining Variables</h3>
+<p>Variables are defined in the <code>VariableStore</code> of a <code>ProcedureManager</code>. They require a <code>VariableDefinition</code> asset, which serves as a template for creating <code>Variable</code> instances, as well as a unique identifier.</p>
+<div class="TIP">
+<h5>Tip</h5>
+<p>Think of the <code>VariableStore</code> as a blackboard or dictionary that holds all the variables for a specific <code>ProcedureManager</code> context.</p>
+</div>
+<h3 id="variable-providers">Variable Providers</h3>
+<p>When you don't know the variables you need ahead of time, or want to pull them from other systems, you can use <code>VariableProviders</code>. <code>VariableProviders</code> are components that can be added to a <code>ProcedureManager</code> to supply values based on type, and make them centrally available to procedures (or outside systems). Providers and the variables they provide are indexed by type in the <code>VariableCatalog</code>.</p>
+<div class="TIP">
+<h5>Tip</h5>
+<p>For example, a <code>VariableProvider</code> could pull the limbs or bodyparts of an actor and make them available to reference.</p>
+</div>
 </article>
           </div>
           

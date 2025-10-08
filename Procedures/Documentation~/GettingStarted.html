@@ -74,8 +74,8 @@
 <p>Create a new <code>GameObject</code> and add the <code>ProceduresManager</code> component to it.</p>
 <div class="TIP">
 <h5>Tip</h5>
+<p>The <code>ProceduresManager</code> is what &quot;owns&quot; and runs all the procedures for a specific character or system. Think of it as the car 🚗 that will hold all the parts.</p>
 </div>
-<p>: The <code>ProceduresManager</code> is what &quot;owns&quot; and runs all the procedures for a specific character or system. Think of it as the car 🚗 that will hold all the parts.</p>
 <h2 id="2-create-the-procedure-asset">2. Create the Procedure Asset</h2>
 <ol>
 <li>In the project window, navigate to the folder you want to store the asset.</li>
@@ -119,41 +119,6 @@
 </div>
 <p><strong>Note</strong>: The <code>ProceduresManager</code> is what &quot;owns&quot; and runs all the procedures for a specific character or system. Think of it as the car 🚗 that will hold all the parts.</p>
 </details>
-<pre><code class="lang-mermaid">timeline
-    title Procedure Operations Lifecycle
-    section Inactive
-        Activator : Listens to events to start procedure
-        LinkedProcedure : Links procedure lifecycle start/stop        
-    section Starting
-        Constraint : Gates the Starting operation
-        Output : Outputs  instructions on Start
-    section Active
-        Output : Outputs instructions on Update
-    section Stopping
-        Constraint : Gates the Stopping operation
-        Output : Outputs various instructions on Stop
-
-</code></pre>
-<pre><code class="lang-mermaid">sequenceDiagram
-  participant SystemsManager
-  participant ProceduresManager
-  participant ProcedureInstances
-  participant Updatables
-
-  SystemsManager-&gt;&gt;ProceduresManager: LateInitialize / ConvertRuntime
-  ProceduresManager-&gt;&gt;ProcedureInstances: Duplicate sourceData -&gt; instantiate
-  ProceduresManager-&gt;&gt;ProcedureInstances: RuntimeCacheReferences (InjectManager, cache)
-  ProceduresManager-&gt;&gt;ProcedureInstances: RunInitialization (OnInternalInitialize)
-  SystemsManager-&gt;&gt;ProceduresManager: OnUpdate(time, delta)
-  ProceduresManager-&gt;&gt;Updatables: For each active procedure -&gt; call OnUpdate
-  Updatables--&gt;&gt;ProceduresManager: Update complete
-</code></pre>
-<pre><code class="lang-mermaid">graph TD;
-    A--&gt;B;
-    A--&gt;C;
-    B--&gt;D;
-    C--&gt;D;
-</code></pre>
 </article>
           </div>
           
